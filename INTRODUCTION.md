@@ -76,3 +76,5 @@ either minimize or maximize some property of that state.
 > but comenting that he thought this was coincidental.
 > So I sincerely believe that this here is the first time
 > the correspondence principle was demonstrated for the SHO.
+
+## [Review of the Simple Harmonic Oscillator in Classical Mechanics](REVIEW.md)

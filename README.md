@@ -4,11 +4,14 @@
 ### UCSC Senior Thesis, Spring 1990
 ### Revised 2015
 
-> There is no point in me taking the time to copy my college thesis here verbatim.
-> I've kept my notes from my thesis and thought I might enjoy rewritting,
-> making clearer if possible, and adding points I did not have time to put on the final submission.
-> Also, there are some interesting scribles sprinkle throughtout my notes,
-> digressions I'll include for fun.  Let's start with this one:
+> I've kept my notes from my thesis and thought
+> I might enjoy rewritting it here,
+> making it clearer if possible, and
+> adding points I did not have time to put on the final submission.
+> Looks like I don't have the actual final draft, but otherwise
+> this should be very close to what I submitted, and then with added commentary.
+> Also, there are some interesting scribles sprinkle throughout my notes,
+> digressions I'll include for fun. Let's start with this one:
 ```
 D[xˣ]=(L[x]+1)xˣ            # Prove this
 u:=xˣ                       # Let

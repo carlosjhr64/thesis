@@ -23,7 +23,7 @@ x=√2
   1. Evaluation of `<y²>`
   2. Evaluation of `<y>`
   3. Time development
-  4. The Relate Programing Problem
+  4. The Related Programing Problem
   5. Results
 8. Conclusions and After Thoughts
 

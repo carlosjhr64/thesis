@@ -1,7 +1,8 @@
 ## INTRODUCTION
 
-I work on "the problem" of minimizing the uncertainty in both the position and momentum
-of a particle of large average energy in a simple harmonic potential.
+In this paper, I work on "the problem" of minimizing the uncertainty in both
+the position and momentum of a quantum particle of large average energy in
+a simple harmonic potential.
 
 Just as Classical Mechanics can be built on Newton's laws,
 Quantum Mechanics can be developed through the Schrodinger equation.
@@ -43,10 +44,10 @@ Therefore, by localizing the particle's position through the superposition of en
 one loses knowledge of the particle's energy.
 
 The correspondence principle states that the Quantum theory
-must approach the classicla view at the large scale limit.
+must approach the classical view at the large scale limit.
 This means that at the macroscopic scale the particle
 is seen to have a precise position, momentum, and energy.
-Here I minimize the uncertainties of the simple harmonic oscillator.
+In this paper I minimize the uncertainties of the simple harmonic oscillator.
 I show that with the proper distribution of energy eigen-states
 centered about a given average energy,
 I can have all relative uncertainties vanish at the large scale limtit, as
@@ -75,4 +76,3 @@ either minimize or maximize some property of that state.
 > but comenting that he thought this was coincidental.
 > So I sincerely believe that this here is the first time
 > the correspondence principle was demonstrated for the SHO.
-> 

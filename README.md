@@ -28,11 +28,16 @@ D[xˣ]=(L[x]+1)xˣ            # Prefer the form: D[u]=f(u)u
 > Looking at my scribles, I had the right idea and... somehow the right answer.
 > Today, we have Wolfamalpha.com!
 
+> While re-reading my thesis, the use of the word "paper" struck me as odd and
+> thought that in another 25 years it might not make sense anymore.
+> By "paper" I mean this thesis, this work.
+> We used to write on this thing called "paper".
+
 ## ABSTRACT
 
 A single energy eigen-state of the simple harmonic oscillator
 leaves a particle uncertain in its position and momentum.
-Here I minimize this uncertainty through a distribution of energy eigen-states.
+In this paper I minimize this uncertainty through a distribution of energy eigen-states.
 I show that a Poisson distribution of energy eigen-states is a feasible solution because
 it satisfies the constraints for a physically meaningful distribution, and that
 it is the optimum solution because

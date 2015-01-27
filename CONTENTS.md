@@ -33,4 +33,4 @@ x=√2
 * Energy Eigen-States of the Simple Harmonic Oscillator
 * Properties of Optimun pₙ.
 * Proof: Necessary and Sufficient Conditions for Optimum Solution to the Programing Problem.
-
+* [Addendum](ADDENDUM.md)

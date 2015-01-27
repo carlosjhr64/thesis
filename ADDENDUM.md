@@ -47,11 +47,22 @@ Solving for the mass on the spring problem I get an exponetial and
 a square root of a negative number.
 What garbage!
 I think maybe I gave `F[]` the wrong name.
-Let's try `:Sine()` (or `:Cosine`).
+Let's try `:Sine[]` (or `:Cosine[]`).
 
 ```
-x=:Sine(αt+β), α=√(-k/m)
+x=:Sine[αt+β]
+DDx = :Dt[:Dt[:Sine[αt+β]]]
+DDx = :Dt[α(:Cosine[αt+β])]
+DDx = αDt[:Cosine[αt+β]]
+DDx = -αα(:Sine[αt+β])
+DDx = -α²:Sine[αt+β]
+DDx = (-k/m)x                # original problem
+-α² = (-k/m)
+α² = (k/m)
 ```
+
+`:Sine` gives a meaningful answer.
+But how can `F` be both `e` and `:Sine`?
 
 I don't think there's a way around the issue.
 I know `e`, `:Sine`, and `:Cosine` have `F`'s properties via a search of functions I know.
@@ -62,10 +73,6 @@ F[t, α₀, β₀] = :Sine[αₛt+βₛ] = :Cosine[αt+β] = e^(αₑt+βₑ) # 
 ```
 
 And that there must be a way to relate the different `[α, β]`.
-So I think I'm now past my original concern.
-The general solution is in the Complex space.
-So now the concern is.. where is the Real solution!?
-I can not keep doing this all the way down to "Prove 1+1=2!"
 I look in a book(something we used to read from containing lots of paper)
 where a mathematician has written and proven the following: 
 
@@ -74,3 +81,5 @@ e^(a+bi) = (:Cosine[b] + i:Sine[b])e^a
 ```
 
 And because I've had enough of this already, I say "Ah... I get it."
+So I think I'm now past my original concern.
+The general solution is in the Complex space.

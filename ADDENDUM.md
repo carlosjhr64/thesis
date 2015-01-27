@@ -67,7 +67,7 @@ The general solution is in the Complex space.
 So now the concern is.. where is the Real solution!?
 I can not keep doing this all the way down to "Prove 1+1=2!"
 I look in a book(something we used to read from containing lots of paper)
-where a mathematician as written and proven the following: 
+where a mathematician has written and proven the following: 
 
 ```
 e^(a+bi) = (:Cosine[b] + i:Sine[b])e^a

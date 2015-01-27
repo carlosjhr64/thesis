@@ -43,7 +43,7 @@ x=e^(αt+β), α=√(-k/m)
 ```
 
 Oh, boy!
-Solving for the mass on the spring problem I get an exponetial and
+Solving for the mass on the spring problem I get an exponential and
 a square root of a negative number.
 What garbage!
 I think maybe I gave `F[]` the wrong name.

@@ -66,10 +66,10 @@ But how can `F` be both `e` and `:Sine`?
 
 I don't think there's a way around the issue.
 I know `e`, `:Sine`, and `:Cosine` have `F`'s properties via a search of functions I know.
-Otherwise, it's just F[t, α, β].  I might suspect the following:
+Otherwise, it's just F[αt+β].  I might suspect the following:
 
 ```
-F[t, α₀, β₀] = :Sine[αₛt+βₛ] = :Cosine[αt+β] = e^(αₑt+βₑ) # WUT? No c subscript?
+F[α₀t+β₀] = :Sine[αₛt+βₛ] = :Cosine[αt+β] = e^(αₑt+βₑ) # WUT? No c subscript?
 ```
 
 And that there must be a way to relate the different `[α, β]`.

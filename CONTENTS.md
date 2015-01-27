@@ -15,7 +15,7 @@ x=√2
 
 1. [Introduction](INTRODUCTION.md)
 2. [Review of the Simple Harmonic Oscillator in Classical Mechanics](REVIEW.md)
-3. Energy Eigen-States and Eigen-Values of SHO.
+3. [Energy Eigen-States and Eigen-Values of the Simple Harmonic Oscillator](QMSHO.md)
 4. Measure of Uncertainty
 5. Formulation of the Programming Problem
 6. An Intuitive Guess to the Optimum Distribution

@@ -26,8 +26,8 @@ This is the equation given to the mass on a spring problem, and thus
 This is a second order linear differential equation, and therefore
 it has two solutions from which all other solutions can be formed:
 
-    x₁ = sin[ωt] ≐ s₁           # 2.3a
-    x₂ = cos[ωt] ≐ c₁           # 2.3b
+    x₁ = sin[ωt] ≡ s₁           # 2.3a
+    x₂ = cos[ωt] ≡ c₁           # 2.3b
     x = Ax₁ + Bx₂ = As₁ + Bc₁   # 2.3c
 
 > Some language issues here too.
@@ -36,7 +36,7 @@ it has two solutions from which all other solutions can be formed:
 > But later you'll see that I'm struggling to deal with really long equations, and
 > terseness and unambiguous expressions are going to be extremely important!
 > Also, semantically we expect the term being defined on the left of the definition,
-> like `s₁≐...`.  So to be clear, I'm defining `s₁` and `c₁`.
+> like `s₁≡...`.  So to be clear, I'm defining `s₁` and `c₁`.
 > Later I'll be dealing with `sin[nωt]` and `cos[nωt]` which
 > for terseness I'll write `sₙ` and `cₙ`.
 

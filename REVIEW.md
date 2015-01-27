@@ -53,7 +53,7 @@ and
 > I should have used a definition sign, ≐.
 > Of course, for a real mass on a spring problem, `A` and `B` are Real numbers.
 > It does seem a bit odd to me now that the general solution allows for complex amplitudes, and
-> if it does to you too you can check derivation in the [addendum](ADDENDUM.md).
+> if it does to you too you can check the derivation in the [addendum](ADDENDUM.md).
 
 Forces are due to the gradient of a potential `V[x]`.
 The potential energy of a particle is that energy due solely to the position for the particle.

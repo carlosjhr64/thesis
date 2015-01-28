@@ -70,7 +70,22 @@ I add the following:
 
 > In the Dirac notation, `n` and `m` are enumeration labels.
 > You don't add state 3 and state 5 to get state 8, for example.
-> TODO: So I'm confused. I don't know what `<n+m]` means.
+> I had to look these up again as it's not clear to me now what `<n+m]` is.
+> In *Introductory Quantum Mechanics* by Richard L. Liboff, 1st edition, chapter 4, page 93:
+
+    (4.19)   <ψ|φ> = ∫ ψ*(x)φ(x) dx < ∞
+    (4.20)   ∫ ψ*φdx < ∞
+    (4.21)   <ψ|αφ> = α<ψ|φ>
+    (4.22)   <αψ|φ> = α*<ψ|φ>
+    (4.23)   <ψ|φ>* = <φ|ψ>
+    (4.24)   <ψ+φ| = <ψ| + <φ|
+    (4.25)   ∫(ψ₁+ψ₂)*(φ₁+φ₂)dx
+             = <ψ₁+ψ₂|φ₁+φ₂>=(<ψ₁|+<ψ₂|)(|φ₁>+|φ₂>)
+             = <ψ₁|φ₁>+<ψ₁|φ₂>+<ψ₂|φ₁>+<ψ₂|φ₂>
+
+> I think (4.25) makes clearer what <ψ+φ| means.
+> Can you see why I chose to use `†` instead of `*`?
+> Anyways, I don't think the issue with `#3.5e.i` and `(4.24)` ever comes up in my proof later.
 
 Placing two indices side by side will indicate that
 the sum ~~overall~~ *over all* of the of the indices is to be evaluated, for example:

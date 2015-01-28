@@ -5,7 +5,7 @@ the simple harmonic potential is given by[³⁴](REFERENCE.md)
 
     (-h²/(4πm)Dₓ² + kx²)Yₙ[x] = EₙYₙ[x]   # 3.1
 
-where h is Plank's constant, Eₙ is the energy eigen-value, and Yₙ[x] is the energy eigen-state.
+where `h` is Plank's constant, `Eₙ` is the energy eigen-value, and `Yₙ[x]` is the energy eigen-state.
 Solutions to this equation exist only for a discrete set of energy eigen-values.
 The energy eigen-values are given by
 
@@ -57,6 +57,11 @@ The following defines the Dirac notation:[³](REFERENCE.md)
     <n+m] = <n] + <m]        # 3.5e.i
 
 > One might see Dirac notation written like `<n|m>` and `<n|+<m|` elsewhere.
+> Working with the typewriter I was thinking very mechanically about these symbols.
+> It just seemed to me that I should have distinct "open" and "close" symbols.
+> [Wikipedia](http://en.wikipedia.org/wiki/List_of_computer_algebra_systems)
+> shows algebraic software available as early as the 1960s, but
+> I don't remember even being aware of them.
 
 To avoid ambiguity between the numbers n and m, and the states they represent,
 I add the following:

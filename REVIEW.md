@@ -96,3 +96,5 @@ X = √(2E/k)              # OK, so pencil wins!  :)
 > I don't remember where the graph is from.  I don't think I made it.
 
 ![Graph](images/graph_500_684.png)
+
+## [Energy Eigen-States and Eigen-Values of the Simple Harmonic Oscillator](QMSHO.md)

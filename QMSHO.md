@@ -112,3 +112,5 @@ Then, the superposition principle is stated as
 
     [Y> = [n><n][Y>   # 3.8
     pₙ = <n][Y>.
+
+## [Measure of Uncertainty](UNCERTAINTY.md)

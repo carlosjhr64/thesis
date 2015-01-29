@@ -74,3 +74,5 @@ where `i` is the imaginary number, square root of negative one.
 > I believe that wherever we find `i`, we are being given a HUGE hint.
 > But what is it really?
 > NO! IT IS NOT √(-1).
+
+## [Formulation of the Programming Problem](FORMULATION.md)

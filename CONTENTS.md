@@ -17,7 +17,7 @@ x=√2
 2. [Review of the Simple Harmonic Oscillator in Classical Mechanics](REVIEW.md)
 3. [Energy Eigen-States and Eigen-Values of the Simple Harmonic Oscillator](QMSHO.md)
 4. [Measure of Uncertainty](UNCERTAINTY.md)
-5. Formulation of the Programming Problem
+5. [Formulation of the Programming Problem](FORMULATION.md)
 6. An Intuitive Guess to the Optimum Distribution
 7. Solving the Programming Problem
   1. Evaluation of `<y²>`

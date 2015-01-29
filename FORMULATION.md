@@ -9,7 +9,7 @@ Then, I want to
     minimize <Y]d[x]d[p][Y>    # 5.1a
     subject to <Y]H[Y> = Eᵒ,   # 5.1b
 
-where H is the Hamiltonian(energy) operator.
+where `H` is the Hamiltonian(energy) operator.
 
 > Please do not confuse this with the ground state `E₀`.
 > Later I explain that I'm looking for an optimal state `Yᵒ` with average energy `Eᵒ`.
@@ -29,7 +29,7 @@ From the uncertainty principle, I know that for any state `[Y>`;
 
 I conjecture that there exist some state `[Yᵒ>` such that the above inequality becomes an equality,
 and that this state is the optimum solution to the programming problem stated above.
-Any state `[Y>` can be build from a superposition of eigen-states `[n>`.
+Any state `[Y>` can be built from a superposition of eigen-states `[n>`.
 Therefore, the programming problem can be expanded out to
 
     min <Y][n><n]d[x]d[p][m><m][Y>   # 5.3a
@@ -40,7 +40,7 @@ Therefore, the programming problem can be expanded out to
 > I was not sure I could do this until I read the KKT paper.
 > Then I was pretty sure I could do this.
 > I guess it could have been that the distribution I picked would not work.
-> I just knew Poisson distribution would work.
+> I just knew that the Poisson distribution would work.
 > What else could it be!?
 > But I had no idea how much algebra there would be.
 > Wow!
@@ -50,7 +50,7 @@ The benefit of this expansion is that it arithmetizes⁷ the problem.
 The general idea of finding the minimum of a function is
 to find some point from which any deviation increases the function.
 The component eigen-states of the state `[Y>` gives me the ability to enumerate
-the infinte amount of ways I can very state `[Y>`.
+the infinite amount of ways I can very state `[Y>`.
 
 What I am varying in the state of the particle is its distribution of energy eigen-states.
 Upon measurement, the probability of a particle having energy Eₙ is given by `<n][Y><Y][n>`.

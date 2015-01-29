@@ -46,7 +46,7 @@ Therefore, the programming problem can be expanded out to
 > Wow!
 > It was a lot!
 
-The benefit of this expansion is that it arithmetizes⁷ the problem.
+The benefit of this expansion is that it arithmetizes[⁷](REFERENCE.md) the problem.
 The general idea of finding the minimum of a function is
 to find some point from which any deviation increases the function.
 The component eigen-states of the state `[Y>` gives me the ability to enumerate

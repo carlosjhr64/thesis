@@ -18,8 +18,8 @@ x=√2
 3. [Energy Eigen-States and Eigen-Values of the Simple Harmonic Oscillator](QMSHO.md)
 4. [Measure of Uncertainty](UNCERTAINTY.md)
 5. [Formulation of the Programming Problem](FORMULATION.md)
-6. An Intuitive Guess to the Optimum Distribution
-7. Solving the Programming Problem
+6. [An Intuitive Guess to the Optimum Distribution](INTUITIVE.md)
+7. [Solving the Programming Problem](SOLVING.md)
   1. Evaluation of `<y²>`
   2. Evaluation of `<y>`
   3. Time development

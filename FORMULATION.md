@@ -70,3 +70,5 @@ collapses upon measurement into one of its energy eigen-states `[n>`.
 > Anything we get to actually follow around behaves classically.
 > In QM experiments we create an event here and
 > then observe an event there and in between who knows?
+
+## [An Intuitive Guess to the Optimum Distribution](INTUITIVE.md)

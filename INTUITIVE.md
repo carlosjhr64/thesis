@@ -8,11 +8,11 @@ The Poisson distribution is given by
 
 where `u` is the average value of the distribution,
 `n` is a non-negative integer value, and
-`Pₙ` is the probability of observing a value of n.
+`Pₙ` is the probability of observing a value of `n`.
 The Poisson distribution approaches a Gaussian distribution for large `u`, and
-is know to have a standard deviation of the square root of u.
+is known to have a standard deviation of the square root of `u`.
 
-> Notice that for equation #6.1 I'm unable to reproduce the superscript notation for `e^(-u)`.
+> Notice that for equation 6.1 I'm unable to reproduce the superscript notation for `e^(-u)`.
 > But I want to give my opinion that the solution
 > isn't to clutter up our table of symbols with more symbols.
 > We only have ten fingers and limited landscape on a keyboard.
@@ -67,7 +67,7 @@ then through calculus the uncertainty in `E` is given by
 
     d[E] = pd[p]/m + kxd[x].   # 6.3
 
-> Recall that `d[]` is defined in [#4.1](UNCERTAINTY.md).
+> Recall that `d[]` is defined in [4.1](UNCERTAINTY.md).
 > This is a standard trick in error analysis.
 > Notice how it makes `d[x]` look like `dx`... I'm so clever!
 
@@ -121,7 +121,7 @@ For the simple harmonic oscillator, it is well known that
 > but I can't find the specific reference to it now.
 > Apparently it's a consequence of the more general
 > [Virial theorem](http://en.wikipedia.org/wiki/Virial_theorem),
-> which I have no memory of ever studying, but it's my book.
+> which I have no memory of ever studying, but it's in the college text book.
 > Anyways, the derivation is quick enough:
 
     # I get to use my notation b/c I'm old and don't give a damn.

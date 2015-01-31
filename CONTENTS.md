@@ -29,6 +29,7 @@ x=√2
 
 ## APPENDIX
 
+* [Acknowledgments](ACKNOWLEDGMENTS.md)
 * [Reference - Books - Lecture](REFERENCE.md)
 * Energy Eigen-States of the Simple Harmonic Oscillator
 * Properties of Optimun pₙ.

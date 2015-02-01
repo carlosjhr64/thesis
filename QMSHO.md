@@ -41,7 +41,7 @@ The energy eigen-state solutions to this equation are given by
     y ≡ 2πmωx²/h,             # 3.3b
 
 where `Hₙ[y]` is the nth Hermite polynomial.
-For a full description of `Yₙ[x]`, please see appendix A.
+For a full description of `Yₙ[x]`, please see [appendix A](STATES.md).
 Since this equation is a linear differential equation,
 any arbitrary sum of its eigen-states will also be a solution:
 

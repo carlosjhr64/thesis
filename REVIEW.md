@@ -1,4 +1,8 @@
-## Review of the Simple Harmonic Oscillator in Classical Mechanics
+### [TABLE OF CONTENTS](CONTENTS.md)
+
+### 1. [Introduction](INTRODUCTION.md)
+
+## 2. Review of the Simple Harmonic Oscillator in Classical Mechanics
 
 Newton's equation states that the product of a particle's mass and acceleration is equal to
 the force that is accelerating the particle:
@@ -97,4 +101,4 @@ X = √(2E/k)              # OK, so pencil wins!  :)
 
 ![Graph](images/graph_500_684.png)
 
-## [Energy Eigen-States and Eigen-Values of the Simple Harmonic Oscillator](QMSHO.md)
+### 3. [Energy Eigen-States and Eigen-Values of the Simple Harmonic Oscillator](QMSHO.md)

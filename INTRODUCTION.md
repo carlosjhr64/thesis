@@ -1,4 +1,19 @@
-## INTRODUCTION
+### [TABLE OF CONTENTS](CONTENTS.md)
+
+## 1. Introduction
+
+> A friend of mine showed me this interesting problem:
+```
+x^x^x... = 2 ⇒ x=√2
+```
+> Looks impossible to solve, but here it is:
+```
+F[x]=x^(F[x]),F[x]=2 ⇒ x=√2 # Prove this
+F[x]=x^(F[x])               # Given
+2=x^(2)                     # F[x]=2 was given, so substitute that in
+x²=2                        # Solve for x
+x=√2
+```
 
 In this paper, I work on "the problem" of minimizing the uncertainty in both
 the position and momentum of a quantum particle of large average energy in
@@ -77,4 +92,4 @@ either minimize or maximize some property of that state.
 > So I sincerely believe that this here is the first time
 > the correspondence principle was demonstrated for the SHO.
 
-## [Review of the Simple Harmonic Oscillator in Classical Mechanics](REVIEW.md)
+### 2. [Review of the Simple Harmonic Oscillator in Classical Mechanics](REVIEW.md)

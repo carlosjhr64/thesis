@@ -1,4 +1,8 @@
-## Measure of Uncertainty
+### [TABLE OF CONTENTS](CONTENTS.md)
+
+### 3. [Review of the Simple Harmonic Oscillator in Classical Mechanics](QMSHO.md)
+
+## 4. Measure of Uncertainty
 
 The uncertainty principle states that there is a limit to
 our ability to simultaneously measure a particle's position and momentum.
@@ -75,4 +79,4 @@ where `i` is the imaginary number, square root of negative one.
 > But what is it really?
 > NO! IT IS NOT √(-1).
 
-## [Formulation of the Programming Problem](FORMULATION.md)
+### 5. [Formulation of the Programming Problem](FORMULATION.md)

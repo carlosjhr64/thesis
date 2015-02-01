@@ -1,4 +1,8 @@
-## An Intuitive Guess to the Optimum Distribution
+### [TABLE OF CONTENTS](CONTENTS.md)
+
+### 5. [Formulation of the Programming Problem](FORMULATION.md)
+
+## 6. An Intuitive Guess to the Optimum Distribution
 
 In this section, I show why the Poisson distribution is a good guess
 for an optimun distribution to minimize uncertainties for the simple harmonic oscillator.
@@ -181,4 +185,4 @@ it is a good guess for an optimum distribution.[⁵](REFERENCE.md)
 > I don't know if I add that on the UCSC copy.
 > It's just a re-iteration of 6.10 for the QM version.
 
-## [Solving the Programming Problem](SOLVING.md)
+## 7. [Solving the Programming Problem](SOLVING.md)

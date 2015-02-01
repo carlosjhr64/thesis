@@ -1,4 +1,8 @@
-## Formulation of the Programming Problem
+### [TABLE OF CONTENTS](CONTENTS.md)
+
+### 4. [Measure of Uncertainty](UNCERTAINTY.md)
+
+## 5. Formulation of the Programming Problem
 
 The problem I have set for myself is to maximize the knowledge of
 the position `x` and momentum `p` of a particle of finite average energy `Eᵒ`.
@@ -71,4 +75,4 @@ collapses upon measurement into one of its energy eigen-states `[n>`.
 > In QM experiments we create an event here and
 > then observe an event there and in between who knows?
 
-## [An Intuitive Guess to the Optimum Distribution](INTUITIVE.md)
+### 6. [An Intuitive Guess to the Optimum Distribution](INTUITIVE.md)

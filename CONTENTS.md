@@ -1,15 +1,4 @@
-> A friend of mine showed me this interesting problem:
-```
-x^x^x... = 2 ⇒ x=√2
-```
-> Looks impossible to solve, but here it is:
-```
-F[x]=x^(F[x]),F[x]=2 ⇒ x=√2 # Prove this
-F[x]=x^(F[x])               # Given
-2=x^(2)                     # F[x]=2 was given, so substitute that in
-x²=2                        # Solve for x
-x=√2
-```
+## [ABSTRACT](README.md)
 
 ## TABLE OF CONTENTS
 

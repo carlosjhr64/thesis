@@ -1,9 +1,10 @@
-## ADDENDUM
+### ADDENDUM
 
-This was not in my original thesis.
-Here I review stuff I've forgotten and needed to review.
+## Mass On A Spring
 
-### Mass On A Spring
+> This was not in my original thesis.
+> Here I review stuff I've forgotten and needed to review.
+> It has been, after all, 25 years since I've seen any of this.
 
 My concern here was the possibility of complex amplitudes as
 a solution to the mass on a spring problem.

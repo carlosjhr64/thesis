@@ -16,11 +16,17 @@
   5. Results
 8. Conclusions and After Thoughts
 
+R. [Reference - Books - Lecture](REFERENCE.md)
+
 ## APPENDIX
 
+A. Energy Eigen-States of the Simple Harmonic Oscillator
+
+B. Properties of Optimun pₙ.
+
+C. Proof: Necessary and Sufficient Conditions for Optimum Solution to the Programing Problem.
+
+## ADDENDUM
+
 * [Acknowledgments](ACKNOWLEDGMENTS.md)
-* [Reference - Books - Lecture](REFERENCE.md)
-* Energy Eigen-States of the Simple Harmonic Oscillator
-* Properties of Optimun pₙ.
-* Proof: Necessary and Sufficient Conditions for Optimum Solution to the Programing Problem.
-* [Addendum](ADDENDUM.md)
+* [Mass on a Spring](SPRING.md)

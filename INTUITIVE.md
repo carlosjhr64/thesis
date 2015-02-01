@@ -130,23 +130,23 @@ For the simple harmonic oscillator, it is well known that
 
     # I get to use my notation b/c I'm old and don't give a damn.
     V = ½kx²                                 # Given the harmonic potential,
-    <V>=(1/tᵒ)∫[0,tᵒ]{V}                     # find the time average of the potential energy.
+    <V>=(1/tᵒ)∫[0,tᵒ]{t|V}                     # find the time average of the potential energy.
     # The integral operator takes two variables and a block, right?
     # The block is evaluated from 0 to tᵒ.
-        (1/tᵒ)∫[0,tᵒ]{½kx²}
-        (1/tᵒ)∫[0,tᵒ]{½k(A:Sine[ωt])²}
-        ½kA²(1/tᵒ)∫[0,tᵒ]{S²[ωt]}            # S:::Sine implicitly
+        (1/tᵒ)∫[0,tᵒ]{t|½kx²}
+        (1/tᵒ)∫[0,tᵒ]{t|½k(A:Sine[ωt])²}
+        ½kA²(1/tᵒ)∫[0,tᵒ]{t|S²[ωt]}          # S:::Sine implicitly
     E=½kA²                                   # Note the total energy.
-    <V>=E(1/tᵒ)∫[0,tᵒ]{S²[ωt]}
-        E/tᵒ∫[0,tᵒ]{S²[ωtᵒ]}
+    <V>=E(1/tᵒ)∫[0,tᵒ]{t|S²[ωt]}
+        E/tᵒ∫[0,tᵒ]{t|S²[ωtᵒ]}
     u:=ωt                                    # Let...
     t=u/ω,du=ωdt,dt=du/ω                     # Consequences of change of variables.
-    <V>=Eω/uᵒ∫[0,uᵒ]{S²[u]/ω}                # Implementing change of variables.
-        E/uᵒ∫[0,uᵒ]{S²[u]}
+    <V>=Eω/uᵒ∫[0,uᵒ]{u|S²[u]/ω}              # Implementing change of variables.
+        E/uᵒ∫[0,uᵒ]{u|S²[u]}
     # Circular functions are tricky.
     # Just want to go from minimum to maximum once.
-    <V>=E/(π/2)∫[0,π/2]{S²[u]}               # Half period.
-        2E/π∫[0,π/2]{S²[u]}
+    <V>=E/(π/2)∫[0,π/2]{u|S²[u]}             # Half period.
+        2E/π∫[0,π/2]{u|S²[u]}
         2E/π[0,π/2]{½(x-S[u]:Cosine[u])}     # By Wolframalpha, see link below.
         E/π[(π/2-S[π/2]C[π/2])-(0-S[0]C[0])] # C:::Cosine implicitly
         E/π[(π/2)-(0)]

@@ -37,10 +37,18 @@ where n takes on non-negative integer values.
 
 The energy eigen-state solutions to this equation are given by
 
-    Yₙ[x] = AₙHₙ[y]e^(-y²),   # 3.3a
-    y ≡ 2πmωx²/h,             # 3.3b
+~~Yₙ[x] = AₙHₙ[y]e^(-y²),~~
+
+~~y ≡ 2πmωx²/h,~~
+
+    Yₙ[x] = AₙHₙ[y]e^(-y²/2),   # 3.3a
+    y² ≡ 2πmωx²/h,              # 3.3b
 
 where `Hₙ[y]` is the nth Hermite polynomial.
+
+> These errors propated from typos that probably first occurred in the appendix A.
+> Unfortunately, I think they were never caught and are in the UCSC copy.
+
 For a full description of `Yₙ[x]`, please see [appendix A](STATES.md).
 Since this equation is a linear differential equation,
 any arbitrary sum of its eigen-states will also be a solution:

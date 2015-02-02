@@ -5,8 +5,19 @@
 In [section three](QMSHO.md) of this paper,
 I gave the energy eigen-states for the simple harmonic oscillator:
 
-    Yₙ[x] = AₙHₙ[y]e^(y²)   # A.1a
-    y ≡ 2πmωx²/h            # A.1b
+~~Yₙ[x] = AₙHₙ[y]e^(-y²)~~
+
+~~y ≡ 2πmωx²/h~~
+
+    Yₙ[x] = AₙHₙ[y]e^(-y²/2)   # A.1a
+    y² ≡ 2πmωx²/h              # A.1b
+
+> This is an uncaught error and it's probably in the UCSC copy.
+> This is equations 7.46 and 7.59 in chapter 7 of Liboff's book.[³](REFERENCE.md)
+> It's correct on my manuscript.  [Want a picture?](images/manuscript_500_888.png)
+> I collected my notes on a three ring binder.
+> It's called that because of it's three rings.
+> Paper often came with three holds to clip through the rings of a three ring binder.
 
 The constants `Aₙ` are given by
 
@@ -23,19 +34,15 @@ This leads to the following result, which is used in section seven of this paper
 `Hₙ[y]` are the Hermite polynomials.
 There are many ways of expressing them, but here is one:
 
-    Hₙ[y] = (-1)ⁿe^(y²)(D[y])e^(y²)   # A.3
+    Hₙ[y] = (-1)ⁿe^(y²)(Dᵧ)ⁿe^(y²)   # A.3
 
-> `D[y]` is D subscript y, but I do not have the subscript y.
-> TODO: What is `D`???
-> I personally don't need to re-derive the entire QM system just work on my problem, but
-> it be nice if I could remember what's going on here.
+> Here I'm using `ᵧ` as subscript `y`, because I don't have the exact subscript.
+> `Dᵧ` is the differential operator with respect to `y`.
+> `(Dᵧ)ⁿ` is the nth derivative, `dⁿ/dyⁿ`, or `δⁿ/δyⁿ`.
 
 The Hermite polynomial has the following recursion relations:
 
-    (D[y])H[n][y] = 2nH[n-1][y]           # A.4a
+    (Dᵧ)H[n][y] = 2nH[n-1][y]             # A.4a
     H[n+1][y] = 2yH[n][y] - 2nH[n-1][y]   # A.4b
 
 These were use for the analysis of the problem worked on this paper.
-
-> OK, so this page is a complete mistery to me now.
-> I'll probably be reviewing this for while before moving on.

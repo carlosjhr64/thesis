@@ -46,3 +46,6 @@ The Hermite polynomial has the following recursion relations:
     H[n+1][y] = 2yH[n][y] - 2nH[n-1][y]   # A.4b
 
 These were use for the analysis of the problem worked on this paper.
+
+> You can read more about Hermite polynomials in
+> [Wikipedia](http://en.wikipedia.org/wiki/Hermite_polynomials).

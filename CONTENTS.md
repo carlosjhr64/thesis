@@ -22,7 +22,7 @@ R. [Reference - Books - Lecture](REFERENCE.md)
 
 A. [Energy Eigen-States of the Simple Harmonic Oscillator](STATES.md)
 
-B. Properties of Optimun pₙ.
+B. [Properties of Optimun pₙ.](PROPERTIES.md)
 
 C. Proof: Necessary and Sufficient Conditions for Optimum Solution to the Programing Problem.
 

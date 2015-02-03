@@ -1,3 +1,5 @@
+### [TABLE OF CONTENTS](CONTENTS.md)
+
 ### ADDENDUM
 
 ## Mass On A Spring

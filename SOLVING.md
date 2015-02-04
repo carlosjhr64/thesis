@@ -43,7 +43,7 @@ and
      q² = -2π/(hωm) (d/dx)².   # 7.3
 
 > Note that 7.3a re-iterates 3.3b, and here I have `y²` correctly.
-> [3.3b](QMSHO.md) really was a transcription error.
+> [3.3b](QMSHO.md) really was a copy error.
 > So I am about to evaluate 7.1a, the objective function, or
 > at least half way and argue symmetry (or equipartition) for the other half.
 

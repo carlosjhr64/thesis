@@ -69,3 +69,7 @@ Thus (1) is proved. For condition (2),
 > Looks like my past self is failing to explain to myself what I apparently once knew.
 > My guess is that I'm about to evaluate ΔpΔx with the Poisson distribution, but
 > I don't see how I'm demonstrating KKT.
+>
+> I found this video on YouTube very helpful: [A Lagrange Multiplier Example](https://youtu.be/H4HN4ZrVm0w).
+> I think I just need to add an addedum showing explicitly what I did.
+> If I were to do a rewrite, I think I'd do a lot of restructuring of how I present things.

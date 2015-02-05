@@ -9,7 +9,7 @@
 5. [Formulation of the Programming Problem](FORMULATION.md)
 6. [An Intuitive Guess to the Optimum Distribution](INTUITIVE.md)
 7. [Solving the Programming Problem](SOLVING.md)
-  1. Evaluation of `<y²>`
+  1. [Evaluation of `<y²>`](Y2.md)
   2. Evaluation of `<y>`
   3. Time development
   4. The Related Programing Problem

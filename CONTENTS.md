@@ -12,7 +12,7 @@
   1. [Evaluation of `<y²>`](Y2.md)
   2. [Evaluation of `<y>`](Y.md)
   3. [Time development](TIME.md)
-  4. The Related Programing Problem
+  4. [The Related Programming Problem](RELATED.md)
   5. Results
 8. Conclusions and After Thoughts
 

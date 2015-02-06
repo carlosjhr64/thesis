@@ -57,12 +57,14 @@ Using time development,
 
     The evaluation of `<q²>` leads to almost the save result as `<y²>`, but differs by a sign.
 
-    <q²> =                                                                      # 7.22
-    ½nᵒ + ½ - ½Σₙ 1ₙ† pₙ† (1ₙ-₂ pₙ-₂ [n(n-1)]^½  +  1ₙ+₂ pₙ+₂ [(n+1)(n+2)]^½)
+~~`<q²>` = ½nᵒ + ½ - ½Σₙ 1ₙ† pₙ† (1ₙ-₂ pₙ-₂ [n(n-1)]^½  +  1ₙ+₂ pₙ+₂ [(n+1)(n+2)]^½)~~
 
-> TODO: This differs by more than just a sign.
-> Looking ahead looks like I invoke difference of squares.
-> At the moment, I don't know what's going on here.
+    <q²> =                                                                      # 7.22
+    (nᵒ + ½) - ½Σₙ 1ₙ† pₙ† (1ₙ-₂ pₙ-₂ [n(n-1)]^½  +  1ₙ+₂ pₙ+₂ [(n+1)(n+2)]^½)
+
+> Another copy error.
+> Checking my manuscript, 7.21 and 7.22 really only differs by a sign as described.
+> And Looking ahead looks like I invoke difference of squares.
 
 Assume that `<y>=0` at `t=0`, as is the case in `<n]y[n>` for all `n`.
 Then the series for `<y>`, equation (7.20), vanishes term by term,

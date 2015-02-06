@@ -64,7 +64,7 @@ Using time development,
 > Looking ahead looks like I invoke difference of squares.
 > At the moment, I don't know what's going on here.
 
-Assume that `<y>=0` at `t=0`, as is the case in `<n]y[n>` for all n.
+Assume that `<y>=0` at `t=0`, as is the case in `<n]y[n>` for all `n`.
 Then the series for `<y>`, equation (7.20), vanishes term by term,
 after perhaps a shifting of one of the indexes:
 
@@ -75,7 +75,7 @@ Furthermore, the evaluation of uncertainty is reduce to
 
     d[y] = <y²>  if t=0.   # 7.24
 
-For the next step, notice that at `t=0`, `1ₙ`.
+For the next step, notice that at `t=0`, `1ₙ=1`.
 Thus, at `t=0`,
 
     <y²><q²> =                                                    # 7.25

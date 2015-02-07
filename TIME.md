@@ -35,7 +35,7 @@ Then, since ~~Eₙ/h=ω(n+½)~~ `Eₙ/ħ=ω(n+½)`,
 
 ~~1ₙ† 1ₙ+ₘ = cₘ + isₘ~~
 
-    1ₙ† 1ₙ+ₘ = cₘ + isₘ                           # 7.18b
+    1ₙ† 1ₙ+ₘ = cₘ - isₘ                           # 7.18b
 
 > Seeing this at first (after 25 years) I admit I was a bit puzzled.
 > So here's the derivation all explicitly laid out:

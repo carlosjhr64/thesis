@@ -34,10 +34,28 @@ Then, since ~~Eₙ/h=ω(n+½)~~ `Eₙ/ħ=ω(n+½)`,
     1ₙ† 1ₙ+ₘ = e^(iωmt) = cos[ωmt] + i sin[ωmt]   # 7.18a
     1ₙ† 1ₙ+ₘ = cₘ + isₘ                           # 7.18b
 
-> TODO: Derive this!
-> I'm worried about what I meant here.
-> Am I talking about states n and m, or state n+m?
-> Goes back to that issue earlier with [3.5e.i](QMSHO.md).
+> Seeing this at first (after 25 years) I admit I was a bit puzzled.
+> So here's the derivation all explicitly laid out:
+
+    1ₙ† 1ₙ+ₘ                                                           # Given
+    e^(-iEₙt/h)† e^(-iEₙ+ₘt/h)                                         # By definition of 1ₙ
+    e^(-iw(n+½)t)† e^(-iw(n+m+½)t)                                     # By substitution of Eₙ/ħ with ω(n+½)
+    e^(-iwtu)† e^(-iwt(u+m))                                           # u:=n+½ (Let...)
+    e^(iwtu) e^(-iwt(u+m))                                             # It's what complex conjugation does! :)
+    e^(iwtu - iwt(u+m))                                                # A reason to really love e.
+    e^(iwtu - iwtu - iwtm)                                             # Distribute
+    e^(-iwtm)                                                          # iwtu-iwtu=0
+    # or
+    :Cosine[wtm] - i:Sine[wtm]
+    # or
+    cos[wtm] - i sin[wtm]
+    # or
+    cₘ - isₘ
+
+> Ah, crap!  It's going to end up not mattering because it's just a phase shift, but crap!
+> Let me double check my notes before noting the error.
+> See also
+> [Wolframalpha](http://www.wolframalpha.com/input/?i=conjugate%5Be%5E%28-i*n%29%5D+*+e%5E%28-i*%28n%2Bm%29%29).
 
 Using time development,
 

@@ -33,17 +33,12 @@ which is a Poisson distribution.
 
 The following properties hold:
 
-    p[n] ≡ pₙ
-    p[n]†p[n-1] = -i([nᵒ]^½/n^½)P[n-1]    # B.3a
-    p[n]†p[n+1] = i([nᵒ]^½/[n+1]^½)P[n]   # B.3b
-
-> Because of my need to resort to `p[n]≡pₙ` here,
-> it was impossible to unambiguously write the following B.4 expression as in the orignal thesis.
+    pₙ†pₙ-₁ = -i([nᵒ]^½/n^½)Pₙ-₁    # B.3a
+    pₙ†pₙ+₁ = i([nᵒ]^½/[n+1]^½)Pₙ   # B.3b
 
 One of the conditions for optimum ~~pn~~ `pₙ` is
 
-    p[n] ≡ pₙ
-    p[n]† √(n+1) p[n+1]  =  -p[m]† √(m) p[m-1]   # B.4
+    pₙ† √[n+1] pₙ+₁  =  -pₘ† √[m] pₘ-₁   # B.4
 
 which is satisfied with m=n+1
 (perhaps obvious from the beginning).
@@ -53,21 +48,21 @@ which is satisfied with m=n+1
 
 The other condition on `pₙ` is
 
-    p[n]† p[n+2] √((n+1)(n+2))  +  p[m]† p[m-2] √(m(m+1))  =  2nᵒ p[n]† p[n]   # B.5
+    pₙ† pₙ+₂ √[(n+1)(n+2)]  +  pₘ† pₘ-₂ √[m(m+1)]  =  2nᵒ pₙ† pₙ   # B.5
 
 But
 
-    p[n]† p[n+2] = -[nᵒ]^(n+1) e^[-nᵒ] / (n! [(n+1)(n+2)]^½)   # B.6a
-    = -nᵒ P[n] / √((n+1)(n+2)),
+    pₙ† pₙ+₂ = -[nᵒ]^(n+1) e^[-nᵒ] / (n! [(n+1)(n+2)]^½)   # B.6a
+    = -nᵒ Pₙ / √((n+1)(n+2)),
 
 and
 
-    p[n]† p[n-2] = -nᵒ P[n-2] / √(n(n+1))   # B.6b
+    pₙ† pₙ-₂ = -nᵒ Pₙ-₂ / √(n(n+1))   # B.6b
 
 Thus in condition B.5, m=n+2.
 
 > At the moment I can explain that we need to be able to say something about what
-> `p[n]` and `p[n+1]`(and maybe `p[n+2]`) look like for the optimal distribution
+> `pₙ` and `pₙ+₁`(and maybe `pₙ+₂`) look like for the optimal distribution
 > in order for the induction argument to work.
 > I believe this part is where my original work begins, but
 > I don't know where I'm getting these relations from.

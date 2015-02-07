@@ -32,19 +32,22 @@ For convenience, let the following be defined:
 Then, since ~~Eₙ/h=ω(n+½)~~ `Eₙ/ħ=ω(n+½)`,
 
     1ₙ† 1ₙ+ₘ = e^(iωmt) = cos[ωmt] + i sin[ωmt]   # 7.18a
+
+~~1ₙ† 1ₙ+ₘ = cₘ + isₘ~~
+
     1ₙ† 1ₙ+ₘ = cₘ + isₘ                           # 7.18b
 
 > Seeing this at first (after 25 years) I admit I was a bit puzzled.
 > So here's the derivation all explicitly laid out:
 
-    1ₙ† 1ₙ+ₘ                                                           # Given
-    e^(-iEₙt/h)† e^(-iEₙ+ₘt/h)                                         # By definition of 1ₙ
-    e^(-iw(n+½)t)† e^(-iw(n+m+½)t)                                     # By substitution of Eₙ/ħ with ω(n+½)
-    e^(-iwtu)† e^(-iwt(u+m))                                           # u:=n+½ (Let...)
-    e^(iwtu) e^(-iwt(u+m))                                             # It's what complex conjugation does! :)
-    e^(iwtu - iwt(u+m))                                                # A reason to really love e.
-    e^(iwtu - iwtu - iwtm)                                             # Distribute
-    e^(-iwtm)                                                          # iwtu-iwtu=0
+    1ₙ† 1ₙ+ₘ                         # Given
+    e^(-iEₙt/h)† e^(-iEₙ+ₘt/h)       # By definition of 1ₙ
+    e^(-iw(n+½)t)† e^(-iw(n+m+½)t)   # By substitution of Eₙ/ħ with ω(n+½)
+    e^(-iwtu)† e^(-iwt(u+m))         # u:=n+½ (Let...)
+    e^(iwtu) e^(-iwt(u+m))           # It's what complex conjugation does! :)
+    e^(iwtu - iwt(u+m))              # A reason to really love e.
+    e^(iwtu - iwtu - iwtm)           # Distribute
+    e^(-iwtm)                        # iwtu-iwtu=0
     # or
     :Cosine[wtm] - i:Sine[wtm]
     # or
@@ -52,10 +55,18 @@ Then, since ~~Eₙ/h=ω(n+½)~~ `Eₙ/ħ=ω(n+½)`,
     # or
     cₘ - isₘ
 
-> Ah, crap!  It's going to end up not mattering because it's just a phase shift, but crap!
-> Let me double check my notes before noting the error.
 > See also
 > [Wolframalpha](http://www.wolframalpha.com/input/?i=conjugate%5Be%5E%28-i*n%29%5D+*+e%5E%28-i*%28n%2Bm%29%29).
+> Ok, so caught an error, but I'm pretty sure it'll end up not mattering.
+> it's just a phase shift.
+> Keep an eye for that though as the same mistake is in my notes.
+> `1ₙ†1ₙ=1` is still true:
+
+    1ₙ† 1ₙ
+    e^(-iEₙt/h)† e^(-iEₙt/h)
+    e^(+iEₙt/h) e^(-iEₙt/h)
+    e^0
+    1
 
 Using time development,
 
@@ -72,8 +83,7 @@ Using time development,
 > Looks like I was having trouble keeping track of h-bars in my manuscript too!
 > I have a note to myself to check if I'm using h-bar correctly.
 
-
-    The evaluation of `<q²>` leads to almost the save result as `<y²>`, but differs by a sign.
+The evaluation of `<q²>` leads to almost the same result as `<y²>`, but differs by a sign.
 
 ~~`<q²>` = ½nᵒ + ½ - ½Σₙ 1ₙ† pₙ† (1ₙ-₂ pₙ-₂ [n(n-1)]^½  +  1ₙ+₂ pₙ+₂ [(n+1)(n+2)]^½)~~
 

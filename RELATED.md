@@ -27,7 +27,7 @@ states that there exists some `u` such that the following for optimum pₙ holds
     (e) pₙ ≠ 0
     (f) u ≠ 0
 
-Following a precedence set in (7.23), m is used to allow for a shift in one of the indexes.
+Following a precedence set in (7.23), `m` is used to allow for a shift in one of the indexes.
 Let `u≡nᵒ`.
 These conditions can be reinterpreted as follows:
 

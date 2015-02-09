@@ -32,14 +32,10 @@ This leads to a Guassian distribution of measurements centered about an ideal va
 
 > Just a bit of a tangent.
 > The things we're measuring do not live on a coordinate system
-> sitting nicely at some point where we get to read off [a,b,c], and
-> then argue about the commensurability of a pair of measured length.
+> sitting nicely at some point where we get to read off [a,b,c].
 > We say... "This looks like a foot, three inches, and say three quarters."
 > We're truncating what to us really does look like Real numbers.
-> Even in counting experiments
-> there's the issue of whether an event happened before the cutoff time.
-> To say that what we're measuring is of type Rational would actually be the position of "Faith".
-> :)
+> The chances that what we are measuring is commesurable with a given arbitrary unit is dismal.
 
 When one measures the energy of a simple harmonic oscillator,
 these measurements will also differ from the expected value of the energy.
@@ -47,7 +43,7 @@ But these measurements cannot belong to a Gaussian distribution because
 they can only have positive discrete values.
 Still, on the scale of large energies,
 the interval between energy values becomes small enough that
-one may cosider the energy to be continuous, and
+one may consider the energy to be continuous, and
 the probabilities for near zero energy values are very small.
 Then, if the uncertainty in the energy of a simple harmonic oscillator is due to
 random deviations from the average,

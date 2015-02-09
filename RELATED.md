@@ -23,7 +23,8 @@ states that there exists some `u` such that the following for optimum pₙ holds
 
     (a) pₙ+₂†[(n+1)(n+2)]^½ + pₘ-₂[m(m-1)]^½ ≤ 2upₙ             # 7.27
     (b) pₙ†(pₙ+₂[(n+1)(n+2)]^½+pₘ†(pₘ-₂[m(m-1)]^½)-2upₙ†pₙ)=0
-    (c) u(Σₙ pₙ†pₙ - 1) = 0
+    (c) pₙ†pₙ ≤ 1
+    (d) u(Σₙ pₙ†pₙ - 1) = 0
     (e) pₙ ≠ 0
     (f) u ≠ 0
 

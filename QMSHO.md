@@ -56,7 +56,7 @@ any arbitrary sum of its eigen-states will also be a solution:
     Y[x] = Σₙ pₙYₙ[x]   # 3.4
 
 In this paper, I will mostly use the Dirac notation, but
-I will switch notations whenever is convenient.
+I will switch notations whenever it is convenient.
 The manipulations of the Dirac notation symbols easily incorporate
 the algebraic structure of Quantum Mechanics.
 
@@ -100,12 +100,11 @@ I add the following:
 > Anyways, I don't think the issue with `#3.5e.i` and `(4.24)` ever comes up in my proof later.
 
 Placing two indices side by side will indicate that
-the sum ~~overall~~ *over all* of the of the indices is to be evaluated, for example:
+the sum overall of the of the indices is to be evaluated, for example:
 
     <Y][n><n][Y> = 1   # 3.6a
 
-> I meant "over all n" here.  Just caught that now.
-> The UCSC copy probably has "overall".
+> Is it "over all" or "overall?"
 
 Otherwise only the product is to be evaluated, as when
 determining the norm of an eigen-state component of a state `[Y>`:

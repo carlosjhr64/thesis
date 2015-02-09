@@ -31,7 +31,9 @@ For convenience, let the following be defined:
 
 Then, since ~~Eₙ/h=ω(n+½)~~ `Eₙ/ħ=ω(n+½)`,
 
-    1ₙ† 1ₙ+ₘ = e^(iωmt) = cos[ωmt] + i sin[ωmt]   # 7.18a
+~~1ₙ† 1ₙ+ₘ = e^(iωmt) = cos[ωmt] + i sin[ωmt]~~
+
+    1ₙ† 1ₙ+ₘ = e^(iωmt) = cos[ωmt] - i sin[ωmt]   # 7.18a
 
 ~~1ₙ† 1ₙ+ₘ = cₘ + isₘ~~
 

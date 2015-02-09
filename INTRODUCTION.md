@@ -28,7 +28,7 @@ In both cases solutions to these equations may be difficult, if they can be foun
 However, for the simple harmonic oscillator these solutions are well know and are relatively simple.
 
 Solutions to the Schrodinger equation are called energy eigen-states, since
-they are solutions of an energy eigen-value defferential equation.
+they are solutions of an energy eigen-value differential equation.
 The energy eigen-states for the simple harmonic oscillator form a discrete set.
 Thus, the oscillator is only allowed to have discrete energies.
 One of the properties of these eigen-states is that their combinations are
@@ -48,9 +48,9 @@ In order to describe the motion of a particle,
 one must be able to correspond the particle's position with time.
 This entails localizing the particle, and following it as time progresses.
 One can localize the particle by superimposing several energy eigen-states.
-Like waves of different wavelength, these states destructivel interfere at some points, and
+Like waves of different wavelength, these states destructively interfere at some points, and
 constructively interfere at others.
-These inteference evolve with time,
+These interference evolve with time,
 changing one's knowlege of the most likely position of the particle.
 Thus, some knowledge of the particle's motion is gained.
 But if one constructs an energy state out of several energy eigen-states, then
@@ -65,7 +65,7 @@ is seen to have a precise position, momentum, and energy.
 In this paper I minimize the uncertainties of the simple harmonic oscillator.
 I show that with the proper distribution of energy eigen-states
 centered about a given average energy,
-I can have all relative uncertainties vanish at the large scale limtit, as
+I can have all relative uncertainties vanish at the large scale limit, as
 guaranteed by the correspondence principle.
 
 I think my test of Quantum Mechanics is interesting.
@@ -74,9 +74,9 @@ I find its philosophical implications bewildering and
 want reassurance that the correspondense principle really holds.
 In my test the method I used to minimize uncertainties
 is from the relatively new field of mathematical programming.
-Mathematicla programming developed during World War II to
+Mathematicle programming developed during World War II to
 find efficient allocations of scarce resources--that is,
-trying to get the most out of the constrained amount[²](REFERENCE.md).
+trying to get the most out of a constrained amount[²](REFERENCE.md).
 Finally, my test illustrates how one can construct a state in order to
 either minimize or maximize some property of that state.
 

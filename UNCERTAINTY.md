@@ -9,10 +9,10 @@ our ability to simultaneously measure a particle's position and momentum.
 The uncertainty principle is often explained by pointing out that
 in order to measure a particle's position and momentum
 some form of contact must be made with the particle.
-But the uncertainty principle is more that just our inability to measure
+But the uncertainty principle is more than just our inability to measure
 without our affecting what we are measuring.
 The uncertainty principle is an intrinsic part of the particle.
-If one could ask the particle wher it is and how fast it is going,
+If one could ask the particle where it is and how fast it is going,
 it would respond "I don't know!".
 
 > Please understand that we were instructed to explain what we thought about our equations.
@@ -22,13 +22,13 @@ The question I want to ask Quantum Mechanics in this section is,
 First, I have to mathematically define uncertainty.
 The uncertainty in an observable is the variance of that observable.
 Let `A` be the observable being measured.
-Le `<A>` be the average value of `A`.
+Let `<A>` be the average value of `A`.
 Then the uncertainty of `d[A]` in `A` is defined to be
 
     d²[A] ≡ <(A - <A>)²>   # 4.1a
     d²[A] = <A²> - <A>²    # 4.1b
 
-If x is the position, and p is the momentum,
+If `x` is the position, and `p` is the momentum,
 the uncertainty principle in terms of variaces is given by
 
     d[x]d[p] ≥ h/(4π)   # 4.2
@@ -50,7 +50,7 @@ to obtain the information that operator represents.
 The state of a particle contains all knowable information about the particle, and
 it is a solution to the Schrodinger equation for the potential in wich the particle is.
 Let `A` and `B` be operators, and let `[Y>` be a state.
-The commuatator is defined to be
+The commutator is defined to be
 
     [A,B][Y> = AB[Y> - BA[Y>   # 4.3
 

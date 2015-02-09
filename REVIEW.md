@@ -37,12 +37,12 @@ it has two solutions from which all other solutions can be formed:
 > Some language issues here too.
 > I'm refering to sine and cosine functions, not `s*i*n` or `c*o*s`.
 > You might think that the meaning is clear.
-> But later you'll see that I'm struggling to deal with really long equations, and
-> terseness and unambiguous expressions are going to be extremely important!
-> Also, semantically we expect the term being defined on the left of the definition,
+> But later you'll see that I'm struggling to deal with really long equations.
+> And terseness and unambiguous expressions are going to be extremely important!
+> Semantically we expect the term being defined on the left of the definition,
 > like `s₁≡...`.  So to be clear, I'm defining `s₁` and `c₁`.
 > Later I'll be dealing with `sin[nωt]` and `cos[nωt]` which
-> for terseness I'll write `sₙ` and `cₙ`.
+> for terseness I'll write as `sₙ` and `cₙ`.
 
 `A` and `B` are arbitrary complex constants.
 The frequency of oscillation `f` is given by
@@ -54,7 +54,7 @@ and
     ω² = k/m.    # 2.4b
 
 > The above two equations defines the relationship between `k`, `w`, and `f`.
-> I should have used a definition sign, ≐.
+> I should have used a definition sign, ≡.
 > Of course, for a real mass on a spring problem, `A` and `B` are Real numbers.
 > It does seem a bit odd to me now that the general solution allows for complex amplitudes, and
 > if it does to you too you can check the derivation in the [addendum](SPRING.md).
@@ -74,7 +74,7 @@ and its motion is given by
 
 ~~x[t] = (E/k)sin[ωt] ⇐  x[0]=0   # 2.7~~
 
-    x[t] = √(2E/k)sin[ωt] ⇐ x[0]=0   # 2.7
+    x[t] = (2E/k)^½ sin[ωt] ⇐ x[0]=0   # 2.7
 
 > Even after setting `E`, `k`, and `w`, we still need to set the initial conditions,
 > which is what `x[0]=0` is about.

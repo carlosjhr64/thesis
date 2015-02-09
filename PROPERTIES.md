@@ -48,16 +48,16 @@ which is satisfied with m=n+1
 
 The other condition on `pₙ` is
 
-    pₙ† pₙ+₂ √[(n+1)(n+2)]  +  pₘ† pₘ-₂ √[m(m+1)]  =  2nᵒ pₙ† pₙ   # B.5
+    pₙ† pₙ+₂ [(n+1)(n+2)]^½  +  pₘ† pₘ-₂ [m(m+1)]^½  =  2nᵒ pₙ† pₙ   # B.5
 
 But
 
     pₙ† pₙ+₂ = -[nᵒ]^(n+1) e^[-nᵒ] / (n! [(n+1)(n+2)]^½)   # B.6a
-    = -nᵒ Pₙ / √((n+1)(n+2)),
+    = -nᵒPₙ/[(n+1)(n+2)]^½,
 
 and
 
-    pₙ† pₙ-₂ = -nᵒ Pₙ-₂ / √(n(n+1))   # B.6b
+    pₙ† pₙ-₂ = -nᵒPₙ-₂/[n(n+1)]^½   # B.6b
 
 Thus in condition B.5, m=n+2.
 

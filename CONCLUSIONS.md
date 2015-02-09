@@ -1,6 +1,6 @@
 ### [CONTENTS](CONTENTS.md)
 
-### 7.5 [Results](RESULT.md)
+### 7.5 [Results](RESULTS.md)
 
 ## 8. Conclusions and Afterthoughts
 

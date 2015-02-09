@@ -57,15 +57,15 @@ The component eigen-states of the state `[Y>` gives me the ability to enumerate
 the infinite amount of ways I can very state `[Y>`.
 
 What I am varying in the state of the particle is its distribution of energy eigen-states.
-Upon measurement, the probability of a particle having energy Eₙ is given by `<n][Y><Y][n>`.
-Furthermore, the following properties make `<n][Y><Y][n>` a distribution function of n:
+Upon measurement, the probability of a particle having energy `Eₙ` is given by `<n][Y><Y][n>`.
+Furthermore, the following properties make `<n][Y><Y][n>` a distribution function of `n`:
 
     0 ≤ <n][Y><Y][n> ≤ 1    # 5.4a
     <Y][n><n][Y> = 1        # 5.4b
     <Y][n><n]Eₙ[Y> = Eᵒ     # 5.4c
 
-It is important to note that once the particle's energy has been measured to be Eₙ,
-consequent measurements of the energy are certain to be the same Eₙ.
+It is important to note that once the particle's energy has been measured to be `Eₙ`,
+consequent measurements of the energy are certain to be the same `Eₙ`.
 What happens is that a particle originally in a state of uncertain energy `[Y>`
 collapses upon measurement into one of its energy eigen-states `[n>`.
 

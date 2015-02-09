@@ -22,16 +22,22 @@ The Karush-Kuhn-Tucker (KKT) conditions for constrained optimization[²](REFEREN
 states that there exists some `u` such that the following for optimum pₙ holds:
 
     (a) pₙ+₂†[(n+1)(n+2)]^½ + pₘ-₂[m(m-1)]^½ ≤ 2upₙ             # 7.27
-    (b) pₙ†(pₙ+₂[(n+1)(n+2)]^½)+pₘ†(pₘ-₂[m(m-1)]^½)-2upₙ†pₙ)=0
 
-> TODO: There's a problem with (b), I think I know what I meant to write, need to check...
+~~(b) pₙ†(pₙ+₂[(n+1)(n+2)]^½)+pₘ†(pₘ-₂[m(m-1)]^½)-2upₙ†pₙ)=0~~
 
+    (b) pₙ†(pₙ+₂[(n+1)(n+2)]^½)+pₘ†(pₘ-₂[m(m-1)]^½)-2upₙ†pₙ=0
     (c) pₙ†pₙ ≤ 1
     (d) u(Σₙ pₙ†pₙ - 1) = 0
     (e) pₙ ≠ 0
     (f) u ≠ 0
 
 Following a precedence set in (7.23), `m` is used to allow for a shift in one of the indexes.
+
+> I don't understand at the moment the role of `m` in (a) and (b).
+> I don't know what I meant by "Allow a shift of one of the indexes."
+> I think (a) and (b) are meant to be written in just `n`.
+> Anyways, my draft had an unmatched `)` in (b).
+
 Let `u≡nᵒ`.
 These conditions can be reinterpreted as follows:
 

@@ -30,3 +30,4 @@ C. [Proof: Necessary and Sufficient Conditions for Optimum Solution to the Progr
 
 * [Acknowledgments](ACKNOWLEDGMENTS.md)
 * [Mass on a Spring](SPRING.md)
+* [The Full Monty](FULLMONTY.md)

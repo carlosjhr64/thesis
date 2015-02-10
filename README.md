@@ -36,6 +36,8 @@ D[xˣ]=(L[x]+1)xˣ            # Prefer the form: D[u]=f(u)u
 > By "paper" I mean this thesis, this work.
 > We used to write on this thing called "paper".
 
+> You might want to skip right to the [full monty](FULLMONTY.md), work in progress.
+
 ## ABSTRACT
 
 A single energy eigen-state of the simple harmonic oscillator
@@ -51,7 +53,7 @@ in the particle's position and momentum.
 > I've come up against misunderstandings from laypeople.
 > One misunderstanding has been that I was violating the uncertainty principle.
 > Quantum Mechanics(QM) does not say you can't minimize uncertainties.
-> It does put a lower bound ΔxΔp≥h, above zero.
+> It does put a lower bound ΔxΔp≥ħ/2, above zero.
 > Another misunderstanding comes from how in practice
 > solutions to mathematical programming problems are found.
 > I did not do a "search" for a solution in a quadratic programming problem of infinite size,

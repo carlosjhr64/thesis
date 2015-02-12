@@ -47,7 +47,7 @@ u²≡uu
 
 uₙ ≡ u[n]
 Σₙ uₙ ≡ Σ[0,N]{n|u[n]}	# NOTE!  Indeces start with zero.
-N ≡ Σₙ 1	# A bit of a tautological bootstrap.
+N ≡ Σₙ 1	# A bit of a tautological bootstrap. # TODO: Yea, wrong wrong wrong!
 
 # N is very, very, big!
 # Just trying to keep things simple and avoid talking too much about limits.

@@ -26,13 +26,42 @@ To me, `Φₙ` looks like a one with a circle, which is kind of the right idea.
 > For now I think I'll work my way backwards, back and forth.
 
 ```
+# Arbitrary symbols
+
 u=u,v=v	# Just kidding, we won't start from there.
+
+# Integers
+
+Z+{N,n,m}	# Positive integers
+
+# Squares
+
+u²≡uu
+
+# Squareroot
+
+√[u²]≡u
+√[uu]=u
 
 # Summation over indeces:
 
 uₙ ≡ u[n]
-Σₙ uₙ ≡ Σ[1,N]{n|u[n]}
+Σₙ uₙ ≡ Σ[0,N]{n|u[n]}	# NOTE!  Indeces start with zero.
 N ≡ Σₙ 1	# A bit of a tautological bootstrap.
+
+# N is very, very, big!
+# Just trying to keep things simple and avoid talking too much about limits.
+# So when I say, "In the limit...", this is what I mean for a big enough N:
+
+L[u+v] ≡ L[u] + L[v]
+L[u] ≡ (|u|>1/N)? u : 0
+
+# Examples:
+L[u+1/N] = u
+L[u+e[N]/N!] = u	# If you don't agree, you're not thinking of a big enough N. Try N≥8.
+L[u+(v^N)/N!] = u	# Exactly at what point this is true depends on v, but at some point it's true.
+L[u+e[-N]] = u	# Obviously, I hope.
+|u| ≤ 1/N, |v| ≤ 1/N  ⇒  |uv| ≤ 1/N² ≤ 1/N, L[uv]=0
 
 # Factorial:
 
@@ -69,7 +98,7 @@ d²u = <u²> - <u>²
 
 # The Imaginary number i:
 
-i ≡ √[-1]	# Whatever!  LOL
+i ≡ √[-1]	# Whatever!
 i ≡ [0,1] : i²=[1,0]	# Yea, don't expect to re-implement this into QM anytime soon.
 i² ≡ -1	# I think the best definition of "i" for now.
 
@@ -78,9 +107,6 @@ i² ≡ -1	# I think the best definition of "i" for now.
 S[u] ≡ :Sine[u]
 C[u] ≡ :Cosine[u]
 
-sₙ ≡ S[nωt]
-cₙ ≡ C[nωt]
-
 # Trigonometric Identities:
 # http://en.wikipedia.org/wiki/List_of_trigonometric_identities
 
@@ -88,7 +114,6 @@ S²+C²=1	# Pythagoras
 S[u+v]=SuCv+CuSv	# Sine's angle sum
 C[u+v]=CuCv-SuSv	# Cosine's angle sum
 C[2u]=1-2S²u	# Cosine double angle "cos(2u)=1-2*sin²(u)"
-c₂ₙ=1-2sₙ	# Cosine double angle in terms of c and s.
 
 # Just a quick exercise.
 # Derivation: Cosine's Angle Sum to Cosine Double Angle:
@@ -129,7 +154,18 @@ Pₙ ≡ uⁿe[-u]/n!
 0 ≤ Pₙ ≤ 1
 <u> = ΣₙPₙuₙ
 
+pₙ†pₙ ≡ Pₙ	# We're assuming this and see how it goes!
+pₙ = √[uⁿe[-u]/n!]
+# Proof
+  pₙ†pₙ
+  √[uⁿe[-u]/n!]†√[uⁿe[-u]/n!]
+  √[uⁿe[-u]/n!]√[uⁿe[-u]/n!]	# It's just all real.
+  uⁿe[-u]/n!
+  Pₙ
+
 # Fundamental values
+# I think the point here is that these values are "measured" by "experiment" in "some way".
+# "OK"
 
 R{m}	# Mass
 R{k}	# Spring contant 
@@ -143,16 +179,49 @@ f ≡ ω/(2π)	# Frequency
 
 Eₙ = ωħ(n+½)	# 3.2: Energy eigen-value
 
-# The Φₙ thingy
+# Time evolution Φₙ thingy
+# 7.17 TODO: why -iEₙt/ħ and not +iEₙt/ħ?
 
-Φₙ ≡ e[-iEₙt/ħ]	# 7.17 TODO: why -iEₙt/ħ and not +iEₙt/ħ?
-Φₙ†Φₙ = Φ-ₙΦₙ = Φₙ-ₙ = Φ₀ = 1
-Φₙ†Φₙ+ₘ = Φ-ₙΦₙ+ₘ = Φₙ+ₘ-ₙ = Φₘ
+Φᵗₙ ≡ e[-iω(n+½)t] = e[-iEₙt/ħ]	# NOTE! The ½ part makes this object a bit of a screw ball.
+φᵗₙ ≡ e[-iωnt]	# "How do we end up with this?" you may ask.
 
-Φₙ = e[-i(ωħ(n+½))t/ħ]	# By substitution.
-Φₙ = e[-iω(n+½)t]	# Alternate form of Φₙ.
+Φₙ†Φₘ = φₘ-ₙ	# You don't have to explicitly show time if it can be infered.
+# Proof:
+  Φₙ†Φₘ
+  Φ-ₙΦₘ
+  e[iω(n+½)t - iω(m+½)t]
+  e[-iω(m-n)t]
+  φₘ-ₙ
 
-# TODO: nᵒ
+Φ⁰ = 1	# Don't have to explicitly show quantum number if it can be infered.
+
+# Short for Sine(nωt) and Cosine(nωt).
+
+sₙ ≡ S[nωt]
+cₙ ≡ C[nωt]
+c₂ₙ=1-2sₙ	# Cosine double angle in terms of c and s.
+
+φₙ = cₙ-isₙ	# φ in terms of c and s.
+
+# Average Quantum number nᵒ
+
+nᵒ ≡ <n> = <n|pₙ†npₙ|n> = Σₙ pₙ†npₙ = Σₙ nPₙ
+   = Σₙ nuⁿe[-u]/n!	# Just by definition of <n>
+   = Σ[0,N]{n|nuⁿe[-u]/n!}	# Definition of Σₙ
+   = 0 + Σ[1,N]{n|nuⁿe[-u]/n!}	# The first element in the series is just zero.
+   = Σ[1,N]{n|uⁿe[-u]/(n-1)!}	# Have the n factor absorbed by the factorial.
+   = Σ[0,N-1]{n|u[n+1]e[-u]/n!}	# Shift
+   = uΣ[0,N-1]{n|uⁿe[-u]/n!}	# Take out a factor of u.
+   = u(Σ[0,N]{n|uⁿe[-u]/n!} - (u^N)e[-N]/N!)	# Add and subtract the an Nth element
+   = u(Σ[0,N]{n|uⁿe[-u]/n!} - 0)	# In the limit.... :D
+   = u(ΣₙPₙ)	# This is the sum over the Poisson distribution...
+   = u(1)	# ..which adds up to one.
+nᵒ = u	# As expected.  :)
+
+# Now we can describe the distribution in terms of the average quantum number:
+
+Pₙ = nᵒⁿe[-nᵒ]/n!
+pₙ = √[nᵒⁿe[-nᵒ]/n!]
 
 # TODO: <y>²:
 
@@ -165,7 +234,7 @@ Eₙ = ωħ(n+½)	# 3.2: Energy eigen-value
 # TODO: <y²>:
 
 ...
-<y²> = (nᵒ+½) + ½Σₙ Φₙ†pₙ† (1ₙ-₂√[n(n-1)]pₙ-₂ +  Φₙ+₂√[(n+1)(n+2)]pₙ+₂)
+<y²> = (nᵒ+½) + ½Σₙ Φₙ†pₙ† (1ₙ-₂√[n(n-1)]pₙ-₂ +  Φₙ+₂√[(n+1)(n+2)]pₙ+₂)	# 7.21
 ...
 <y²> = (nᵒ+½) - nᵒc₂
 

@@ -85,7 +85,7 @@ n! ≡ Π[1,n]{u|u} # 1*2*3*...*n
 
 # Average value
 
-<u> ≡ Σₙuₙ/N	# What we mean by average value.
+<u> ≡ Σₙ uₙ/N	# What we mean by average value.
 
 # Measure of uncertainty defined (4.1a):
 

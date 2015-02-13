@@ -266,16 +266,28 @@ pₙpₙ-₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-1)e[-nᵒ]/(n-1)!]
 # TODO: <y>²:
 
 ...
-<y> = √½Σₙ Φₙ†pₙ† (Φₙ+₁√[n+1]pₙ+₁ + Φₙ-₁√npₙ-₁)	# 7.20
+<y> = √½Σₙ Φₙ†pₙ† (Φₙ+₁√[n+1]pₙ+₁ + Φₙ-₁√npₙ-₁)		# 7.20
 <y> = √½Σₙ Φₙ†pₙ†Φₙ+₁√[n+1]pₙ+₁ + Φₙ†pₙ†Φₙ-₁√npₙ-₁	# Distribute.
 <y> = √½Σₙ √[n+1]pₙ†pₙ+₁Φₙ†Φₙ+₁ + √npₙ†pₙ-₁Φₙ†Φₙ-₁	# Rearrange
 <y> = √½Σₙ √[n+1]pₙ†pₙ+₁φ₁ + √npₙ†pₙ-₁φ-₁		# Φ→φ
 <y> = √½Σₙ √[n+1] √[nᵒ/(n+1)]Pₙ φ₁ + √n √[n/nᵒ]Pₙ φ-₁	# p→P, whose getting a little excited about now?
-<y> = √½Σₙ √nᵒPₙφ₁ + n/√nᵒPₙφ-₁				# OK, something went wrong here?
-# I think I know what's next, but good place to take a break.
-...
-<y> = √[2nᵒ]s₁
-<y>² = 2nᵒs²₁
+<y> = √½Σₙ √nᵒPₙφ₁ + n/√nᵒPₙφ-₁				# Me worry? :P
+<y> = √½(Σₙ[√nᵒPₙφ₁] + Σₙ[n/√nᵒPₙφ-₁])			# Separate the sums
+<y> = √½((√nᵒφ₁)ΣₙPₙ + (φ-₁/√nᵒ)Σₙ[nPₙ])		# Take out the constants
+<y> = √½((√nᵒφ₁)1 + (φ-₁/√nᵒ)nᵒ)			# :)
+<y> = √½(√nᵒφ₁ + φ-₁√nᵒ)
+<y> = √[½nᵒ](φ₁ + φ-₁)
+<y> = √[½nᵒ](c₁+is₁ + c₁-is₁)
+<y> = √[½nᵒ]2c₁
+<y> = √[2nᵒ]c₁						# This time I got c₁... why?
+<y>² = 2nᵒc²₁
+
+# <y> = √[2nᵒ]s₁ # :-??
+# <y>² = 2nᵒs²₁  # :-??
+# It may be that 25 years ago I was not careful enough with φ₁ and φ-₁.
+# In fact, I've already noted in my revision that I messed up my treatment of 1ₙ (now Φₙ).
+# OK, so that's one of the major errors I was concerned with.
+# Let's see what happens to <y²>.
 
 # TODO: <y²>:
 

@@ -22,6 +22,9 @@ The reason I used `1ₙ` is that it is a kind of unit length object.
 The reason I don't want to use `Iₙ` is that it migt be confused as a kind of identity object, which it is not.
 To me, `Φₙ` looks like a one with a circle, which is kind of the right idea.
 
+> BTW, it's possible that the reason I used the `<Y]` notation instead of `<Y|` is that
+> I did not have the pipe symbol available at the time.  IDK.
+
 > Eventually I hope to have the entire work in one stream of "mathematical code".
 > For now I think I'll work my way backwards, back and forth.
 
@@ -36,6 +39,8 @@ u=u,v=v	# Just kidding, we won't start from there.
 ℕ{N,n,m}	# N, M, n, and m are are like 0,1,2,3,...
 M≡N-1	# It just simplifies notation later on.
 
+# Please be aware that there is no actual parser checking my work and that
+# I may inadvertently miswrite an expression.
 # How to read:
 
 uuu = ((uu)u)
@@ -157,7 +162,7 @@ e[i]† = (C+iS)† = C-iS = e[-i]	# what it does to e
 Pₙ ≡ uⁿe[-u]/n!
 Σₙ Pₙ = 1
 0 ≤ Pₙ ≤ 1
-<u> = ΣₙPₙuₙ
+<u> = Σₙ Pₙuₙ
 
 pₙ†pₙ ≡ Pₙ	# We're assuming this and see how it goes!
 pₙ = √[uⁿe[-u]/n!]
@@ -199,6 +204,13 @@ Eₙ = ωħ(n+½)	# 3.2: Energy eigen-value
   φₘ-ₙ
 
 Φ⁰ = 1	# Don't have to explicitly show quantum number if it can be infered.
+Φⁱ = e[-iω(n+½)]
+Φᵗ = (Φⁱ)^t = e[t * (-iω(n+½))] = e[-iω(n+½)t]	# Just to show that the notation makes sense.
+
+# Φ→φ:
+
+Φₙ†Φₙ+₁ = φₙ+₁-ₙ = φ₁
+Φₙ†Φₙ-₁ = φₙ-₁-ₙ = φ-₁	# Yeah... me worry about this one a little bit!  LOL
 
 # Short for Sine(nωt) and Cosine(nωt).
 
@@ -207,6 +219,9 @@ cₙ ≡ C[nωt]
 c₂ₙ=1-2sₙ	# Cosine double angle in terms of c and s.
 
 φₙ = cₙ-isₙ	# φ in terms of c and s.
+
+φ₁ = c₁-is₁
+φ-₁ = c₁+is₁	# Maybe that'll work.
 
 # Average Quantum number nᵒ
 
@@ -234,10 +249,30 @@ nᵒ = u	# As expected.  :)
 Pₙ = nᵒⁿe[-nᵒ]/n!
 pₙ = √[nᵒⁿe[-nᵒ]/n!]
 
+# p→P:
+
+pₙpₙ+₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n+1)e[-nᵒ]/(n+1)!]
+       = √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!] √[nᵒ/(n+1)] 
+       = pₙ pₙ √[nᵒ/(n+1)] 
+       = Pₙ √[nᵒ/(n+1)] 
+pₙpₙ+₁ = √[nᵒ/(n+1)]Pₙ 
+
+pₙpₙ-₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-1)e[-nᵒ]/(n-1)!]
+       = √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!] √[n/nᵒ] 
+       = pₙ pₙ √[n/nᵒ] 
+       = Pₙ √[n/nᵒ] 
+       = √[n/nᵒ]Pₙ 
+
 # TODO: <y>²:
 
 ...
 <y> = √½Σₙ Φₙ†pₙ† (Φₙ+₁√[n+1]pₙ+₁ + Φₙ-₁√npₙ-₁)	# 7.20
+<y> = √½Σₙ Φₙ†pₙ†Φₙ+₁√[n+1]pₙ+₁ + Φₙ†pₙ†Φₙ-₁√npₙ-₁	# Distribute.
+<y> = √½Σₙ √[n+1]pₙ†pₙ+₁Φₙ†Φₙ+₁ + √npₙ†pₙ-₁Φₙ†Φₙ-₁	# Rearrange
+<y> = √½Σₙ √[n+1]pₙ†pₙ+₁φ₁ + √npₙ†pₙ-₁φ-₁		# Φ→φ
+<y> = √½Σₙ √[n+1] √[nᵒ/(n+1)]Pₙ φ₁ + √n √[n/nᵒ]Pₙ φ-₁	# p→P, whose getting a little excited about now?
+<y> = √½Σₙ √nᵒPₙφ₁ + n/√nᵒPₙφ-₁				# OK, something went wrong here?
+# I think I know what's next, but good place to take a break.
 ...
 <y> = √[2nᵒ]s₁
 <y>² = 2nᵒs²₁

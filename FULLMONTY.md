@@ -32,7 +32,19 @@ u=u,v=v	# Just kidding, we won't start from there.
 
 # Integers
 
-Z+{N,n,m}	# Positive integers
+ℕ{0}	# I'm talking about ℕ that includes zero.
+ℕ{N,n,m}	# N, M, n, and m are are like 0,1,2,3,...
+M≡N-1	# It just simplifies notation later on.
+
+# How to read:
+
+uuu = ((uu)u)
+u u u = (u(uu))
+u!u = (u!)u
+
+uⁿ[v] ≡ (u[v])ⁿ
+u²[v] ≡ u[v]*u[v]
+uᵐₙ ≡ (uₙ)ᵐ	# I'm leaving uₙ² undefined, but it's probably u[n²].
 
 # Squares
 
@@ -46,15 +58,14 @@ u²≡uu
 # Summation over indeces:
 
 uₙ ≡ u[n]
-Σₙ uₙ ≡ Σ[0,N]{n|u[n]}	# NOTE!  Indeces start with zero.
-N ≡ Σₙ 1	# A bit of a tautological bootstrap. # TODO: Yea, wrong wrong wrong!
+Σₙ uₙ ≡ Σ[0,M]{n|u[n]}	# NOTE!  Indeces start with zero.
+N = Σₙ 1
 
 # N is very, very, big!
-# Just trying to keep things simple and avoid talking too much about limits.
-# So when I say, "In the limit...", this is what I mean for a big enough N:
+# When I say, "In the limit...", this is what I mean for a big enough N:
 
 L[u+v] ≡ L[u] + L[v]
-L[u] ≡ (|u|>1/N)? u : 0
+L[u] ≡ (|u| ≥ 1/N)? u : 0
 
 # Examples:
 L[u+1/N] = u
@@ -66,12 +77,6 @@ L[u+e[-N]] = u	# Obviously, I hope.
 # Factorial:
 
 n! ≡ Π[1,n]{u|u} # 1*2*3*...*n
-
-# How to read:
-
-uⁿ[v] ≡ (u[v])ⁿ
-u²[v] ≡ u[v]*u[v]
-uᵐₙ ≡ (uₙ)ᵐ	# I'm leaving uₙ² undefined, but it's probably u[n²].
 
 # Average value
 
@@ -205,17 +210,23 @@ c₂ₙ=1-2sₙ	# Cosine double angle in terms of c and s.
 
 # Average Quantum number nᵒ
 
-nᵒ ≡ <n> = <n|pₙ†npₙ|n> = Σₙ pₙ†npₙ = Σₙ nPₙ
-   = Σₙ nuⁿe[-u]/n!	# Just by definition of <n>
-   = Σ[0,N]{n|nuⁿe[-u]/n!}	# Definition of Σₙ
-   = 0 + Σ[1,N]{n|nuⁿe[-u]/n!}	# The first element in the series is just zero.
-   = Σ[1,N]{n|uⁿe[-u]/(n-1)!}	# Have the n factor absorbed by the factorial.
-   = Σ[0,N-1]{n|u[n+1]e[-u]/n!}	# Shift
-   = uΣ[0,N-1]{n|uⁿe[-u]/n!}	# Take out a factor of u.
-   = u(Σ[0,N]{n|uⁿe[-u]/n!} - (u^N)e[-N]/N!)	# Add and subtract the an Nth element
-   = u(Σ[0,N]{n|uⁿe[-u]/n!} - 0)	# In the limit.... :D
-   = u(ΣₙPₙ)	# This is the sum over the Poisson distribution...
-   = u(1)	# ..which adds up to one.
+nᵒ ≡ L <n>
+
+<n> = <n|pₙ†npₙ|n> = Σₙ pₙ†npₙ = Σₙ nPₙ
+    = Σₙ nuⁿe[-u]/n!				# Just by definition of <n>.
+    = Σ[0,M]{n|nuⁿe[-u]/n!}			# Definition of Σₙ.
+    = 0 + Σ[1,M]{n|nuⁿe[-u]/n!}			# The first element in the series is just zero.
+    = Σ[1,M]{n|uⁿe[-u]/(n-1)!}			# Have the n factor absorbed by the factorial.
+    = Σ[0,M-1]{n|u[n+1]e[-u]/n!}		# Shift.
+    = uΣ[0,M-1]{n|uⁿe[-u]/n!}			# Take out a factor of u.
+    = u(Σ[0,M]{n|uⁿe[-u]/n!} - (u^M)e[-M]/M!)	# Add and subtract the an Nth element (which is M).
+    = u(ΣₙPₙ) - u(u^M)e[-M]/M!			# Definition of Σₙ and Pₙ.
+    = u(1) - u^(M+1)e[-M]/M!			# Poisson distribution sums up to one.
+    = u - u^(M+1)e[-M]/M!
+
+nᵒ = L[u - u^(M+1)e[-M]/M!]
+nᵒ = L[u] - L[u^(M+1)e[-M]/M!]
+nᵒ = u - 0
 nᵒ = u	# As expected.  :)
 
 # Now we can describe the distribution in terms of the average quantum number:

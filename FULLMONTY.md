@@ -83,6 +83,20 @@ L[u+e[-N]] = u	# Obviously, I hope.
 
 n! ≡ Π[1,n]{u|u} # 1*2*3*...*n
 
+# Much of what I'm doing is to reduce the size of the expressions.
+# Arrow Operators on subscripts:
+
+uᵥ↑ ≡ uᵥ+₁
+uᵥ↓ ≡ uᵥ-₁
+
+uᵥ⇈ ≡ uᵥ↑↑
+uᵥ⇈ = uᵥ+₂
+
+uᵥ⇊ ≡ uᵥ↑↑
+uᵥ⇊ = uᵥ-₂
+
+Σᵥu↑ ≡ Σᵥuᵥ+₁	# Where context allows, subscript not needed.
+
 # I'd like to make the following a "blessing" on n only.
 # In Ruby, it's like `def n.method`.
 # Whatchamacallit forward:
@@ -113,6 +127,14 @@ n-₂ = 1/(n(n-1))
 n-₃ = n-₂/(n-3+1) = (1/(n(n-1)))/(n-2)
 n-₃ = 1/(n(n-1)(n-2)) # and so on...
 
+# Arrows meaningful as Whatchamacallits
+
+n⇈ = (n+1)(n+2)
+n↑ = n+1
+n₀ = 1
+n↓ = 1/n
+n⇊ = 1/(n(n-1))
+
 # Whatchamacallit with Factorial
 
 nᵥn! = (n+v)!
@@ -122,6 +144,9 @@ n₃n! = (n+1)(n+2)(n+3)n! = (n+3)!	# OK
 n-₃n! = n!/(n(n+1)(n+2))
 n-₃n! = (n-3)!(n-2)(n-1)n/(n(n-1)(n-2))
 n-₃n! = (n-3)!	# OK
+
+n↑n! = (n+1)!
+n↓n! = (n-1)!
 
 # Average value
 

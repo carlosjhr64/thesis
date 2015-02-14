@@ -83,6 +83,46 @@ L[u+e[-N]] = u	# Obviously, I hope.
 
 n! ≡ Π[1,n]{u|u} # 1*2*3*...*n
 
+# I'd like to make the following a "blessing" on n only.
+# In Ruby, it's like `def n.method`.
+# Whatchamacallit forward:
+
+nᵥ ≡ nᵥ-₁(n+v)
+n₀ ≡ 1
+
+n₁ = n₀(n+1)
+n₁ = n+1
+
+n₂ = n₁(n+2)
+n₂ = (n+1)(n+2)
+
+n₃ = n₂(n+3)
+n₃ = (n+1)(n+2)(n+3) # and so on...
+
+# Whatchamacallit backwards
+
+nᵥ-₁ = nᵥ/(n+v)
+nᵥ = nᵥ+₁/(n+v+1)
+
+n-₁ = n₀/(n-1+1) = 1/n
+n-₁ = 1/n
+
+n-₂ = n-₁/(n-2+1) = (1/n)/(n-1)
+n-₂ = 1/(n(n-1))
+
+n-₃ = n-₂/(n-3+1) = (1/(n(n-1)))/(n-2)
+n-₃ = 1/(n(n-1)(n-2)) # and so on...
+
+# Whatchamacallit with Factorial
+
+nᵥn! = (n+v)!
+
+n₃n! = (n+1)(n+2)(n+3)n! = (n+3)!	# OK
+
+n-₃n! = n!/(n(n+1)(n+2))
+n-₃n! = (n-3)!(n-2)(n-1)n/(n(n-1)(n-2))
+n-₃n! = (n-3)!	# OK
+
 # Average value
 
 <u> ≡ Σₙ uₙ/N	# What we mean by average value.
@@ -108,8 +148,6 @@ d²u = <u²> - <u>²
 
 # The Imaginary number i:
 
-i ≡ √[-1]	# Whatever!
-i ≡ [0,1] : i²=[1,0]	# Yea, don't expect to re-implement this into QM anytime soon.
 i² ≡ -1	# I think the best definition of "i" for now.
 
 # Sine and Cosine:
@@ -212,16 +250,25 @@ Eₙ = ωħ(n+½)	# 3.2: Energy eigen-value
 Φₙ†Φₙ+₁ = φₙ+₁-ₙ = φ₁
 Φₙ†Φₙ-₁ = φₙ-₁-ₙ = φ-₁	# Yeah... me worry about this one a little bit!  LOL
 
+Φₙ†Φₙ+₂ = φₙ+₂-ₙ = φ₂
+Φₙ†Φₙ-₂ = φₙ-₂-ₙ = φ-₂
+
 # Short for Sine(nωt) and Cosine(nωt).
 
 sₙ ≡ S[nωt]
 cₙ ≡ C[nωt]
-c₂ₙ=1-2sₙ	# Cosine double angle in terms of c and s.
+c₂ₙ=1-2s²ₙ	# Cosine double angle in terms of c and s.
 
 φₙ = cₙ-isₙ	# φ in terms of c and s.
 
 φ₁ = c₁-is₁
 φ-₁ = c₁+is₁	# Maybe that'll work.
+
+φ₁ + φ-₁ = 2c₁
+φ₁ - φ-₁ = 2s₁
+
+φ₂ = c₂-is₂
+φ-₂ = c₂+is₂
 
 # Average Quantum number nᵒ
 
@@ -244,6 +291,23 @@ nᵒ = L[u] - L[u^(M+1)e[-M]/M!]
 nᵒ = u - 0
 nᵒ = u	# As expected.  :)
 
+# L Σₙ[n(n-1)Pₙ]
+
+L Σₙ n(n-1)Pₙ
+L Σₙ 1/n-₂ uⁿe[-u]/n!
+L Σₙ uⁿe[-u]/(n-2)!
+L Σₙ u² u^(n-2)e[-u]/(n-2)!
+L u² Σₙ u^(n-2)e[-u]/(n-2)!
+L u² Σ[0,M]{n|u^(n-2)e[-u]/(n-2)!}
+L u² Σ[-2,M-2]{n|uⁿe[-u]/n!}
+L u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|uⁿe[-u]/n!})
+L u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|Pₙ})
+u²(L[e[-u]/(u²(-2)!)] + L[e[-u]/(u(-1)!)] + L[Σ[0,M-2]{n|Pₙ}])
+u²(0 + 0 + 1)	# TODO: need to explain 1/(-1)! ≡ 0
+u²
+
+(nᵒ)² = L Σₙ[n(n-1)Pₙ]
+
 # Now we can describe the distribution in terms of the average quantum number:
 
 Pₙ = nᵒⁿe[-nᵒ]/n!
@@ -255,23 +319,38 @@ pₙpₙ+₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n+1)e[-nᵒ]/(n+1)!]
        = √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!] √[nᵒ/(n+1)] 
        = pₙ pₙ √[nᵒ/(n+1)] 
        = Pₙ √[nᵒ/(n+1)] 
-pₙpₙ+₁ = √[nᵒ/(n+1)]Pₙ 
+       = √[nᵒ/(n+1)]Pₙ 
+pₙpₙ+₁ = √nᵒPₙ/√n₁	# Using Whatchamacallit
 
 pₙpₙ-₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-1)e[-nᵒ]/(n-1)!]
        = √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!] √[n/nᵒ] 
        = pₙ pₙ √[n/nᵒ] 
        = Pₙ √[n/nᵒ] 
        = √[n/nᵒ]Pₙ 
+pₙpₙ-₁ = Pₙ/√[nᵒn-₁]	# Using Whatchamacallit
+
+pₙpₙ+₂ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n+2)e[-nᵒ]/(n+2)!]
+       = √[nᵒ²/((n+1)(n+2))] √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!]
+       = nᵒ/√[(n+1)(n+2)] pₙpₙ
+       = nᵒ/√[(n+1)(n+2)] Pₙ
+pₙpₙ+₂ = nᵒPₙ/√n₂	# Using Whatchamacallit
+
+pₙpₙ-₂ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-2)e[-nᵒ]/(n-2)!]
+       = √[(n-1)n/nᵒ²] √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!]
+       = √[(n-1)n]/nᵒ pₙpₙ
+       = √[(n-1)n]/nᵒ Pₙ
+pₙpₙ-₂ = Pₙ/(nᵒ√n-₂)	# Using Whatchamacallit
 
 # TODO: <y>²:
 
 ...
 <y> = √½Σₙ Φₙ†pₙ† (Φₙ+₁√[n+1]pₙ+₁ + Φₙ-₁√npₙ-₁)		# 7.20
-<y> = √½Σₙ Φₙ†pₙ†Φₙ+₁√[n+1]pₙ+₁ + Φₙ†pₙ†Φₙ-₁√npₙ-₁	# Distribute.
-<y> = √½Σₙ √[n+1]pₙ†pₙ+₁Φₙ†Φₙ+₁ + √npₙ†pₙ-₁Φₙ†Φₙ-₁	# Rearrange
-<y> = √½Σₙ √[n+1]pₙ†pₙ+₁φ₁ + √npₙ†pₙ-₁φ-₁		# Φ→φ
-<y> = √½Σₙ √[n+1] √[nᵒ/(n+1)]Pₙ φ₁ + √n √[n/nᵒ]Pₙ φ-₁	# p→P, whose getting a little excited about now?
-<y> = √½Σₙ √nᵒPₙφ₁ + n/√nᵒPₙφ-₁				# Me worry? :P
+<y> = √½Σₙ Φₙ†pₙ (Φₙ+₁√n₁pₙ+₁ + Φₙ-₁/√n-₁pₙ-₁)		# Using Whatchamacallit, † does nothing to p.
+<y> = √½Σₙ Φₙ†pₙΦₙ+₁√n₁pₙ+₁ + Φₙ†pₙΦₙ-₁/√n-₁pₙ-₁	# Distribute.
+<y> = √½Σₙ √n₁pₙpₙ+₁Φₙ†Φₙ+₁ + 1/√n-₁pₙpₙ-₁Φₙ†Φₙ-₁	# Rearrange
+<y> = √½Σₙ √n₁pₙpₙ+₁φ₁ + 1/√n-₁pₙpₙ-₁φ-₁		# Φ→φ
+<y> = √½Σₙ √n₁√nᵒPₙ/√n₁φ₁ + 1/√n-₁Pₙ/√[nᵒn-₁]φ-₁	# p→P
+<y> = √½Σₙ √nᵒPₙφ₁ + n/√nᵒPₙφ-₁				# Simplify
 <y> = √½(Σₙ[√nᵒPₙφ₁] + Σₙ[n/√nᵒPₙφ-₁])			# Separate the sums
 <y> = √½((√nᵒφ₁)ΣₙPₙ + (φ-₁/√nᵒ)Σₙ[nPₙ])		# Take out the constants
 <y> = √½((√nᵒφ₁)1 + (φ-₁/√nᵒ)nᵒ)			# :)
@@ -292,15 +371,38 @@ pₙpₙ-₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-1)e[-nᵒ]/(n-1)!]
 # TODO: <y²>:
 
 ...
-<y²> = (nᵒ+½) + ½Σₙ Φₙ†pₙ† (1ₙ-₂√[n(n-1)]pₙ-₂ +  Φₙ+₂√[(n+1)(n+2)]pₙ+₂)	# 7.21
+<y²> = (nᵒ+½) + ½Σₙ Φₙ†pₙ† (Φₙ-₂√[n(n-1)]pₙ-₂ +  Φₙ+₂√[(n+1)(n+2)]pₙ+₂)			# 7.21
+<y²> = (nᵒ+½) + ½Σₙ Φₙ†pₙ†Φₙ-₂√[n(n-1)]pₙ-₂ + Φₙ†pₙ†Φₙ+₂√[(n+1)(n+2)]pₙ+₂		# Distribute
+<y²> = (nᵒ+½) + ½Σₙ √[n(n-1)]pₙpₙ-₂Φₙ†Φₙ-₂ + √[(n+1)(n+2)]pₙpₙ+₂Φₙ†Φₙ+₂			# Rearrange, † does nothing to p.
+<y²> = (nᵒ+½) + ½Σₙ √[n(n-1)]pₙpₙ-₂φ-₂ + √[(n+1)(n+2)]pₙpₙ+₂φ₂				# Φ→φ
+<y²> = (nᵒ+½) + ½Σₙ √[n(n-1)]√[(n-1)n]/nᵒPₙφ-₂ + √[(n+1)(n+2)]nᵒ/√[(n+1)(n+2)]Pₙφ₂	# p→P
+<y²> = (nᵒ+½) + ½Σₙ n(n-1)/nᵒPₙφ-₂ + nᵒPₙφ₂						# Simplify
+<y²> = (nᵒ+½) + ½Σₙ[n(n-1)/nᵒPₙφ-₂] + ½Σₙ[nᵒPₙφ₂]					# Separate
+<y²> = (nᵒ+½) + ½/nᵒφ-₂Σₙ[n(n-1)Pₙ] + ½nᵒφ₂ΣₙPₙ						# Take out the constants
+<y²> = (nᵒ+½) + ½/nᵒφ-₂Σₙ[n(n-1)Pₙ] + ½nᵒφ₂						# Sum of distribution is one
+<y²> = (nᵒ+½) + ½/nᵒφ-₂(nᵒ)² + ½nᵒφ₂
+<y²> = (nᵒ+½) + ½nᵒφ-₂ + ½nᵒφ₂
+<y²> = (nᵒ+½) + ½nᵒ(φ-₂ + φ₂)
+<y²> = (nᵒ+½) + ½nᵒ2c₂
+<y²> = (nᵒ+½) + nᵒc₂		# GD got a '+' sign this time.  This is INSANE!  LOL
+<y²> = (nᵒ+½) + nᵒ(1-2s²₁)
+<y²> = nᵒ + ½ + nᵒ - 2nᵒs²₁)
+<y²> = ½ + 2nᵒ - 2nᵒs²₁)
+<y²> = ½ + 2nᵒ(1-s²₁)
+<y²> = ½ + 2nᵒc²₁	# Pythagoras
+
 ...
-<y²> = (nᵒ+½) - nᵒc₂
+# <y²> = (nᵒ+½) - nᵒc₂ # :-?? Was this even posible? So it's `<q²> = (nᵒ+½) - nᵒc₂`?
 
 # 7.5 Results:
 
 d²y = <y²> - <y>²
-d²y = (nᵒ+½) - nᵒc₂ - 2nᵒs²₁	# 7.33a: Subtitute in previous results.
-d²y = (nᵒ+½) - nᵒ(1-2s²₁) - 2nᵒs²₁	# Cosine double angle formula.
-d²y = ½	# 7.33b.
+    = (½ + 2nᵒc²₁) - 2nᵒc²₁
+    = ½	# SERIOUSLY! HOW DOES IT ALL CONSPIRE TO BE THE SAME! INSANE!!!
+
+# d²y = <y²> - <y>²
+# d²y = (nᵒ+½) - nᵒc₂ - 2nᵒs²₁	# 7.33a: Subtitute in previous results.
+# d²y = (nᵒ+½) - nᵒ(1-2s²₁) - 2nᵒs²₁	# Cosine double angle formula.
+# d²y = ½	# 7.33b.
 
 ```

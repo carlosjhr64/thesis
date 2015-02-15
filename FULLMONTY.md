@@ -300,8 +300,8 @@ pₙ = √[uⁿe[-u]/n!]
 # I think the point here is that these values are "measured" by "experiment" in "some way".
 # "OK"
 
-R{m}	# Mass
-R{k}	# Spring contant 
+ℝ{m}	# Mass
+ℝ{k}	# Spring contant 
 
 # Derived values
 
@@ -310,6 +310,7 @@ R{k}	# Spring contant
 
 f ≡ ω/(2π)	# Frequency
 
+# TODO: need to explain ħ.
 Eₙ = ωħ(n+½)	# 3.2: Energy eigen-value
 
 # Time evolution Φₙ thingy

@@ -97,18 +97,36 @@ uₙ ≡ u[n]
 N = Σₙ 1
 
 # N is very, very, big!
-# When I say, "In the limit...", this is what I mean for a big enough N:
+# I want try to keep things simple and
+# avoid a full treatment of limits.
+# Let's try a simple limit function:
 
 L[u+v] ≡ L[u] + L[v]
-L[u] ≡ (|u| ≥ 1/N)? u : 0
+L[u] ≡ (|u| ≥ 1/N²)? u : 0
+
+L Σₙ[1/N] = Σₙ L[1/N]
+          = Σₙ[1/N]
+          = 1		# Notice that this would have been 0 had I set the threshold to ≥ 1/N.
+
+L Σₙ[1/N²] = Σₙ L[1/N²]
+           = Σₙ 0
+           = 0		# Is this acceptable?
+
+Σₙ[1/N²] = 0.5 ← N=2		# n=2; n.times.inject(0){|s,i|s+1.0/(n*n)}
+Σₙ[1/N²] = 0.25 ← N=4		# n=4; n.times.inject(0){|s,i|s+1.0/(n*n)}
+Σₙ[1/N²] = 0.125 ← N=8		# n=8; n.times.inject(0){|s,i|s+1.0/(n*n)}
+Σₙ[1/N²] = 0.0625 ← N=16	# n=16; n.times.inject(0){|s,i|s+1.0/(n*n)}
+Σₙ[1/N²] = 0.03125 ← N=32	# n=32; n.times.inject(0){|s,i|s+1.0/(n*n)}
+# As N doubles, the sum halves.
+# So L Σₙ[1/N²] does aproach zero as N goes on to infinity.
 
 # Examples:
-L[u+1/N] = u
-L[u+e[N]/N!] = u	# If you don't agree, you're not thinking of a big enough N. Try N≥8.
+L[u+1/N²] = u
+L[u+e[N]/N!] = u	# Try N≥10.
 L[u+(v^N)/N!] = u	# Exactly at what point this is true depends on v, but at some point it's true.
 L[u+e[-N]] = u		# Obviously, I hope.
 
-|u| ≤ 1/N, |v| ≤ 1/N  ⇒  |uv| ≤ 1/N² ≤ 1/N, L[uv]=0
+|u| ≤ 1/N, |v| ≤ 1/N  ⇒  |uv| ≤ 1/N², L[uv]=0
 
 # For now, if I want to avoid saying that a sum terminates, I'll just say Σ without the subscript.
 # Computationally ℚ may be the most we can actually do, but
@@ -120,9 +138,6 @@ L[u+e[-N]] = u		# Obviously, I hope.
 
 # Just a stab at the problem.
 # It would mean that for every ℝ{v}, there exists ℚ{uₙ} such that v=Σuₙ.
-
-...
-⋯ # :all
 
 # Factorial:
 
@@ -137,7 +152,7 @@ uᵥ↓ ≡ uᵥ-₁
 uᵥ⇈ ≡ uᵥ↑↑
 uᵥ⇈ = uᵥ+₂
 
-uᵥ⇊ ≡ uᵥ↑↑
+uᵥ⇊ ≡ uᵥ↓↓
 uᵥ⇊ = uᵥ-₂
 
 Σᵥu↑ ≡ Σᵥuᵥ+₁	# Where context allows, subscript not needed.
@@ -158,7 +173,7 @@ n₂ = (n+1)(n+2)
 n₃ = n₂(n+3)
 n₃ = (n+1)(n+2)(n+3) # and so on...
 
-# Whatchamacallit backwards
+# Whatchamacallit backwards:
 
 nᵥ-₁ = nᵥ/(n+v)
 nᵥ = nᵥ+₁/(n+v+1)
@@ -172,7 +187,7 @@ n-₂ = 1/(n(n-1))
 n-₃ = n-₂/(n-3+1) = (1/(n(n-1)))/(n-2)
 n-₃ = 1/(n(n-1)(n-2)) # and so on...
 
-# Arrows meaningful as Whatchamacallits
+# Arrows meaningful as Whatchamacallits:
 
 n⇈ = (n+1)(n+2)
 n↑ = n+1
@@ -180,7 +195,7 @@ n₀ = 1
 n↓ = 1/n
 n⇊ = 1/(n(n-1))
 
-# Whatchamacallit with Factorial
+# Whatchamacallit with Factorial:
 
 nᵥn! = (n+v)!
 
@@ -195,7 +210,7 @@ n↓n! = (n-1)!
 
 # Average value
 
-<u> ≡ Σₙ uₙ/N	# What we mean by average value.
+<u> ≡ Σₙuₙ/N	# What we mean by average value.
 
 # Measure of uncertainty defined (4.1a):
 

@@ -4,22 +4,23 @@
 
 > This section was not in the original thesis.
 > In my review of my own paper now 25 years later,
-> I found mostly copy errors and typos which I hope I've mostly fixed.
+> I found mostly copy errors and typos which I hope I've fixed.
 > But I also found a couple of possibly serious errors.
 > I want to first verify and expose where I went wrong by explicitly laying out all the work.
-> Also, if I get a chance (and if possible), I'd like to get the UCSC copy, as I'm using what was a working draft.
+> Also, if I get a chance, I'd like to get the UCSC copy, as I'm using what was a working draft.
 
-Here I write explicitly all my work with little commentary, as if writting computer code.
+Here I write explicitly all my work, as if writting computer code.
 Consider all symbols to have global scope.
-Each symbol should only be defined once, except `u` and `v` which will be used as a temporary variables.
+Each symbol should only be defined once, except `u` and `v` which will be used as a temporary general variables.
 
 In books you'll see `sin²(x)` to mean `sin(x)*sin(x)`.
 I'll use that convention in general.
 `u²[v]` will mean `u[v]*u[v]` and not `u[u[v]]`.
+The initial part of this section goes over trivial stuff for anybody attempting to read my thesis, but
+it's a good warmup and shows how I'll be writting things out.
 
-I'm going to switch the notatation for the `1ₙ` object to `Φₙ`.
-The reason I used `1ₙ` is that it is a kind of unit length object.
-The reason I don't want to use `Iₙ` is that it migt be confused as a kind of identity object, which it is not.
+If you're comparing this work with my original paper,
+I switched the notation for the time development from `1ₙ` to `Φₙ`.
 To me, `Φₙ` looks like a one with a circle, which is kind of the right idea.
 
 > BTW, it's possible that the reason I used the `<Y]` notation instead of `<Y|` is that
@@ -31,34 +32,63 @@ To me, `Φₙ` looks like a one with a circle, which is kind of the right idea.
 ```
 # Arbitrary symbols
 
-u=u,v=v	# Just kidding, we won't start from there.
+u≡u,v≡v
+u=u,v=v
 
 # Integers
 
-ℕ{0}	# I'm talking about ℕ that includes zero.
-ℕ{N,n,m}	# N, M, n, and m are are like 0,1,2,3,...
-M≡N-1	# It just simplifies notation later on.
+0≡0,1≡1
+1≡0+1
 
-# Please be aware that there is no actual parser checking my work and that
+# Just curious about defining integers as a binary sequence.
+# https://www.youtube.com/user/njwildberger (njwildberger) boots straps differently but same idea.
+# Then we say  "ℕ≡/^[01]$/".
+# We say something like if it looks like ℕ, with order, it's of that type.
+
+ℕ{0}		# I'm talking about ℕ that includes zero.
+ℕ{N,n,m}	# N, M, n, and m are like 0,1,2,3,... in the decimal system.
+M≡N-1		# This just simplifies notation later on.
+
+# I should mention integers(ℤ), rationals(ℚ).
+# In a nutshell as I understand njwildberger:
+
+ℤ ≡ ℕ - ℕ		# u-v, like 1-2 or just "-1".
+ℚ ≡ ℤ / ℕ{n|n≠0}	# u/v, like ½ or just "0.5".
+
+# Be aware that there is no actual parser checking my work and that
 # I may inadvertently miswrite an expression.
-# How to read:
+# Please use github to contact me to let me know of any errors (of any type).
+# The precedence rules are as follows:
 
-uuu = ((uu)u)
-u u u = (u(uu))
-u!u = (u!)u
+uuu = ((uu)u)	# This is just the usual way we think of expressions.
+u u u = (u(uu))	# This is to disambiguate things like "Σ ab" which means "Σ[ab]", not "Σ[a]b".
+u!u = (u!)u	# Modifiers like subscripts, superscripts, factorial, complex conjugate, arrow operators.
 
-uⁿ[v] ≡ (u[v])ⁿ
-u²[v] ≡ u[v]*u[v]
-uᵐₙ ≡ (uₙ)ᵐ	# I'm leaving uₙ² undefined, but it's probably u[n²].
+# Subcripts labels a specific form of a more general expression:
 
-# Squares
+uᵥ[⋯]≡u[v,⋯]
 
-u²≡uu
+# Superscripts normally are ℕ denoting repetition.
+
+uⁱ=u
+u²=uu	# Squares
+
+uⁿ[v] ≡ (u[v])ⁿ	
+u²[v] ≡ u[v]*u[v]	# For example: "sin²(x) = sin(x)*sin(x)"
+uᵐₙ ≡ (uₙ)ᵐ		# I'm leaving uₙ² undefined, but it's probably u[n²].
+
+# Superscripts also denotes power or raising operations:
+
+uᵛ ≡ u^v	# or "u**v"
 
 # Squareroot
 
 √[u²]≡u
 √[uu]=u
+
+# Absolute value
+
+ℚ{u},|u|≡(u>0)?u:-u
 
 # Summation over indeces:
 
@@ -76,8 +106,23 @@ L[u] ≡ (|u| ≥ 1/N)? u : 0
 L[u+1/N] = u
 L[u+e[N]/N!] = u	# If you don't agree, you're not thinking of a big enough N. Try N≥8.
 L[u+(v^N)/N!] = u	# Exactly at what point this is true depends on v, but at some point it's true.
-L[u+e[-N]] = u	# Obviously, I hope.
+L[u+e[-N]] = u		# Obviously, I hope.
+
 |u| ≤ 1/N, |v| ≤ 1/N  ⇒  |uv| ≤ 1/N² ≤ 1/N, L[uv]=0
+
+# For now, if I want to avoid saying that a sum terminates, I'll just say Σ without the subscript.
+# Computationally ℚ may be the most we can actually do, but
+# philosophically I still think we need ℝ.
+# I'll just define ℝ in terms of the "measurement process".
+# How about this?
+
+ℚ{uₙ: |uₙ|≥2|uₙ+₁|}, v=Σuₙ ↔ ℝ{v}, ℚ{L[Σₙuₙ]}	# Our measurement of v is truncated.
+
+# Just a stab at the problem.
+# It would mean that for every ℝ{v}, there exists ℚ{uₙ} such that v=Σuₙ.
+
+...
+⋯ # :all
 
 # Factorial:
 

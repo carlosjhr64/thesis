@@ -32,37 +32,32 @@ To me, `Φₙ` looks like a one with a circle, which is kind of the right idea.
 ```
 # Arbitrary symbols
 
-u≡u,v≡v
-u=u,v=v
-
-# Integers
-
-0≡0,1≡1
-1≡0+1
-
-# Just curious about defining integers as a binary sequence.
-# https://www.youtube.com/user/njwildberger (njwildberger) boots straps differently but same idea.
-# Then we say  "ℕ≡/^[01]$/".
-# We say something like if it looks like ℕ, with order, it's of that type.
-
-ℕ{0}		# I'm talking about ℕ that includes zero.
-ℕ{N,n,m}	# N, M, n, and m are like 0,1,2,3,... in the decimal system.
-M≡N-1		# This just simplifies notation later on.
-
-# I should mention integers(ℤ), rationals(ℚ).
-# In a nutshell as I understand njwildberger:
-
-ℤ ≡ ℕ - ℕ		# u-v, like 1-2 or just "-1".
-ℚ ≡ ℤ / ℕ{n|n≠0}	# u/v, like ½ or just "0.5".
+{u}		# I conjure up u of any type.
+v≡u → v=u	# If I define v as u, then v is u, capiche?
+u≡u		# So I tell you things are themselves.
+u=u		# Then you accept things are themselves.
 
 # Be aware that there is no actual parser checking my work and that
 # I may inadvertently miswrite an expression.
 # Please use github to contact me to let me know of any errors (of any type).
 # The precedence rules are as follows:
 
-uuu = ((uu)u)	# This is just the usual way we think of expressions.
-u u u = (u(uu))	# This is to disambiguate things like "Σ ab" which means "Σ[ab]", not "Σ[a]b".
-u!u = (u!)u	# Modifiers like subscripts, superscripts, factorial, complex conjugate, arrow operators.
+uuu ≡ ((uu)u)	# This is just the usual way we think of expressions.
+u u u ≡ (u(uu))	# This is to disambiguate things like "Σ ab" which means "Σ[ab]", not "Σ[a]b".
+u!u ≡ (u!)u	# Modifiers like subscripts, superscripts, factorial, complex conjugate, arrow operators.
+
+# Integers
+
+ℕ ≡ {0,1,2,3,⋯}	# The set of natural numbers.  Or the ordered type /^\d+$/.
+ℕ{N,n,m}	# N, M, n, and m are Integers.
+M≡N-1		# This just simplifies notation later on.
+
+# I should mention integers(ℤ) and rationals(ℚ).
+# See njwildberger, https://www.youtube.com/user/njwildberger, MathFoundations.
+# In a nutshell:
+
+ℤ ≡ ℕ - ℕ		# u-v, like 1-2 or just "-1".
+ℚ ≡ ℤ / ℕ{n:n≠0}	# u/v, like ½ or just "0.5".
 
 # Subcripts labels a specific form of a more general expression:
 
@@ -70,8 +65,11 @@ uᵥ[⋯]≡u[v,⋯]
 
 # Superscripts normally are ℕ denoting repetition.
 
+uⁿ ≡ Π[1,n]{u}
+u⁰=1
 uⁱ=u
-u²=uu	# Squares
+u²=uu	# Square
+u³=uuu	# Cube
 
 uⁿ[v] ≡ (u[v])ⁿ	
 u²[v] ≡ u[v]*u[v]	# For example: "sin²(x) = sin(x)*sin(x)"
@@ -92,8 +90,8 @@ uᵛ ≡ u^v	# or "u**v"
 
 # Summation over indeces:
 
-uₙ ≡ u[n]
-Σₙ uₙ ≡ Σ[0,M]{n|u[n]}	# NOTE!  Indeces start with zero.
+Σuₙ ≡ u₀ + u₁ + u₂ + ⋯	# Non-halting series.
+Σₙuₙ ≡ Σ[0,M]{n|u[n]}	# NOTE!  Series indeces start with zero.
 N = Σₙ 1
 
 # N is very, very, big!
@@ -102,6 +100,7 @@ N = Σₙ 1
 # Let's try a simple limit function:
 
 L[u+v] ≡ L[u] + L[v]
+L Σuₙ ≡ L Σₙuₙ
 L[u] ≡ (|u| ≥ 1/N²)? u : 0
 
 L Σₙ[1/N] = Σₙ L[1/N]
@@ -118,7 +117,7 @@ L Σₙ[1/N²] = Σₙ L[1/N²]
 Σₙ[1/N²] = 0.0625 ← N=16	# n=16; n.times.inject(0){|s,i|s+1.0/(n*n)}
 Σₙ[1/N²] = 0.03125 ← N=32	# n=32; n.times.inject(0){|s,i|s+1.0/(n*n)}
 # As N doubles, the sum halves.
-# So L Σₙ[1/N²] does aproach zero as N goes on to infinity.
+# So Σₙ[1/N²] does approach zero as N goes on to infinity.
 
 # Examples:
 L[u+1/N²] = u
@@ -127,6 +126,9 @@ L[u+(v^N)/N!] = u	# Exactly at what point this is true depends on v, but at some
 L[u+e[-N]] = u		# Obviously, I hope.
 
 |u| ≤ 1/N, |v| ≤ 1/N  ⇒  |uv| ≤ 1/N², L[uv]=0
+
+# The Float::EPSILON for Ruby on my machine is about 2.22e-16.
+# So "L" puts a limit on N on my machine of about 6.71e+7 (2.22e-16 ~ 1/(6.71e+7)^2).
 
 # For now, if I want to avoid saying that a sum terminates, I'll just say Σ without the subscript.
 # Computationally ℚ may be the most we can actually do, but
@@ -142,20 +144,6 @@ L[u+e[-N]] = u		# Obviously, I hope.
 # Factorial:
 
 n! ≡ Π[1,n]{u|u} # 1*2*3*...*n
-
-# Much of what I'm doing is to reduce the size of the expressions.
-# Arrow Operators on subscripts:
-
-uᵥ↑ ≡ uᵥ+₁
-uᵥ↓ ≡ uᵥ-₁
-
-uᵥ⇈ ≡ uᵥ↑↑
-uᵥ⇈ = uᵥ+₂
-
-uᵥ⇊ ≡ uᵥ↓↓
-uᵥ⇊ = uᵥ-₂
-
-Σᵥu↑ ≡ Σᵥuᵥ+₁	# Where context allows, subscript not needed.
 
 # I'd like to make the following a "blessing" on n only.
 # In Ruby, it's like `def n.method`.
@@ -187,6 +175,20 @@ n-₂ = 1/(n(n-1))
 n-₃ = n-₂/(n-3+1) = (1/(n(n-1)))/(n-2)
 n-₃ = 1/(n(n-1)(n-2)) # and so on...
 
+# Much of what I'm doing is to reduce the size of the expressions.
+# Arrow Operators on subscripts:
+
+uᵥ↑ ≡ uᵥ+₁
+uᵥ↓ ≡ uᵥ-₁
+
+uᵥ⇈ ≡ uᵥ↑↑
+uᵥ⇈ = uᵥ+₂
+
+uᵥ⇊ ≡ uᵥ↓↓
+uᵥ⇊ = uᵥ-₂
+
+Σᵥu↑ ≡ Σᵥuᵥ+₁	# Where context allows, subscript not needed.
+
 # Arrows meaningful as Whatchamacallits:
 
 n⇈ = (n+1)(n+2)
@@ -207,6 +209,61 @@ n-₃n! = (n-3)!	# OK
 
 n↑n! = (n+1)!
 n↓n! = (n-1)!
+
+# The Imaginary number i:
+
+i² ≡ -1	# I think the best definition of "i" for now.
+
+# Sine, Cosine, and Exponential:
+
+:Sine[u] ≡ Σ (-1)ⁿ u^(2n+1) / (2n+1)!
+S[u] ≡ :Sine[u]
+
+:Cosine[u] ≡ Σ (-1)ⁿ u^(2n) / (2n)!
+C[u] ≡ :Cosine[u]
+
+:Exponential[u] ≡ Σ uⁿ / n!
+e[u] ≡ :Exponential[u]
+eᵘ ≡ e^(u) ≡ e[u]	# Alternate forms.
+
+# Trigonometric Identities:
+# http://en.wikipedia.org/wiki/List_of_trigonometric_identities
+
+S²+C²=1	# Pythagoras
+S[u+v]=SuCv+CuSv	# Sine's angle sum
+C[u+v]=CuCv-SuSv	# Cosine's angle sum
+C[2u]=1-2S²u		# Cosine double angle "cos(2u)=1-2*sin²(u)"
+
+# Just a quick exercise.
+# Derivation: Cosine's Angle Sum to Cosine Double Angle:
+
+:Cosine[2u]
+C[2u] = C[2u]
+C[2u] = C[u+u]
+C[2u] = C[u]C[u]-S[u]S[u]
+C[2u] = CuCu-SuSu		# Shorten form
+C[2u] = CC-SS			# From context, C=:Cosine[u] and S=:Sine[u]
+C[2u] = C²-S²
+C[2u]-1 = C²-S²-1
+C[2u]-1 = (C²-1)-S²
+C[2u]-1 = (-S²=C²-1)-S²		# A bit of "rubyism" here.  Just invoking Pythagoras.
+C[2u]-1 = -S²-S²
+C[2u]-1 = -2S²
+C[2u] = 1-2S²			# I should expand out the context once the shorthand has fulfilled its purpose.
+C[2u] = 1-2S²[u]
+:Cosine[2u] = 1 - 2:Sine²[u]
+
+# Known properties of e:
+
+e[u]e[v] = e[u+v]
+e[iu] = C[u]+iS[u]
+e[-iu] = C[u]-iS[u]
+e[0] = 1
+
+# Complex conjugation:
+
+(u+iv)† ≡ u-iv
+e[i]† = (C+iS)† = C-iS = e[-i]	# what it does to e
 
 # Average value
 
@@ -231,66 +288,16 @@ d²u = <u²> - <u>²
 
 d²u = <u²> - <u>²
 
-# The Imaginary number i:
-
-i² ≡ -1	# I think the best definition of "i" for now.
-
-# Sine, Cosine, and Exponential:
-
-:Sine[u] ≡ Σ (-1)ⁿ u^(2n+1) / (2n+1)!
-S[u] ≡ :Sine[u]
-
-:Cosine[u] ≡ Σ (-1)ⁿ u^(2n) / (2n)!
-C[u] ≡ :Cosine[u]
-
-:Exponential[u] ≡ Σ uⁿ / n!
-e[u] ≡ :Exponential[u]
-eᵘ ≡ e^(u) ≡ e[u]	# Alternate forms.
-
-# Trigonometric Identities:
-# http://en.wikipedia.org/wiki/List_of_trigonometric_identities
-
-S²+C²=1	# Pythagoras
-S[u+v]=SuCv+CuSv	# Sine's angle sum
-C[u+v]=CuCv-SuSv	# Cosine's angle sum
-C[2u]=1-2S²u	# Cosine double angle "cos(2u)=1-2*sin²(u)"
-
-# Just a quick exercise.
-# Derivation: Cosine's Angle Sum to Cosine Double Angle:
-
-C[2u] = C[2u]
-C[2u] = C[u+u]
-C[2u] = C[u]C[u]-S[u]S[u]
-C[2u] = C²-S²
-C[2u]-1 = C²-S²-1
-C[2u]-1 = (C²-1)-S²
-C[2u]-1 = (-S²=C²-1)-S²	# A bit of "rubyism" here.  Just invoking Pythagoras.
-C[2u]-1 = -S²-S²
-C[2u]-1 = -2S²
-C[2u] = 1-2S²
-
-# Known properties of e:
-
-e[u]e[v] = e[u+v]
-e[iu] = C[u]+iS[u]
-e[-iu] = C[u]-iS[u]
-e[0] = 1
-
-# Complex conjugation:
-
-(u+iv)† ≡ u-iv
-e[i]† = (C+iS)† = C-iS = e[-i]	# what it does to e
-
 # P is the Poisson distribution:
 # http://en.wikipedia.org/wiki/Poisson_distribution
 
 Pₙ ≡ uⁿe[-u]/n!
-Σₙ Pₙ = 1
+Σ Pₙ = 1
 0 ≤ Pₙ ≤ 1
-<u> = Σₙ Pₙuₙ
+<u> = Σ Pₙuₙ
 
-pₙ†pₙ ≡ Pₙ	# We're assuming this and see how it goes!
-pₙ = √[uⁿe[-u]/n!]
+pₙ ≡ √[uⁿe[-u]/n!]
+pₙ†pₙ = Pₙ
 # Proof
   pₙ†pₙ
   √[uⁿe[-u]/n!]†√[uⁿe[-u]/n!]
@@ -360,27 +367,30 @@ c₂ₙ=1-2s²ₙ	# Cosine double angle in terms of c and s.
 
 # Average Quantum number nᵒ
 
-nᵒ ≡ L <n>
+<n> = <n|pₙ†npₙ|n> = Σ pₙ†npₙ = Σ nPₙ
 
-<n> = <n|pₙ†npₙ|n> = Σₙ pₙ†npₙ = Σₙ nPₙ
-    = Σₙ nuⁿe[-u]/n!				# Just by definition of <n>.
-    = Σ[0,M]{n|nuⁿe[-u]/n!}			# Definition of Σₙ.
-    = 0 + Σ[1,M]{n|nuⁿe[-u]/n!}			# The first element in the series is just zero.
-    = Σ[1,M]{n|uⁿe[-u]/(n-1)!}			# Have the n factor absorbed by the factorial.
-    = Σ[0,M-1]{n|u[n+1]e[-u]/n!}		# Shift.
-    = uΣ[0,M-1]{n|uⁿe[-u]/n!}			# Take out a factor of u.
-    = u(Σ[0,M]{n|uⁿe[-u]/n!} - (u^M)e[-M]/M!)	# Add and subtract the an Nth element (which is M).
-    = u(ΣₙPₙ) - u(u^M)e[-M]/M!			# Definition of Σₙ and Pₙ.
-    = u(1) - u^(M+1)e[-M]/M!			# Poisson distribution sums up to one.
-    = u - u^(M+1)e[-M]/M!
+nᵒ ≡ L <n>
+nᵒ = L Σ nPₙ = L Σₙ nPₙ				# Remember that L truncates the series.
+
+Σₙ nPₙ = L Σₙ nuⁿe[-u]/n!			# Just by definition of Pₙ.
+ = Σ[0,M]{n|nuⁿe[-u]/n!}			# Definition of Σₙ.
+ = 0 + Σ[1,M]{n|nuⁿe[-u]/n!}			# The first element in the series is just zero.
+ = Σ[1,M]{n|uⁿe[-u]/(n-1)!}			# Have the n factor absorbed by the factorial.
+ = Σ[0,M-1]{n|u[n+1]e[-u]/n!}			# Shift.
+ = uΣ[0,M-1]{n|uⁿe[-u]/n!}			# Take out a factor of u.
+ = u(Σ[0,M]{n|uⁿe[-u]/n!} - (u^M)e[-M]/M!)	# Add and subtract the an Nth element (which is M).
+ = u(ΣₙPₙ) - u(u^M)e[-M]/M!			# Definition of Σₙ and Pₙ.
+ = u(1) - u^(M+1)e[-M]/M!			# Poisson distribution sums up to one.
+ = u - u^(M+1)e[-M]/M!
 
 nᵒ = L[u - u^(M+1)e[-M]/M!]
 nᵒ = L[u] - L[u^(M+1)e[-M]/M!]
 nᵒ = u - 0
 nᵒ = u	# As expected.  :)
 
-# L Σₙ[n(n-1)Pₙ]
+# L Σ[n(n-1)Pₙ]
 
+L Σ n(n-1)Pₙ
 L Σₙ n(n-1)Pₙ
 L Σₙ 1/n-₂ uⁿe[-u]/n!
 L Σₙ uⁿe[-u]/(n-2)!
@@ -390,11 +400,11 @@ L u² Σ[0,M]{n|u^(n-2)e[-u]/(n-2)!}
 L u² Σ[-2,M-2]{n|uⁿe[-u]/n!}
 L u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|uⁿe[-u]/n!})
 L u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|Pₙ})
-u²(L[e[-u]/(u²(-2)!)] + L[e[-u]/(u(-1)!)] + L[Σ[0,M-2]{n|Pₙ}])
+u²(L[e[-u]/(u²(-2)!)] + L[e[-u]/(u(-1)!)] + L[Σ[0,M-2]{n|Pₙ}]) # TODO: argue better the 1 component.
 u²(0 + 0 + 1)	# TODO: need to explain 1/(-1)! ≡ 0
 u²
 
-(nᵒ)² = L Σₙ[n(n-1)Pₙ]
+(nᵒ)² = L Σ[n(n-1)Pₙ]
 
 # Now we can describe the distribution in terms of the average quantum number:
 

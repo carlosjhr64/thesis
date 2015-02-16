@@ -235,10 +235,17 @@ d²u = <u²> - <u>²
 
 i² ≡ -1	# I think the best definition of "i" for now.
 
-# Sine and Cosine:
+# Sine, Cosine, and Exponential:
 
+:Sine[u] ≡ Σ (-1)ⁿ u^(2n+1) / (2n+1)!
 S[u] ≡ :Sine[u]
+
+:Cosine[u] ≡ Σ (-1)ⁿ u^(2n) / (2n)!
 C[u] ≡ :Cosine[u]
+
+:Exponential[u] ≡ Σ uⁿ / n!
+e[u] ≡ :Exponential[u]
+eᵘ ≡ e^(u) ≡ e[u]	# Alternate forms.
 
 # Trigonometric Identities:
 # http://en.wikipedia.org/wiki/List_of_trigonometric_identities
@@ -261,11 +268,6 @@ C[2u]-1 = (-S²=C²-1)-S²	# A bit of "rubyism" here.  Just invoking Pythagoras.
 C[2u]-1 = -S²-S²
 C[2u]-1 = -2S²
 C[2u] = 1-2S²
-
-# The Exponential function:
-
-e[u] ≡ :Exponential[u]	# This is normally just e^u. Here, e is the operator and not the number.
-eᵘ ≡ e^(u) ≡ e[u]	# Avoid these alternate forms?
 
 # Known properties of e:
 

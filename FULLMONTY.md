@@ -16,7 +16,7 @@ Each symbol should only be defined once, except `u` and `v` which will be used a
 In books you'll see `sin²(x)` to mean `sin(x)*sin(x)`.
 I'll use that convention in general.
 `u²[v]` will mean `u[v]*u[v]` and not `u[u[v]]`.
-The initial part of this section goes over trivial stuff for anybody attempting to read my thesis, but
+The initial part of this section goes over elementary stuff for anybody attempting to read my thesis, but
 it's a good warmup and shows how I'll be writting things out.
 
 If you're comparing this work with my original paper,

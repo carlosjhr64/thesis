@@ -517,6 +517,7 @@ pₙpₙ-₂ = Pₙ/(nᵒ√n-₂)	# Using Whatchamacallit
 <y> = √[½nᵒ](2c₁)					# φ↑+φ↓=2c₁, remember?
 <y> = √[2nᵒ]c₁
 <y>² = 2nᵒc₁
+<y>² = 2nᵒ:Cosine[nωt]
 
 # This time I got c₁ instead of:
 #   <y> = √[2nᵒ]s₁ # :-??

@@ -378,12 +378,12 @@ Eₙ = ωħ(n+½)	# 3.2: Energy eigen-value
 # Φ→φ:
 
 Φₙ†Φₙ+₁ = φₙ+₁-ₙ = φ₁
-φ↑ ≡ φ₁	# This will make notation very consistent later.
-Φₙ†Φₙ+₁ = φ↑
+φ↥ ≡ φ₀↑ = φ₁	# This will make notation very consistent later.
+Φₙ†Φₙ+₁ = φ↥
 
 Φₙ†Φₙ-₁ = φₙ-₁-ₙ = φ-₁	# Yeah... me worry about this one a little bit!  LOL
-φ↓ ≡ φ-₁
-Φₙ†Φₙ-₁ = φ↓
+φ↧ ≡ φ₀↓ = φ-₁
+Φₙ†Φₙ-₁ = φ↧
 
 Φₙ†Φₙ+₂ = φₙ+₂-ₙ = φ₂
 Φₙ†Φₙ-₂ = φₙ-₂-ₙ = φ-₂
@@ -401,10 +401,10 @@ c₂ₙ=1-2s²ₙ	# Cosine double angle in terms of c and s.
 φ-₁ = c₁+is₁	# Maybe that'll work.
 
 φ₁ + φ-₁ = 2c₁
-φ↑ + φ↓ = 2c₁	# Remember this one!
+φ↥ + φ↧ = 2c₁	# Remember this one!
 
 φ₁ - φ-₁ = 2s₁
-φ↑ - φ↓ = 2s₁
+φ↥ - φ↧ = 2s₁
 
 φ₂ = c₂-is₂
 φ-₂ = c₂+is₂
@@ -505,16 +505,16 @@ pₙpₙ-₂ = Pₙ/(nᵒ√n-₂)	# Using Whatchamacallit
 <y> = √½Σ Φ†p (Φ↑√n↑p↑ + Φ↓/√n↓p↓)			# Context n, and arrow operators.  :)
 <y> = √½Σ Φ†Φ↑√n↑pp↑ + Φ†Φ↓/√n↓pp↓			# Distribute
 <y> = √½Σ √n↑pp↑Φ†Φ↑ + 1/√n↓pp↓Φ†Φ↓			# Rearrange
-<y> = √½Σ √n↑pp↑φ↑ + 1/√n↓pp↓φ↓				# Φ→φ
-<y> = √½Σ √n↑ √nᵒ P/√n↑ φ↑ + 1/√n↓ P/√[nᵒn↓] φ↓		# p->P
-<y> = √½Σ √nᵒ P φ↑ + 1/n↓ P/√nᵒ φ↓			# Simplify
-<y> = √½Σ √nᵒ P φ↑ + n P/√nᵒ φ↓				# 1/n↓ = n
-<y> = √½(Σ[√nᵒ P φ↑] + Σ[n P/√nᵒ φ↓])			# Separate the sums
-<y> = √½(√nᵒφ↑ΣP + φ↓/√nᵒΣ[nP])				# Take out the constants
-<y> = √½(√nᵒφ↑(1) + φ↓/√nᵒ(nᵒ))
-<y> = √½(√nᵒφ↑ + φ↓√nᵒ)					# :)
-<y> = √[½nᵒ](φ↑ + φ↓)
-<y> = √[½nᵒ](2c₁)					# φ↑+φ↓=2c₁, remember?
+<y> = √½Σ √n↑pp↑φ↥ + 1/√n↓pp↓φ↧				# Φ→φ
+<y> = √½Σ √n↑ √nᵒ P/√n↑ φ↥ + 1/√n↓ P/√[nᵒn↓] φ↧		# p->P
+<y> = √½Σ √nᵒ P φ↥ + 1/n↓ P/√nᵒ φ↧			# Simplify
+<y> = √½Σ √nᵒ P φ↥ + n P/√nᵒ φ↧				# 1/n↓ = n
+<y> = √½(Σ[√nᵒ P φ↥] + Σ[n P/√nᵒ φ↧])			# Separate the sums
+<y> = √½(√nᵒφ↥ΣP + φ↧/√nᵒΣ[nP])				# Take out the constants
+<y> = √½(√nᵒφ↥(1) + φ↧/√nᵒ(nᵒ))
+<y> = √½(√nᵒφ↥ + φ↧√nᵒ)					# :)
+<y> = √[½nᵒ](φ↥ + φ↧)
+<y> = √[½nᵒ](2c₁)					# φ↥+φ↧=2c₁, remember?
 <y> = √[2nᵒ]c₁
 <y>² = 2nᵒc²₁
 <y>² = 2nᵒ:Cosine²[nωt]

@@ -378,7 +378,12 @@ Eₙ = ωħ(n+½)	# 3.2: Energy eigen-value
 # Φ→φ:
 
 Φₙ†Φₙ+₁ = φₙ+₁-ₙ = φ₁
+φ↑ ≡ φ₁	# This will make notation very consistent later.
+Φₙ†Φₙ+₁ = φ↑
+
 Φₙ†Φₙ-₁ = φₙ-₁-ₙ = φ-₁	# Yeah... me worry about this one a little bit!  LOL
+φ↓ ≡ φ-₁
+Φₙ†Φₙ-₁ = φ↓
 
 Φₙ†Φₙ+₂ = φₙ+₂-ₙ = φ₂
 Φₙ†Φₙ-₂ = φₙ-₂-ₙ = φ-₂
@@ -392,10 +397,14 @@ c₂ₙ=1-2s²ₙ	# Cosine double angle in terms of c and s.
 φₙ = cₙ-isₙ	# φ in terms of c and s.
 
 φ₁ = c₁-is₁
+
 φ-₁ = c₁+is₁	# Maybe that'll work.
 
 φ₁ + φ-₁ = 2c₁
+φ↑ + φ↓ = 2c₁	# Remember this one!
+
 φ₁ - φ-₁ = 2s₁
+φ↑ - φ↓ = 2s₁
 
 φ₂ = c₂-is₂
 φ-₂ = c₂+is₂
@@ -461,6 +470,7 @@ pₙpₙ+₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n+1)e[-nᵒ]/(n+1)!]
        = Pₙ √[nᵒ/(n+1)] 
        = √[nᵒ/(n+1)]Pₙ 
 pₙpₙ+₁ = √nᵒPₙ/√n₁	# Using Whatchamacallit
+pp↑ = √nᵒPₙ/√n↑		# And arrow notation
 
 pₙpₙ-₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-1)e[-nᵒ]/(n-1)!]
        = √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!] √[n/nᵒ] 
@@ -468,6 +478,7 @@ pₙpₙ-₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-1)e[-nᵒ]/(n-1)!]
        = Pₙ √[n/nᵒ] 
        = √[n/nᵒ]Pₙ 
 pₙpₙ-₁ = Pₙ/√[nᵒn-₁]	# Using Whatchamacallit
+pp↓ = Pₙ/√[nᵒn↓]	# And arrow notation
 
 pₙpₙ+₂ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n+2)e[-nᵒ]/(n+2)!]
        = √[nᵒ²/((n+1)(n+2))] √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!]
@@ -484,29 +495,38 @@ pₙpₙ-₂ = Pₙ/(nᵒ√n-₂)	# Using Whatchamacallit
 # TODO: <y>²:
 
 ...
-<y> = √½Σₙ Φₙ†pₙ† (Φₙ+₁√[n+1]pₙ+₁ + Φₙ-₁√npₙ-₁)		# 7.20
-<y> = √½Σₙ Φₙ†pₙ (Φₙ+₁√n₁pₙ+₁ + Φₙ-₁/√n-₁pₙ-₁)		# Using Whatchamacallit, † does nothing to p.
-<y> = √½Σₙ Φₙ†pₙΦₙ+₁√n₁pₙ+₁ + Φₙ†pₙΦₙ-₁/√n-₁pₙ-₁	# Distribute.
-<y> = √½Σₙ √n₁pₙpₙ+₁Φₙ†Φₙ+₁ + 1/√n-₁pₙpₙ-₁Φₙ†Φₙ-₁	# Rearrange
-<y> = √½Σₙ √n₁pₙpₙ+₁φ₁ + 1/√n-₁pₙpₙ-₁φ-₁		# Φ→φ
-<y> = √½Σₙ √n₁√nᵒPₙ/√n₁φ₁ + 1/√n-₁Pₙ/√[nᵒn-₁]φ-₁	# p→P
-<y> = √½Σₙ √nᵒPₙφ₁ + n/√nᵒPₙφ-₁				# Simplify
-<y> = √½(Σₙ[√nᵒPₙφ₁] + Σₙ[n/√nᵒPₙφ-₁])			# Separate the sums
-<y> = √½((√nᵒφ₁)ΣₙPₙ + (φ-₁/√nᵒ)Σₙ[nPₙ])		# Take out the constants
-<y> = √½((√nᵒφ₁)1 + (φ-₁/√nᵒ)nᵒ)			# :)
-<y> = √½(√nᵒφ₁ + φ-₁√nᵒ)
-<y> = √[½nᵒ](φ₁ + φ-₁)
-<y> = √[½nᵒ](c₁+is₁ + c₁-is₁)
-<y> = √[½nᵒ]2c₁
-<y> = √[2nᵒ]c₁						# This time I got c₁... why?
-<y>² = 2nᵒc²₁
+# Who want's to work with this horrible mess?
+<y> = √½Σ (e[-iω(n+½)t] √[uⁿe[-u]/n!])† (
+  e[-iω((n+1)+½)t] √[n+1] √[u^(n+1)e[-u]/(n+1)!] +
+  e[-iω((n-1)+½)t] √n √[u^(n-1)e[-u]/(n-1)!])
+<y> = √½Σ Φₙ†pₙ† (Φₙ+₁√[n+1]pₙ+₁ + Φₙ-₁√npₙ-₁)		# 7.20
+<y> = √½Σ Φₙ†pₙ (Φₙ+₁√n₁pₙ+₁ + Φₙ-₁/√n-₁pₙ-₁)		# Using Whatchamacallit, † does nothing to p.
+# Much nicer, no?
+<y> = √½Σ Φ†p (Φ↑√n↑p↑ + Φ↓/√n↓p↓)			# Context n, and arrow operators.  :)
+<y> = √½Σ Φ†Φ↑√n↑pp↑ + Φ†Φ↓/√n↓pp↓			# Distribute
+<y> = √½Σ √n↑pp↑Φ†Φ↑ + 1/√n↓pp↓Φ†Φ↓			# Rearrange
+<y> = √½Σ √n↑pp↑φ↑ + 1/√n↓pp↓φ↓				# Φ→φ
+<y> = √½Σ √n↑ √nᵒ P/√n↑ φ↑ + 1/√n↓ P/√[nᵒn↓] φ↓		# p->P
+<y> = √½Σ √nᵒ P φ↑ + 1/n↓ P/√nᵒ φ↓			# Simplify
+<y> = √½Σ √nᵒ P φ↑ + n P/√nᵒ φ↓				# 1/n↓ = n
+<y> = √½(Σ[√nᵒ P φ↑] + Σ[n P/√nᵒ φ↓])			# Separate the sums
+<y> = √½(√nᵒφ↑ΣP + φ↓/√nᵒΣ[nP])				# Take out the constants
+<y> = √½(√nᵒφ↑(1) + φ↓/√nᵒ(nᵒ))
+<y> = √½(√nᵒφ↑ + φ↓√nᵒ)					# :)
+<y> = √[½nᵒ](φ↑ + φ↓)
+<y> = √[½nᵒ](2c₁)					# φ↑+φ↓=2c₁, remember?
+<y> = √[2nᵒ]c₁
+<y>² = 2nᵒc₁
 
-# <y> = √[2nᵒ]s₁ # :-??
-# <y>² = 2nᵒs²₁  # :-??
+# This time I got c₁ instead of:
+#   <y> = √[2nᵒ]s₁ # :-??
+#   <y>² = 2nᵒs²₁  # :-??
+# Why?
 # It may be that 25 years ago I was not careful enough with φ₁ and φ-₁.
 # In fact, I've already noted in my revision that I messed up my treatment of 1ₙ (now Φₙ).
 # OK, so that's one of the major errors I was concerned with.
 # Let's see what happens to <y²>.
+# Expect a related error in <y²>, this is not the second error I'm looking for.
 
 # TODO: <y²>:
 

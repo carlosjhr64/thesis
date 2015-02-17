@@ -11,7 +11,7 @@
 
 Here I write explicitly all my work, as if writting computer code.
 Consider all symbols to have global scope.
-Each symbol should only be defined once, except `u` and `v` which will be used as a temporary general variables.
+Each symbol should only be defined once, except `u` and `v` which will be used as temporary general variables.
 
 In books you'll see `sin²(x)` to mean `sin(x)*sin(x)`.
 I'll use that convention in general.
@@ -145,6 +145,36 @@ L[u+e[-N]] = u		# Obviously, I hope.
 
 n! ≡ Π[1,n]{u|u} # 1*2*3*...*n
 
+u[n]=1/n! → u[n-1]=nu[n]	# Recursion
+# Proof:
+  nu[n]	# Given
+  n/n!	# Substitution
+  n/((n-1)!n)
+  1/(n-1)!
+  u[n-1]
+
+1/(-1)! = 0
+# Proof 1:
+  n=0, 1/(n-1)!=n/n!
+  1/(0-1)! = 0/0!	# Substitute n.
+  1/(-1)! = 0/1		# 0! is just 1
+  1/(-1)! = 0
+# Proof 2, by recursion:
+  u[-1]
+  u[0-1]
+  0u[0]
+  0/0!
+  0/1
+  0
+
+1/(-2)! = 0
+# Proof by recursion:
+  u[-2]
+  u[-1-1]
+  -1u[-1]
+  -1*0
+  0	# In general 1/u! = 0 ← ℤ{u<0}
+
 # I'd like to make the following a "blessing" on n only.
 # In Ruby, it's like `def n.method`.
 # Whatchamacallit forward:
@@ -210,10 +240,15 @@ n-₃n! = (n-3)!	# OK
 n↑n! = (n+1)!
 n↓n! = (n-1)!
 
+n⇈n! = (n+2)!
+n⇊n! = (n-2)!
+
 # The Imaginary number i:
 
 i² ≡ -1	# I think the best definition of "i" for now.
 
+# http://en.wikipedia.org/wiki/Trigonometric_functions#Series_definitions
+# http://en.wikipedia.org/wiki/Exponential_function#Formal_definition
 # Sine, Cosine, and Exponential:
 
 :Sine[u] ≡ Σ (-1)ⁿ u^(2n+1) / (2n+1)!
@@ -400,11 +435,18 @@ L u² Σ[0,M]{n|u^(n-2)e[-u]/(n-2)!}
 L u² Σ[-2,M-2]{n|uⁿe[-u]/n!}
 L u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|uⁿe[-u]/n!})
 L u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|Pₙ})
-u²(L[e[-u]/(u²(-2)!)] + L[e[-u]/(u(-1)!)] + L[Σ[0,M-2]{n|Pₙ}]) # TODO: argue better the 1 component.
-u²(0 + 0 + 1)	# TODO: need to explain 1/(-1)! ≡ 0
+u²(L[e[-u]/(u²(-2)!)] + L[e[-u]/(u(-1)!)] + L[Σ[0,M-2]{n|Pₙ}])
+u²(0 + 0 + L[Σ[0,M-2]{n|Pₙ}])	# 1/u! = 0 if interger u < 0
+u²(L[Σ[0,M]{n|Pₙ} - P[M-1] - P[M]])
+u²(L[ΣPₙ - P[M-1] - P[M]] - P[M+1] - ⋯)	# Re-consider the infinite series.
+u²(L[1 - P[M-1] - P[M]] - P[M+1] - ⋯)	# ΣPₙ = 1
+u²(1 - L[P[M-1] - P[M]] - P[M+1] - ⋯])
+u²(1 - Σ0)	# To L, for large enough M, the trailing sequence are all zeroes.
+u²(1-0)
+u²*1
 u²
 
-(nᵒ)² = L Σ[n(n-1)Pₙ]
+nᵒ² = L Σ[n(n-1)Pₙ]	# b/c nᵒ=u, so u²=nᵒ²
 
 # Now we can describe the distribution in terms of the average quantum number:
 

@@ -409,6 +409,9 @@ c₂ₙ=1-2s²ₙ	# Cosine double angle in terms of c and s.
 φ₂ = c₂-is₂
 φ-₂ = c₂+is₂
 
+φ-₂ + φ₂ = 2c₂
+φ↧↓ + φ↥↑ = 2c₂	# And remember this one!
+
 # Average Quantum number nᵒ
 
 <n> = <n|pₙ†npₙ|n> = Σ pₙ†npₙ = Σ nPₙ
@@ -445,7 +448,7 @@ L u² Σ[-2,M-2]{n|uⁿe[-u]/n!}
 L u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|uⁿe[-u]/n!})
 L u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|Pₙ})
 u²(L[e[-u]/(u²(-2)!)] + L[e[-u]/(u(-1)!)] + L[Σ[0,M-2]{n|Pₙ}])
-u²(0 + 0 + L[Σ[0,M-2]{n|Pₙ}])	# 1/u! = 0 if interger u < 0
+u²(0 + 0 + L[Σ[0,M-2]{n|Pₙ}])	# 1/u! = 0 if integer u < 0
 u²(L[Σ[0,M]{n|Pₙ} - P[M-1] - P[M]])
 u²(L[ΣPₙ - P[M-1] - P[M]] - P[M+1] - ⋯)	# Re-consider the infinite series.
 u²(L[1 - P[M-1] - P[M]] - P[M+1] - ⋯)	# ΣPₙ = 1
@@ -470,7 +473,7 @@ pₙpₙ+₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n+1)e[-nᵒ]/(n+1)!]
        = Pₙ √[nᵒ/(n+1)] 
        = √[nᵒ/(n+1)]Pₙ 
 pₙpₙ+₁ = √nᵒPₙ/√n₁	# Using Whatchamacallit
-pp↑ = √nᵒPₙ/√n↑		# And arrow notation
+pp↑ = √nᵒPₙ/√n↑		# And Arrow notation
 
 pₙpₙ-₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-1)e[-nᵒ]/(n-1)!]
        = √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!] √[n/nᵒ] 
@@ -478,19 +481,21 @@ pₙpₙ-₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-1)e[-nᵒ]/(n-1)!]
        = Pₙ √[n/nᵒ] 
        = √[n/nᵒ]Pₙ 
 pₙpₙ-₁ = Pₙ/√[nᵒn-₁]	# Using Whatchamacallit
-pp↓ = Pₙ/√[nᵒn↓]	# And arrow notation
+pp↓ = Pₙ/√[nᵒn↓]	# And Arrow notation
 
 pₙpₙ+₂ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n+2)e[-nᵒ]/(n+2)!]
        = √[nᵒ²/((n+1)(n+2))] √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!]
        = nᵒ/√[(n+1)(n+2)] pₙpₙ
        = nᵒ/√[(n+1)(n+2)] Pₙ
 pₙpₙ+₂ = nᵒPₙ/√n₂	# Using Whatchamacallit
+pₙpₙ+₂ = nᵒPₙ/√n⇈	# Using Arrow
 
 pₙpₙ-₂ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-2)e[-nᵒ]/(n-2)!]
        = √[(n-1)n/nᵒ²] √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!]
        = √[(n-1)n]/nᵒ pₙpₙ
        = √[(n-1)n]/nᵒ Pₙ
 pₙpₙ-₂ = Pₙ/(nᵒ√n-₂)	# Using Whatchamacallit
+pₙpₙ-₂ = Pₙ/(nᵒ√n⇊)	# Using Arrow
 
 # TODO: <y>²:
 
@@ -532,38 +537,38 @@ pₙpₙ-₂ = Pₙ/(nᵒ√n-₂)	# Using Whatchamacallit
 # TODO: <y²>:
 
 ...
-<y²> = (nᵒ+½) + ½Σₙ Φₙ†pₙ† (Φₙ-₂√[n(n-1)]pₙ-₂ +  Φₙ+₂√[(n+1)(n+2)]pₙ+₂)			# 7.21
-<y²> = (nᵒ+½) + ½Σₙ Φₙ†pₙ†Φₙ-₂√[n(n-1)]pₙ-₂ + Φₙ†pₙ†Φₙ+₂√[(n+1)(n+2)]pₙ+₂		# Distribute
-<y²> = (nᵒ+½) + ½Σₙ √[n(n-1)]pₙpₙ-₂Φₙ†Φₙ-₂ + √[(n+1)(n+2)]pₙpₙ+₂Φₙ†Φₙ+₂			# Rearrange, † does nothing to p.
-<y²> = (nᵒ+½) + ½Σₙ √[n(n-1)]pₙpₙ-₂φ-₂ + √[(n+1)(n+2)]pₙpₙ+₂φ₂				# Φ→φ
-<y²> = (nᵒ+½) + ½Σₙ √[n(n-1)]√[(n-1)n]/nᵒPₙφ-₂ + √[(n+1)(n+2)]nᵒ/√[(n+1)(n+2)]Pₙφ₂	# p→P
-<y²> = (nᵒ+½) + ½Σₙ n(n-1)/nᵒPₙφ-₂ + nᵒPₙφ₂						# Simplify
-<y²> = (nᵒ+½) + ½Σₙ[n(n-1)/nᵒPₙφ-₂] + ½Σₙ[nᵒPₙφ₂]					# Separate
-<y²> = (nᵒ+½) + ½/nᵒφ-₂Σₙ[n(n-1)Pₙ] + ½nᵒφ₂ΣₙPₙ						# Take out the constants
-<y²> = (nᵒ+½) + ½/nᵒφ-₂Σₙ[n(n-1)Pₙ] + ½nᵒφ₂						# Sum of distribution is one
-<y²> = (nᵒ+½) + ½/nᵒφ-₂(nᵒ)² + ½nᵒφ₂
-<y²> = (nᵒ+½) + ½nᵒφ-₂ + ½nᵒφ₂
-<y²> = (nᵒ+½) + ½nᵒ(φ-₂ + φ₂)
-<y²> = (nᵒ+½) + ½nᵒ2c₂
-<y²> = (nᵒ+½) + nᵒc₂		# GD got a '+' sign this time.  This is INSANE!  LOL
-<y²> = (nᵒ+½) + nᵒ(1-2s²₁)
-<y²> = nᵒ + ½ + nᵒ - 2nᵒs²₁)
-<y²> = ½ + 2nᵒ - 2nᵒs²₁)
-<y²> = ½ + 2nᵒ(1-s²₁)
-<y²> = ½ + 2nᵒc²₁	# Pythagoras
-
-...
-# <y²> = (nᵒ+½) - nᵒc₂ # :-?? Was this even posible? So it's `<q²> = (nᵒ+½) - nᵒc₂`?
+# And who wants to work with this mess?
+<y²> = (nᵒ+½) +
+  ½Σ e[-iω(n+½)t]† √[uⁿe[-u]/n!] (
+    e[-iω((n-2)+½)t] √[n(n-1)] √[u^(n-2)e[-u]/(n-2)! +
+    e[-iω((n+2)+½)t] √[(n+1)(n+2)] √[u^(n+2)e[-u]/(n+2)!
+  )
+<y²> = (nᵒ+½) + ½Σ Φₙ†pₙ† (Φₙ-₂√[n(n-1)]pₙ-₂ +  Φₙ+₂√[(n+1)(n+2)]pₙ+₂)	# 7.21
+# And much nicer...
+<y²> = (nᵒ+½) + ½Σ Φ†p (Φ⇊/√n⇊ p⇊ +  Φ⇈√n⇈ p⇈)				# pretty noted
+<y²> = (nᵒ+½) + ½Σ Φ†Φ⇊/√n⇊ pp⇊ +  Φ†Φ⇈√n⇈ pp⇈				# Distribute
+<y²> = (nᵒ+½) + ½Σ φ↧↓/√n⇊ pp⇊ +  φ↥↑√n⇈ pp⇈				# Φ→φ
+<y²> = (nᵒ+½) + ½Σ φ↧↓/√n⇊ P/(nᵒ√n⇊) +  φ↥↑√n⇈ nᵒP/√n⇈			# p->P
+<y²> = (nᵒ+½) + ½Σ φ↧↓/n⇊ P/nᵒ +  φ↥↑ nᵒP				# Simplify
+<y²> = (nᵒ+½) + ½Σ φ↧↓ n(n-1) P/nᵒ +  φ↥↑ nᵒP				# 1/n⇊ = n(n-1)
+<y²> = (nᵒ+½) + ½(Σ[φ↧↓ n(n-1) P/nᵒ] +  Σ[φ↥↑ nᵒP])			# Separate sums
+<y²> = (nᵒ+½) + ½(φ↧↓/nᵒΣ[n(n-1)P] +  φ↥↑nᵒΣ[P])			# Take out the constants
+<y²> = (nᵒ+½) + ½(φ↧↓/nᵒ(nᵒ²) +  φ↥↑nᵒ(1))				# Evaluate sums
+<y²> = (nᵒ+½) + ½(φ↧↓nᵒ + φ↥↑nᵒ)					# Simplify
+<y²> = (nᵒ+½) + ½nᵒ(φ↧↓ + φ↥↑)
+<y²> = (nᵒ+½) + ½nᵒ(2c₂)						# Remember?  φ↧↓+φ↥↑=2c₂.
+<y²> = (nᵒ+½) + nᵒc₂
+<y²> = (nᵒ+½) + nᵒ(1-2s²₁)						# Double angle, c₂=1-2s²₁
+<y²> = (nᵒ+½) + nᵒ- 2nᵒs²₁
+<y²> = 2nᵒ + ½ - 2nᵒs²₁
+<y²> = ½ + 2nᵒ - 2nᵒs²₁
+<y²> = ½ + 2nᵒ(1 - s²₁)
+<y²> = ½ + 2nᵒc²₁							# Pythagoras
+<y²> = ½ + 2nᵒ:Cosine²[nwt]
 
 # 7.5 Results:
 
 d²y = <y²> - <y>²
     = (½ + 2nᵒc²₁) - 2nᵒc²₁
-    = ½	# SERIOUSLY! HOW DOES IT ALL CONSPIRE TO BE THE SAME! INSANE!!!
-
-# d²y = <y²> - <y>²
-# d²y = (nᵒ+½) - nᵒc₂ - 2nᵒs²₁	# 7.33a: Subtitute in previous results.
-# d²y = (nᵒ+½) - nᵒ(1-2s²₁) - 2nᵒs²₁	# Cosine double angle formula.
-# d²y = ½	# 7.33b.
-
+    = ½
 ```

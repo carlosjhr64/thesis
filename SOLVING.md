@@ -10,7 +10,12 @@ in both the position and momentum of a particle
 as a mathematical programming problem.
 
     min <Y][n><n]d[x]d[p][m><m][Y>   # 7.1a
-    sub <Y][n><n]Eₙ[n><n][Y>         # 7.1b
+
+~~sub <Y][n><n]Eₙ[n><n][Y>~~
+
+    sub <Y][n><n]Eₙ[n><n][Y> = Eᵒ    # 7.1b
+
+> I missed the `= Eᵒ`.  7.1b is just a restatement of 5.1b.
 
 Note that the constraint equation differs from that([5.3b](FORMULATION.md))
 in section 5 for this paper.

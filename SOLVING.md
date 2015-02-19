@@ -11,7 +11,7 @@ as a mathematical programming problem.
 
     min <Y][n><n]d[x]d[p][m><m][Y>   # 7.1a
 
-~~sub <Y][n><n]Eₙ[n><n][Y>~~
+~~`sub <Y][n><n]Eₙ[n><n][Y>`~~
 
     sub <Y][n><n]Eₙ[n><n][Y> = Eᵒ    # 7.1b
 

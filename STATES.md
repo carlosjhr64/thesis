@@ -25,11 +25,7 @@ The constants `Aₙ` are given by
 
 This leads to the following result, which is used in section seven of this paper:
 
-    A[n]≡Aₙ,
-    A[n]/A[n-1] = (2n)^-½   # A.2b
-
-> Note that I was not able to reproduce the n-1 subscript here,
-> so introduce `A[n]≡Aₙ`.
+    Aₙ/Aₙ-₁ = (2n)^-½   # A.2b
 
 `Hₙ[y]` are the Hermite polynomials.
 There are many ways of expressing them, but here is one:
@@ -42,8 +38,8 @@ There are many ways of expressing them, but here is one:
 
 The Hermite polynomial has the following recursion relations:
 
-    (Dᵧ)H[n][y] = 2nH[n-1][y]             # A.4a
-    H[n+1][y] = 2yH[n][y] - 2nH[n-1][y]   # A.4b
+    (Dᵧ)Hₙ[y] = 2nHₙ-₁[y]                 # A.4a
+    Hₙ+₁[y] = 2yHₙ[y] - 2nHₙ-₁[y]         # A.4b
 
 These were use for the analysis of the problem worked on this paper.
 

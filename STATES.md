@@ -30,7 +30,7 @@ This leads to the following result, which is used in section seven of this paper
 `Hₙ[y]` are the Hermite polynomials.
 There are many ways of expressing them, but here is one:
 
-    Hₙ[y] = (-1)ⁿe^(y²)(Dᵧ)ⁿe^(y²)   # A.3
+    Hₙ[y] = (-1)ⁿe^(y²)(Dᵧ)ⁿe^(-y²)   # A.3
 
 > Here I'm using `ᵧ` as subscript `y`, because I don't have the exact subscript.
 > `Dᵧ` is the differential operator with respect to `y`.

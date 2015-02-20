@@ -497,9 +497,48 @@ pₙpₙ-₂ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-2)e[-nᵒ]/(n-2)!]
 pₙpₙ-₂ = Pₙ/(nᵒ√n-₂)	# Using Whatchamacallit
 pₙpₙ-₂ = Pₙ/(nᵒ√n⇊)	# Using Arrow
 
-# TODO: <y>²:
+# The non-dimensional displacement, y.
+# Liboff in his book uses ξ instead of y:
 
-...
+y² ≡ mω/ħ x²	# A.1b
+x² = ħ/(mω) y²
+
+# The Normalization Constant, Aₙ:
+
+Aₙ ≡ 1/√[2ⁿn!√π]
+Aₙ/Aₙ-₁ = 1/√[2n]
+Proof:
+  √[2ⁿ-ⁱ(n-1)!√π] / √[2ⁿn!√π]
+  √[2ⁿ-ⁱ(n-1)!] / √[2ⁿn!]	# √π cancels
+  √[2ⁿ-ⁱ] / √[2ⁿn]		# n!/(n-1)! = n
+  1 / √[2n]			# 2ⁿ/2ⁿ-ⁱ = 2
+
+# The Hermite polynomial:
+
+Hₙ[y] ≡ -1ⁿ e[y²] Dᵧⁿ e[y²]	# A.3, this is "physicists' Hermite polynomials" in Wikipedia.
+
+# Please accept the EigenState of the Simple Harmonic Oscillator Yₙ as given by Liboff's book in page 189.
+# The EigenState Yₙ:
+
+Yₙ[x] = AₙHₙ[y]e[-y²/2]
+
+# The State Function Y:
+Y[x] = Σ pₙ Yₙ[x]
+
+# The Problem To Be Solved
+
+Minimize:     <Y|n><n|dxdp|m><m|Y>
+Subject to:   <Y|n><n|Eₙ|n><n|Y> = Eᵒ
+
+# TODO: I just jumped from the above to the calculation of d²x !?
+
+# Evaluation of <y>:
+
+<y> = <Y|y|Y>
+<y> = <Y|n><|y|m><m|Y>
+
+... # TODO
+
 # Who want's to work with this horrible mess?
 <y> = √½Σ (e[-iω(n+½)t] √[uⁿe[-u]/n!])† (
   e[-iω((n+1)+½)t] √[n+1] √[u^(n+1)e[-u]/(n+1)!] +

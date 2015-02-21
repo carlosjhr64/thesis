@@ -136,7 +136,34 @@ L[u+e[-N]] = u		# Obviously, I hope.
 # I'll just define ℝ in terms of the "measurement process".
 # How about this?
 
+# ℝ augments ℚ with Σuₙ
 ℚ{uₙ: |uₙ|≥2|uₙ+₁|}, v=Σuₙ ↔ ℝ{v}, ℚ{L[Σₙuₙ]}	# Our measurement of v is truncated.
+
+# ℝ has well defined + and *
+uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙvₖ
+# Quick plausibility check:
+  uᵒ := <1,2,3>, vᵒ := <4,5,6>	# Let...
+  #
+  # Addition
+  uᵒ+vᵒ = Σ uₙ+vₙ = (1+4) + (2+5) + (3+6) = 5 + 7 + 9 = 21
+  uᵒ = Σuₙ = 1 + 2 + 3 = 6
+  vᵒ = Σvₙ = 4 + 5 + 6 = 15
+  Σuₙ + Σvₙ = 6 + 15 = 21
+  uᵒ+vᵒ = Σuₙ+Σvₙ = Σ uₙ+vₙ = 21	# All self consistent
+  #
+  # Multiplication
+  uᵒvᵒ = ΣΣ uₙvₖ = ((1*4)+(1*5)+(1*6)) + ((2*4)+(2*5)+(2*6)) + ((3*4)+(3*5)+(3*6))
+                 = (4+5+6) + (8+10+12) + (12+15+18)
+                 = 15 + 30 + 45
+                 = 90
+  uᵒvᵒ = Σuₙ Σvₙ = 6*15 = 90
+  uᵒvᵒ = Σuₙ Σvₙ = ΣΣ uₙvₖ = 90	# Again, consitent.
+  # Division we don't have in the same form.
+  uᵒ/vᵒ = Σuₙ/Σvₙ
+  # Anyways, I only need ΣΣ uₙvₖ = Σuₙ Σvₙ.
+  # But for anybody who's interested,
+  # convergence of Σuₙ and Σvₙ is of course very important for ℝ{uᵒ,vᵒ}, but
+  # notice that the definition of + and * seems to work even without convergence.
 
 # Just a stab at the problem.
 # It would mean that for every ℝ{v}, there exists ℚ{uₙ} such that v=Σuₙ.

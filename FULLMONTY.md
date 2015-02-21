@@ -138,6 +138,8 @@ L[u+e[-N]] = u		# Obviously, I hope.
 
 # ℝ augments ℚ with Σuₙ
 ℚ{uₙ: |uₙ|≥2|uₙ+₁|}, v=Σuₙ ↔ ℝ{v}, ℚ{L[Σₙuₙ]}	# Our measurement of v is truncated.
+# Just a stab at the problem.
+# It would mean that for every ℝ{v}, there exists ℚ{uₙ} such that v=Σuₙ.
 
 # ℝ has well defined + and *
 uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙvₖ
@@ -164,9 +166,6 @@ uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙv�
   # But for anybody who's interested,
   # convergence of Σuₙ and Σvₙ is of course very important for ℝ{uᵒ,vᵒ}, but
   # notice that the definition of + and * seems to work even without convergence.
-
-# Just a stab at the problem.
-# It would mean that for every ℝ{v}, there exists ℚ{uₙ} such that v=Σuₙ.
 
 # Factorial:
 

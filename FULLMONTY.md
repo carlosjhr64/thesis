@@ -517,7 +517,7 @@ Proof:
 
 Hₙ[y] ≡ (-1)ⁿ e[y²] Dᵧⁿ e[-y²]	# A.3, this is "physicists' Hermite polynomials" in Wikipedia.
 
-Dᵧ Hₙ[y] = 2nHₙ-₁[y]
+Dᵧ Hₙ[y] = 2nHₙ-₁[y]	# A.4a
 # Proof:
   # It's actually a well known property of H.
   # In my notes I review a proof by genetating function... unreadable to me now.
@@ -544,6 +544,23 @@ Dᵧ Hₙ[y] = 2nHₙ-₁[y]
   (-1)ⁿ-ⁱ 2 ne[y²]Dⁿ-ⁱe[-y²]
   2n (-1)ⁿ-ⁱ e[y²] Dⁿ-ⁱe[-y²]
   2n Hₙ-₁[y]
+
+Hₙ+₁[y] = 2yHₙ[y] - 2nHₙ-₁[y]	# A.4b
+# Also a well known property of H, but here's a proof:
+  Hₙ+₁[y]
+  (-1)ⁿ+ⁱ e[y²] Dⁿ+ⁱ e[-y²]
+  (-1)ⁿ(-1) e[y²] Dⁿ[D e[-y²]]
+  (-1)ⁿ(-1) e[y²] Dⁿ[(-2y) e[-y²]]
+  (-1)ⁿ     e[y²] Dⁿ[  2y  e[-y²]]
+  (-1)ⁿ e[y²] Σₖ (n\k) Dᵏ[2y] Dⁿ-ᵏ[e[-y²]]	# General Leibniz rule
+  (-1)ⁿ e[y²]((n\0) D⁰[2y] Dⁿ-⁰[e[-y²]] + (n\1) Dⁱ[2y] Dⁿ-ⁱ[e[-y²]] + 0 ...)	# Dejavu
+  (-1)ⁿ e[y²](    1   (2y) Dⁿ  [e[-y²]] +     n   (2)  Dⁿ-ⁱ[e[-y²]])
+  (-1)ⁿ e[y²](2yDⁿ[e[-y²]] + 2nDⁿ-ⁱ[e[-y²]])
+  (-1)ⁿ e[y²] 2yDⁿ[e[-y²]] + (-1)ⁿ e[y²] 2nDⁿ-ⁱ[e[-y²]])	# Distribute
+  2y (-1)ⁿ e[y²] Dⁿ[e[-y²]] + 2n (-1)ⁿ e[y²] Dⁿ-ⁱ[e[-y²]])
+  2y (-1)ⁿ e[y²] Dⁿ[e[-y²]] + 2n (-1)(-1)ⁿ-ⁱ e[y²] Dⁿ-ⁱ[e[-y²]])
+  2y (-1)ⁿ e[y²] Dⁿ[e[-y²]] - 2n (-1)ⁿ-ⁱ e[y²] Dⁿ-ⁱ[e[-y²]])
+  2yHₙ[y] - 2nHₙ-₁[y]
 
 # Please accept the EigenState of the Simple Harmonic Oscillator Yₙ as given by Liboff's book in page 189.
 # The EigenState Yₙ:

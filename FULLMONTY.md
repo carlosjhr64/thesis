@@ -515,7 +515,35 @@ Proof:
 
 # The Hermite polynomial:
 
-Hₙ[y] ≡ -1ⁿ e[y²] Dᵧⁿ e[y²]	# A.3, this is "physicists' Hermite polynomials" in Wikipedia.
+Hₙ[y] ≡ (-1)ⁿ e[y²] Dᵧⁿ e[-y²]	# A.3, this is "physicists' Hermite polynomials" in Wikipedia.
+
+Dᵧ Hₙ[y] = 2nHₙ-₁[y]
+# Proof:
+  # It's actually a well known property of H.
+  # In my notes I review a proof by genetating function... unreadable to me now.
+  # But found this elegant proof online,
+  # http://math.stackexchange.com/questions/581897/hermite-polynomials-recurrence-relation:
+  D Hₙ[y]						# Given
+  D[(-1)ⁿ e[y²] Dⁿ e[-y²]]				# Substitution, definition of H
+  (-1)ⁿ D[e[y²] Dⁿ e[-y²]]				# Take out the constant
+  (-1)ⁿ (D[e[y²]] Dⁿ e[-y²] + e[y²] D[Dⁿ e[-y²]])	# Product rule
+  (-1)ⁿ (D[e[y²]] Dⁿ e[-y²] + e[y²] Dⁿ D[e[-y²]])	# Well... obviously we're going to do that!
+  (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²] Dⁿ -2ye[-y²])	# Executing D
+  # I don't remember ever coming across the General Leibniz rule
+  # http://en.wikipedia.org/wiki/General_Leibniz_rule
+  # Let (n\k) mean n choose k.
+  (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²] Σ[0,n]{k| (n\k) Dᵏ[-2y] Dⁿ-ᵏe[-y²]})	# General Leibniz rule
+  # D²[-2y]=0, Dⁿ[-2y]=0 if n>1.
+  (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²] Σ[0,1]{k| (n\k) Dᵏ[-2y] Dⁿ-ᵏe[-y²]})
+  (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²]((n\0) D⁰[-2y] Dⁿ-⁰e[-y²] + (n\1) Dⁱ[-2y] Dⁿ-ⁱe[-y²])
+  (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²](    1 D⁰[-2y] Dⁿ  e[-y²] +     n Dⁱ[-2y] Dⁿ-ⁱe[-y²])
+  (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²](         -2y  Dⁿ  e[-y²] +     n   (-2)  Dⁿ-ⁱe[-y²])
+  (-1)ⁿ (2ye[y²]Dⁿe[-y²] - 2ye[y²]Dⁿe[-y²] - 2ne[y²]Dⁿ-ⁱe[-y²])
+  (-1)ⁿ (0 - 2ne[y²]Dⁿ-ⁱe[-y²])
+  (-1)ⁿ (-2) ne[y²]Dⁿ-ⁱe[-y²]
+  (-1)ⁿ-ⁱ 2 ne[y²]Dⁿ-ⁱe[-y²]
+  2n (-1)ⁿ-ⁱ e[y²] Dⁿ-ⁱe[-y²]
+  2n Hₙ-₁[y]
 
 # Please accept the EigenState of the Simple Harmonic Oscillator Yₙ as given by Liboff's book in page 189.
 # The EigenState Yₙ:

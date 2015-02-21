@@ -159,7 +159,7 @@ uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙv�
                  = 15 + 30 + 45
                  = 90
   uᵒvᵒ = Σuₙ Σvₙ = 6*15 = 90
-  uᵒvᵒ = Σuₙ Σvₙ = ΣΣ uₙvₖ = 90	# Again, consitent.
+  uᵒvᵒ = Σuₙ Σvₙ = ΣΣ uₙvₖ = 90	# Again, consistent.
   # Division we don't have in the same form.
   uᵒ/vᵒ = Σuₙ/Σvₙ
   # Anyways, I only need ΣΣ uₙvₖ = Σuₙ Σvₙ.

@@ -49,7 +49,7 @@ u!u ≡ (u!)u	# Modifiers like subscripts, superscripts, factorial, complex conj
 # Integers
 
 ℕ ≡ {0,1,2,3,⋯}	# The set of natural numbers.  Or the ordered type /^\d+$/.
-ℕ{N,n,m}	# N, M, n, and m are Integers.
+ℕ{N,n,m,k}	# N, M, n, m, and k are Integers.
 M≡N-1		# This just simplifies notation later on.
 
 # I should mention integers(ℤ) and rationals(ℚ).
@@ -62,6 +62,7 @@ M≡N-1		# This just simplifies notation later on.
 # Subcripts labels a specific form of a more general expression:
 
 uᵥ[⋯]≡u[v,⋯]
+uₙₖ≡u[n,k,⋯]
 
 # Superscripts normally are ℕ denoting repetition.
 
@@ -91,7 +92,11 @@ uᵛ ≡ u^v	# or "u**v"
 # Summation over indeces:
 
 Σuₙ ≡ u₀ + u₁ + u₂ + ⋯	# Non-halting series.
+ΣΣuₙₖ ≡ (u₀₀ + u₀₁ + u₀₂ + ⋯) + (u₁₀ + u₁₁ + u₀₂ + ⋯) + (u₂₀ + u₂₁ + u₂₂ + ⋯) + ⋯
+
 Σₙuₙ ≡ Σ[0,M]{n|u[n]}	# NOTE!  Series indeces start with zero.
+ΣₙΣₖuₙₖ ≡ Σ[0,M]{n| Σ[0,M]{k| u[n,k]}}
+
 N = Σₙ 1
 
 # N is very, very, big!
@@ -207,6 +212,7 @@ u[n]=1/n! → u[n-1]=nu[n]	# Recursion
 
 # I'd like to make the following a "blessing" on n only.
 # In Ruby, it's like `def n.method`.
+# I suppose it could be made into a refinement in ℕ, but I'm only using it on n.
 # Whatchamacallit forward:
 
 nᵥ ≡ nᵥ-₁(n+v)
@@ -272,6 +278,19 @@ n↓n! = (n-1)!
 
 n⇈n! = (n+2)!
 n⇊n! = (n-2)!
+
+# Binomial coefficient
+# http://en.wikipedia.org/wiki/Binomial_coefficient
+# n choose k:
+
+(n\k) ≡ n!/(k!(n-k)!)
+
+(n\k) = 1/(n-ₖk!)
+# Proof
+  (n\k)
+  n!/(k!(n-k)!)
+  n!/(k!n!n-ₖ)
+  1/(k!n-ₖ)
 
 # The Imaginary number i:
 
@@ -390,7 +409,7 @@ pₙ†pₙ = Pₙ
   4 Σ ((4n+3)-(4n+1))/((4n+1)(4n+3))
   4 Σ 2/((4n+1)(4n+3))
   Σ 8/((4n+1)(4n+3))
-    |8/((4n+1)(4n+3))| ≤ |8/(16n²)| ≤ |1/(2n²)| ≤ 1/n² ← n≥N	# Definition of ℝ in this paper
+    |8/((4n+1)(4n+3))| ≤ |8/(16n²)| ≤ |1/(2n²)| ≤ 1/n² ← n≥N	# Fits given definition of ℝ.
 
 # Derived values
 
@@ -617,15 +636,16 @@ Y[x] = Σ pₙ Yₙ[x]
 
 # The Problem To Be Solved
 
-Minimize:     <Y|n><n|dxdp|m><m|Y>
+Minimize:     <Y|n><n|dxdp|k><k|Y>
 Subject to:   <Y|n><n|Eₙ|n><n|Y> = Eᵒ
 
 # TODO: I just jumped from the above to the calculation of d²x !?
+# Will say something like ΣΣuₙvₖ = (Σuₙ)(Σvₙ)
 
 # Evaluation of <y>:
 
 <y> = <Y|y|Y>
-<y> = <Y|n><|y|m><m|Y>
+<y> = <Y|n><|y|k><k|Y>
 
 ... # TODO
 

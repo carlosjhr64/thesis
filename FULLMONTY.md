@@ -136,11 +136,11 @@ L[u+e[-N]] = u		# Obviously, I hope.
 # I'll just define ℝ in terms of the "measurement process".
 # How about this?
 
-# ℝ augments ℚ with Σuₙ
-# TODO: improve the convergence condition, is it |uₙ/uₙ+₁| < 1?
-ℚ{uₙ: |uₙ|≥2|uₙ+₁|}, v=Σuₙ ↔ ℝ{v}, ℚ{L[Σₙuₙ]}	# Our measurement of v is truncated.
+# Try: ℝ augments ℚ with Σuₙ
+ℚ{uₙ: |uₙ|≤1/n² ← n≥N}, v=Σuₙ ↔ ℝ{v}, ℚ{L[Σₙuₙ]}	# Our measurement of v is truncated.
+# So I just need ℝ to work with L[Σuₙ].
 # Just a stab at the problem.
-# It would mean that for every ℝ{v}, there exists ℚ{uₙ} such that v=Σuₙ.
+# But for every Real v as commonly understood, does there exists ℚ{uₙ} such that v=Σuₙ where |uₙ|≤1/n² when n≥N?
 
 # ℝ has well defined + and *:
 uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙvₖ
@@ -381,7 +381,16 @@ pₙ†pₙ = Pₙ
 # You can check that there exist several series of rational terms that produce π.
 # http://en.wikipedia.org/wiki/Pi
 
-ℝ{π} ← π = Σ (-1)ⁿ/(2n+1) # http://en.wikipedia.org/wiki/Leibniz_formula_for_π
+ℝ{π} ← π = 4 Σ (-1)ⁿ/(2n+1) # http://en.wikipedia.org/wiki/Leibniz_formula_for_π
+# Proof:
+  π
+  4 Σ (-1)ⁿ/(2n+1)
+  4 Σ 1/(2(2n)+1) - 1/(2(2n+1)+1)	# pairing the alternating series
+  4 Σ 1/(4n+1) - 1/(4n+3)
+  4 Σ ((4n+3)-(4n+1))/((4n+1)(4n+3))
+  4 Σ 2/((4n+1)(4n+3))
+  Σ 8/((4n+1)(4n+3))
+    |8/((4n+1)(4n+3))| ≤ |8/(16n²)| ≤ |1/(2n²)| ≤ 1/n² ← n≥N	# Definition of ℝ in this paper
 
 # Derived values
 

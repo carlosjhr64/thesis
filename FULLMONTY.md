@@ -141,7 +141,7 @@ L[u+e[-N]] = u		# Obviously, I hope.
 # Just a stab at the problem.
 # It would mean that for every ℝ{v}, there exists ℚ{uₙ} such that v=Σuₙ.
 
-# ℝ has well defined + and *
+# ℝ has well defined + and *:
 uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙvₖ
 # Quick plausibility check:
   uᵒ := <1,2,3>, vᵒ := <4,5,6>	# Let...
@@ -166,6 +166,9 @@ uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙv�
   # But for anybody who's interested,
   # convergence of Σuₙ and Σvₙ is of course very important for ℝ{uᵒ,vᵒ}, but
   # notice that the definition of + and * seems to work even without convergence.
+
+# ℝ can be scaled by a rational:
+ℚ{v,uₙ}, ℝ{uᵒ:uᵒ=Σuₙ} → vuᵒ = vΣuₙ = Σvuₙ, ℝ{vuᵒ}
 
 # Factorial:
 
@@ -372,6 +375,12 @@ pₙ†pₙ = Pₙ
 
 ℝ{m}	# Mass
 ℝ{k}	# Spring contant 
+
+# What about π ?
+# You can check that there exist several series of rational terms that produce π.
+# http://en.wikipedia.org/wiki/Pi#Rapidly_convergent_series
+
+ℝ{π,1/π}	# There are series for both π and 1/π!
 
 # Derived values
 

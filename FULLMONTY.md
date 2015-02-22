@@ -137,6 +137,7 @@ L[u+e[-N]] = u		# Obviously, I hope.
 # How about this?
 
 # ℝ augments ℚ with Σuₙ
+# TODO: improve the convergence condition, is it |uₙ/uₙ+₁| < 1?
 ℚ{uₙ: |uₙ|≥2|uₙ+₁|}, v=Σuₙ ↔ ℝ{v}, ℚ{L[Σₙuₙ]}	# Our measurement of v is truncated.
 # Just a stab at the problem.
 # It would mean that for every ℝ{v}, there exists ℚ{uₙ} such that v=Σuₙ.
@@ -378,9 +379,9 @@ pₙ†pₙ = Pₙ
 
 # What about π ?
 # You can check that there exist several series of rational terms that produce π.
-# http://en.wikipedia.org/wiki/Pi#Rapidly_convergent_series
+# http://en.wikipedia.org/wiki/Pi
 
-ℝ{π,1/π}	# There are series for both π and 1/π!
+ℝ{π} ← π = Σ (-1)ⁿ/(2n+1) # http://en.wikipedia.org/wiki/Leibniz_formula_for_π
 
 # Derived values
 

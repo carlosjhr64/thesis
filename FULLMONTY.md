@@ -99,6 +99,18 @@ uᵛ ≡ u^v	# or "u**v"
 
 N = Σₙ 1
 
+# Complex numbers
+# TODO: Why did I think "full monty" was a good idea???
+
+ℂ{α,β}	# TODO: What is ℂ
+
+# Dirac Notation
+
+<αu|βu> ≡ ΣΣ (αuₙ)†(βuₘ)	# TODO: uₙ will later becomes orthogonal states
+<αu|βu> = α†<u|βu> = β<αu|u>
+<αu|βu>† = <βv|αu>
+<αu| + <βv| = <αu+βv|
+
 # N is very, very, big!
 # I want try to keep things simple and
 # avoid a full treatment of limits.
@@ -632,7 +644,7 @@ Hₙ+₁[y] = 2yHₙ[y] - 2nHₙ-₁[y]	# A.4b
 Yₙ[x] = AₙHₙ[y]e[-y²/2]
 
 # The State Function Y:
-Y[x] = Σ pₙ Yₙ[x]
+Y[x] = Σ pₙ Yₙ[x]		# TODO: or is it Σ Pₙ Yₙ[x] ?
 
 # The Problem To Be Solved
 
@@ -644,8 +656,8 @@ Subject to:   <Y|n><n|Eₙ|n><n|Y> = Eᵒ
 
 # Evaluation of <y>:
 
-<y> = <Y|y|Y>
-<y> = <Y|n><|y|m><m|Y>
+<y> = <Y|y|Y>				# 7.14a
+<y> = <Y|n><n|y|m><m|Y>			# 7.14b
 
 ... # TODO
 

@@ -49,7 +49,7 @@ u!u ≡ (u!)u	# Modifiers like subscripts, superscripts, factorial, complex conj
 # Integers
 
 ℕ ≡ {0,1,2,3,⋯}	# The set of Natural numbers.  Or the ordered type /^\d+$/.
-ℕ{N,n,m}	# N, M, n, and m are Natural numbers.
+ℕ{N,n,m,l}	# N, M, n, m, and l are Natural numbers.
 M≡N-1		# This just simplifies notation later on.
 
 # I should mention integers(ℤ) and rationals(ℚ).
@@ -110,6 +110,29 @@ N = Σₙ 1
 <αu|βu> = α†<u|βu> = β<αu|u>
 <αu|βu>† = <βv|αu>
 <αu| + <βv| = <αu+βv|
+
+<u> ≡ <u|u>
+
+<αu> = α†α<u>
+# Proof
+  <αu>
+  <αu|αu>
+  α†<u|αu>
+  α†α<u|u>
+  α†α<u>
+
+|n> ≡ |uₙ>	# where u is know from context
+
+<u|l> = uₗ†uₗ
+# Proof
+  <u|l>
+  <u|uₗ>
+  ΣΣ uₙ†uₗ
+  uₗ†uₗ		# uₙ are orthogonal, only the l term contributes
+
+<uₗ> ≡ uₗ†uₗ
+<u|l> = <uₗ>
+<α> = α†α
 
 # N is very, very, big!
 # I want try to keep things simple and
@@ -490,7 +513,7 @@ c₂ₙ=1-2s²ₙ	# Cosine double angle in terms of c and s.
 
 # Average Quantum number nᵒ
 
-<n> = <n|pₙ†npₙ|n> = Σ pₙ†npₙ = Σ nPₙ
+<n> = <n|pₙ†npₙ|m> = Σ npₙpₙ = Σ nPₙ	# only n=m terms contribute
 
 nᵒ ≡ L <n>
 nᵒ = L Σ nPₙ = L Σₙ nPₙ				# Remember that L truncates the series.
@@ -589,6 +612,11 @@ Proof:
   √[2ⁿ-ⁱ] / √[2ⁿn]		# n!/(n-1)! = n
   1 / √[2n]			# 2ⁿ/2ⁿ-ⁱ = 2
 
+Aₙ = Aₙ-₁/√[2n]
+Aₙ+₁ = Aₙ/√[2n]
+Aₙ = Aₙ+₁*√[2n]	
+Aₙ-₁ = Aₙ*√[2n]	
+
 # The Hermite polynomial:
 
 Hₙ[y] ≡ (-1)ⁿ e[y²] Dᵧⁿ e[-y²]	# A.3, this is "physicists' Hermite polynomials" in Wikipedia.
@@ -638,13 +666,21 @@ Hₙ+₁[y] = 2yHₙ[y] - 2nHₙ-₁[y]	# A.4b
   2y (-1)ⁿ e[y²] Dⁿ[e[-y²]] - 2n (-1)ⁿ-ⁱ e[y²] Dⁿ-ⁱ[e[-y²]])
   2yHₙ[y] - 2nHₙ-₁[y]
 
+yHₙ[y] = ½Hₙ+₁[y] + nHₙ-₁[y]
+# Proof
+  Hₙ+₁[y] = 2yHₙ[y] - 2nHₙ-₁[y]
+  Hₙ+₁[y] + 2nHₙ-₁[y] = 2yHₙ[y]
+  2yHₙ[y] = Hₙ+₁[y] + 2nHₙ-₁[y]
+  yHₙ[y] = ½Hₙ+₁[y] + nHₙ-₁[y]
+
 # Please accept the EigenState of the Simple Harmonic Oscillator Yₙ as given by Liboff's book in page 189.
 # The EigenState Yₙ:
 
+Yₙ[x] ≡ |n>
 Yₙ[x] = AₙHₙ[y]e[-y²/2]
 
 # The State Function Y:
-Y[x] = Σ pₙ Yₙ[x]		# TODO: or is it Σ Pₙ Yₙ[x] ?
+Y[x] = Σ pₙ Yₙ[x]		# TODO: or is it Σ Pₙ Yₙ[x] ? Check Σ pₙ = 1 ?
 
 # The Problem To Be Solved
 
@@ -658,6 +694,23 @@ Subject to:   <Y|n><n|Eₙ|n><n|Y> = Eᵒ
 
 <y> = <Y|y|Y>				# 7.14a
 <y> = <Y|n><n|y|m><m|Y>			# 7.14b
+
+<y> = ΣΣ (pₙYₙ)† y (pₘYₘ)
+<y> = ΣΣ (pₙYₙ)† pₘ yYₘ
+<y> = ΣΣ (pₙYₙ)† pₘ yAₘHₘ[y]e[-y²/2]
+<y> = ΣΣ (pₙYₙ)† pₘ Aₘ(yHₘ[y])e[-y²/2]
+<y> = ΣΣ (pₙYₙ)† pₘ Aₘ(½Hₘ+₁[y] + mHₘ-₁[y])e[-y²/2]		# substitute for yHₘ[y]
+<y> = ΣΣ (pₙYₙ)† pₘ(½AₘHₘ+₁[y]e[-y²/2] + mAₘHₘ-₁[y]e[-y²/2])	# distribute e[-y²/2]
+<y> = ΣΣ (pₙYₙ)† (½AₘHₘ+₁[y]e[-y²/2]pₘ + mAₘHₘ-₁[y]e[-y²/2]pₘ)	# distribute pₘ
+<y> = ΣΣ[(pₙYₙ)†½AₘHₘ+₁[y]e[-y²/2]pₘ] + ΣΣ[(pₙYₙ)†mAₘHₘ-₁[y]e[-y²/2]pₘ]	# Separate
+<y> = ΣΣ[(pₙYₙ)†½(Aₘ+₁*√[2m])Hₘ+₁[y]e[-y²/2]pₘ] + ΣΣ[(pₙYₙ)†m(Aₘ-₁/√[2m])Hₘ-₁[y]e[-y²/2]pₘ]
+<y> = ΣΣ[(pₙYₙ)†½√[2m]Aₘ+₁Hₘ+₁[y]e[-y²/2]pₘ] + ΣΣ[(pₙYₙ)†m(1/√[2m])Aₘ-₁Hₘ-₁[y]e[-y²/2]pₘ]
+<y> = ΣΣ[(pₙYₙ)†½√[2m]Yₘ+₁pₘ] + ΣΣ[(pₙYₙ)†m(1/√[2m])Yₘ-₁pₘ]
+# Note that the only time there's contribution from Yₙ†Yₗ is when n=l, given any l be it l=m+1 or l=m-1.
+<y> = ΣΣ[(pₙYₙ)†½√[2(n-1)]Yₙpₙ-₁] + ΣΣ[(pₙYₙ)†n(1/√[2(n+1)])Yₙpₙ+₁]
+<y> = ΣΣ[(pₙYₙ)†(½√[2(n-1)]pₙ-₁ + n(1/√[2(n+1)])pₙ+₁)Yₙ]	# join
+<y> = √½ΣΣ (pₙYₙ)† (√[n-1]pₙ-₁ + n(1/√[n+1])pₙ+₁)Yₙ
+# OK, I messed up somewhere, I think.  :-??
 
 ... # TODO
 

@@ -48,8 +48,8 @@ u!u ≡ (u!)u	# Modifiers like subscripts, superscripts, factorial, complex conj
 
 # Integers
 
-ℕ ≡ {0,1,2,3,⋯}	# The set of natural numbers.  Or the ordered type /^\d+$/.
-ℕ{N,n,m,k}	# N, M, n, m, and k are Integers.
+ℕ ≡ {0,1,2,3,⋯}	# The set of Natural numbers.  Or the ordered type /^\d+$/.
+ℕ{N,n,m}	# N, M, n, and m are Natural numbers.
 M≡N-1		# This just simplifies notation later on.
 
 # I should mention integers(ℤ) and rationals(ℚ).
@@ -62,7 +62,7 @@ M≡N-1		# This just simplifies notation later on.
 # Subcripts labels a specific form of a more general expression:
 
 uᵥ[⋯]≡u[v,⋯]
-uₙₖ≡u[n,k,⋯]
+uₙₘ≡u[n,m,⋯]
 
 # Superscripts normally are ℕ denoting repetition.
 
@@ -92,10 +92,10 @@ uᵛ ≡ u^v	# or "u**v"
 # Summation over indeces:
 
 Σuₙ ≡ u₀ + u₁ + u₂ + ⋯	# Non-halting series.
-ΣΣuₙₖ ≡ (u₀₀ + u₀₁ + u₀₂ + ⋯) + (u₁₀ + u₁₁ + u₀₂ + ⋯) + (u₂₀ + u₂₁ + u₂₂ + ⋯) + ⋯
+ΣΣuₙₘ ≡ (u₀₀ + u₀₁ + u₀₂ + ⋯) + (u₁₀ + u₁₁ + u₀₂ + ⋯) + (u₂₀ + u₂₁ + u₂₂ + ⋯) + ⋯
 
 Σₙuₙ ≡ Σ[0,M]{n|u[n]}	# NOTE!  Series indeces start with zero.
-ΣₙΣₖuₙₖ ≡ Σ[0,M]{n| Σ[0,M]{k| u[n,k]}}
+ΣₙΣₘuₙₘ ≡ Σ[0,M]{n| Σ[0,M]{m| u[n,m]}}
 
 N = Σₙ 1
 
@@ -148,7 +148,7 @@ L[u+e[-N]] = u		# Obviously, I hope.
 # But for every Real v as commonly understood, does there exists ℚ{uₙ} such that v=Σuₙ where |uₙ|≤1/n² when n≥N?
 
 # ℝ has well defined + and *:
-uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙvₖ
+uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙvₘ
 # Quick plausibility check:
   uᵒ := <1,2,3>, vᵒ := <4,5,6>	# Let...
   #
@@ -160,15 +160,15 @@ uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙv�
   uᵒ+vᵒ = Σuₙ+Σvₙ = Σ uₙ+vₙ = 21	# All self consistent
   #
   # Multiplication
-  uᵒvᵒ = ΣΣ uₙvₖ = ((1*4)+(1*5)+(1*6)) + ((2*4)+(2*5)+(2*6)) + ((3*4)+(3*5)+(3*6))
+  uᵒvᵒ = ΣΣ uₙvₘ = ((1*4)+(1*5)+(1*6)) + ((2*4)+(2*5)+(2*6)) + ((3*4)+(3*5)+(3*6))
                  = (4+5+6) + (8+10+12) + (12+15+18)
                  = 15 + 30 + 45
                  = 90
   uᵒvᵒ = Σuₙ Σvₙ = 6*15 = 90
-  uᵒvᵒ = Σuₙ Σvₙ = ΣΣ uₙvₖ = 90	# Again, consistent.
+  uᵒvᵒ = Σuₙ Σvₙ = ΣΣ uₙvₘ = 90	# Again, consistent.
   # Division we don't have in the same form.
   uᵒ/vᵒ = Σuₙ/Σvₙ
-  # Anyways, I only need ΣΣ uₙvₖ = Σuₙ Σvₙ.
+  # Anyways, I only need ΣΣ uₙvₘ = Σuₙ Σvₙ.
   # But for anybody who's interested,
   # convergence of Σuₙ and Σvₙ is of course very important for ℝ{uᵒ,vᵒ}, but
   # notice that the definition of + and * seems to work even without convergence.
@@ -281,16 +281,16 @@ n⇊n! = (n-2)!
 
 # Binomial coefficient
 # http://en.wikipedia.org/wiki/Binomial_coefficient
-# n choose k:
+# n choose m:
 
-(n\k) ≡ n!/(k!(n-k)!)
+(n\m) ≡ n!/(m!(n-m)!)
 
-(n\k) = 1/(n-ₖk!)
+(n\m) = 1/(n-ₘm!)
 # Proof
-  (n\k)
-  n!/(k!(n-k)!)
-  n!/(k!n!n-ₖ)
-  1/(k!n-ₖ)
+  (n\m)
+  n!/(m!(n-m)!)
+  n!/(m!n!n-ₘ)
+  1/(m!n-ₘ)
 
 # The Imaginary number i:
 
@@ -595,10 +595,10 @@ Dᵧ Hₙ[y] = 2nHₙ-₁[y]	# A.4a
   (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²] Dⁿ -2ye[-y²])	# Executing D
   # I don't remember ever coming across the General Leibniz rule
   # http://en.wikipedia.org/wiki/General_Leibniz_rule
-  # Let (n\k) mean n choose k.
-  (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²] Σ[0,n]{k| (n\k) Dᵏ[-2y] Dⁿ-ᵏe[-y²]})	# General Leibniz rule
+  # Let (n\m) mean n choose m.
+  (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²] Σ[0,n]{m| (n\m) Dᵐ[-2y] Dⁿ-ᵐe[-y²]})	# General Leibniz rule
   # D²[-2y]=0, Dⁿ[-2y]=0 if n>1.
-  (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²] Σ[0,1]{k| (n\k) Dᵏ[-2y] Dⁿ-ᵏe[-y²]})
+  (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²] Σ[0,1]{m| (n\m) Dᵐ[-2y] Dⁿ-ᵐe[-y²]})
   (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²]((n\0) D⁰[-2y] Dⁿ-⁰e[-y²] + (n\1) Dⁱ[-2y] Dⁿ-ⁱe[-y²])
   (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²](    1 D⁰[-2y] Dⁿ  e[-y²] +     n Dⁱ[-2y] Dⁿ-ⁱe[-y²])
   (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²](         -2y  Dⁿ  e[-y²] +     n   (-2)  Dⁿ-ⁱe[-y²])
@@ -616,7 +616,7 @@ Hₙ+₁[y] = 2yHₙ[y] - 2nHₙ-₁[y]	# A.4b
   (-1)ⁿ(-1) e[y²] Dⁿ[D e[-y²]]
   (-1)ⁿ(-1) e[y²] Dⁿ[(-2y) e[-y²]]
   (-1)ⁿ     e[y²] Dⁿ[  2y  e[-y²]]
-  (-1)ⁿ e[y²] Σₖ (n\k) Dᵏ[2y] Dⁿ-ᵏ[e[-y²]]	# General Leibniz rule
+  (-1)ⁿ e[y²] Σₘ (n\m) Dᵐ[2y] Dⁿ-ᵐ[e[-y²]]	# General Leibniz rule
   (-1)ⁿ e[y²]((n\0) D⁰[2y] Dⁿ-⁰[e[-y²]] + (n\1) Dⁱ[2y] Dⁿ-ⁱ[e[-y²]] + 0 ...)	# Dejavu
   (-1)ⁿ e[y²](    1   (2y) Dⁿ  [e[-y²]] +     n   (2)  Dⁿ-ⁱ[e[-y²]])
   (-1)ⁿ e[y²](2yDⁿ[e[-y²]] + 2nDⁿ-ⁱ[e[-y²]])
@@ -636,16 +636,16 @@ Y[x] = Σ pₙ Yₙ[x]
 
 # The Problem To Be Solved
 
-Minimize:     <Y|n><n|dxdp|k><k|Y>
+Minimize:     <Y|n><n|dxdp|m><m|Y>
 Subject to:   <Y|n><n|Eₙ|n><n|Y> = Eᵒ
 
 # TODO: I just jumped from the above to the calculation of d²x !?
-# Will say something like ΣΣuₙvₖ = (Σuₙ)(Σvₙ)
+# Will say something like ΣΣuₙvₘ = (Σuₙ)(Σvₙ)
 
 # Evaluation of <y>:
 
 <y> = <Y|y|Y>
-<y> = <Y|n><|y|k><k|Y>
+<y> = <Y|n><|y|m><m|Y>
 
 ... # TODO
 

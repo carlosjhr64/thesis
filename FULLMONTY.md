@@ -155,11 +155,11 @@ Examples:
 The Float::EPSILON for Ruby on my machine is about 2.22e-16.
 So "L" puts a limit on N on my machine of about 6.71e+7 (2.22e-16 ~ 1/(6.71e+7)^2).
 
-For now, if I want to avoid saying that a sum terminates, I'll just say Σ without the subscript.
+## ℝ
 Computationally ℚ may be the most we can actually do, but
 philosophically I still think we need ℝ.
 I'll just define ℝ in terms of the "measurement process".
-How about this?  Try: ℝ augments ℚ with Σuₙ:
+How about this... Try ℝ augments ℚ with Σuₙ:
 
     ℚ{uₙ: |uₙ|≤1/n² ← n≥N}, v=Σuₙ ↔ ℝ{v}, ℚ{L[Σₙuₙ]}	# Our measurement of v is truncated.
 

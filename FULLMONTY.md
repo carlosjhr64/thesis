@@ -30,7 +30,8 @@ Arbitrary symbols:
 
     uuu ≡ ((uu)u)     # This is just the usual way we think of expressions.
     u u u ≡ (u(uu))   # This is to disambiguate things like "Σ ab" which means "Σ[ab]", not "Σ[a]b".
-    u!u ≡ (u!)u       # Modifiers like subscripts, superscripts, factorial, complex conjugate, arrow operators.
+    # Modifiers like subscripts, superscripts, factorial, complex conjugate, arrow operators.
+    u!u ≡ (u!)u
 
 ## ℕ
 Natural (Counting) numbers:

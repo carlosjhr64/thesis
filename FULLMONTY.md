@@ -13,8 +13,10 @@ The initial part of this section goes over elementary material, but
 it's a good warmup and demonstrates my notation.
 
 > This section was not in the original thesis.
-> I switched  notation for the time development from `1ₙ` to `Φₙ`.
-> And for the Dirac notation, I switched from `<n]` to `<n|`.
+> I switched  notation 
+> for the time development from `1ₙ` to `Φₙ`,
+> for the Dirac notation from `<n]` to `<n|`, and
+> for the variance(uncertainty) operator from `d²` to `Δ²`.
 > Eventually I hope to have the entire work in one stream of "mathematical code".
 > Please use github to contact me to let me know of any errors (of any type).
 
@@ -41,7 +43,7 @@ Natural (Counting) numbers:
     M≡N-1             # This just simplifies notation later on.
 
 ## ℤ and ℚ
-See njwildberger's MathFoundations, https://www.youtube.com/user/njwildberger.
+See njwildberger's [MathFoundations](https://www.youtube.com/user/njwildberger).
 Integers and Rationals:
 
     ℤ ≡ ℕ - ℕ          # u-v, like 1-2 or just "-1".

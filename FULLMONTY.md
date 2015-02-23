@@ -58,7 +58,9 @@ Subcripts labels a specific form of a more general expression:
 
 ## Π
 
-    Π[1,m]{n|uₙ} ≡ u₀*u₁*u₂*⋯*uₙ-₁*uₙ*uₙ+₁*⋯*uₘ-₂*uₘ-₁*uₘ
+    # 1.upto(m).inject(1){|p,n|p*u[n]}
+    Π[1,0] ≡ 1
+    Π[1,m]{n|uₙ} ≡ u₁*u₂*⋯*uₙ-₁*uₙ*uₙ+₁*⋯*uₘ-₁*uₘ
     Π[1,2]{u} = u*u
     Π[1,3]{n|n} = 1*2*3
 
@@ -139,7 +141,7 @@ Let's try a simple limit function:
     Σₙ[1/N²] = 0.0625 ← N=16	# n=16; n.times.inject(0){|s,i|s+1.0/(n*n)}
     Σₙ[1/N²] = 0.03125 ← N=32	# n=32; n.times.inject(0){|s,i|s+1.0/(n*n)}
 
-As N doubles, the sum halves.
+As N doubles, the sum Σₙ[1/N²] halves.
 So Σₙ[1/N²] does approach zero as N goes on to infinity.
 Examples:
 

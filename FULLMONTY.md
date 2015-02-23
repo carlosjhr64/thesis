@@ -221,6 +221,7 @@ The Imaginary number i:
       (0²-1²,0*1+1*0)
       (-1,0)
     (u,v) = u+iv
+    i² = -1
 
 ## `<u>`
 Dirac notation:

@@ -643,15 +643,28 @@ The Normalization Constant, Aₙ:
     Aₙ ≡ 1/√[2ⁿn!√π]
     Aₙ/Aₙ-₁ = 1/√[2n]
     Proof:
+      (1/√[2ⁿn!√π]) / (1/√[2ⁿ-ⁱ(n-1)!√π])
+      (1/√[2ⁿn!√π]) * (√[2ⁿ-ⁱ(n-1)!√π])
       √[2ⁿ-ⁱ(n-1)!√π] / √[2ⁿn!√π]
       √[2ⁿ-ⁱ(n-1)!] / √[2ⁿn!]   # √π cancels
       √[2ⁿ-ⁱ] / √[2ⁿn]          # n!/(n-1)! = n
       1 / √[2n]                 # 2ⁿ/2ⁿ-ⁱ = 2
 
-    Aₙ = Aₙ-₁/√[2n]
-    Aₙ+₁ = Aₙ/√[2n]
-    Aₙ = Aₙ+₁*√[2n]	
-    Aₙ-₁ = Aₙ*√[2n]	
+    # Identities:
+    Aₙ   = Aₙ-₁ / √[2n]       # Given
+    Aₙ+₁ = Aₙ   / √[2(n+1)]   # Increment index n
+    Aₙ   = Aₙ+₁ * √[2(n+1)]   # Solve for Aₙ
+    Aₙ-₁ = Aₙ   * √[2n]	      # Decrement index n
+
+    # With Whatchamacallits
+    Aₙ   = Aₙ-₁ * √[½n-₁] = Aₙ-₁ * √[½n↓] = Aₙ-₁ * √[½n↓]
+    Aₙ+₁ = Aₙ   / √[2n₁]  = Aₙ   / √[2n↑] = Aₙ   / √[2n↑]
+    Aₙ   = Aₙ+₁ * √[2n₁]  = Aₙ+₁ * √[2n↑] = Aₙ+₁ * √[2n↑]
+    Aₙ-₁ = Aₙ   / √[½n-₁] = Aₙ   / √[½n↓] = Aₙ   / √[½n↓]
+
+    # Use these:
+    Aₙ+₁ = Aₙ/√[2n↑]
+    Aₙ-₁ = Aₙ/√[½n↓]
 
 ## Hₙ
 The Hermite polynomial:
@@ -709,6 +722,11 @@ The Hermite polynomial:
       Hₙ+₁[ξ] + 2nHₙ-₁[ξ] = 2ξHₙ[ξ]
       2ξHₙ[ξ] = Hₙ+₁[ξ] + 2nHₙ-₁[ξ]
       ξHₙ[ξ] = ½Hₙ+₁[ξ] + nHₙ-₁[ξ]
+
+
+    # Can also be written as:
+    Dᵧ Hₙ[ξ] = 2nHₙ-₁[ξ]           = Hₙ↓[ξ]/(½n↓)
+    ξHₙ[ξ]   = ½Hₙ+₁[ξ] + nHₙ-₁[ξ] = ½(Hₙ↑[ξ] + Hₙ↓[ξ]/(½n↓))
 
 ## Yₙ
 Please accept the EigenState of the Simple Harmonic Oscillator Yₙ as given by Liboff's book in page 189.

@@ -438,13 +438,15 @@ Measure of uncertainty (4.1b):
 
     Δ²u = <u²> - <u>²
 
-## P
+## Pₙ
 P is the [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution):
 
     Pₙ ≡ uⁿe[-u]/n!
     Σ Pₙ = 1
     0 ≤ Pₙ ≤ 1
     <u> = Σ Pₙuₙ
+
+## pₙ
 
     pₙ ≡ √[uⁿe[-u]/n!]
     pₙ†pₙ = Pₙ
@@ -631,6 +633,20 @@ Now we can describe the distribution in terms of the average quantum number:
     pₙpₙ-₂ = Pₙ/(nᵒ√n-₂)   # Using Whatchamacallit
     pₙpₙ-₂ = Pₙ/(nᵒ√n⇊)    # Using Arrow
 
+    p = √m↑p↑/√nᵒ
+    # Proof:
+      pp↑ = √nᵒP/√m↑
+      p↑ = √nᵒp/√m↑
+      √m↑p↑/√nᵒ = p
+      p = √m↑p↑/√nᵒ
+
+    p = √[nᵒm↓]p↓  
+    # Proof:
+      pp↓ = P/√[nᵒm↓]
+      p↓ = p/√[nᵒm↓]
+      √[nᵒm↓]p↓ = p
+      p = √[nᵒm↓]p↓
+
 ## ξ
 The non-dimensional displacement, ξ.
 
@@ -663,8 +679,7 @@ The Normalization Constant, Aₙ:
     Aₙ-₁ = Aₙ   / √[½n-₁] = Aₙ   / √[½n↓] = Aₙ   / √[½n↓]
 
     # Use these:
-    Aₙ+₁ = Aₙ/√[2n↑]
-    Aₙ-₁ = Aₙ/√[½n↓]
+    Aₘ = √[2m↑]Aₘ↑ = √[½m↓]Aₘ↓
 
 ## ℋₙ
 The Hermite polynomial:
@@ -706,11 +721,11 @@ The Hermite polynomial:
       (-1)ⁿ(-1) e[ξ²] Dⁿ[D e[-ξ²]]
       (-1)ⁿ(-1) e[ξ²] Dⁿ[(-2ξ) e[-ξ²]]
       (-1)ⁿ     e[ξ²] Dⁿ[  2ξ  e[-ξ²]]
-      (-1)ⁿ e[ξ²] Σₘ (ⁿₘ) Dᵐ[2ξ] Dⁿ-ᵐ[e[-ξ²]]                                    # General Leibniz rule
-      (-1)ⁿ e[ξ²]((ⁿ₀) D⁰[2ξ] Dⁿ-⁰[e[-ξ²]] + (ⁿ₁) Dⁱ[2ξ] Dⁿ-ⁱ[e[-ξ²]] + 0 ...)   # Dejavu
+      (-1)ⁿ e[ξ²] Σₘ (ⁿₘ) Dᵐ[2ξ] Dⁿ-ᵐ[e[-ξ²]]                                  # General Leibniz rule
+      (-1)ⁿ e[ξ²]((ⁿ₀) D⁰[2ξ] Dⁿ-⁰[e[-ξ²]] + (ⁿ₁) Dⁱ[2ξ] Dⁿ-ⁱ[e[-ξ²]] + 0 ⋯)   # Dejavu
       (-1)ⁿ e[ξ²](   1   (2ξ) Dⁿ  [e[-ξ²]] +    n   (2)  Dⁿ-ⁱ[e[-ξ²]])
       (-1)ⁿ e[ξ²](2ξDⁿ[e[-ξ²]] + 2nDⁿ-ⁱ[e[-ξ²]])
-      (-1)ⁿ e[ξ²] 2ξDⁿ[e[-ξ²]] + (-1)ⁿ e[ξ²] 2nDⁿ-ⁱ[e[-ξ²]])                     # Distribute
+      (-1)ⁿ e[ξ²] 2ξDⁿ[e[-ξ²]] + (-1)ⁿ e[ξ²] 2nDⁿ-ⁱ[e[-ξ²]])                   # Distribute
       2ξ (-1)ⁿ e[ξ²] Dⁿ[e[-ξ²]] + 2n (-1)ⁿ e[ξ²] Dⁿ-ⁱ[e[-ξ²]])
       2ξ (-1)ⁿ e[ξ²] Dⁿ[e[-ξ²]] + 2n (-1)(-1)ⁿ-ⁱ e[ξ²] Dⁿ-ⁱ[e[-ξ²]])
       2ξ (-1)ⁿ e[ξ²] Dⁿ[e[-ξ²]] - 2n (-1)ⁿ-ⁱ e[ξ²] Dⁿ-ⁱ[e[-ξ²]])
@@ -747,6 +762,17 @@ The Problem To Be Solved
 TODO: I just jumped from the above to the calculation of Δ²x !?
 Will say something like ΣΣuₙvₘ = (Σuₙ)(Σvₙ)
 
+## ξΨₘ
+Motivation: I will be calculating <Ψ|ξ|Ψ> later.
+
+    ξΨₘ = ½Aₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
+    # Proof:
+      ξΨₘ
+      ξAₘℋₘ[ξ]e[-ξ²/2]
+      Aₘ ξℋₘ[ξ]e[-ξ²/2]
+      Aₘ ½(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
+      ½Aₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
+
 ## &lt;ξ&gt;
 Evaluation of `<ξ>`:
 
@@ -754,21 +780,22 @@ Evaluation of `<ξ>`:
     <ξ> = <Ψ|n><n|ξ|m><m|Ψ>   # 7.14b
 
     <ξ> = ΣΣ (pₙΨₙ)† ξ (pₘΨₘ)
-    <ξ> = ΣΣ (pₙΨₙ)† pₘ ξΨₘ
-    <ξ> = ΣΣ (pₙΨₙ)† pₘ ξAₘℋₘ[ξ]e[-ξ²/2]
-    <ξ> = ΣΣ (pₙΨₙ)† pₘ Aₘ(ξℋₘ[ξ])e[-ξ²/2]
-    <ξ> = ΣΣ (pₙΨₙ)† pₘ Aₘ(½ℋₘ+₁[ξ] + mℋₘ-₁[ξ])e[-ξ²/2]                       # substitute for ξℋₘ[ξ]
-    <ξ> = ΣΣ (pₙΨₙ)† pₘ(½Aₘℋₘ+₁[ξ]e[-ξ²/2] + mAₘℋₘ-₁[ξ]e[-ξ²/2])              # distribute e[-ξ²/2]
-    <ξ> = ΣΣ (pₙΨₙ)† (½Aₘℋₘ+₁[ξ]e[-ξ²/2]pₘ + mAₘℋₘ-₁[ξ]e[-ξ²/2]pₘ)            # distribute pₘ
-    <ξ> = ΣΣ[(pₙΨₙ)†½Aₘℋₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙΨₙ)†mAₘℋₘ-₁[ξ]e[-ξ²/2]pₘ]   # Separate
-    <ξ> = ΣΣ[(pₙΨₙ)†½(Aₘ+₁*√[2m])ℋₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙΨₙ)†m(Aₘ-₁/√[2m])ℋₘ-₁[ξ]e[-ξ²/2]pₘ]
-    <ξ> = ΣΣ[(pₙΨₙ)†½√[2m]Aₘ+₁ℋₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙΨₙ)†m(1/√[2m])Aₘ-₁ℋₘ-₁[ξ]e[-ξ²/2]pₘ]
-    <ξ> = ΣΣ[(pₙΨₙ)†½√[2m]Ψₘ+₁pₘ] + ΣΣ[(pₙΨₙ)†m(1/√[2m])Ψₘ-₁pₘ]
-    #Note that the only time there's contribution from Ψₙ†Ψₗ is when n=l, given any l be it l=m+1 or l=m-1.
-    <ξ> = ΣΣ[(pₙΨₙ)†½√[2(n-1)]Ψₙpₙ-₁] + ΣΣ[(pₙΨₙ)†n(1/√[2(n+1)])Ψₙpₙ+₁]
-    <ξ> = ΣΣ[(pₙΨₙ)†(½√[2(n-1)]pₙ-₁ + n(1/√[2(n+1)])pₙ+₁)Ψₙ]                  # join
-    <ξ> = √½ΣΣ (pₙΨₙ)† (√[n-1]pₙ-₁ + n(1/√[n+1])pₙ+₁)Ψₙ
-    # OK, I messed up somewhere, I think.  :-??
+    <ξ> = ΣΣ Ψₙ†pₙ pₘξΨₘ                                          # rearrange, p is real.
+    <ξ> = ΣΣ Ψₙ†pₙ pₘ ½Aₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))                  # substitute for ξΨₘ
+    <ξ> = ΣΣ Ψₙ†pₙ ½Aₘ(pₘℋₘ↑[ξ] + pₘℋₘ↓[ξ]/(½m↓))                 # distribute pₘ
+    <ξ> = ΣΣ[pₙΨₙ†pₙ ½Aₘpₘℋₘ↑[ξ]] + ΣΣ[Ψₙ†pₙ ½Aₘpₘℋₘ↓[ξ]/(½m↓)]   # separate
+    <ξ> = ½ΣΣ[Ψₙ†pₙ pₘ Aₘℋₘ↑[ξ]] + ½ΣΣ[Ψₙ†pₙ pₘ Aₘℋₘ↓[ξ]/(½m↓)]   # take out ½
+    # get the m's to match
+    <ξ> = ½ΣΣ[Ψₙ†pₙ √m↑pₘ↑/√nᵒ √[2m↑]Aₘ↑ℋₘ↑[ξ]] + ½ΣΣ[Ψₙ†pₙ √[nᵒm↓]pₘ↓ √[½m↓]Aₘ↓ℋₘ↓[ξ]/(½m↓)]
+    <ξ> = 1/√[2nᵒ]ΣΣ[Ψₙ†pₙ m↑pₘ↑Aₘ↑ℋₘ↑[ξ]] + √[½nᵒ]ΣΣ[Ψₙ†pₙ pₘ↓Aₘ↓ℋₘ↓[ξ]]
+    <ξ> = 1/√[2nᵒ]ΣΣ[Ψₙ†pₙ m↑ pₘ↑Ψₘ↑] + √[½nᵒ]ΣΣ[Ψₙ†pₙ pₘ↓Ψₘ↓]
+    <ξ> = 1/√[2nᵒ]Σ[Ψₙ†pₙ n pₙΨₙ] + √[½nᵒ]Σ[Ψₙ†pₙpₙΨₙ]           # Orthogonal states
+    <ξ> = 1/√[2nᵒ]ΣΣ[nPₙ] + √[½nᵒ]Σ[Pₙ]                          # Ψₙ†Ψₙ=1, pₙpₙ=Pₙ
+    <ξ> = 1/√[2nᵒ]nᵒ + √[½nᵒ]
+    <ξ> = √[½nᵒ] + √[½nᵒ]
+    <ξ> = 2√[½nᵒ]
+    <ξ> = √[2nᵒ]
+    <ξ>² = 2nᵒ   # OK, need time development
 
     ... # TODO
 

@@ -728,21 +728,21 @@ The Hermite polynomial:
     Dᵧ Hₙ[ξ] = 2nHₙ-₁[ξ]           = Hₙ↓[ξ]/(½n↓)
     ξHₙ[ξ]   = ½Hₙ+₁[ξ] + nHₙ-₁[ξ] = ½(Hₙ↑[ξ] + Hₙ↓[ξ]/(½n↓))
 
-## Yₙ
-Please accept the EigenState of the Simple Harmonic Oscillator Yₙ as given by Liboff's book in page 189.
-The EigenState Yₙ:
+## Ψₙ
+Please accept the EigenState of the Simple Harmonic Oscillator Ψₙ as given by Liboff's book in page 189.
+The EigenState Ψₙ:
 
-    Yₙ[x] ≡ |n>
-    Yₙ[x] = AₙHₙ[ξ]e[-ξ²/2]
+    Ψₙ[x] ≡ |n>
+    Ψₙ[x] = AₙHₙ[ξ]e[-ξ²/2]
 
-The State Function Y:
+The State Function Ψ:
 
-    Y[x] = Σ pₙ Yₙ[x]   # TODO: or is it Σ Pₙ Yₙ[x] ? Check Σ pₙ = 1 ?
+    Ψ[x] = Σ pₙ Ψₙ[x]   # TODO: or is it Σ Pₙ Ψₙ[x] ? Check Σ pₙ = 1 ?
 
 The Problem To Be Solved
 
-    Minimize:     <Y|n><n|ΔxΔp|m><m|Y>
-    Subject to:   <Y|n><n|Eₙ|n><n|Y> = Eᵒ
+    Minimize:     <Ψ|n><n|ΔxΔp|m><m|Ψ>
+    Subject to:   <Ψ|n><n|Eₙ|n><n|Ψ> = Eᵒ
 
 TODO: I just jumped from the above to the calculation of Δ²x !?
 Will say something like ΣΣuₙvₘ = (Σuₙ)(Σvₙ)
@@ -750,24 +750,24 @@ Will say something like ΣΣuₙvₘ = (Σuₙ)(Σvₙ)
 ## &lt;ξ&gt;
 Evaluation of `<ξ>`:
 
-    <ξ> = <Y|ξ|Y>             # 7.14a
-    <ξ> = <Y|n><n|ξ|m><m|Y>   # 7.14b
+    <ξ> = <Ψ|ξ|Ψ>             # 7.14a
+    <ξ> = <Ψ|n><n|ξ|m><m|Ψ>   # 7.14b
 
-    <ξ> = ΣΣ (pₙYₙ)† ξ (pₘYₘ)
-    <ξ> = ΣΣ (pₙYₙ)† pₘ ξYₘ
-    <ξ> = ΣΣ (pₙYₙ)† pₘ ξAₘHₘ[ξ]e[-ξ²/2]
-    <ξ> = ΣΣ (pₙYₙ)† pₘ Aₘ(ξHₘ[ξ])e[-ξ²/2]
-    <ξ> = ΣΣ (pₙYₙ)† pₘ Aₘ(½Hₘ+₁[ξ] + mHₘ-₁[ξ])e[-ξ²/2]                       # substitute for ξHₘ[ξ]
-    <ξ> = ΣΣ (pₙYₙ)† pₘ(½AₘHₘ+₁[ξ]e[-ξ²/2] + mAₘHₘ-₁[ξ]e[-ξ²/2])              # distribute e[-ξ²/2]
-    <ξ> = ΣΣ (pₙYₙ)† (½AₘHₘ+₁[ξ]e[-ξ²/2]pₘ + mAₘHₘ-₁[ξ]e[-ξ²/2]pₘ)            # distribute pₘ
-    <ξ> = ΣΣ[(pₙYₙ)†½AₘHₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙYₙ)†mAₘHₘ-₁[ξ]e[-ξ²/2]pₘ]   # Separate
-    <ξ> = ΣΣ[(pₙYₙ)†½(Aₘ+₁*√[2m])Hₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙYₙ)†m(Aₘ-₁/√[2m])Hₘ-₁[ξ]e[-ξ²/2]pₘ]
-    <ξ> = ΣΣ[(pₙYₙ)†½√[2m]Aₘ+₁Hₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙYₙ)†m(1/√[2m])Aₘ-₁Hₘ-₁[ξ]e[-ξ²/2]pₘ]
-    <ξ> = ΣΣ[(pₙYₙ)†½√[2m]Yₘ+₁pₘ] + ΣΣ[(pₙYₙ)†m(1/√[2m])Yₘ-₁pₘ]
-    #Note that the only time there's contribution from Yₙ†Yₗ is when n=l, given any l be it l=m+1 or l=m-1.
-    <ξ> = ΣΣ[(pₙYₙ)†½√[2(n-1)]Yₙpₙ-₁] + ΣΣ[(pₙYₙ)†n(1/√[2(n+1)])Yₙpₙ+₁]
-    <ξ> = ΣΣ[(pₙYₙ)†(½√[2(n-1)]pₙ-₁ + n(1/√[2(n+1)])pₙ+₁)Yₙ]                  # join
-    <ξ> = √½ΣΣ (pₙYₙ)† (√[n-1]pₙ-₁ + n(1/√[n+1])pₙ+₁)Yₙ
+    <ξ> = ΣΣ (pₙΨₙ)† ξ (pₘΨₘ)
+    <ξ> = ΣΣ (pₙΨₙ)† pₘ ξΨₘ
+    <ξ> = ΣΣ (pₙΨₙ)† pₘ ξAₘHₘ[ξ]e[-ξ²/2]
+    <ξ> = ΣΣ (pₙΨₙ)† pₘ Aₘ(ξHₘ[ξ])e[-ξ²/2]
+    <ξ> = ΣΣ (pₙΨₙ)† pₘ Aₘ(½Hₘ+₁[ξ] + mHₘ-₁[ξ])e[-ξ²/2]                       # substitute for ξHₘ[ξ]
+    <ξ> = ΣΣ (pₙΨₙ)† pₘ(½AₘHₘ+₁[ξ]e[-ξ²/2] + mAₘHₘ-₁[ξ]e[-ξ²/2])              # distribute e[-ξ²/2]
+    <ξ> = ΣΣ (pₙΨₙ)† (½AₘHₘ+₁[ξ]e[-ξ²/2]pₘ + mAₘHₘ-₁[ξ]e[-ξ²/2]pₘ)            # distribute pₘ
+    <ξ> = ΣΣ[(pₙΨₙ)†½AₘHₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙΨₙ)†mAₘHₘ-₁[ξ]e[-ξ²/2]pₘ]   # Separate
+    <ξ> = ΣΣ[(pₙΨₙ)†½(Aₘ+₁*√[2m])Hₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙΨₙ)†m(Aₘ-₁/√[2m])Hₘ-₁[ξ]e[-ξ²/2]pₘ]
+    <ξ> = ΣΣ[(pₙΨₙ)†½√[2m]Aₘ+₁Hₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙΨₙ)†m(1/√[2m])Aₘ-₁Hₘ-₁[ξ]e[-ξ²/2]pₘ]
+    <ξ> = ΣΣ[(pₙΨₙ)†½√[2m]Ψₘ+₁pₘ] + ΣΣ[(pₙΨₙ)†m(1/√[2m])Ψₘ-₁pₘ]
+    #Note that the only time there's contribution from Ψₙ†Ψₗ is when n=l, given any l be it l=m+1 or l=m-1.
+    <ξ> = ΣΣ[(pₙΨₙ)†½√[2(n-1)]Ψₙpₙ-₁] + ΣΣ[(pₙΨₙ)†n(1/√[2(n+1)])Ψₙpₙ+₁]
+    <ξ> = ΣΣ[(pₙΨₙ)†(½√[2(n-1)]pₙ-₁ + n(1/√[2(n+1)])pₙ+₁)Ψₙ]                  # join
+    <ξ> = √½ΣΣ (pₙΨₙ)† (√[n-1]pₙ-₁ + n(1/√[n+1])pₙ+₁)Ψₙ
     # OK, I messed up somewhere, I think.  :-??
 
     ... # TODO

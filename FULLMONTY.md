@@ -637,6 +637,7 @@ The non-dimensional displacement, ξ.
     ξ² ≡ mω/ħ x²   # A.1b
     x² = ħ/(mω) ξ²
 
+## Aₙ
 The Normalization Constant, Aₙ:
 
     Aₙ ≡ 1/√[2ⁿn!√π]
@@ -652,6 +653,7 @@ The Normalization Constant, Aₙ:
     Aₙ = Aₙ+₁*√[2n]	
     Aₙ-₁ = Aₙ*√[2n]	
 
+## Hₙ
 The Hermite polynomial:
 
     Hₙ[ξ] ≡ (-1)ⁿ e[ξ²] Dᵧⁿ e[-ξ²]   # A.3, this is "physicists' Hermite polynomials" in Wikipedia.
@@ -708,6 +710,7 @@ The Hermite polynomial:
       2ξHₙ[ξ] = Hₙ+₁[ξ] + 2nHₙ-₁[ξ]
       ξHₙ[ξ] = ½Hₙ+₁[ξ] + nHₙ-₁[ξ]
 
+## Yₙ
 Please accept the EigenState of the Simple Harmonic Oscillator Yₙ as given by Liboff's book in page 189.
 The EigenState Yₙ:
 
@@ -726,7 +729,7 @@ The Problem To Be Solved
 TODO: I just jumped from the above to the calculation of Δ²x !?
 Will say something like ΣΣuₙvₘ = (Σuₙ)(Σvₙ)
 
-## &lg;ξ&gt;
+## &lt;ξ&gt;
 Evaluation of `<ξ>`:
 
     <ξ> = <Y|ξ|Y>             # 7.14a
@@ -814,6 +817,7 @@ TODO: `<ξ²>`:
     <ξ²> = ½ + 2nᵒc²₁                                                        # Pythagoras
     <ξ²> = ½ + 2nᵒ:Cosine²[nwt]
 
+## Results
 7.5 Results:
 
     Δ²ξ = <ξ²> - <ξ>²

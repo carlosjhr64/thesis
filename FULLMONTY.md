@@ -1,8 +1,6 @@
-### [CONTENTS](CONTENTS.md)
+[CONTENTS](CONTENTS.md)
 
 # The Full Monty
-
-
 Here I write explicitly all my work, as if writting computer code.
 Consider all symbols to have global scope.
 Each symbol should only be defined once, except `u` and `v` which will be used as temporary general variables.
@@ -13,8 +11,10 @@ The initial part of this section goes over elementary material, but
 it's a good warmup and demonstrates my notation.
 
 > This section was not in the original thesis.
-> I switched  notation 
+> Because I have UTF-8 available, I'll try to better match the expected notation.
+> I've switched  notation 
 > for the time development from `1ₙ` to `Φₙ`,
+> for the non-dimensional displacement from `y` to `ξ`,
 > for the Dirac notation from `<n]` to `<n|`, and
 > for the variance(uncertainty) operator from `d²` to `Δ²`.
 > Eventually I hope to have the entire work in one stream of "mathematical code".
@@ -58,7 +58,7 @@ Subcripts labels a specific form of a more general expression:
 
 ## Π
 
-    # 1.upto(m).inject(1){|p,n|p*u[n]}
+    # 1.upto(m).inject(1){|v,n|v*u[n]}
     Π[1,0] ≡ 1
     Π[1,m]{n|uₙ} ≡ u₁*u₂*⋯*uₙ-₁*uₙ*uₙ+₁*⋯*uₘ-₁*uₘ
     Π[1,2]{u} = u*u
@@ -117,37 +117,43 @@ Arrow Operators on subscripts:
 
     Σᵥu↑ ≡ Σᵥuᵥ+₁   # Where context allows, subscript not needed.
 
+    u↥ ≡ u₀↑   # Step up from "ground", just to make notation "pretty" later on.
+    u↥ = u₁
+
+    u↧ ≡ u₀↓   # Step down from "ground".
+    u↧ = u-₁
+
 ## Limit function
 N is very, very, big!
 I want try to keep things simple and
 avoid a full treatment of limits.
 Let's try a simple limit function:
 
+    L Σuₙ ≡ L Σₙuₙ               # L truncates the series to down to N elements.
     L[u+v] ≡ L[u] + L[v]
-    L Σuₙ ≡ L Σₙuₙ
-    L[u] ≡ (|u| ≥ 1/N²)? u : 0
+    L[u] ≡ (|u| ≥ 1/N²)? u : 0   # L ignores very small numbers.
 
     L Σₙ[1/N] = Σₙ L[1/N]
-          = Σₙ[1/N]
-          = 1		# Notice that this would have been 0 had I set the threshold to ≥ 1/N.
+      = Σₙ[1/N]
+      = 1   # Notice that this would have been 0 had I set the threshold to ≥ 1/N.
 
     L Σₙ[1/N²] = Σₙ L[1/N²]
-           = Σₙ 0
-           = 0		# Is this acceptable?
+      = Σₙ 0
+      = 0   # Is this acceptable?
 
-    Σₙ[1/N²] = 0.5 ← N=2		# n=2; n.times.inject(0){|s,i|s+1.0/(n*n)}
-    Σₙ[1/N²] = 0.25 ← N=4		# n=4; n.times.inject(0){|s,i|s+1.0/(n*n)}
-    Σₙ[1/N²] = 0.125 ← N=8		# n=8; n.times.inject(0){|s,i|s+1.0/(n*n)}
-    Σₙ[1/N²] = 0.0625 ← N=16	# n=16; n.times.inject(0){|s,i|s+1.0/(n*n)}
-    Σₙ[1/N²] = 0.03125 ← N=32	# n=32; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    Σₙ[1/N²] = 0.5 ← N=2        # n=2; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    Σₙ[1/N²] = 0.25 ← N=4       # n=4; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    Σₙ[1/N²] = 0.125 ← N=8      # n=8; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    Σₙ[1/N²] = 0.0625 ← N=16    # n=16; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    Σₙ[1/N²] = 0.03125 ← N=32   # n=32; n.times.inject(0){|s,i|s+1.0/(n*n)}
 
 As N doubles, the sum Σₙ[1/N²] halves.
 So Σₙ[1/N²] does approach zero as N goes on to infinity.
-Examples:
+For the following examples, I use fatorial N! and exponential function e[N]:
 
     L[u+1/N²] = u
     L[u+e[N]/N!] = u    # Try N≥10.
-    L[u+(v^N)/N!] = u   # Exactly at what point this is true depends on v, but at some point it's true.
+    L[u+(v^N)/N!] = u   # N depends on v, but for some N it's true.
     L[u+e[-N]] = u      # Obviously, I hope.
 
     |u| ≤ 1/N, |v| ≤ 1/N  ⇒  |uv| ≤ 1/N², L[uv]=0
@@ -156,51 +162,48 @@ The Float::EPSILON for Ruby on my machine is about 2.22e-16.
 So "L" puts a limit on N on my machine of about 6.71e+7 (2.22e-16 ~ 1/(6.71e+7)^2).
 
 ## ℝ
-Computationally ℚ may be the most we can actually do, but
-philosophically I still think we need ℝ.
-I'll just define ℝ in terms of the "measurement process".
-How about this... Try ℝ augments ℚ with Σuₙ:
+For the purpose of this "paper", ℝ just needs to include the series I'm working with.
+That is ℝ augments ℚ with Σuₙ as follows:
 
-    ℚ{uₙ: |uₙ|≤1/n² ← n≥N}, v=Σuₙ ↔ ℝ{v}, ℚ{L[Σₙuₙ]}	# Our measurement of v is truncated.
+    ℚ{uₙ: |uₙ|≤1/n² ← n≥N}, v=Σuₙ ↔ ℝ{v}, ℚ{L[Σₙuₙ]}
 
 So I just need ℝ to work with L[Σuₙ].
-Just a stab at the problem.
-But for every Real v as commonly understood, does there exists ℚ{uₙ} such that v=Σuₙ where |uₙ|≤1/n² when n≥N?
-
 ℝ has well defined `+` and `*`:
 
     uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙvₘ
 
-Quick plausibility check:
-
-    uᵒ := <1,2,3>, vᵒ := <4,5,6>	# Let...
-
-    # Addition
-    uᵒ+vᵒ = Σ uₙ+vₙ = (1+4) + (2+5) + (3+6) = 5 + 7 + 9 = 21
-    uᵒ = Σuₙ = 1 + 2 + 3 = 6
-    vᵒ = Σvₙ = 4 + 5 + 6 = 15
-    Σuₙ + Σvₙ = 6 + 15 = 21
-    uᵒ+vᵒ = Σuₙ+Σvₙ = Σ uₙ+vₙ = 21	# All self consistent
-
-    # Multiplication
-    uᵒvᵒ = ΣΣ uₙvₘ = ((1*4)+(1*5)+(1*6)) + ((2*4)+(2*5)+(2*6)) + ((3*4)+(3*5)+(3*6))
-                 = (4+5+6) + (8+10+12) + (12+15+18)
-                 = 15 + 30 + 45
-                 = 90
-    uᵒvᵒ = Σuₙ Σvₙ = 6*15 = 90
-    uᵒvᵒ = Σuₙ Σvₙ = ΣΣ uₙvₘ = 90	# Again, consistent.
-
-    # Division we don't have in the same form.
-    uᵒ/vᵒ = Σuₙ/Σvₙ
-
-Anyways, I only need ΣΣ uₙvₘ = Σuₙ Σvₙ.
-But for anybody who's interested,
-convergence of Σuₙ and Σvₙ is of course very important for ℝ{uᵒ,vᵒ}, but
-notice that the definition of + and * seems to work even without convergence.
-
 ℝ can be scaled by a rational:
 
     ℚ{v,uₙ}, ℝ{uᵒ:uᵒ=Σuₙ} → vuᵒ = vΣuₙ = Σvuₙ, ℝ{vuᵒ}
+
+Quick plausibility check:
+
+    u=[1,2,3],v=[4,5,6] →
+      uᵒ = Σuₙ = 1 + 2 + 3 = 6
+      vᵒ = Σvₙ = 4 + 5 + 6 = 15
+      # Addition
+      uᵒ+vᵒ = Σ uₙ+vₙ = (1+4) + (2+5) + (3+6) = 5 + 7 + 9 = 21
+      Σuₙ + Σvₙ = 6 + 15 = 21
+      uᵒ+vᵒ = Σuₙ+Σvₙ = Σ uₙ+vₙ = 21   # All self consistent
+      # Multiplication
+      uᵒvᵒ = ΣΣ uₙvₘ = ((1*4)+(1*5)+(1*6)) + ((2*4)+(2*5)+(2*6)) + ((3*4)+(3*5)+(3*6))
+        = (4+5+6) + (8+10+12) + (12+15+18)
+        = 15 + 30 + 45
+        = 90
+      uᵒvᵒ = Σuₙ Σvₙ = 6*15 = 90
+      uᵒvᵒ = Σuₙ Σvₙ = ΣΣ uₙvₘ = 90   # Again, consistent.
+      # Division we don't have in the same form.
+      uᵒ/vᵒ = Σuₙ/Σvₙ
+
+    Σuₙ Σvₘ = ΣΣ uₙvₘ
+    # The rigorous proof:
+      Σuₙ Σvₘ
+      (Σuₙ)*(Σvₘ)   # Just explicitly showing what I mean.
+      Σ[uₙ*(Σvₘ)]   # Treat the v series like a number and take it into the u series.
+      Σ[Σuₙvₘ)]     # uₙ is just a constant rational and can go into the v series.
+      ΣΣ[uₙvₘ]      # Well... maybe it was obvious to begin with.
+
+I'll be using ΣΣ[uₙvₘ]=Σ[uₙ]Σ[vₙ] later.
 
 ## ℂ
 Complex numbers:
@@ -223,7 +226,14 @@ The Imaginary number i:
     (u,v) = u+iv
     i² = -1
 
-## `<u>`
+## †
+Complex conjugation:
+
+    (u,v)†  ≡ (u,-v)                 # Think † means adjoin? Go to the beginning where I define ≡.
+    (u+iv)† = u-iv
+    e[i]† = (C+iS)† = C-iS = e[-i]   # what it does to e
+
+## &lt;u&gt;
 Dirac notation:
 
     <αu|βu> ≡ ΣΣ (αuₙ)†(βuₘ)
@@ -336,11 +346,11 @@ Whatchamacallit with Factorial:
 
     nᵥn! = (n+v)!
 
-    n₃n! = (n+1)(n+2)(n+3)n! = (n+3)!	# OK
+    n₃n! = (n+1)(n+2)(n+3)n! = (n+3)!   # OK
 
     n-₃n! = n!/(n(n+1)(n+2))
     n-₃n! = (n-3)!(n-2)(n-1)n/(n(n-1)(n-2))
-    n-₃n! = (n-3)!	# OK
+    n-₃n! = (n-3)!   # OK
 
     n↑n! = (n+1)!
     n↓n! = (n-1)!
@@ -348,15 +358,15 @@ Whatchamacallit with Factorial:
     n⇈n! = (n+2)!
     n⇊n! = (n-2)!
 
-## (n\m)
+## (ⁿₘ)
 [Binomial coefficient](http://en.wikipedia.org/wiki/Binomial_coefficient),
 n choose m:
 
-    (n\m) ≡ n!/(m!(n-m)!)
+    (ⁿₘ) ≡ n!/(m!(n-m)!)
 
-    (n\m) = 1/(n-ₘm!)
+    (ⁿₘ) = 1/(n-ₘm!)
     # Proof
-      (n\m)
+      (ⁿₘ)
       n!/(m!(n-m)!)
       n!/(m!n!n-ₘ)
       1/(m!n-ₘ)
@@ -408,12 +418,6 @@ Known properties of e:
     e[iu] = C[u]+iS[u]
     e[-iu] = C[u]-iS[u]
     e[0] = 1
-
-## †
-Complex conjugation:
-
-    (u+iv)† ≡ u-iv
-    e[i]† = (C+iS)† = C-iS = e[-i]	# what it does to e
 
 ## Δ²
 Measure of uncertainty defined (4.1a):
@@ -474,10 +478,10 @@ of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi):
 
 ## Derived values
 
-  ω² ≡ k/m	# Angular frequency
-  ω = √[k/m]
+    ω² ≡ k/m	# Angular frequency
+    ω = √[k/m]
 
-  f ≡ ω/(2π)	# Frequency
+    f ≡ ω/(2π)	# Frequency
 
 TODO: need to explain ħ.
 
@@ -627,11 +631,11 @@ Now we can describe the distribution in terms of the average quantum number:
     pₙpₙ-₂ = Pₙ/(nᵒ√n-₂)   # Using Whatchamacallit
     pₙpₙ-₂ = Pₙ/(nᵒ√n⇊)    # Using Arrow
 
-The non-dimensional displacement, y.
-Liboff in his book uses ξ instead of y:
+## ξ
+The non-dimensional displacement, ξ.
 
-    y² ≡ mω/ħ x²   # A.1b
-    x² = ħ/(mω) y²
+    ξ² ≡ mω/ħ x²   # A.1b
+    x² = ħ/(mω) ξ²
 
 The Normalization Constant, Aₙ:
 
@@ -650,65 +654,65 @@ The Normalization Constant, Aₙ:
 
 The Hermite polynomial:
 
-    Hₙ[y] ≡ (-1)ⁿ e[y²] Dᵧⁿ e[-y²]   # A.3, this is "physicists' Hermite polynomials" in Wikipedia.
+    Hₙ[ξ] ≡ (-1)ⁿ e[ξ²] Dᵧⁿ e[-ξ²]   # A.3, this is "physicists' Hermite polynomials" in Wikipedia.
 
-    Dᵧ Hₙ[y] = 2nHₙ-₁[y]   # A.4a
+    Dᵧ Hₙ[ξ] = 2nHₙ-₁[ξ]   # A.4a
     # Proof:
       # It's actually a well known property of H.
       # In my notes I review a proof by genetating function... unreadable to me now.
       # But found this elegant proof online,
       # http://math.stackexchange.com/questions/581897/hermite-polynomials-recurrence-relation:
-      D Hₙ[y]                                           # Given
-      D[(-1)ⁿ e[y²] Dⁿ e[-y²]]                          # Substitution, definition of H
-      (-1)ⁿ D[e[y²] Dⁿ e[-y²]]                          # Take out the constant
-      (-1)ⁿ (D[e[y²]] Dⁿ e[-y²] + e[y²] D[Dⁿ e[-y²]])   # Product rule
-      (-1)ⁿ (D[e[y²]] Dⁿ e[-y²] + e[y²] Dⁿ D[e[-y²]])   # Well... obviously we're going to do that!
-      (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²] Dⁿ -2ye[-y²])    # Executing D
+      D Hₙ[ξ]                                           # Given
+      D[(-1)ⁿ e[ξ²] Dⁿ e[-ξ²]]                          # Substitution, definition of H
+      (-1)ⁿ D[e[ξ²] Dⁿ e[-ξ²]]                          # Take out the constant
+      (-1)ⁿ (D[e[ξ²]] Dⁿ e[-ξ²] + e[ξ²] D[Dⁿ e[-ξ²]])   # Product rule
+      (-1)ⁿ (D[e[ξ²]] Dⁿ e[-ξ²] + e[ξ²] Dⁿ D[e[-ξ²]])   # Well... obviously we're going to do that!
+      (-1)ⁿ (2ξe[ξ²] Dⁿ e[-ξ²] + e[ξ²] Dⁿ -2ξe[-ξ²])    # Executing D
       # I don't remember ever coming across the General Leibniz rule
       # http://en.wikipedia.org/wiki/General_Leibniz_rule
-      # Let (n\m) mean n choose m.
-      (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²] Σ[0,n]{m| (n\m) Dᵐ[-2y] Dⁿ-ᵐe[-y²]})   # General Leibniz rule
-      # D²[-2y]=0, Dⁿ[-2y]=0 if n>1.
-      (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²] Σ[0,1]{m| (n\m) Dᵐ[-2y] Dⁿ-ᵐe[-y²]})
-      (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²]((n\0) D⁰[-2y] Dⁿ-⁰e[-y²] + (n\1) Dⁱ[-2y] Dⁿ-ⁱe[-y²])
-      (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²](    1 D⁰[-2y] Dⁿ  e[-y²] +     n Dⁱ[-2y] Dⁿ-ⁱe[-y²])
-      (-1)ⁿ (2ye[y²] Dⁿ e[-y²] + e[y²](         -2y  Dⁿ  e[-y²] +     n   (-2)  Dⁿ-ⁱe[-y²])
-      (-1)ⁿ (2ye[y²]Dⁿe[-y²] - 2ye[y²]Dⁿe[-y²] - 2ne[y²]Dⁿ-ⁱe[-y²])
-      (-1)ⁿ (0 - 2ne[y²]Dⁿ-ⁱe[-y²])
-      (-1)ⁿ (-2) ne[y²]Dⁿ-ⁱe[-y²]
-      (-1)ⁿ-ⁱ 2 ne[y²]Dⁿ-ⁱe[-y²]
-      2n (-1)ⁿ-ⁱ e[y²] Dⁿ-ⁱe[-y²]
-      2n Hₙ-₁[y]
+      # Let (ⁿₘ) mean n choose m.
+      (-1)ⁿ (2ξe[ξ²] Dⁿ e[-ξ²] + e[ξ²] Σ[0,n]{m| (ⁿₘ) Dᵐ[-2ξ] Dⁿ-ᵐe[-ξ²]})   # General Leibniz rule
+      # D²[-2ξ]=0, Dⁿ[-2ξ]=0 if n>1.
+      (-1)ⁿ (2ξe[ξ²] Dⁿ e[-ξ²] + e[ξ²] Σ[0,1]{m| (ⁿₘ) Dᵐ[-2ξ] Dⁿ-ᵐe[-ξ²]})
+      (-1)ⁿ (2ξe[ξ²] Dⁿ e[-ξ²] + e[ξ²]((n\0) D⁰[-2ξ] Dⁿ-⁰e[-ξ²] + (n\1) Dⁱ[-2ξ] Dⁿ-ⁱe[-ξ²])
+      (-1)ⁿ (2ξe[ξ²] Dⁿ e[-ξ²] + e[ξ²](    1 D⁰[-2ξ] Dⁿ  e[-ξ²] +     n Dⁱ[-2ξ] Dⁿ-ⁱe[-ξ²])
+      (-1)ⁿ (2ξe[ξ²] Dⁿ e[-ξ²] + e[ξ²](         -2ξ  Dⁿ  e[-ξ²] +     n   (-2)  Dⁿ-ⁱe[-ξ²])
+      (-1)ⁿ (2ξe[ξ²]Dⁿe[-ξ²] - 2ξe[ξ²]Dⁿe[-ξ²] - 2ne[ξ²]Dⁿ-ⁱe[-ξ²])
+      (-1)ⁿ (0 - 2ne[ξ²]Dⁿ-ⁱe[-ξ²])
+      (-1)ⁿ (-2) ne[ξ²]Dⁿ-ⁱe[-ξ²]
+      (-1)ⁿ-ⁱ 2 ne[ξ²]Dⁿ-ⁱe[-ξ²]
+      2n (-1)ⁿ-ⁱ e[ξ²] Dⁿ-ⁱe[-ξ²]
+      2n Hₙ-₁[ξ]
 
-    Hₙ+₁[y] = 2yHₙ[y] - 2nHₙ-₁[y]   # A.4b
+    Hₙ+₁[ξ] = 2ξHₙ[ξ] - 2nHₙ-₁[ξ]   # A.4b
     # Also a well known property of H, but here's a proof:
-      Hₙ+₁[y]
-      (-1)ⁿ+ⁱ e[y²] Dⁿ+ⁱ e[-y²]
-      (-1)ⁿ(-1) e[y²] Dⁿ[D e[-y²]]
-      (-1)ⁿ(-1) e[y²] Dⁿ[(-2y) e[-y²]]
-      (-1)ⁿ     e[y²] Dⁿ[  2y  e[-y²]]
-      (-1)ⁿ e[y²] Σₘ (n\m) Dᵐ[2y] Dⁿ-ᵐ[e[-y²]]                                     # General Leibniz rule
-      (-1)ⁿ e[y²]((n\0) D⁰[2y] Dⁿ-⁰[e[-y²]] + (n\1) Dⁱ[2y] Dⁿ-ⁱ[e[-y²]] + 0 ...)   # Dejavu
-      (-1)ⁿ e[y²](    1   (2y) Dⁿ  [e[-y²]] +     n   (2)  Dⁿ-ⁱ[e[-y²]])
-      (-1)ⁿ e[y²](2yDⁿ[e[-y²]] + 2nDⁿ-ⁱ[e[-y²]])
-      (-1)ⁿ e[y²] 2yDⁿ[e[-y²]] + (-1)ⁿ e[y²] 2nDⁿ-ⁱ[e[-y²]])                       # Distribute
-      2y (-1)ⁿ e[y²] Dⁿ[e[-y²]] + 2n (-1)ⁿ e[y²] Dⁿ-ⁱ[e[-y²]])
-      2y (-1)ⁿ e[y²] Dⁿ[e[-y²]] + 2n (-1)(-1)ⁿ-ⁱ e[y²] Dⁿ-ⁱ[e[-y²]])
-      2y (-1)ⁿ e[y²] Dⁿ[e[-y²]] - 2n (-1)ⁿ-ⁱ e[y²] Dⁿ-ⁱ[e[-y²]])
-      2yHₙ[y] - 2nHₙ-₁[y]
+      Hₙ+₁[ξ]
+      (-1)ⁿ+ⁱ e[ξ²] Dⁿ+ⁱ e[-ξ²]
+      (-1)ⁿ(-1) e[ξ²] Dⁿ[D e[-ξ²]]
+      (-1)ⁿ(-1) e[ξ²] Dⁿ[(-2ξ) e[-ξ²]]
+      (-1)ⁿ     e[ξ²] Dⁿ[  2ξ  e[-ξ²]]
+      (-1)ⁿ e[ξ²] Σₘ (ⁿₘ) Dᵐ[2ξ] Dⁿ-ᵐ[e[-ξ²]]                                     # General Leibniz rule
+      (-1)ⁿ e[ξ²]((n\0) D⁰[2ξ] Dⁿ-⁰[e[-ξ²]] + (n\1) Dⁱ[2ξ] Dⁿ-ⁱ[e[-ξ²]] + 0 ...)   # Dejavu
+      (-1)ⁿ e[ξ²](    1   (2ξ) Dⁿ  [e[-ξ²]] +     n   (2)  Dⁿ-ⁱ[e[-ξ²]])
+      (-1)ⁿ e[ξ²](2ξDⁿ[e[-ξ²]] + 2nDⁿ-ⁱ[e[-ξ²]])
+      (-1)ⁿ e[ξ²] 2ξDⁿ[e[-ξ²]] + (-1)ⁿ e[ξ²] 2nDⁿ-ⁱ[e[-ξ²]])                       # Distribute
+      2ξ (-1)ⁿ e[ξ²] Dⁿ[e[-ξ²]] + 2n (-1)ⁿ e[ξ²] Dⁿ-ⁱ[e[-ξ²]])
+      2ξ (-1)ⁿ e[ξ²] Dⁿ[e[-ξ²]] + 2n (-1)(-1)ⁿ-ⁱ e[ξ²] Dⁿ-ⁱ[e[-ξ²]])
+      2ξ (-1)ⁿ e[ξ²] Dⁿ[e[-ξ²]] - 2n (-1)ⁿ-ⁱ e[ξ²] Dⁿ-ⁱ[e[-ξ²]])
+      2ξHₙ[ξ] - 2nHₙ-₁[ξ]
 
-    yHₙ[y] = ½Hₙ+₁[y] + nHₙ-₁[y]
+    ξHₙ[ξ] = ½Hₙ+₁[ξ] + nHₙ-₁[ξ]
     # Proof
-      Hₙ+₁[y] = 2yHₙ[y] - 2nHₙ-₁[y]
-      Hₙ+₁[y] + 2nHₙ-₁[y] = 2yHₙ[y]
-      2yHₙ[y] = Hₙ+₁[y] + 2nHₙ-₁[y]
-      yHₙ[y] = ½Hₙ+₁[y] + nHₙ-₁[y]
+      Hₙ+₁[ξ] = 2ξHₙ[ξ] - 2nHₙ-₁[ξ]
+      Hₙ+₁[ξ] + 2nHₙ-₁[ξ] = 2ξHₙ[ξ]
+      2ξHₙ[ξ] = Hₙ+₁[ξ] + 2nHₙ-₁[ξ]
+      ξHₙ[ξ] = ½Hₙ+₁[ξ] + nHₙ-₁[ξ]
 
 Please accept the EigenState of the Simple Harmonic Oscillator Yₙ as given by Liboff's book in page 189.
 The EigenState Yₙ:
 
     Yₙ[x] ≡ |n>
-    Yₙ[x] = AₙHₙ[y]e[-y²/2]
+    Yₙ[x] = AₙHₙ[ξ]e[-ξ²/2]
 
 The State Function Y:
 
@@ -722,99 +726,96 @@ The Problem To Be Solved
 TODO: I just jumped from the above to the calculation of Δ²x !?
 Will say something like ΣΣuₙvₘ = (Σuₙ)(Σvₙ)
 
-## `<y>`
-Evaluation of `<y>`:
+## &lg;ξ&gt;
+Evaluation of `<ξ>`:
 
-    <y> = <Y|y|Y>				# 7.14a
-    <y> = <Y|n><n|y|m><m|Y>			# 7.14b
+    <ξ> = <Y|ξ|Y>             # 7.14a
+    <ξ> = <Y|n><n|ξ|m><m|Y>   # 7.14b
 
-    <y> = ΣΣ (pₙYₙ)† y (pₘYₘ)
-    <y> = ΣΣ (pₙYₙ)† pₘ yYₘ
-    <y> = ΣΣ (pₙYₙ)† pₘ yAₘHₘ[y]e[-y²/2]
-    <y> = ΣΣ (pₙYₙ)† pₘ Aₘ(yHₘ[y])e[-y²/2]
-    <y> = ΣΣ (pₙYₙ)† pₘ Aₘ(½Hₘ+₁[y] + mHₘ-₁[y])e[-y²/2]		# substitute for yHₘ[y]
-    <y> = ΣΣ (pₙYₙ)† pₘ(½AₘHₘ+₁[y]e[-y²/2] + mAₘHₘ-₁[y]e[-y²/2])	# distribute e[-y²/2]
-    <y> = ΣΣ (pₙYₙ)† (½AₘHₘ+₁[y]e[-y²/2]pₘ + mAₘHₘ-₁[y]e[-y²/2]pₘ)	# distribute pₘ
-    <y> = ΣΣ[(pₙYₙ)†½AₘHₘ+₁[y]e[-y²/2]pₘ] + ΣΣ[(pₙYₙ)†mAₘHₘ-₁[y]e[-y²/2]pₘ]	# Separate
-    <y> = ΣΣ[(pₙYₙ)†½(Aₘ+₁*√[2m])Hₘ+₁[y]e[-y²/2]pₘ] + ΣΣ[(pₙYₙ)†m(Aₘ-₁/√[2m])Hₘ-₁[y]e[-y²/2]pₘ]
-    <y> = ΣΣ[(pₙYₙ)†½√[2m]Aₘ+₁Hₘ+₁[y]e[-y²/2]pₘ] + ΣΣ[(pₙYₙ)†m(1/√[2m])Aₘ-₁Hₘ-₁[y]e[-y²/2]pₘ]
-    <y> = ΣΣ[(pₙYₙ)†½√[2m]Yₘ+₁pₘ] + ΣΣ[(pₙYₙ)†m(1/√[2m])Yₘ-₁pₘ]
+    <ξ> = ΣΣ (pₙYₙ)† ξ (pₘYₘ)
+    <ξ> = ΣΣ (pₙYₙ)† pₘ ξYₘ
+    <ξ> = ΣΣ (pₙYₙ)† pₘ ξAₘHₘ[ξ]e[-ξ²/2]
+    <ξ> = ΣΣ (pₙYₙ)† pₘ Aₘ(ξHₘ[ξ])e[-ξ²/2]
+    <ξ> = ΣΣ (pₙYₙ)† pₘ Aₘ(½Hₘ+₁[ξ] + mHₘ-₁[ξ])e[-ξ²/2]                       # substitute for ξHₘ[ξ]
+    <ξ> = ΣΣ (pₙYₙ)† pₘ(½AₘHₘ+₁[ξ]e[-ξ²/2] + mAₘHₘ-₁[ξ]e[-ξ²/2])              # distribute e[-ξ²/2]
+    <ξ> = ΣΣ (pₙYₙ)† (½AₘHₘ+₁[ξ]e[-ξ²/2]pₘ + mAₘHₘ-₁[ξ]e[-ξ²/2]pₘ)            # distribute pₘ
+    <ξ> = ΣΣ[(pₙYₙ)†½AₘHₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙYₙ)†mAₘHₘ-₁[ξ]e[-ξ²/2]pₘ]   # Separate
+    <ξ> = ΣΣ[(pₙYₙ)†½(Aₘ+₁*√[2m])Hₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙYₙ)†m(Aₘ-₁/√[2m])Hₘ-₁[ξ]e[-ξ²/2]pₘ]
+    <ξ> = ΣΣ[(pₙYₙ)†½√[2m]Aₘ+₁Hₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙYₙ)†m(1/√[2m])Aₘ-₁Hₘ-₁[ξ]e[-ξ²/2]pₘ]
+    <ξ> = ΣΣ[(pₙYₙ)†½√[2m]Yₘ+₁pₘ] + ΣΣ[(pₙYₙ)†m(1/√[2m])Yₘ-₁pₘ]
     #Note that the only time there's contribution from Yₙ†Yₗ is when n=l, given any l be it l=m+1 or l=m-1.
-    <y> = ΣΣ[(pₙYₙ)†½√[2(n-1)]Yₙpₙ-₁] + ΣΣ[(pₙYₙ)†n(1/√[2(n+1)])Yₙpₙ+₁]
-    <y> = ΣΣ[(pₙYₙ)†(½√[2(n-1)]pₙ-₁ + n(1/√[2(n+1)])pₙ+₁)Yₙ]	# join
-    <y> = √½ΣΣ (pₙYₙ)† (√[n-1]pₙ-₁ + n(1/√[n+1])pₙ+₁)Yₙ
+    <ξ> = ΣΣ[(pₙYₙ)†½√[2(n-1)]Yₙpₙ-₁] + ΣΣ[(pₙYₙ)†n(1/√[2(n+1)])Yₙpₙ+₁]
+    <ξ> = ΣΣ[(pₙYₙ)†(½√[2(n-1)]pₙ-₁ + n(1/√[2(n+1)])pₙ+₁)Yₙ]                  # join
+    <ξ> = √½ΣΣ (pₙYₙ)† (√[n-1]pₙ-₁ + n(1/√[n+1])pₙ+₁)Yₙ
     # OK, I messed up somewhere, I think.  :-??
 
     ... # TODO
 
     # Who want's to work with this horrible mess?
-    <y> = √½Σ (e[-iω(n+½)t] √[uⁿe[-u]/n!])† (
+    <ξ> = √½Σ (e[-iω(n+½)t] √[uⁿe[-u]/n!])† (
       e[-iω((n+1)+½)t] √[n+1] √[u^(n+1)e[-u]/(n+1)!] +
       e[-iω((n-1)+½)t] √n √[u^(n-1)e[-u]/(n-1)!])
-    <y> = √½Σ Φₙ†pₙ† (Φₙ+₁√[n+1]pₙ+₁ + Φₙ-₁√npₙ-₁)		# 7.20
-    <y> = √½Σ Φₙ†pₙ (Φₙ+₁√n₁pₙ+₁ + Φₙ-₁/√n-₁pₙ-₁)		# Using Whatchamacallit, † does nothing to p.
+    <ξ> = √½Σ Φₙ†pₙ† (Φₙ+₁√[n+1]pₙ+₁ + Φₙ-₁√npₙ-₁)    # 7.20
+    <ξ> = √½Σ Φₙ†pₙ (Φₙ+₁√n₁pₙ+₁ + Φₙ-₁/√n-₁pₙ-₁)     # Using Whatchamacallit, † does nothing to p.
     # Much nicer, no?
-    <y> = √½Σ Φ†p (Φ↑√n↑p↑ + Φ↓/√n↓p↓)			# Context n, and arrow operators.  :)
-    <y> = √½Σ Φ†Φ↑√n↑pp↑ + Φ†Φ↓/√n↓pp↓			# Distribute
-    <y> = √½Σ √n↑pp↑Φ†Φ↑ + 1/√n↓pp↓Φ†Φ↓			# Rearrange
-    <y> = √½Σ √n↑pp↑φ↥ + 1/√n↓pp↓φ↧				# Φ→φ
-    <y> = √½Σ √n↑ √nᵒ P/√n↑ φ↥ + 1/√n↓ P/√[nᵒn↓] φ↧		# p->P
-    <y> = √½Σ √nᵒ P φ↥ + 1/n↓ P/√nᵒ φ↧			# Simplify
-    <y> = √½Σ √nᵒ P φ↥ + n P/√nᵒ φ↧				# 1/n↓ = n
-    <y> = √½(Σ[√nᵒ P φ↥] + Σ[n P/√nᵒ φ↧])			# Separate the sums
-    <y> = √½(√nᵒφ↥ΣP + φ↧/√nᵒΣ[nP])				# Take out the constants
-    <y> = √½(√nᵒφ↥(1) + φ↧/√nᵒ(nᵒ))
-    <y> = √½(√nᵒφ↥ + φ↧√nᵒ)					# :)
-    <y> = √[½nᵒ](φ↥ + φ↧)
-    <y> = √[½nᵒ](2c₁)					# φ↥+φ↧=2c₁, remember?
-    <y> = √[2nᵒ]c₁
-    <y>² = 2nᵒc²₁
-    <y>² = 2nᵒ:Cosine²[nωt]
+    <ξ> = √½Σ Φ†p (Φ↑√n↑p↑ + Φ↓/√n↓p↓)                # Context n, and arrow operators.  :)
+    <ξ> = √½Σ Φ†Φ↑√n↑pp↑ + Φ†Φ↓/√n↓pp↓                # Distribute
+    <ξ> = √½Σ √n↑pp↑Φ†Φ↑ + 1/√n↓pp↓Φ†Φ↓               # Rearrange
+    <ξ> = √½Σ √n↑pp↑φ↥ + 1/√n↓pp↓φ↧                   # Φ→φ
+    <ξ> = √½Σ √n↑ √nᵒ P/√n↑ φ↥ + 1/√n↓ P/√[nᵒn↓] φ↧   # p->P
+    <ξ> = √½Σ √nᵒ P φ↥ + 1/n↓ P/√nᵒ φ↧                # Simplify
+    <ξ> = √½Σ √nᵒ P φ↥ + n P/√nᵒ φ↧                   # 1/n↓ = n
+    <ξ> = √½(Σ[√nᵒ P φ↥] + Σ[n P/√nᵒ φ↧])             # Separate the sums
+    <ξ> = √½(√nᵒφ↥ΣP + φ↧/√nᵒΣ[nP])                   # Take out the constants
+    <ξ> = √½(√nᵒφ↥(1) + φ↧/√nᵒ(nᵒ))
+    <ξ> = √½(√nᵒφ↥ + φ↧√nᵒ)                           # :)
+    <ξ> = √[½nᵒ](φ↥ + φ↧)
+    <ξ> = √[½nᵒ](2c₁)                                 # φ↥+φ↧=2c₁, remember?
+    <ξ> = √[2nᵒ]c₁
+    <ξ>² = 2nᵒc²₁
+    <ξ>² = 2nᵒ:Cosine²[nωt]
 
-This time I got c₁ instead of:
-`<y> = √[2nᵒ]s₁`,
-`<y>² = 2nᵒs²₁`.
-Why?
+This time I got c₁ instead of <ξ>=√[2nᵒ]s₁ and <ξ>²=2nᵒs²₁.  Why?
 It may be that 25 years ago I was not careful enough with φ₁ and φ-₁.
 In fact, I've already noted in my revision that I messed up my treatment of 1ₙ (now Φₙ).
 OK, so that's one of the major errors I was concerned with.
-Let's see what happens to `<y²>`.
-Expect a related error in `<y²>`, this is not the second error I'm looking for.
+Let's see what happens to <ξ²>.
+Expect a related error in <ξ²>, this is not the second error I'm looking for.
 
-## `<y²>`
-TODO: `<y²>`:
+## &lt;ξ²&gt;
+TODO: `<ξ²>`:
 
     # And who wants to work with this mess?
-    <y²> = (nᵒ+½) +
+    <ξ²> = (nᵒ+½) +
       ½Σ e[-iω(n+½)t]† √[uⁿe[-u]/n!] (
         e[-iω((n-2)+½)t] √[n(n-1)] √[u^(n-2)e[-u]/(n-2)! +
         e[-iω((n+2)+½)t] √[(n+1)(n+2)] √[u^(n+2)e[-u]/(n+2)!
       )
-    <y²> = (nᵒ+½) + ½Σ Φₙ†pₙ† (Φₙ-₂√[n(n-1)]pₙ-₂ +  Φₙ+₂√[(n+1)(n+2)]pₙ+₂)	# 7.21
+    <ξ²> = (nᵒ+½) + ½Σ Φₙ†pₙ† (Φₙ-₂√[n(n-1)]pₙ-₂ +  Φₙ+₂√[(n+1)(n+2)]pₙ+₂)   # 7.21
     # And much nicer...
-    <y²> = (nᵒ+½) + ½Σ Φ†p (Φ⇊/√n⇊ p⇊ +  Φ⇈√n⇈ p⇈)				# pretty noted
-    <y²> = (nᵒ+½) + ½Σ Φ†Φ⇊/√n⇊ pp⇊ +  Φ†Φ⇈√n⇈ pp⇈				# Distribute
-    <y²> = (nᵒ+½) + ½Σ φ↧↓/√n⇊ pp⇊ +  φ↥↑√n⇈ pp⇈				# Φ→φ
-    <y²> = (nᵒ+½) + ½Σ φ↧↓/√n⇊ P/(nᵒ√n⇊) +  φ↥↑√n⇈ nᵒP/√n⇈			# p->P
-    <y²> = (nᵒ+½) + ½Σ φ↧↓/n⇊ P/nᵒ +  φ↥↑ nᵒP				# Simplify
-    <y²> = (nᵒ+½) + ½Σ φ↧↓ n(n-1) P/nᵒ +  φ↥↑ nᵒP				# 1/n⇊ = n(n-1)
-    <y²> = (nᵒ+½) + ½(Σ[φ↧↓ n(n-1) P/nᵒ] +  Σ[φ↥↑ nᵒP])			# Separate sums
-    <y²> = (nᵒ+½) + ½(φ↧↓/nᵒΣ[n(n-1)P] +  φ↥↑nᵒΣ[P])			# Take out the constants
-    <y²> = (nᵒ+½) + ½(φ↧↓/nᵒ(nᵒ²) +  φ↥↑nᵒ(1))				# Evaluate sums
-    <y²> = (nᵒ+½) + ½(φ↧↓nᵒ + φ↥↑nᵒ)					# Simplify
-    <y²> = (nᵒ+½) + ½nᵒ(φ↧↓ + φ↥↑)
-    <y²> = (nᵒ+½) + ½nᵒ(2c₂)						# Remember?  φ↧↓+φ↥↑=2c₂.
-    <y²> = (nᵒ+½) + nᵒc₂
-    <y²> = (nᵒ+½) + nᵒ(1-2s²₁)						# Double angle, c₂=1-2s²₁
-    <y²> = (nᵒ+½) + nᵒ- 2nᵒs²₁
-    <y²> = 2nᵒ + ½ - 2nᵒs²₁
-    <y²> = ½ + 2nᵒ - 2nᵒs²₁
-    <y²> = ½ + 2nᵒ(1 - s²₁)
-    <y²> = ½ + 2nᵒc²₁							# Pythagoras
-    <y²> = ½ + 2nᵒ:Cosine²[nwt]
+    <ξ²> = (nᵒ+½) + ½Σ Φ†p (Φ⇊/√n⇊ p⇊ +  Φ⇈√n⇈ p⇈)                           # pretty noted
+    <ξ²> = (nᵒ+½) + ½Σ Φ†Φ⇊/√n⇊ pp⇊ +  Φ†Φ⇈√n⇈ pp⇈                           # Distribute
+    <ξ²> = (nᵒ+½) + ½Σ φ↧↓/√n⇊ pp⇊ +  φ↥↑√n⇈ pp⇈                             # Φ→φ
+    <ξ²> = (nᵒ+½) + ½Σ φ↧↓/√n⇊ P/(nᵒ√n⇊) +  φ↥↑√n⇈ nᵒP/√n⇈                   # p->P
+    <ξ²> = (nᵒ+½) + ½Σ φ↧↓/n⇊ P/nᵒ +  φ↥↑ nᵒP                                # Simplify
+    <ξ²> = (nᵒ+½) + ½Σ φ↧↓ n(n-1) P/nᵒ +  φ↥↑ nᵒP                            # 1/n⇊ = n(n-1)
+    <ξ²> = (nᵒ+½) + ½(Σ[φ↧↓ n(n-1) P/nᵒ] +  Σ[φ↥↑ nᵒP])                      # Separate sums
+    <ξ²> = (nᵒ+½) + ½(φ↧↓/nᵒΣ[n(n-1)P] +  φ↥↑nᵒΣ[P])                         # Take out the constants
+    <ξ²> = (nᵒ+½) + ½(φ↧↓/nᵒ(nᵒ²) +  φ↥↑nᵒ(1))                               # Evaluate sums
+    <ξ²> = (nᵒ+½) + ½(φ↧↓nᵒ + φ↥↑nᵒ)                                         # Simplify
+    <ξ²> = (nᵒ+½) + ½nᵒ(φ↧↓ + φ↥↑)
+    <ξ²> = (nᵒ+½) + ½nᵒ(2c₂)                                                 # Remember?  φ↧↓+φ↥↑=2c₂.
+    <ξ²> = (nᵒ+½) + nᵒc₂
+    <ξ²> = (nᵒ+½) + nᵒ(1-2s²₁)                                               # Double angle, c₂=1-2s²₁
+    <ξ²> = (nᵒ+½) + nᵒ- 2nᵒs²₁
+    <ξ²> = 2nᵒ + ½ - 2nᵒs²₁
+    <ξ²> = ½ + 2nᵒ - 2nᵒs²₁
+    <ξ²> = ½ + 2nᵒ(1 - s²₁)
+    <ξ²> = ½ + 2nᵒc²₁                                                        # Pythagoras
+    <ξ²> = ½ + 2nᵒ:Cosine²[nwt]
 
 7.5 Results:
 
-    Δ²y = <y²> - <y>²
+    Δ²ξ = <ξ²> - <ξ>²
         = (½ + 2nᵒc²₁) - 2nᵒc²₁
         = ½

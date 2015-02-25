@@ -73,7 +73,7 @@ Superscripts normally are ℕ denoting repetition:
     u²=uu    # Square
     u³=uuu   # Cube
 
-    uⁿ[v] ≡ (u[v])ⁿ	
+    uⁿ[v] ≡ (u[v])ⁿ
     u²[v] ≡ u[v]*u[v]   # For example: "sin²(x) = sin(x)*sin(x)"
     uᵐₙ ≡ (uₙ)ᵐ         # I'm leaving uₙ² undefined, but it's probably u[n²].
 
@@ -298,7 +298,7 @@ Factorial:
       u[-1-1]
       -1u[-1]
       -1*0
-      0	# In general 1/u! = 0 ← ℤ{u<0}
+      0   # In general 1/u! = 0 ← ℤ{u<0}
 
 ## nᵥ
 I'd like to make the following refinement in ℕ,
@@ -384,7 +384,7 @@ functions series definitions:
 
     :Exponential[u] ≡ Σ uⁿ / n!
     e[u] ≡ :Exponential[u]
-    eᵘ ≡ e^(u) ≡ e[u]	# Alternate forms.
+    eᵘ ≡ e^(u) ≡ e[u]   # Alternate forms.
 
 [Trigonometric Identities](http://en.wikipedia.org/wiki/List_of_trigonometric_identities):
 
@@ -423,10 +423,10 @@ Known properties of e:
 Measure of uncertainty defined (4.1a):
 
     Δ²[u] ≡ <(u - <u>)²>
-    Δ²u ≡ <(u - <u>)²> 	# Allow the shorter form if unambiguous.
+    Δ²u ≡ <(u - <u>)²>   # Allow the shorter form if unambiguous.
 
-    Δ[u] ≡ √[Δ²u]	# I only defined Δ² and a not in terms of Δ, so...
-    Δu ≡ √[Δ²u]	# Again, allow the shorter form.
+    Δ[u] ≡ √[Δ²u]   # I only defined Δ² and a not in terms of Δ, so...
+    Δu ≡ √[Δ²u]     # Again, allow the shorter form.
 
     # Deriving 4.1b:
     Δ²u = <u² - 2u<u> + <u>²>
@@ -460,8 +460,8 @@ P is the [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distributio
 ## Fundamental values
 I think the point here is that these values are "measured" by "experiment" in "some way".
 
-    ℝ{m}	# Mass
-    ℝ{k}	# Spring contant 
+    ℝ{m}   # Mass
+    ℝ{k}   # Spring contant 
 
 What about π ?
 You can check that there exist several series 
@@ -471,32 +471,32 @@ of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi):
     # Proof:
       π
       4 Σ (-1)ⁿ/(2n+1)
-      4 Σ 1/(2(2n)+1) - 1/(2(2n+1)+1)	# pairing the alternating series
+      4 Σ 1/(2(2n)+1) - 1/(2(2n+1)+1)                              # pairing the alternating series
       4 Σ 1/(4n+1) - 1/(4n+3)
       4 Σ ((4n+3)-(4n+1))/((4n+1)(4n+3))
       4 Σ 2/((4n+1)(4n+3))
       Σ 8/((4n+1)(4n+3))
-        |8/((4n+1)(4n+3))| ≤ |8/(16n²)| ≤ |1/(2n²)| ≤ 1/n² ← n≥N	# Fits given definition of ℝ.
+        |8/((4n+1)(4n+3))| ≤ |8/(16n²)| ≤ |1/(2n²)| ≤ 1/n² ← n≥N   # Fits given definition of ℝ.
 
 ## Derived values
 
-    ω² ≡ k/m	# Angular frequency
+    ω² ≡ k/m   # Angular frequency
     ω = √[k/m]
 
-    f ≡ ω/(2π)	# Frequency
+    f ≡ ω/(2π)   # Frequency
 
 TODO: need to explain ħ.
 
-    Eₙ = ωħ(n+½)	# 3.2: Energy eigen-value
+    Eₙ = ωħ(n+½)   # 3.2: Energy eigen-value
 
 ## Φₙ
 7.17 TODO: why -iEₙt/ħ and not +iEₙt/ħ?
 Time evolution:
 
-    Φᵗₙ ≡ e[-iω(n+½)t] = e[-iEₙt/ħ]	# NOTE! The ½ part makes this object a bit of a screw ball.
-    φᵗₙ ≡ e[-iωnt]	# "How do we end up with this?" you may ask.
+    Φᵗₙ ≡ e[-iω(n+½)t] = e[-iEₙt/ħ]   # NOTE! The ½ part makes this object a bit of a screw ball.
+    φᵗₙ ≡ e[-iωnt]                    # "How do we end up with this?" you may ask.
 
-    Φₙ†Φₘ = φₘ-ₙ	# You don't have to explicitly show time if it can be infered.
+    Φₙ†Φₘ = φₘ-ₙ   # You don't have to explicitly show time if it can be infered.
     # Proof:
       Φₙ†Φₘ
       Φ-ₙΦₘ
@@ -504,17 +504,18 @@ Time evolution:
       e[-iω(m-n)t]
       φₘ-ₙ
 
-    Φ⁰ = 1	# Don't have to explicitly show quantum number if it can be infered.
+    # Don't have to explicitly show quantum number if it can be infered.
+    Φ⁰ = 1
     Φⁱ = e[-iω(n+½)]
-    Φᵗ = (Φⁱ)^t = e[t * (-iω(n+½))] = e[-iω(n+½)t]	# Just to show that the notation makes sense.
+    Φᵗ = (Φⁱ)^t = e[t * (-iω(n+½))] = e[-iω(n+½)t]   # Just to show that the notation makes sense.
 
 ## Φ→φ
 
     Φₙ†Φₙ+₁ = φₙ+₁-ₙ = φ₁
-    φ↥ ≡ φ₀↑ = φ₁	# This will make notation very consistent later.
+    φ↥ ≡ φ₀↑ = φ₁   # This will make notation very consistent later.
     Φₙ†Φₙ+₁ = φ↥
 
-    Φₙ†Φₙ-₁ = φₙ-₁-ₙ = φ-₁	# Yeah... me worry about this one a little bit!  LOL
+    Φₙ†Φₙ-₁ = φₙ-₁-ₙ = φ-₁   # Yeah... me worry about this one a little bit!  LOL
     φ↧ ≡ φ₀↓ = φ-₁
     Φₙ†Φₙ-₁ = φ↧
 
@@ -526,16 +527,16 @@ Short for Sine(nωt) and Cosine(nωt):
 
     sₙ ≡ S[nωt]
     cₙ ≡ C[nωt]
-    c₂ₙ=1-2s²ₙ	# Cosine double angle in terms of c and s.
+    c₂ₙ=1-2s²ₙ   # Cosine double angle in terms of c and s.
 
-    φₙ = cₙ-isₙ	# φ in terms of c and s.
+    φₙ = cₙ-isₙ   # φ in terms of c and s.
 
     φ₁ = c₁-is₁
 
-    φ-₁ = c₁+is₁	# Maybe that'll work.
+    φ-₁ = c₁+is₁   # Maybe that'll work.
 
     φ₁ + φ-₁ = 2c₁
-    φ↥ + φ↧ = 2c₁	# Remember this one!
+    φ↥ + φ↧ = 2c₁   # Remember this one!
 
     φ₁ - φ-₁ = 2s₁
     φ↥ - φ↧ = 2s₁
@@ -544,7 +545,7 @@ Short for Sine(nωt) and Cosine(nωt):
     φ-₂ = c₂+is₂
 
     φ-₂ + φ₂ = 2c₂
-    φ↧↓ + φ↥↑ = 2c₂	# And remember this one!
+    φ↧↓ + φ↥↑ = 2c₂   # And remember this one!
 
 ## nᵒ
 Average Quantum number nᵒ
@@ -568,7 +569,7 @@ Average Quantum number nᵒ
     nᵒ = L[u - u^(M+1)e[-M]/M!]
     nᵒ = L[u] - L[u^(M+1)e[-M]/M!]
     nᵒ = u - 0
-    nᵒ = u	# As expected.  :)
+    nᵒ = u   # As expected.  :)
 
 ## L Σ[n(n-1)Pₙ]
 
@@ -583,7 +584,7 @@ Average Quantum number nᵒ
     L u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|uⁿe[-u]/n!})
     L u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|Pₙ})
     u²(L[e[-u]/(u²(-2)!)] + L[e[-u]/(u(-1)!)] + L[Σ[0,M-2]{n|Pₙ}])
-    u²(0 + 0 + L[Σ[0,M-2]{n|Pₙ}])	      # 1/u! = 0 if integer u < 0
+    u²(0 + 0 + L[Σ[0,M-2]{n|Pₙ}])   # 1/u! = 0 if integer u < 0
     u²(L[Σ[0,M]{n|Pₙ} - P[M-1] - P[M]])
     u²(L[ΣPₙ - P[M-1] - P[M]] - P[M+1] - ⋯)   # Re-consider the infinite series.
     u²(L[1 - P[M-1] - P[M]] - P[M+1] - ⋯)     # ΣPₙ = 1
@@ -670,7 +671,7 @@ The Normalization Constant, Aₙ:
     Aₙ   = Aₙ-₁ / √[2n]       # Given
     Aₙ+₁ = Aₙ   / √[2(n+1)]   # Increment index n
     Aₙ   = Aₙ+₁ * √[2(n+1)]   # Solve for Aₙ
-    Aₙ-₁ = Aₙ   * √[2n]	      # Decrement index n
+    Aₙ-₁ = Aₙ   * √[2n]       # Decrement index n
 
     # With Whatchamacallits
     Aₙ   = Aₙ-₁ * √[½n-₁] = Aₙ-₁ * √[½n↓] = Aₙ-₁ * √[½n↓]

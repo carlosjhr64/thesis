@@ -666,19 +666,19 @@ The Normalization Constant, Aₙ:
     Aₙ+₁ = Aₙ/√[2n↑]
     Aₙ-₁ = Aₙ/√[½n↓]
 
-## Hₙ
+## ℋₙ
 The Hermite polynomial:
 
-    Hₙ[ξ] ≡ (-1)ⁿ e[ξ²] Dᵧⁿ e[-ξ²]   # A.3, this is "physicists' Hermite polynomials" in Wikipedia.
+    ℋₙ[ξ] ≡ (-1)ⁿ e[ξ²] Dᵧⁿ e[-ξ²]   # A.3, this is "physicists' Hermite polynomials" in Wikipedia.
 
-    Dᵧ Hₙ[ξ] = 2nHₙ-₁[ξ]   # A.4a
+    Dᵧ ℋₙ[ξ] = 2nℋₙ-₁[ξ]   # A.4a
     # Proof:
-      # It's actually a well known property of H.
+      # It's actually a well known property of ℋ.
       # In my notes I review a proof by genetating function... unreadable to me now.
       # But found this elegant proof online,
       # http://math.stackexchange.com/questions/581897/hermite-polynomials-recurrence-relation:
-      D Hₙ[ξ]                                           # Given
-      D[(-1)ⁿ e[ξ²] Dⁿ e[-ξ²]]                          # Substitution, definition of H
+      D ℋₙ[ξ]                                           # Given
+      D[(-1)ⁿ e[ξ²] Dⁿ e[-ξ²]]                          # Substitution, definition of ℋ
       (-1)ⁿ D[e[ξ²] Dⁿ e[-ξ²]]                          # Take out the constant
       (-1)ⁿ (D[e[ξ²]] Dⁿ e[-ξ²] + e[ξ²] D[Dⁿ e[-ξ²]])   # Product rule
       (-1)ⁿ (D[e[ξ²]] Dⁿ e[-ξ²] + e[ξ²] Dⁿ D[e[-ξ²]])   # Well... obviously we're going to do that!
@@ -697,11 +697,11 @@ The Hermite polynomial:
       (-1)ⁿ (-2) ne[ξ²]Dⁿ-ⁱe[-ξ²]
       (-1)ⁿ-ⁱ 2 ne[ξ²]Dⁿ-ⁱe[-ξ²]
       2n (-1)ⁿ-ⁱ e[ξ²] Dⁿ-ⁱe[-ξ²]
-      2n Hₙ-₁[ξ]
+      2n ℋₙ-₁[ξ]
 
-    Hₙ+₁[ξ] = 2ξHₙ[ξ] - 2nHₙ-₁[ξ]   # A.4b
-    # Also a well known property of H, but here's a proof:
-      Hₙ+₁[ξ]
+    ℋₙ+₁[ξ] = 2ξℋₙ[ξ] - 2nℋₙ-₁[ξ]   # A.4b
+    # Also a well known property of ℋ, but here's a proof:
+      ℋₙ+₁[ξ]
       (-1)ⁿ+ⁱ e[ξ²] Dⁿ+ⁱ e[-ξ²]
       (-1)ⁿ(-1) e[ξ²] Dⁿ[D e[-ξ²]]
       (-1)ⁿ(-1) e[ξ²] Dⁿ[(-2ξ) e[-ξ²]]
@@ -714,26 +714,26 @@ The Hermite polynomial:
       2ξ (-1)ⁿ e[ξ²] Dⁿ[e[-ξ²]] + 2n (-1)ⁿ e[ξ²] Dⁿ-ⁱ[e[-ξ²]])
       2ξ (-1)ⁿ e[ξ²] Dⁿ[e[-ξ²]] + 2n (-1)(-1)ⁿ-ⁱ e[ξ²] Dⁿ-ⁱ[e[-ξ²]])
       2ξ (-1)ⁿ e[ξ²] Dⁿ[e[-ξ²]] - 2n (-1)ⁿ-ⁱ e[ξ²] Dⁿ-ⁱ[e[-ξ²]])
-      2ξHₙ[ξ] - 2nHₙ-₁[ξ]
+      2ξℋₙ[ξ] - 2nℋₙ-₁[ξ]
 
-    ξHₙ[ξ] = ½Hₙ+₁[ξ] + nHₙ-₁[ξ]
+    ξℋₙ[ξ] = ½ℋₙ+₁[ξ] + nℋₙ-₁[ξ]
     # Proof
-      Hₙ+₁[ξ] = 2ξHₙ[ξ] - 2nHₙ-₁[ξ]
-      Hₙ+₁[ξ] + 2nHₙ-₁[ξ] = 2ξHₙ[ξ]
-      2ξHₙ[ξ] = Hₙ+₁[ξ] + 2nHₙ-₁[ξ]
-      ξHₙ[ξ] = ½Hₙ+₁[ξ] + nHₙ-₁[ξ]
+      ℋₙ+₁[ξ] = 2ξℋₙ[ξ] - 2nℋₙ-₁[ξ]
+      ℋₙ+₁[ξ] + 2nℋₙ-₁[ξ] = 2ξℋₙ[ξ]
+      2ξℋₙ[ξ] = ℋₙ+₁[ξ] + 2nℋₙ-₁[ξ]
+      ξℋₙ[ξ] = ½ℋₙ+₁[ξ] + nℋₙ-₁[ξ]
 
 
     # Can also be written as:
-    Dᵧ Hₙ[ξ] = 2nHₙ-₁[ξ]           = Hₙ↓[ξ]/(½n↓)
-    ξHₙ[ξ]   = ½Hₙ+₁[ξ] + nHₙ-₁[ξ] = ½(Hₙ↑[ξ] + Hₙ↓[ξ]/(½n↓))
+    Dᵧ ℋₙ[ξ] = 2nℋₙ-₁[ξ]           = ℋₙ↓[ξ]/(½n↓)
+    ξℋₙ[ξ]   = ½ℋₙ+₁[ξ] + nℋₙ-₁[ξ] = ½(ℋₙ↑[ξ] + ℋₙ↓[ξ]/(½n↓))
 
 ## Ψₙ
 Please accept the EigenState of the Simple Harmonic Oscillator Ψₙ as given by Liboff's book in page 189.
 The EigenState Ψₙ:
 
     Ψₙ[x] ≡ |n>
-    Ψₙ[x] = AₙHₙ[ξ]e[-ξ²/2]
+    Ψₙ[x] = Aₙℋₙ[ξ]e[-ξ²/2]
 
 The State Function Ψ:
 
@@ -755,14 +755,14 @@ Evaluation of `<ξ>`:
 
     <ξ> = ΣΣ (pₙΨₙ)† ξ (pₘΨₘ)
     <ξ> = ΣΣ (pₙΨₙ)† pₘ ξΨₘ
-    <ξ> = ΣΣ (pₙΨₙ)† pₘ ξAₘHₘ[ξ]e[-ξ²/2]
-    <ξ> = ΣΣ (pₙΨₙ)† pₘ Aₘ(ξHₘ[ξ])e[-ξ²/2]
-    <ξ> = ΣΣ (pₙΨₙ)† pₘ Aₘ(½Hₘ+₁[ξ] + mHₘ-₁[ξ])e[-ξ²/2]                       # substitute for ξHₘ[ξ]
-    <ξ> = ΣΣ (pₙΨₙ)† pₘ(½AₘHₘ+₁[ξ]e[-ξ²/2] + mAₘHₘ-₁[ξ]e[-ξ²/2])              # distribute e[-ξ²/2]
-    <ξ> = ΣΣ (pₙΨₙ)† (½AₘHₘ+₁[ξ]e[-ξ²/2]pₘ + mAₘHₘ-₁[ξ]e[-ξ²/2]pₘ)            # distribute pₘ
-    <ξ> = ΣΣ[(pₙΨₙ)†½AₘHₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙΨₙ)†mAₘHₘ-₁[ξ]e[-ξ²/2]pₘ]   # Separate
-    <ξ> = ΣΣ[(pₙΨₙ)†½(Aₘ+₁*√[2m])Hₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙΨₙ)†m(Aₘ-₁/√[2m])Hₘ-₁[ξ]e[-ξ²/2]pₘ]
-    <ξ> = ΣΣ[(pₙΨₙ)†½√[2m]Aₘ+₁Hₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙΨₙ)†m(1/√[2m])Aₘ-₁Hₘ-₁[ξ]e[-ξ²/2]pₘ]
+    <ξ> = ΣΣ (pₙΨₙ)† pₘ ξAₘℋₘ[ξ]e[-ξ²/2]
+    <ξ> = ΣΣ (pₙΨₙ)† pₘ Aₘ(ξℋₘ[ξ])e[-ξ²/2]
+    <ξ> = ΣΣ (pₙΨₙ)† pₘ Aₘ(½ℋₘ+₁[ξ] + mℋₘ-₁[ξ])e[-ξ²/2]                       # substitute for ξℋₘ[ξ]
+    <ξ> = ΣΣ (pₙΨₙ)† pₘ(½Aₘℋₘ+₁[ξ]e[-ξ²/2] + mAₘℋₘ-₁[ξ]e[-ξ²/2])              # distribute e[-ξ²/2]
+    <ξ> = ΣΣ (pₙΨₙ)† (½Aₘℋₘ+₁[ξ]e[-ξ²/2]pₘ + mAₘℋₘ-₁[ξ]e[-ξ²/2]pₘ)            # distribute pₘ
+    <ξ> = ΣΣ[(pₙΨₙ)†½Aₘℋₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙΨₙ)†mAₘℋₘ-₁[ξ]e[-ξ²/2]pₘ]   # Separate
+    <ξ> = ΣΣ[(pₙΨₙ)†½(Aₘ+₁*√[2m])ℋₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙΨₙ)†m(Aₘ-₁/√[2m])ℋₘ-₁[ξ]e[-ξ²/2]pₘ]
+    <ξ> = ΣΣ[(pₙΨₙ)†½√[2m]Aₘ+₁ℋₘ+₁[ξ]e[-ξ²/2]pₘ] + ΣΣ[(pₙΨₙ)†m(1/√[2m])Aₘ-₁ℋₘ-₁[ξ]e[-ξ²/2]pₘ]
     <ξ> = ΣΣ[(pₙΨₙ)†½√[2m]Ψₘ+₁pₘ] + ΣΣ[(pₙΨₙ)†m(1/√[2m])Ψₘ-₁pₘ]
     #Note that the only time there's contribution from Ψₙ†Ψₗ is when n=l, given any l be it l=m+1 or l=m-1.
     <ξ> = ΣΣ[(pₙΨₙ)†½√[2(n-1)]Ψₙpₙ-₁] + ΣΣ[(pₙΨₙ)†n(1/√[2(n+1)])Ψₙpₙ+₁]

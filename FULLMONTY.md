@@ -47,7 +47,12 @@ Arbitrary symbols:
     uuu ≡ ((uu)u)     # This is just the usual way we think of expressions.
     u u u ≡ (u(uu))   # This is to disambiguate things like "Σ ab" which means "Σ[ab]", not "Σ[a]b".
     # Modifiers like subscripts, superscripts, factorial, complex conjugate, arrow operators.
-    u!u ≡ (u!)u
+    u!u ≡ (u!)u       # Modifiers bind to the left!
+    u½u ≡ u(½u)       # Fractions bind to the right!
+    u2u ≡ u(2u)       # Literal digits bind to the right!
+
+Some of these rules help compact the notation as it most commonly appears.
+For example, √2π is √[2π], but √nπ is √[n]π.
 
 ##<a name="3"></a> ℕ
 Natural (Counting) numbers:
@@ -503,7 +508,7 @@ TODO: need to explain ħ.
 
     Eₙ = ωħ(n+½)   # 3.2: Energy eigen-value
 
-##<a name="27"></a> Φₙ
+##<a name="27"></a> Φᵗₙ
 7.17 TODO: why -iEₙt/ħ and not +iEₙt/ħ?
 Time evolution:
 
@@ -788,62 +793,93 @@ Motivation: I will be calculating <Ψ|ξ|Ψ> later.
       Aₘ ½(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
       ½Aₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
 
-##<a name="37"></a> &lt;ξ&gt;
-Evaluation of `<ξ>`:
+##<a name="37"></a> &lt;ξ₀&gt;
+Evaluation of `<ξ₀>`:
 
-    <ξ> = <Ψ|ξ|Ψ>             # 7.14a
-    <ξ> = <Ψ|n><n|ξ|m><m|Ψ>   # 7.14b
+    <ξ₀> = <Ψ₀|ξ|Ψ₀>             # 7.14a
+    <ξ₀> = <Ψ₀|n><n|ξ|m><m|Ψ₀>   # 7.14b
 
-    <ξ> = ΣΣ (pₙΨₙ)† ξ (pₘΨₘ)
-    <ξ> = ΣΣ Ψₙ†pₙ pₘξΨₘ                                          # rearrange, p is real.
-    <ξ> = ΣΣ Ψₙ†pₙ pₘ ½Aₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))                  # substitute for ξΨₘ
-    <ξ> = ΣΣ Ψₙ†pₙ ½Aₘ(pₘℋₘ↑[ξ] + pₘℋₘ↓[ξ]/(½m↓))                 # distribute pₘ
-    <ξ> = ΣΣ[pₙΨₙ†pₙ ½Aₘpₘℋₘ↑[ξ]] + ΣΣ[Ψₙ†pₙ ½Aₘpₘℋₘ↓[ξ]/(½m↓)]   # separate
-    <ξ> = ½ΣΣ[Ψₙ†pₙ pₘ Aₘℋₘ↑[ξ]] + ½ΣΣ[Ψₙ†pₙ pₘ Aₘℋₘ↓[ξ]/(½m↓)]   # take out ½
+    <ξ₀> = ΣΣ (pₙΨₙ)† ξ (pₘΨₘ)
+    <ξ₀> = ΣΣ Ψₙ†pₙ pₘξΨₘ                                          # rearrange, p is real.
+    <ξ₀> = ΣΣ Ψₙ†pₙ pₘ ½Aₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))                  # substitute for ξΨₘ
+    <ξ₀> = ΣΣ Ψₙ†pₙ ½Aₘ(pₘℋₘ↑[ξ] + pₘℋₘ↓[ξ]/(½m↓))                 # distribute pₘ
+    <ξ₀> = ΣΣ[pₙΨₙ†pₙ ½Aₘpₘℋₘ↑[ξ]] + ΣΣ[Ψₙ†pₙ ½Aₘpₘℋₘ↓[ξ]/(½m↓)]   # separate
+    <ξ₀> = ½ΣΣ[Ψₙ†pₙ pₘ Aₘℋₘ↑[ξ]] + ½ΣΣ[Ψₙ†pₙ pₘ Aₘℋₘ↓[ξ]/(½m↓)]   # take out ½
     # get the m's to match
-    <ξ> = ½ΣΣ[Ψₙ†pₙ √m↑pₘ↑/√nᵒ √[2m↑]Aₘ↑ℋₘ↑[ξ]] + ½ΣΣ[Ψₙ†pₙ √[nᵒm↓]pₘ↓ √[½m↓]Aₘ↓ℋₘ↓[ξ]/(½m↓)]
-    <ξ> = 1/√[2nᵒ]ΣΣ[Ψₙ†pₙ m↑pₘ↑Aₘ↑ℋₘ↑[ξ]] + √[½nᵒ]ΣΣ[Ψₙ†pₙ pₘ↓Aₘ↓ℋₘ↓[ξ]]
-    <ξ> = 1/√[2nᵒ]ΣΣ[Ψₙ†pₙ m↑ pₘ↑Ψₘ↑] + √[½nᵒ]ΣΣ[Ψₙ†pₙ pₘ↓Ψₘ↓]
-    <ξ> = 1/√[2nᵒ]Σ[Ψₙ†pₙ n pₙΨₙ] + √[½nᵒ]Σ[Ψₙ†pₙpₙΨₙ]           # Orthogonal states
-    <ξ> = 1/√[2nᵒ]ΣΣ[nPₙ] + √[½nᵒ]Σ[Pₙ]                          # Ψₙ†Ψₙ=1, pₙpₙ=Pₙ
-    <ξ> = 1/√[2nᵒ]nᵒ + √[½nᵒ]
-    <ξ> = √[½nᵒ] + √[½nᵒ]
-    <ξ> = 2√[½nᵒ]
-    <ξ> = √[2nᵒ]
-    <ξ>² = 2nᵒ   # OK, need time development
+    <ξ₀> = ½ΣΣ[Ψₙ†pₙ √m↑pₘ↑/√nᵒ √[2m↑]Aₘ↑ℋₘ↑[ξ]] + ½ΣΣ[Ψₙ†pₙ √[nᵒm↓]pₘ↓ √[½m↓]Aₘ↓ℋₘ↓[ξ]/(½m↓)]
+    <ξ₀> = 1/√[2nᵒ]ΣΣ[Ψₙ†pₙ m↑pₘ↑Aₘ↑ℋₘ↑[ξ]] + √[½nᵒ]ΣΣ[Ψₙ†pₙ pₘ↓Aₘ↓ℋₘ↓[ξ]]
+    <ξ₀> = 1/√[2nᵒ]ΣΣ[Ψₙ†pₙ m↑ pₘ↑Ψₘ↑] + √[½nᵒ]ΣΣ[Ψₙ†pₙ pₘ↓Ψₘ↓]
+    <ξ₀> = 1/√[2nᵒ]Σ[Ψₙ†pₙ n pₙΨₙ] + √[½nᵒ]Σ[Ψₙ†pₙpₙΨₙ]           # Orthogonal states
+    <ξ₀> = 1/√[2nᵒ]ΣΣ[nPₙ] + √[½nᵒ]Σ[Pₙ]                          # Ψₙ†Ψₙ=1, pₙpₙ=Pₙ
+    <ξ₀> = 1/√[2nᵒ]nᵒ + √[½nᵒ]
+    <ξ₀> = √[½nᵒ] + √[½nᵒ]
+    <ξ₀> = 2√[½nᵒ]
+    <ξ₀> = √[2nᵒ]
+    <ξ₀>² = 2nᵒ   # OK, need time development
 
-    ... # TODO
+## ΦAℋ↓/½n↓=Φ↥/√½n↓Φ↓Ψ↓
 
-    # Who want's to work with this horrible mess?
-    <ξ> = √½Σ (e[-iω(n+½)t] √[uⁿe[-u]/n!])† (
-      e[-iω((n+1)+½)t] √[n+1] √[u^(n+1)e[-u]/(n+1)!] +
-      e[-iω((n-1)+½)t] √n √[u^(n-1)e[-u]/(n-1)!])
-    <ξ> = √½Σ Φₙ†pₙ† (Φₙ+₁√[n+1]pₙ+₁ + Φₙ-₁√npₙ-₁)    # 7.20
-    <ξ> = √½Σ Φₙ†pₙ (Φₙ+₁√n₁pₙ+₁ + Φₙ-₁/√n-₁pₙ-₁)     # Using Whatchamacallit, † does nothing to p.
-    # Much nicer, no?
-    <ξ> = √½Σ Φ†p (Φ↑√n↑p↑ + Φ↓/√n↓p↓)                # Context n, and arrow operators.  :)
-    <ξ> = √½Σ Φ†Φ↑√n↑pp↑ + Φ†Φ↓/√n↓pp↓                # Distribute
-    <ξ> = √½Σ √n↑pp↑Φ†Φ↑ + 1/√n↓pp↓Φ†Φ↓               # Rearrange
-    <ξ> = √½Σ √n↑pp↑φ↥ + 1/√n↓pp↓φ↧                   # Φ→φ
-    <ξ> = √½Σ √n↑ √nᵒ P/√n↑ φ↥ + 1/√n↓ P/√[nᵒn↓] φ↧   # p->P
-    <ξ> = √½Σ √nᵒ P φ↥ + 1/n↓ P/√nᵒ φ↧                # Simplify
-    <ξ> = √½Σ √nᵒ P φ↥ + n P/√nᵒ φ↧                   # 1/n↓ = n
-    <ξ> = √½(Σ[√nᵒ P φ↥] + Σ[n P/√nᵒ φ↧])             # Separate the sums
-    <ξ> = √½(√nᵒφ↥ΣP + φ↧/√nᵒΣ[nP])                   # Take out the constants
-    <ξ> = √½(√nᵒφ↥(1) + φ↧/√nᵒ(nᵒ))
-    <ξ> = √½(√nᵒφ↥ + φ↧√nᵒ)                           # :)
-    <ξ> = √[½nᵒ](φ↥ + φ↧)
-    <ξ> = √[½nᵒ](2c₁)                                 # φ↥+φ↧=2c₁, remember?
-    <ξ> = √[2nᵒ]c₁
-    <ξ>² = 2nᵒc²₁
-    <ξ>² = 2nᵒ:Cosine²[nωt]
+    ΦAℋ↓/½n↓
+    Φ√[½n↓]A↓ℋ↓/½n↓   # A=√[½n↓]A↓
+    ΦA↓ℋ↓/√[½n↓]
+    Φ↥Φ↓A↓ℋ↓/√½n↓     # Φ=Φ₁Φ↓
+    Φ↥/√½n↓ Φ↓A↓ℋ↓
+    Φ↥/√½n↓ Φ↓Ψ↓
 
-This time I got c₁ instead of <ξ>=√[2nᵒ]s₁ and <ξ>²=2nᵒs²₁.  Why?
-It may be that 25 years ago I was not careful enough with φ₁ and φ-₁.
-In fact, I've already noted in my revision that I messed up my treatment of 1ₙ (now Φₙ).
-OK, so that's one of the major errors I was concerned with.
-Let's see what happens to <ξ²>.
-Expect a related error in <ξ²>, this is not the second error I'm looking for.
+##  ΦAℋ↑=Φ↧√2n↑Φ↑Ψ↑
+
+    ΦAℋ↑
+    Φ√2n↑A↑ℋ↑   # A=√[2n↑]A↑
+    Φ↧Φ↑√2n↑A↑ℋ↑
+    Φ↧Φ↑√2n↑A↑ℋ↑
+    Φ↧√2n↑ Φ↑A↑ℋ↑
+    Φ↧√2n↑ Φ↑Ψ↑
+
+## p↑p=√[nᵒ/n↑]P
+
+    p↑p
+    √[nᵒⁿ+ⁱe[-nᵒ]/(n+1)!] p
+    √[nᵒ/(n+1) nᵒⁿe[-nᵒ]/n!] p
+    √[nᵒ/(n+1)]p p
+    √[nᵒ/(n+1)]P
+    √[nᵒ/n₁]P
+    √[nᵒ/n↑]P
+
+## p↓p=P/√[n↓nᵒ]
+
+   p↓p
+    √[nᵒⁿ-ⁱe[-nᵒ]/(n-1)!] p
+    √[(n/nᵒ) nᵒe[-nᵒ]/n!] p
+    √[n/nᵒ] p p
+    √[1/(n-₁nᵒ)]P
+    P/√[n-₁nᵒ]
+    P/√[n↓nᵒ]
+
+##<a name="37"></a> &lt;ξₜ&gt;
+Evaluation of `<ξₜ>`:
+
+    <ξₜ> = <Ψ|ξ|Ψ>
+    <ξₜ> = <Ψ|n><n|ξ|m><m|Ψ>
+    <ξₜ> = ΣΣ (pₙΦᵗₙΨₙ)† ξ (pₘΦᵗₘΨₘ)
+    # Parralles <ξ₀> up to the here...
+    <ξₜ> = ½ΣΣ[(ΦᵗₙΨₙ)†pₙ pₘ ΦᵗₘAₘℋₘ↑[ξ]] + ½ΣΣ[ΦᵗₙΨₙ†pₙ pₘ ΦᵗₘAₘℋₘ↓[ξ]/(½m↓)]
+    <ξₜ> = ½(Σ[(ΦΨ)†p]Σ[pΦAℋ↑[ξ]] + Σ[(ΦΨ)†p]Σ[pΦAℋ↓[ξ]/½n↓])            # ΣΣ[αₙβₘ]=Σ[αₙ]Σ[βₙ], context indeces.
+    <ξₜ> = ½(Σ[(Φ↑Ψ↑)†p↑]Σ[pΦ↧√2n↑Φ↑Ψ↑] + Σ[(Φ↓Ψ↓)†p↓]Σ[pΦ↥/√½n↓Φ↓Ψ↓])   # TODO: What am I doing here???
+    <ξₜ> = ½(Σ[(Φ↑Ψ↑)†p↑pΦ↧√2n↑Φ↑Ψ↑] + Σ[(Φ↓Ψ↓)†p↓pΦ↥/√½n↓Φ↓Ψ↓])         # Orthogonal states
+    <ξₜ> = ½(Σ[p↑pΦ↧√2n↑] + Σ[p↓pΦ↥/√½n↓])                               # Normalized states, Ψ†Ψ=1
+    <ξₜ> = ½(Σ[√[nᵒ/n↑]PΦ↧√2n↑] + Σ[PΦ↥/√[n↓nᵒ]/√½n↓])
+    <ξₜ> = ½(Σ[√nᵒPΦ↧√2] + Σ[PΦ↥/√½nᵒ/n↓])
+    <ξₜ> = ½(Σ[√nᵒPΦ↧√2] + Σ[PnΦ↥/√½nᵒ])
+    <ξₜ> = ½(Σ[√2nᵒPΦ↧] + Σ[PnΦ↥/√½nᵒ])
+    <ξₜ> = ½(√2nᵒΦ↧Σ[P] + Φ↥/√½nᵒΣ[Pn])
+    <ξₜ> = ½(√2nᵒΦ↧Σ[P] + Φ↥√[2nᵒ])
+    <ξₜ> = ½(√2nᵒΦ↧ + Φ↥√[2nᵒ])
+    <ξₜ> = ½√2nᵒ(Φ↧ + Φ↥)
+    <ξₜ> = ½√2nᵒ(2c₁)
+    <ξₜ> = √2nᵒ c₁
+    <ξₜ>² = 2nᵒ c₁
+    <ξₜ>² = 2nᵒ:Cosine²[nwt]
+    # This time I got Cosine... Why?  Not careful enough with φ↥ and φ↧?
 
 ##<a name="38"></a> &lt;ξ²&gt;
 TODO: `<ξ²>`:

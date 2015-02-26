@@ -29,9 +29,11 @@ it's a good warmup and demonstrates my notation.
 
 [&lt;u&gt;](#17) | [n!](#18) | [nᵥ](#19) | [(ⁿₘ)](#20) | [Sine, Cosine, and Exponential](#21) | [Δ²](#22) | [Pₙ](#23) | [pₙ](#24)
 
-[Fundamental values](#25) | [Derived values](#26) | [Φₙ](#27) | [Φ→φ](#28) | [nᵒ](#29) | [L Σ[n(n-1)Pₙ]](#30) | [p→P](#31) | [ξ](#32)
+[Fundamental values](#25) | [Derived values](#26) | [Φᵗₙ](#27) | [Φ→φ](#28) | [nᵒ](#29) | [L Σ[n(n-1)Pₙ]](#30) | [p→P](#31) | [ξ](#32)
 
-[Aₙ](#33) | [ℋₙ](#34) | [Ψₙ](#35) | [ξΨₘ](#36) | [&lt;ξ&gt;](#37) | [&lt;ξ²&gt;](#38) | [Results](#39) | 
+[Aₙ](#33) | [ℋₙ](#34) | [Ψₙ](#35) | [ξΨₘ](#36) | [&lt;ξ₀&gt;](#37) | [ΦAℋ↓/½n↓=Φ↥/√½n↓Φ↓Ψ↓](#38) | [ΦAℋ↑=Φ↧√2n↑Φ↑Ψ↑](#39) | [p↑p=√[nᵒ/n↑]P](#40)
+
+[p↓p=P/√[n↓nᵒ]](#41) | [&lt;ξₜ&gt;](#42) | [&lt;ξ²&gt;](#43) | [Results](#44) | 
 <!-- TOC END -->
 
 ##<a name="1"></a> {u,v}
@@ -817,7 +819,7 @@ Evaluation of `<ξ₀>`:
     <ξ₀> = √[2nᵒ]
     <ξ₀>² = 2nᵒ   # OK, need time development
 
-## ΦAℋ↓/½n↓=Φ↥/√½n↓Φ↓Ψ↓
+##<a name="38"></a> ΦAℋ↓/½n↓=Φ↥/√½n↓Φ↓Ψ↓
 
     ΦAℋ↓/½n↓
     Φ√[½n↓]A↓ℋ↓/½n↓   # A=√[½n↓]A↓
@@ -826,7 +828,7 @@ Evaluation of `<ξ₀>`:
     Φ↥/√½n↓ Φ↓A↓ℋ↓
     Φ↥/√½n↓ Φ↓Ψ↓
 
-##  ΦAℋ↑=Φ↧√2n↑Φ↑Ψ↑
+##<a name="39"></a> ΦAℋ↑=Φ↧√2n↑Φ↑Ψ↑
 
     ΦAℋ↑
     Φ√2n↑A↑ℋ↑   # A=√[2n↑]A↑
@@ -835,7 +837,7 @@ Evaluation of `<ξ₀>`:
     Φ↧√2n↑ Φ↑A↑ℋ↑
     Φ↧√2n↑ Φ↑Ψ↑
 
-## p↑p=√[nᵒ/n↑]P
+##<a name="40"></a> p↑p=√[nᵒ/n↑]P
 
     p↑p
     √[nᵒⁿ+ⁱe[-nᵒ]/(n+1)!] p
@@ -845,7 +847,7 @@ Evaluation of `<ξ₀>`:
     √[nᵒ/n₁]P
     √[nᵒ/n↑]P
 
-## p↓p=P/√[n↓nᵒ]
+##<a name="41"></a> p↓p=P/√[n↓nᵒ]
 
    p↓p
     √[nᵒⁿ-ⁱe[-nᵒ]/(n-1)!] p
@@ -855,7 +857,7 @@ Evaluation of `<ξ₀>`:
     P/√[n-₁nᵒ]
     P/√[n↓nᵒ]
 
-##<a name="37"></a> &lt;ξₜ&gt;
+##<a name="42"></a> &lt;ξₜ&gt;
 Evaluation of `<ξₜ>`:
 
     <ξₜ> = <Ψ|ξ|Ψ>
@@ -881,7 +883,7 @@ Evaluation of `<ξₜ>`:
     <ξₜ>² = 2nᵒ:Cosine²[nwt]
     # This time I got Cosine... Why?  Not careful enough with φ↥ and φ↧?
 
-##<a name="38"></a> &lt;ξ²&gt;
+##<a name="43"></a> &lt;ξ²&gt;
 TODO: `<ξ²>`:
 
     # And who wants to work with this mess?
@@ -913,7 +915,7 @@ TODO: `<ξ²>`:
     <ξ²> = ½ + 2nᵒc²₁                                                        # Pythagoras
     <ξ²> = ½ + 2nᵒ:Cosine²[nwt]
 
-##<a name="39"></a> Results
+##<a name="44"></a> Results
 7.5 Results:
 
     Δ²ξ = <ξ²> - <ξ>²

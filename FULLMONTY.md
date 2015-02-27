@@ -23,27 +23,27 @@ it's a good warmup and demonstrates my notation.
 <!-- TOC START -->
 ### Sections:
 
-[{u,v}](#1) | [Precedence rules](#2) | [ℕ](#3) | [ℤ and ℚ](#4) | [uᵥ](#5) | [Π](#6) | [uᵛ](#7) | [√u](#8)
+[Expressions](#1) | [{u,v,w}](#2) | [Precedence rules](#3) | [ℕ](#4) | [ℤ and ℚ](#5) | [uᵥ](#6) | [Π](#7) | [uᵛ](#8)
 
-[|u|](#9) | [Σ](#10) | [Arrow operators](#11) | [Limit function](#12) | [ℝ](#13) | [ℂ](#14) | [i](#15) | [†](#16)
+[√u](#9) | [|u|](#10) | [Σ](#11) | [Arrow operators](#12) | [Limit function](#13) | [ℝ](#14) | [ℂ](#15) | [i](#16)
 
-[&lt;u&gt;](#17) | [n!](#18) | [nᵥ](#19) | [(ⁿₘ)](#20) | [Sine, Cosine, and Exponential](#21) | [Δ²](#22) | [Pₙ](#23) | [pₙ](#24)
+[†](#17) | [&lt;u&gt;](#18) | [n!](#19) | [nᵥ](#20) | [(ⁿₘ)](#21) | [Sine, Cosine, and Exponential](#22) | [Δ²](#23) | [Pₙ](#24)
 
-[Fundamental values](#25) | [Derived values](#26) | [Φᵗₙ](#27) | [Φ→φ](#28) | [nᵒ](#29) | [L Σ[n(n-1)Pₙ]](#30) | [p→P](#31) | [ξ](#32)
+[pₙ](#25) | [Fundamental values](#26) | [Derived values](#27) | [Φᵗₙ](#28) | [Φ→φ](#29) | [nᵒ](#30) | [L Σ[n(n-1)Pₙ]](#31) | [p→P](#32)
 
-[Aₙ](#33) | [ℋₙ](#34) | [Ψₙ](#35) | [ξΨₘ](#36) | [&lt;ξ₀&gt;](#37) | [ΦAℋ↓/½n↓=Φ↥/√½n↓Φ↓Ψ↓](#38) | [ΦAℋ↑=Φ↧√2n↑Φ↑Ψ↑](#39) | [p↑p=√[nᵒ/n↑]P](#40)
+[ξ](#33) | [Aₙ](#34) | [ℋₙ](#35) | [Ψₙ](#36) | [ξΨₘ](#37) | [&lt;ξ₀&gt;](#38) | [ΦAℋ↓/½n↓=Φ↥/√½n↓Φ↓Ψ↓](#39) | [ΦAℋ↑=Φ↧√2n↑Φ↑Ψ↑](#40)
 
-[p↓p=P/√[n↓nᵒ]](#41) | [&lt;ξₜ&gt;](#42) | [&lt;ξ²&gt;](#43) | [Results](#44) | 
+[p↑p=√[nᵒ/n↑]P](#41) | [p↓p=P/√[n↓nᵒ]](#42) | [&lt;ξₜ&gt;](#43) | [&lt;ξ²&gt;](#44) | [Results](#45) | 
 <!-- TOC END -->
 
-## Expressions
+##<a name="1"></a> Expressions
 This file is written in [Markdown](http://en.wikipedia.org/wiki/Markdown) format.
 Proper mathematical [Expressions](http://en.wikipedia.org/wiki/Expression_%28mathematics%29)
 will start with four spaces and end with either a newline or a pound sign, `#`.
 Everything else is commentary.
 
 
-##<a name="1"></a> {u,v,w}
+##<a name="2"></a> {u,v,w}
 Arbitrary symbols:
 
      {u,v}           # I conjure up u and v of any type.
@@ -52,7 +52,7 @@ Arbitrary symbols:
      u=u             # Then you accept things are themselves.
      w=v,v=u → w=u   # Transitive Property of Equality.
 
-##<a name="2"></a> Precedence rules
+##<a name="3"></a> Precedence rules
 The following precedence rules are in order:
 
     u⇤u ≡ (u⇤)u       # Left binding operator.
@@ -75,14 +75,14 @@ The following precedence rules are in order:
 Some of these rules help compact the notation as it most commonly appears.
 For example, √2πx is √[2π]x, but √nπx is √[n]πx.
 
-##<a name="3"></a> ℕ
+##<a name="4"></a> ℕ
 Natural (Counting) numbers:
 
     ℕ ≡ {0,1,2,3,⋯}   # The set of Natural numbers.  Or the ordered type /^\d+$/.
     ℕ{N,n,m}          # N, M, n, and m are Natural numbers.
     M≡N-1             # This just simplifies notation later on.
 
-##<a name="4"></a> ℤ and ℚ
+##<a name="5"></a> ℤ and ℚ
 See njwildberger's [MathFoundations](https://www.youtube.com/user/njwildberger).
 Integers and Rationals:
 
@@ -90,13 +90,13 @@ Integers and Rationals:
     ℚ ≡ ℤ / ℕ{n:n≠0}   # u/v, like ½ or just "0.5".
     ℤ{l}               # l is an Integer.
 
-##<a name="5"></a> uᵥ
+##<a name="6"></a> uᵥ
 Subcripts labels a specific form of a more general expression:
 
     uᵥ[⋯]≡u[v,⋯]
     uₙₘ≡u[n,m,⋯]
 
-##<a name="6"></a> Π
+##<a name="7"></a> Π
 
     # 1.upto(m).inject(1){|v,n|v*u[n]}
     Π[1,0] ≡ 1
@@ -104,7 +104,7 @@ Subcripts labels a specific form of a more general expression:
     Π[1,2]{u} = u*u
     Π[1,3]{n|n} = 1*2*3
 
-##<a name="7"></a> uᵛ
+##<a name="8"></a> uᵛ
 Superscripts normally are ℕ denoting repetition:
 
     uⁿ ≡ Π[1,n]{u}
@@ -121,18 +121,18 @@ Superscripts also denotes power or raising operations:
 
     uᵛ ≡ u^v   # or "u**v"
 
-##<a name="8"></a> √u
+##<a name="9"></a> √u
 Squareroot:
 
     √[u²]≡u
     √[uu]=u
 
-##<a name="9"></a> |u|
+##<a name="10"></a> |u|
 Absolute value:
 
     ℚ{u},|u|≡(u>0)?u:-u
 
-##<a name="10"></a> Σ
+##<a name="11"></a> Σ
 Summation over indeces:
 
     Σuₙ ≡ u₀ + u₁ + u₂ + ⋯   # Non-halting series.
@@ -143,7 +143,7 @@ Summation over indeces:
 
     N = Σₙ 1
 
-##<a name="11"></a> Arrow operators
+##<a name="12"></a> Arrow operators
 Arrow Operators on subscripts:
 
     uᵥ↑ ≡ uᵥ+₁
@@ -163,7 +163,7 @@ Arrow Operators on subscripts:
     u↧ ≡ u₀↓   # Step down from "ground".
     u↧ = u-₁
 
-##<a name="12"></a> Limit function
+##<a name="13"></a> Limit function
 N is very, very, big!
 I want try to keep things simple and
 avoid a full treatment of limits.
@@ -201,7 +201,7 @@ For the following examples, I use fatorial N! and exponential function e[N]:
 The Float::EPSILON for Ruby on my machine is about 2.22e-16.
 So "L" puts a limit on N on my machine of about 6.71e+7 (2.22e-16 ~ 1/(6.71e+7)^2).
 
-##<a name="13"></a> ℝ
+##<a name="14"></a> ℝ
 For the purpose of this "paper", ℝ just needs to include the series I'm working with.
 That is ℝ augments ℚ with Σuₙ as follows:
 
@@ -245,7 +245,7 @@ Quick plausibility check:
 
 I'll be using ΣΣ[uₙvₘ]=Σ[uₙ]Σ[vₙ] later.
 
-##<a name="14"></a> ℂ
+##<a name="15"></a> ℂ
 Complex numbers:
 
     ℂ ≡ (ℝ,ℝ)
@@ -254,7 +254,7 @@ Complex numbers:
       (uᵣ,uᵢ)(vᵣ,vᵢ)≡(u²ᵣ-v²ᵢ,uᵣvᵢ+uᵢvᵣ)
     ℂ{α,β}
 
-##<a name="15"></a> i
+##<a name="16"></a> i
 The Imaginary number i:
 
     i ≡ (0,1)
@@ -266,14 +266,14 @@ The Imaginary number i:
     (u,v) = u+iv
     i² = -1
 
-##<a name="16"></a> †
+##<a name="17"></a> †
 Complex conjugation:
 
     (u,v)†  ≡ (u,-v)                 # Think † means adjoin? Go to the beginning where I define ≡.
     (u+iv)† = u-iv
     e[i]† = (C+iS)† = C-iS = e[-i]   # what it does to e
 
-##<a name="17"></a> &lt;u&gt;
+##<a name="18"></a> &lt;u&gt;
 Dirac notation:
 
     <αu|βu> ≡ ΣΣ (αuₙ)†(βuₘ)
@@ -305,7 +305,7 @@ Dirac notation:
     <α> = α†α
     # TODO: What we mean by average value,  <u> ≡ Σₙuₙ/N ?
 
-##<a name="18"></a> n!
+##<a name="19"></a> n!
 Factorial:
 
     n! ≡ Π[1,n]{u|u}   # 1*2*3*...*n
@@ -340,7 +340,7 @@ Factorial:
       -1*0
       0   # In general 1/u! = 0 ← ℤ{u<0}
 
-##<a name="19"></a> nᵥ
+##<a name="20"></a> nᵥ
 I'd like to make the following refinement in ℕ,
 Whatchamacallit forward:
 
@@ -398,7 +398,7 @@ Whatchamacallit with Factorial:
     n⇈n! = (n+2)!
     n⇊n! = (n-2)!
 
-##<a name="20"></a> (ⁿₘ)
+##<a name="21"></a> (ⁿₘ)
 [Binomial coefficient](http://en.wikipedia.org/wiki/Binomial_coefficient),
 n choose m:
 
@@ -411,7 +411,7 @@ n choose m:
       n!/(m!n!n-ₘ)
       1/(m!n-ₘ)
 
-##<a name="21"></a> Sine, Cosine, and Exponential
+##<a name="22"></a> Sine, Cosine, and Exponential
 [Trigonometric](http://en.wikipedia.org/wiki/Trigonometric_functions#Series_definitions) and
 [Exponential](http://en.wikipedia.org/wiki/Exponential_function#Formal_definition)
 functions series definitions:
@@ -459,7 +459,7 @@ Known properties of e:
     e[-iu] = C[u]-iS[u]
     e[0] = 1
 
-##<a name="22"></a> Δ²
+##<a name="23"></a> Δ²
 Measure of uncertainty defined (4.1a):
 
     Δ²[u] ≡ <(u - <u>)²>
@@ -478,7 +478,7 @@ Measure of uncertainty (4.1b):
 
     Δ²u = <u²> - <u>²
 
-##<a name="23"></a> Pₙ
+##<a name="24"></a> Pₙ
 P is the [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution):
 
     Pₙ ≡ uⁿe[-u]/n!
@@ -486,7 +486,7 @@ P is the [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distributio
     0 ≤ Pₙ ≤ 1
     <u> = Σ Pₙuₙ
 
-##<a name="24"></a> pₙ
+##<a name="25"></a> pₙ
 
     pₙ ≡ √[uⁿe[-u]/n!]
     pₙ†pₙ = Pₙ
@@ -497,7 +497,7 @@ P is the [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distributio
       uⁿe[-u]/n!
       Pₙ
 
-##<a name="25"></a> Fundamental values
+##<a name="26"></a> Fundamental values
 I think the point here is that these values are "measured" by "experiment" in "some way".
 
     ℝ{m}   # Mass
@@ -518,7 +518,7 @@ of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi):
       Σ 8/((4n+1)(4n+3))
         |8/((4n+1)(4n+3))| ≤ |8/(16n²)| ≤ |1/(2n²)| ≤ 1/n² ← n≥N   # Fits given definition of ℝ.
 
-##<a name="26"></a> Derived values
+##<a name="27"></a> Derived values
 
     ω² ≡ k/m   # Angular frequency
     ω = √[k/m]
@@ -529,7 +529,7 @@ TODO: need to explain ħ.
 
     Eₙ = ωħ(n+½)   # 3.2: Energy eigen-value
 
-##<a name="27"></a> Φᵗₙ
+##<a name="28"></a> Φᵗₙ
 7.17 TODO: why -iEₙt/ħ and not +iEₙt/ħ?
 Time evolution:
 
@@ -549,7 +549,7 @@ Time evolution:
     Φⁱ = e[-iω(n+½)]
     Φᵗ = (Φⁱ)^t = e[t * (-iω(n+½))] = e[-iω(n+½)t]   # Just to show that the notation makes sense.
 
-##<a name="28"></a> Φ→φ
+##<a name="29"></a> Φ→φ
 
     Φₙ†Φₙ+₁ = φₙ+₁-ₙ = φ₁
     φ↥ ≡ φ₀↑ = φ₁   # This will make notation very consistent later.
@@ -587,7 +587,7 @@ Short for Sine(nωt) and Cosine(nωt):
     φ-₂ + φ₂ = 2c₂
     φ↧↓ + φ↥↑ = 2c₂   # And remember this one!
 
-##<a name="29"></a> nᵒ
+##<a name="30"></a> nᵒ
 Average Quantum number nᵒ
 
     <n> = <n|pₙ†npₙ|m> = Σ npₙpₙ = Σ nPₙ   # only n=m terms contribute
@@ -611,7 +611,7 @@ Average Quantum number nᵒ
     nᵒ = u - 0
     nᵒ = u   # As expected.  :)
 
-##<a name="30"></a> L Σ[n(n-1)Pₙ]
+##<a name="31"></a> L Σ[n(n-1)Pₙ]
 
     L Σ n(n-1)Pₙ
     L Σₙ n(n-1)Pₙ
@@ -642,7 +642,7 @@ Now we can describe the distribution in terms of the average quantum number:
     Pₙ = nᵒⁿe[-nᵒ]/n!
     pₙ = √[nᵒⁿe[-nᵒ]/n!]
 
-##<a name="31"></a> p→P
+##<a name="32"></a> p→P
 
     pₙpₙ+₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n+1)e[-nᵒ]/(n+1)!]
            = √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!] √[nᵒ/(n+1)] 
@@ -688,13 +688,13 @@ Now we can describe the distribution in terms of the average quantum number:
       √[nᵒm↓]p↓ = p
       p = √[nᵒm↓]p↓
 
-##<a name="32"></a> ξ
+##<a name="33"></a> ξ
 The non-dimensional displacement, ξ.
 
     ξ² ≡ mω/ħ x²   # A.1b
     x² = ħ/(mω) ξ²
 
-##<a name="33"></a> Aₙ
+##<a name="34"></a> Aₙ
 The Normalization Constant, Aₙ:
 
     Aₙ ≡ 1/√[2ⁿn!√π]
@@ -722,7 +722,7 @@ The Normalization Constant, Aₙ:
     # Use these:
     Aₘ = √[2m↑]Aₘ↑ = √[½m↓]Aₘ↓
 
-##<a name="34"></a> ℋₙ
+##<a name="35"></a> ℋₙ
 The Hermite polynomial:
 
     ℋₙ[ξ] ≡ (-1)ⁿ e[ξ²] Dᵧⁿ e[-ξ²]   # A.3, this is "physicists' Hermite polynomials" in Wikipedia.
@@ -784,7 +784,7 @@ The Hermite polynomial:
     Dᵧ ℋₙ[ξ] = 2nℋₙ-₁[ξ]           = ℋₙ↓[ξ]/(½n↓)
     ξℋₙ[ξ]   = ½ℋₙ+₁[ξ] + nℋₙ-₁[ξ] = ½(ℋₙ↑[ξ] + ℋₙ↓[ξ]/(½n↓))
 
-##<a name="35"></a> Ψₙ
+##<a name="36"></a> Ψₙ
 Please accept the EigenState of the Simple Harmonic Oscillator Ψₙ as given by Liboff's book in page 189.
 The EigenState Ψₙ:
 
@@ -803,7 +803,7 @@ The Problem To Be Solved
 TODO: I just jumped from the above to the calculation of Δ²x !?
 Will say something like ΣΣuₙvₘ = (Σuₙ)(Σvₙ)
 
-##<a name="36"></a> ξΨₘ
+##<a name="37"></a> ξΨₘ
 Motivation: I will be calculating <Ψ|ξ|Ψ> later.
 
     ξΨₘ = ½Aₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
@@ -814,7 +814,7 @@ Motivation: I will be calculating <Ψ|ξ|Ψ> later.
       Aₘ ½(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
       ½Aₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
 
-##<a name="37"></a> &lt;ξ₀&gt;
+##<a name="38"></a> &lt;ξ₀&gt;
 Evaluation of `<ξ₀>`:
 
     <ξ₀> = <Ψ₀|ξ|Ψ₀>             # 7.14a
@@ -838,7 +838,7 @@ Evaluation of `<ξ₀>`:
     <ξ₀> = √[2nᵒ]
     <ξ₀>² = 2nᵒ   # OK, need time development
 
-##<a name="38"></a> ΦAℋ↓/½n↓=Φ↥/√½n↓Φ↓Ψ↓
+##<a name="39"></a> ΦAℋ↓/½n↓=Φ↥/√½n↓Φ↓Ψ↓
 
     ΦAℋ↓/½n↓
     Φ√[½n↓]A↓ℋ↓/½n↓   # A=√[½n↓]A↓
@@ -847,7 +847,7 @@ Evaluation of `<ξ₀>`:
     Φ↥/√½n↓ Φ↓A↓ℋ↓
     Φ↥/√½n↓ Φ↓Ψ↓
 
-##<a name="39"></a> ΦAℋ↑=Φ↧√2n↑Φ↑Ψ↑
+##<a name="40"></a> ΦAℋ↑=Φ↧√2n↑Φ↑Ψ↑
 
     ΦAℋ↑
     Φ√2n↑A↑ℋ↑   # A=√[2n↑]A↑
@@ -856,7 +856,7 @@ Evaluation of `<ξ₀>`:
     Φ↧√2n↑ Φ↑A↑ℋ↑
     Φ↧√2n↑ Φ↑Ψ↑
 
-##<a name="40"></a> p↑p=√[nᵒ/n↑]P
+##<a name="41"></a> p↑p=√[nᵒ/n↑]P
 
     p↑p
     √[nᵒⁿ+ⁱe[-nᵒ]/(n+1)!] p
@@ -866,7 +866,7 @@ Evaluation of `<ξ₀>`:
     √[nᵒ/n₁]P
     √[nᵒ/n↑]P
 
-##<a name="41"></a> p↓p=P/√[n↓nᵒ]
+##<a name="42"></a> p↓p=P/√[n↓nᵒ]
 
    p↓p
     √[nᵒⁿ-ⁱe[-nᵒ]/(n-1)!] p
@@ -876,7 +876,7 @@ Evaluation of `<ξ₀>`:
     P/√[n-₁nᵒ]
     P/√[n↓nᵒ]
 
-##<a name="42"></a> &lt;ξₜ&gt;
+##<a name="43"></a> &lt;ξₜ&gt;
 Evaluation of `<ξₜ>`:
 
     <ξₜ> = <Ψ|ξ|Ψ>
@@ -902,7 +902,7 @@ Evaluation of `<ξₜ>`:
     <ξₜ>² = 2nᵒ:Cosine²[nwt]
     # This time I got Cosine... Why?  Not careful enough with φ↥ and φ↧?
 
-##<a name="43"></a> &lt;ξ²&gt;
+##<a name="44"></a> &lt;ξ²&gt;
 TODO: `<ξ²>`:
 
     # And who wants to work with this mess?
@@ -934,7 +934,7 @@ TODO: `<ξ²>`:
     <ξ²> = ½ + 2nᵒc²₁                                                        # Pythagoras
     <ξ²> = ½ + 2nᵒ:Cosine²[nwt]
 
-##<a name="44"></a> Results
+##<a name="45"></a> Results
 7.5 Results:
 
     Δ²ξ = <ξ²> - <ξ>²

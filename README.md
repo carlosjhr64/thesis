@@ -36,7 +36,9 @@ D[xˣ]=(L[x]+1)xˣ            # Prefer the form: D[u]=f(u)u
 > By "paper" I mean this thesis, this work.
 > We used to write on this thing called "paper".
 
-> You might want to skip right to the [full monty](FULLMONTY.md), work in progress.
+> There were a lot of copy errors and a couple of actual errors in my original thesis.
+> You might want to skip right to the [full monty](FULLMONTY.md), work in progress,
+> where I try to solve the problem without skipping any steps.
 
 ## ABSTRACT
 

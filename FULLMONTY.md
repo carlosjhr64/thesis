@@ -36,25 +36,44 @@ it's a good warmup and demonstrates my notation.
 [p↓p=P/√[n↓nᵒ]](#41) | [&lt;ξₜ&gt;](#42) | [&lt;ξ²&gt;](#43) | [Results](#44) | 
 <!-- TOC END -->
 
-##<a name="1"></a> {u,v}
+## Expressions
+This file is written in [Markdown](http://en.wikipedia.org/wiki/Markdown) format.
+Proper mathematical [Expressions](http://en.wikipedia.org/wiki/Expression_%28mathematics%29)
+will start with four spaces and end with either a newline or a pound sign, `#`.
+Everything else is commentary.
+
+
+##<a name="1"></a> {u,v,w}
 Arbitrary symbols:
 
-     {u}         # I conjure up u of any type.
-     v≡u → v=u   # If I define v as u, then v is u, capiche?
-     u≡u         # So I tell you things are themselves.
-     u=u         # Then you accept things are themselves.
+     {u,v}           # I conjure up u and v of any type.
+     w≡v → w=v       # If I define w as v, then w is v, capiche?
+     u≡u             # So I tell you things are themselves.
+     u=u             # Then you accept things are themselves.
+     w=v,v=u → w=u   # Transitive Property of Equality.
 
 ##<a name="2"></a> Precedence rules
+The following precedence rules are in order:
 
-    uuu ≡ ((uu)u)     # This is just the usual way we think of expressions.
-    u u u ≡ (u(uu))   # This is to disambiguate things like "Σ ab" which means "Σ[ab]", not "Σ[a]b".
-    # Modifiers like subscripts, superscripts, factorial, complex conjugate, arrow operators.
-    u!u ≡ (u!)u       # Modifiers bind to the left!
-    u½u ≡ u(½u)       # Fractions bind to the right!
-    u2u ≡ u(2u)       # Literal digits bind to the right!
+    u⇤u ≡ (u⇤)u       # Left binding operator.
+    u⇥v ≡ u(⇥v)       # Right binding operator.
+    u v w ≡ (u(vw))   # This is to disambiguate things like "Σ uv" which means "Σ[uv]", not "Σ[u]v".
+    uvw ≡ ((uv)w)     # This is just the usual way we think of expressions.
+
+    (⇤){(ᵛ),(ᵥ)}   # Superscripts and subscripts are left binding operators.
+    (⇤){(!)}       # Factorial is a left binding operator.
+
+    (⇥){(2),(½)}   # 2 and ½ bind right.  I don't think I use any other literal values.
+
+    # Examples:
+    u2vw = (u(2v))w
+    u½vw = (u(½v))w
+    u ½ v w = u(½(vw))
+    u½ v w = (u½)(vw)   # But this would be weird, I would not write it this way.
+    u!vw = ((u!)v))w
 
 Some of these rules help compact the notation as it most commonly appears.
-For example, √2π is √[2π], but √nπ is √[n]π.
+For example, √2πx is √[2π]x, but √nπx is √[n]πx.
 
 ##<a name="3"></a> ℕ
 Natural (Counting) numbers:

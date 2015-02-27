@@ -25,15 +25,15 @@ it's a good warmup and demonstrates my notation.
 
 [Expressions](#1) | [{u,v,w}](#2) | [Precedence rules](#3) | [ℕ](#4) | [ℤ and ℚ](#5) | [uᵥ](#6) | [Π](#7) | [uᵛ](#8)
 
-[√u](#9) | [|u|](#10) | [Σ](#11) | [Arrow operators](#12) | [Limit function](#13) | [ℝ](#14) | [ℂ](#15) | [i](#16)
+[√u](#9) | [|u|](#10) | [Σ](#11) | [Arrow operators](#12) | [Σu↑](#13) | [Σu↓](#14) | [𝐿](#15) | [ℝ](#16)
 
-[†](#17) | [&lt;u&gt;](#18) | [n!](#19) | [nᵥ](#20) | [(ⁿₘ)](#21) | [Sine, Cosine, and Exponential](#22) | [Δ²](#23) | [Pₙ](#24)
+[ℂ](#17) | [i](#18) | [†](#19) | [&lt;u&gt;](#20) | [n!](#21) | [nᵥ](#22) | [(ⁿₘ)](#23) | [Sine, Cosine, and Exponential](#24)
 
-[pₙ](#25) | [Fundamental values](#26) | [Derived values](#27) | [Φᵗₙ](#28) | [Φ→φ](#29) | [nᵒ](#30) | [L Σ[n(n-1)Pₙ]](#31) | [p→P](#32)
+[Δ²](#25) | [𝑃ₙ](#26) | [pₙ](#27) | [Fundamental values](#28) | [Derived values](#29) | [Φᵗₙ](#30) | [Φ→φ](#31) | [nᵒ](#32)
 
-[ξ](#33) | [𝐴ₙ](#34) | [ℋₙ](#35) | [Ψₙ](#36) | [ξΨₘ](#37) | [&lt;ξ₀&gt;](#38) | [Φ𝐴ℋ↓/½n↓=Φ↥/√½n↓Φ↓Ψ↓](#39) | [Φ𝐴ℋ↑=Φ↧√2n↑Φ↑Ψ↑](#40)
+[𝐿 Σ[n(n-1)𝑃ₙ]](#33) | [p→𝑃](#34) | [ξ](#35) | [𝐴ₙ](#36) | [ℋₙ](#37) | [Ψₙ](#38) | [ξΨₘ](#39) | [&lt;ξ₀&gt;](#40)
 
-[p↑p=√[nᵒ/n↑]P](#41) | [p↓p=P/√[n↓nᵒ]](#42) | [&lt;ξₜ&gt;](#43) | [&lt;ξ²&gt;](#44) | [Results](#45) | 
+[Φ𝐴ℋ↓/½n↓=Φ↥/√½n↓Φ↓Ψ↓](#41) | [Φ𝐴ℋ↑=Φ↧√2n↑Φ↑Ψ↑](#42) | [p↑p=√[nᵒ/n↑]𝑃](#43) | [p↓p=𝑃/√[n↓nᵒ]](#44) | [&lt;ξₜ&gt;](#45) | [&lt;ξ²&gt;](#46) | [Results](#47) | 
 <!-- TOC END -->
 
 ##<a name="1"></a> Expressions
@@ -167,35 +167,36 @@ Arrow Operators on subscripts:
     u↧ ≡ u₀↓   # Step down from "ground".
     u↧ = u-₁
 
-## Σu↑
+##<a name="13"></a> Σu↑
 
     Σₙuₙ = +u₀ + Σₙuₙ+₁ - u[N]
     Σₙuₙ = +u₀ + Σₙu↑ - u[N]
 
     Σuₙ = u₀ + Σu↑
 
-## Σu↓
+##<a name="14"></a> Σu↓
 
     Σₙuₙ = -u-₁ + Σₙuₙ-₁ + u[M]
     Σₙuₙ = -u-₁ + Σₙu↓ + u[M]
 
     Σuₙ = -u-₁ + Σu↓
 
-##<a name="13"></a> Limit function
+##<a name="15"></a> 𝐿
+The limit fuction, `𝐿`.
 N is very, very, big!
 I want try to keep things simple and
 avoid a full treatment of limits.
 Let's try a simple limit function:
 
-    L Σuₙ ≡ L Σₙuₙ               # L truncates the series to down to N elements.
-    L[u+v] ≡ L[u] + L[v]
-    L[u] ≡ (|u| ≥ 1/N²)? u : 0   # L ignores very small numbers.
+    𝐿 Σuₙ ≡ 𝐿 Σₙuₙ               # 𝐿 truncates the series to down to N elements.
+    𝐿[u+v] ≡ 𝐿[u] + 𝐿[v]
+    𝐿[u] ≡ (|u| ≥ 1/N²)? u : 0   # 𝐿 ignores very small numbers.
 
-    L Σₙ[1/N] = Σₙ L[1/N]
+    𝐿 Σₙ[1/N] = Σₙ 𝐿[1/N]
       = Σₙ[1/N]
       = 1   # Notice that this would have been 0 had I set the threshold to ≥ 1/N.
 
-    L Σₙ[1/N²] = Σₙ L[1/N²]
+    𝐿 Σₙ[1/N²] = Σₙ 𝐿[1/N²]
       = Σₙ 0
       = 0   # Is this acceptable?
 
@@ -209,23 +210,23 @@ As N doubles, the sum Σₙ[1/N²] halves.
 So Σₙ[1/N²] does approach zero as N goes on to infinity.
 For the following examples, I use fatorial N! and exponential function e[N]:
 
-    L[u+1/N²] = u
-    L[u+e[N]/N!] = u    # Try N≥10.
-    L[u+(v^N)/N!] = u   # N depends on v, but for some N it's true.
-    L[u+e[-N]] = u      # Obviously, I hope.
+    𝐿[u+1/N²] = u
+    𝐿[u+e[N]/N!] = u    # Try N≥10.
+    𝐿[u+(v^N)/N!] = u   # N depends on v, but for some N it's true.
+    𝐿[u+e[-N]] = u      # Obviously, I hope.
 
-    |u| ≤ 1/N, |v| ≤ 1/N  ⇒  |uv| ≤ 1/N², L[uv]=0
+    |u| ≤ 1/N, |v| ≤ 1/N  ⇒  |uv| ≤ 1/N², 𝐿[uv]=0
 
 The Float::EPSILON for Ruby on my machine is about 2.22e-16.
-So "L" puts a limit on N on my machine of about 6.71e+7 (2.22e-16 ~ 1/(6.71e+7)^2).
+So `𝐿` puts a limit on N on my machine of about 6.71e+7 (2.22e-16 ~ 1/(6.71e+7)^2).
 
-##<a name="14"></a> ℝ
+##<a name="16"></a> ℝ
 For the purpose of this "paper", ℝ just needs to include the series I'm working with.
 That is ℝ augments ℚ with Σuₙ as follows:
 
-    ℚ{uₙ: |uₙ|≤1/n² ← n≥N}, v=Σuₙ ↔ ℝ{v}, ℚ{L[Σₙuₙ]}
+    ℚ{uₙ: |uₙ|≤1/n² ← n≥N}, v=Σuₙ ↔ ℝ{v}, ℚ{𝐿[Σₙuₙ]}
 
-So I just need ℝ to work with L[Σuₙ].
+So I just need `ℝ` to work with `𝐿[Σuₙ]`.
 ℝ has well defined `+` and `*`:
 
     uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙvₘ
@@ -263,7 +264,7 @@ Quick plausibility check:
 
 I'll be using ΣΣ[uₙvₘ]=Σ[uₙ]Σ[vₙ] later.
 
-##<a name="15"></a> ℂ
+##<a name="17"></a> ℂ
 Complex numbers:
 
     ℂ ≡ (ℝ,ℝ)
@@ -272,7 +273,7 @@ Complex numbers:
       (uᵣ,uᵢ)(vᵣ,vᵢ)≡(u²ᵣ-v²ᵢ,uᵣvᵢ+uᵢvᵣ)
     ℂ{α,β}
 
-##<a name="16"></a> i
+##<a name="18"></a> i
 The Imaginary number i:
 
     i ≡ (0,1)
@@ -284,14 +285,14 @@ The Imaginary number i:
     (u,v) = u+iv
     i² = -1
 
-##<a name="17"></a> †
+##<a name="19"></a> †
 Complex conjugation:
 
     (u,v)†  ≡ (u,-v)                 # Think † means adjoin? Go to the beginning where I define ≡.
     (u+iv)† = u-iv
     e[i]† = (C+iS)† = C-iS = e[-i]   # what it does to e
 
-##<a name="18"></a> &lt;u&gt;
+##<a name="20"></a> &lt;u&gt;
 Dirac notation:
 
     <αu|βu> ≡ ΣΣ (αuₙ)†(βuₘ)
@@ -323,7 +324,7 @@ Dirac notation:
     <α> = α†α
     # TODO: What we mean by average value,  <u> ≡ Σₙuₙ/N ?
 
-##<a name="19"></a> n!
+##<a name="21"></a> n!
 Factorial:
 
     n! ≡ Π[1,n]{u|u}   # 1*2*3*...*n
@@ -358,7 +359,7 @@ Factorial:
       -1*0
       0   # In general 1/u! = 0 ← ℤ{u<0}
 
-##<a name="20"></a> nᵥ
+##<a name="22"></a> nᵥ
 I'd like to make the following refinement in ℕ,
 Whatchamacallit forward:
 
@@ -416,7 +417,7 @@ Whatchamacallit with Factorial:
     n⇈n! = (n+2)!
     n⇊n! = (n-2)!
 
-##<a name="21"></a> (ⁿₘ)
+##<a name="23"></a> (ⁿₘ)
 [Binomial coefficient](http://en.wikipedia.org/wiki/Binomial_coefficient),
 n choose m:
 
@@ -429,7 +430,7 @@ n choose m:
       n!/(m!n!n-ₘ)
       1/(m!n-ₘ)
 
-##<a name="22"></a> Sine, Cosine, and Exponential
+##<a name="24"></a> Sine, Cosine, and Exponential
 [Trigonometric](http://en.wikipedia.org/wiki/Trigonometric_functions#Series_definitions) and
 [Exponential](http://en.wikipedia.org/wiki/Exponential_function#Formal_definition)
 functions series definitions:
@@ -477,7 +478,7 @@ Known properties of e:
     e[-iu] = C[u]-iS[u]
     e[0] = 1
 
-##<a name="23"></a> Δ²
+##<a name="25"></a> Δ²
 Measure of uncertainty defined (4.1a):
 
     Δ²[u] ≡ <(u - <u>)²>
@@ -496,26 +497,26 @@ Measure of uncertainty (4.1b):
 
     Δ²u = <u²> - <u>²
 
-##<a name="24"></a> Pₙ
-P is the [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution):
+##<a name="26"></a> 𝑃ₙ
+`𝑃` is the [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution):
 
-    Pₙ ≡ uⁿe[-u]/n!
-    Σ Pₙ = 1
-    0 ≤ Pₙ ≤ 1
-    <u> = Σ Pₙuₙ
+    𝑃ₙ ≡ uⁿe[-u]/n!
+    Σ 𝑃ₙ = 1
+    0 ≤ 𝑃ₙ ≤ 1
+    <u> = Σ 𝑃ₙuₙ
 
-##<a name="25"></a> pₙ
+##<a name="27"></a> pₙ
 
     pₙ ≡ √[uⁿe[-u]/n!]
-    pₙ†pₙ = Pₙ
+    pₙ†pₙ = 𝑃ₙ
     # Proof
       pₙ†pₙ
       √[uⁿe[-u]/n!]†√[uⁿe[-u]/n!]
       √[uⁿe[-u]/n!]√[uⁿe[-u]/n!]   # It's just all real.
       uⁿe[-u]/n!
-      Pₙ
+      𝑃ₙ
 
-##<a name="26"></a> Fundamental values
+##<a name="28"></a> Fundamental values
 I think the point here is that these values are "measured" by "experiment" in "some way".
 
     ℝ{m}   # Mass
@@ -536,7 +537,7 @@ of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi):
       Σ 8/((4n+1)(4n+3))
         |8/((4n+1)(4n+3))| ≤ |8/(16n²)| ≤ |1/(2n²)| ≤ 1/n² ← n≥N   # Fits given definition of ℝ.
 
-##<a name="27"></a> Derived values
+##<a name="29"></a> Derived values
 
     ω² ≡ k/m   # Angular frequency
     ω = √[k/m]
@@ -547,7 +548,7 @@ TODO: need to explain ħ.
 
     Eₙ = ωħ(n+½)   # 3.2: Energy eigen-value
 
-##<a name="28"></a> Φᵗₙ
+##<a name="30"></a> Φᵗₙ
 7.17 TODO: why -iEₙt/ħ and not +iEₙt/ħ?
 Time evolution:
 
@@ -567,7 +568,7 @@ Time evolution:
     Φⁱ = e[-iω(n+½)]
     Φᵗ = (Φⁱ)^t = e[t * (-iω(n+½))] = e[-iω(n+½)t]   # Just to show that the notation makes sense.
 
-##<a name="29"></a> Φ→φ
+##<a name="31"></a> Φ→φ
 
     Φₙ†Φₙ+₁ = φₙ+₁-ₙ = φ₁
     φ↥ ≡ φ₀↑ = φ₁   # This will make notation very consistent later.
@@ -605,114 +606,114 @@ Short for Sine(nωt) and Cosine(nωt):
     φ-₂ + φ₂ = 2c₂
     φ↧↓ + φ↥↑ = 2c₂   # And remember this one!
 
-##<a name="30"></a> nᵒ
+##<a name="32"></a> nᵒ
 Average Quantum number nᵒ
 
-    <n> = <n|pₙ†npₙ|m> = Σ npₙpₙ = Σ nPₙ   # only n=m terms contribute
+    <n> = <n|pₙ†npₙ|m> = Σ npₙpₙ = Σ n𝑃ₙ   # only n=m terms contribute
 
-    nᵒ ≡ L <n>
-    nᵒ = L Σ nPₙ = L Σₙ nPₙ   # Remember that L truncates the series.
+    nᵒ ≡ 𝐿 <n>
+    nᵒ = 𝐿 Σ n𝑃ₙ = 𝐿 Σₙ n𝑃ₙ   # Remember that 𝐿 truncates the series.
 
-    Σₙ nPₙ = L Σₙ nuⁿe[-u]/n!                    # Just by definition of Pₙ.
+    Σₙ n𝑃ₙ = 𝐿 Σₙ nuⁿe[-u]/n!                    # Just by definition of 𝑃ₙ.
      = Σ[0,M]{n|nuⁿe[-u]/n!}                     # Definition of Σₙ.
      = 0 + Σ[1,M]{n|nuⁿe[-u]/n!}                 # The first element in the series is just zero.
      = Σ[1,M]{n|uⁿe[-u]/(n-1)!}                  # Have the n factor absorbed by the factorial.
      = Σ[0,M-1]{n|u[n+1]e[-u]/n!}                # Shift.
      = uΣ[0,M-1]{n|uⁿe[-u]/n!}                   # Take out a factor of u.
      = u(Σ[0,M]{n|uⁿe[-u]/n!} - (u^M)e[-M]/M!)   # Add and subtract the an Nth element (which is M).
-     = u(ΣₙPₙ) - u(u^M)e[-M]/M!                  # Definition of Σₙ and Pₙ.
+     = u(Σₙ𝑃ₙ) - u(u^M)e[-M]/M!                  # Definition of Σₙ and 𝑃ₙ.
      = u(1) - u^(M+1)e[-M]/M!                    # Poisson distribution sums up to one.
      = u - u^(M+1)e[-M]/M!
 
-    nᵒ = L[u - u^(M+1)e[-M]/M!]
-    nᵒ = L[u] - L[u^(M+1)e[-M]/M!]
+    nᵒ = 𝐿[u - u^(M+1)e[-M]/M!]
+    nᵒ = 𝐿[u] - 𝐿[u^(M+1)e[-M]/M!]
     nᵒ = u - 0
     nᵒ = u   # As expected.  :)
 
-##<a name="31"></a> L Σ[n(n-1)Pₙ]
+##<a name="33"></a> 𝐿 Σ[n(n-1)𝑃ₙ]
 
-    L Σ n(n-1)Pₙ
-    L Σₙ n(n-1)Pₙ
-    L Σₙ 1/n-₂ uⁿe[-u]/n!
-    L Σₙ uⁿe[-u]/(n-2)!
-    L Σₙ u² u^(n-2)e[-u]/(n-2)!
-    L u² Σₙ u^(n-2)e[-u]/(n-2)!
-    L u² Σ[0,M]{n|u^(n-2)e[-u]/(n-2)!}
-    L u² Σ[-2,M-2]{n|uⁿe[-u]/n!}
-    L u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|uⁿe[-u]/n!})
-    L u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|Pₙ})
-    u²(L[e[-u]/(u²(-2)!)] + L[e[-u]/(u(-1)!)] + L[Σ[0,M-2]{n|Pₙ}])
-    u²(0 + 0 + L[Σ[0,M-2]{n|Pₙ}])   # 1/u! = 0 if integer u < 0
-    u²(L[Σ[0,M]{n|Pₙ} - P[M-1] - P[M]])
-    u²(L[ΣPₙ - P[M-1] - P[M]] - P[M+1] - ⋯)   # Re-consider the infinite series.
-    u²(L[1 - P[M-1] - P[M]] - P[M+1] - ⋯)     # ΣPₙ = 1
-    u²(1 - L[P[M-1] - P[M]] - P[M+1] - ⋯])
-    # To L, for large enough M, the trailing sequence are all zeroes.
+    𝐿 Σ n(n-1)𝑃ₙ
+    𝐿 Σₙ n(n-1)𝑃ₙ
+    𝐿 Σₙ 1/n-₂ uⁿe[-u]/n!
+    𝐿 Σₙ uⁿe[-u]/(n-2)!
+    𝐿 Σₙ u² u^(n-2)e[-u]/(n-2)!
+    𝐿 u² Σₙ u^(n-2)e[-u]/(n-2)!
+    𝐿 u² Σ[0,M]{n|u^(n-2)e[-u]/(n-2)!}
+    𝐿 u² Σ[-2,M-2]{n|uⁿe[-u]/n!}
+    𝐿 u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|uⁿe[-u]/n!})
+    𝐿 u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|𝑃ₙ})
+    u²(𝐿[e[-u]/(u²(-2)!)] + 𝐿[e[-u]/(u(-1)!)] + 𝐿[Σ[0,M-2]{n|𝑃ₙ}])
+    u²(0 + 0 + 𝐿[Σ[0,M-2]{n|𝑃ₙ}])   # 1/u! = 0 if integer u < 0
+    u²(𝐿[Σ[0,M]{n|𝑃ₙ} - 𝑃[M-1] - 𝑃[M]])
+    u²(𝐿[Σ𝑃ₙ - 𝑃[M-1] - 𝑃[M]] - 𝑃[M+1] - ⋯)   # Re-consider the infinite series.
+    u²(𝐿[1 - 𝑃[M-1] - 𝑃[M]] - 𝑃[M+1] - ⋯)     # Σ𝑃ₙ = 1
+    u²(1 - 𝐿[𝑃[M-1] - 𝑃[M]] - 𝑃[M+1] - ⋯])
+    # To 𝐿, for large enough M, the trailing sequence are all zeroes.
     u²(1 - Σ0)
     u²(1-0)
     u²*1
     u²
 
-    nᵒ² = L Σ[n(n-1)Pₙ]   # b/c nᵒ=u, so u²=nᵒ²
+    nᵒ² = 𝐿 Σ[n(n-1)𝑃ₙ]   # b/c nᵒ=u, so u²=nᵒ²
 
 Now we can describe the distribution in terms of the average quantum number:
 
-    Pₙ = nᵒⁿe[-nᵒ]/n!
+    𝑃ₙ = nᵒⁿe[-nᵒ]/n!
     pₙ = √[nᵒⁿe[-nᵒ]/n!]
 
-##<a name="32"></a> p→P
+##<a name="34"></a> p→𝑃
 
     pₙpₙ+₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n+1)e[-nᵒ]/(n+1)!]
            = √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!] √[nᵒ/(n+1)] 
            = pₙ pₙ √[nᵒ/(n+1)] 
-           = Pₙ √[nᵒ/(n+1)] 
-           = √[nᵒ/(n+1)]Pₙ 
-    pₙpₙ+₁ = √nᵒPₙ/√n₁   # Using Whatchamacallit
-    pp↑ = √nᵒPₙ/√n↑      # And Arrow notation
+           = 𝑃ₙ √[nᵒ/(n+1)] 
+           = √[nᵒ/(n+1)]𝑃ₙ 
+    pₙpₙ+₁ = √nᵒ𝑃ₙ/√n₁   # Using Whatchamacallit
+    pp↑ = √nᵒ𝑃ₙ/√n↑      # And Arrow notation
 
     pₙpₙ-₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-1)e[-nᵒ]/(n-1)!]
            = √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!] √[n/nᵒ] 
            = pₙ pₙ √[n/nᵒ] 
-           = Pₙ √[n/nᵒ] 
-           = √[n/nᵒ]Pₙ 
-    pₙpₙ-₁ = Pₙ/√[nᵒn-₁]   # Using Whatchamacallit
-    pp↓ = Pₙ/√[nᵒn↓]       # And Arrow notation
+           = 𝑃ₙ √[n/nᵒ] 
+           = √[n/nᵒ]𝑃ₙ 
+    pₙpₙ-₁ = 𝑃ₙ/√[nᵒn-₁]   # Using Whatchamacallit
+    pp↓ = 𝑃ₙ/√[nᵒn↓]       # And Arrow notation
 
     pₙpₙ+₂ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n+2)e[-nᵒ]/(n+2)!]
            = √[nᵒ²/((n+1)(n+2))] √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!]
            = nᵒ/√[(n+1)(n+2)] pₙpₙ
-           = nᵒ/√[(n+1)(n+2)] Pₙ
-    pₙpₙ+₂ = nᵒPₙ/√n₂   # Using Whatchamacallit
-    pₙpₙ+₂ = nᵒPₙ/√n⇈   # Using Arrow
+           = nᵒ/√[(n+1)(n+2)] 𝑃ₙ
+    pₙpₙ+₂ = nᵒ𝑃ₙ/√n₂   # Using Whatchamacallit
+    pₙpₙ+₂ = nᵒ𝑃ₙ/√n⇈   # Using Arrow
 
     pₙpₙ-₂ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-2)e[-nᵒ]/(n-2)!]
            = √[(n-1)n/nᵒ²] √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!]
            = √[(n-1)n]/nᵒ pₙpₙ
-           = √[(n-1)n]/nᵒ Pₙ
-    pₙpₙ-₂ = Pₙ/(nᵒ√n-₂)   # Using Whatchamacallit
-    pₙpₙ-₂ = Pₙ/(nᵒ√n⇊)    # Using Arrow
+           = √[(n-1)n]/nᵒ 𝑃ₙ
+    pₙpₙ-₂ = 𝑃ₙ/(nᵒ√n-₂)   # Using Whatchamacallit
+    pₙpₙ-₂ = 𝑃ₙ/(nᵒ√n⇊)    # Using Arrow
 
     p = √m↑p↑/√nᵒ
     # Proof:
-      pp↑ = √nᵒP/√m↑
+      pp↑ = √nᵒ𝑃/√m↑
       p↑ = √nᵒp/√m↑
       √m↑p↑/√nᵒ = p
       p = √m↑p↑/√nᵒ
 
     p = √[nᵒm↓]p↓  
     # Proof:
-      pp↓ = P/√[nᵒm↓]
+      pp↓ = 𝑃/√[nᵒm↓]
       p↓ = p/√[nᵒm↓]
       √[nᵒm↓]p↓ = p
       p = √[nᵒm↓]p↓
 
-##<a name="33"></a> ξ
+##<a name="35"></a> ξ
 The non-dimensional displacement, ξ.
 
     ξ² ≡ mω/ħ x²   # A.1b
     x² = ħ/(mω) ξ²
 
-##<a name="34"></a> 𝐴ₙ
+##<a name="36"></a> 𝐴ₙ
 The Normalization Constant, 𝐴ₙ:
 
     𝐴ₙ ≡ 1/√[2ⁿn!√π]
@@ -740,7 +741,7 @@ The Normalization Constant, 𝐴ₙ:
     # Use these:
     𝐴ₘ = √[2m↑]𝐴ₘ↑ = √[½m↓]𝐴ₘ↓
 
-##<a name="35"></a> ℋₙ
+##<a name="37"></a> ℋₙ
 The Hermite polynomial:
 
     ℋₙ[ξ] ≡ (-1)ⁿ e[ξ²] Dᵧⁿ e[-ξ²]   # A.3, this is "physicists' Hermite polynomials" in Wikipedia.
@@ -802,7 +803,7 @@ The Hermite polynomial:
     Dᵧ ℋₙ[ξ] = 2nℋₙ-₁[ξ]           = ℋₙ↓[ξ]/(½n↓)
     ξℋₙ[ξ]   = ½ℋₙ+₁[ξ] + nℋₙ-₁[ξ] = ½(ℋₙ↑[ξ] + ℋₙ↓[ξ]/(½n↓))
 
-##<a name="36"></a> Ψₙ
+##<a name="38"></a> Ψₙ
 Please accept the EigenState of the Simple Harmonic Oscillator Ψₙ as given by Liboff's book in page 189.
 The EigenState Ψₙ:
 
@@ -811,7 +812,7 @@ The EigenState Ψₙ:
 
 The State Function Ψ:
 
-    Ψ[x] = Σ pₙ Ψₙ[x]   # TODO: or is it Σ Pₙ Ψₙ[x] ? Check Σ pₙ = 1 ?
+    Ψ[x] = Σ pₙ Ψₙ[x]   # TODO: or is it Σ 𝑃ₙ Ψₙ[x] ? Check Σ pₙ = 1 ?
 
 The Problem To Be Solved
 
@@ -821,7 +822,7 @@ The Problem To Be Solved
 TODO: I just jumped from the above to the calculation of Δ²x !?
 Will say something like ΣΣuₙvₘ = (Σuₙ)(Σvₙ)
 
-##<a name="37"></a> ξΨₘ
+##<a name="39"></a> ξΨₘ
 Motivation: I will be calculating <Ψ|ξ|Ψ> later.
 
     ξΨₘ = ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
@@ -832,7 +833,7 @@ Motivation: I will be calculating <Ψ|ξ|Ψ> later.
       𝐴ₘ ½(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
       ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
 
-##<a name="38"></a> &lt;ξ₀&gt;
+##<a name="40"></a> &lt;ξ₀&gt;
 Evaluation of `<ξ₀>`:
 
     <ξ₀> = <Ψ₀|ξ|Ψ₀>             # 7.14a
@@ -849,14 +850,14 @@ Evaluation of `<ξ₀>`:
     <ξ₀> = 1/√[2nᵒ]ΣΣ[Ψₙ†pₙ m↑pₘ↑𝐴ₘ↑ℋₘ↑[ξ]] + √[½nᵒ]ΣΣ[Ψₙ†pₙ pₘ↓𝐴ₘ↓ℋₘ↓[ξ]]
     <ξ₀> = 1/√[2nᵒ]ΣΣ[Ψₙ†pₙ m↑ pₘ↑Ψₘ↑] + √[½nᵒ]ΣΣ[Ψₙ†pₙ pₘ↓Ψₘ↓]
     <ξ₀> = 1/√[2nᵒ]Σ[Ψₙ†pₙ n pₙΨₙ] + √[½nᵒ]Σ[Ψₙ†pₙpₙΨₙ]           # Orthogonal states
-    <ξ₀> = 1/√[2nᵒ]ΣΣ[nPₙ] + √[½nᵒ]Σ[Pₙ]                          # Ψₙ†Ψₙ=1, pₙpₙ=Pₙ
+    <ξ₀> = 1/√[2nᵒ]ΣΣ[n𝑃ₙ] + √[½nᵒ]Σ[𝑃ₙ]                          # Ψₙ†Ψₙ=1, pₙpₙ=𝑃ₙ
     <ξ₀> = 1/√[2nᵒ]nᵒ + √[½nᵒ]
     <ξ₀> = √[½nᵒ] + √[½nᵒ]
     <ξ₀> = 2√[½nᵒ]
     <ξ₀> = √[2nᵒ]
     <ξ₀>² = 2nᵒ   # OK, need time development
 
-##<a name="39"></a> Φ𝐴ℋ↓/½n↓=Φ↥/√½n↓Φ↓Ψ↓
+##<a name="41"></a> Φ𝐴ℋ↓/½n↓=Φ↥/√½n↓Φ↓Ψ↓
 
     Φ𝐴ℋ↓/½n↓
     Φ√[½n↓]𝐴↓ℋ↓/½n↓   # 𝐴=√[½n↓]𝐴↓
@@ -865,7 +866,7 @@ Evaluation of `<ξ₀>`:
     Φ↥/√½n↓ Φ↓𝐴↓ℋ↓
     Φ↥/√½n↓ Φ↓Ψ↓
 
-##<a name="40"></a> Φ𝐴ℋ↑=Φ↧√2n↑Φ↑Ψ↑
+##<a name="42"></a> Φ𝐴ℋ↑=Φ↧√2n↑Φ↑Ψ↑
 
     Φ𝐴ℋ↑
     Φ√2n↑𝐴↑ℋ↑   # 𝐴=√[2n↑]𝐴↑
@@ -874,27 +875,27 @@ Evaluation of `<ξ₀>`:
     Φ↧√2n↑ Φ↑𝐴↑ℋ↑
     Φ↧√2n↑ Φ↑Ψ↑
 
-##<a name="41"></a> p↑p=√[nᵒ/n↑]P
+##<a name="43"></a> p↑p=√[nᵒ/n↑]𝑃
 
     p↑p
     √[nᵒⁿ+ⁱe[-nᵒ]/(n+1)!] p
     √[nᵒ/(n+1) nᵒⁿe[-nᵒ]/n!] p
     √[nᵒ/(n+1)]p p
-    √[nᵒ/(n+1)]P
-    √[nᵒ/n₁]P
-    √[nᵒ/n↑]P
+    √[nᵒ/(n+1)]𝑃
+    √[nᵒ/n₁]𝑃
+    √[nᵒ/n↑]𝑃
 
-##<a name="42"></a> p↓p=P/√[n↓nᵒ]
+##<a name="44"></a> p↓p=𝑃/√[n↓nᵒ]
 
    p↓p
     √[nᵒⁿ-ⁱe[-nᵒ]/(n-1)!] p
     √[(n/nᵒ) nᵒe[-nᵒ]/n!] p
     √[n/nᵒ] p p
-    √[1/(n-₁nᵒ)]P
-    P/√[n-₁nᵒ]
-    P/√[n↓nᵒ]
+    √[1/(n-₁nᵒ)]𝑃
+    𝑃/√[n-₁nᵒ]
+    𝑃/√[n↓nᵒ]
 
-##<a name="43"></a> &lt;ξₜ&gt;
+##<a name="45"></a> &lt;ξₜ&gt;
 Evaluation of `<ξₜ>`:
 
     <ξₜ> = <Ψ|ξ|Ψ>
@@ -906,12 +907,12 @@ Evaluation of `<ξₜ>`:
     <ξₜ> = ½(Σ[(Φ↑Ψ↑)†p↑]Σ[pΦ↧√2n↑Φ↑Ψ↑] + Σ[(Φ↓Ψ↓)†p↓]Σ[pΦ↥/√½n↓Φ↓Ψ↓])   # TODO: What am I doing here???
     <ξₜ> = ½(Σ[(Φ↑Ψ↑)†p↑pΦ↧√2n↑Φ↑Ψ↑] + Σ[(Φ↓Ψ↓)†p↓pΦ↥/√½n↓Φ↓Ψ↓])         # Orthogonal states
     <ξₜ> = ½(Σ[p↑pΦ↧√2n↑] + Σ[p↓pΦ↥/√½n↓])                               # Normalized states, Ψ†Ψ=1
-    <ξₜ> = ½(Σ[√[nᵒ/n↑]PΦ↧√2n↑] + Σ[PΦ↥/√[n↓nᵒ]/√½n↓])
-    <ξₜ> = ½(Σ[√nᵒPΦ↧√2] + Σ[PΦ↥/√½nᵒ/n↓])
-    <ξₜ> = ½(Σ[√nᵒPΦ↧√2] + Σ[PnΦ↥/√½nᵒ])
-    <ξₜ> = ½(Σ[√2nᵒPΦ↧] + Σ[PnΦ↥/√½nᵒ])
-    <ξₜ> = ½(√2nᵒΦ↧Σ[P] + Φ↥/√½nᵒΣ[Pn])
-    <ξₜ> = ½(√2nᵒΦ↧Σ[P] + Φ↥√[2nᵒ])
+    <ξₜ> = ½(Σ[√[nᵒ/n↑]𝑃Φ↧√2n↑] + Σ[𝑃Φ↥/√[n↓nᵒ]/√½n↓])
+    <ξₜ> = ½(Σ[√nᵒ𝑃Φ↧√2] + Σ[𝑃Φ↥/√½nᵒ/n↓])
+    <ξₜ> = ½(Σ[√nᵒ𝑃Φ↧√2] + Σ[𝑃nΦ↥/√½nᵒ])
+    <ξₜ> = ½(Σ[√2nᵒ𝑃Φ↧] + Σ[𝑃nΦ↥/√½nᵒ])
+    <ξₜ> = ½(√2nᵒΦ↧Σ[𝑃] + Φ↥/√½nᵒΣ[𝑃n])
+    <ξₜ> = ½(√2nᵒΦ↧Σ[𝑃] + Φ↥√[2nᵒ])
     <ξₜ> = ½(√2nᵒΦ↧ + Φ↥√[2nᵒ])
     <ξₜ> = ½√2nᵒ(Φ↧ + Φ↥)
     <ξₜ> = ½√2nᵒ(2c₁)
@@ -920,7 +921,7 @@ Evaluation of `<ξₜ>`:
     <ξₜ>² = 2nᵒ:Cosine²[nwt]
     # This time I got Cosine... Why?  Not careful enough with φ↥ and φ↧?
 
-##<a name="44"></a> &lt;ξ²&gt;
+##<a name="46"></a> &lt;ξ²&gt;
 TODO: `<ξ²>`:
 
     # And who wants to work with this mess?
@@ -934,11 +935,11 @@ TODO: `<ξ²>`:
     <ξ²> = (nᵒ+½) + ½Σ Φ†p (Φ⇊/√n⇊ p⇊ +  Φ⇈√n⇈ p⇈)                           # pretty noted
     <ξ²> = (nᵒ+½) + ½Σ Φ†Φ⇊/√n⇊ pp⇊ +  Φ†Φ⇈√n⇈ pp⇈                           # Distribute
     <ξ²> = (nᵒ+½) + ½Σ φ↧↓/√n⇊ pp⇊ +  φ↥↑√n⇈ pp⇈                             # Φ→φ
-    <ξ²> = (nᵒ+½) + ½Σ φ↧↓/√n⇊ P/(nᵒ√n⇊) +  φ↥↑√n⇈ nᵒP/√n⇈                   # p->P
-    <ξ²> = (nᵒ+½) + ½Σ φ↧↓/n⇊ P/nᵒ +  φ↥↑ nᵒP                                # Simplify
-    <ξ²> = (nᵒ+½) + ½Σ φ↧↓ n(n-1) P/nᵒ +  φ↥↑ nᵒP                            # 1/n⇊ = n(n-1)
-    <ξ²> = (nᵒ+½) + ½(Σ[φ↧↓ n(n-1) P/nᵒ] +  Σ[φ↥↑ nᵒP])                      # Separate sums
-    <ξ²> = (nᵒ+½) + ½(φ↧↓/nᵒΣ[n(n-1)P] +  φ↥↑nᵒΣ[P])                         # Take out the constants
+    <ξ²> = (nᵒ+½) + ½Σ φ↧↓/√n⇊ 𝑃/(nᵒ√n⇊) +  φ↥↑√n⇈ nᵒ𝑃/√n⇈                   # p->𝑃
+    <ξ²> = (nᵒ+½) + ½Σ φ↧↓/n⇊ 𝑃/nᵒ +  φ↥↑ nᵒ𝑃                                # Simplify
+    <ξ²> = (nᵒ+½) + ½Σ φ↧↓ n(n-1) 𝑃/nᵒ +  φ↥↑ nᵒ𝑃                            # 1/n⇊ = n(n-1)
+    <ξ²> = (nᵒ+½) + ½(Σ[φ↧↓ n(n-1) 𝑃/nᵒ] +  Σ[φ↥↑ nᵒ𝑃])                      # Separate sums
+    <ξ²> = (nᵒ+½) + ½(φ↧↓/nᵒΣ[n(n-1)𝑃] +  φ↥↑nᵒΣ[𝑃])                         # Take out the constants
     <ξ²> = (nᵒ+½) + ½(φ↧↓/nᵒ(nᵒ²) +  φ↥↑nᵒ(1))                               # Evaluate sums
     <ξ²> = (nᵒ+½) + ½(φ↧↓nᵒ + φ↥↑nᵒ)                                         # Simplify
     <ξ²> = (nᵒ+½) + ½nᵒ(φ↧↓ + φ↥↑)
@@ -952,7 +953,7 @@ TODO: `<ξ²>`:
     <ξ²> = ½ + 2nᵒc²₁                                                        # Pythagoras
     <ξ²> = ½ + 2nᵒ:Cosine²[nwt]
 
-##<a name="45"></a> Results
+##<a name="47"></a> Results
 7.5 Results:
 
     Δ²ξ = <ξ²> - <ξ>²

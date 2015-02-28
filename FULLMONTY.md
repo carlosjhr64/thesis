@@ -4,9 +4,9 @@
 Here I write explicitly all my work, as if writting computer code.
 Consider all symbols to have global scope.
 Each symbol should only be defined once, except `u` and `v` which will be used as temporary general variables.
-In books you'll see `sin²(x)` to mean `sin(x)∙sin(x)`.
+In books you'll see `sin²(x)` to mean `sin(x)×sin(x)`.
 I'll use that convention in general.
-`u²[v]` will mean `u[v]∙u[v]` and not `u[u[v]]`.
+`u²[v]` will mean `u[v]×u[v]` and not `u[u[v]]`.
 The initial part of this section goes over elementary material, but
 it's a good warmup and demonstrates my notation.
 
@@ -25,9 +25,9 @@ it's a good warmup and demonstrates my notation.
 
 [Expressions](#1) | [{u,v,w}](#2) | [Precedence rules](#3) | [ℕ](#4) | [ℤ and ℚ](#5) | [uᵥ](#6) | [Π](#7) | [uᵛ](#8)
 
-[√u](#9) | [|u|](#10) | [Σ](#11) | [n∙u](#12) | [Arrow operators](#13) | [Σu↑](#14) | [Σu↓](#15) | [∑](#16)
+[√u](#9) | [|u|](#10) | [Σ](#11) | [n×u](#12) | [Arrow operators](#13) | [Σu↑](#14) | [Σu↓](#15) | [∑](#16)
 
-[∑u↑](#17) | [∑u↓](#18) | [𝐿](#19) | [ℝ](#20) | [ℂ](#21) | [i](#22) | [†](#23) | [&lt;u&gt;](#24)
+[∑u↑](#17) | [∑u↓](#18) | [𝐿](#19) | [ℝ](#20) | [ℂ](#21) | [i](#22) | [*](#23) | [&lt;u&gt;](#24)
 
 [n!](#25) | [nᵥ](#26) | [(ⁿₘ)](#27) | [Sine, Cosine, and Exponential](#28) | [Δ²](#29) | [𝑃ₙ](#30) | [pₙ](#31) | [Fundamental values](#32)
 
@@ -103,11 +103,11 @@ Sequences can be thought of the set `{uₙ}`, but in this "paper", `uₙ` is alw
 ##<a name="7"></a> Π
 Products of sequences, [`Π`](http://en.wikipedia.org/wiki/Multiplication#Capital_Pi_notation):
 
-    # 1.upto(m).inject(1){|v,n|v∙u[n]}
+    # 1.upto(m).inject(1){|v,n|v×u[n]}
     Π[1,0] ≡ 1
-    Π[1,m]{n|uₙ} ≡ u₁∙u₂∙⋯∙uₙ-₁∙uₙ∙uₙ+₁∙⋯∙uₘ-₁∙uₘ
-    Π[1,2]{u} = u∙u
-    Π[1,3]{n|n} = 1∙2∙3
+    Π[1,m]{n|uₙ} ≡ u₁×u₂×⋯×uₙ-₁×uₙ×uₙ+₁×⋯×uₘ-₁×uₘ
+    Π[1,2]{u} = u×u
+    Π[1,3]{n|n} = 1×2×3
 
 ##<a name="8"></a> uᵛ
 Superscripts normally are ℕ denoting repetition:
@@ -120,7 +120,7 @@ Superscripts normally are ℕ denoting repetition:
 
     uᵐₙ ≡ (uₙ)ᵐ         # I don't use uₙ², but it's probably u[n²].
     uⁿ[v] ≡ (u[v])ⁿ
-    u²[v] = u[v]∙u[v]   # For example: "sin²(x) = sin(x)sin(x)"
+    u²[v] = u[v]×u[v]   # For example: "sin²(x) = sin(x)sin(x)"
 
 Superscripts also denotes power or raising operations:
 
@@ -149,12 +149,12 @@ Summation over ℕ indeces:
 
     N = Σₙ 1
 
-##<a name="12"></a> n∙u
+##<a name="12"></a> n×u
 Just regular multiplication:
 
-    n∙u ≡ Σ[0,n]{u}
-    nu ≡ n∙u
-    n/m ∙ u/v = (n∙u)/(m∙v)
+    n×u ≡ Σ[0,n]{u}
+    nu ≡ n×u
+    n/m × u/v = (n×u)/(m×v)
 
 ##<a name="13"></a> Arrow operators
 Arrow Operators on subscripts:
@@ -236,11 +236,11 @@ Let's try a simple limit function:
       = Σₙ 0
       = 0   # Is this acceptable?
 
-    Σₙ[1/N²] = 0.5 ← N=2        # n=2; n.times.inject(0){|s,i|s+1.0/(n∙n)}
-    Σₙ[1/N²] = 0.25 ← N=4       # n=4; n.times.inject(0){|s,i|s+1.0/(n∙n)}
-    Σₙ[1/N²] = 0.125 ← N=8      # n=8; n.times.inject(0){|s,i|s+1.0/(n∙n)}
-    Σₙ[1/N²] = 0.0625 ← N=16    # n=16; n.times.inject(0){|s,i|s+1.0/(n∙n)}
-    Σₙ[1/N²] = 0.03125 ← N=32   # n=32; n.times.inject(0){|s,i|s+1.0/(n∙n)}
+    Σₙ[1/N²] = 0.5 ← N=2        # n=2; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    Σₙ[1/N²] = 0.25 ← N=4       # n=4; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    Σₙ[1/N²] = 0.125 ← N=8      # n=8; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    Σₙ[1/N²] = 0.0625 ← N=16    # n=16; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    Σₙ[1/N²] = 0.03125 ← N=32   # n=32; n.times.inject(0){|s,i|s+1.0/(n*n)}
 
 As N doubles, the sum Σₙ[1/N²] halves.
 So Σₙ[1/N²] does approach zero as N goes on to infinity.
@@ -263,7 +263,7 @@ That is ℝ augments ℚ with Σuₙ as follows:
     ℚ{uₙ: |uₙ|≤1/n² ← n≥N}, v=Σuₙ ↔ ℝ{v}, ℚ{𝐿[Σₙuₙ]}
 
 So I just need `ℝ` to work with `𝐿[Σuₙ]`.
-ℝ has well defined `+` and `∙`:
+ℝ has well defined `+` and `×`:
 
     uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙvₘ
 
@@ -281,11 +281,11 @@ Quick plausibility check:
       Σuₙ + Σvₙ = 6 + 15 = 21
       uᵒ+vᵒ = Σuₙ+Σvₙ = Σ uₙ+vₙ = 21   # All self consistent
       # Multiplication
-      uᵒvᵒ = ΣΣ uₙvₘ = ((1∙4)+(1∙5)+(1∙6)) + ((2∙4)+(2∙5)+(2∙6)) + ((3∙4)+(3∙5)+(3∙6))
+      uᵒvᵒ = ΣΣ uₙvₘ = ((1×4)+(1×5)+(1×6)) + ((2×4)+(2×5)+(2×6)) + ((3×4)+(3×5)+(3×6))
         = (4+5+6) + (8+10+12) + (12+15+18)
         = 15 + 30 + 45
         = 90
-      uᵒvᵒ = Σuₙ Σvₙ = 6∙15 = 90
+      uᵒvᵒ = Σuₙ Σvₙ = 6×15 = 90
       uᵒvᵒ = Σuₙ Σvₙ = ΣΣ uₙvₘ = 90   # Again, consistent.
       # Division we don't have in the same form.
       uᵒ/vᵒ = Σuₙ/Σvₙ
@@ -293,8 +293,8 @@ Quick plausibility check:
     Σuₙ Σvₘ = ΣΣ uₙvₘ
     # The rigorous proof:
       Σuₙ Σvₘ
-      (Σuₙ)∙(Σvₘ)   # Just explicitly showing what I mean.
-      Σ[uₙ∙(Σvₘ)]   # Treat the v series like a number and take it into the u series.
+      (Σuₙ)×(Σvₘ)   # Just explicitly showing what I mean.
+      Σ[uₙ×(Σvₘ)]   # Treat the v series like a number and take it into the u series.
       Σ[Σuₙvₘ)]     # uₙ is just a constant rational and can go into the v series.
       ΣΣ[uₙvₘ]      # Well... maybe it was obvious to begin with.
 
@@ -306,7 +306,9 @@ Complex numbers:
     ℂ ≡ (ℝ,ℝ)
     ℝ{uᵣ,uᵢ,vᵣ,vᵢ} →
       (uᵣ,uᵢ)+(vᵣ,vᵢ)≡(uᵣ+vᵣ,uᵢ+vᵢ)
-      (uᵣ,uᵢ)(vᵣ,vᵢ)≡(u²ᵣ-v²ᵢ,uᵣvᵢ+uᵢvᵣ)
+      (uᵣ,uᵢ)(vᵣ,vᵢ)≡(uᵣvᵣ-uᵢvᵢ,uᵣvᵢ+uᵢvᵣ)
+      (uᵣ,uᵢ)(uᵣ,uᵢ)=(uᵣ²-uᵢ²,2uᵣuᵢ)
+      uᵣ≡(uᵣ,0)
     ℂ{α,β}
 
 ##<a name="22"></a> i
@@ -316,54 +318,66 @@ The Imaginary number i:
     i² = (-1,0)
     # Proof
       (0,1)(0,1)
-      (0²-1²,0∙1+1∙0)
+      (0²-1²,0×1+1×0)
       (-1,0)
     (u,v) = u+iv
     i² = -1
 
-##<a name="23"></a> †
+##<a name="23"></a> *
 Complex conjugation:
 
-    (u,v)†  ≡ (u,-v)                 # Think † means adjoin? Go to the beginning where I define ≡.
-    (u+iv)† = u-iv
-    e[i]† = (C+iS)† = C-iS = e[-i]   # what it does to e
+    (u,v)* ≡ (u,-v)                  # Think * means multiplication?  Go to the beginning where I define ≡.
+    (u+iv)* = u-iv
+    e[i]* = (C+iS)* = C-iS = e[-i]   # what it does to e
+
+    ℝ{uᵣ,uᵢ,vᵣ,vᵢ} →
+      (uᵣ,uᵢ)*(vᵣ,vᵢ)=(uᵣvᵣ+uᵢvᵢ,uᵣvᵢ-uᵢvᵣ)
+      (uᵣ,uᵢ)*(uᵣ,uᵢ)=(u²ᵣ+v²ᵢ,0)
+      (uᵣ,0)*(vᵣ,0)=(uᵣvᵢ,0)
+      uᵣ*vᵣ=uᵣvᵣ   # Notice how the it does end up looking like multiplication in ℝ.
+
+      # Just to review
+      (uᵣ,uᵢ)×(vᵣ,vᵢ) = (uᵣvᵣ-uᵢvᵢ, uᵣvᵢ+uᵢvᵣ)   #
+      (uᵣ,uᵢ)×(uᵣ,uᵢ) = (u²ᵣ-u²ᵢ, 2uᵣuᵢ)         #
+      (uᵣ,uᵢ)*(vᵣ,vᵢ) = (uᵣvᵣ+uᵢvᵢ, uᵣvᵢ-uᵢvᵣ)   #
+      (uᵣ,uᵢ)*(uᵣ,uᵢ) = (u²ᵣ+u²ᵢ, 0)             #
 
 ##<a name="24"></a> &lt;u&gt;
 Dirac notation:
 
-    <αu|βu> ≡ ΣΣ (αuₙ)†(βuₘ)
-    <αu|βu> = α†<u|βu> = β<αu|u>
-    <αu|βu>† = <βv|αu>
+    <αu|βu> ≡ ΣΣ (αuₙ)*(βuₘ)
+    <αu|βu> = α*<u|βu> = β<αu|u>
+    <αu|βu>* = <βv|αu>
     <αu| + <βv| = <αu+βv|
 
     <u> ≡ <u|u>
 
-    <αu> = α†α<u>
+    <αu> = α*α<u>
     # Proof
       <αu>
       <αu|αu>
-      α†<u|αu>
-      α†α<u|u>
-      α†α<u>
+      α*<u|αu>
+      α*α<u|u>
+      α*α<u>
 
     |n> ≡ |uₙ>   # where u is know from context
 
-    <u|l> = uₗ†uₗ
+    <u|l> = uₗ*uₗ
     # Proof
       <u|l>
       <u|uₗ>
-      ΣΣ uₙ†uₗ
-      uₗ†uₗ   # uₙ are orthogonal, only the l term contributes
+      ΣΣ uₙ*uₗ
+      uₗ*uₗ   # uₙ are orthogonal, only the l term contributes
 
-    <uₗ> ≡ uₗ†uₗ
+    <uₗ> ≡ uₗ*uₗ
     <u|l> = <uₗ>
-    <α> = α†α
+    <α> = α*α
     # TODO: What we mean by average value,  <u> ≡ Σₙuₙ/N ?
 
 ##<a name="25"></a> n!
 Factorial:
 
-    n! ≡ Π[1,n]{u|u}   # 1∙2∙3∙...∙n
+    n! ≡ Π[1,n]{u|u}   # 1×2×3×...×n
 
     u[n]=1/n! → u[n-1]=nu[n]   # Recursion
     # Proof:
@@ -392,7 +406,7 @@ Factorial:
       u[-2]
       u[-1-1]
       -1u[-1]
-      -1∙0
+      -1×0
       0   # In general 1/u! = 0 ← ℤ{u<0}
 
 ##<a name="26"></a> nᵥ
@@ -411,7 +425,7 @@ Whatchamacallit forward:
     n₃ = n₂(n+3)
     n₃ = (n+1)(n+2)(n+3) # and so on...
 
-    4₂ = (4+1)(4+2) = 5∙6 = 30   # For example.
+    4₂ = (4+1)(4+2) = 5×6 = 30   # For example.
 
 Whatchamacallit backwards:
 
@@ -427,7 +441,7 @@ Whatchamacallit backwards:
     n-₃ = n-₂/(n-3+1) = (1/(n(n-1)))/(n-2)
     n-₃ = 1/(n(n-1)(n-2)) # and so on...
 
-    4-₂ = 1/(4(4-1)) = 1/(4∙3) = 1/12   # For example.
+    4-₂ = 1/(4(4-1)) = 1/(4×3) = 1/12   # For example.
 
 Arrows meaningful as Whatchamacallits:
 
@@ -544,10 +558,10 @@ Measure of uncertainty (4.1b):
 ##<a name="31"></a> pₙ
 
     pₙ ≡ √[uⁿe[-u]/n!]
-    pₙ†pₙ = 𝑃ₙ
+    pₙ*pₙ = 𝑃ₙ
     # Proof
-      pₙ†pₙ
-      √[uⁿe[-u]/n!]†√[uⁿe[-u]/n!]
+      pₙ*pₙ
+      √[uⁿe[-u]/n!]*√[uⁿe[-u]/n!]
       √[uⁿe[-u]/n!]√[uⁿe[-u]/n!]   # It's just all real.
       uⁿe[-u]/n!
       𝑃ₙ
@@ -591,9 +605,9 @@ Time evolution:
     Φᵗₙ ≡ e[-iω(n+½)t] = e[-iEₙt/ħ]   # NOTE! The ½ part makes this object a bit of a screw ball.
     φᵗₙ ≡ e[-iωnt]                    # "How do we end up with this?" you may ask.
 
-    Φₙ†Φₘ = φₘ-ₙ   # You don't have to explicitly show time if it can be infered.
+    Φₙ*Φₘ = φₘ-ₙ   # You don't have to explicitly show time if it can be infered.
     # Proof:
-      Φₙ†Φₘ
+      Φₙ*Φₘ
       Φ-ₙΦₘ
       e[iω(n+½)t - iω(m+½)t]
       e[-iω(m-n)t]
@@ -602,20 +616,20 @@ Time evolution:
     # Don't have to explicitly show quantum number if it can be infered.
     Φ⁰ = 1
     Φⁱ = e[-iω(n+½)]
-    Φᵗ = (Φⁱ)^t = e[t ∙ (-iω(n+½))] = e[-iω(n+½)t]   # Just to show that the notation makes sense.
+    Φᵗ = (Φⁱ)^t = e[t × (-iω(n+½))] = e[-iω(n+½)t]   # Just to show that the notation makes sense.
 
 ##<a name="35"></a> Φ→φ
 
-    Φₙ†Φₙ+₁ = φₙ+₁-ₙ = φ₁
+    Φₙ*Φₙ+₁ = φₙ+₁-ₙ = φ₁
     φ↥ ≡ φ₀↑ = φ₁   # This will make notation very consistent later.
-    Φₙ†Φₙ+₁ = φ↥
+    Φₙ*Φₙ+₁ = φ↥
 
-    Φₙ†Φₙ-₁ = φₙ-₁-ₙ = φ-₁   # Yeah... me worry about this one a little bit!  LOL
+    Φₙ*Φₙ-₁ = φₙ-₁-ₙ = φ-₁   # Yeah... me worry about this one a little bit!  LOL
     φ↧ ≡ φ₀↓ = φ-₁
-    Φₙ†Φₙ-₁ = φ↧
+    Φₙ*Φₙ-₁ = φ↧
 
-    Φₙ†Φₙ+₂ = φₙ+₂-ₙ = φ₂
-    Φₙ†Φₙ-₂ = φₙ-₂-ₙ = φ-₂
+    Φₙ*Φₙ+₂ = φₙ+₂-ₙ = φ₂
+    Φₙ*Φₙ-₂ = φₙ-₂-ₙ = φ-₂
 
 # sₙ, cₙ
 Short for Sine(nωt) and Cosine(nωt):
@@ -645,7 +659,7 @@ Short for Sine(nωt) and Cosine(nωt):
 ##<a name="36"></a> nᵒ
 Average Quantum number nᵒ
 
-    <n> = <n|pₙ†npₙ|m> = Σ npₙpₙ = Σ n𝑃ₙ   # only n=m terms contribute
+    <n> = <n|pₙ*npₙ|m> = Σ npₙpₙ = Σ n𝑃ₙ   # only n=m terms contribute
 
     nᵒ ≡ 𝐿 <n>
     nᵒ = 𝐿 Σ n𝑃ₙ = 𝐿 Σₙ n𝑃ₙ   # Remember that 𝐿 truncates the series.
@@ -687,7 +701,7 @@ Average Quantum number nᵒ
     # To 𝐿, for large enough M, the trailing sequence are all zeroes.
     u²(1 - Σ0)
     u²(1-0)
-    u²∙1
+    u²×1
     u²
 
     nᵒ² = 𝐿 Σ[n(n-1)𝑃ₙ]   # b/c nᵒ=u, so u²=nᵒ²
@@ -756,7 +770,7 @@ The Normalization Constant, 𝐴ₙ:
     𝐴ₙ/𝐴ₙ-₁ = 1/√[2n]
     Proof:
       (1/√[2ⁿn!√π]) / (1/√[2ⁿ-ⁱ(n-1)!√π])
-      (1/√[2ⁿn!√π]) ∙ (√[2ⁿ-ⁱ(n-1)!√π])
+      (1/√[2ⁿn!√π]) × (√[2ⁿ-ⁱ(n-1)!√π])
       √[2ⁿ-ⁱ(n-1)!√π] / √[2ⁿn!√π]
       √[2ⁿ-ⁱ(n-1)!] / √[2ⁿn!]   # √π cancels
       √[2ⁿ-ⁱ] / √[2ⁿn]          # n!/(n-1)! = n
@@ -765,13 +779,13 @@ The Normalization Constant, 𝐴ₙ:
     # Identities:
     𝐴ₙ   = 𝐴ₙ-₁ / √[2n]       # Given
     𝐴ₙ+₁ = 𝐴ₙ   / √[2(n+1)]   # Increment index n
-    𝐴ₙ   = 𝐴ₙ+₁ ∙ √[2(n+1)]   # Solve for 𝐴ₙ
-    𝐴ₙ-₁ = 𝐴ₙ   ∙ √[2n]       # Decrement index n
+    𝐴ₙ   = 𝐴ₙ+₁ × √[2(n+1)]   # Solve for 𝐴ₙ
+    𝐴ₙ-₁ = 𝐴ₙ   × √[2n]       # Decrement index n
 
     # With Whatchamacallits
-    𝐴ₙ   = 𝐴ₙ-₁ ∙ √[½n-₁] = 𝐴ₙ-₁ ∙ √[½n↓] = 𝐴ₙ-₁ ∙ √[½n↓]
+    𝐴ₙ   = 𝐴ₙ-₁ × √[½n-₁] = 𝐴ₙ-₁ × √[½n↓] = 𝐴ₙ-₁ × √[½n↓]
     𝐴ₙ+₁ = 𝐴ₙ   / √[2n₁]  = 𝐴ₙ   / √[2n↑] = 𝐴ₙ   / √[2n↑]
-    𝐴ₙ   = 𝐴ₙ+₁ ∙ √[2n₁]  = 𝐴ₙ+₁ ∙ √[2n↑] = 𝐴ₙ+₁ ∙ √[2n↑]
+    𝐴ₙ   = 𝐴ₙ+₁ × √[2n₁]  = 𝐴ₙ+₁ × √[2n↑] = 𝐴ₙ+₁ × √[2n↑]
     𝐴ₙ-₁ = 𝐴ₙ   / √[½n-₁] = 𝐴ₙ   / √[½n↓] = 𝐴ₙ   / √[½n↓]
 
     # Use these:
@@ -875,18 +889,18 @@ Evaluation of `<ξ₀>`:
     <ξ₀> = <Ψ₀|ξ|Ψ₀>             # 7.14a
     <ξ₀> = <Ψ₀|n><n|ξ|m><m|Ψ₀>   # 7.14b
 
-    <ξ₀> = ΣΣ (pₙΨₙ)† ξ (pₘΨₘ)
-    <ξ₀> = ΣΣ Ψₙ†pₙ pₘξΨₘ                                          # rearrange, p is real.
-    <ξ₀> = ΣΣ Ψₙ†pₙ pₘ ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))                  # substitute for ξΨₘ
-    <ξ₀> = ΣΣ Ψₙ†pₙ ½𝐴ₘ(pₘℋₘ↑[ξ] + pₘℋₘ↓[ξ]/(½m↓))                 # distribute pₘ
-    <ξ₀> = ΣΣ[pₙΨₙ†pₙ ½𝐴ₘpₘℋₘ↑[ξ]] + ΣΣ[Ψₙ†pₙ ½𝐴ₘpₘℋₘ↓[ξ]/(½m↓)]   # separate
-    <ξ₀> = ½ΣΣ[Ψₙ†pₙ pₘ 𝐴ₘℋₘ↑[ξ]] + ½ΣΣ[Ψₙ†pₙ pₘ 𝐴ₘℋₘ↓[ξ]/(½m↓)]   # take out ½
+    <ξ₀> = ΣΣ (pₙΨₙ)* ξ (pₘΨₘ)
+    <ξ₀> = ΣΣ Ψₙ*pₙ pₘξΨₘ                                          # rearrange, p is real.
+    <ξ₀> = ΣΣ Ψₙ*pₙ pₘ ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))                  # substitute for ξΨₘ
+    <ξ₀> = ΣΣ Ψₙ*pₙ ½𝐴ₘ(pₘℋₘ↑[ξ] + pₘℋₘ↓[ξ]/(½m↓))                 # distribute pₘ
+    <ξ₀> = ΣΣ[pₙΨₙ*pₙ ½𝐴ₘpₘℋₘ↑[ξ]] + ΣΣ[Ψₙ*pₙ ½𝐴ₘpₘℋₘ↓[ξ]/(½m↓)]   # separate
+    <ξ₀> = ½ΣΣ[Ψₙ*pₙ pₘ 𝐴ₘℋₘ↑[ξ]] + ½ΣΣ[Ψₙ*pₙ pₘ 𝐴ₘℋₘ↓[ξ]/(½m↓)]   # take out ½
     # get the m's to match
-    <ξ₀> = ½ΣΣ[Ψₙ†pₙ √m↑pₘ↑/√nᵒ √[2m↑]𝐴ₘ↑ℋₘ↑[ξ]] + ½ΣΣ[Ψₙ†pₙ √[nᵒm↓]pₘ↓ √[½m↓]𝐴ₘ↓ℋₘ↓[ξ]/(½m↓)]
-    <ξ₀> = 1/√[2nᵒ]ΣΣ[Ψₙ†pₙ m↑pₘ↑𝐴ₘ↑ℋₘ↑[ξ]] + √[½nᵒ]ΣΣ[Ψₙ†pₙ pₘ↓𝐴ₘ↓ℋₘ↓[ξ]]
-    <ξ₀> = 1/√[2nᵒ]ΣΣ[Ψₙ†pₙ m↑ pₘ↑Ψₘ↑] + √[½nᵒ]ΣΣ[Ψₙ†pₙ pₘ↓Ψₘ↓]
-    <ξ₀> = 1/√[2nᵒ]Σ[Ψₙ†pₙ n pₙΨₙ] + √[½nᵒ]Σ[Ψₙ†pₙpₙΨₙ]           # Orthogonal states
-    <ξ₀> = 1/√[2nᵒ]ΣΣ[n𝑃ₙ] + √[½nᵒ]Σ[𝑃ₙ]                          # Ψₙ†Ψₙ=1, pₙpₙ=𝑃ₙ
+    <ξ₀> = ½ΣΣ[Ψₙ*pₙ √m↑pₘ↑/√nᵒ √[2m↑]𝐴ₘ↑ℋₘ↑[ξ]] + ½ΣΣ[Ψₙ*pₙ √[nᵒm↓]pₘ↓ √[½m↓]𝐴ₘ↓ℋₘ↓[ξ]/(½m↓)]
+    <ξ₀> = 1/√[2nᵒ]ΣΣ[Ψₙ*pₙ m↑pₘ↑𝐴ₘ↑ℋₘ↑[ξ]] + √[½nᵒ]ΣΣ[Ψₙ*pₙ pₘ↓𝐴ₘ↓ℋₘ↓[ξ]]
+    <ξ₀> = 1/√[2nᵒ]ΣΣ[Ψₙ*pₙ m↑ pₘ↑Ψₘ↑] + √[½nᵒ]ΣΣ[Ψₙ*pₙ pₘ↓Ψₘ↓]
+    <ξ₀> = 1/√[2nᵒ]Σ[Ψₙ*pₙ n pₙΨₙ] + √[½nᵒ]Σ[Ψₙ*pₙpₙΨₙ]           # Orthogonal states
+    <ξ₀> = 1/√[2nᵒ]ΣΣ[n𝑃ₙ] + √[½nᵒ]Σ[𝑃ₙ]                          # Ψₙ*Ψₙ=1, pₙpₙ=𝑃ₙ
     <ξ₀> = 1/√[2nᵒ]nᵒ + √[½nᵒ]
     <ξ₀> = √[½nᵒ] + √[½nᵒ]
     <ξ₀> = 2√[½nᵒ]
@@ -936,13 +950,13 @@ Evaluation of `<ξₜ>`:
 
     <ξₜ> = <Ψ|ξ|Ψ>
     <ξₜ> = <Ψ|n><n|ξ|m><m|Ψ>
-    <ξₜ> = ΣΣ (pₙΦᵗₙΨₙ)† ξ (pₘΦᵗₘΨₘ)
+    <ξₜ> = ΣΣ (pₙΦᵗₙΨₙ)* ξ (pₘΦᵗₘΨₘ)
     # Parralles <ξ₀> up to the here...
-    <ξₜ> = ½ΣΣ[(ΦᵗₙΨₙ)†pₙ pₘ Φᵗₘ𝐴ₘℋₘ↑[ξ]] + ½ΣΣ[ΦᵗₙΨₙ†pₙ pₘ Φᵗₘ𝐴ₘℋₘ↓[ξ]/(½m↓)]
-    <ξₜ> = ½(Σ[(ΦΨ)†p]Σ[pΦ𝐴ℋ↑[ξ]] + Σ[(ΦΨ)†p]Σ[pΦ𝐴ℋ↓[ξ]/½n↓])            # ΣΣ[αₙβₘ]=Σ[αₙ]Σ[βₙ], context indeces.
-    <ξₜ> = ½(Σ[(Φ↑Ψ↑)†p↑]Σ[pΦ↧√2n↑Φ↑Ψ↑] + Σ[(Φ↓Ψ↓)†p↓]Σ[pΦ↥/√½n↓Φ↓Ψ↓])   # TODO: What am I doing here???
-    <ξₜ> = ½(Σ[(Φ↑Ψ↑)†p↑pΦ↧√2n↑Φ↑Ψ↑] + Σ[(Φ↓Ψ↓)†p↓pΦ↥/√½n↓Φ↓Ψ↓])         # Orthogonal states
-    <ξₜ> = ½(Σ[p↑pΦ↧√2n↑] + Σ[p↓pΦ↥/√½n↓])                               # Normalized states, Ψ†Ψ=1
+    <ξₜ> = ½ΣΣ[(ΦᵗₙΨₙ)*pₙ pₘ Φᵗₘ𝐴ₘℋₘ↑[ξ]] + ½ΣΣ[ΦᵗₙΨₙ*pₙ pₘ Φᵗₘ𝐴ₘℋₘ↓[ξ]/(½m↓)]
+    <ξₜ> = ½(Σ[(ΦΨ)*p]Σ[pΦ𝐴ℋ↑[ξ]] + Σ[(ΦΨ)*p]Σ[pΦ𝐴ℋ↓[ξ]/½n↓])            # ΣΣ[αₙβₘ]=Σ[αₙ]Σ[βₙ], context indeces.
+    <ξₜ> = ½(Σ[(Φ↑Ψ↑)*p↑]Σ[pΦ↧√2n↑Φ↑Ψ↑] + Σ[(Φ↓Ψ↓)*p↓]Σ[pΦ↥/√½n↓Φ↓Ψ↓])   # TODO: What am I doing here???
+    <ξₜ> = ½(Σ[(Φ↑Ψ↑)*p↑pΦ↧√2n↑Φ↑Ψ↑] + Σ[(Φ↓Ψ↓)*p↓pΦ↥/√½n↓Φ↓Ψ↓])         # Orthogonal states
+    <ξₜ> = ½(Σ[p↑pΦ↧√2n↑] + Σ[p↓pΦ↥/√½n↓])                               # Normalized states, Ψ*Ψ=1
     <ξₜ> = ½(Σ[√[nᵒ/n↑]𝑃Φ↧√2n↑] + Σ[𝑃Φ↥/√[n↓nᵒ]/√½n↓])
     <ξₜ> = ½(Σ[√nᵒ𝑃Φ↧√2] + Σ[𝑃Φ↥/√½nᵒ/n↓])
     <ξₜ> = ½(Σ[√nᵒ𝑃Φ↧√2] + Σ[𝑃nΦ↥/√½nᵒ])
@@ -962,14 +976,14 @@ TODO: `<ξ²>`:
 
     # And who wants to work with this mess?
     <ξ²> = (nᵒ+½) +
-      ½Σ e[-iω(n+½)t]† √[uⁿe[-u]/n!] (
+      ½Σ e[-iω(n+½)t]* √[uⁿe[-u]/n!] (
         e[-iω((n-2)+½)t] √[n(n-1)] √[u^(n-2)e[-u]/(n-2)! +
         e[-iω((n+2)+½)t] √[(n+1)(n+2)] √[u^(n+2)e[-u]/(n+2)!
       )
-    <ξ²> = (nᵒ+½) + ½Σ Φₙ†pₙ† (Φₙ-₂√[n(n-1)]pₙ-₂ +  Φₙ+₂√[(n+1)(n+2)]pₙ+₂)   # 7.21
+    <ξ²> = (nᵒ+½) + ½Σ Φₙ*pₙ* (Φₙ-₂√[n(n-1)]pₙ-₂ +  Φₙ+₂√[(n+1)(n+2)]pₙ+₂)   # 7.21
     # And much nicer...
-    <ξ²> = (nᵒ+½) + ½Σ Φ†p (Φ⇊/√n⇊ p⇊ +  Φ⇈√n⇈ p⇈)                           # pretty noted
-    <ξ²> = (nᵒ+½) + ½Σ Φ†Φ⇊/√n⇊ pp⇊ +  Φ†Φ⇈√n⇈ pp⇈                           # Distribute
+    <ξ²> = (nᵒ+½) + ½Σ Φ*p (Φ⇊/√n⇊ p⇊ +  Φ⇈√n⇈ p⇈)                           # pretty noted
+    <ξ²> = (nᵒ+½) + ½Σ Φ*Φ⇊/√n⇊ pp⇊ +  Φ*Φ⇈√n⇈ pp⇈                           # Distribute
     <ξ²> = (nᵒ+½) + ½Σ φ↧↓/√n⇊ pp⇊ +  φ↥↑√n⇈ pp⇈                             # Φ→φ
     <ξ²> = (nᵒ+½) + ½Σ φ↧↓/√n⇊ 𝑃/(nᵒ√n⇊) +  φ↥↑√n⇈ nᵒ𝑃/√n⇈                   # p->𝑃
     <ξ²> = (nᵒ+½) + ½Σ φ↧↓/n⇊ 𝑃/nᵒ +  φ↥↑ nᵒ𝑃                                # Simplify

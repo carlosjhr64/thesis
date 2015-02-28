@@ -337,10 +337,10 @@ Complex conjugation:
       uᵣ*vᵣ=uᵣvᵣ   # Notice how the it does end up looking like multiplication in ℝ.
 
       # Just to review
-      (uᵣ,uᵢ)×(vᵣ,vᵢ) = (uᵣvᵣ-uᵢvᵢ, uᵣvᵢ+uᵢvᵣ)   #
-      (uᵣ,uᵢ)×(uᵣ,uᵢ) = (u²ᵣ-u²ᵢ, 2uᵣuᵢ)         #
-      (uᵣ,uᵢ)*(vᵣ,vᵢ) = (uᵣvᵣ+uᵢvᵢ, uᵣvᵢ-uᵢvᵣ)   #
-      (uᵣ,uᵢ)*(uᵣ,uᵢ) = (u²ᵣ+u²ᵢ, 0)             #
+      (uᵣ,uᵢ)×(vᵣ,vᵢ) = (uᵣvᵣ-uᵢvᵢ, uᵣvᵢ+uᵢvᵣ)
+      (uᵣ,uᵢ)×(uᵣ,uᵢ) = (u²ᵣ-u²ᵢ, 2uᵣuᵢ)
+      (uᵣ,uᵢ)*(vᵣ,vᵢ) = (uᵣvᵣ+uᵢvᵢ, uᵣvᵢ-uᵢvᵣ)
+      (uᵣ,uᵢ)*(uᵣ,uᵢ) = (u²ᵣ+u²ᵢ, 0)
 
 ##<a name="24"></a> &lt;u&gt;
 Dirac notation:
@@ -360,17 +360,17 @@ Dirac notation:
       α*α<u|u>
       α*α<u>
 
-    |n> ≡ |uₙ>   # where u is know from context
+    |ₙ> ≡ |uₙ>   # where u is know from context
 
-    <u|l> = uₗ*uₗ
+    <u|ₗ> = uₗ*uₗ
     # Proof
-      <u|l>
+      <u|ₗ>
       <u|uₗ>
       ΣΣ uₙ*uₗ
       uₗ*uₗ   # uₙ are orthogonal, only the l term contributes
 
-    <uₗ> ≡ uₗ*uₗ
-    <u|l> = <uₗ>
+    <uₗ> = uₗ*uₗ
+    <u|ₗ> = <uₗ>
     <α> = α*α
     # TODO: What we mean by average value,  <u> ≡ Σₙuₙ/N ?
 
@@ -411,7 +411,7 @@ Factorial:
 
 ##<a name="26"></a> nᵥ
 I'd like to make the following refinement in ℕ,
-Whatchamacallit forward:
+[Factoral](http://www.urbandictionary.com/define.php?term=Factoral&defid=5895569) forward:
 
     nᵥ ≡ nᵥ-₁(n+v)
     n₀ ≡ 1
@@ -427,7 +427,7 @@ Whatchamacallit forward:
 
     4₂ = (4+1)(4+2) = 5×6 = 30   # For example.
 
-Whatchamacallit backwards:
+Factoral backwards:
 
     nᵥ-₁ = nᵥ/(n+v)
     nᵥ = nᵥ+₁/(n+v+1)
@@ -443,7 +443,7 @@ Whatchamacallit backwards:
 
     4-₂ = 1/(4(4-1)) = 1/(4×3) = 1/12   # For example.
 
-Arrows meaningful as Whatchamacallits:
+Arrows meaningful as Factorals:
 
     n⇈ = (n+1)(n+2)
     n↑ = n+1
@@ -451,7 +451,7 @@ Arrows meaningful as Whatchamacallits:
     n↓ = 1/n
     n⇊ = 1/(n(n-1))
 
-Whatchamacallit with Factorial:
+Factoral with Factorial:
 
     nᵥn! = (n+v)!
 
@@ -718,7 +718,7 @@ Now we can describe the distribution in terms of the average quantum number:
            = pₙ pₙ √[nᵒ/(n+1)] 
            = 𝑃ₙ √[nᵒ/(n+1)] 
            = √[nᵒ/(n+1)]𝑃ₙ 
-    pₙpₙ+₁ = √nᵒ𝑃ₙ/√n₁   # Using Whatchamacallit
+    pₙpₙ+₁ = √nᵒ𝑃ₙ/√n₁   # Using Factoral
     pp↑ = √nᵒ𝑃ₙ/√n↑      # And Arrow notation
 
     pₙpₙ-₁ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-1)e[-nᵒ]/(n-1)!]
@@ -726,21 +726,21 @@ Now we can describe the distribution in terms of the average quantum number:
            = pₙ pₙ √[n/nᵒ] 
            = 𝑃ₙ √[n/nᵒ] 
            = √[n/nᵒ]𝑃ₙ 
-    pₙpₙ-₁ = 𝑃ₙ/√[nᵒn-₁]   # Using Whatchamacallit
+    pₙpₙ-₁ = 𝑃ₙ/√[nᵒn-₁]   # Using Factoral
     pp↓ = 𝑃ₙ/√[nᵒn↓]       # And Arrow notation
 
     pₙpₙ+₂ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n+2)e[-nᵒ]/(n+2)!]
            = √[nᵒ²/((n+1)(n+2))] √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!]
            = nᵒ/√[(n+1)(n+2)] pₙpₙ
            = nᵒ/√[(n+1)(n+2)] 𝑃ₙ
-    pₙpₙ+₂ = nᵒ𝑃ₙ/√n₂   # Using Whatchamacallit
+    pₙpₙ+₂ = nᵒ𝑃ₙ/√n₂   # Using Factoral
     pₙpₙ+₂ = nᵒ𝑃ₙ/√n⇈   # Using Arrow
 
     pₙpₙ-₂ = √[nᵒⁿe[-nᵒ]/n!] √[nᵒ^(n-2)e[-nᵒ]/(n-2)!]
            = √[(n-1)n/nᵒ²] √[nᵒⁿe[-nᵒ]/n!] √[nᵒⁿe[-nᵒ]/n!]
            = √[(n-1)n]/nᵒ pₙpₙ
            = √[(n-1)n]/nᵒ 𝑃ₙ
-    pₙpₙ-₂ = 𝑃ₙ/(nᵒ√n-₂)   # Using Whatchamacallit
+    pₙpₙ-₂ = 𝑃ₙ/(nᵒ√n-₂)   # Using Factoral
     pₙpₙ-₂ = 𝑃ₙ/(nᵒ√n⇊)    # Using Arrow
 
     p = √m↑p↑/√nᵒ
@@ -782,7 +782,7 @@ The Normalization Constant, 𝐴ₙ:
     𝐴ₙ   = 𝐴ₙ+₁ × √[2(n+1)]   # Solve for 𝐴ₙ
     𝐴ₙ-₁ = 𝐴ₙ   × √[2n]       # Decrement index n
 
-    # With Whatchamacallits
+    # With Factorals
     𝐴ₙ   = 𝐴ₙ-₁ × √[½n-₁] = 𝐴ₙ-₁ × √[½n↓] = 𝐴ₙ-₁ × √[½n↓]
     𝐴ₙ+₁ = 𝐴ₙ   / √[2n₁]  = 𝐴ₙ   / √[2n↑] = 𝐴ₙ   / √[2n↑]
     𝐴ₙ   = 𝐴ₙ+₁ × √[2n₁]  = 𝐴ₙ+₁ × √[2n↑] = 𝐴ₙ+₁ × √[2n↑]

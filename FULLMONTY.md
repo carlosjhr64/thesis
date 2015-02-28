@@ -4,9 +4,9 @@
 Here I write explicitly all my work, as if writting computer code.
 Consider all symbols to have global scope.
 Each symbol should only be defined once, except `u` and `v` which will be used as temporary general variables.
-In books you'll see `sin²(x)` to mean `sin(x)*sin(x)`.
+In books you'll see `sin²(x)` to mean `sin(x)∙sin(x)`.
 I'll use that convention in general.
-`u²[v]` will mean `u[v]*u[v]` and not `u[u[v]]`.
+`u²[v]` will mean `u[v]∙u[v]` and not `u[u[v]]`.
 The initial part of this section goes over elementary material, but
 it's a good warmup and demonstrates my notation.
 
@@ -103,11 +103,11 @@ Sequences can be thought of the set `{uₙ}`, but in this "paper", `uₙ` is alw
 ##<a name="7"></a> Π
 Products of sequences, [`Π`](http://en.wikipedia.org/wiki/Multiplication#Capital_Pi_notation):
 
-    # 1.upto(m).inject(1){|v,n|v*u[n]}
+    # 1.upto(m).inject(1){|v,n|v∙u[n]}
     Π[1,0] ≡ 1
-    Π[1,m]{n|uₙ} ≡ u₁*u₂*⋯*uₙ-₁*uₙ*uₙ+₁*⋯*uₘ-₁*uₘ
-    Π[1,2]{u} = u*u
-    Π[1,3]{n|n} = 1*2*3
+    Π[1,m]{n|uₙ} ≡ u₁∙u₂∙⋯∙uₙ-₁∙uₙ∙uₙ+₁∙⋯∙uₘ-₁∙uₘ
+    Π[1,2]{u} = u∙u
+    Π[1,3]{n|n} = 1∙2∙3
 
 ##<a name="8"></a> uᵛ
 Superscripts normally are ℕ denoting repetition:
@@ -120,11 +120,11 @@ Superscripts normally are ℕ denoting repetition:
 
     uᵐₙ ≡ (uₙ)ᵐ         # I don't use uₙ², but it's probably u[n²].
     uⁿ[v] ≡ (u[v])ⁿ
-    u²[v] = u[v]*u[v]   # For example: "sin²(x) = sin(x)*sin(x)"
+    u²[v] = u[v]∙u[v]   # For example: "sin²(x) = sin(x)sin(x)"
 
 Superscripts also denotes power or raising operations:
 
-    uᵛ ≡ u^v   # or "u**v"
+    uᵛ ≡ u^v   # or "u**v" in Ruby.
 
 ##<a name="9"></a> √u
 Squareroot:
@@ -148,6 +148,13 @@ Summation over ℕ indeces:
     ΣₙΣₘuₙₘ ≡ Σ[0,M]{n| Σ[0,M]{m| u[n,m]}}
 
     N = Σₙ 1
+
+## n∙u
+Just regular multiplication:
+
+    n∙u ≡ Σ[0,n]{u}
+    nu ≡ n∙u
+    n/m ∙ u/v = (n∙u)/(m∙v)
 
 ##<a name="12"></a> Arrow operators
 Arrow Operators on subscripts:
@@ -229,11 +236,11 @@ Let's try a simple limit function:
       = Σₙ 0
       = 0   # Is this acceptable?
 
-    Σₙ[1/N²] = 0.5 ← N=2        # n=2; n.times.inject(0){|s,i|s+1.0/(n*n)}
-    Σₙ[1/N²] = 0.25 ← N=4       # n=4; n.times.inject(0){|s,i|s+1.0/(n*n)}
-    Σₙ[1/N²] = 0.125 ← N=8      # n=8; n.times.inject(0){|s,i|s+1.0/(n*n)}
-    Σₙ[1/N²] = 0.0625 ← N=16    # n=16; n.times.inject(0){|s,i|s+1.0/(n*n)}
-    Σₙ[1/N²] = 0.03125 ← N=32   # n=32; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    Σₙ[1/N²] = 0.5 ← N=2        # n=2; n.times.inject(0){|s,i|s+1.0/(n∙n)}
+    Σₙ[1/N²] = 0.25 ← N=4       # n=4; n.times.inject(0){|s,i|s+1.0/(n∙n)}
+    Σₙ[1/N²] = 0.125 ← N=8      # n=8; n.times.inject(0){|s,i|s+1.0/(n∙n)}
+    Σₙ[1/N²] = 0.0625 ← N=16    # n=16; n.times.inject(0){|s,i|s+1.0/(n∙n)}
+    Σₙ[1/N²] = 0.03125 ← N=32   # n=32; n.times.inject(0){|s,i|s+1.0/(n∙n)}
 
 As N doubles, the sum Σₙ[1/N²] halves.
 So Σₙ[1/N²] does approach zero as N goes on to infinity.
@@ -256,7 +263,7 @@ That is ℝ augments ℚ with Σuₙ as follows:
     ℚ{uₙ: |uₙ|≤1/n² ← n≥N}, v=Σuₙ ↔ ℝ{v}, ℚ{𝐿[Σₙuₙ]}
 
 So I just need `ℝ` to work with `𝐿[Σuₙ]`.
-ℝ has well defined `+` and `*`:
+ℝ has well defined `+` and `∙`:
 
     uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙvₘ
 
@@ -274,11 +281,11 @@ Quick plausibility check:
       Σuₙ + Σvₙ = 6 + 15 = 21
       uᵒ+vᵒ = Σuₙ+Σvₙ = Σ uₙ+vₙ = 21   # All self consistent
       # Multiplication
-      uᵒvᵒ = ΣΣ uₙvₘ = ((1*4)+(1*5)+(1*6)) + ((2*4)+(2*5)+(2*6)) + ((3*4)+(3*5)+(3*6))
+      uᵒvᵒ = ΣΣ uₙvₘ = ((1∙4)+(1∙5)+(1∙6)) + ((2∙4)+(2∙5)+(2∙6)) + ((3∙4)+(3∙5)+(3∙6))
         = (4+5+6) + (8+10+12) + (12+15+18)
         = 15 + 30 + 45
         = 90
-      uᵒvᵒ = Σuₙ Σvₙ = 6*15 = 90
+      uᵒvᵒ = Σuₙ Σvₙ = 6∙15 = 90
       uᵒvᵒ = Σuₙ Σvₙ = ΣΣ uₙvₘ = 90   # Again, consistent.
       # Division we don't have in the same form.
       uᵒ/vᵒ = Σuₙ/Σvₙ
@@ -286,8 +293,8 @@ Quick plausibility check:
     Σuₙ Σvₘ = ΣΣ uₙvₘ
     # The rigorous proof:
       Σuₙ Σvₘ
-      (Σuₙ)*(Σvₘ)   # Just explicitly showing what I mean.
-      Σ[uₙ*(Σvₘ)]   # Treat the v series like a number and take it into the u series.
+      (Σuₙ)∙(Σvₘ)   # Just explicitly showing what I mean.
+      Σ[uₙ∙(Σvₘ)]   # Treat the v series like a number and take it into the u series.
       Σ[Σuₙvₘ)]     # uₙ is just a constant rational and can go into the v series.
       ΣΣ[uₙvₘ]      # Well... maybe it was obvious to begin with.
 
@@ -309,7 +316,7 @@ The Imaginary number i:
     i² = (-1,0)
     # Proof
       (0,1)(0,1)
-      (0²-1²,0*1+1*0)
+      (0²-1²,0∙1+1∙0)
       (-1,0)
     (u,v) = u+iv
     i² = -1
@@ -356,7 +363,7 @@ Dirac notation:
 ##<a name="24"></a> n!
 Factorial:
 
-    n! ≡ Π[1,n]{u|u}   # 1*2*3*...*n
+    n! ≡ Π[1,n]{u|u}   # 1∙2∙3∙...∙n
 
     u[n]=1/n! → u[n-1]=nu[n]   # Recursion
     # Proof:
@@ -385,7 +392,7 @@ Factorial:
       u[-2]
       u[-1-1]
       -1u[-1]
-      -1*0
+      -1∙0
       0   # In general 1/u! = 0 ← ℤ{u<0}
 
 ##<a name="25"></a> nᵥ
@@ -404,7 +411,7 @@ Whatchamacallit forward:
     n₃ = n₂(n+3)
     n₃ = (n+1)(n+2)(n+3) # and so on...
 
-    4₂ = (4+1)(4+2) = 5*6 = 30   # For example.
+    4₂ = (4+1)(4+2) = 5∙6 = 30   # For example.
 
 Whatchamacallit backwards:
 
@@ -420,7 +427,7 @@ Whatchamacallit backwards:
     n-₃ = n-₂/(n-3+1) = (1/(n(n-1)))/(n-2)
     n-₃ = 1/(n(n-1)(n-2)) # and so on...
 
-    4-₂ = 1/(4(4-1)) = 1/(4*3) = 1/12   # For example.
+    4-₂ = 1/(4(4-1)) = 1/(4∙3) = 1/12   # For example.
 
 Arrows meaningful as Whatchamacallits:
 
@@ -479,7 +486,7 @@ functions series definitions:
     S²+C²=1            # Pythagoras
     S[u+v]=SuCv+CuSv   # Sine's angle sum
     C[u+v]=CuCv-SuSv   # Cosine's angle sum
-    C[2u]=1-2S²u       # Cosine double angle "cos(2u)=1-2*sin²(u)"
+    C[2u]=1-2S²u       # Cosine double angle "cos(2u)=1-2sin²(u)"
 
 Just a quick exercise.
 Derivation: Cosine's Angle Sum to Cosine Double Angle:
@@ -595,7 +602,7 @@ Time evolution:
     # Don't have to explicitly show quantum number if it can be infered.
     Φ⁰ = 1
     Φⁱ = e[-iω(n+½)]
-    Φᵗ = (Φⁱ)^t = e[t * (-iω(n+½))] = e[-iω(n+½)t]   # Just to show that the notation makes sense.
+    Φᵗ = (Φⁱ)^t = e[t ∙ (-iω(n+½))] = e[-iω(n+½)t]   # Just to show that the notation makes sense.
 
 ##<a name="34"></a> Φ→φ
 
@@ -680,7 +687,7 @@ Average Quantum number nᵒ
     # To 𝐿, for large enough M, the trailing sequence are all zeroes.
     u²(1 - Σ0)
     u²(1-0)
-    u²*1
+    u²∙1
     u²
 
     nᵒ² = 𝐿 Σ[n(n-1)𝑃ₙ]   # b/c nᵒ=u, so u²=nᵒ²
@@ -749,7 +756,7 @@ The Normalization Constant, 𝐴ₙ:
     𝐴ₙ/𝐴ₙ-₁ = 1/√[2n]
     Proof:
       (1/√[2ⁿn!√π]) / (1/√[2ⁿ-ⁱ(n-1)!√π])
-      (1/√[2ⁿn!√π]) * (√[2ⁿ-ⁱ(n-1)!√π])
+      (1/√[2ⁿn!√π]) ∙ (√[2ⁿ-ⁱ(n-1)!√π])
       √[2ⁿ-ⁱ(n-1)!√π] / √[2ⁿn!√π]
       √[2ⁿ-ⁱ(n-1)!] / √[2ⁿn!]   # √π cancels
       √[2ⁿ-ⁱ] / √[2ⁿn]          # n!/(n-1)! = n
@@ -758,13 +765,13 @@ The Normalization Constant, 𝐴ₙ:
     # Identities:
     𝐴ₙ   = 𝐴ₙ-₁ / √[2n]       # Given
     𝐴ₙ+₁ = 𝐴ₙ   / √[2(n+1)]   # Increment index n
-    𝐴ₙ   = 𝐴ₙ+₁ * √[2(n+1)]   # Solve for 𝐴ₙ
-    𝐴ₙ-₁ = 𝐴ₙ   * √[2n]       # Decrement index n
+    𝐴ₙ   = 𝐴ₙ+₁ ∙ √[2(n+1)]   # Solve for 𝐴ₙ
+    𝐴ₙ-₁ = 𝐴ₙ   ∙ √[2n]       # Decrement index n
 
     # With Whatchamacallits
-    𝐴ₙ   = 𝐴ₙ-₁ * √[½n-₁] = 𝐴ₙ-₁ * √[½n↓] = 𝐴ₙ-₁ * √[½n↓]
+    𝐴ₙ   = 𝐴ₙ-₁ ∙ √[½n-₁] = 𝐴ₙ-₁ ∙ √[½n↓] = 𝐴ₙ-₁ ∙ √[½n↓]
     𝐴ₙ+₁ = 𝐴ₙ   / √[2n₁]  = 𝐴ₙ   / √[2n↑] = 𝐴ₙ   / √[2n↑]
-    𝐴ₙ   = 𝐴ₙ+₁ * √[2n₁]  = 𝐴ₙ+₁ * √[2n↑] = 𝐴ₙ+₁ * √[2n↑]
+    𝐴ₙ   = 𝐴ₙ+₁ ∙ √[2n₁]  = 𝐴ₙ+₁ ∙ √[2n↑] = 𝐴ₙ+₁ ∙ √[2n↑]
     𝐴ₙ-₁ = 𝐴ₙ   / √[½n-₁] = 𝐴ₙ   / √[½n↓] = 𝐴ₙ   / √[½n↓]
 
     # Use these:

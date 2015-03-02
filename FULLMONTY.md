@@ -47,6 +47,11 @@ Everything else is commentary.
 Rules for expression than end with `=` and `→` which then continue on the next line are emerging, but
 I haven't yet decided exactly what they are.
 
+TODO: Convention on alphbet/letter use?
+Complex/State function in capital greek.
+Complex/Real numbers in lower case greek.
+Integers in lower case latin.
+I don't think I'm currently being consistent.
 
 ##<a name="2"></a> {u,v,w}
 Arbitrary symbols:
@@ -259,6 +264,11 @@ For the following examples, I use fatorial N! and exponential function e[N]:
 The Float::EPSILON for Ruby on my machine is about 2.22e-16.
 So `𝐿` puts a limit on N on my machine of about 6.71e+7 (2.22e-16 ~ 1/(6.71e+7)^2).
 
+## uₒ≡Σuₙ
+I'll use subcript o, `ₒ`, to refer to the object that represents an infinite sum.
+
+    uₒ≡Σuₙ
+
 ##<a name="20"></a> ℝ
 For the purpose of this "paper", ℝ just needs to include the series I'm working with.
 That is ℝ augments ℚ with Σuₙ as follows:
@@ -268,30 +278,30 @@ That is ℝ augments ℚ with Σuₙ as follows:
 So I just need `ℝ` to work with `𝐿[Σuₙ]`.
 ℝ has well defined `+` and `×`:
 
-    uᵒ=Σuₙ,vᵒ=Σvₙ → uᵒ+vᵒ ≡ Σ uₙ+vₙ, uᵒvᵒ ≡ ΣΣ uₙvₘ
+    uₒ=Σuₙ,vₒ=Σvₙ → uₒ+vₒ ≡ Σ uₙ+vₙ, uₒvₒ ≡ ΣΣ uₙvₘ
 
 ℝ can be scaled by a rational:
 
-    ℚ{v,uₙ}, ℝ{uᵒ:uᵒ=Σuₙ} → vuᵒ = vΣuₙ = Σvuₙ, ℝ{vuᵒ}
+    ℚ{v,uₙ}, ℝ{uₒ:uₒ=Σuₙ} → vuₒ = vΣuₙ = Σvuₙ, ℝ{vuₒ}
 
 Quick plausibility check:
 
     u=[1,2,3],v=[4,5,6] →
-      uᵒ = Σuₙ = 1 + 2 + 3 = 6
-      vᵒ = Σvₙ = 4 + 5 + 6 = 15
+      uₒ = Σuₙ = 1 + 2 + 3 = 6
+      vₒ = Σvₙ = 4 + 5 + 6 = 15
       # Addition
-      uᵒ+vᵒ = Σ uₙ+vₙ = (1+4) + (2+5) + (3+6) = 5 + 7 + 9 = 21
+      uₒ+vₒ = Σ uₙ+vₙ = (1+4) + (2+5) + (3+6) = 5 + 7 + 9 = 21
       Σuₙ + Σvₙ = 6 + 15 = 21
-      uᵒ+vᵒ = Σuₙ+Σvₙ = Σ uₙ+vₙ = 21   # All self consistent
+      uₒ+vₒ = Σuₙ+Σvₙ = Σ uₙ+vₙ = 21   # All self consistent
       # Multiplication
-      uᵒvᵒ = ΣΣ uₙvₘ = ((1×4)+(1×5)+(1×6)) + ((2×4)+(2×5)+(2×6)) + ((3×4)+(3×5)+(3×6))
+      uₒvₒ = ΣΣ uₙvₘ = ((1×4)+(1×5)+(1×6)) + ((2×4)+(2×5)+(2×6)) + ((3×4)+(3×5)+(3×6))
         = (4+5+6) + (8+10+12) + (12+15+18)
         = 15 + 30 + 45
         = 90
-      uᵒvᵒ = Σuₙ Σvₙ = 6×15 = 90
-      uᵒvᵒ = Σuₙ Σvₙ = ΣΣ uₙvₘ = 90   # Again, consistent.
+      uₒvₒ = Σuₙ Σvₙ = 6×15 = 90
+      uₒvₒ = Σuₙ Σvₙ = ΣΣ uₙvₘ = 90   # Again, consistent.
       # Division we don't have in the same form.
-      uᵒ/vᵒ = Σuₙ/Σvₙ
+      uₒ/vₒ = Σuₙ/Σvₙ
 
     Σuₙ Σvₘ = ΣΣ uₙvₘ
     # The rigorous proof:
@@ -930,7 +940,7 @@ The State Function Ψ:
 The Problem To Be Solved
 
     Minimize:     <Ψ|n><n|ΔxΔp|m><m|Ψ>
-    Subject to:   <Ψ|n><n|Eₙ|n><n|Ψ> = Eᵒ
+    Subject to:   <Ψ|n><n|Eₙ|n><n|Ψ> = Eₒ
 
 TODO: I just jumped from the above to the calculation of Δ²x !?
 Will say something like ΣΣuₙvₘ = (Σuₙ)(Σvₙ)
@@ -1072,3 +1082,12 @@ TODO: `<ξ²>`:
     Δ²ξ = <ξ²> - <ξ>²
         = (½ + 2ñc²₁) - 2ñc²₁
         = ½
+
+## Resources
+On top of the references given in the appendix, I'd like to add the following resources:
+
+* njwildberger's [MathFoundations](https://www.youtube.com/playlist?list=PL5A714C94D40392AB)
+* Stanford's Susskind's [Advanced Quantum Mechanics](https://www.youtube.com/playlist?list=PLpGHT1n4-mAsmMxmSX0LCaXIXT2PmU85m)
+
+So the way it works is that any mistakes herein are all my fault.
+If I say anything good, it's because of these other people:

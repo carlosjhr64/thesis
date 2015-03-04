@@ -31,17 +31,17 @@ it's a good warmup and demonstrates my notation.
 
  · [2ₘ](#31) · [3ₘ](#32) · [nₘ=(n+m)!/n!](#33) · [n₋ₘ=(n-m)!/n!](#34) · [n₋ₙ=1/n!](#35) · [(ⁿₘ)=m-ₘ/n-ₘ](#36) ·
 
- · [n↥,n₀,n↧](#37) · [nᵥn!](#38) · [Sine, Cosine, and Exponential](#39) · [Δ²](#40) · [𝑃ₙ](#41) · [pₙ](#42) ·
+ · [n↥,n₀,n↧](#37) · [nᵥn!](#38) · [Sine](#39) · [Cosine](#40) · [ℯ](#41) · [Δ²](#42) ·
 
- · [K,m](#43) · [ħ](#44) · [π](#45) · [ω](#46) · [f](#47) · [Eₙ](#48) ·
+ · [𝑃ₙ](#43) · [pₙ](#44) · [K,m](#45) · [ħ](#46) · [π](#47) · [ω](#48) ·
 
- · [⌽ᵗₙ](#49) · [⌽→φ](#50) · [ñ](#51) · [𝐿 Σ[n(n-1)𝑃ₙ]](#52) · [p→𝑃](#53) · [ξ](#54) ·
+ · [f](#49) · [Eₙ](#50) · [⌽ᵗₙ](#51) · [⌽→φ](#52) · [ñ](#53) · [𝐿 Σ[n(n-1)𝑃ₙ]](#54) ·
 
- · [𝐴ₙ](#55) · [ℋₙ](#56) · [Ψₙ](#57) · [ξΨₘ](#58) · [&lt;ξ₀&gt;](#59) · [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#60) ·
+ · [p→𝑃](#55) · [ξ](#56) · [𝐴ₙ](#57) · [ℋₙ](#58) · [Ψₙ](#59) · [ξΨₘ](#60) ·
 
- · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#61) · [p↑p=√[ñ/n↑]𝑃](#62) · [p↓p=𝑃/√[n↓ñ]](#63) · [&lt;ξₜ&gt;](#64) · [&lt;ξ²&gt;](#65) · [Δ²ξ](#66) ·
+ · [&lt;ξ₀&gt;](#61) · [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#62) · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#63) · [p↑p=√[ñ/n↑]𝑃](#64) · [p↓p=𝑃/√[n↓ñ]](#65) · [&lt;ξₜ&gt;](#66) ·
 
- · [Resources](#67) ·
+ · [&lt;ξ²&gt;](#67) · [Δ²ξ](#68) · [Resources](#69) ·
 
 
 </font>
@@ -190,6 +190,9 @@ Arrow Operators on subscripts:
     uₗ⇊ ≡ uₗ↓↓
     uₗ⇊ = uₗ₋₂
 
+    uₗ↑ⁿ ≡ uₗ₊ₙ
+    uₗ↓ⁿ ≡ uₗ₋ₙ
+
     Σₙu↑ ≡ Σₙuₙ₊₁   # Where context allows, subscript not needed.
 
 ##<a name="14"></a> ↧,↥
@@ -199,6 +202,9 @@ Arrow Operators on subscripts:
 
     u↧ ≡ u₀↓   # Step down from "ground".
     u↧ = u₋₁
+
+    u↥ⁿ ≡ uₙ
+    u↧ⁿ ≡ u₋ₙ
 
 ##<a name="15"></a> Σu↑
 
@@ -263,12 +269,12 @@ Let's try a simple limit function:
 
 As N doubles, the sum Σₙ[1/N²] halves.
 So Σₙ[1/N²] does approach zero as N goes on to infinity.
-For the following examples, I use fatorial N! and exponential function e[N]:
+For the following examples, I use fatorial N! and exponential function ℯ[N]:
 
     𝐿[u+1/N²] = u
-    𝐿[u+e[N]/N!] = u    # Try N≥10.
+    𝐿[u+ℯ[N]/N!] = u    # Try N≥10.
     𝐿[u+(v^N)/N!] = u   # N depends on v, but for some N it's true.
-    𝐿[u+e[-N]] = u      # Obviously, I hope.
+    𝐿[u+ℯ[-N]] = u      # Obviously, I hope.
 
     |u| ≤ 1/N, |v| ≤ 1/N  ⇒  |uv| ≤ 1/N², 𝐿[uv]=0
 
@@ -352,7 +358,7 @@ Complex conjugation:
 
     (u,v)* ≡ (u,-v)
     (u+𝑖v)* = u-𝑖v
-    e[𝑖]* = (C+𝑖S)* = C-𝑖S = e[-𝑖]   # what it does to e
+    ℯ[𝑖]* = (C+𝑖S)* = C-𝑖S = ℯ[-𝑖]   # what it does to e
 
     ℝ{uᵣ,uᵢ,vᵣ,vᵢ} →
       (uᵣ,uᵢ)*(vᵣ,vᵢ)=(uᵣvᵣ+uᵢvᵢ,uᵣvᵢ-uᵢvᵣ)
@@ -563,13 +569,13 @@ I'd like to make the following refinement in ℕ,
 ##<a name="37"></a> n↥,n₀,n↧
 Arrows meaningful as Factorals:
 
-    n↥⇈       = (n+1)(n+2)(n+3)
-    n₀⇈ = n↥↑ = (n+1)(n+2)
+    n↥⇈ = n↥³ = (n+1)(n+2)(n+3)
+    n₀⇈ = n↥² = (n+1)(n+2)
     n₀↑ = n↥  = n+1
     n₀        = 1
     n₀↓ = n↧  = 1/n
-    n₀⇊ = n↧↓ = 1/(n(n-1))
-    n↧⇊       = 1/(n(n-1)(n-2))
+    n₀⇊ = n↧² = 1/(n(n-1))
+    n↧⇊ = n↧³ = 1/(n(n-1)(n-2))
 
 ##<a name="38"></a> nᵥn!
 Factoral with Factorial:
@@ -582,26 +588,36 @@ Factoral with Factorial:
     n-₃n! = (n-3)!(n-2)(n-1)n/(n(n-1)(n-2))
     n-₃n! = (n-3)!   # OK
 
-    n↑n! = (n+1)!
-    n↓n! = (n-1)!
+    n↥n! = (n+1)!
+    n↧n! = (n-1)!
 
-    n⇈n! = (n+2)!
-    n⇊n! = (n-2)!
+    n↥²n! = (n+2)!
+    n↧²n! = (n-2)!
 
-##<a name="39"></a> Sine, Cosine, and Exponential
-[Trigonometric](http://en.wikipedia.org/wiki/Trigonometric_functions#Series_definitions) and
-[Exponential](http://en.wikipedia.org/wiki/Exponential_function#Formal_definition)
-functions series definitions:
+    n↥ᵐn! = (n+m)!
+    n↧ᵐn! = (n-m)!
+
+##<a name="39"></a> Sine
+[Sine](http://en.wikipedia.org/wiki/Sine#Series_definition)
+series definition:
 
     :Sine[u] ≡ Σ (-1)ⁿ u^(2n+1) / (2n+1)!
     S[u] ≡ :Sine[u]
 
+##<a name="40"></a> Cosine
+[Cosine](http://en.wikipedia.org/wiki/Trigonometric_functions#Series_definitions)
+series definition:
+
     :Cosine[u] ≡ Σ (-1)ⁿ u^(2n) / (2n)!
     C[u] ≡ :Cosine[u]
 
+##<a name="41"></a> ℯ
+[Exponential](http://en.wikipedia.org/wiki/Exponential_function#Formal_definition)
+series definition:
+
     :Exponential[u] ≡ Σ uⁿ / n!
-    e[u] ≡ :Exponential[u]
-    eᵘ ≡ e^(u) ≡ e[u]   # Alternate forms.
+    ℯ[u] ≡ :Exponential[u]
+    ℯᵘ ≡ ℯ^(u) ≡ ℯ[u]   # Alternate forms.
 
 [Trigonometric Identities](http://en.wikipedia.org/wiki/List_of_trigonometric_identities):
 
@@ -625,18 +641,19 @@ Derivation: Cosine's Angle Sum to Cosine Double Angle:
     C[2u]-1 = (-S²=C²-1)-S²   # A bit of "rubyism" here.  Just invoking Pythagoras.
     C[2u]-1 = -S²-S²
     C[2u]-1 = -2S²
-    C[2u] = 1-2S²             # I should expand out the context once the shorthand has fulfilled its purpose.
+    C[2u] = 1-2S²
+    # I should expand out the context once the shorthand has fulfilled its purpose.
     C[2u] = 1-2S²[u]
     :Cosine[2u] = 1 - 2:Sine²[u]
 
 Known properties of e:
 
-    e[u]e[v] = e[u+v]
-    e[𝑖u] = C[u]+𝑖S[u]
-    e[-𝑖u] = C[u]-𝑖S[u]
-    e[0] = 1
+    ℯ[u]ℯ[v] = ℯ[u+v]
+    ℯ[𝑖u] = C[u]+𝑖S[u]
+    ℯ[-𝑖u] = C[u]-𝑖S[u]
+    ℯ[0] = 1
 
-##<a name="40"></a> Δ²
+##<a name="42"></a> Δ²
 Measure of uncertainty defined (4.1a):
 
     Δ²[u] ≡ <(u - <u>)²>
@@ -655,37 +672,37 @@ Measure of uncertainty (4.1b):
 
     Δ²u = <u²> - <u>²
 
-##<a name="41"></a> 𝑃ₙ
+##<a name="43"></a> 𝑃ₙ
 `𝑃` is the [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution):
 
-    𝑃ₙ ≡ uⁿe[-u]/n!
+    𝑃ₙ ≡ uⁿℯ[-u]/n!
     Σ 𝑃ₙ = 1
     0 ≤ 𝑃ₙ ≤ 1
     <u> = Σ 𝑃ₙuₙ
 
-##<a name="42"></a> pₙ
+##<a name="44"></a> pₙ
 
-    pₙ ≡ √[uⁿe[-u]/n!]
+    pₙ ≡ √[uⁿℯ[-u]/n!]
     pₙ*pₙ = 𝑃ₙ
     # Proof
       pₙ*pₙ
-      √[uⁿe[-u]/n!]*√[uⁿe[-u]/n!]
-      √[uⁿe[-u]/n!]√[uⁿe[-u]/n!]   # It's just all real.
-      uⁿe[-u]/n!
+      √[uⁿℯ[-u]/n!]*√[uⁿℯ[-u]/n!]
+      √[uⁿℯ[-u]/n!]√[uⁿℯ[-u]/n!]   # It's just all real.
+      uⁿℯ[-u]/n!
       𝑃ₙ
 
-##<a name="43"></a> K,m
+##<a name="45"></a> K,m
 I think the point here is that these values are "measured" by "experiment" in "some way".
 
     ℝ{m}   # Mass
     ℝ{K}   # Spring contant 
 
-##<a name="44"></a> ħ
+##<a name="46"></a> ħ
 [Reduced Planck constant](http://en.wikipedia.org/wiki/Planck_constant):
 
     ℝ{ħ}
 
-##<a name="45"></a> π
+##<a name="47"></a> π
 You can check that there exist several series 
 of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi).
 [Leibniz_formula for π](http://en.wikipedia.org/wiki/Leibniz_formula_for_π):
@@ -702,40 +719,40 @@ of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi).
         # Fits given definition of ℝ.
         |8/((4n+1)(4n+3))| ≤ |8/(16n²)| ≤ |1/(2n²)| ≤ 1/n² ← n≥N
 
-##<a name="46"></a> ω
+##<a name="48"></a> ω
 
     ω² ≡ K/m   # Angular frequency
     ω = √[K/m]
 
-##<a name="47"></a> f
+##<a name="49"></a> f
 
     f ≡ ω/(2π)   # Frequency
 
-##<a name="48"></a> Eₙ
+##<a name="50"></a> Eₙ
 
     Eₙ = ωħ(n+½)   # 3.2: Energy eigen-value
 
-##<a name="49"></a> ⌽ᵗₙ
+##<a name="51"></a> ⌽ᵗₙ
 7.17 TODO: why -𝑖Eₙt/ħ and not +𝑖Eₙt/ħ?
 Time evolution:
 
-    ⌽ᵗₙ ≡ e[-𝑖ω(n+½)t] = e[-𝑖Eₙt/ħ]   # NOTE! The ½ part makes this object a bit of a screw ball.
-    φᵗₙ ≡ e[-𝑖ωnt]                    # "How do we end up with this?" you may ask.
+    ⌽ᵗₙ ≡ ℯ[-𝑖ω(n+½)t] = ℯ[-𝑖Eₙt/ħ]   # NOTE! The ½ part makes this object a bit of a screw ball.
+    φᵗₙ ≡ ℯ[-𝑖ωnt]                    # "How do we end up with this?" you may ask.
 
     ⌽ₙ*⌽ₘ = φₘ-ₙ   # You don't have to explicitly show time if it can be infered.
     # Proof:
       ⌽ₙ*⌽ₘ
       ⌽-ₙ⌽ₘ
-      e[𝑖ω(n+½)t - 𝑖ω(m+½)t]
-      e[-𝑖ω(m-n)t]
+      ℯ[𝑖ω(n+½)t - 𝑖ω(m+½)t]
+      ℯ[-𝑖ω(m-n)t]
       φₘ-ₙ
 
     # Don't have to explicitly show quantum number if it can be infered.
     ⌽⁰ = 1
-    ⌽¹ = e[-𝑖ω(n+½)]
-    ⌽ᵗ = (⌽¹)^t = e[t × (-𝑖ω(n+½))] = e[-𝑖ω(n+½)t]   # Just to show that the notation makes sense.
+    ⌽¹ = ℯ[-𝑖ω(n+½)]
+    ⌽ᵗ = (⌽¹)^t = ℯ[t × (-𝑖ω(n+½))] = ℯ[-𝑖ω(n+½)t]   # Just to show that the notation makes sense.
 
-##<a name="50"></a> ⌽→φ
+##<a name="52"></a> ⌽→φ
 
     ⌽ₙ*⌽ₙ₊₁ = φₙ₊₁-ₙ = φ₁
     φ↥ ≡ φ₀↑ = φ₁   # This will make notation very consistent later.
@@ -773,7 +790,7 @@ Short for Sine(nωt) and Cosine(nωt):
     φ₋₂ + φ₂ = 2c₂
     φ↧↓ + φ↥↑ = 2c₂   # And remember this one!
 
-##<a name="51"></a> ñ
+##<a name="53"></a> ñ
 Average Quantum number ñ
 
     <n> = <n|pₙ*npₙ|m> = Σ npₙpₙ = Σ n𝑃ₙ   # only n=m terms contribute
@@ -781,35 +798,35 @@ Average Quantum number ñ
     ñ ≡ 𝐿 <n>
     ñ = 𝐿 Σ n𝑃ₙ = 𝐿 Σₙ n𝑃ₙ   # Remember that 𝐿 truncates the series.
 
-    Σₙ n𝑃ₙ = 𝐿 Σₙ nuⁿe[-u]/n!                    # Just by definition of 𝑃ₙ.
-     = Σ[0,M]{n|nuⁿe[-u]/n!}                     # Definition of Σₙ.
-     = 0 + Σ[1,M]{n|nuⁿe[-u]/n!}                 # The first element in the series is just zero.
-     = Σ[1,M]{n|uⁿe[-u]/(n-1)!}                  # Have the n factor absorbed by the factorial.
-     = Σ[0,M-1]{n|u[n+1]e[-u]/n!}                # Shift.
-     = uΣ[0,M-1]{n|uⁿe[-u]/n!}                   # Take out a factor of u.
-     = u(Σ[0,M]{n|uⁿe[-u]/n!} - (u^M)e[-M]/M!)   # Add and subtract the an Nth element (which is M).
-     = u(Σₙ𝑃ₙ) - u(u^M)e[-M]/M!                  # Definition of Σₙ and 𝑃ₙ.
-     = u(1) - u^(M+1)e[-M]/M!                    # Poisson distribution sums up to one.
-     = u - u^(M+1)e[-M]/M!
+    Σₙ n𝑃ₙ = 𝐿 Σₙ nuⁿℯ[-u]/n!                    # Just by definition of 𝑃ₙ.
+     = Σ[0,M]{n|nuⁿℯ[-u]/n!}                     # Definition of Σₙ.
+     = 0 + Σ[1,M]{n|nuⁿℯ[-u]/n!}                 # The first element in the series is just zero.
+     = Σ[1,M]{n|uⁿℯ[-u]/(n-1)!}                  # Have the n factor absorbed by the factorial.
+     = Σ[0,M-1]{n|u[n+1]ℯ[-u]/n!}                # Shift.
+     = uΣ[0,M-1]{n|uⁿℯ[-u]/n!}                   # Take out a factor of u.
+     = u(Σ[0,M]{n|uⁿℯ[-u]/n!} - (u^M)ℯ[-M]/M!)   # Add and subtract the an Nth element (which is M).
+     = u(Σₙ𝑃ₙ) - u(u^M)ℯ[-M]/M!                  # Definition of Σₙ and 𝑃ₙ.
+     = u(1) - u^(M+1)ℯ[-M]/M!                    # Poisson distribution sums up to one.
+     = u - u^(M+1)ℯ[-M]/M!
 
-    ñ = 𝐿[u - u^(M+1)e[-M]/M!]
-    ñ = 𝐿[u] - 𝐿[u^(M+1)e[-M]/M!]
+    ñ = 𝐿[u - u^(M+1)ℯ[-M]/M!]
+    ñ = 𝐿[u] - 𝐿[u^(M+1)ℯ[-M]/M!]
     ñ = u - 0
     ñ = u   # As expected.  :)
 
-##<a name="52"></a> 𝐿 Σ[n(n-1)𝑃ₙ]
+##<a name="54"></a> 𝐿 Σ[n(n-1)𝑃ₙ]
 
     𝐿 Σ n(n-1)𝑃ₙ
     𝐿 Σₙ n(n-1)𝑃ₙ
-    𝐿 Σₙ 1/n₋₂ uⁿe[-u]/n!
-    𝐿 Σₙ uⁿe[-u]/(n-2)!
-    𝐿 Σₙ u² u^(n-2)e[-u]/(n-2)!
-    𝐿 u² Σₙ u^(n-2)e[-u]/(n-2)!
-    𝐿 u² Σ[0,M]{n|u^(n-2)e[-u]/(n-2)!}
-    𝐿 u² Σ[-2,M-2]{n|uⁿe[-u]/n!}
-    𝐿 u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|uⁿe[-u]/n!})
-    𝐿 u² (Σ[-2,-1]{n|uⁿe[-u]/n!} + Σ[0,M-2]{n|𝑃ₙ})
-    u²(𝐿[e[-u]/(u²(-2)!)] + 𝐿[e[-u]/(u(-1)!)] + 𝐿[Σ[0,M-2]{n|𝑃ₙ}])
+    𝐿 Σₙ 1/n₋₂ uⁿℯ[-u]/n!
+    𝐿 Σₙ uⁿℯ[-u]/(n-2)!
+    𝐿 Σₙ u² u^(n-2)ℯ[-u]/(n-2)!
+    𝐿 u² Σₙ u^(n-2)ℯ[-u]/(n-2)!
+    𝐿 u² Σ[0,M]{n|u^(n-2)ℯ[-u]/(n-2)!}
+    𝐿 u² Σ[-2,M-2]{n|uⁿℯ[-u]/n!}
+    𝐿 u² (Σ[-2,-1]{n|uⁿℯ[-u]/n!} + Σ[0,M-2]{n|uⁿℯ[-u]/n!})
+    𝐿 u² (Σ[-2,-1]{n|uⁿℯ[-u]/n!} + Σ[0,M-2]{n|𝑃ₙ})
+    u²(𝐿[ℯ[-u]/(u²(-2)!)] + 𝐿[ℯ[-u]/(u(-1)!)] + 𝐿[Σ[0,M-2]{n|𝑃ₙ}])
     u²(0 + 0 + 𝐿[Σ[0,M-2]{n|𝑃ₙ}])   # 1/u! = 0 if integer u < 0
     u²(𝐿[Σ[0,M]{n|𝑃ₙ} - 𝑃[M-1] - 𝑃[M]])
     u²(𝐿[Σ𝑃ₙ - 𝑃[M-1] - 𝑃[M]] - 𝑃[M+1] - ⋯)   # Re-consider the infinite series.
@@ -825,36 +842,36 @@ Average Quantum number ñ
 
 Now we can describe the distribution in terms of the average quantum number:
 
-    𝑃ₙ = ñⁿe[-ñ]/n!
-    pₙ = √[ñⁿe[-ñ]/n!]
+    𝑃ₙ = ñⁿℯ[-ñ]/n!
+    pₙ = √[ñⁿℯ[-ñ]/n!]
 
-##<a name="53"></a> p→𝑃
+##<a name="55"></a> p→𝑃
 
-    pₙpₙ₊₁ = √[ñⁿe[-ñ]/n!] √[ñⁿ⁺¹e[-ñ]/(n+1)!]
-           = √[ñⁿe[-ñ]/n!] √[ñⁿe[-ñ]/n!] √[ñ/(n+1)] 
+    pₙpₙ₊₁ = √[ñⁿℯ[-ñ]/n!] √[ñⁿ⁺¹ℯ[-ñ]/(n+1)!]
+           = √[ñⁿℯ[-ñ]/n!] √[ñⁿℯ[-ñ]/n!] √[ñ/(n+1)] 
            = pₙ pₙ √[ñ/(n+1)] 
            = 𝑃ₙ √[ñ/(n+1)] 
            = √[ñ/(n+1)]𝑃ₙ 
     pₙpₙ₊₁ = √ñ𝑃ₙ/√n₁   # Using Factoral
     pp↑ = √ñ𝑃ₙ/√n↑      # And Arrow notation
 
-    pₙpₙ₋₁ = √[ñⁿe[-ñ]/n!] √[ñⁿ⁻¹e[-ñ]/(n-1)!]
-           = √[ñⁿe[-ñ]/n!] √[ñⁿe[-ñ]/n!] √[n/ñ] 
+    pₙpₙ₋₁ = √[ñⁿℯ[-ñ]/n!] √[ñⁿ⁻¹ℯ[-ñ]/(n-1)!]
+           = √[ñⁿℯ[-ñ]/n!] √[ñⁿℯ[-ñ]/n!] √[n/ñ] 
            = pₙ pₙ √[n/ñ] 
            = 𝑃ₙ √[n/ñ] 
            = √[n/ñ]𝑃ₙ 
     pₙpₙ₋₁ = 𝑃ₙ/√[ñn₋₁]   # Using Factoral
     pp↓ = 𝑃ₙ/√[ñn↓]       # And Arrow notation
 
-    pₙpₙ₊₂ = √[ñⁿe[-ñ]/n!] √[ñⁿ⁺²e[-ñ]/(n+2)!]
-           = √[ñ²/((n+1)(n+2))] √[ñⁿe[-ñ]/n!] √[ñⁿe[-ñ]/n!]
+    pₙpₙ₊₂ = √[ñⁿℯ[-ñ]/n!] √[ñⁿ⁺²ℯ[-ñ]/(n+2)!]
+           = √[ñ²/((n+1)(n+2))] √[ñⁿℯ[-ñ]/n!] √[ñⁿℯ[-ñ]/n!]
            = ñ/√[(n+1)(n+2)] pₙpₙ
            = ñ/√[(n+1)(n+2)] 𝑃ₙ
     pₙpₙ₊₂ = ñ𝑃ₙ/√n₂   # Using Factoral
     pₙpₙ₊₂ = ñ𝑃ₙ/√n⇈   # Using Arrow
 
-    pₙpₙ₋₂ = √[ñⁿe[-ñ]/n!] √[ñⁿ⁻²e[-ñ]/(n-2)!]
-           = √[(n-1)n/ñ²] √[ñⁿe[-ñ]/n!] √[ñⁿe[-ñ]/n!]
+    pₙpₙ₋₂ = √[ñⁿℯ[-ñ]/n!] √[ñⁿ⁻²ℯ[-ñ]/(n-2)!]
+           = √[(n-1)n/ñ²] √[ñⁿℯ[-ñ]/n!] √[ñⁿℯ[-ñ]/n!]
            = √[(n-1)n]/ñ pₙpₙ
            = √[(n-1)n]/ñ 𝑃ₙ
     pₙpₙ₋₂ = 𝑃ₙ/(ñ√n₋₂)   # Using Factoral
@@ -874,13 +891,13 @@ Now we can describe the distribution in terms of the average quantum number:
       √[ñm↓]p↓ = p
       p = √[ñm↓]p↓
 
-##<a name="54"></a> ξ
+##<a name="56"></a> ξ
 The non-dimensional displacement, ξ.
 
     ξ² ≡ mω/ħ x²   # A.1b
     x² = ħ/(mω) ξ²
 
-##<a name="55"></a> 𝐴ₙ
+##<a name="57"></a> 𝐴ₙ
 The Normalization Constant, 𝐴ₙ:
 
     𝐴ₙ ≡ 1/√[2ⁿn!√π]
@@ -908,10 +925,10 @@ The Normalization Constant, 𝐴ₙ:
     # Use these:
     𝐴ₘ = √[2m↑]𝐴ₘ↑ = √[½m↓]𝐴ₘ↓
 
-##<a name="56"></a> ℋₙ
+##<a name="58"></a> ℋₙ
 The Hermite polynomial:
 
-    ℋₙ[ξ] ≡ (-1)ⁿ e[ξ²] Dᵧⁿ e[-ξ²]   # A.3, this is "physicists' Hermite polynomials" in Wikipedia.
+    ℋₙ[ξ] ≡ (-1)ⁿ ℯ[ξ²] Dᵧⁿ ℯ[-ξ²]   # A.3, this is "physicists' Hermite polynomials" in Wikipedia.
 
     Dᵧ ℋₙ[ξ] = 2nℋₙ₋₁[ξ]   # A.4a
     # Proof:
@@ -920,42 +937,42 @@ The Hermite polynomial:
       # But found this elegant proof online,
       # http://math.stackexchange.com/questions/581897/hermite-polynomials-recurrence-relation:
       D ℋₙ[ξ]                                               # Given
-      D[(-1)ⁿ e[ξ²] (D)ⁿ e[-ξ²]]                            # Substitution, definition of ℋ
-      (-1)ⁿ D[e[ξ²] (D)ⁿ e[-ξ²]]                            # Take out the constant
-      (-1)ⁿ (D[e[ξ²]] (D)ⁿ e[-ξ²] + e[ξ²] D[(D)ⁿ e[-ξ²]])   # Product rule
-      (-1)ⁿ (D[e[ξ²]] (D)ⁿ e[-ξ²] + e[ξ²] (D)ⁿ D[e[-ξ²]])   # Well... obviously we're going to do that!
-      (-1)ⁿ (2ξe[ξ²] (D)ⁿ e[-ξ²] + e[ξ²] (D)ⁿ -2ξe[-ξ²])    # Executing D
+      D[(-1)ⁿ ℯ[ξ²] (D)ⁿ ℯ[-ξ²]]                            # Substitution, definition of ℋ
+      (-1)ⁿ D[ℯ[ξ²] (D)ⁿ ℯ[-ξ²]]                            # Take out the constant
+      (-1)ⁿ (D[ℯ[ξ²]] (D)ⁿ ℯ[-ξ²] + ℯ[ξ²] D[(D)ⁿ ℯ[-ξ²]])   # Product rule
+      (-1)ⁿ (D[ℯ[ξ²]] (D)ⁿ ℯ[-ξ²] + ℯ[ξ²] (D)ⁿ D[ℯ[-ξ²]])   # Well... obviously we're going to do that!
+      (-1)ⁿ (2ξℯ[ξ²] (D)ⁿ ℯ[-ξ²] + ℯ[ξ²] (D)ⁿ -2ξℯ[-ξ²])    # Executing D
       # I don't remember ever coming across the General Leibniz rule
       # http://en.wikipedia.org/wiki/General_Leibniz_rule
       # Let (ⁿₘ) mean n choose m.
-      (-1)ⁿ (2ξe[ξ²] (D)ⁿ e[-ξ²] + e[ξ²] Σ[0,n]{m| (ⁿₘ) (D)ᵐ[-2ξ] (D)ⁿ-ᵐe[-ξ²]})   # General Leibniz rule
+      (-1)ⁿ (2ξℯ[ξ²] (D)ⁿ ℯ[-ξ²] + ℯ[ξ²] Σ[0,n]{m| (ⁿₘ) (D)ᵐ[-2ξ] (D)ⁿ-ᵐℯ[-ξ²]})   # General Leibniz rule
       # D²[-2ξ]=0, (D)ⁿ[-2ξ]=0 if n>1.
-      (-1)ⁿ (2ξe[ξ²] (D)ⁿ e[-ξ²] + e[ξ²] Σ[0,1]{m| (ⁿₘ) (D)ᵐ[-2ξ] (D)ⁿ-ᵐe[-ξ²]})
-      (-1)ⁿ (2ξe[ξ²] (D)ⁿ e[-ξ²] + e[ξ²]((ⁿ₀) D⁰[-2ξ] (D)ⁿ-⁰e[-ξ²] + (ⁿ₁) D¹[-2ξ] (D)ⁿ⁻¹e[-ξ²])
-      (-1)ⁿ (2ξe[ξ²] (D)ⁿ e[-ξ²] + e[ξ²](   1 D⁰[-2ξ] (D)ⁿ  e[-ξ²] +    n D¹[-2ξ] (D)ⁿ⁻¹e[-ξ²])
-      (-1)ⁿ (2ξe[ξ²] (D)ⁿ e[-ξ²] + e[ξ²](         -2ξ  (D)ⁿ  e[-ξ²] +     n   (-2)  (D)ⁿ⁻¹e[-ξ²])
-      (-1)ⁿ (2ξe[ξ²](D)ⁿe[-ξ²] - 2ξe[ξ²](D)ⁿe[-ξ²] - 2ne[ξ²](D)ⁿ⁻¹e[-ξ²])
-      (-1)ⁿ (0 - 2ne[ξ²](D)ⁿ⁻¹e[-ξ²])
-      (-1)ⁿ (-2) ne[ξ²](D)ⁿ⁻¹e[-ξ²]
-      (-1)ⁿ⁻¹ 2 ne[ξ²](D)ⁿ⁻¹e[-ξ²]
-      2n (-1)ⁿ⁻¹ e[ξ²] (D)ⁿ⁻¹e[-ξ²]
+      (-1)ⁿ (2ξℯ[ξ²] (D)ⁿ ℯ[-ξ²] + ℯ[ξ²] Σ[0,1]{m| (ⁿₘ) (D)ᵐ[-2ξ] (D)ⁿ-ᵐℯ[-ξ²]})
+      (-1)ⁿ (2ξℯ[ξ²] (D)ⁿ ℯ[-ξ²] + ℯ[ξ²]((ⁿ₀) D⁰[-2ξ] (D)ⁿ-⁰ℯ[-ξ²] + (ⁿ₁) D¹[-2ξ] (D)ⁿ⁻¹ℯ[-ξ²])
+      (-1)ⁿ (2ξℯ[ξ²] (D)ⁿ ℯ[-ξ²] + ℯ[ξ²](   1 D⁰[-2ξ] (D)ⁿ  ℯ[-ξ²] +    n D¹[-2ξ] (D)ⁿ⁻¹ℯ[-ξ²])
+      (-1)ⁿ (2ξℯ[ξ²] (D)ⁿ ℯ[-ξ²] + ℯ[ξ²](         -2ξ  (D)ⁿ  ℯ[-ξ²] +     n   (-2)  (D)ⁿ⁻¹ℯ[-ξ²])
+      (-1)ⁿ (2ξℯ[ξ²](D)ⁿℯ[-ξ²] - 2ξℯ[ξ²](D)ⁿℯ[-ξ²] - 2nℯ[ξ²](D)ⁿ⁻¹ℯ[-ξ²])
+      (-1)ⁿ (0 - 2nℯ[ξ²](D)ⁿ⁻¹ℯ[-ξ²])
+      (-1)ⁿ (-2) nℯ[ξ²](D)ⁿ⁻¹ℯ[-ξ²]
+      (-1)ⁿ⁻¹ 2 nℯ[ξ²](D)ⁿ⁻¹ℯ[-ξ²]
+      2n (-1)ⁿ⁻¹ ℯ[ξ²] (D)ⁿ⁻¹ℯ[-ξ²]
       2n ℋₙ₋₁[ξ]
 
     ℋₙ₊₁[ξ] = 2ξℋₙ[ξ] - 2nℋₙ₋₁[ξ]   # A.4b
     # Also a well known property of ℋ, but here's a proof:
       ℋₙ₊₁[ξ]
-      (-1)ⁿ⁺¹ e[ξ²] (D)ⁿ⁺¹ e[-ξ²]
-      (-1)ⁿ(-1) e[ξ²] (D)ⁿ[D e[-ξ²]]
-      (-1)ⁿ(-1) e[ξ²] (D)ⁿ[(-2ξ) e[-ξ²]]
-      (-1)ⁿ     e[ξ²] (D)ⁿ[  2ξ  e[-ξ²]]
-      (-1)ⁿ e[ξ²] Σₘ (ⁿₘ) (D)ᵐ[2ξ] (D)ⁿ-ᵐ[e[-ξ²]]                                  # General Leibniz rule
-      (-1)ⁿ e[ξ²]((ⁿ₀) D⁰[2ξ] (D)ⁿ-⁰[e[-ξ²]] + (ⁿ₁) D¹[2ξ] (D)ⁿ⁻¹[e[-ξ²]] + 0 ⋯)   # Dejavu
-      (-1)ⁿ e[ξ²](   1   (2ξ) (D)ⁿ  [e[-ξ²]] +    n   (2)  (D)ⁿ⁻¹[e[-ξ²]])
-      (-1)ⁿ e[ξ²](2ξ(D)ⁿ[e[-ξ²]] + 2n(D)ⁿ⁻¹[e[-ξ²]])
-      (-1)ⁿ e[ξ²] 2ξ(D)ⁿ[e[-ξ²]] + (-1)ⁿ e[ξ²] 2n(D)ⁿ⁻¹[e[-ξ²]])                   # Distribute
-      2ξ (-1)ⁿ e[ξ²] (D)ⁿ[e[-ξ²]] + 2n (-1)ⁿ e[ξ²] (D)ⁿ⁻¹[e[-ξ²]])
-      2ξ (-1)ⁿ e[ξ²] (D)ⁿ[e[-ξ²]] + 2n (-1)(-1)ⁿ⁻¹ e[ξ²] (D)ⁿ⁻¹[e[-ξ²]])
-      2ξ (-1)ⁿ e[ξ²] (D)ⁿ[e[-ξ²]] - 2n (-1)ⁿ⁻¹ e[ξ²] (D)ⁿ⁻¹[e[-ξ²]])
+      (-1)ⁿ⁺¹ ℯ[ξ²] (D)ⁿ⁺¹ ℯ[-ξ²]
+      (-1)ⁿ(-1) ℯ[ξ²] (D)ⁿ[D ℯ[-ξ²]]
+      (-1)ⁿ(-1) ℯ[ξ²] (D)ⁿ[(-2ξ) ℯ[-ξ²]]
+      (-1)ⁿ     ℯ[ξ²] (D)ⁿ[  2ξ  ℯ[-ξ²]]
+      (-1)ⁿ ℯ[ξ²] Σₘ (ⁿₘ) (D)ᵐ[2ξ] (D)ⁿ-ᵐ[ℯ[-ξ²]]                                  # General Leibniz rule
+      (-1)ⁿ ℯ[ξ²]((ⁿ₀) D⁰[2ξ] (D)ⁿ-⁰[ℯ[-ξ²]] + (ⁿ₁) D¹[2ξ] (D)ⁿ⁻¹[ℯ[-ξ²]] + 0 ⋯)   # Dejavu
+      (-1)ⁿ ℯ[ξ²](   1   (2ξ) (D)ⁿ  [ℯ[-ξ²]] +    n   (2)  (D)ⁿ⁻¹[ℯ[-ξ²]])
+      (-1)ⁿ ℯ[ξ²](2ξ(D)ⁿ[ℯ[-ξ²]] + 2n(D)ⁿ⁻¹[ℯ[-ξ²]])
+      (-1)ⁿ ℯ[ξ²] 2ξ(D)ⁿ[ℯ[-ξ²]] + (-1)ⁿ ℯ[ξ²] 2n(D)ⁿ⁻¹[ℯ[-ξ²]])                   # Distribute
+      2ξ (-1)ⁿ ℯ[ξ²] (D)ⁿ[ℯ[-ξ²]] + 2n (-1)ⁿ ℯ[ξ²] (D)ⁿ⁻¹[ℯ[-ξ²]])
+      2ξ (-1)ⁿ ℯ[ξ²] (D)ⁿ[ℯ[-ξ²]] + 2n (-1)(-1)ⁿ⁻¹ ℯ[ξ²] (D)ⁿ⁻¹[ℯ[-ξ²]])
+      2ξ (-1)ⁿ ℯ[ξ²] (D)ⁿ[ℯ[-ξ²]] - 2n (-1)ⁿ⁻¹ ℯ[ξ²] (D)ⁿ⁻¹[ℯ[-ξ²]])
       2ξℋₙ[ξ] - 2nℋₙ₋₁[ξ]
 
     ξℋₙ[ξ] = ½ℋₙ₊₁[ξ] + nℋₙ₋₁[ξ]
@@ -970,12 +987,12 @@ The Hermite polynomial:
     Dᵧ ℋₙ[ξ] = 2nℋₙ₋₁[ξ]           = ℋₙ↓[ξ]/(½n↓)
     ξℋₙ[ξ]   = ½ℋₙ₊₁[ξ] + nℋₙ₋₁[ξ] = ½(ℋₙ↑[ξ] + ℋₙ↓[ξ]/(½n↓))
 
-##<a name="57"></a> Ψₙ
+##<a name="59"></a> Ψₙ
 Please accept the EigenState of the Simple Harmonic Oscillator Ψₙ as given by Liboff's book in page 189.
 The EigenState Ψₙ:
 
     Ψₙ[x] ≡ |n>
-    Ψₙ[x] = 𝐴ₙℋₙ[ξ]e[-ξ²/2]
+    Ψₙ[x] = 𝐴ₙℋₙ[ξ]ℯ[-ξ²/2]
 
 The State Function Ψ:
 
@@ -989,18 +1006,18 @@ The Problem To Be Solved
 TODO: I just jumped from the above to the calculation of Δ²x !?
 Will say something like ΣΣuₙvₘ = (Σuₙ)(Σvₙ)
 
-##<a name="58"></a> ξΨₘ
+##<a name="60"></a> ξΨₘ
 Motivation: I will be calculating <Ψ|ξ|Ψ> later.
 
     ξΨₘ = ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
     # Proof:
       ξΨₘ
-      ξ𝐴ₘℋₘ[ξ]e[-ξ²/2]
-      𝐴ₘ ξℋₘ[ξ]e[-ξ²/2]
+      ξ𝐴ₘℋₘ[ξ]ℯ[-ξ²/2]
+      𝐴ₘ ξℋₘ[ξ]ℯ[-ξ²/2]
       𝐴ₘ ½(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
       ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
 
-##<a name="59"></a> &lt;ξ₀&gt;
+##<a name="61"></a> &lt;ξ₀&gt;
 Evaluation of `<ξ₀>`:
 
     <ξ₀> = <Ψ₀|ξ|Ψ₀>             # 7.14a
@@ -1024,7 +1041,7 @@ Evaluation of `<ξ₀>`:
     <ξ₀> = √2ñ
     <ξ₀>² = 2ñ   # OK, need time development
 
-##<a name="60"></a> ⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓
+##<a name="62"></a> ⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓
 
     ⌽𝐴ℋ↓/½n↓
     ⌽√[½n↓]𝐴↓ℋ↓/½n↓   # 𝐴=√[½n↓]𝐴↓
@@ -1033,7 +1050,7 @@ Evaluation of `<ξ₀>`:
     ⌽↥/√½n↓ ⌽↓𝐴↓ℋ↓
     ⌽↥/√½n↓ ⌽↓Ψ↓
 
-##<a name="61"></a> ⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑
+##<a name="63"></a> ⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑
 
     ⌽𝐴ℋ↑
     ⌽√2n↑𝐴↑ℋ↑   # 𝐴=√[2n↑]𝐴↑
@@ -1042,27 +1059,27 @@ Evaluation of `<ξ₀>`:
     ⌽↧√2n↑ ⌽↑𝐴↑ℋ↑
     ⌽↧√2n↑ ⌽↑Ψ↑
 
-##<a name="62"></a> p↑p=√[ñ/n↑]𝑃
+##<a name="64"></a> p↑p=√[ñ/n↑]𝑃
 
     p↑p
-    √[ñⁿ⁺¹e[-ñ]/(n+1)!] p
-    √[ñ/(n+1) ñⁿe[-ñ]/n!] p
+    √[ñⁿ⁺¹ℯ[-ñ]/(n+1)!] p
+    √[ñ/(n+1) ñⁿℯ[-ñ]/n!] p
     √[ñ/(n+1)]p p
     √[ñ/(n+1)]𝑃
     √[ñ/n₁]𝑃
     √[ñ/n↑]𝑃
 
-##<a name="63"></a> p↓p=𝑃/√[n↓ñ]
+##<a name="65"></a> p↓p=𝑃/√[n↓ñ]
 
    p↓p
-    √[ñⁿ⁻¹e[-ñ]/(n-1)!] p
-    √[(n/ñ) ñe[-ñ]/n!] p
+    √[ñⁿ⁻¹ℯ[-ñ]/(n-1)!] p
+    √[(n/ñ) ñℯ[-ñ]/n!] p
     √[n/ñ] p p
     √[1/(n₋₁ñ)]𝑃
     𝑃/√[n₋₁ñ]
     𝑃/√[n↓ñ]
 
-##<a name="64"></a> &lt;ξₜ&gt;
+##<a name="66"></a> &lt;ξₜ&gt;
 Evaluation of `<ξₜ>`:
 
     <ξₜ> = <Ψ|ξ|Ψ>
@@ -1088,14 +1105,14 @@ Evaluation of `<ξₜ>`:
     <ξₜ>² = 2ñ:Cosine²[nwt]
     # This time I got Cosine... Why?  Not careful enough with φ↥ and φ↧?
 
-##<a name="65"></a> &lt;ξ²&gt;
+##<a name="67"></a> &lt;ξ²&gt;
 TODO: `<ξ²>`:
 
     # And who wants to work with this mess?
     <ξ²> = (ñ+½) +
-      ½Σ e[-𝑖ω(n+½)t]* √[uⁿe[-u]/n!] (
-        e[-𝑖ω((n-2)+½)t] √[n(n-1)] √[u^(n-2)e[-u]/(n-2)! +
-        e[-𝑖ω((n+2)+½)t] √[(n+1)(n+2)] √[u^(n+2)e[-u]/(n+2)!
+      ½Σ ℯ[-𝑖ω(n+½)t]* √[uⁿℯ[-u]/n!] (
+        ℯ[-𝑖ω((n-2)+½)t] √[n(n-1)] √[u^(n-2)ℯ[-u]/(n-2)! +
+        ℯ[-𝑖ω((n+2)+½)t] √[(n+1)(n+2)] √[u^(n+2)ℯ[-u]/(n+2)!
       )
     <ξ²> = (ñ+½) + ½Σ ⌽ₙ*pₙ* (⌽ₙ₋₂√[n(n-1)]pₙ₋₂ +  ⌽ₙ₊₂√[(n+1)(n+2)]pₙ₊₂)   # 7.21
     # And much nicer...
@@ -1120,14 +1137,14 @@ TODO: `<ξ²>`:
     <ξ²> = ½ + 2ñc²₁                                      # Pythagoras
     <ξ²> = ½ + 2ñ:Cosine²[nwt]
 
-##<a name="66"></a> Δ²ξ
+##<a name="68"></a> Δ²ξ
 7.5 Results:
 
     Δ²ξ = <ξ²> - <ξ>²
         = (½ + 2ñc²₁) - 2ñc²₁
         = ½
 
-##<a name="67"></a> Resources
+##<a name="69"></a> Resources
 On top of the references given in the appendix, I'd like to add the following resources:
 
 * njwildberger's [MathFoundations](https://www.youtube.com/playlist?list=PL5A714C94D40392AB)

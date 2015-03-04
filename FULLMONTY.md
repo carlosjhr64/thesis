@@ -33,15 +33,15 @@ it's a good warmup and demonstrates my notation.
 
  · [n↥,n₀,n↧](#37) · [nᵥn!](#38) · [Sine](#39) · [Cosine](#40) · [ℯ](#41) · [S²+C²=1](#42) ·
 
- · [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#43) · [Δ²](#44) · [𝑃ₙ](#45) · [pₙ](#46) · [κ,m](#47) · [ħ](#48) ·
+ · [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#43) · [Δ²](#44) · [𝑃ₙ](#45) · [pₙ](#46) · [κ,μ](#47) · [ħ](#48) ·
 
- · [π](#49) · [ω](#50) · [f](#51) · [Eₙ](#52) · [⌽ᵗₙ](#53) · [⌽→φ](#54) ·
+ · [π](#49) · [ω](#50) · [f](#51) · [Eₙ](#52) · [⌽ᵗₙ](#53) · [𝕌{⌽}](#54) ·
 
- · [ñ](#55) · [ñ²=𝐿[Σ[n(n-1)𝑃ₙ]]](#56) · [p→𝑃](#57) · [ξ](#58) · [𝐴ₙ](#59) · [ℋₙ](#60) ·
+ · [⌽→φ](#55) · [ñ](#56) · [ñ²=𝐿[Σ[n(n-1)𝑃ₙ]]](#57) · [p→𝑃](#58) · [ξ](#59) · [𝐴ₙ](#60) ·
 
- · [Ψₙ](#61) · [ξΨₘ](#62) · [&lt;ξ₀&gt;](#63) · [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#64) · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#65) · [p↑p=√[ñ/n↑]𝑃](#66) ·
+ · [ℋₙ](#61) · [Ψₙ](#62) · [ξΨₘ](#63) · [&lt;ξ₀&gt;](#64) · [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#65) · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#66) ·
 
- · [p↓p=𝑃/√[n↓ñ]](#67) · [&lt;ξₜ&gt;](#68) · [&lt;ξ²&gt;](#69) · [Δ²ξ](#70) · [Resources](#71) ·
+ · [p↑p=√[ñ/n↑]𝑃](#67) · [p↓p=𝑃/√[n↓ñ]](#68) · [&lt;ξₜ&gt;](#69) · [&lt;ξ²&gt;](#70) · [Δ²ξ](#71) · [Resources](#72) ·
 
 
 </font>
@@ -698,10 +698,10 @@ Measure of uncertainty (4.1b):
       uⁿℯ[-u]/n!
       𝑃ₙ
 
-##<a name="47"></a> κ,m
+##<a name="47"></a> κ,μ
 I think the point here is that these values are "measured" by "experiment" in "some way".
 
-    ℝ{m}   # Mass
+    ℝ{μ}   # Mass, b/c m is already used.
     ℝ{κ}   # Spring contant 
 
 ##<a name="48"></a> ħ
@@ -728,8 +728,8 @@ of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi).
 
 ##<a name="50"></a> ω
 
-    ω² ≡ κ/m   # Angular frequency
-    ω = √[κ/m]
+    ω² ≡ κ/μ   # Angular frequency
+    ω = √[κ/μ]
 
 ##<a name="51"></a> f
 
@@ -761,7 +761,21 @@ Time evolution:
     # Just to show that the notation makes sense.
     ⌽ᵗ = (⌽¹)^t = ℯ[t × (-𝑖ω(n+½))] = ℯ[-𝑖ω(n+½)t]
 
-##<a name="54"></a> ⌽→φ
+##<a name="54"></a> 𝕌{⌽}
+⌽ is [Unitary](http://en.wikipedia.org/wiki/Unitary_matrix):
+
+    u*u=1 ↔ 𝕌{u}   # Definition of Unitary.
+
+    𝕌{⌽}
+    # Proof:
+      ⌽ᵗₙ*⌽ᵗₙ
+      ℯ[-𝑖ω(n+½)t]*ℯ[-𝑖ω(n+½)t]
+      ℯ[+𝑖ω(n+½)t]×ℯ[-𝑖ω(n+½)t]
+      ℯ[𝑖ω(n+½)t - 𝑖ω(n+½)t]
+      ℯ[0]
+      1   # Therefore ⌽ is Unitary.
+
+##<a name="55"></a> ⌽→φ
 
     ⌽ₙ*⌽ₙ₊₁ = φₙ₊₁-ₙ = φ₁
     φ↥ ≡ φ₀↑ = φ₁   # This will make notation very consistent later.
@@ -799,7 +813,7 @@ Short for Sine(nωt) and Cosine(nωt):
     φ₋₂ + φ₂ = 2c₂
     φ↧² + φ↥² = 2c₂   # And remember this one!
 
-##<a name="55"></a> ñ
+##<a name="56"></a> ñ
 Average Quantum number ñ
 
     <n> = <n|pₙ*npₙ|m> = Σ npₙpₙ = Σ n𝑃ₙ   # only n=m terms contribute
@@ -828,7 +842,7 @@ Now we can describe the distribution in terms of the average quantum number:
     𝑃ₙ = ñⁿℯ[-ñ]/n!
     pₙ = √[ñⁿℯ[-ñ]/n!]
 
-##<a name="56"></a> ñ²=𝐿[Σ[n(n-1)𝑃ₙ]]
+##<a name="57"></a> ñ²=𝐿[Σ[n(n-1)𝑃ₙ]]
 
     𝐿 Σ n(n-1)𝑃ₙ
     𝐿 Σₙ n(n-1)𝑃ₙ
@@ -854,7 +868,7 @@ Now we can describe the distribution in terms of the average quantum number:
 
     ñ² = 𝐿 Σ[n(n-1)𝑃ₙ]   # b/c ñ=u, so u²=ñ²
 
-##<a name="57"></a> p→𝑃
+##<a name="58"></a> p→𝑃
 
     pₙpₙ₊₁ = √[ñⁿℯ[-ñ]/n!] √[ñⁿ⁺¹ℯ[-ñ]/(n+1)!]
            = √[ñⁿℯ[-ñ]/n!] √[ñⁿℯ[-ñ]/n!] √[ñ/(n+1)] 
@@ -884,7 +898,7 @@ Now we can describe the distribution in terms of the average quantum number:
            = √[(n-1)n]/ñ pₙpₙ
            = √[(n-1)n]/ñ 𝑃ₙ
     pₙpₙ₋₂ = 𝑃ₙ/(ñ√n₋₂)   # Using Factoral
-    pₙpₙ₋₂ = 𝑃ₙ/(ñ√n↧²)    # Using Arrow
+    pₙpₙ₋₂ = 𝑃ₙ/(ñ√n↧²)   # Using Arrow
 
     p = √m↑p↑/√ñ
     # Proof:
@@ -900,13 +914,13 @@ Now we can describe the distribution in terms of the average quantum number:
       √[ñm↧]p↓ = p
       p = √[ñm↧]p↓
 
-##<a name="58"></a> ξ
+##<a name="59"></a> ξ
 The non-dimensional displacement, ξ.
 
     ξ² ≡ mω/ħ x²   # A.1b
     x² = ħ/(mω) ξ²
 
-##<a name="59"></a> 𝐴ₙ
+##<a name="60"></a> 𝐴ₙ
 The Normalization Constant, 𝐴ₙ:
 
     𝐴ₙ ≡ 1/√[2ⁿn!√π]
@@ -934,7 +948,7 @@ The Normalization Constant, 𝐴ₙ:
     # Use these:
     𝐴ₘ = √[2m↑]𝐴ₘ↑ = √[½m↓]𝐴ₘ↓
 
-##<a name="60"></a> ℋₙ
+##<a name="61"></a> ℋₙ
 The Hermite polynomial:
 
     ℋₙ[ξ] ≡ (-1)ⁿ ℯ[ξ²] Dᵧⁿ ℯ[-ξ²]   # A.3, this is "physicists' Hermite polynomials" in Wikipedia.
@@ -996,7 +1010,7 @@ The Hermite polynomial:
     Dᵧ ℋₙ[ξ] = 2nℋₙ₋₁[ξ]           = ℋₙ↓[ξ]/(½n↓)
     ξℋₙ[ξ]   = ½ℋₙ₊₁[ξ] + nℋₙ₋₁[ξ] = ½(ℋₙ↑[ξ] + ℋₙ↓[ξ]/(½n↓))
 
-##<a name="61"></a> Ψₙ
+##<a name="62"></a> Ψₙ
 Please accept the EigenState of the Simple Harmonic Oscillator Ψₙ as given by Liboff's book in page 189.
 The EigenState Ψₙ:
 
@@ -1015,7 +1029,7 @@ The Problem To Be Solved
 TODO: I just jumped from the above to the calculation of Δ²x !?
 Will say something like ΣΣuₙvₘ = (Σuₙ)(Σvₙ)
 
-##<a name="62"></a> ξΨₘ
+##<a name="63"></a> ξΨₘ
 Motivation: I will be calculating <Ψ|ξ|Ψ> later.
 
     ξΨₘ = ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
@@ -1026,7 +1040,7 @@ Motivation: I will be calculating <Ψ|ξ|Ψ> later.
       𝐴ₘ ½(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
       ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
 
-##<a name="63"></a> &lt;ξ₀&gt;
+##<a name="64"></a> &lt;ξ₀&gt;
 Evaluation of `<ξ₀>`:
 
     <ξ₀> = <Ψ₀|ξ|Ψ₀>             # 7.14a
@@ -1050,7 +1064,7 @@ Evaluation of `<ξ₀>`:
     <ξ₀> = √2ñ
     <ξ₀>² = 2ñ   # OK, need time development
 
-##<a name="64"></a> ⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓
+##<a name="65"></a> ⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓
 
     ⌽𝐴ℋ↓/½n↓
     ⌽√[½n↓]𝐴↓ℋ↓/½n↓   # 𝐴=√[½n↓]𝐴↓
@@ -1059,7 +1073,7 @@ Evaluation of `<ξ₀>`:
     ⌽↥/√½n↓ ⌽↓𝐴↓ℋ↓
     ⌽↥/√½n↓ ⌽↓Ψ↓
 
-##<a name="65"></a> ⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑
+##<a name="66"></a> ⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑
 
     ⌽𝐴ℋ↑
     ⌽√2n↑𝐴↑ℋ↑   # 𝐴=√[2n↑]𝐴↑
@@ -1068,7 +1082,7 @@ Evaluation of `<ξ₀>`:
     ⌽↧√2n↑ ⌽↑𝐴↑ℋ↑
     ⌽↧√2n↑ ⌽↑Ψ↑
 
-##<a name="66"></a> p↑p=√[ñ/n↑]𝑃
+##<a name="67"></a> p↑p=√[ñ/n↑]𝑃
 
     p↑p
     √[ñⁿ⁺¹ℯ[-ñ]/(n+1)!] p
@@ -1078,7 +1092,7 @@ Evaluation of `<ξ₀>`:
     √[ñ/n₁]𝑃
     √[ñ/n↑]𝑃
 
-##<a name="67"></a> p↓p=𝑃/√[n↓ñ]
+##<a name="68"></a> p↓p=𝑃/√[n↓ñ]
 
    p↓p
     √[ñⁿ⁻¹ℯ[-ñ]/(n-1)!] p
@@ -1088,7 +1102,7 @@ Evaluation of `<ξ₀>`:
     𝑃/√[n₋₁ñ]
     𝑃/√[n↓ñ]
 
-##<a name="68"></a> &lt;ξₜ&gt;
+##<a name="69"></a> &lt;ξₜ&gt;
 Evaluation of `<ξₜ>`:
 
     <ξₜ> = <Ψ|ξ|Ψ>
@@ -1114,7 +1128,7 @@ Evaluation of `<ξₜ>`:
     <ξₜ>² = 2ñ:Cosine²[nwt]
     # This time I got Cosine... Why?  Not careful enough with φ↥ and φ↧?
 
-##<a name="69"></a> &lt;ξ²&gt;
+##<a name="70"></a> &lt;ξ²&gt;
 TODO: `<ξ²>`:
 
     # And who wants to work with this mess?
@@ -1146,14 +1160,14 @@ TODO: `<ξ²>`:
     <ξ²> = ½ + 2ñc²₁                                      # Pythagoras
     <ξ²> = ½ + 2ñ:Cosine²[nwt]
 
-##<a name="70"></a> Δ²ξ
+##<a name="71"></a> Δ²ξ
 7.5 Results:
 
     Δ²ξ = <ξ²> - <ξ>²
         = (½ + 2ñc²₁) - 2ñc²₁
         = ½
 
-##<a name="71"></a> Resources
+##<a name="72"></a> Resources
 On top of the references given in the appendix, I'd like to add the following resources:
 
 * njwildberger's [MathFoundations](https://www.youtube.com/playlist?list=PL5A714C94D40392AB)

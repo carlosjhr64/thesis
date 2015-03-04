@@ -619,12 +619,13 @@ series definition:
     ℯ[u] ≡ :Exponential[u]
     ℯᵘ ≡ ℯ^(u) ≡ ℯ[u]   # Alternate forms.
 
+## S²+C²=1
 [Trigonometric Identities](http://en.wikipedia.org/wiki/List_of_trigonometric_identities):
 
     S²+C²=1            # Pythagoras
-    S[u+v]=SuCv+CuSv   # Sine's angle sum
-    C[u+v]=CuCv-SuSv   # Cosine's angle sum
-    C[2u]=1-2S²u       # Cosine double angle "cos(2u)=1-2sin²(u)"
+    S[u+v]=SᵤCᵥ+CᵤSᵥ   # Sine's angle sum
+    C[u+v]=CᵤCᵥ-SᵤSᵥ   # Cosine's angle sum
+    C[2u]=1-2S²ᵤ       # Cosine double angle "cos(2u)=1-2sin²(u)"
 
 Just a quick exercise.
 Derivation: Cosine's Angle Sum to Cosine Double Angle:
@@ -633,7 +634,7 @@ Derivation: Cosine's Angle Sum to Cosine Double Angle:
     C[2u] = C[2u]
     C[2u] = C[u+u]
     C[2u] = C[u]C[u]-S[u]S[u]
-    C[2u] = CuCu-SuSu         # Shorten form
+    C[2u] = CᵤCᵤ-SᵤSᵤ         # Shorten form
     C[2u] = CC-SS             # From context, C=:Cosine[u] and S=:Sine[u]
     C[2u] = C²-S²
     C[2u]-1 = C²-S²-1
@@ -646,6 +647,7 @@ Derivation: Cosine's Angle Sum to Cosine Double Angle:
     C[2u] = 1-2S²[u]
     :Cosine[2u] = 1 - 2:Sine²[u]
 
+## ℯⁱᵘ=Cᵤ+𝑖Sᵤ
 Known properties of e:
 
     ℯ[u]ℯ[v] = ℯ[u+v]

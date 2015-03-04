@@ -31,17 +31,17 @@ it's a good warmup and demonstrates my notation.
 
  · [2ₘ](#31) · [3ₘ](#32) · [nₘ=(n+m)!/n!](#33) · [n₋ₘ=(n-m)!/n!](#34) · [n₋ₙ=1/n!](#35) · [(ⁿₘ)=m-ₘ/n-ₘ](#36) ·
 
- · [n↥,n₀,n↧](#37) · [nᵥn!](#38) · [Sine](#39) · [Cosine](#40) · [ℯ](#41) · [Δ²](#42) ·
+ · [n↥,n₀,n↧](#37) · [nᵥn!](#38) · [Sine](#39) · [Cosine](#40) · [ℯ](#41) · [S²+C²=1](#42) ·
 
- · [𝑃ₙ](#43) · [pₙ](#44) · [K,m](#45) · [ħ](#46) · [π](#47) · [ω](#48) ·
+ · [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#43) · [Δ²](#44) · [𝑃ₙ](#45) · [pₙ](#46) · [K,m](#47) · [ħ](#48) ·
 
- · [f](#49) · [Eₙ](#50) · [⌽ᵗₙ](#51) · [⌽→φ](#52) · [ñ](#53) · [𝐿 Σ[n(n-1)𝑃ₙ]](#54) ·
+ · [π](#49) · [ω](#50) · [f](#51) · [Eₙ](#52) · [⌽ᵗₙ](#53) · [⌽→φ](#54) ·
 
- · [p→𝑃](#55) · [ξ](#56) · [𝐴ₙ](#57) · [ℋₙ](#58) · [Ψₙ](#59) · [ξΨₘ](#60) ·
+ · [ñ](#55) · [𝐿 Σ[n(n-1)𝑃ₙ]](#56) · [p→𝑃](#57) · [ξ](#58) · [𝐴ₙ](#59) · [ℋₙ](#60) ·
 
- · [&lt;ξ₀&gt;](#61) · [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#62) · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#63) · [p↑p=√[ñ/n↑]𝑃](#64) · [p↓p=𝑃/√[n↓ñ]](#65) · [&lt;ξₜ&gt;](#66) ·
+ · [Ψₙ](#61) · [ξΨₘ](#62) · [&lt;ξ₀&gt;](#63) · [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#64) · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#65) · [p↑p=√[ñ/n↑]𝑃](#66) ·
 
- · [&lt;ξ²&gt;](#67) · [Δ²ξ](#68) · [Resources](#69) ·
+ · [p↓p=𝑃/√[n↓ñ]](#67) · [&lt;ξₜ&gt;](#68) · [&lt;ξ²&gt;](#69) · [Δ²ξ](#70) · [Resources](#71) ·
 
 
 </font>
@@ -619,7 +619,7 @@ series definition:
     ℯ[u] ≡ :Exponential[u]
     ℯᵘ ≡ ℯ^(u) ≡ ℯ[u]   # Alternate forms.
 
-## S²+C²=1
+##<a name="42"></a> S²+C²=1
 [Trigonometric Identities](http://en.wikipedia.org/wiki/List_of_trigonometric_identities):
 
     S²+C²=1            # Pythagoras
@@ -647,7 +647,7 @@ Derivation: Cosine's Angle Sum to Cosine Double Angle:
     C[2u] = 1-2S²[u]
     :Cosine[2u] = 1 - 2:Sine²[u]
 
-## ℯⁱᵘ=Cᵤ+𝑖Sᵤ
+##<a name="43"></a> ℯⁱᵘ=Cᵤ+𝑖Sᵤ
 Known properties of e:
 
     ℯ[u]ℯ[v] = ℯ[u+v]
@@ -655,7 +655,7 @@ Known properties of e:
     ℯ[-𝑖u] = C[u]-𝑖S[u]
     ℯ[0] = 1
 
-##<a name="42"></a> Δ²
+##<a name="44"></a> Δ²
 Measure of uncertainty defined (4.1a):
 
     Δ²[u] ≡ <(u - <u>)²>
@@ -674,7 +674,7 @@ Measure of uncertainty (4.1b):
 
     Δ²u = <u²> - <u>²
 
-##<a name="43"></a> 𝑃ₙ
+##<a name="45"></a> 𝑃ₙ
 `𝑃` is the [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution):
 
     𝑃ₙ ≡ uⁿℯ[-u]/n!
@@ -682,7 +682,7 @@ Measure of uncertainty (4.1b):
     0 ≤ 𝑃ₙ ≤ 1
     <u> = Σ 𝑃ₙuₙ
 
-##<a name="44"></a> pₙ
+##<a name="46"></a> pₙ
 
     pₙ ≡ √[uⁿℯ[-u]/n!]
     pₙ*pₙ = 𝑃ₙ
@@ -693,18 +693,18 @@ Measure of uncertainty (4.1b):
       uⁿℯ[-u]/n!
       𝑃ₙ
 
-##<a name="45"></a> K,m
+##<a name="47"></a> K,m
 I think the point here is that these values are "measured" by "experiment" in "some way".
 
     ℝ{m}   # Mass
     ℝ{K}   # Spring contant 
 
-##<a name="46"></a> ħ
+##<a name="48"></a> ħ
 [Reduced Planck constant](http://en.wikipedia.org/wiki/Planck_constant):
 
     ℝ{ħ}
 
-##<a name="47"></a> π
+##<a name="49"></a> π
 You can check that there exist several series 
 of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi).
 [Leibniz_formula for π](http://en.wikipedia.org/wiki/Leibniz_formula_for_π):
@@ -721,20 +721,20 @@ of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi).
         # Fits given definition of ℝ.
         |8/((4n+1)(4n+3))| ≤ |8/(16n²)| ≤ |1/(2n²)| ≤ 1/n² ← n≥N
 
-##<a name="48"></a> ω
+##<a name="50"></a> ω
 
     ω² ≡ K/m   # Angular frequency
     ω = √[K/m]
 
-##<a name="49"></a> f
+##<a name="51"></a> f
 
     f ≡ ω/(2π)   # Frequency
 
-##<a name="50"></a> Eₙ
+##<a name="52"></a> Eₙ
 
     Eₙ = ωħ(n+½)   # 3.2: Energy eigen-value
 
-##<a name="51"></a> ⌽ᵗₙ
+##<a name="53"></a> ⌽ᵗₙ
 7.17 TODO: why -𝑖Eₙt/ħ and not +𝑖Eₙt/ħ?
 Time evolution:
 
@@ -754,7 +754,7 @@ Time evolution:
     ⌽¹ = ℯ[-𝑖ω(n+½)]
     ⌽ᵗ = (⌽¹)^t = ℯ[t × (-𝑖ω(n+½))] = ℯ[-𝑖ω(n+½)t]   # Just to show that the notation makes sense.
 
-##<a name="52"></a> ⌽→φ
+##<a name="54"></a> ⌽→φ
 
     ⌽ₙ*⌽ₙ₊₁ = φₙ₊₁-ₙ = φ₁
     φ↥ ≡ φ₀↑ = φ₁   # This will make notation very consistent later.
@@ -792,7 +792,7 @@ Short for Sine(nωt) and Cosine(nωt):
     φ₋₂ + φ₂ = 2c₂
     φ↧↓ + φ↥↑ = 2c₂   # And remember this one!
 
-##<a name="53"></a> ñ
+##<a name="55"></a> ñ
 Average Quantum number ñ
 
     <n> = <n|pₙ*npₙ|m> = Σ npₙpₙ = Σ n𝑃ₙ   # only n=m terms contribute
@@ -816,7 +816,7 @@ Average Quantum number ñ
     ñ = u - 0
     ñ = u   # As expected.  :)
 
-##<a name="54"></a> 𝐿 Σ[n(n-1)𝑃ₙ]
+##<a name="56"></a> 𝐿 Σ[n(n-1)𝑃ₙ]
 
     𝐿 Σ n(n-1)𝑃ₙ
     𝐿 Σₙ n(n-1)𝑃ₙ
@@ -847,7 +847,7 @@ Now we can describe the distribution in terms of the average quantum number:
     𝑃ₙ = ñⁿℯ[-ñ]/n!
     pₙ = √[ñⁿℯ[-ñ]/n!]
 
-##<a name="55"></a> p→𝑃
+##<a name="57"></a> p→𝑃
 
     pₙpₙ₊₁ = √[ñⁿℯ[-ñ]/n!] √[ñⁿ⁺¹ℯ[-ñ]/(n+1)!]
            = √[ñⁿℯ[-ñ]/n!] √[ñⁿℯ[-ñ]/n!] √[ñ/(n+1)] 
@@ -893,13 +893,13 @@ Now we can describe the distribution in terms of the average quantum number:
       √[ñm↓]p↓ = p
       p = √[ñm↓]p↓
 
-##<a name="56"></a> ξ
+##<a name="58"></a> ξ
 The non-dimensional displacement, ξ.
 
     ξ² ≡ mω/ħ x²   # A.1b
     x² = ħ/(mω) ξ²
 
-##<a name="57"></a> 𝐴ₙ
+##<a name="59"></a> 𝐴ₙ
 The Normalization Constant, 𝐴ₙ:
 
     𝐴ₙ ≡ 1/√[2ⁿn!√π]
@@ -927,7 +927,7 @@ The Normalization Constant, 𝐴ₙ:
     # Use these:
     𝐴ₘ = √[2m↑]𝐴ₘ↑ = √[½m↓]𝐴ₘ↓
 
-##<a name="58"></a> ℋₙ
+##<a name="60"></a> ℋₙ
 The Hermite polynomial:
 
     ℋₙ[ξ] ≡ (-1)ⁿ ℯ[ξ²] Dᵧⁿ ℯ[-ξ²]   # A.3, this is "physicists' Hermite polynomials" in Wikipedia.
@@ -989,7 +989,7 @@ The Hermite polynomial:
     Dᵧ ℋₙ[ξ] = 2nℋₙ₋₁[ξ]           = ℋₙ↓[ξ]/(½n↓)
     ξℋₙ[ξ]   = ½ℋₙ₊₁[ξ] + nℋₙ₋₁[ξ] = ½(ℋₙ↑[ξ] + ℋₙ↓[ξ]/(½n↓))
 
-##<a name="59"></a> Ψₙ
+##<a name="61"></a> Ψₙ
 Please accept the EigenState of the Simple Harmonic Oscillator Ψₙ as given by Liboff's book in page 189.
 The EigenState Ψₙ:
 
@@ -1008,7 +1008,7 @@ The Problem To Be Solved
 TODO: I just jumped from the above to the calculation of Δ²x !?
 Will say something like ΣΣuₙvₘ = (Σuₙ)(Σvₙ)
 
-##<a name="60"></a> ξΨₘ
+##<a name="62"></a> ξΨₘ
 Motivation: I will be calculating <Ψ|ξ|Ψ> later.
 
     ξΨₘ = ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
@@ -1019,7 +1019,7 @@ Motivation: I will be calculating <Ψ|ξ|Ψ> later.
       𝐴ₘ ½(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
       ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
 
-##<a name="61"></a> &lt;ξ₀&gt;
+##<a name="63"></a> &lt;ξ₀&gt;
 Evaluation of `<ξ₀>`:
 
     <ξ₀> = <Ψ₀|ξ|Ψ₀>             # 7.14a
@@ -1043,7 +1043,7 @@ Evaluation of `<ξ₀>`:
     <ξ₀> = √2ñ
     <ξ₀>² = 2ñ   # OK, need time development
 
-##<a name="62"></a> ⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓
+##<a name="64"></a> ⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓
 
     ⌽𝐴ℋ↓/½n↓
     ⌽√[½n↓]𝐴↓ℋ↓/½n↓   # 𝐴=√[½n↓]𝐴↓
@@ -1052,7 +1052,7 @@ Evaluation of `<ξ₀>`:
     ⌽↥/√½n↓ ⌽↓𝐴↓ℋ↓
     ⌽↥/√½n↓ ⌽↓Ψ↓
 
-##<a name="63"></a> ⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑
+##<a name="65"></a> ⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑
 
     ⌽𝐴ℋ↑
     ⌽√2n↑𝐴↑ℋ↑   # 𝐴=√[2n↑]𝐴↑
@@ -1061,7 +1061,7 @@ Evaluation of `<ξ₀>`:
     ⌽↧√2n↑ ⌽↑𝐴↑ℋ↑
     ⌽↧√2n↑ ⌽↑Ψ↑
 
-##<a name="64"></a> p↑p=√[ñ/n↑]𝑃
+##<a name="66"></a> p↑p=√[ñ/n↑]𝑃
 
     p↑p
     √[ñⁿ⁺¹ℯ[-ñ]/(n+1)!] p
@@ -1071,7 +1071,7 @@ Evaluation of `<ξ₀>`:
     √[ñ/n₁]𝑃
     √[ñ/n↑]𝑃
 
-##<a name="65"></a> p↓p=𝑃/√[n↓ñ]
+##<a name="67"></a> p↓p=𝑃/√[n↓ñ]
 
    p↓p
     √[ñⁿ⁻¹ℯ[-ñ]/(n-1)!] p
@@ -1081,7 +1081,7 @@ Evaluation of `<ξ₀>`:
     𝑃/√[n₋₁ñ]
     𝑃/√[n↓ñ]
 
-##<a name="66"></a> &lt;ξₜ&gt;
+##<a name="68"></a> &lt;ξₜ&gt;
 Evaluation of `<ξₜ>`:
 
     <ξₜ> = <Ψ|ξ|Ψ>
@@ -1107,7 +1107,7 @@ Evaluation of `<ξₜ>`:
     <ξₜ>² = 2ñ:Cosine²[nwt]
     # This time I got Cosine... Why?  Not careful enough with φ↥ and φ↧?
 
-##<a name="67"></a> &lt;ξ²&gt;
+##<a name="69"></a> &lt;ξ²&gt;
 TODO: `<ξ²>`:
 
     # And who wants to work with this mess?
@@ -1139,14 +1139,14 @@ TODO: `<ξ²>`:
     <ξ²> = ½ + 2ñc²₁                                      # Pythagoras
     <ξ²> = ½ + 2ñ:Cosine²[nwt]
 
-##<a name="68"></a> Δ²ξ
+##<a name="70"></a> Δ²ξ
 7.5 Results:
 
     Δ²ξ = <ξ²> - <ξ>²
         = (½ + 2ñc²₁) - 2ñc²₁
         = ½
 
-##<a name="69"></a> Resources
+##<a name="71"></a> Resources
 On top of the references given in the appendix, I'd like to add the following resources:
 
 * njwildberger's [MathFoundations](https://www.youtube.com/playlist?list=PL5A714C94D40392AB)

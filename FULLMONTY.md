@@ -33,11 +33,11 @@ it's a good warmup and demonstrates my notation.
 
  · [n↥,n₀,n↧](#37) · [nᵥn!](#38) · [Sine](#39) · [Cosine](#40) · [ℯ](#41) · [S²+C²=1](#42) ·
 
- · [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#43) · [Δ²](#44) · [𝑃ₙ](#45) · [pₙ](#46) · [K,m](#47) · [ħ](#48) ·
+ · [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#43) · [Δ²](#44) · [𝑃ₙ](#45) · [pₙ](#46) · [κ,m](#47) · [ħ](#48) ·
 
  · [π](#49) · [ω](#50) · [f](#51) · [Eₙ](#52) · [⌽ᵗₙ](#53) · [⌽→φ](#54) ·
 
- · [ñ](#55) · [𝐿 Σ[n(n-1)𝑃ₙ]](#56) · [p→𝑃](#57) · [ξ](#58) · [𝐴ₙ](#59) · [ℋₙ](#60) ·
+ · [ñ](#55) · [ñ²=𝐿[Σ[n(n-1)𝑃ₙ]]](#56) · [p→𝑃](#57) · [ξ](#58) · [𝐴ₙ](#59) · [ℋₙ](#60) ·
 
  · [Ψₙ](#61) · [ξΨₘ](#62) · [&lt;ξ₀&gt;](#63) · [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#64) · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#65) · [p↑p=√[ñ/n↑]𝑃](#66) ·
 
@@ -61,6 +61,11 @@ Everything else is commentary.
 
 > TODO:
 > Convention on alphabet/letter use?
+> π is a constant ℝ < ℂ.
+> 𝑖 is a constant 𝕀 < ℂ?
+> n is variable ℕ < ℤ < ℚ < ℝ < ℂ.
+> N is a constant ℕ.
+> :-??
 
 ##<a name="2"></a> {u,v,w}
 Arbitrary symbols:
@@ -693,11 +698,11 @@ Measure of uncertainty (4.1b):
       uⁿℯ[-u]/n!
       𝑃ₙ
 
-##<a name="47"></a> K,m
+##<a name="47"></a> κ,m
 I think the point here is that these values are "measured" by "experiment" in "some way".
 
     ℝ{m}   # Mass
-    ℝ{K}   # Spring contant 
+    ℝ{κ}   # Spring contant 
 
 ##<a name="48"></a> ħ
 [Reduced Planck constant](http://en.wikipedia.org/wiki/Planck_constant):
@@ -707,7 +712,7 @@ I think the point here is that these values are "measured" by "experiment" in "s
 ##<a name="49"></a> π
 You can check that there exist several series 
 of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi).
-[Leibniz_formula for π](http://en.wikipedia.org/wiki/Leibniz_formula_for_π):
+[Leibniz formula for π](http://en.wikipedia.org/wiki/Leibniz_formula_for_π):
 
     ℝ{π} ← π = 4 Σ (-1)ⁿ/(2n+1)
     # Proof:
@@ -723,8 +728,8 @@ of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi).
 
 ##<a name="50"></a> ω
 
-    ω² ≡ K/m   # Angular frequency
-    ω = √[K/m]
+    ω² ≡ κ/m   # Angular frequency
+    ω = √[κ/m]
 
 ##<a name="51"></a> f
 
@@ -738,8 +743,9 @@ of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi).
 7.17 TODO: why -𝑖Eₙt/ħ and not +𝑖Eₙt/ħ?
 Time evolution:
 
-    ⌽ᵗₙ ≡ ℯ[-𝑖ω(n+½)t] = ℯ[-𝑖Eₙt/ħ]   # NOTE! The ½ part makes this object a bit of a screw ball.
-    φᵗₙ ≡ ℯ[-𝑖ωnt]                    # "How do we end up with this?" you may ask.
+    # NOTE! The ½ part makes this object a bit of a screw ball.
+    ⌽ᵗₙ ≡ ℯ[-𝑖ω(n+½)t] = ℯ[-𝑖Eₙt/ħ]
+    φᵗₙ ≡ ℯ[-𝑖ωnt]   # "How do we end up with this?" you may ask.
 
     ⌽ₙ*⌽ₘ = φₘ-ₙ   # You don't have to explicitly show time if it can be infered.
     # Proof:
@@ -752,7 +758,8 @@ Time evolution:
     # Don't have to explicitly show quantum number if it can be infered.
     ⌽⁰ = 1
     ⌽¹ = ℯ[-𝑖ω(n+½)]
-    ⌽ᵗ = (⌽¹)^t = ℯ[t × (-𝑖ω(n+½))] = ℯ[-𝑖ω(n+½)t]   # Just to show that the notation makes sense.
+    # Just to show that the notation makes sense.
+    ⌽ᵗ = (⌽¹)^t = ℯ[t × (-𝑖ω(n+½))] = ℯ[-𝑖ω(n+½)t]
 
 ##<a name="54"></a> ⌽→φ
 
@@ -760,12 +767,12 @@ Time evolution:
     φ↥ ≡ φ₀↑ = φ₁   # This will make notation very consistent later.
     ⌽ₙ*⌽ₙ₊₁ = φ↥
 
-    ⌽ₙ*⌽ₙ₋₁ = φₙ₋₁-ₙ = φ₋₁   # Yeah... me worry about this one a little bit!  LOL
+    ⌽ₙ*⌽ₙ₋₁ = φₙ₋₁-ₙ = φ₋₁
     φ↧ ≡ φ₀↓ = φ₋₁
     ⌽ₙ*⌽ₙ₋₁ = φ↧
 
-    ⌽ₙ*⌽ₙ₊₂ = φₙ₊₂-ₙ = φ₂
-    ⌽ₙ*⌽ₙ₋₂ = φₙ₋₂-ₙ = φ₋₂
+    ⌽ₙ*⌽ₙ₊₂ = φₙ₊₂-ₙ = φ₂ = φ↥²
+    ⌽ₙ*⌽ₙ₋₂ = φₙ₋₂-ₙ = φ₋₂ = φ↧²
 
 # sₙ, cₙ
 Short for Sine(nωt) and Cosine(nωt):
@@ -790,7 +797,7 @@ Short for Sine(nωt) and Cosine(nωt):
     φ₋₂ = c₂+𝑖s₂
 
     φ₋₂ + φ₂ = 2c₂
-    φ↧↓ + φ↥↑ = 2c₂   # And remember this one!
+    φ↧² + φ↥² = 2c₂   # And remember this one!
 
 ##<a name="55"></a> ñ
 Average Quantum number ñ
@@ -816,7 +823,12 @@ Average Quantum number ñ
     ñ = u - 0
     ñ = u   # As expected.  :)
 
-##<a name="56"></a> 𝐿 Σ[n(n-1)𝑃ₙ]
+Now we can describe the distribution in terms of the average quantum number:
+
+    𝑃ₙ = ñⁿℯ[-ñ]/n!
+    pₙ = √[ñⁿℯ[-ñ]/n!]
+
+##<a name="56"></a> ñ²=𝐿[Σ[n(n-1)𝑃ₙ]]
 
     𝐿 Σ n(n-1)𝑃ₙ
     𝐿 Σₙ n(n-1)𝑃ₙ
@@ -842,11 +854,6 @@ Average Quantum number ñ
 
     ñ² = 𝐿 Σ[n(n-1)𝑃ₙ]   # b/c ñ=u, so u²=ñ²
 
-Now we can describe the distribution in terms of the average quantum number:
-
-    𝑃ₙ = ñⁿℯ[-ñ]/n!
-    pₙ = √[ñⁿℯ[-ñ]/n!]
-
 ##<a name="57"></a> p→𝑃
 
     pₙpₙ₊₁ = √[ñⁿℯ[-ñ]/n!] √[ñⁿ⁺¹ℯ[-ñ]/(n+1)!]
@@ -855,7 +862,7 @@ Now we can describe the distribution in terms of the average quantum number:
            = 𝑃ₙ √[ñ/(n+1)] 
            = √[ñ/(n+1)]𝑃ₙ 
     pₙpₙ₊₁ = √ñ𝑃ₙ/√n₁   # Using Factoral
-    pp↑ = √ñ𝑃ₙ/√n↑      # And Arrow notation
+    pp↑ = √ñ𝑃ₙ/√n↥      # And Arrow notation
 
     pₙpₙ₋₁ = √[ñⁿℯ[-ñ]/n!] √[ñⁿ⁻¹ℯ[-ñ]/(n-1)!]
            = √[ñⁿℯ[-ñ]/n!] √[ñⁿℯ[-ñ]/n!] √[n/ñ] 
@@ -863,35 +870,35 @@ Now we can describe the distribution in terms of the average quantum number:
            = 𝑃ₙ √[n/ñ] 
            = √[n/ñ]𝑃ₙ 
     pₙpₙ₋₁ = 𝑃ₙ/√[ñn₋₁]   # Using Factoral
-    pp↓ = 𝑃ₙ/√[ñn↓]       # And Arrow notation
+    pp↓ = 𝑃ₙ/√[ñn↧]       # And Arrow notation
 
     pₙpₙ₊₂ = √[ñⁿℯ[-ñ]/n!] √[ñⁿ⁺²ℯ[-ñ]/(n+2)!]
            = √[ñ²/((n+1)(n+2))] √[ñⁿℯ[-ñ]/n!] √[ñⁿℯ[-ñ]/n!]
            = ñ/√[(n+1)(n+2)] pₙpₙ
            = ñ/√[(n+1)(n+2)] 𝑃ₙ
     pₙpₙ₊₂ = ñ𝑃ₙ/√n₂   # Using Factoral
-    pₙpₙ₊₂ = ñ𝑃ₙ/√n⇈   # Using Arrow
+    pₙpₙ₊₂ = ñ𝑃ₙ/√n↥²  # Using Arrow
 
     pₙpₙ₋₂ = √[ñⁿℯ[-ñ]/n!] √[ñⁿ⁻²ℯ[-ñ]/(n-2)!]
            = √[(n-1)n/ñ²] √[ñⁿℯ[-ñ]/n!] √[ñⁿℯ[-ñ]/n!]
            = √[(n-1)n]/ñ pₙpₙ
            = √[(n-1)n]/ñ 𝑃ₙ
     pₙpₙ₋₂ = 𝑃ₙ/(ñ√n₋₂)   # Using Factoral
-    pₙpₙ₋₂ = 𝑃ₙ/(ñ√n⇊)    # Using Arrow
+    pₙpₙ₋₂ = 𝑃ₙ/(ñ√n↧²)    # Using Arrow
 
     p = √m↑p↑/√ñ
     # Proof:
-      pp↑ = √ñ𝑃/√m↑
-      p↑ = √ñp/√m↑
-      √m↑p↑/√ñ = p
-      p = √m↑p↑/√ñ
+      pp↑ = √ñ𝑃/√m↥
+      p↑ = √ñp/√m↥
+      √m↥p↑/√ñ = p
+      p = √m↥p↑/√ñ
 
     p = √[ñm↓]p↓  
     # Proof:
-      pp↓ = 𝑃/√[ñm↓]
-      p↓ = p/√[ñm↓]
-      √[ñm↓]p↓ = p
-      p = √[ñm↓]p↓
+      pp↓ = 𝑃/√[ñm↧]
+      p↓ = p/√[ñm↧]
+      √[ñm↧]p↓ = p
+      p = √[ñm↧]p↓
 
 ##<a name="58"></a> ξ
 The non-dimensional displacement, ξ.

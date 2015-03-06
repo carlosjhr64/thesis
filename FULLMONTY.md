@@ -39,13 +39,13 @@ it's a good warmup and demonstrates my notation.
 
  · [⌽ᵗₙ](#55) · [𝕌{⌽}](#56) · [⌽→φ](#57) · [sₙ,cₙ](#58) · [ñ](#59) · [ñ²=𝐿[Σ[n(n-1)𝑃ₙ]]](#60) ·
 
- · [p→𝑃](#61) · [ξ](#62) · [𝐴ₙ](#63) · [𝒟](#64) · [𝒢,ℊ](#65) · [ℋₙ](#66) ·
+ · [p→𝑃](#61) · [ξ](#62) · [𝐴ₙ](#63) · [ŉ](#64) · [u↑ˡᵥ](#65) · [𝒟](#66) ·
 
- · [Ψₙ](#67) · [Ψₒ](#68) · [ñ²=Σ[n²ΨₙΨₙ]](#69) · [Optimization problem](#70) · [ξΨₘ](#71) · [&lt;ξ₀&gt;](#72) ·
+ · [𝒢,ℊ](#67) · [ℋₙ](#68) · [Ψₙ](#69) · [Ψₒ](#70) · [ñ²=Σ[n²ΨₙΨₙ]](#71) · [⋅](#72) ·
 
- · [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#73) · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#74) · [𝑝↑𝑝=√[ñ/n↑]𝑃](#75) · [𝑝↓𝑝=𝑃/√[n↓ñ]](#76) · [&lt;ξₜ&gt;](#77) · [&lt;ξ²&gt;](#78) ·
+ · [Optimization problem](#73) · [ξΨₘ](#74) · [&lt;ξ₀&gt;](#75) · [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#76) · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#77) · [𝑝↑𝑝=√[ñ/n↑]𝑃](#78) ·
 
- · [Δ²ξ](#79) · [Resources](#80) ·
+ · [𝑝↓𝑝=𝑃/√[n↓ñ]](#79) · [&lt;ξₜ&gt;](#80) · [&lt;ξ²&gt;](#81) · [Δ²ξ](#82) · [Resources](#83) ·
 
 
 </font>
@@ -930,6 +930,7 @@ Now we can describe the distribution in terms of the average quantum number:
       𝑝 = √[ñm↧]𝑝↓
 
     𝑝 = √m↑𝑝↑/√ñ = √[ñm↓]𝑝↓  
+    𝑝 = √[m↑ˡ/ñˡ]𝑝↑ˡ
 
 ##<a name="62"></a> ξ
 The non-dimensional displacement, ξ.
@@ -965,15 +966,36 @@ The Normalization Constant, 𝐴ₙ:
     𝐴ₘ = √[2m↥]𝐴ₘ↑ = √[½m↧]𝐴ₘ↓
     # Note that arrows bind before literal values, so...
     𝐴ₘ = √2m↥𝐴ₘ↑ = √½m↧𝐴ₘ↓  # Use these.
-    𝐴 = √2n↥𝐴↑ = √½n↧𝐴↓     # With context.
 
-##<a name="64"></a> 𝒟
+    𝐴 = √2n↥𝐴↑ = √½n↧𝐴↓     # With context.
+    𝐴 = √[2ˡn↥ˡ]𝐴↑ˡ = √n↥ˡ₂𝐴↑ˡ
+
+    𝐴 = √n↥₂𝐴↑ = √n↧₂𝐴↓
+
+##<a name="64"></a> ŉ
+Division by n in the notation can be cumbersome.
+It's all about condensing the notation:
+
+    ŉ ≡ 1/n
+    ŉ! = 1/n!
+
+##<a name="65"></a> u↑ˡᵥ
+Operations with Arrows often result in an extra factor.
+I'm adding notation for that:
+
+    u↑ˡᵥ ≡ u↑ˡvˡ
+    u↥ˡᵥ = u↥ˡvˡ
+    √u↥ˡᵥ = √[u↥ˡvˡ]
+    √u↥ᵥ = √[u↥v]
+    2n = 1/n↧₂ = ŉ↧₂
+
+##<a name="66"></a> 𝒟
 The [derivative](http://en.wikipedia.org/wiki/Derivative):
 
     𝒟ₓu[x] ≡ :Derivative{x|u[x]}
     𝒟 u[ξ] ≡ :Derivative{ξ|u[ξ]}
 
-##<a name="65"></a> 𝒢,ℊ
+##<a name="67"></a> 𝒢,ℊ
 The [Gaussian](http://en.wikipedia.org/wiki/Gaussian_function) function:
 
     𝒢ₓ ≡ ℯ[-x²/2]
@@ -997,7 +1019,7 @@ The [Gaussian](http://en.wikipedia.org/wiki/Gaussian_function) function:
 
     𝒢𝒢=ℊ
 
-##<a name="66"></a> ℋₙ
+##<a name="68"></a> ℋₙ
 The [Hermite polynomials](http://en.wikipedia.org/wiki/Hermite_polynomials):
 
     ℋₙ[ξ] ≡ (-1)ⁿ ℯ[ξ²] (𝒟)ⁿ ℯ[-ξ²]   # A.3, this is "physicists' Hermite polynomials" in Wikipedia.
@@ -1061,10 +1083,10 @@ The [Hermite polynomials](http://en.wikipedia.org/wiki/Hermite_polynomials):
     ξℋₙ[ξ]   = ½ℋₙ₊₁[ξ] + nℋₙ₋₁[ξ] = ½(ℋₙ↑[ξ] + ℋₙ↓[ξ]/(½n↧))
 
     # Shorthand.
-    𝒟ℋ = 2nℋ↓
-    ξℋ = ½(ℋ↑+ℋ↓/½n↧)
+    𝒟ℋ = 2nℋ↓       = ℋ↓/½n↧       = ℋ↓/n↧₂
+    ξℋ = ½(ℋ↑+2nℋ↓) = ½(ℋ↑+ℋ↓/½n↧) = ½(ℋ↑+ℋ↓/n↧₂)
 
-##<a name="67"></a> Ψₙ
+##<a name="69"></a> Ψₙ
 Please accept the EigenState of the Simple Harmonic Oscillator Ψₙ
 as given by Liboff's book in page 189.
 The EigenState Ψₙ:
@@ -1072,7 +1094,7 @@ The EigenState Ψₙ:
     Ψₙ[x] ≡ |ₙ>
     Ψₙ[x] = 𝐴ₙℋₙ[ξ]ℯ[-ξ²/2]
 
-##<a name="68"></a> Ψₒ
+##<a name="70"></a> Ψₒ
 
 The State Function Ψₒ:
 
@@ -1082,10 +1104,20 @@ The State Function Ψₒ:
 
     Ψₒ = Σ 𝑃 Ψ*Ψ   #  Shorthand.
 
-##<a name="69"></a> ñ²=Σ[n²ΨₙΨₙ]
+##<a name="71"></a> ñ²=Σ[n²ΨₙΨₙ]
 TODO: Need to prove this!
 
-##<a name="70"></a> Optimization problem
+##<a name="72"></a> ⋅
+The dot operator:
+
+    [uₙ]⋅[vₙ] ≡ Σ uₙvₙ
+
+    # Dot Product Rule for 𝒟
+    𝒟 [uₙ]⋅[vₙ] = 𝒟 Σ uₙvₙ =  Σ 𝒟 [uₙvₙ] = Σ 𝒟[uₙ]vₙ + uₙ𝒟[vₙ]
+    𝒟 [uₙ]⋅[vₙ] = Σ[𝒟[uₙ]vₙ] + Σ[uₙ𝒟[vₙ]]
+    𝒟 [uₙ]⋅[vₙ] = [𝒟 uₙ]⋅[vₙ] + [uₙ]⋅[𝒟 vₙ]
+
+##<a name="73"></a> Optimization problem
 [Optimization problem](http://en.wikipedia.org/wiki/Optimization_problem):
 
 The Problem To Be Solved
@@ -1171,7 +1203,7 @@ Let's see how that goes:
     # TODO: HERE is next...
     𝒟ₓℒ = 𝒟ₓ<x²>
 
-##<a name="71"></a> ξΨₘ
+##<a name="74"></a> ξΨₘ
 Motivation: I will be calculating <Ψ|ξ|Ψ> later.
 
     ξΨₘ = ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
@@ -1182,7 +1214,7 @@ Motivation: I will be calculating <Ψ|ξ|Ψ> later.
       𝐴ₘ ½(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
       ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
 
-##<a name="72"></a> &lt;ξ₀&gt;
+##<a name="75"></a> &lt;ξ₀&gt;
 Evaluation of `<ξ₀>`:
 
     <ξ₀> = <Ψ₀|ξ|Ψ₀>             # 7.14a
@@ -1206,7 +1238,7 @@ Evaluation of `<ξ₀>`:
     <ξ₀> = √2ñ
     <ξ₀>² = 2ñ   # OK, need time development
 
-##<a name="73"></a> ⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓
+##<a name="76"></a> ⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓
 
     ⌽𝐴ℋ↓/½n↓
     ⌽√[½n↓]𝐴↓ℋ↓/½n↓   # 𝐴=√[½n↓]𝐴↓
@@ -1215,7 +1247,7 @@ Evaluation of `<ξ₀>`:
     ⌽↥/√½n↓ ⌽↓𝐴↓ℋ↓
     ⌽↥/√½n↓ ⌽↓Ψ↓
 
-##<a name="74"></a> ⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑
+##<a name="77"></a> ⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑
 
     ⌽𝐴ℋ↑
     ⌽√2n↑𝐴↑ℋ↑   # 𝐴=√[2n↑]𝐴↑
@@ -1224,7 +1256,7 @@ Evaluation of `<ξ₀>`:
     ⌽↧√2n↑ ⌽↑𝐴↑ℋ↑
     ⌽↧√2n↑ ⌽↑Ψ↑
 
-##<a name="75"></a> 𝑝↑𝑝=√[ñ/n↑]𝑃
+##<a name="78"></a> 𝑝↑𝑝=√[ñ/n↑]𝑃
 
     𝑝↑𝑝
     √[ñⁿ⁺¹ℯ[-ñ]/(n+1)!] 𝑝
@@ -1234,7 +1266,7 @@ Evaluation of `<ξ₀>`:
     √[ñ/n₁]𝑃
     √[ñ/n↑]𝑃
 
-##<a name="76"></a> 𝑝↓𝑝=𝑃/√[n↓ñ]
+##<a name="79"></a> 𝑝↓𝑝=𝑃/√[n↓ñ]
 
    𝑝↓𝑝
     √[ñⁿ⁻¹ℯ[-ñ]/(n-1)!] 𝑝
@@ -1244,7 +1276,7 @@ Evaluation of `<ξ₀>`:
     𝑃/√[n₋₁ñ]
     𝑃/√[n↓ñ]
 
-##<a name="77"></a> &lt;ξₜ&gt;
+##<a name="80"></a> &lt;ξₜ&gt;
 Evaluation of `<ξₜ>`:
 
     <ξₜ> = <Ψ|ξ|Ψ>
@@ -1270,7 +1302,7 @@ Evaluation of `<ξₜ>`:
     <ξₜ>² = 2ñ:Cosine²[nwt]
     # This time I got Cosine... Why?  Not careful enough with φ↥ and φ↧?
 
-##<a name="78"></a> &lt;ξ²&gt;
+##<a name="81"></a> &lt;ξ²&gt;
 TODO: `<ξ²>`:
 
     # And who wants to work with this mess?
@@ -1302,14 +1334,14 @@ TODO: `<ξ²>`:
     <ξ²> = ½ + 2ñc²₁                                      # Pythagoras
     <ξ²> = ½ + 2ñ:Cosine²[nwt]
 
-##<a name="79"></a> Δ²ξ
+##<a name="82"></a> Δ²ξ
 7.5 Results:
 
     Δ²ξ = <ξ²> - <ξ>²
         = (½ + 2ñc²₁) - 2ñc²₁
         = ½
 
-##<a name="80"></a> Resources
+##<a name="83"></a> Resources
 On top of the references given in the appendix, I'd like to add the following resources:
 
 * njwildberger's [MathFoundations](https://www.youtube.com/playlist?list=PL5A714C94D40392AB)

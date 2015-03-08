@@ -1523,7 +1523,7 @@ On top of the references given in the appendix, I'd like to add the following re
 * njwildberger's [MathFoundations](https://www.youtube.com/playlist?list=PL5A714C94D40392AB)
 * Stanford's Susskind's [Advanced Quantum Mechanics](https://www.youtube.com/playlist?list=PLpGHT1n4-mAsmMxmSX0LCaXIXT2PmU85m)
 * jodiecongirl's [A Lagrange Multiplier Example](https://youtu.be/H4HN4ZrVm0w)
-* mathdude2012's [Uncertainty Principle with Time and Enever](https://www.youtube.com/watch?v=Eb3V8GrR7jk)
+* mathdude2012's [Uncertainty Principle with Time and Energy](https://www.youtube.com/watch?v=Eb3V8GrR7jk)
 
 So the way it works is that any mistakes herein are all my fault.
 If I say anything good, it's because of these other people:

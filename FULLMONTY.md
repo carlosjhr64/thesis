@@ -23,7 +23,7 @@ it's a good warmup and demonstrates my notation.
 
  · [ℤ and ℚ](#7) · [uᵥ](#8) · [{uᵥ}](#9) · [Σ[l,k]](#10) · [Σ](#11) · [Σₙ](#12) ·
 
- · [∞](#13) · [Σrⁿ](#14) · [𝜖≡1/∞](#15) · [∑](#16) · [∑ₗ](#17) · [n×u](#18) ·
+ · [∞](#13) · [𝜖≡1/∞](#14) · [Σrⁿ](#15) · [∑](#16) · [∑ₗ](#17) · [n×u](#18) ·
 
  · [⋅](#19) · [Π](#20) · [uᵛ](#21) · [√u](#22) · [|u|](#23) · [↓,↑](#24) ·
 
@@ -217,7 +217,27 @@ Basically, one can add or subtract a finite number to ∞, it's still ∞.
       M = N-1 = Σ1 - 1 = ∞-1 = ∞
       Σuₙ = Σ[0,∞]{n|uₙ}   # I see!
 
-##<a name="14"></a> Σrⁿ
+##<a name="14"></a> 𝜖≡1/∞
+I was not able to prove that 1/∞=0.
+If so, then 0(∞)=1, so what's 2/∞?
+2/∞=2(1/∞)=2(0)=0.
+So 2/∞=0 and 0(∞)=2.
+Since 0(∞)=0(∞) by u≡u, then 1=2 (a contradiction).
+1/∞≡0 would be a very bad definition.
+If ∞²=∞, I'd be able to show 1/∞=0.
+But I could not prove ∞²=∞ and as noted ∞²≡∞ would then be a very bad definition.
+So ∞²≠ ∞.
+I cannot find any logical difficulties with ∞ as an object that absorbs any finite amount but
+otherwise behaves almost like a number except that I'm not able to divide by it.
+One possible useful definition migth be 1/∞≡𝜖>0, not actually zero,
+a unit [infinitesimal](http://en.wikipedia.org/wiki/Infinitesimal).
+Then 2(𝜖) really is just 2×𝜖.
+So here I'm really defining ∞≡Σ1 and 𝜖≡1/∞, and seeing what comes of it:
+
+    𝜖≡1/∞
+    𝜖×∞=1
+
+##<a name="15"></a> Σrⁿ
 Just a quick review of
 [Geometric series](http://en.wikipedia.org/wiki/Geometric_series):
 
@@ -257,26 +277,6 @@ the series approaches ∞ quite literally!
       1/ϵ
       ∞
       Σ1
-
-##<a name="15"></a> 𝜖≡1/∞
-I was not able to prove that 1/∞=0.
-If so, then 0(∞)=1, so what's 2/∞?
-2/∞=2(1/∞)=2(0)=0.
-So 2/∞=0 and 0(∞)=2.
-Since 0(∞)=0(∞) by u≡u, then 1=2 (a contradiction).
-1/∞≡0 would be a very bad definition.
-If ∞²=∞, I'd be able to show 1/∞=0.
-But I could not prove ∞²=∞ and as noted ∞²≡∞ would then be a very bad definition.
-So ∞²≠ ∞.
-I cannot find any logical difficulties with ∞ as an object that absorbs any finite amount but
-otherwise behaves almost like a number except that I'm not able to divide by it.
-One possible useful definition migth be 1/∞≡𝜖>0, not actually zero,
-a unit [infinitesimal](http://en.wikipedia.org/wiki/Infinitesimal).
-Then 2(𝜖) really is just 2×𝜖.
-So here I'm really defining ∞≡Σ1 and 𝜖≡1/∞, and seeing what comes of it:
-
-    𝜖≡1/∞
-    𝜖×∞=1
 
 ##<a name="16"></a> ∑
 Sum over Integer, ℤ, indeces:

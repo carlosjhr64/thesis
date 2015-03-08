@@ -442,6 +442,9 @@ Quick plausibility check:
     ∑∑ uₗvₖ = ∑uₗ × ∑vₗ
 
 I'll be using ΣΣ{uₙvₘ}=Σ{uₙ}Σ{vₙ} later.
+In general I'll refer to a and b as Real number:
+
+    ℝ{a,b}   # a and b are Real numbers.
 
 ##<a name="30"></a> ℂ
 Complex numbers:
@@ -452,7 +455,10 @@ Complex numbers:
       (uᵣ,uᵢ)(vᵣ,vᵢ)≡(uᵣvᵣ-uᵢvᵢ,uᵣvᵢ+uᵢvᵣ)
       (uᵣ,uᵢ)(uᵣ,uᵢ)=(uᵣ²-uᵢ²,2uᵣuᵢ)
       uᵣ≡(uᵣ,0)
-    ℂ{α,β}
+
+In general I'll refer to α and β as Complex numbers:
+
+    ℂ{α,β}   # α and β are Complex numbers.
 
 ##<a name="31"></a> 𝑖
 The Imaginary number 𝑖:
@@ -510,17 +516,55 @@ The [integral](http://en.wikipedia.org/wiki/Integral):
 
     ∫ₓu[x] ≡ :Integral[-∞,∞]{x|u[x]}
 
+    2 = ∫ₓ0⁺
+    # Proof:
+      ∫ₓ0⁺
+      :Integral[-∞,∞]{x|0⁺}
+      :Integral[-∞,∞]{x|𝒟ₓ[0⁺x]}
+      ∞×0⁺ - -∞×0⁺
+      ∞×0⁺ + ∞×0⁺
+      1 + 1
+      2
+
+    2∞ = ∫ₓ1
+    # Proof:
+      ∫ₓ1
+      :Integral[-∞,∞]{x|1}
+      :Integral[-∞,∞]{x|𝒟ₓ[x]}
+      (∞) - (-∞)
+      ∞ + ∞
+      2∞
+
+Why not?
+I defined ∞≡Σ1, so 2∞=2Σ1=Σ2.
+∫ₓ adds the two sides of infinity about zero, so I get 2!
+LOL
+
 ##<a name="36"></a> &lt;u&gt;
-Dirac notation:
+For some N>0, which is less than any positive Rational multiple of infinity,
+consider function u and v such that:
+
+    ∫ₓ (αu[x])*(βv[x])} ≤ N < |n/m|×∞
+
+Then the Dirac notation is defined as follows:
 
     <αu|βv> ≡ ∫ₓ (αu[x])*(βv[x])}
 
 For the case I'm working in,
 u and v are a discrete set of orthogonal functions:
 
-    uₗ*uₖ = (l=k)? uₗ² : 0
+    ∫ₓ uₗ*uₖ = (l=k)? ∫ₓuₗ² : 0
 
-    <αu|βv> = ∑∑ (αuₗ)*(βvₖ)
+Specifically, they can be normalized to be a set of ortho-normal functions:
+
+    ∫ₓ uₗ*uₖ = (l=k)? 1 : 0
+
+    <αu|βv> = ∫ₓ ∑∑ (αuₗ)*(βvₖ)
+
+> GOT UP TO HERE.
+> It's really easy to miss things!
+> I may redo everything in Dirac notation.
+
     <αu|βv> = α*<u|βv> = β<αu|v>
     <αu|βv>* = <βv|αu>
     <αu| + <βv| = <αu+βv|
@@ -549,7 +593,7 @@ u and v are a discrete set of orthogonal functions:
     <uₗ> = uₗ*uₗ
     <u|ₗ> = <uₗ>
     <α> = α*α
-    # TODO: What we mean by average value,  <u> ≡ Σₙuₙ/N ?
+    # TODO: What I mean by average value,  <u> ≡ Σₙuₙ/N ?
 
 ##<a name="37"></a> n!
 Factorial:
@@ -853,7 +897,7 @@ I'll only be working with one dimension.
 
 Note that time is measure by observing a physical clock.
 I believe this will create a [paradox](http://en.wikipedia.org/wiki/Paradox)
-because we assume there's no error in its measurement.
+because I assume there's no error in its measurement.
 To resolve the paradox someone (no not me, I'm done!)
 will have to do the dual Energy-Time problem.
 
@@ -885,7 +929,7 @@ Since I do not computationally define division by ℝ,
     1/√2π = 2/9801 Σ (4n)!(1103+26390k)/((k!)⁴(396⁴^k
     1/√2π = 2/9801 Σ (4n)!(1103+26390k)/((k!)⁴(396⁴ᵏ))
 
-Anyways, I think we can trust [algebra](http://en.wikipedia.org/wiki/Algebra)
+Anyways, I think I can trust [algebra](http://en.wikipedia.org/wiki/Algebra)
 to say π/π=1, and if the final result of the algebra is Rational(ℚ),
 I won't worry about it.  OK!
 
@@ -908,7 +952,7 @@ Time evolution:
 
     # NOTE! The ½ part makes this object a bit of a screw ball.
     ⌽ᵗₙ ≡ ℯ[-𝑖ω(n+½)t] = ℯ[-𝑖Eₙt/ħ]
-    φᵗₙ ≡ ℯ[-𝑖ωnt]   # "How do we end up with this?" you may ask.
+    φᵗₙ ≡ ℯ[-𝑖ωnt]   # "How do I end up with this?" I may ask.
 
     ⌽ₙ*⌽ₘ = φₘ-ₙ   # You don't have to explicitly show time if it can be infered.
     # Proof:
@@ -1000,7 +1044,7 @@ Average Quantum number ñ
     ñ = u - 0
     ñ = u   # As expected.  :)
 
-Now we can describe the distribution in terms of the average quantum number:
+Now I can describe the distribution in terms of the average quantum number:
 
     𝑃ₙ = ñⁿℯ[-ñ]/n!
     𝑝ₙ = √[ñⁿℯ[-ñ]/n!]

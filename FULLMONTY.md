@@ -21,7 +21,7 @@ it's a good warmup and demonstrates my notation.
 
  · [Expressions](#1) · [DRY](#2) · [{u,v,w}](#3) · [Precedence rules](#4) · [⋯](#5) · [ℕ](#6) ·
 
- · [ℤ and ℚ](#7) · [uᵥ](#8) · [{uᵥ}](#9) · [Σ[l,k]](#10) · [Σ](#11) · [Σₙ](#12) ·
+ · [ℤ and ℚ](#7) · [uᵥ](#8) · [{uᵥ}](#9) · [Σ[l,k]{j|uⱼ}](#10) · [Σuₙ](#11) · [Σₙuₙ](#12) ·
 
  · [∞](#13) · [𝜖≡1/∞](#14) · [Σrⁿ](#15) · [∑](#16) · [∑ₗ](#17) · [n×u](#18) ·
 
@@ -35,15 +35,15 @@ it's a good warmup and demonstrates my notation.
 
  · [2ₘ](#43) · [3ₘ](#44) · [nₘ=(n+m)!/n!](#45) · [n₋ₘ=(n-m)!/n!](#46) · [n₋ₙ=1/n!](#47) · [(ⁿₘ)=m-ₘ/n-ₘ](#48) ·
 
- · [n↥,n₀,n↧](#49) · [nᵥn!](#50) · [𝔩](#51) · [Sine](#52) · [Cosine](#53) · [ℯ](#54) ·
+ · [n↥,n₀,n↧](#49) · [nᵥn!](#50) · [ŉ](#51) · [u↑ˡᵥ](#52) · [𝔩](#53) · [Sine](#54) ·
 
- · [S²+C²=1](#55) · [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#56) · [δₗₖ](#57) · [⧼v⧽](#58) · [Δ²](#59) · [𝑃ₙ](#60) ·
+ · [Cosine](#55) · [ℯ](#56) · [S²+C²=1](#57) · [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#58) · [δₗₖ](#59) · [⧼v⧽](#60) ·
 
- · [𝑝ₙ](#61) · [κ,μ,x,t](#62) · [ħ](#63) · [π](#64) · [ω](#65) · [f](#66) ·
+ · [Δ²](#61) · [𝑃ₙ](#62) · [𝑝ₙ](#63) · [κ,μ,x,t](#64) · [ħ](#65) · [π](#66) ·
 
- · [Eₙ](#67) · [⌽ᵗₙ](#68) · [𝕌{⌽}](#69) · [⌽→φ](#70) · [sₙ,cₙ](#71) · [ñ](#72) ·
+ · [ω](#67) · [f](#68) · [Eₙ](#69) · [⌽ᵗₙ](#70) · [𝕌{⌽}](#71) · [⌽→φ](#72) ·
 
- · [ñ²=𝐿[Σ{n(n-1)𝑃ₙ}]](#73) · [p→𝑃](#74) · [ξ](#75) · [𝐴ₙ](#76) · [ŉ](#77) · [u↑ˡᵥ](#78) ·
+ · [sₙ,cₙ](#73) · [ñ](#74) · [ñ²=𝐿[Σ{n(n-1)𝑃ₙ}]](#75) · [p→𝑃](#76) · [ξ](#77) · [𝐴ₙ](#78) ·
 
  · [𝒢,ℊ](#79) · [ℋₙ](#80) · [Ψₙ](#81) · [Ψₒ](#82) · [ñ²=Σ{n²ΨₙΨₙ}](#83) · [Optimization problem](#84) ·
 
@@ -156,7 +156,7 @@ A set of labeled (indexed) items:
 
     [l,k]{j|uⱼ} ≡ {uₗ,⋯,uₖ}
 
-##<a name="10"></a> Σ[l,k]
+##<a name="10"></a> Σ[l,k]{j|uⱼ}
 [Series](http://en.wikipedia.org/wiki/Series_%28mathematics%29):
 
     Σ[l,k]{j|uⱼ} ≡ uₗ+⋯+uₖ
@@ -165,7 +165,7 @@ A set of labeled (indexed) items:
     Σ[1,5]{m|m} = 1 + 2 + 3 + 4 + 5
     Σ[1,3]{m|m+m} = (1+1) + (2+2)+ (3+3)
 
-##<a name="11"></a> Σ
+##<a name="11"></a> Σuₙ
 Summation over Natural, ℕ, indeces:
 
     # Non-halting series.
@@ -174,7 +174,7 @@ Summation over Natural, ℕ, indeces:
 
 Note that by default a series will start with index 0.
 
-##<a name="12"></a> Σₙ
+##<a name="12"></a> Σₙuₙ
 Halting series:
 
     Σₙuₙ ≡ Σ[0,M]{n|u[n]}
@@ -284,6 +284,9 @@ Sum over Integer, ℤ, indeces:
     ∑uₗ ≡ Σ[-∞,∞]{l|uₗ}     # ⋯+u₋₁+u₀+u₁+⋯
     ∑uₗ = Σuₙ + Σu-ₙ - u₀   # Take out the extra u₀
 
+Notice that the symbol ∑ is sligtly taller than the symbol Σ.
+Basically I'm creating shorthand notations for sums over ℤ vs. sums over ℕ.
+
 ##<a name="17"></a> ∑ₗ
 Halting sum over Integer, ℤ, indeces:
 
@@ -292,7 +295,7 @@ Halting sum over Integer, ℤ, indeces:
     ∑ₗ1 = 2M+1 = 2N-1
 
 ##<a name="18"></a> n×u
-Just regular multiplication:
+Just regular [multiplication](http://en.wikipedia.org/wiki/Multiplication):
 
     n×u ≡ Σ[1,n]{u}
     nu ≡ n×u
@@ -333,14 +336,14 @@ Superscripts also denotes power or raising operations:
     uᵛ ≡ u^v   # or "u**v" in Ruby.
 
 ##<a name="22"></a> √u
-Squareroot:
+[Squareroot](http://en.wikipedia.org/wiki/Square_root):
 
     √[u²]≡u
     √u²=u   # By precedence rules and definition.
     √[uu]=u
 
 ##<a name="23"></a> |u|
-Absolute value:
+[Absolute value](http://en.wikipedia.org/wiki/Absolute_value):
 
     |u|≡(u>0)?u:-u  ←  ℚ{u}
 
@@ -424,7 +427,7 @@ Let's try a simple limit function:
 
 As N doubles, the sum Σₙ{1/N²} halves.
 So Σₙ{1/N²} does approach zero as N goes on to infinity.
-For the following examples, I use fatorial N! and exponential function ℯ[N]:
+For the following examples, I use factorial N! and exponential function ℯ[N]:
 
     𝐿[u+1/N²] = u
     𝐿[u+ℯ[N]/N!] = u    # Try N≥10.
@@ -766,27 +769,90 @@ Factoral with Factorial:
     n↥ᵐn! = (n+m)!
     n↧ᵐn! = (n-m)!
 
-##<a name="51"></a> 𝔩
+##<a name="51"></a> ŉ
+Division by n in the notation can be cumbersome.
+It's all about condensing the notation:
+
+    ŉ ≡ 1/n
+    ŉ! = 1/n!
+
+##<a name="52"></a> u↑ˡᵥ
+Operations with Arrows often result in an extra factor.
+I'm adding notation for that:
+
+    u↑ˡᵥ ≡ u↑ˡvˡ
+    u↥ˡᵥ = u↥ˡvˡ
+    √u↥ˡᵥ = √[u↥ˡvˡ]
+    √u↥ᵥ = √[u↥v]
+    2n = 1/n↧₂ = ŉ↧₂
+    √2n = √ŉ↧₂
+
+Why do √2n=√ŉ↧₂ ?
+Well, if its the final result √2n is the answer.
+But √ŉ↧₂ really means the function(of l) √ŉ↧ˡ₂, where l=1.
+
+    √ŉ↧⁰₂ = 1
+    √ŉ↧¹₂ = √2n
+    √ŉ↧²₂ = √[2²n(n-1)] = √[4n(n-1)]
+    √ŉ↧³₂ = √[8n(n-1)(n-2)]
+    # ...
+    √ŉ↧ˡ₂ = √[2ˡn!/(n-l)!]
+    # Proof:
+      √ŉ↧ˡ₂
+      √[1/n↧ˡ₂]             # ŉ=1/n
+      √[1/(2⁻ˡn↧ˡ)]         # ↧ˡ₂ means ↧ˡ2⁻ˡ
+      √[2ˡ/(n↧ˡ)]           # 1/2⁻ˡ=2ˡ
+      √[2ˡ/n₋ₗ]             # n↧ˡ=n₋ₗ in subscript notation
+      √[2ˡ/((n₋ₗ)!/(n!))]   # nₘ=(n+m)!/n!
+      √[2ˡn!/(n₋ₗ)!]
+
+The √ŉ↧ˡ₂ shortens notation to 5 characters, from 14 in √[2ˡn!/(n-l)!].
+And I'll end up not having to calculate any of it in the problem later, because
+it will all cancel out!
+And while they're there, they nicely show the structure of the algebra.
+
+    n↥⁰₂ = 1
+    n↥¹₂ = 2(n+1)
+    n↥²₂ = 4(n+1)(n+2)
+    n↥³₂ = 8(n+1)(n+2)(n+3)
+    # ...
+    n↥ˡ₂ = 2ˡ(n+l)!/n!   # 4 characters vs. 11.
+
+##<a name="53"></a> 𝔩
 
     𝔩 ≡ -1
     𝔩² = 1
     𝔩ⁿ = (-1)ⁿ   # Just to compact notation.
 
-##<a name="52"></a> Sine
+    𝔩ⁿ = (n%2=0)? 1 : -1   # Used to "add" when even, "subtract" when odd.
+
+##<a name="54"></a> Sine
 [Sine](http://en.wikipedia.org/wiki/Sine#Series_definition)
 series definition:
 
     :Sine[u] ≡ Σ (-1)ⁿ u^(2n+1) / (2n+1)!
     S[u] ≡ :Sine[u]
 
-##<a name="53"></a> Cosine
+    Sᵤ = Σ 𝔩ⁿu^n↥₂/n↥₂!   # Isn't this fun!
+    # Proof:
+      :Sine[u] = Σ (-1)ⁿ u^(2n+1) / (2n+1)!
+      S[u] = Σ (-1)ⁿ u^(2n+1) / (2n+1)!
+      Sᵤ = Σ (-1)ⁿ u^(2n+1) / (2n+1)!   # Sᵤ=S[u,...]
+      Sᵤ = Σ 𝔩ⁿ u^(2n+1) / (2n+1)!      # 𝔩=-1
+      Sᵤ = Σ 𝔩ⁿu^n↥₂/n↥₂!               # n↥₂=2n↥=2(n+1)
+
+##<a name="55"></a> Cosine
 [Cosine](http://en.wikipedia.org/wiki/Trigonometric_functions#Series_definitions)
 series definition:
 
     :Cosine[u] ≡ Σ (-1)ⁿ u^(2n) / (2n)!
     C[u] ≡ :Cosine[u]
 
-##<a name="54"></a> ℯ
+    Cᵤ = Σ 𝔩ⁿu^(2n)/(2n)!
+
+So n↥₂ may not be the appropriate thing to use describe S after all.
+
+##<a name="56"></a> ℯ
 [Exponential](http://en.wikipedia.org/wiki/Exponential_function#Formal_definition)
 series definition:
 
@@ -794,7 +860,7 @@ series definition:
     ℯ[u] ≡ :Exponential[u]
     ℯᵘ ≡ ℯ^(u) ≡ ℯ[u]   # Alternate forms.
 
-##<a name="55"></a> S²+C²=1
+##<a name="57"></a> S²+C²=1
 [Trigonometric Identities](http://en.wikipedia.org/wiki/List_of_trigonometric_identities):
 
     S²+C²=1            # Pythagoras
@@ -822,7 +888,7 @@ Derivation: Cosine's Angle Sum to Cosine Double Angle:
     C[2u] = 1-2S²[u]
     :Cosine[2u] = 1 - 2:Sine²[u]
 
-##<a name="56"></a> ℯⁱᵘ=Cᵤ+𝑖Sᵤ
+##<a name="58"></a> ℯⁱᵘ=Cᵤ+𝑖Sᵤ
 Known properties of e:
 
     ℯ[u]ℯ[v] = ℯ[u+v]
@@ -830,12 +896,12 @@ Known properties of e:
     ℯ[-𝑖u] = C[u]-𝑖S[u]
     ℯ[0] = 1
 
-##<a name="57"></a> δₗₖ
+##<a name="59"></a> δₗₖ
 [Dirac delta function](http://en.wikipedia.org/wiki/Dirac_delta_function):
 
     δₗₖ = (l=k)? 1 : 0
 
-##<a name="58"></a> ⧼v⧽
+##<a name="60"></a> ⧼v⧽
 For some N>0, which is less than any positive Rational multiple of infinity,
 consider function u and v such that:
 
@@ -881,7 +947,7 @@ in which case Liboff's equation 4.24 can make no sense!
 
     # TODO: What I mean by average value,  ⧼u⧽ ≡ Σₙuₙ/N ?
 
-##<a name="59"></a> Δ²
+##<a name="61"></a> Δ²
 Measure of uncertainty defined (4.1a):
 
     Δ²[u] ≡ ⧼(u - ⧼u⧽)²⧽
@@ -900,7 +966,7 @@ Measure of uncertainty (4.1b):
 
     Δ²u = ⧼u²⧽ - ⧼u⧽²
 
-##<a name="60"></a> 𝑃ₙ
+##<a name="62"></a> 𝑃ₙ
 𝑃 is the [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution):
 
     𝑃ₙ ≡ uⁿℯ[-u]/n!
@@ -908,7 +974,7 @@ Measure of uncertainty (4.1b):
     0 ≤ 𝑃ₙ ≤ 1
     ⧼u⧽ = Σ 𝑃ₙuₙ
 
-##<a name="61"></a> 𝑝ₙ
+##<a name="63"></a> 𝑝ₙ
 
     𝑝ₙ ≡ √[uⁿℯ[-u]/n!]
     𝑝ₙ*𝑝ₙ = 𝑃ₙ
@@ -919,7 +985,7 @@ Measure of uncertainty (4.1b):
       uⁿℯ[-u]/n!
       𝑃ₙ
 
-##<a name="62"></a> κ,μ,x,t
+##<a name="64"></a> κ,μ,x,t
 I think the point here is that these values are "measured" by "experiment" in "some way".
 
 [Mass](http://en.wikipedia.org/wiki/Mass) and
@@ -942,12 +1008,12 @@ because I assume there's no error in its measurement.
 To resolve the paradox someone (no not me, I'm done!)
 will have to do the dual Energy-Time problem.
 
-##<a name="63"></a> ħ
+##<a name="65"></a> ħ
 [Reduced Planck constant](http://en.wikipedia.org/wiki/Planck_constant):
 
     ℝ{ħ}
 
-##<a name="64"></a> π
+##<a name="66"></a> π
 You can check that there exist several series 
 of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi).
 [Leibniz formula for π](http://en.wikipedia.org/wiki/Leibniz_formula_for_π):
@@ -974,20 +1040,20 @@ Anyways, I think I can trust [algebra](http://en.wikipedia.org/wiki/Algebra)
 to say π/π=1, and if the final result of the algebra is Rational(ℚ),
 I won't worry about it.  OK!
 
-##<a name="65"></a> ω
+##<a name="67"></a> ω
 
     ω² ≡ κ/μ   # Angular frequency
     ω = √[κ/μ]
 
-##<a name="66"></a> f
+##<a name="68"></a> f
 
     f ≡ ω/(2π)   # Frequency
 
-##<a name="67"></a> Eₙ
+##<a name="69"></a> Eₙ
 
     Eₙ = ωħ(n+½)   # 3.2: Energy eigen-value
 
-##<a name="68"></a> ⌽ᵗₙ
+##<a name="70"></a> ⌽ᵗₙ
 7.17 TODO: why -𝑖Eₙt/ħ and not +𝑖Eₙt/ħ?
 Time evolution:
 
@@ -1009,7 +1075,7 @@ Time evolution:
     # Just to show that the notation makes sense.
     ⌽ᵗ = (⌽¹)^t = ℯ[t × (-𝑖ω(n+½))] = ℯ[-𝑖ω(n+½)t]
 
-##<a name="69"></a> 𝕌{⌽}
+##<a name="71"></a> 𝕌{⌽}
 ⌽ is [Unitary](http://en.wikipedia.org/wiki/Unitary_matrix):
 
     u*u=1 ↔ 𝕌{u}   # Definition of Unitary.
@@ -1023,7 +1089,7 @@ Time evolution:
       ℯ[0]
       1   # Therefore ⌽ is Unitary.
 
-##<a name="70"></a> ⌽→φ
+##<a name="72"></a> ⌽→φ
 
     ⌽ₙ*⌽ₙ₊₁ = φₙ₊₁-ₙ = φ₁
     φ↥ ≡ φ₀↑ = φ₁   # This will make notation very consistent later.
@@ -1036,7 +1102,7 @@ Time evolution:
     ⌽ₙ*⌽ₙ₊₂ = φₙ₊₂-ₙ = φ₂ = φ↥²
     ⌽ₙ*⌽ₙ₋₂ = φₙ₋₂-ₙ = φ₋₂ = φ↧²
 
-##<a name="71"></a> sₙ,cₙ
+##<a name="73"></a> sₙ,cₙ
 Short for Sine(nωt) and Cosine(nωt):
 
     sₙ ≡ S[nωt]
@@ -1061,7 +1127,7 @@ Short for Sine(nωt) and Cosine(nωt):
     φ₋₂ + φ₂ = 2c₂
     φ↧² + φ↥² = 2c₂   # And remember this one!
 
-##<a name="72"></a> ñ
+##<a name="74"></a> ñ
 Average Quantum number ñ
 
     ⧼n⧽ = ⧼n|𝑝ₙ*n𝑝ₙ|m⧽ = Σ n𝑝ₙ𝑝ₙ = Σ n𝑃ₙ   # only n=m terms contribute
@@ -1090,7 +1156,7 @@ Now I can describe the distribution in terms of the average quantum number:
     𝑃ₙ = ñⁿℯ[-ñ]/n!
     𝑝ₙ = √[ñⁿℯ[-ñ]/n!]
 
-##<a name="73"></a> ñ²=𝐿[Σ{n(n-1)𝑃ₙ}]
+##<a name="75"></a> ñ²=𝐿[Σ{n(n-1)𝑃ₙ}]
 
     𝐿 Σ n(n-1)𝑃ₙ
     𝐿 Σₙ n(n-1)𝑃ₙ
@@ -1116,7 +1182,7 @@ Now I can describe the distribution in terms of the average quantum number:
 
     ñ² = 𝐿 Σ{n(n-1)𝑃ₙ}   # b/c ñ=u, so u²=ñ²
 
-##<a name="74"></a> p→𝑃
+##<a name="76"></a> p→𝑃
 
     𝑝ₙ𝑝ₙ₊₁ = √[ñⁿℯ[-ñ]/n!] √[ñⁿ⁺¹ℯ[-ñ]/(n+1)!]
            = √[ñⁿℯ[-ñ]/n!] √[ñⁿℯ[-ñ]/n!] √[ñ/(n+1)] 
@@ -1165,13 +1231,13 @@ Now I can describe the distribution in terms of the average quantum number:
     𝑝 = √m↑𝑝↑/√ñ = √[ñm↓]𝑝↓  
     𝑝 = √[m↑ˡ/ñˡ]𝑝↑ˡ
 
-##<a name="75"></a> ξ
+##<a name="77"></a> ξ
 The non-dimensional displacement, ξ.
 
     ξ² ≡ μω/ħ x²   # A.1b
     x² = ħ/(μω) ξ²
 
-##<a name="76"></a> 𝐴ₙ
+##<a name="78"></a> 𝐴ₙ
 The Normalization Constant, 𝐴ₙ:
 
     𝐴ₙ ≡ 1/√[2ⁿn!√π]
@@ -1204,23 +1270,6 @@ The Normalization Constant, 𝐴ₙ:
     𝐴 = √[2ˡn↥ˡ]𝐴↑ˡ = √n↥ˡ₂𝐴↑ˡ
 
     𝐴 = √n↥₂𝐴↑ = √n↧₂𝐴↓
-
-##<a name="77"></a> ŉ
-Division by n in the notation can be cumbersome.
-It's all about condensing the notation:
-
-    ŉ ≡ 1/n
-    ŉ! = 1/n!
-
-##<a name="78"></a> u↑ˡᵥ
-Operations with Arrows often result in an extra factor.
-I'm adding notation for that:
-
-    u↑ˡᵥ ≡ u↑ˡvˡ
-    u↥ˡᵥ = u↥ˡvˡ
-    √u↥ˡᵥ = √[u↥ˡvˡ]
-    √u↥ᵥ = √[u↥v]
-    2n = 1/n↧₂ = ŉ↧₂
 
 ##<a name="79"></a> 𝒢,ℊ
 The [Gaussian](http://en.wikipedia.org/wiki/Gaussian_function) function:

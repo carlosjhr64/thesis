@@ -4,10 +4,10 @@
 Here I write explicitly all my work, as if writting computer code.
 Consider all symbols to have global scope.
 Each symbol should only be defined once,
-except `u` and `v` which will be used as temporary general variables.
-In books you'll see `sin²(x)` to mean `sin(x)×sin(x)`.
+except u and v which will be used as temporary general variables.
+In books you'll see sin²(x) to mean sin(x)×sin(x).
 I'll use that convention in general.
-`u²[v]` will mean `u[v]×u[v]` and not `u[u[v]]`.
+u²[v] will mean u[v]×u[v] and not u[u[v]].
 The initial part of this section goes over elementary material, but
 it's a good warmup and demonstrates my notation.
 
@@ -59,11 +59,11 @@ it's a good warmup and demonstrates my notation.
 This file is written in [Markdown](http://en.wikipedia.org/wiki/Markdown) format.
 Proper mathematical
 [expressions](http://en.wikipedia.org/wiki/Expression_%28mathematics%29)
-will start with four spaces and end with either a newline or a pound sign, `#`.
+will start with four spaces and end with either a newline or a pound sign, #.
 Everything else is commentary.
 
 > TODO:
-> Rules for expression than end with `=` and `→` which then
+> Rules for expression than end with = and → which then
 > continue on the next line are emerging, but
 > I haven't yet decided exactly what they are.
 
@@ -113,7 +113,7 @@ The following precedence rules are in order:
     2³₄ = (2₄)³         # This is not 8₄.  I would just write (2₄)³ to avoid confusion.
 
 Some of these rules help compact the notation as it most commonly appears.
-For example, `√2πx` is `√[2π]x`, but `√nπx` is `√[n]πx`.
+For example, √2πx is √[2π]x, but √nπx is √[n]πx.
 
 ##<a name="5"></a> ⋯
 [Ellipsis](http://en.wikipedia.org/wiki/Ellipsis#In_mathematical_notation):
@@ -145,8 +145,8 @@ Subscripts (or indeces) labels a specific form of a more general expression:
     uᵥ[w,⋯] ≡ u[v,w,⋯]   # Note that uᵥ may ignore w,... so as to be u[v].
     uₙₘ[w,⋯] ≡ u[n,m,w,⋯]
 
-Sequences can be thought of the set `{uₙ}`, but in this "paper",
-`uₙ` is always a well defined expression.
+Sequences can be thought of the set {uₙ}, but in this "paper",
+uₙ is always a well defined expression.
 
 ##<a name="9"></a> {uᵥ}
 A set of labeled (indexed) items:
@@ -305,7 +305,7 @@ The dot operator:
 
 ##<a name="20"></a> Π
 Products of sequences,
-[`Π`](http://en.wikipedia.org/wiki/Multiplication#Capital_Pi_notation):
+[Π](http://en.wikipedia.org/wiki/Multiplication#Capital_Pi_notation):
 
     # 1.upto(m).inject(1){|v,n|v×u[n]}
     Π[1,m]{n|uₙ} ≡ u₁×⋯×uₘ
@@ -400,7 +400,7 @@ Arrow Operators on subscripts:
     ∑uₗ = ∑u↓   # Same!
 
 ##<a name="29"></a> 𝐿
-The limit fuction, `𝐿`.
+The limit fuction, 𝐿.
 N is very, very, big!
 Let's try a simple limit function:
 
@@ -434,10 +434,10 @@ For the following examples, I use fatorial N! and exponential function ℯ[N]:
     |u| ≤ 1/N, |v| ≤ 1/N  ⇒  |uv| ≤ 1/N², 𝐿[uv]=0
 
 The Float::EPSILON for Ruby on my machine is about 2.22e-16.
-So `𝐿` puts a limit on N on my machine of about 6.71e+7 (2.22e-16 ~ 1/(6.71e+7)^2).
+So 𝐿 puts a limit on N on my machine of about 6.71e+7 (2.22e-16 ~ 1/(6.71e+7)^2).
 
 ##<a name="30"></a> uₒ≡Σuₙ
-I'll use subcript o, `ₒ`, to refer to the object that represents an infinite sum.
+I'll use subcript o, ₒ, to refer to the object that represents an infinite sum.
 
     uₒ≡Σuₙ
 
@@ -447,8 +447,8 @@ That is ℝ augments ℚ with Σuₙ as follows:
 
     ℚ{uₙ: |uₙ|≤1/n² ← n≥N}, v=Σuₙ ↔ ℝ{v}, ℚ{𝐿[Σₙuₙ]}
 
-So I just need `ℝ` to work with `𝐿[Σuₙ]`.
-ℝ has well defined `+` and `×`:
+So I just need ℝ to work with 𝐿[Σuₙ].
+ℝ has well defined + and ×:
 
     uₒ=Σuₙ,vₒ=Σvₙ → uₒ+vₒ ≡ Σ uₙ+vₙ, uₒvₒ ≡ ΣΣ uₙvₘ
 
@@ -536,7 +536,7 @@ Complex conjugation:
       (uᵣ,uᵢ)*(vᵣ,vᵢ) = (uᵣvᵣ+uᵢvᵢ, uᵣvᵢ-uᵢvᵣ)
       (uᵣ,uᵢ)*(uᵣ,uᵢ) = (u²ᵣ+u²ᵢ, 0)
 
-Maybe `*` should really be thought as a binary operator,
+Maybe * should really be thought as a binary operator,
 a special type of multiplication.
 
 ##<a name="35"></a> 𝒟
@@ -905,7 +905,7 @@ Measure of uncertainty (4.1b):
     Δ²u = ⧼u²⧽ - ⧼u⧽²
 
 ##<a name="59"></a> 𝑃ₙ
-`𝑃` is the [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution):
+𝑃 is the [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution):
 
     𝑃ₙ ≡ uⁿℯ[-u]/n!
     Σ 𝑃ₙ = 1
@@ -1348,7 +1348,7 @@ The Problem To Be Solved
 
 > TODO:
 > But I have not defined Δx and Δp as operators!?
-> I just define `Δ²u=⧼u²⧽-⧼u⧽²`.
+> I just define Δ²u=⧼u²⧽-⧼u⧽².
 > What about the commutator [x,p].
 
 Note that Δx and Δp represent Real numbers and can be calculated separately:
@@ -1364,7 +1364,7 @@ Noting that Eₙ goes as the quantum number n, I now have:
     Subject to: ⧼n⧽ = ñ
 
 It would not be to hard to argue (TODO: demonstrate this) that
-by symmetry `(⧼x²⧽-⧼x⧽²)=(⧼p²⧽-⧼p⧽²)` and also that I can set `⧼x⧽=0`.
+by symmetry (⧼x²⧽-⧼x⧽²)=(⧼p²⧽-⧼p⧽²) and also that I can set ⧼x⧽=0.
 Then the problem is:
 
     Minimize:   ⧼x²⧽
@@ -1436,7 +1436,7 @@ Motivation: I will be calculating ⧼Ψ|ξ|Ψ⧽ later.
       ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
 
 ##<a name="85"></a> ⧼ξ₀⧽
-Evaluation of `⧼ξ₀⧽`:
+Evaluation of ⧼ξ₀⧽:
 
     ⧼ξ₀⧽ = ⧼Ψ₀|ξ|Ψ₀⧽             # 7.14a
     ⧼ξ₀⧽ = ⧼Ψ₀|n⧽⧼n|ξ|m⧽⧼m|Ψ₀⧽   # 7.14b
@@ -1498,7 +1498,7 @@ Evaluation of `⧼ξ₀⧽`:
     𝑃/√[n↓ñ]
 
 ##<a name="90"></a> ⧼ξₜ⧽
-Evaluation of `⧼ξₜ⧽`:
+Evaluation of ⧼ξₜ⧽:
 
     ⧼ξₜ⧽ = ⧼Ψ|ξ|Ψ⧽
     ⧼ξₜ⧽ = ⧼Ψ|n⧽⧼n|ξ|m⧽⧼m|Ψ⧽
@@ -1524,7 +1524,7 @@ Evaluation of `⧼ξₜ⧽`:
     # This time I got Cosine... Why?  Not careful enough with φ↥ and φ↧?
 
 ##<a name="91"></a> ⧼ξ²⧽
-TODO: `⧼ξ²⧽`:
+TODO: ⧼ξ²⧽:
 
     # And who wants to work with this mess?
     ⧼ξ²⧽ = (ñ+½) +

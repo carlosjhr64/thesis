@@ -31,25 +31,25 @@ it's a good warmup and demonstrates my notation.
 
  · [ℝ](#31) · [ℂ](#32) · [𝑖](#33) · [*](#34) · [𝒟](#35) · [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#36) ·
 
- · [∫](#37) · [⧼u⧽](#38) · [n!](#39) · [(ⁿₘ)](#40) · [nₘ](#41) · [0ₘ](#42) ·
+ · [∫](#37) · [n!](#38) · [(ⁿₘ)](#39) · [nₘ](#40) · [0ₘ](#41) · [1ₘ](#42) ·
 
- · [1ₘ](#43) · [2ₘ](#44) · [3ₘ](#45) · [nₘ=(n+m)!/n!](#46) · [n₋ₘ=(n-m)!/n!](#47) · [n₋ₙ=1/n!](#48) ·
+ · [2ₘ](#43) · [3ₘ](#44) · [nₘ=(n+m)!/n!](#45) · [n₋ₘ=(n-m)!/n!](#46) · [n₋ₙ=1/n!](#47) · [(ⁿₘ)=m-ₘ/n-ₘ](#48) ·
 
- · [(ⁿₘ)=m-ₘ/n-ₘ](#49) · [n↥,n₀,n↧](#50) · [nᵥn!](#51) · [𝔩](#52) · [Sine](#53) · [Cosine](#54) ·
+ · [n↥,n₀,n↧](#49) · [nᵥn!](#50) · [𝔩](#51) · [Sine](#52) · [Cosine](#53) · [ℯ](#54) ·
 
- · [ℯ](#55) · [S²+C²=1](#56) · [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#57) · [Δ²](#58) · [𝑃ₙ](#59) · [𝑝ₙ](#60) ·
+ · [S²+C²=1](#55) · [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#56) · [δₗₖ](#57) · [⧼v⧽](#58) · [Δ²](#59) · [𝑃ₙ](#60) ·
 
- · [κ,μ,x,t](#61) · [ħ](#62) · [π](#63) · [ω](#64) · [f](#65) · [Eₙ](#66) ·
+ · [𝑝ₙ](#61) · [κ,μ,x,t](#62) · [ħ](#63) · [π](#64) · [ω](#65) · [f](#66) ·
 
- · [⌽ᵗₙ](#67) · [𝕌{⌽}](#68) · [⌽→φ](#69) · [sₙ,cₙ](#70) · [ñ](#71) · [ñ²=𝐿[Σ{n(n-1)𝑃ₙ}]](#72) ·
+ · [Eₙ](#67) · [⌽ᵗₙ](#68) · [𝕌{⌽}](#69) · [⌽→φ](#70) · [sₙ,cₙ](#71) · [ñ](#72) ·
 
- · [p→𝑃](#73) · [ξ](#74) · [𝐴ₙ](#75) · [ŉ](#76) · [u↑ˡᵥ](#77) · [𝒢,ℊ](#78) ·
+ · [ñ²=𝐿[Σ{n(n-1)𝑃ₙ}]](#73) · [p→𝑃](#74) · [ξ](#75) · [𝐴ₙ](#76) · [ŉ](#77) · [u↑ˡᵥ](#78) ·
 
- · [ℋₙ](#79) · [Ψₙ](#80) · [Ψₒ](#81) · [ñ²=Σ{n²ΨₙΨₙ}](#82) · [Optimization problem](#83) · [ξΨₘ](#84) ·
+ · [𝒢,ℊ](#79) · [ℋₙ](#80) · [Ψₙ](#81) · [Ψₒ](#82) · [ñ²=Σ{n²ΨₙΨₙ}](#83) · [Optimization problem](#84) ·
 
- · [⧼ξ₀⧽](#85) · [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#86) · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#87) · [𝑝↑𝑝=√[ñ/n↑]𝑃](#88) · [𝑝↓𝑝=𝑃/√[n↓ñ]](#89) · [⧼ξₜ⧽](#90) ·
+ · [ξΨₘ](#85) · [⧼ξ₀⧽](#86) · [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#87) · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#88) · [𝑝↑𝑝=√[ñ/n↑]𝑃](#89) · [𝑝↓𝑝=𝑃/√[n↓ñ]](#90) ·
 
- · [⧼ξ²⧽](#91) · [Δ²ξ](#92) · [Resources](#93) ·
+ · [⧼ξₜ⧽](#91) · [⧼ξ²⧽](#92) · [Δ²ξ](#93) · [Resources](#94) ·
 
 
 </font>
@@ -585,62 +585,7 @@ I defined ∞≡Σ1, so 2∞=2Σ1=Σ2.
 ∫ₓ adds the two sides of infinity about zero, so I get 2!
 LOL
 
-##<a name="38"></a> ⧼u⧽
-For some N>0, which is less than any positive Rational multiple of infinity,
-consider function u and v such that:
-
-    ∫ₓ (αu[x])*(βv[x])} ≤ N < |n/m|×∞
-
-Then the Dirac notation is defined as follows:
-
-    ⧼αu|βv⧽ ≡ ∫ₓ (αu[x])*(βv[x])}
-
-For the case I'm working in,
-u and v are a discrete set of orthogonal functions:
-
-    ∫ₓ uₗ*uₖ = (l=k)? ∫ₓuₗ² : 0
-
-Specifically, they can be normalized to be a set of ortho-normal functions:
-
-    ∫ₓ uₗ*uₖ = (l=k)? 1 : 0
-
-    ⧼αu|βv⧽ = ∫ₓ ∑∑ (αuₗ)*(βvₖ)
-
-> GOT UP TO HERE.
-> It's really easy to miss things!
-> I may redo everything in Dirac notation.
-
-    ⧼αu|βv⧽ = α*⧼u|βv⧽ = β⧼αu|v⧽
-    ⧼αu|βv⧽* = ⧼βv|αu⧽
-    ⧼αu| + ⧼βv| = ⧼αu+βv|
-
-    ⧼αu|βu⧽ = (α*β)∑ uₗ*uₗ   # Orthogonal, crossterms are all 0.
-
-    ⧼u⧽ ≡ ⧼u|u⧽
-
-    ⧼αu⧽ = α*α⧼u⧽
-    # Proof
-      ⧼αu⧽
-      ⧼αu|αu⧽
-      α*⧼u|αu⧽
-      α*α⧼u|u⧽
-      α*α⧼u⧽
-
-    |ₖ⧽ ≡ |uₖ⧽   # where u is know from context
-
-    ⧼u|ₖ⧽ = uₖ*uₖ
-    # Proof
-      ⧼u|ₖ⧽
-      ⧼u|uₖ⧽
-      ∑ uₗ*uₖ
-      uₖ*uₖ   # u are orthogonal, only the k-th term contributes.
-
-    ⧼uₗ⧽ = uₗ*uₗ
-    ⧼u|ₗ⧽ = ⧼uₗ⧽
-    ⧼α⧽ = α*α
-    # TODO: What I mean by average value,  ⧼u⧽ ≡ Σₙuₙ/N ?
-
-##<a name="39"></a> n!
+##<a name="38"></a> n!
 Factorial:
 
     n! ≡ Π[1,n]{u|u}   # 1×2×3×...×n
@@ -675,13 +620,13 @@ Factorial:
       -1×0
       0   # In general 1/u! = 0 ← ℤ{u<0}
 
-##<a name="40"></a> (ⁿₘ)
+##<a name="39"></a> (ⁿₘ)
 [Binomial coefficient](http://en.wikipedia.org/wiki/Binomial_coefficient),
 n choose m:
 
     (ⁿₘ) ≡ n!/(m!(n-m)!)
 
-##<a name="41"></a> nₘ
+##<a name="40"></a> nₘ
 I'd like to make the following refinement in ℕ,
 [Factoral](http://www.urbandictionary.com/define.php?term=Factoral&defid=5895569) forward:
 
@@ -695,7 +640,7 @@ I'd like to make the following refinement in ℕ,
 
     m>0 → nₘ=Π[1,m]{l|n+l}
 
-##<a name="42"></a> 0ₘ
+##<a name="41"></a> 0ₘ
 
     0ₘ = Π[1,m]{l|0+l} = Π[1,m]{l|l} = m!
     0₀ = 1   # by definition
@@ -706,7 +651,7 @@ I'd like to make the following refinement in ℕ,
     ⋯
     0ₘ = m!
 
-##<a name="43"></a> 1ₘ
+##<a name="42"></a> 1ₘ
 
     1₀ = 1   # by definition
     1₁ = (1+1)1  = 2   = 2!
@@ -717,7 +662,7 @@ I'd like to make the following refinement in ℕ,
     ⋯
     1ₘ = (m+1)!
 
-##<a name="44"></a> 2ₘ
+##<a name="43"></a> 2ₘ
 
     2₀ = 1   # by definition
     2₁ = (2+1)1  = 3   = 6/2   = 3!/2
@@ -727,7 +672,7 @@ I'd like to make the following refinement in ℕ,
     ⋯
     2ₘ = (2+m)!/2
 
-##<a name="45"></a> 3ₘ
+##<a name="44"></a> 3ₘ
 
     3₀ = 1   # by definition
     3₁ = (3+1)1   = 4    = 24/6   = 4!/3!
@@ -737,7 +682,7 @@ I'd like to make the following refinement in ℕ,
     ⋯
     3ₘ = (3+m)!/3!
 
-##<a name="46"></a> nₘ=(n+m)!/n!
+##<a name="45"></a> nₘ=(n+m)!/n!
 
     nₘ=(n+m)!/n!
     # Proof:
@@ -747,7 +692,7 @@ I'd like to make the following refinement in ℕ,
       Π[1,m+n]{l|l} / Π[1,n]{l|l}   # (1*2*...*n) * (n+1)*(n+2)*...*(n+m) / (1*2*...*n)
       (m+n)! / n!
 
-##<a name="47"></a> n₋ₘ=(n-m)!/n!
+##<a name="46"></a> n₋ₘ=(n-m)!/n!
 
     nₘ₊₁ = (n+m+1)nₘ   # by defintion ↑
     nₘ₊₁/(n+m+1) = nₘ
@@ -764,7 +709,7 @@ I'd like to make the following refinement in ℕ,
 
     n₋ₘ = (n-m)!/n!  ← m≤n   # Amazing, works backwards too!
 
-##<a name="48"></a> n₋ₙ=1/n!
+##<a name="47"></a> n₋ₙ=1/n!
 
     n₋ₙ = 1/(n(n-1)...(n-n+1)) = 1/(n(n-1)...(1)) = 1/n!
     n₋ₙ₋₁ = 1/(n!(0))
@@ -772,7 +717,7 @@ I'd like to make the following refinement in ℕ,
     n₋ₙ₋₃ = 1/(n!(0)(-1)(-2))
     n₋ₘ=(-1ᵐ⁻ⁿ⁺¹/(n!0(m-n+1)!) ← m>n   # Anyways, a division by zero.
 
-##<a name="49"></a> (ⁿₘ)=m-ₘ/n-ₘ
+##<a name="48"></a> (ⁿₘ)=m-ₘ/n-ₘ
 
     (ⁿₘ) = m-ₘ/n-ₘ
     # Proof
@@ -790,7 +735,7 @@ I'd like to make the following refinement in ℕ,
     1₆5₆ = 2*⋯*7 * 6*⋯*11 = 2*⋯*5 * (6*7)² * 8*⋯*11 = 1₄(5₂)²7₄
     15₄5₁₆ = 16*⋯*19 * 6*⋯21 = 6*⋯*15 * (16*⋯*19)² * 20*21 = 5₁₀(15₄)²19₂
 
-##<a name="50"></a> n↥,n₀,n↧
+##<a name="49"></a> n↥,n₀,n↧
 Arrows meaningful as Factorals:
 
     n↥↑² = n↥³ = (n+1)(n+2)(n+3)
@@ -801,7 +746,7 @@ Arrows meaningful as Factorals:
     n₀↓² = n↧² = 1/(n(n-1))
     n↧↓² = n↧³ = 1/(n(n-1)(n-2))
 
-##<a name="51"></a> nᵥn!
+##<a name="50"></a> nᵥn!
 Factoral with Factorial:
 
     nᵥn! = (n+v)!
@@ -821,27 +766,27 @@ Factoral with Factorial:
     n↥ᵐn! = (n+m)!
     n↧ᵐn! = (n-m)!
 
-##<a name="52"></a> 𝔩
+##<a name="51"></a> 𝔩
 
     𝔩 ≡ -1
     𝔩² = 1
     𝔩ⁿ = (-1)ⁿ   # Just to compact notation.
 
-##<a name="53"></a> Sine
+##<a name="52"></a> Sine
 [Sine](http://en.wikipedia.org/wiki/Sine#Series_definition)
 series definition:
 
     :Sine[u] ≡ Σ (-1)ⁿ u^(2n+1) / (2n+1)!
     S[u] ≡ :Sine[u]
 
-##<a name="54"></a> Cosine
+##<a name="53"></a> Cosine
 [Cosine](http://en.wikipedia.org/wiki/Trigonometric_functions#Series_definitions)
 series definition:
 
     :Cosine[u] ≡ Σ (-1)ⁿ u^(2n) / (2n)!
     C[u] ≡ :Cosine[u]
 
-##<a name="55"></a> ℯ
+##<a name="54"></a> ℯ
 [Exponential](http://en.wikipedia.org/wiki/Exponential_function#Formal_definition)
 series definition:
 
@@ -849,7 +794,7 @@ series definition:
     ℯ[u] ≡ :Exponential[u]
     ℯᵘ ≡ ℯ^(u) ≡ ℯ[u]   # Alternate forms.
 
-##<a name="56"></a> S²+C²=1
+##<a name="55"></a> S²+C²=1
 [Trigonometric Identities](http://en.wikipedia.org/wiki/List_of_trigonometric_identities):
 
     S²+C²=1            # Pythagoras
@@ -877,7 +822,7 @@ Derivation: Cosine's Angle Sum to Cosine Double Angle:
     C[2u] = 1-2S²[u]
     :Cosine[2u] = 1 - 2:Sine²[u]
 
-##<a name="57"></a> ℯⁱᵘ=Cᵤ+𝑖Sᵤ
+##<a name="56"></a> ℯⁱᵘ=Cᵤ+𝑖Sᵤ
 Known properties of e:
 
     ℯ[u]ℯ[v] = ℯ[u+v]
@@ -885,7 +830,58 @@ Known properties of e:
     ℯ[-𝑖u] = C[u]-𝑖S[u]
     ℯ[0] = 1
 
-##<a name="58"></a> Δ²
+##<a name="57"></a> δₗₖ
+[Dirac delta function](http://en.wikipedia.org/wiki/Dirac_delta_function):
+
+    δₗₖ = (l=k)? 1 : 0
+
+##<a name="58"></a> ⧼v⧽
+For some N>0, which is less than any positive Rational multiple of infinity,
+consider function u and v such that:
+
+    ∫ₓ (αu[x])*(βv[x])} ≤ N < |M/N|×∞
+
+Then the Dirac notation is defined as follows:
+
+    ⧼αu|βv⧽ ≡ ∫ₓ (αu[x])*(βv[x])}
+
+For the case I'm working in,
+u and v are a discrete set of orthogonal functions:
+
+    ∫ₓ uₗ*uₖ = (l=k)? ∫ₓuₗ² : 0
+
+Specifically, they can be normalized to be a set of ortho-normal functions:
+
+    ∫ₓ uₗ*uₖ = δₗₖ   # (l=k)? 1 : 0
+
+    ⧼αu|βv⧽ = ∫ₓ ∑∑ (αuₗ)*(βvₖ)
+
+    ⧼αu|βv⧽ = α*⧼u|βv⧽ = β⧼αu|v⧽
+    ⧼αu|βv⧽* = ⧼βv|αu⧽
+    ⧼αu| + ⧼βv| = ⧼αu+βv|   # Liboff's 4.24.
+
+I will try to use BRA-KETS literally by the given definition: `⧼u|v⧽≡∫{∑uₗ*∑vₗ}`.
+The way BRA-KETS are sometimes used, the u and v in ⧼u|v⧽ are just labels of the state,
+in which case Liboff's equation 4.24 can make no sense!
+
+    ⧼αu|βu⧽ = (α*β)∑ uₗ*uₗ   # Orthogonal, crossterms are all 0.
+
+    ⧼v⧽ ≡ ⧼u|vu⧽ = ⧼v†u|u⧽   # Where u is known from context.
+
+    |ₖ⧽ ≡ |uₖ⧽   # Labeled KET, where u is know from context.
+
+    ⧼u|ₖ⧽ = ⧼ₖ|ₖ⧽
+    # Proof
+      ⧼u|ₖ⧽
+      ⧼u|uₖ⧽
+      ∫{∑uₗ*uₖ}
+      ∫{uₖ*uₖ}   # u are orthogonal, only the k-th term contributes.
+      ⧼uₖ|uₖ⧽
+      ⧼ₖ|ₖ⧽
+
+    # TODO: What I mean by average value,  ⧼u⧽ ≡ Σₙuₙ/N ?
+
+##<a name="59"></a> Δ²
 Measure of uncertainty defined (4.1a):
 
     Δ²[u] ≡ ⧼(u - ⧼u⧽)²⧽
@@ -904,7 +900,7 @@ Measure of uncertainty (4.1b):
 
     Δ²u = ⧼u²⧽ - ⧼u⧽²
 
-##<a name="59"></a> 𝑃ₙ
+##<a name="60"></a> 𝑃ₙ
 𝑃 is the [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution):
 
     𝑃ₙ ≡ uⁿℯ[-u]/n!
@@ -912,7 +908,7 @@ Measure of uncertainty (4.1b):
     0 ≤ 𝑃ₙ ≤ 1
     ⧼u⧽ = Σ 𝑃ₙuₙ
 
-##<a name="60"></a> 𝑝ₙ
+##<a name="61"></a> 𝑝ₙ
 
     𝑝ₙ ≡ √[uⁿℯ[-u]/n!]
     𝑝ₙ*𝑝ₙ = 𝑃ₙ
@@ -923,7 +919,7 @@ Measure of uncertainty (4.1b):
       uⁿℯ[-u]/n!
       𝑃ₙ
 
-##<a name="61"></a> κ,μ,x,t
+##<a name="62"></a> κ,μ,x,t
 I think the point here is that these values are "measured" by "experiment" in "some way".
 
 [Mass](http://en.wikipedia.org/wiki/Mass) and
@@ -946,12 +942,12 @@ because I assume there's no error in its measurement.
 To resolve the paradox someone (no not me, I'm done!)
 will have to do the dual Energy-Time problem.
 
-##<a name="62"></a> ħ
+##<a name="63"></a> ħ
 [Reduced Planck constant](http://en.wikipedia.org/wiki/Planck_constant):
 
     ℝ{ħ}
 
-##<a name="63"></a> π
+##<a name="64"></a> π
 You can check that there exist several series 
 of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi).
 [Leibniz formula for π](http://en.wikipedia.org/wiki/Leibniz_formula_for_π):
@@ -978,20 +974,20 @@ Anyways, I think I can trust [algebra](http://en.wikipedia.org/wiki/Algebra)
 to say π/π=1, and if the final result of the algebra is Rational(ℚ),
 I won't worry about it.  OK!
 
-##<a name="64"></a> ω
+##<a name="65"></a> ω
 
     ω² ≡ κ/μ   # Angular frequency
     ω = √[κ/μ]
 
-##<a name="65"></a> f
+##<a name="66"></a> f
 
     f ≡ ω/(2π)   # Frequency
 
-##<a name="66"></a> Eₙ
+##<a name="67"></a> Eₙ
 
     Eₙ = ωħ(n+½)   # 3.2: Energy eigen-value
 
-##<a name="67"></a> ⌽ᵗₙ
+##<a name="68"></a> ⌽ᵗₙ
 7.17 TODO: why -𝑖Eₙt/ħ and not +𝑖Eₙt/ħ?
 Time evolution:
 
@@ -1013,7 +1009,7 @@ Time evolution:
     # Just to show that the notation makes sense.
     ⌽ᵗ = (⌽¹)^t = ℯ[t × (-𝑖ω(n+½))] = ℯ[-𝑖ω(n+½)t]
 
-##<a name="68"></a> 𝕌{⌽}
+##<a name="69"></a> 𝕌{⌽}
 ⌽ is [Unitary](http://en.wikipedia.org/wiki/Unitary_matrix):
 
     u*u=1 ↔ 𝕌{u}   # Definition of Unitary.
@@ -1027,7 +1023,7 @@ Time evolution:
       ℯ[0]
       1   # Therefore ⌽ is Unitary.
 
-##<a name="69"></a> ⌽→φ
+##<a name="70"></a> ⌽→φ
 
     ⌽ₙ*⌽ₙ₊₁ = φₙ₊₁-ₙ = φ₁
     φ↥ ≡ φ₀↑ = φ₁   # This will make notation very consistent later.
@@ -1040,7 +1036,7 @@ Time evolution:
     ⌽ₙ*⌽ₙ₊₂ = φₙ₊₂-ₙ = φ₂ = φ↥²
     ⌽ₙ*⌽ₙ₋₂ = φₙ₋₂-ₙ = φ₋₂ = φ↧²
 
-##<a name="70"></a> sₙ,cₙ
+##<a name="71"></a> sₙ,cₙ
 Short for Sine(nωt) and Cosine(nωt):
 
     sₙ ≡ S[nωt]
@@ -1065,7 +1061,7 @@ Short for Sine(nωt) and Cosine(nωt):
     φ₋₂ + φ₂ = 2c₂
     φ↧² + φ↥² = 2c₂   # And remember this one!
 
-##<a name="71"></a> ñ
+##<a name="72"></a> ñ
 Average Quantum number ñ
 
     ⧼n⧽ = ⧼n|𝑝ₙ*n𝑝ₙ|m⧽ = Σ n𝑝ₙ𝑝ₙ = Σ n𝑃ₙ   # only n=m terms contribute
@@ -1094,7 +1090,7 @@ Now I can describe the distribution in terms of the average quantum number:
     𝑃ₙ = ñⁿℯ[-ñ]/n!
     𝑝ₙ = √[ñⁿℯ[-ñ]/n!]
 
-##<a name="72"></a> ñ²=𝐿[Σ{n(n-1)𝑃ₙ}]
+##<a name="73"></a> ñ²=𝐿[Σ{n(n-1)𝑃ₙ}]
 
     𝐿 Σ n(n-1)𝑃ₙ
     𝐿 Σₙ n(n-1)𝑃ₙ
@@ -1120,7 +1116,7 @@ Now I can describe the distribution in terms of the average quantum number:
 
     ñ² = 𝐿 Σ{n(n-1)𝑃ₙ}   # b/c ñ=u, so u²=ñ²
 
-##<a name="73"></a> p→𝑃
+##<a name="74"></a> p→𝑃
 
     𝑝ₙ𝑝ₙ₊₁ = √[ñⁿℯ[-ñ]/n!] √[ñⁿ⁺¹ℯ[-ñ]/(n+1)!]
            = √[ñⁿℯ[-ñ]/n!] √[ñⁿℯ[-ñ]/n!] √[ñ/(n+1)] 
@@ -1169,13 +1165,13 @@ Now I can describe the distribution in terms of the average quantum number:
     𝑝 = √m↑𝑝↑/√ñ = √[ñm↓]𝑝↓  
     𝑝 = √[m↑ˡ/ñˡ]𝑝↑ˡ
 
-##<a name="74"></a> ξ
+##<a name="75"></a> ξ
 The non-dimensional displacement, ξ.
 
     ξ² ≡ μω/ħ x²   # A.1b
     x² = ħ/(μω) ξ²
 
-##<a name="75"></a> 𝐴ₙ
+##<a name="76"></a> 𝐴ₙ
 The Normalization Constant, 𝐴ₙ:
 
     𝐴ₙ ≡ 1/√[2ⁿn!√π]
@@ -1209,14 +1205,14 @@ The Normalization Constant, 𝐴ₙ:
 
     𝐴 = √n↥₂𝐴↑ = √n↧₂𝐴↓
 
-##<a name="76"></a> ŉ
+##<a name="77"></a> ŉ
 Division by n in the notation can be cumbersome.
 It's all about condensing the notation:
 
     ŉ ≡ 1/n
     ŉ! = 1/n!
 
-##<a name="77"></a> u↑ˡᵥ
+##<a name="78"></a> u↑ˡᵥ
 Operations with Arrows often result in an extra factor.
 I'm adding notation for that:
 
@@ -1226,7 +1222,7 @@ I'm adding notation for that:
     √u↥ᵥ = √[u↥v]
     2n = 1/n↧₂ = ŉ↧₂
 
-##<a name="78"></a> 𝒢,ℊ
+##<a name="79"></a> 𝒢,ℊ
 The [Gaussian](http://en.wikipedia.org/wiki/Gaussian_function) function:
 
     𝒢ₓ ≡ ℯ[-x²/2]
@@ -1250,7 +1246,7 @@ The [Gaussian](http://en.wikipedia.org/wiki/Gaussian_function) function:
 
     𝒢𝒢=ℊ
 
-##<a name="79"></a> ℋₙ
+##<a name="80"></a> ℋₙ
 The [Hermite polynomials](http://en.wikipedia.org/wiki/Hermite_polynomials):
 
     ℋₙ[ξ] ≡ (-1)ⁿ ℯ[ξ²] (𝒟)ⁿ ℯ[-ξ²]   # A.3, this is "physicists' Hermite polynomials" in Wikipedia.
@@ -1317,7 +1313,7 @@ The [Hermite polynomials](http://en.wikipedia.org/wiki/Hermite_polynomials):
     𝒟ℋ = 2nℋ↓       = ℋ↓/½n↧       = ℋ↓/n↧₂
     ξℋ = ½(ℋ↑+2nℋ↓) = ½(ℋ↑+ℋ↓/½n↧) = ½(ℋ↑+ℋ↓/n↧₂)
 
-##<a name="80"></a> Ψₙ
+##<a name="81"></a> Ψₙ
 Please accept the EigenState of the Simple Harmonic Oscillator Ψₙ
 as given by Liboff's book in page 189.
 The EigenState Ψₙ:
@@ -1325,7 +1321,7 @@ The EigenState Ψₙ:
     Ψₙ[x] ≡ |ₙ⧽
     Ψₙ[x] = 𝐴ₙℋₙ[ξ]ℯ[-ξ²/2]
 
-##<a name="81"></a> Ψₒ
+##<a name="82"></a> Ψₒ
 
 The State Function Ψₒ:
 
@@ -1335,10 +1331,10 @@ The State Function Ψₒ:
 
     Ψₒ = Σ 𝑃 Ψ*Ψ   #  Shorthand.
 
-##<a name="82"></a> ñ²=Σ{n²ΨₙΨₙ}
+##<a name="83"></a> ñ²=Σ{n²ΨₙΨₙ}
 TODO: Need to prove this!
 
-##<a name="83"></a> Optimization problem
+##<a name="84"></a> Optimization problem
 [Optimization problem](http://en.wikipedia.org/wiki/Optimization_problem):
 
 The Problem To Be Solved
@@ -1424,7 +1420,7 @@ Let's see how that goes:
     # TODO: HERE is next...
     𝒟ₓℒ = 𝒟ₓ⧼x²⧽
 
-##<a name="84"></a> ξΨₘ
+##<a name="85"></a> ξΨₘ
 Motivation: I will be calculating ⧼Ψ|ξ|Ψ⧽ later.
 
     ξΨₘ = ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
@@ -1435,7 +1431,7 @@ Motivation: I will be calculating ⧼Ψ|ξ|Ψ⧽ later.
       𝐴ₘ ½(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
       ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
 
-##<a name="85"></a> ⧼ξ₀⧽
+##<a name="86"></a> ⧼ξ₀⧽
 Evaluation of ⧼ξ₀⧽:
 
     ⧼ξ₀⧽ = ⧼Ψ₀|ξ|Ψ₀⧽             # 7.14a
@@ -1459,7 +1455,7 @@ Evaluation of ⧼ξ₀⧽:
     ⧼ξ₀⧽ = √2ñ
     ⧼ξ₀⧽² = 2ñ   # OK, need time development
 
-##<a name="86"></a> ⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓
+##<a name="87"></a> ⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓
 
     ⌽𝐴ℋ↓/½n↓
     ⌽√[½n↓]𝐴↓ℋ↓/½n↓   # 𝐴=√[½n↓]𝐴↓
@@ -1468,7 +1464,7 @@ Evaluation of ⧼ξ₀⧽:
     ⌽↥/√½n↓ ⌽↓𝐴↓ℋ↓
     ⌽↥/√½n↓ ⌽↓Ψ↓
 
-##<a name="87"></a> ⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑
+##<a name="88"></a> ⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑
 
     ⌽𝐴ℋ↑
     ⌽√2n↑𝐴↑ℋ↑   # 𝐴=√[2n↑]𝐴↑
@@ -1477,7 +1473,7 @@ Evaluation of ⧼ξ₀⧽:
     ⌽↧√2n↑ ⌽↑𝐴↑ℋ↑
     ⌽↧√2n↑ ⌽↑Ψ↑
 
-##<a name="88"></a> 𝑝↑𝑝=√[ñ/n↑]𝑃
+##<a name="89"></a> 𝑝↑𝑝=√[ñ/n↑]𝑃
 
     𝑝↑𝑝
     √[ñⁿ⁺¹ℯ[-ñ]/(n+1)!] 𝑝
@@ -1487,7 +1483,7 @@ Evaluation of ⧼ξ₀⧽:
     √[ñ/n₁]𝑃
     √[ñ/n↑]𝑃
 
-##<a name="89"></a> 𝑝↓𝑝=𝑃/√[n↓ñ]
+##<a name="90"></a> 𝑝↓𝑝=𝑃/√[n↓ñ]
 
    𝑝↓𝑝
     √[ñⁿ⁻¹ℯ[-ñ]/(n-1)!] 𝑝
@@ -1497,7 +1493,7 @@ Evaluation of ⧼ξ₀⧽:
     𝑃/√[n₋₁ñ]
     𝑃/√[n↓ñ]
 
-##<a name="90"></a> ⧼ξₜ⧽
+##<a name="91"></a> ⧼ξₜ⧽
 Evaluation of ⧼ξₜ⧽:
 
     ⧼ξₜ⧽ = ⧼Ψ|ξ|Ψ⧽
@@ -1523,7 +1519,7 @@ Evaluation of ⧼ξₜ⧽:
     ⧼ξₜ⧽² = 2ñ:Cosine²[nwt]
     # This time I got Cosine... Why?  Not careful enough with φ↥ and φ↧?
 
-##<a name="91"></a> ⧼ξ²⧽
+##<a name="92"></a> ⧼ξ²⧽
 TODO: ⧼ξ²⧽:
 
     # And who wants to work with this mess?
@@ -1555,20 +1551,22 @@ TODO: ⧼ξ²⧽:
     ⧼ξ²⧽ = ½ + 2ñc²₁                                      # Pythagoras
     ⧼ξ²⧽ = ½ + 2ñ:Cosine²[nwt]
 
-##<a name="92"></a> Δ²ξ
+##<a name="93"></a> Δ²ξ
 7.5 Results:
 
     Δ²ξ = ⧼ξ²⧽ - ⧼ξ⧽²
         = (½ + 2ñc²₁) - 2ñc²₁
         = ½
 
-##<a name="93"></a> Resources
-On top of the references given in the appendix, I'd like to add the following resources:
+##<a name="94"></a> Resources
+On top of the references given in the appendix,
+I'd like to add (or reiterate) the following resources:
 
 * njwildberger's [MathFoundations](https://www.youtube.com/playlist?list=PL5A714C94D40392AB)
 * Stanford's Susskind's [Advanced Quantum Mechanics](https://www.youtube.com/playlist?list=PLpGHT1n4-mAsmMxmSX0LCaXIXT2PmU85m)
 * jodiecongirl's [A Lagrange Multiplier Example](https://youtu.be/H4HN4ZrVm0w)
 * mathdude2012's [Uncertainty Principle with Time and Energy](https://www.youtube.com/watch?v=Eb3V8GrR7jk)
+* Liboff's book, [Introductory Quantum Mechanics](https://books.google.com/books?id=FbIPAQAAMAAJ&dq=editions:0s8yO_VH82AC&hl=en&sa=X&ei=v5L9VNCcBpLkoATB1IGAAQ&ved=0CDsQ6AEwBg).
 
 So the way it works is that any mistakes herein are all my fault.
 If I say anything good, it's because of these other people:

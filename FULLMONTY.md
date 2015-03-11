@@ -757,6 +757,14 @@ Factorial:
       -1×0
       0   # In general 1/u! = 0 ← ℤ{u<0}
 
+## ½!
+From the [Gamma and Pi functions](http://en.wikipedia.org/wiki/Factorial#The_Gamma_and_Pi_functions):
+
+    ½! = ½√π
+
+> Because I don't believe in coincidence of this type.
+> I think I've seen ½√π somewhere in the problem.
+
 ##<a name="39"></a> (ⁿₘ)
 [Binomial coefficient](http://en.wikipedia.org/wiki/Binomial_coefficient),
 n choose m:
@@ -776,6 +784,11 @@ I'd like to make the following refinement in ℕ,
     n₄ = (n+4)n₃ = (n+4)(n+3)(n+2)(n+1)
 
     m>0 → nₘ=Π[1,m]{l|n+l}
+
+This is very close to [Pochhammer's](http://en.wikipedia.org/wiki/Pochhammer_symbol)
+notation for rising and falling factorials.
+Pochhammer has n(¹)=n, n(²)=n(n+1), while n(₁)=n, n(₂)=n(n-1).
+But these do not match the algebra of the problem I'm working on.
 
 ##<a name="41"></a> 0ₘ
 
@@ -1397,7 +1410,14 @@ The non-dimensional displacement, ξ.
 ##<a name="79"></a> 𝐴ₙ
 The Normalization Constant, 𝐴ₙ:
 
-    𝐴ₙ ≡ 1/√[2ⁿn!√π]
+    𝐴ₙ ≡ 1/√[2ⁿn!√π]   # that really is 1/√√π in there.
+
+    𝐴₀ = 1/√[2⁰0!√π]
+    𝐴₀ = 1/√√π
+    𝐴₀ = 1/√[2(½!)]   # ½! = ½√π
+    𝐴₀ = √[½/½!]
+    𝐴₀ = √[½/½!]      # I'm pretty sure this means something.
+
     𝐴ₙ/𝐴ₙ₋₁ = 1/√[2n]
     Proof:
       (1/√[2ⁿn!√π]) / (1/√[2ⁿ⁻¹(n-1)!√π])
@@ -1776,6 +1796,7 @@ I'd like to add (or reiterate) the following resources:
 * jodiecongirl's [A Lagrange Multiplier Example](https://youtu.be/H4HN4ZrVm0w)
 * mathdude2012's [Uncertainty Principle with Time and Energy](https://www.youtube.com/watch?v=Eb3V8GrR7jk)
 * professofleonard57's [Series, Geometric Series, Harmonic Series, and Divergence Test](http://youtu.be/DGcWMdW-72M)
+* MindYourDecisions' [What is the factorial of 1/2? The surprising answer: (1/2)!=(√π)/2](http://youtu.be/QhDDpSju3uY)
 
 So the way it works is that any mistakes herein are all my fault.
 If I say anything good, it's because of these other people:

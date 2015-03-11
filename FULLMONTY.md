@@ -13,7 +13,7 @@ to be solved:
     Minimize:   ⧼Ψₒ|[𝐱,𝐩]|Ψₒ⧽
     Subject to: ⧼Ψₒ|𝐇|Ψₒ⧽ = Eₒ
 
-With the state function [Ψₒ](SCRATCH.md#Ψₒ).
+With the state function [Ψₒ](SCRATCH.md#lHR).
 
     Minimize:   ⧼Ψₒ|ₙ⧽⧼ₙ|ΔxΔp|ₘ⧽⧼ₘ|Ψₒ⧽
     Subject to: ⧼Ψₒ|ₙ⧽⧼ₙ|Eₙ|ₙ⧽⧼ₙ|Ψₒ⧽ = Eₒ

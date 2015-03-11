@@ -7,9 +7,13 @@
 > So I moved most of it to a "[Scratch Work](SCRATCH.md)" section.
 
 ##<a name="85"></a> Optimization problem
-[Optimization problem](http://en.wikipedia.org/wiki/Optimization_problem):
+The [Optimization problem](http://en.wikipedia.org/wiki/Optimization_problem)
+to be solved:
 
-The Problem To Be Solved
+    Minimize:   ⧼Ψₒ|[𝐱,𝐩]|Ψₒ⧽
+    Subject to: ⧼Ψₒ|𝐇|Ψₒ⧽ = Eₒ
+
+With the state function [Ψₒ](SCRATCH.md#10).
 
     Minimize:   ⧼Ψₒ|ₙ⧽⧼ₙ|ΔxΔp|ₘ⧽⧼ₘ|Ψₒ⧽
     Subject to: ⧼Ψₒ|ₙ⧽⧼ₙ|Eₙ|ₙ⧽⧼ₙ|Ψₒ⧽ = Eₒ

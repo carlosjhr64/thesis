@@ -786,9 +786,11 @@ I'd like to make the following refinement in ℕ,
     m>0 → nₘ=Π[1,m]{l|n+l}
 
 This is very close to [Pochhammer's](http://en.wikipedia.org/wiki/Pochhammer_symbol)
-notation for rising and falling factorials.
+(or Knuth) notation for rising and falling factorials.
 Pochhammer has n(¹)=n, n(²)=n(n+1), while n(₁)=n, n(₂)=n(n-1).
-But these do not match the algebra of the problem I'm working on.
+But these do not match the algebra of the problem I'm working on as
+I'll need n↥(rising by one) to be n+1 and n↧(lowering by one) to be 1/n.
+Nonetheless, note that n(ₘ)=1/n₋ₘ
 
 ##<a name="KLm"></a> 0ₘ
 
@@ -869,7 +871,7 @@ But these do not match the algebra of the problem I'm working on.
 
 ##<a name="SoK"></a> (ⁿₘ)=m-ₘ/n-ₘ
 
-    (ⁿₘ) = m-ₘ/n-ₘ
+    (ⁿₘ) = m-ₘ/n-ₘ   # or m↧ᵐ/n↧ᵐ
     # Proof
       (ⁿₘ)
       n!/(m!(n-m)!)

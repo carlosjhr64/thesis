@@ -10,30 +10,29 @@
 The [Optimization problem](http://en.wikipedia.org/wiki/Optimization_problem)
 to be solved:
 
-    Minimize:   ⧼Ψₒ|[𝐱,𝐩]|Ψₒ⧽
+    Minimize:   ΔxΔp
     Subject to: ⧼Ψₒ|𝐇|Ψₒ⧽ = Eₒ
 
-With the state function [Ψₒ](SCRATCH.md#lHR).
+This will be for the quantum mechanical simple harmonic oscillator
+with energy [Eₒ](SCRATCH.md#k5Y),
+state function [Ψₒ](SCRATCH.md#lHR),
+Hamiltonian(energy) operator [𝐇](SCRATCH.md#bdY),
+position operator [𝐱](SCRATCH.md#0bH), and
+momentum operator [𝐩](SCRATCH.md#w6M).
+I will show that the product of the variance of position [Δ²x](SCRATCH.md#oY8)
+and momentum [Δ²p](SCRATCH.md#k94) is the minimum when the state Ψₒ
+is composed of a Poisson distribution [𝑃ₙ](SCRATCH.md#o0H), and
+that the minimum is that set by the uncertainty principle
+due to the commutator relationship between 𝐱 and 𝐩, [[𝐱,𝐩]](SCRATCH.md#bST).
 
-    Minimize:   ⧼Ψₒ|ₙ⧽⧼ₙ|ΔxΔp|ₘ⧽⧼ₘ|Ψₒ⧽
-    Subject to: ⧼Ψₒ|ₙ⧽⧼ₙ|Eₙ|ₙ⧽⧼ₙ|Ψₒ⧽ = Eₒ
 
-> TODO:
-> But I have not defined Δx and Δp as operators!?
-> I just define Δ²u=⧼u²⧽-⧼u⧽².
-> What about the commutator [x,p].
-
-Note that Δx and Δp represent Real numbers and can be calculated separately:
-
-    ⧼Ψₒ|ₙ⧽⧼ₙ|ΔxΔp|ₘ⧽⧼ₘ|Ψₒ⧽
-    ⧼Ψₒ|ₙ⧽⧼ₙ|Δx|ₘ⧽⧼ₘ|Ψₒ⧽ × ⧼Ψₒ|ₙ⧽⧼ₙ|Δp|ₘ⧽⧼ₘ|Ψₒ⧽
-    √ (⧼Ψₒ|ₙ⧽⧼ₙ|x²|ₘ⧽⧼ₘ|Ψₒ⧽ - (⧼Ψₒ|ₙ⧽⧼ₙ|x|ₘ⧽⧼ₘ|Ψₒ⧽)² ) × (⧼p²⧽-⧼p⧽²)
-    √ (⧼x²⧽-⧼x⧽²)(⧼p²⧽-⧼p⧽²)
-
-Noting that Eₙ goes as the quantum number n, I now have:
+Noting that Eₙ goes as the quantum number n, and
+using the definitions of Δx and Δp, I then have:
 
     Minimize:   √ (⧼x²⧽-⧼x⧽²)(⧼p²⧽-⧼p⧽²)
     Subject to: ⧼n⧽ = ñ
+
+where [ñ](SCRATCH.md#Ojo) is the average quantum number.
 
 It would not be to hard to argue (TODO: demonstrate this) that
 by symmetry (⧼x²⧽-⧼x⧽²)=(⧼p²⧽-⧼p⧽²) and also that I can set ⧼x⧽=0.

@@ -41,15 +41,15 @@ it's a good warmup and demonstrates my notation.
 
  · [δₗₖ](#GqY) · [⧼v⧽](#nXb) · [Δ²](#2ef) · [𝑃ₙ](#o0H) · [𝑝ₙ](#ojY) · [κ,μ,x,t](#rOX) ·
 
- · [ħ](#usp) · [π](#vmD) · [ω](#Jji) · [f](#0h7) · [Eₙ](#2Xh) · [⌽ᵗₙ](#WEu) ·
+ · [ħ](#usp) · [π](#vmD) · [ω](#Jji) · [f](#0h7) · [Eₙ](#2Xh) · [[𝐱,𝐩]](#bST) ·
 
- · [𝕌{⌽}](#fzU) · [⌽→φ](#h8y) · [sₙ,cₙ](#zlN) · [ñ](#Ojo) · [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7) · [p→𝑃](#mI6) ·
+ · [⌽ᵗₙ](#WEu) · [𝕌{⌽}](#fzU) · [⌽→φ](#h8y) · [sₙ,cₙ](#zlN) · [ñ](#Ojo) · [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7) ·
 
- · [ξ](#Pvg) · [𝐴ₙ](#yYZ) · [𝒢,ℊ](#lQl) · [ℋₙ](#LaF) · [Ψₙ](#rrF) · [Ψₒ](#lHR) ·
+ · [p→𝑃](#mI6) · [ξ](#Pvg) · [𝐴ₙ](#yYZ) · [𝒢,ℊ](#lQl) · [ℋₙ](#LaF) · [Ψₙ](#rrF) ·
 
- · [ñ²=Σ{n²ΨₙΨₙ}](#quL) · [ξΨₘ](#exh) · [⧼ξ₀⧽](#1Wx) · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz) · [𝑝↑𝑝=√[ñ/n↑]𝑃](#V1C) · [𝑝↓𝑝=𝑃/√[n↓ñ]](#AyD) ·
+ · [Ψₒ](#lHR) · [ñ²=Σ{n²ΨₙΨₙ}](#quL) · [ξΨₘ](#exh) · [⧼ξ₀⧽](#1Wx) · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz) · [𝑝↑𝑝=√[ñ/n↑]𝑃](#V1C) ·
 
- · [⧼ξₜ⧽](#geS) · [⧼ξ²⧽](#WaV) · [Δ²ξ](#8NW) · [Resources](#2Nz) ·
+ · [𝑝↓𝑝=𝑃/√[n↓ñ]](#AyD) · [⧼ξₜ⧽](#geS) · [⧼ξ²⧽](#WaV) · [Δ²ξ](#8NW) · [Resources](#2Nz) ·
 
 
 </font>
@@ -1220,6 +1220,10 @@ I won't worry about it.  OK!
 ##<a name="2Xh"></a> Eₙ
 
     Eₙ = ωħ(n+½)   # 3.2: Energy eigen-value
+
+##<a name="bST"></a> [𝐱,𝐩]
+
+TODO: want to explain how it relates to ΔxΔp.
 
 ##<a name="WEu"></a> ⌽ᵗₙ
 7.17 TODO: why -𝑖Eₙt/ħ and not +𝑖Eₙt/ħ?

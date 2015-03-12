@@ -21,11 +21,13 @@ position operator [𝐱](SCRATCH.md#0bH), and
 momentum operator [𝐩](SCRATCH.md#w6M).
 I will show that the product of the variance of position [Δ²x](SCRATCH.md#oY8)
 and momentum [Δ²p](SCRATCH.md#k94) is the minimum when the state Ψₒ
-is composed of a Poisson distribution [𝑃ₙ](SCRATCH.md#o0H), and
+is composed of a Poisson distribution [𝑃ₙ](SCRATCH.md#o0H) of energy states, and
 that the minimum is that set by the uncertainty principle
 due to the commutator relationship between 𝐱 and 𝐩, [&#91;𝐱,𝐩&#92;](SCRATCH.md#bST).
 
-Noting that Eₙ goes as the quantum number n, and
+> TODO: section on quantum number n.
+
+Noting that [Eₙ](SCRATCH.md#2Xh) goes as the quantum number n, and
 using the definitions of Δx and Δp, I then have:
 
     Minimize:   √ (⧼x²⧽-⧼x⧽²)(⧼p²⧽-⧼p⧽²)
@@ -59,11 +61,11 @@ Consider ⧼n⧽.
 Just want to prove ⧼n⧽ really is a simple constant:
 
     𝒟ₓ⧼n⧽
-    𝒟 ⧼n⧽                           # Change of varible, ξ.
+    𝒟 ⧼n⧽                           # Change of variable, ξ.
     𝒟 ⧼Ψₒ|ₙ⧽⧼ₙ|n|ₘ⧽⧼ₘ|Ψₒ⧽           # Expanding out ⧼n⧽.
     𝒟 ⨋ 𝑝ₙΨₙ*n𝑝ₘΨₘ                  # ⨋ is an integral over x of a sum over n and m!
     𝒟 ⨋ 𝑝Ψ*n𝑝ₘΨₘ                    # Context ₙ for brevity.
-    𝒟 ⨋ 𝑝Ψn𝑝ₘΨₘ                     # There nothing to conjugate in Ψₙ.
+    𝒟 ⨋ 𝑝Ψn𝑝ₘΨₘ                     # There is nothing to conjugate in Ψₙ.
     𝒟 ⨋ n𝑝𝑝ₘΨΨₘ                     # Rearrangement.
     ⨋ n𝑝𝑝ₘ𝒟[ΨΨₘ]                    # 𝒟 only acts on Ψ.
     ⨋ n𝑝𝑝ₘ(𝒟[Ψ]Ψₘ + Ψ𝒟[Ψₘ])         # Product rule.

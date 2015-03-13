@@ -16,42 +16,34 @@ it's a good warmup and demonstrates my notation.
 > Please use github to contact me to let me know of any errors (of any type).
 
 <!-- TOC START -->
-## Sections:
+## Sections
 <font size="+1">
 
- · [Expressions](#G0p) · [DRY](#tFf) · [{u,v,w}](#F7W) · [Precedence rules](#MIM) · [⋯](#pxF) · [ℕ](#9ET) ·
-
- · [ℤ and ℚ](#5dX) · [uᵥ](#frL) · [{uᵥ}](#Zk2) · [Σ[l,k]{j|uⱼ}](#zJL) · [Σuₙ](#kJ6) · [Σₙuₙ](#MlN) ·
-
- · [∞](#9XA) · [𝜖≡N/∞](#VAR) · [Σrⁿ](#5qT) · [∑](#zQw) · [∑ₗ](#tky) · [n×u](#vkP) ·
-
- · [⋅](#Jt7) · [Π](#J5V) · [uᵛ](#y3Z) · [√u](#8wf) · [|u|](#fxq) · [↓,↑](#3r3) ·
-
- · [↧,↥](#1U2) · [Σu↑](#U10) · [∑u↑](#Uf9) · [∑u↓](#blg) · [𝐿](#vGe) · [uₒ≡Σuₙ](#CuZ) ·
-
- · [ℝ](#yfS) · [⅀](#s2N) · [⨋](#AXS) · [ℂ](#Ama) · [𝑖](#FU8) · [*](#eEb) ·
-
- · [𝒟](#8P4) · [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql) · [∫](#iPk) · [n!](#zaX) · [½!](#SB2) · [(ⁿₘ)](#qsc) ·
-
- · [nₘ](#t99) · [0ₘ](#KLm) · [1ₘ](#ngq) · [2ₘ](#eUd) · [3ₘ](#pOG) · [nₘ=(n+m)!/n!](#vOj) ·
-
- · [n₋ₘ=(n-m)!/n!](#w4y) · [n₋ₙ=1/n!](#6OO) · [(ⁿₘ)=m-ₘ/n-ₘ](#SoK) · [n↥,n₀,n↧](#I4Q) · [nᵥn!](#jL9) · [ŉ](#44r) ·
-
- · [ʼu](#Yv1) · [u↑ˡᵥ](#4H1) · [𝔩](#wNn) · [Sine](#ZE8) · [Cosine](#CgT) · [ℯ](#NLb) ·
-
- · [S²+C²=1](#IwS) · [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) · [δₗₖ](#GqY) · [⧼v⧽](#nXb) · [Δ²](#2ef) · [𝑃ₙ](#o0H) ·
-
- · [𝑝ₙ](#ojY) · [κ,μ,x,t](#rOX) · [ħ](#usp) · [π](#vmD) · [ω](#Jji) · [f](#0h7) ·
-
- · [Eₙ](#2Xh) · [[𝐱,𝐩]](#bST) · [⌽ᵗₙ](#WEu) · [𝕌{⌽}](#fzU) · [⌽→φ](#h8y) · [sₙ,cₙ](#zlN) ·
-
- · [ñ](#Ojo) · [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7) · [p→𝑃](#mI6) · [ξ](#Pvg) · [𝐴ₙ](#yYZ) · [𝒢,ℊ](#lQl) ·
-
- · [ℋₙ](#LaF) · [Ψₙ](#rrF) · [𝒟 Ψ](#W3A) · [𝑝𝒟 Ψ](#e2c) · [Ψₒ](#lHR) · [ñ²=Σ{n²ΨₙΨₙ}](#quL) ·
-
- · [ξΨₘ](#exh) · [⧼ξ₀⧽](#1Wx) · [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz) · [𝑝↑𝑝=√[ñ/n↑]𝑃](#V1C) · [𝑝↓𝑝=𝑃/√[n↓ñ]](#AyD) · [⧼ξₜ⧽](#geS) ·
-
- · [⧼ξ²⧽](#WaV) · [Δ²ξ](#8NW) · [Resources](#2Nz) ·
+ • [Expressions](#G0p) • [DRY](#tFf) • [{u,v,w}](#F7W) • [Precedence rules](#MIM)
+ • [⋯](#pxF) • [ℕ](#9ET) • [ℤ and ℚ](#5dX) • [uᵥ](#frL) • [{uᵥ}](#Zk2)
+ • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL) • [Σuₙ](#kJ6) • [Σₙuₙ](#MlN) • [∞](#9XA)
+ • [𝜖≡N/∞](#VAR) • [Σrⁿ](#5qT) • [∑](#zQw) • [∑ₗ](#tky) • [n×u](#vkP)
+ • [⋅](#Jt7) • [Π](#J5V) • [uᵛ](#y3Z) • [√u](#8wf) • [|u|](#fxq)
+ • [↓,↑](#3r3) • [↧,↥](#1U2) • [Σu↑](#U10) • [∑u↑](#Uf9) • [∑u↓](#blg)
+ • [𝐿](#vGe) • [uₒ≡Σuₙ](#CuZ) • [ℝ](#yfS) • [⅀](#s2N) • [⨋](#AXS)
+ • [ℂ](#Ama) • [𝑖](#FU8) • [*](#eEb) • [𝒟](#8P4) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
+ • [∫](#iPk) • [n!](#zaX) • [½!](#SB2) • [(ⁿₘ)](#qsc) • [nₘ](#t99)
+ • [0ₘ](#KLm) • [1ₘ](#ngq) • [2ₘ](#eUd) • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj)
+ • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO) • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK)
+ • [n↥,n₀,n↧](#I4Q) • [nᵥn!](#jL9) • [ŉ](#44r) • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1)
+ • [𝔩](#wNn) • [Sine](#ZE8) • [Cosine](#CgT) • [ℯ](#NLb) • [S²+C²=1](#IwS)
+ • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [δₗₖ](#GqY) • [⧼v⧽](#nXb) • [Δ²](#2ef)
+ • [𝑃ₙ](#o0H) • [𝑝ₙ](#ojY) • [κ,μ,x,t](#rOX) • [ħ](#usp) • [π](#vmD)
+ • [ω](#Jji) • [f](#0h7) • [Eₙ](#2Xh) • [𝐱](#0bH) • [𝐩](#w6M)
+ • [Δ²p](#k94) • [Δ²x](#oY8) • [&#91;𝐱,𝐩&#93;](#bST) • [𝐇](#bdY)
+ • [⌽ᵗₙ](#WEu) • [𝕌{⌽}](#fzU) • [⌽→φ](#h8y) • [sₙ,cₙ](#zlN) • [ñ](#Ojo)
+ • [Eₒ](#k5Y) • [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7) • [p→𝑃](#mI6) • [ξ](#Pvg)
+ • [𝐴ₙ](#yYZ) • [𝒢,ℊ](#lQl) • [ℋₙ](#LaF) • [Ψₙ](#rrF) • [𝒟 Ψ](#W3A)
+ • [𝑝𝒟 Ψ](#e2c) • [Ψₒ](#lHR) • [ñ²=Σ{n²ΨₙΨₙ}](#quL) • [ξΨₘ](#exh)
+ • [⧼ξ₀⧽](#1Wx) • [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#jiD) • [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz)
+ • [𝑝↑𝑝=√&#91;ñ/n↑&#93;𝑃](#V1C) • [𝑝↓𝑝=𝑃/√&#91;n↓ñ&#93;](#AyD)
+ • [⧼ξₜ⧽](#geS) • [⧼ξ²⧽](#WaV) • [Δ²ξ](#8NW) • [Resources](#2Nz)
+ •
 
 
 </font>
@@ -1234,9 +1226,29 @@ I won't worry about it.  OK!
 
     Eₙ = ωħ(n+½)   # 3.2: Energy eigen-value
 
+##<a name="0bH"></a> 𝐱
+
+TODO:
+
+##<a name="w6M"></a> 𝐩
+
+TODO:
+
+##<a name="k94"></a> Δ²p
+
+TODO:
+
+##<a name="oY8"></a> Δ²x
+
+TODO:
+
 ##<a name="bST"></a> [𝐱,𝐩]
 
 TODO: want to explain how it relates to ΔxΔp.
+
+##<a name="bdY"></a> 𝐇
+
+TODO:
 
 ##<a name="WEu"></a> ⌽ᵗₙ
 7.17 TODO: why -𝑖Eₙt/ħ and not +𝑖Eₙt/ħ?
@@ -1340,6 +1352,13 @@ Now I can describe the distribution in terms of the average quantum number:
 
     𝑃ₙ = ñⁿℯ[-ñ]/n!
     𝑝ₙ = √[ñⁿℯ[-ñ]/n!]
+
+##<a name="k5Y"></a> Eₒ
+Average energy eigen value, Eₒ:
+
+    Eₒ = ωℏ(ñ+½)
+
+TODO: There is more I could say here
 
 ##<a name="LJ7"></a> ñ²=𝐿Σ{n(n-1)𝑃ₙ}
 
@@ -1620,6 +1639,8 @@ The State Function Ψₒ:
 
     Ψₒ = Σ 𝑃 Ψ*Ψ   #  Shorthand.
 
+> So this guy includes the distribution.
+
 ##<a name="quL"></a> ñ²=Σ{n²ΨₙΨₙ}
 TODO: Need to prove this!
 
@@ -1658,8 +1679,7 @@ Evaluation of ⧼ξ₀⧽:
     ⧼ξ₀⧽ = √2ñ
     ⧼ξ₀⧽² = 2ñ   # OK, need time development
 
-##<a name="4oy98J2QtOKEi+KGky/CvW7ihpM94oy94oalL+KImsK9buKGk+KMveKGk86o
-4oaT"></a> ⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓
+##<a name="jiD"></a> ⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓
 
     ⌽𝐴ℋ↓/½n↓
     ⌽√[½n↓]𝐴↓ℋ↓/½n↓   # 𝐴=√[½n↓]𝐴↓

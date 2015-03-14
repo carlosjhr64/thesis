@@ -32,7 +32,7 @@ it's a good warmup and demonstrates my notation.
  • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO) • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK)
  • [n↥,n₀,n↧](#I4Q) • [nᵥn!](#jL9) • [ŉ](#44r) • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1)
  • [𝔩](#wNn) • [Sine](#ZE8) • [Cosine](#CgT) • [ℯ](#NLb) • [S²+C²=1](#IwS)
- • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [δₗₖ](#GqY) • [⧼v⧽](#nXb) • [Δ²](#2ef)
+ • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿ₗₖ](#GqY) • [⧼v⧽](#nXb) • [Δ²](#2ef)
  • [𝑃ₙ](#o0H) • [𝑝ₙ](#ojY) • [κ,μ,x,t](#rOX) • [ħ](#usp) • [π](#vmD)
  • [ω](#Jji) • [f](#0h7) • [Eₙ](#2Xh) • [𝐱](#0bH) • [𝐩](#w6M)
  • [Δ²p](#k94) • [Δ²x](#oY8) • [&#91;𝐱,𝐩&#93;](#bST) • [𝐇](#bdY)
@@ -1069,10 +1069,10 @@ Known properties of e:
     ℯ[-𝑖u] = C[u]-𝑖S[u]
     ℯ[0] = 1
 
-##<a name="GqY"></a> δₗₖ
+##<a name="GqY"></a> 𝛿ₗₖ
 [Dirac delta function](http://en.wikipedia.org/wiki/Dirac_delta_function):
 
-    δₗₖ = (l=k)? 1 : 0
+    𝛿ₗₖ = (l=k)? 1 : 0
 
 ##<a name="nXb"></a> ⧼v⧽
 For some N>0, which is less than infinity,
@@ -1091,7 +1091,7 @@ u and v are a discrete set of orthogonal functions:
 
 Specifically, they can be normalized to be a set of ortho-normal functions:
 
-    ∫ₓ uₗ*uₖ = δₗₖ   # (l=k)? 1 : 0
+    ∫ₓ uₗ*uₖ = 𝛿ₗₖ   # (l=k)? 1 : 0
 
     ⧼αu|βv⧽ = ∫ₓ ∑∑ (αuₗ)*(βvₖ)
 

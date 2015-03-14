@@ -106,7 +106,7 @@ I should point out that these are sums over Integers,
 not just natural numbers.
 But there are no negative quantum numbers for the harmonic oscillator.
 That is, for quantum numbers less than 0, the states are zero!
-So there are no dangling terms with [∑u↑](SCRATCH#Uf9) or [∑u↓](SCRATCH#blg).
+So there are no dangling terms with [∑u↑](SCRATCH.md#Uf9) or [∑u↓](SCRATCH.md#blg).
 
 ## 𝒟ₓ⧼x²⧽
 Consider ⧼x²⧽.
@@ -125,4 +125,4 @@ This should give the properties of an optimun distribution:
 
 > OK, I need a break...
 
-See the derivation of [ξΨ](SCRATCH#4V4). Then proceed:
+See the derivation of [ξΨ](SCRATCH.md#4V4). Then proceed:

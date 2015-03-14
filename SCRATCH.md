@@ -32,14 +32,14 @@ it's a good warmup and demonstrates my notation.
  • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO) • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK)
  • [n↥,n₀,n↧](#I4Q) • [nᵥn!](#jL9) • [ŉ](#44r) • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1)
  • [𝔩](#wNn) • [Sine](#ZE8) • [Cosine](#CgT) • [ℯ](#NLb) • [S²+C²=1](#IwS)
- • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿ₗₖ](#GqY) • [⧼v⧽](#nXb) • [Δ²](#2ef)
+ • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿ₗₖ](#Nag) • [⧼v⧽](#nXb) • [Δ²](#2ef)
  • [𝑃ₙ](#o0H) • [𝑝ₙ](#ojY) • [κ,μ,x,t](#rOX) • [ħ](#usp) • [π](#vmD)
  • [ω](#Jji) • [f](#0h7) • [Eₙ](#2Xh) • [𝐱](#0bH) • [𝐩](#w6M)
  • [Δ²p](#k94) • [Δ²x](#oY8) • [&#91;𝐱,𝐩&#93;](#bST) • [𝐇](#bdY)
  • [⌽ᵗₙ](#WEu) • [𝕌{⌽}](#fzU) • [⌽→φ](#h8y) • [sₙ,cₙ](#zlN) • [ñ](#Ojo)
  • [Eₒ](#k5Y) • [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7) • [p→𝑃](#mI6) • [ξ](#Pvg)
  • [𝐴ₙ](#yYZ) • [𝒢,ℊ](#lQl) • [ℋₙ](#LaF) • [Ψₙ](#rrF) • [𝒟 Ψ](#W3A)
- • [𝑝𝒟 Ψ](#e2c) • [Ψₒ](#lHR) • [ñ²=Σ{n²ΨₙΨₙ}](#quL) • [ξΨₘ](#exh)
+ • [𝑝𝒟 Ψ](#e2c) • [Ψₒ](#lHR) • [ñ²=Σ{n²ΨₙΨₙ}](#quL) • [ξΨ](#4V4)
  • [⧼ξ₀⧽](#1Wx) • [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#jiD) • [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz)
  • [𝑝↑𝑝=√&#91;ñ/n↑&#93;𝑃](#V1C) • [𝑝↓𝑝=𝑃/√&#91;n↓ñ&#93;](#AyD)
  • [⧼ξₜ⧽](#geS) • [⧼ξ²⧽](#WaV) • [Δ²ξ](#8NW) • [Resources](#2Nz)
@@ -1069,7 +1069,7 @@ Known properties of e:
     ℯ[-𝑖u] = C[u]-𝑖S[u]
     ℯ[0] = 1
 
-##<a name="GqY"></a> 𝛿ₗₖ
+##<a name="Nag"></a> 𝛿ₗₖ
 [Dirac delta function](http://en.wikipedia.org/wiki/Dirac_delta_function):
 
     𝛿ₗₖ = (l=k)? 1 : 0
@@ -1644,16 +1644,33 @@ The State Function Ψₒ:
 ##<a name="quL"></a> ñ²=Σ{n²ΨₙΨₙ}
 TODO: Need to prove this!
 
-##<a name="exh"></a> ξΨₘ
+##<a name="4V4"></a> ξΨ
 Motivation: I will be calculating ⧼Ψ|ξ|Ψ⧽ later.
 
-    ξΨₘ = ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
+    ξΨ=½𝐴(ℋ↑+ŉ↓₂ℋ↓)𝒢   # Shorthand notation.
+    ξΨₙ = ½𝐴ₙ(ℋₙ₊₁[ξ] + 2nℋₙ₋₁[ξ])ℯ[-ξ²/2]
     # Proof:
-      ξΨₘ
-      ξ𝐴ₘℋₘ[ξ]ℯ[-ξ²/2]
-      𝐴ₘ ξℋₘ[ξ]ℯ[-ξ²/2]
-      𝐴ₘ ½(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
-      ½𝐴ₘ(ℋₘ↑[ξ] + ℋₘ↓[ξ]/(½m↓))
+      ξΨₙ                                # Given.
+      ξ𝐴ₙℋₙ[ξ]ℯ[-ξ²/2]ℯ[-ξ²/2]           # Expansion of Ψₙ.
+      ξ𝐴ℋ 𝒢                              # Shorthand.
+      𝐴 ξℋ 𝒢                             # Rearrange.
+      𝐴 ½(ℋ↑+ŉ↓₂ℋ↓)𝒢                     # ξℋ =½(ℋ↑+ŉ↓₂ℋ↓)
+      ½𝐴(ℋ↑+ŉ↓₂ℋ↓)𝒢                      # Rearrage.
+      ½𝐴ₙ(ℋₙ₊₁[ξ] + 2nℋₙ₋₁[ξ])ℯ[-ξ²/2]   # Expand expression.
+
+
+    ξΨ=√n↥Ψ↑+√ŉ↓Ψ↓   # Shorthand notation.
+    ξΨₙ = √[n+1]Ψₙ₊₁ + √nΨₙ₋₁
+    # Proof:
+      ξΨ
+      ½𝐴(ℋ↑+ŉ↓₂ℋ↓)𝒢               # Previous result.
+      ½𝐴ℋ↑𝒢 + ½𝐴ŉ↓₂ℋ↓𝒢            # Distribute all factors.
+      ½𝐴ℋ↑𝒢 + ½ŉ↓₂𝐴ℋ↓𝒢            # Rearrange.
+      ½√n↥₂𝐴↑ℋ↑𝒢 + ½ŉ↧₂√n↧𝐴↓ℋ↓𝒢   # 𝐴=√n↥₂𝐴↑=√n↧₂𝐴↓
+      √n↥𝐴↑ℋ↑𝒢 + ŉ↧√n↧𝐴↓ℋ↓𝒢       # ½&↥₂ and ½&ʼ↓₂ cancel.
+      √n↥𝐴↑ℋ↑𝒢 + √ŉ↧𝐴↓ℋ↓𝒢         # ŉ↧√n↧ = √n↧/n↧ = 1/√n↧ = √ŉ↧
+      √n↥Ψ↑+√ŉ↓Ψ↓                 # Ψ=𝐴ℋ𝒢
+      √[n+1]Ψₙ₊₁ + √nΨₙ₋₁         # Expand expression.
 
 ##<a name="1Wx"></a> ⧼ξ₀⧽
 Evaluation of ⧼ξ₀⧽:

@@ -63,8 +63,8 @@ Just want to prove ⧼n⧽ really is a simple constant:
     𝒟ₓ⧼n⧽
     𝒟 ⧼n⧽                           # Change of variable, ξ.
     𝒟 ⧼Ψₒ|ₙ⧽⧼ₙ|n|ₘ⧽⧼ₘ|Ψₒ⧽           # Expanding out ⧼n⧽.
-    𝒟 ⨋ 𝑝ₙΨₙ*n𝑝ₘΨₘ                  # ⨋ is an integral over x of a sum over n and m!
-    𝒟 ⨋ 𝑝Ψ*n𝑝ₘΨₘ                    # Context ₙ for brevity.
+    𝒟 ⨋ (𝑝ₙΨₙ)*n𝑝ₘΨₘ                # ⨋ is an integral over ξ of a sum over n and m!
+    𝒟 ⨋ (𝑝Ψ*)n𝑝ₘΨₘ                  # Context ₙ for brevity.
     𝒟 ⨋ 𝑝Ψn𝑝ₘΨₘ                     # There is nothing to conjugate in Ψₙ.
     𝒟 ⨋ n𝑝𝑝ₘΨΨₘ                     # Rearrangement.
     ⨋ n𝑝𝑝ₘ𝒟[ΨΨₘ]                    # 𝒟 only acts on Ψ.
@@ -102,9 +102,27 @@ Going to match them up:
     √½(-⨋[n√[n+1]𝑝𝑝↑𝛿]+⨋[n√[n+1]𝑝𝑝↑𝛿])                                  # ⟂ΨΨ=𝛿, 1st ⨋.
     0                                                                   # Cancellation.
 
+I should point out that these are sums over Integers,
+not just natural numbers.
+But there are no negative quantum numbers for the harmonic oscillator.
+That is, for quantum numbers less than 0, the states are zero!
+So there are no dangling terms with [∑u↑](SCRATCH#Uf9) or [∑u↓](SCRATCH#blg).
+
 ## 𝒟ₓ⧼x²⧽
 Consider ⧼x²⧽.
 This should give the properties of an optimun distribution:
 
-    𝒟ₓ⧼x²⧽
-    # TODO...
+    𝒟ₓ⧼𝐱²⧽
+    𝒟ₓ⧼x²⧽                    # x is the position operator.
+    𝒟ₓ⧼ξ²⧽                    # Change of variable, dimensionless ξ.
+    𝒟ₓ ⧼Ψₒ|ₙ⧽⧼ₙ|ξ²|ₘ⧽⧼ₘ|Ψₒ⧽   # Expanding out ⧼ξ²⧽.
+    𝒟 ⨋ (𝑝ₙΨₙ)*ξ²𝑝ₘΨₘ         # ⨋ is an integral over ξ of a sum over n and m!
+    𝒟 ⨋ (𝑝Ψ)*ξ²𝑝ₘΨₘ           # Implicit n, explicit m.
+    𝒟 ⨋ 𝑝Ψξ²𝑝ₘΨₘ              # Nothing to conjugate.
+    𝒟 ⨋ 𝑝𝑝ₘξ²ΨΨₘ              # Rearrange.
+    𝒟 ⨋ 𝑝𝑝ₘξΨξΨₘ              # Pair up ξΨ.
+    ⨋ 𝑝𝑝ₘ𝒟[ξΨξΨₘ]             # 𝒟 only acts on ξΨ.
+
+> OK, I need a break...
+
+See the derivation of [ξΨ](SCRATCH#4V4). Then proceed:

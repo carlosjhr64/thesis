@@ -6,7 +6,8 @@
 > I got a bit carried away on this "Full Monty", lost focus, went off on tangental issues...
 > So I moved most of it to a "[Scratch Work](SCRATCH.md)" section.
 
-##<a name="85"></a> Optimization problem
+<!-- HIGHLIGHTS START -->
+##<a name="1Pu"></a> Optimization problem
 The [Optimization problem](http://en.wikipedia.org/wiki/Optimization_problem)
 to be solved:
 
@@ -48,7 +49,7 @@ Let's see how that goes:
     Min: ⧼x²⧽
     Sub: ⧼n⧽ = ñ   # Ignoring the rest of the constraints for now.
 
-## ℒ
+##<a name="ij2"></a> ℒ
 [Lagrange multiplier](http://en.wikipedia.org/wiki/Lagrange_multiplier):
 
     ℒ = ⧼x²⧽ + λ(⧼n⧽-ñ)
@@ -56,7 +57,7 @@ Let's see how that goes:
     𝒟ₓℒ = 𝒟ₓ⧼x²⧽ + λ𝒟ₓ⧼n⧽ - λ𝒟ₓñ
     𝒟ₓℒ = 𝒟ₓ⧼x²⧽ + λ𝒟ₓ⧼n⧽   # ñ is just a constant and goes away.
 
-## 𝒟 ⧼n⧽=0
+##<a name="Jbc"></a> 𝒟 ⧼n⧽=0
 Consider ⧼n⧽.
 Just want to prove ⧼n⧽ really is a simple constant:
 
@@ -108,7 +109,7 @@ But there are no negative quantum numbers for the harmonic oscillator.
 That is, for quantum numbers less than 0, the states are zero!
 So there are no dangling terms with [∑u↑](SCRATCH.md#Uf9) or [∑u↓](SCRATCH.md#blg).
 
-## 𝒟ₓ⧼x²⧽
+##<a name="658"></a> 𝒟ₓ⧼x²⧽
 Consider ⧼x²⧽.
 This should give the properties of an optimun distribution:
 
@@ -168,3 +169,21 @@ See the derivation of [ξΨ](SCRATCH.md#4V4). Then proceed:
 
 > WOW! OK, I think I now understand what I did 25 years ago.
 > I need to follow the original thesis more closely!  LOL.
+
+##<a name="2Nz"></a> Resources
+On top of the references given in the appendix,
+I'd like to add (or reiterate) the following resources:
+
+* Liboff's book, [Introductory Quantum Mechanics](https://books.google.com/books?id=FbIPAQAAMAAJ&dq=editions:0s8yO_VH82AC&hl=en&sa=X&ei=v5L9VNCcBpLkoATB1IGAAQ&ved=0CDsQ6AEwBg).
+* njwildberger's [MathFoundations](https://www.youtube.com/playlist?list=PL5A714C94D40392AB)
+* Stanford's Susskind's [Advanced Quantum Mechanics](https://www.youtube.com/playlist?list=PLpGHT1n4-mAsmMxmSX0LCaXIXT2PmU85m)
+* jodiecongirl's [A Lagrange Multiplier Example](https://youtu.be/H4HN4ZrVm0w)
+* mathdude2012's [Uncertainty Principle with Time and Energy](https://www.youtube.com/watch?v=Eb3V8GrR7jk)
+* professofleonard57's [Series, Geometric Series, Harmonic Series, and Divergence Test](http://youtu.be/DGcWMdW-72M)
+* MindYourDecisions' [What is the factorial of 1/2? The surprising answer: (1/2)!=(√π)/2](http://youtu.be/QhDDpSju3uY)
+
+So the way it works is that any mistakes herein are all my fault.
+If I say anything good, it's because of these other people:
+<!-- HIGHLIGHTS END -->
+
+[CONTENTS](CONTENTS.md)

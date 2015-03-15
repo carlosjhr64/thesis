@@ -42,7 +42,8 @@ it's a good warmup and demonstrates my notation.
  • [𝑝𝒟 Ψ](#e2c) • [Ψₒ](#lHR) • [ñ²=Σ{n²ΨₙΨₙ}](#quL) • [ξΨ](#4V4)
  • [⧼ξ₀⧽](#1Wx) • [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#jiD) • [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz)
  • [𝑝↑𝑝=√&#91;ñ/n↑&#93;𝑃](#V1C) • [𝑝↓𝑝=𝑃/√&#91;n↓ñ&#93;](#AyD)
- • [⧼ξₜ⧽](#geS) • [⧼ξ²⧽](#WaV) • [Δ²ξ](#8NW) • [Resources](#2Nz)
+ • [⧼ξₜ⧽](#geS) • [⧼ξ²⧽](#WaV) • [Δ²ξ](#8NW) • [Optimization problem](#1Pu)
+ • [ℒ](#ij2) • [𝒟 ⧼n⧽=0](#Jbc) • [𝒟ₓ⧼x²⧽](#658) • [Resources](#2Nz)
  •
 
 
@@ -1799,7 +1800,7 @@ TODO: ⧼ξ²⧽:
         = (½ + 2ñc²₁) - 2ñc²₁
         = ½
 
-##<a name="85"></a> Optimization problem
+##<a name="1Pu"></a> Optimization problem
 The [Optimization problem](http://en.wikipedia.org/wiki/Optimization_problem)
 to be solved:
 
@@ -1841,7 +1842,7 @@ Let's see how that goes:
     Min: ⧼x²⧽
     Sub: ⧼n⧽ = ñ   # Ignoring the rest of the constraints for now.
 
-## ℒ
+##<a name="ij2"></a> ℒ
 [Lagrange multiplier](http://en.wikipedia.org/wiki/Lagrange_multiplier):
 
     ℒ = ⧼x²⧽ + λ(⧼n⧽-ñ)
@@ -1849,7 +1850,7 @@ Let's see how that goes:
     𝒟ₓℒ = 𝒟ₓ⧼x²⧽ + λ𝒟ₓ⧼n⧽ - λ𝒟ₓñ
     𝒟ₓℒ = 𝒟ₓ⧼x²⧽ + λ𝒟ₓ⧼n⧽   # ñ is just a constant and goes away.
 
-## 𝒟 ⧼n⧽=0
+##<a name="Jbc"></a> 𝒟 ⧼n⧽=0
 Consider ⧼n⧽.
 Just want to prove ⧼n⧽ really is a simple constant:
 
@@ -1901,7 +1902,7 @@ But there are no negative quantum numbers for the harmonic oscillator.
 That is, for quantum numbers less than 0, the states are zero!
 So there are no dangling terms with [∑u↑](SCRATCH.md#Uf9) or [∑u↓](SCRATCH.md#blg).
 
-## 𝒟ₓ⧼x²⧽
+##<a name="658"></a> 𝒟ₓ⧼x²⧽
 Consider ⧼x²⧽.
 This should give the properties of an optimun distribution:
 
@@ -1960,6 +1961,7 @@ See the derivation of [ξΨ](SCRATCH.md#4V4). Then proceed:
     ñ𝑃 = (n+1)𝑃ₙ₊₂/n
 
 > WOW! OK, I think I now understand what I did 25 years ago.
+> I need to follow the original thesis more closely!  LOL.
 
 ##<a name="2Nz"></a> Resources
 On top of the references given in the appendix,

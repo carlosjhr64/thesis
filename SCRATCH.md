@@ -1817,7 +1817,7 @@ I will show that the product of the variance of position [Δ²x](SCRATCH.md#oY8)
 and momentum [Δ²p](SCRATCH.md#k94) is the minimum when the state Ψₒ
 is composed of a Poisson distribution [𝑃ₙ](SCRATCH.md#o0H) of energy states, and
 that the minimum is that set by the uncertainty principle
-due to the commutator relationship between 𝐱 and 𝐩, [&#91;𝐱,𝐩&#92;](SCRATCH.md#bST).
+due to the commutator relationship between 𝐱 and 𝐩, [&#91;𝐱,𝐩&#93;](SCRATCH.md#bST).
 
 > TODO: section on quantum number n.
 
@@ -1902,7 +1902,7 @@ But there are no negative quantum numbers for the harmonic oscillator.
 That is, for quantum numbers less than 0, the states are zero!
 So there are no dangling terms with [∑u↑](SCRATCH.md#Uf9) or [∑u↓](SCRATCH.md#blg).
 
-##<a name="658"></a> 𝒟ₓ⧼x²⧽
+###<a name="658"></a> 𝒟ₓ⧼x²⧽
 Consider ⧼x²⧽.
 This should give the properties of an optimun distribution:
 

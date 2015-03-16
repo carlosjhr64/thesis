@@ -1862,13 +1862,22 @@ Let's see how that goes:
     𝒟ₓℒ = 𝒟ₓ⧼x²⧽ + λ𝒟ₓ⧼n⧽ - λ𝒟ₓñ
     𝒟ₓℒ = 𝒟ₓ⧼x²⧽ + λ𝒟ₓ⧼n⧽   # ñ is just a constant and goes away.
 
+𝒟ₓ is the derivative with respect to x.
+I will also use [𝒟](SCRATCH.md#8P4)
+as the derivative with respect to [ξ](SCRATCH.md#Pvg),
+the non-dimensional displacement.
+
 ##<a name="Jbc"></a> 𝒟 ⧼n⧽=0
 Consider ⧼n⧽.
-Just want to prove ⧼n⧽ really is a simple constant:
+Just want to prove ⧼n⧽ really is a simple constant.
 
     𝒟ₓ⧼n⧽
-    𝒟 ⧼n⧽                       # Change of variable, ξ.
-    𝒟 ⧼Ψₒ|ₙ⧽⧼ₙ|n|ₘ⧽⧼ₘ|Ψₒ⧽       # Expanding out ⧼n⧽.
+    𝒟 ⧼n⧽                   # Change of variable, ξ.
+    𝒟 ⧼Ψₒ|ₙ⧽⧼ₙ|n|ₘ⧽⧼ₘ|Ψₒ⧽   # Expanding out ⧼n⧽.
+
+I will use [⨋](SCRATCH.md#AXS) to denote an an integral over ξ of a sum over n and m.
+
+    𝒟 ⧼Ψₒ|ₙ⧽⧼ₙ|n|ₘ⧽⧼ₘ|Ψₒ⧽       # Continue from above.
     𝒟 ⨋ (𝑝ₙΨₙ)*n𝑝ₘΨₘ            # ⨋ is an integral over ξ of a sum over n and m!
     𝒟 ⨋ (𝑝Ψ*)n𝑝ₘΨₘ              # Context ₙ for brevity.
     𝒟 ⨋ 𝑝*Ψn𝑝ₘΨₘ                # There is nothing to conjugate in Ψₙ.
@@ -1897,7 +1906,8 @@ I proceed as if I don't know what 𝑝 is:
     √½(⨋{n√n𝒫Ψ↓Ψₘ-n√[n+1]𝒫Ψ↑Ψₘ}+⨋{n√m𝒫ΨΨₘ↓-n√[m+1]𝒫ΨΨₘ↑})   # Evaluate "factorals".
 
 There are positive and negative terms very much like eachother.
-Going to match them up:
+Going to match them up.
+I will be using [𝛿](SCRATCH.md#VuP) as the Dirac delta function:
 
     √½(⨋{n√n𝒫Ψ↓Ψₘ-n√[n+1]𝒫Ψ↑Ψₘ}+⨋{n√m𝒫ΨΨₘ↓-n√[m+1]𝒫ΨΨₘ↑})       # Continue from above.
     √½(⨋{n√n𝒫Ψ↓Ψₘ}-⨋{n√[n+1]𝒫Ψ↑Ψₘ}+⨋{n√m𝒫ΨΨₘ↓}-⨋{n√[m+1]𝒫ΨΨₘ↑}) # Separate sums.
@@ -1912,7 +1922,6 @@ Going to match them up:
     √½(-⨋{n√[n+1]𝒫↑𝛿}+⨋{n√[n+1]𝒫↑𝛿})                            # ⟂ΨΨ=𝛿, 1st ⨋.
     0                                                           # Cancellation.
 
-[𝛿](SCRATCH.md#VuP)is the Dirac delta funtion.
 I should point out that these are sums over Integers,
 not just natural numbers.
 But there are no negative quantum numbers for the harmonic oscillator.

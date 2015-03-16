@@ -631,8 +631,11 @@ In general I'll refer to a and b as Real number:
 
 ###<a name="AXS"></a> ⨋
 
-    ⨋ₓuₙₘ ≡ ∫ₓ⅀uₙₘ[x]
-    ⨋uₙₘ ≡ ∫⅀uₙₘ[ξ]
+    ⨋ₓuₗₖ ≡ ∫ₓ⅀uₗₖ[x] = ∫ₓ∑∑uₗₖ[x]
+    ⨋uₗₖ ≡ ∫⅀uₗₖ[ξ] = ∫∑∑uₗₖ[ξ]
+
+Note that for the harmonic oscillator, uₗₖ will take the form uₙvₘ.
+Nonetheless, it will still be a sum over the integers where uₙvₘ=0 if n or m < 0.
 
 ###<a name="Ama"></a> ℂ
 Complex numbers:

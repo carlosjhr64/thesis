@@ -82,7 +82,7 @@ Then proceed:
     ⨋{n𝒫(√½(√ŉ↧Ψ↓-√n↥Ψ↑))Ψₘ} + ⨋{n𝒫Ψ(√½(√ʼm↧Ψₘ↓-√m↥Ψₘ↑))}   # Subtitution of 𝒟 Ψ.
     √½(⨋{n𝒫(√ŉ↧Ψ↓-√n↥Ψ↑)Ψₘ} + ⨋{n𝒫Ψ(√ʼm↧Ψₘ↓-√m↥Ψₘ↑)})       # Take out √½.
 
-That 𝒟 ⧼n⧽ vanishes should not be a property of 𝑝.
+That 𝒟 ⧼n⧽ vanishes should not be a property of 𝑝 (in 𝒫).
 I proceed as if I don't know what 𝑝 is:
 
     √½(⨋{n𝒫(√ŉ↧Ψ↓-√n↥Ψ↑)Ψₘ} + ⨋{n𝒫Ψ(√ʼm↧Ψₘ↓-√m↥Ψₘ↑)})       # Continue from above.
@@ -107,6 +107,7 @@ Going to match them up:
     √½(-⨋{n√[n+1]𝒫↑𝛿}+⨋{n√[n+1]𝒫↑𝛿})                            # ⟂ΨΨ=𝛿, 1st ⨋.
     0                                                           # Cancellation.
 
+[𝛿](SCRATCH.md#VuP)is the Dirac delta funtion.
 I should point out that these are sums over Integers,
 not just natural numbers.
 But there are no negative quantum numbers for the harmonic oscillator.

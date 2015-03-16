@@ -123,6 +123,47 @@ But there are no negative quantum numbers for the harmonic oscillator.
 That is, for quantum numbers less than 0, the states are zero!
 So there are no dangling terms with [∑u↑](SCRATCH.md#Uf9) or [∑u↓](SCRATCH.md#blg).
 
+##<a name="p3u"></a> ⌽↑
+
+    ⌽↑ = ⌽φ₁ = ⌽φ↥   # Shorthand
+    ⌽ᵗₙ↑ = ⌽ᵗₙφᵗ₁
+    # Proof:
+      ⌽ᵗₙ↑
+      ⌽ᵗₙ₊₁
+      ℯ[-𝑖ω((n+1)+½)t]
+      ℯ[-𝑖ωt(n+½+1)]
+      ℯ[-𝑖ωt(n+½)+(-𝑖ωt)]
+      ℯ[-𝑖ωt(n+½)]ℯ[-𝑖ωt]
+      ⌽ᵗₙℯ[-𝑖ωt]
+      ⌽ᵗₙφᵗ₁
+      ⌽ₙφ₁
+      ⌽φ₁
+      ⌽φ↥
+
+##<a name="BNu"></a> ⌽↓
+
+    ⌽↓ = ⌽φ₋₁ = ⌽φ↧   # Likewise as ⌽↑.
+
+    ⌽ = ⌽↓/φ↧ = ʼφ↧⌽↓
+    ⌽ = ⌽↑/φ↥ = ʼφ↥⌽↑
+
+##<a name="I9g"></a> ⧼𝐱⧽ₜ
+
+    ⧼𝐱⧽ₜ
+    ⧼x⧽ₜ                      # 𝐱 is just x.
+    ⧼Ψₒₜ|ₙ⧽⧼ₙ|x|ₘ⧽⧼ₘ|Ψₒₜ⧽     # Expand out expression.
+    ⨋ₓ (𝑝ₙ⌽ᵗₙΨₙ)*x(𝑝ₘ⌽ᵗₘΨₘ)   # Switched from ⧼⧽ to ⨋ₓ notation.
+    ⨋ₓ (𝑝⌽Ψ)*x(𝑝ₘ⌽ₘΨₘ)        # Implicit ᵗ and ₙ, explicit ₘ.
+    √𝒽⨋ (𝑝⌽Ψ)*ξ(𝑝ₘ⌽ₘΨₘ)       # Change of variable x to ξ.
+
+The [𝒽](SCRATCH.md#hIf) is there because x=√𝒽ξ, a shorthand to ħ/(μω).
+It's just a constant.
+
+    √𝒽⨋ (𝑝⌽Ψ)*ξ(𝑝ₘ⌽ₘΨₘ)                # Continue from above.
+    √𝒽⨋ (𝑝⌽ξΨ)*(𝑝ₘ⌽ₘΨₘ)                # Rearrange, want ξΨ.
+    √𝒽⨋ (𝑝⌽(½𝐴(ℋ↑+ŉ↧₂ℋ↓)𝒢))*(𝑝ₘ⌽ₘΨₘ)   # Substitute in for ξΨ.
+    # TODO: ...
+
 ##<a name="2Nz"></a> Resources
 On top of the references given in the appendix,
 I'd like to add (or reiterate) the following resources:

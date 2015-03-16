@@ -2015,7 +2015,7 @@ TODO
     x² = 𝒽 ξ²
     x = √𝒽 ξ
 
-##<a name="p3u"></a> ⌽↑
+###<a name="p3u"></a> ⌽↑
 
     ⌽↑ = ⌽φ₁ = ⌽φ↥   # Shorthand
     ⌽ᵗₙ↑ = ⌽ᵗₙφᵗ₁
@@ -2032,7 +2032,7 @@ TODO
       ⌽φ₁
       ⌽φ↥
 
-##<a name="BNu"></a> ⌽↓
+###<a name="BNu"></a> ⌽↓
 
     ⌽↓ = ⌽φ₋₁ = ⌽φ↧   # Likewise as ⌽↑.
 

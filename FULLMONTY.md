@@ -123,30 +123,6 @@ But there are no negative quantum numbers for the harmonic oscillator.
 That is, for quantum numbers less than 0, the states are zero!
 So there are no dangling terms with [∑u↑](SCRATCH.md#Uf9) or [∑u↓](SCRATCH.md#blg).
 
-##<a name="p3u"></a> ⌽↑
-
-    ⌽↑ = ⌽φ₁ = ⌽φ↥   # Shorthand
-    ⌽ᵗₙ↑ = ⌽ᵗₙφᵗ₁
-    # Proof:
-      ⌽ᵗₙ↑
-      ⌽ᵗₙ₊₁
-      ℯ[-𝑖ω((n+1)+½)t]
-      ℯ[-𝑖ωt(n+½+1)]
-      ℯ[-𝑖ωt(n+½)+(-𝑖ωt)]
-      ℯ[-𝑖ωt(n+½)]ℯ[-𝑖ωt]
-      ⌽ᵗₙℯ[-𝑖ωt]
-      ⌽ᵗₙφᵗ₁
-      ⌽ₙφ₁
-      ⌽φ₁
-      ⌽φ↥
-
-##<a name="BNu"></a> ⌽↓
-
-    ⌽↓ = ⌽φ₋₁ = ⌽φ↧   # Likewise as ⌽↑.
-
-    ⌽ = ⌽↓/φ↧ = ʼφ↧⌽↓
-    ⌽ = ⌽↑/φ↥ = ʼφ↥⌽↑
-
 ##<a name="I9g"></a> ⧼𝐱⧽ₜ
 
     ⧼𝐱⧽ₜ

@@ -123,6 +123,42 @@ But there are no negative quantum numbers for the harmonic oscillator.
 That is, for quantum numbers less than 0, the states are zero!
 So there are no dangling terms with [∑u↑](SCRATCH.md#Uf9) or [∑u↓](SCRATCH.md#blg).
 
+##<a name="Nde"></a> ⧼𝐱⧽
+
+    ⧼𝐱⧽
+    ⧼x⧽                 # 𝐱 is just x.
+    ⧼Ψₒ|ₙ⧽⧼ₙ|x|ₘ⧽⧼ₘ|Ψₒ⧽ # Expand out expression.
+    ⨋ₓ(𝑝ₙΨₙ)*x(𝑝ₘΨₘ)    # Switched from ⧼⧽ to ⨋ₓ notation.
+    ⨋ₓ𝒫ₙₘΨₙ*xΨₘ         # 𝒫ₙₘ = 𝑝ₙ*𝑝ₘ
+    ⨋ₓ𝒫 Ψ*xΨₘ           # Implicit n, explicit m.
+    ⨋ₓ𝒫 Ψ*√𝒽ξΨₘ         # Change of variable, x to ξ.
+    √𝒽⨋ 𝒫 Ψ*ξΨₘ         # Take √𝒽 outside.
+
+The [𝒽](SCRATCH.md#hIf) is there because x=√𝒽ξ, a shorthand to ħ/(μω).
+It's just a constant.
+
+    √𝒽⨋ 𝒫 Ψ*ξΨₘ                 # Continue from above.
+    √𝒽⨋ 𝒫 (ξΨ)*Ψₘ               # Rearrange, want ξΨ.
+    √𝒽⨋ 𝒫 (√n↥Ψ↑+√ŉ↧Ψ↓)*Ψₘ      # Subtitute for ξΨ.
+    √𝒽⨋ 𝒫 (√n↥Ψ↑*Ψₘ+√ŉ↧Ψ↓*Ψₘ)   # Distribute Ψₘ.
+    √𝒽⅀ 𝒫 (√n↥𝛿↑+√ŉ↧𝛿↓)         # Ψ*Ψ=𝛿.
+    √𝒽⅀ 𝑝*𝑝ₘ(√n↥𝛿↑+√ŉ↧𝛿↓)       # 𝑝*𝑝ₘ = 𝒫 .
+    √𝒽⅀ 𝑝*(√n↥𝑝ₘ𝛿↑+√ŉ↧𝑝ₘ𝛿↓)     # Distribute 𝑝ₘ.
+    √𝒽⅀ 𝑝*(√n↥𝑝↑𝛿+√ŉ↧𝑝↓𝛿)       # 𝑝ₘ𝛿↓=𝑝↓𝛿, 𝑝ₘ𝛿↑=𝑝↑𝛿.
+    √𝒽∑ 𝑝*(√n↥𝑝↑+√ŉ↧𝑝↓)
+    √𝒽∑ 𝑝*(√[n+1]𝑝↑+√n𝑝↓)       # Evaluate "factorals".
+    √𝒽∑ 𝑝ₙ*(√[n+1]𝑝ₙ₊₁+√n𝑝ₙ₋₁)  # Explicit n.
+
+##<a name="GJG"></a> ⧼ξ⧽
+
+    ⧼ξ⧽
+    ⧼x/√𝒽⧽   # x=√𝒽ξ
+    1/√𝒽⧼x⧽
+    1/√𝒽 √𝒽∑ 𝑝ₙ*(√[n+1]𝑝ₙ₊₁+√n𝑝ₙ₋₁)
+    ∑ 𝑝ₙ*(√[n+1]𝑝ₙ₊₁+√n𝑝ₙ₋₁)
+
+>  Looks like equation [7.15](Y.md) is wrong by a factor of 1/√2.
+
 ##<a name="2Nz"></a> Resources
 On top of the references given in the appendix,
 I'd like to add (or reiterate) the following resources:

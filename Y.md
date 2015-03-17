@@ -9,6 +9,6 @@
 
 Remember that `y[n> = 2^(-½)(n^½[n-1> + (n+1)^½[n+1>)`. Thus,
 
-    <y> = Σₙ pₙ†/2^½ ([n+1]^½ pₙ+₁ + n^½ pₙ+₁).   # 7.15
+    <y> = Σₙ pₙ†/2^½ ([n+1]^½ pₙ₊₁ + n^½ pₙ₋₁).   # 7.15
 
 ### 7.3 [Time development](TIME.md)

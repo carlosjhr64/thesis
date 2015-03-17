@@ -123,26 +123,6 @@ But there are no negative quantum numbers for the harmonic oscillator.
 That is, for quantum numbers less than 0, the states are zero!
 So there are no dangling terms with [∑u↑](SCRATCH.md#Uf9) or [∑u↓](SCRATCH.md#blg).
 
-##<a name="I9g"></a> ⧼𝐱⧽ₜ
-
-    ⧼𝐱⧽ₜ
-    ⧼x⧽ₜ                      # 𝐱 is just x.
-    ⧼Ψₒₜ|ₙ⧽⧼ₙ|x|ₘ⧽⧼ₘ|Ψₒₜ⧽     # Expand out expression.
-    ⨋ₓ (𝑝ₙ⌽ᵗₙΨₙ)*x(𝑝ₘ⌽ᵗₘΨₘ)   # Switched from ⧼⧽ to ⨋ₓ notation.
-    ⨋ₓ (𝑝⌽Ψ)*x(𝑝ₘ⌽ₘΨₘ)        # Implicit ᵗ and ₙ, explicit ₘ.
-    √𝒽⨋ (𝑝⌽Ψ)*ξ(𝑝ₘ⌽ₘΨₘ)       # Change of variable x to ξ.
-
-The [𝒽](SCRATCH.md#hIf) is there because x=√𝒽ξ, a shorthand to ħ/(μω).
-It's just a constant.
-
-    √𝒽⨋ (𝑝⌽Ψ)*ξ(𝑝ₘ⌽ₘΨₘ)                    # Continue from above.
-    √𝒽⨋ (𝑝⌽ξΨ)*(𝑝ₘ⌽ₘΨₘ)                    # Rearrange, want ξΨ.
-    √𝒽⨋ (𝑝⌽(√n↥Ψ↑+√ŉ↧Ψ↓))*(𝑝ₘ⌽ₘΨₘ)         # Substitue for ξΨ.
-    √𝒽⨋ (𝑝⌽√n↥Ψ↑+𝑝⌽√ŉ↧Ψ↓)*(𝑝ₘ⌽ₘΨₘ)         # Distribute 𝑝⌽.
-    √𝒽⨋ (𝑝ʼφ↥⌽↑√n↥Ψ↑+𝑝ʼφ↧⌽↓√ŉ↧Ψ↓)*(𝑝ₘ⌽ₘΨₘ) # Match ⌽ quantum numbers.
-
-Now here, I have to remind myself that I don't know 𝑝 yet.
-
 ##<a name="2Nz"></a> Resources
 On top of the references given in the appendix,
 I'd like to add (or reiterate) the following resources:

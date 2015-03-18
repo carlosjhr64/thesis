@@ -34,7 +34,7 @@ it's a good warmup and demonstrates my notation.
  • [n↥,n₀,n↧](#I4Q) • [nᵥn!](#jL9) • [ŉ](#44r) • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1)
  • [𝔩](#wNn) • [Sine](#ZE8) • [Cosine](#CgT) • [ℯ](#NLb) • [S²+C²=1](#IwS)
  • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿](#VuP) • [⧼v⧽](#nXb) • [Δ²](#2ef) • [𝑃](#Uz0)
- • [𝑝](#2on) • [𝒫](#IRG) • [κ,μ,x,t](#rOX) • [ħ](#usp) • [π](#vmD)
+ • [𝑝](#2on) • [𝒫](#IRG) • [κ,μ,x,t](#rOX) • [ℏ](#1Xb) • [π](#vmD)
  • [ω](#Jji) • [f](#0h7) • [Eₙ](#2Xh) • [𝐱](#0bH) • [𝐩](#w6M)
  • [Δ²p](#k94) • [Δ²x](#oY8) • [&#91;𝐱,𝐩&#93;](#bST) • [𝐇](#bdY)
  • [⌽ᵗₙ](#WEu) • [𝕌{⌽}](#fzU) • [⌽→φ](#h8y) • [sₙ,cₙ](#zlN) • [ñ](#Ojo)
@@ -1241,10 +1241,11 @@ because I assume there's no error in its measurement.
 To resolve the paradox someone (no not me, I'm done!)
 will have to do the dual Energy-Time problem.
 
-###<a name="usp"></a> ħ
+###<a name="1Xb"></a> ℏ
 [Reduced Planck constant](http://en.wikipedia.org/wiki/Planck_constant):
 
-    ℝ{ħ}
+    ℝ{ℎ}
+    ℏ ≡ ℎ/2π
 
 ###<a name="vmD"></a> π
 You can check that there exist several series 
@@ -1284,7 +1285,7 @@ I won't worry about it.  OK!
 
 ###<a name="2Xh"></a> Eₙ
 
-    Eₙ = ωħ(n+½)   # 3.2: Energy eigen-value
+    Eₙ = ωℏ(n+½)   # 3.2: Energy eigen-value
 
 ###<a name="0bH"></a> 𝐱
 
@@ -1311,11 +1312,11 @@ TODO: want to explain how it relates to ΔxΔp.
 TODO:
 
 ###<a name="WEu"></a> ⌽ᵗₙ
-7.17 TODO: why -𝑖Eₙt/ħ and not +𝑖Eₙt/ħ?
+7.17 TODO: why -𝑖Eₙt/ℏ and not +𝑖Eₙt/ℏ?
 Time evolution:
 
     # NOTE! The ½ part makes this object a bit of a screw ball.
-    ⌽ᵗₙ ≡ ℯ[-𝑖ω(n+½)t] = ℯ[-𝑖Eₙt/ħ]
+    ⌽ᵗₙ ≡ ℯ[-𝑖ω(n+½)t] = ℯ[-𝑖Eₙt/ℏ]
     φᵗₙ ≡ ℯ[-𝑖ωnt]   # "How do I end up with this?" I may ask.
 
     ⌽ₙ*⌽ₘ = φₘ-ₙ   # You don't have to explicitly show time if it can be infered.
@@ -1500,8 +1501,8 @@ TODO: There is more I could say here
 ###<a name="Pvg"></a> ξ
 The non-dimensional displacement, ξ.
 
-    ξ² ≡ μω/ħ x²   # A.1b
-    x² = ħ/(μω) ξ²
+    ξ² ≡ μω/ℏ x²   # A.1b
+    x² = ℏ/(μω) ξ²
 
 ###<a name="yYZ"></a> 𝐴ₙ
 The Normalization Constant, 𝐴ₙ:
@@ -2095,13 +2096,13 @@ TODO
 
 ###<a name="hIf"></a> 𝒽
 
-    𝒽 ≡ ħ/(μω)
+    𝒽 ≡ ℏ/(μω)
 
     ξ² = x²/𝒽 = ʼ𝒽x²
     # Proof:
-      ξ² = μω/ħ x²        # By definition.
-      ξ² = ʼ(ħ/(μω)) x²   # ʼu=1/u.
-      ξ² = ʼ(𝒽) x²        # 𝒽≡ħ/(μω)
+      ξ² = μω/ℏ x²        # By definition.
+      ξ² = ʼ(ℏ/(μω)) x²   # ʼu=1/u.
+      ξ² = ʼ(𝒽) x²        # 𝒽≡ℏ/(μω)
       ξ² = ʼ𝒽 x²
       ξ² = x²/𝒽
 
@@ -2163,7 +2164,7 @@ TODO
     ⨋ₓ𝒫 Ψ*√𝒽ξΨₘ         # Change of variable, x to ξ.
     √𝒽⨋ 𝒫 Ψ*ξΨₘ         # Take √𝒽 outside.
 
-The [𝒽](SCRATCH.md#hIf) is there because x=√𝒽ξ, a shorthand to ħ/(μω).
+The [𝒽](SCRATCH.md#hIf) is there because x=√𝒽ξ, a shorthand to ℏ/(μω).
 It's just a constant.
 
     √𝒽⨋ 𝒫 Ψ*ξΨₘ                  # Continue from above.
@@ -2200,7 +2201,7 @@ It's just a constant.
     ⨋ₓ (𝑝⌽Ψ)*x(𝑝ₘ⌽ₘΨₘ)        # Implicit ᵗ and ₙ, explicit ₘ.
     √𝒽⨋ (𝑝⌽Ψ)*ξ(𝑝ₘ⌽ₘΨₘ)       # Change of variable x to ξ.
 
-The [𝒽](SCRATCH.md#hIf) is there because x=√𝒽ξ, a shorthand to ħ/(μω).
+The [𝒽](SCRATCH.md#hIf) is there because x=√𝒽ξ, a shorthand to ℏ/(μω).
 It's just a constant.
 
     √𝒽⨋ (𝑝⌽Ψ)*ξ(𝑝ₘ⌽ₘΨₘ)                    # Continue from above.
@@ -2236,7 +2237,7 @@ At time 0, s=Sine is 0:
 This is close to:
 
     √[2ñ𝒽]:Cosine[ωt]
-    √[2ñħ/(μω)]:Cosine[ωt]
+    √[2ñℏ/(μω)]:Cosine[ωt]
     √[2Eₒ/(μω²)]:Cosine[ωt]
     √[2Eₒ/κ]:Cosine[ωt]
 

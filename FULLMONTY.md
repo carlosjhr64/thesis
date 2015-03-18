@@ -47,7 +47,7 @@ where [ñ](SCRATCH.md#Ojo) is the average quantum number.
     ⨋ₓ𝒫 Ψ*√𝒽ξΨₘ         # Change of variable, x to ξ.
     √𝒽⨋ 𝒫 Ψ*ξΨₘ         # Take √𝒽 outside.
 
-The [𝒽](SCRATCH.md#hIf) is there because x=√𝒽ξ, a shorthand to ħ/(μω).
+The [𝒽](SCRATCH.md#hIf) is there because x=√𝒽ξ, a shorthand to ℏ/(μω).
 It's just a constant.
 
     √𝒽⨋ 𝒫 Ψ*ξΨₘ                  # Continue from above.

@@ -44,10 +44,10 @@ it's a good warmup and demonstrates my notation.
  • [⧼ξ₀⧽](#1Wx) • [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#jiD) • [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz)
  • [𝑝↑𝑝=√&#91;ñ/n↑&#93;𝑃](#V1C) • [𝑝↓𝑝=𝑃/√&#91;n↓ñ&#93;](#AyD)
  • [⧼ξₜ⧽](#geS) • [⧼ξ²⧽](#WaV) • [Δ²ξ](#8NW) • [Optimization problem](#1Pu)
- • [ℒ](#ij2) • [𝒟 ⧼n⧽=0](#Jbc) • [𝒟ₓ⧼x²⧽](#658) • [⧼u⧽ₜ](#3nH)
- • [Ψₒₜ](#y2B) • [𝒽](#hIf) • [⌽↑](#p3u) • [⌽↓](#BNu) • [⌽↑,⌽↓](#2q7)
- • [𝛿↓](#g9G) • [𝛿↑](#QlY) • [⧼𝐱⧽](#Nde) • [⧼ξ⧽](#GJG) • [⧼𝐱⧽ₜ](#I9g)
- • [Resources](#2Nz) •
+ • [symmetries?](#i9c) • [ℒ](#ij2) • [𝒟 ⧼n⧽=0](#Jbc) • [𝒟ₓ⧼x²⧽](#658)
+ • [⧼u⧽ₜ](#3nH) • [Ψₒₜ](#y2B) • [𝒽](#hIf) • [⌽↑](#p3u) • [⌽↓](#BNu)
+ • [⌽↑,⌽↓](#2q7) • [𝛿↓](#g9G) • [𝛿↑](#QlY) • [⧼𝐱⧽](#Nde) • [⧼ξ⧽](#GJG)
+ • [⧼𝐱⧽ₜ](#I9g) • [Resources](#2Nz) •
 
 
 </font>
@@ -1907,6 +1907,7 @@ using the definitions of Δx and Δp, I then have:
 
 where [ñ](SCRATCH.md#Ojo) is the average quantum number.
 
+###<a name="i9c"></a> symmetries?
 It would not be to hard to argue (TODO: demonstrate this) that
 by symmetry (⧼x²⧽-⧼x⧽²)=(⧼p²⧽-⧼p⧽²) and also that I can set ⧼x⧽=0.
 Then the problem is:
@@ -1920,7 +1921,7 @@ Let's see how that goes:
     :Min: ⧼x²⧽
     :Sub: ⧼n⧽ = ñ   # Ignoring the rest of the constraints for now.
 
-##<a name="ij2"></a> ℒ
+###<a name="ij2"></a> ℒ
 [Lagrange multiplier](http://en.wikipedia.org/wiki/Lagrange_multiplier):
 
     ℒ = ⧼x²⧽ + λ(⧼n⧽-ñ)
@@ -1933,7 +1934,7 @@ I will also use [𝒟](SCRATCH.md#8P4)
 as the derivative with respect to [ξ](SCRATCH.md#Pvg),
 the non-dimensional displacement.
 
-##<a name="Jbc"></a> 𝒟 ⧼n⧽=0
+###<a name="Jbc"></a> 𝒟 ⧼n⧽=0
 Consider ⧼n⧽.
 Just want to prove ⧼n⧽ really is a simple constant.
 
@@ -2149,7 +2150,7 @@ It's just a constant.
 
 > TODO: Need to explain how 𝛿↑ and 𝛿↓ work.
 
-##<a name="GJG"></a> ⧼ξ⧽
+###<a name="GJG"></a> ⧼ξ⧽
 
     ⧼ξ⧽
     ⧼x/√𝒽⧽   # x=√𝒽ξ

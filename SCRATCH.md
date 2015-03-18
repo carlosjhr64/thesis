@@ -1726,8 +1726,8 @@ TODO: Need to prove this!
 ###<a name="4V4"></a> ξΨ
 Motivation: I will be calculating ⧼Ψ|ξ|Ψ⧽ later.
 
-    ξΨ=½𝐴(ℋ↑+ŉ↧₂ℋ↓)𝒢   # Shorthand notation.
     ξΨₙ = ½𝐴ₙ(ℋₙ₊₁[ξ] + 2nℋₙ₋₁[ξ])ℯ[-ξ²/2]
+    ξΨ=½𝐴(ℋ↑+ŉ↧₂ℋ↓)𝒢   # Shorthand notation.
     # Proof:
       ξΨₙ                                # Given.
       ξ𝐴ₙℋₙ[ξ]ℯ[-ξ²/2]ℯ[-ξ²/2]           # Expansion of Ψₙ.
@@ -1737,19 +1737,21 @@ Motivation: I will be calculating ⧼Ψ|ξ|Ψ⧽ later.
       ½𝐴(ℋ↑+ŉ↧₂ℋ↓)𝒢                      # Rearrage.
       ½𝐴ₙ(ℋₙ₊₁[ξ] + 2nℋₙ₋₁[ξ])ℯ[-ξ²/2]   # Expand expression.
 
-
-    ξΨ=√n↥Ψ↑+√ŉ↧Ψ↓   # Shorthand notation.
-    ξΨₙ = √[n+1]Ψₙ₊₁ + √nΨₙ₋₁
+    ξΨₙ = √½(√[n+1]Ψₙ₊₁ + √nΨₙ₋₁)
+    ξΨ = ½(√n↥₂Ψ↑+√ŉ↧₂Ψ↓)   # Shorthand notation.
     # Proof:
       ξΨ
-      ½𝐴(ℋ↑+ŉ↧₂ℋ↓)𝒢               # Previous result.
-      ½𝐴ℋ↑𝒢 + ½𝐴ŉ↧₂ℋ↓𝒢            # Distribute all factors.
-      ½𝐴ℋ↑𝒢 + ½ŉ↧₂𝐴ℋ↓𝒢            # Rearrange.
-      ½√n↥₂𝐴↑ℋ↑𝒢 + ½ŉ↧₂√n↧𝐴↓ℋ↓𝒢   # 𝐴=√n↥₂𝐴↑=√n↧₂𝐴↓
-      √n↥𝐴↑ℋ↑𝒢 + ŉ↧√n↧𝐴↓ℋ↓𝒢       # ½&↥₂ and ½&ʼ↓₂ cancel.
-      √n↥𝐴↑ℋ↑𝒢 + √ŉ↧𝐴↓ℋ↓𝒢         # ŉ↧√n↧ = √n↧/n↧ = 1/√n↧ = √ŉ↧
-      √n↥Ψ↑+√ŉ↧Ψ↓                 # Ψ=𝐴ℋ𝒢
-      √[n+1]Ψₙ₊₁ + √nΨₙ₋₁         # Expand expression.
+      ½𝐴(ℋ↑+ŉ↧₂ℋ↓)𝒢              # Previous result.
+      ½𝐴ℋ↑𝒢 + ½𝐴ŉ↧₂ℋ↓𝒢           # Distribute all factors.
+      ½𝐴ℋ↑𝒢 + ½ŉ↧₂𝐴ℋ↓𝒢           # Rearrange.
+      ½𝐴ℋ↑𝒢 + ŉ↧𝐴ℋ↓𝒢             # ½(↧₂) is just ↧.
+      ½√n↥₂𝐴↑ℋ↑𝒢 + ŉ↧√n↧₂𝐴↓ℋ↓𝒢   # 𝐴=√n↥₂𝐴↑=√n↧₂𝐴↓.
+      ½√n↥₂𝐴↑ℋ↑𝒢 + ½ŉ↧₂√n↧₂𝐴↓ℋ↓𝒢 # ŉ↧=½ŉ↧₂.
+      ½√n↥₂𝐴↑ℋ↑𝒢 + ½√ŉ↧₂𝐴↓ℋ↓𝒢    # ŉ↧₂√n↧₂=√ŉ↧₂.
+      √½√n↥𝐴↑ℋ↑𝒢 + √½√ŉ↧𝐴↓ℋ↓𝒢    # ½(√↥₂) is √½(√↥).
+      √½√n↥Ψ↑ + √½√ŉ↧Ψ↓          # Ψ is 𝐴ℋ𝒢.
+      √½(√n↥Ψ↑ + √ŉ↧Ψ↓)          # Factor out √½.
+      √½(√[n+1]Ψₙ₊₁ + √nΨₙ₋₁)    # Expand.
 
 ###<a name="1Wx"></a> ⧼ξ₀⧽
 Evaluation of ⧼ξ₀⧽:
@@ -2136,17 +2138,18 @@ TODO
 The [𝒽](SCRATCH.md#hIf) is there because x=√𝒽ξ, a shorthand to ħ/(μω).
 It's just a constant.
 
-    √𝒽⨋ 𝒫 Ψ*ξΨₘ                 # Continue from above.
-    √𝒽⨋ 𝒫 (ξΨ)*Ψₘ               # Rearrange, want ξΨ.
-    √𝒽⨋ 𝒫 (√n↥Ψ↑+√ŉ↧Ψ↓)*Ψₘ      # Subtitute for ξΨ.
-    √𝒽⨋ 𝒫 (√n↥Ψ↑*Ψₘ+√ŉ↧Ψ↓*Ψₘ)   # Distribute Ψₘ.
-    √𝒽⅀ 𝒫 (√n↥𝛿↑+√ŉ↧𝛿↓)
-    √𝒽⅀ 𝑝*𝑝ₘ(√n↥𝛿↑+√ŉ↧𝛿↓)       # 𝑝*𝑝ₘ = 𝒫 .
-    √𝒽⅀ 𝑝*(√n↥𝑝ₘ𝛿↑+√ŉ↧𝑝ₘ𝛿↓)     # Distribute 𝑝ₘ.
-    √𝒽⅀ 𝑝*(√n↥𝑝ₘ↑𝛿+√ŉ↧𝑝ₘ↓𝛿)
-    √𝒽∑ 𝑝*(√n↥𝑝↑+√ŉ↧𝑝↓)
-    √𝒽∑ 𝑝*(√[n+1]𝑝↑+√n𝑝↓)       # Evaluate "factorals".
-    √𝒽∑ 𝑝ₙ*(√[n+1]𝑝ₙ₊₁+√n𝑝ₙ₋₁)  # Explicit n.
+    √𝒽⨋ 𝒫 Ψ*ξΨₘ                  # Continue from above.
+    √𝒽⨋ 𝒫 (ξΨ)*Ψₘ                # Rearrange, want ξΨ.
+    √𝒽⨋ 𝒫 √½(√n↥Ψ↑+√ŉ↧Ψ↓)*Ψₘ     # Subtitute for ξΨ.
+    √½𝒽⨋ 𝒫 (√n↥Ψ↑+√ŉ↧Ψ↓)*Ψₘ      # Factor out the √½.
+    √½𝒽⨋ 𝒫 (√n↥Ψ↑*Ψₘ+√ŉ↧Ψ↓*Ψₘ)   # Distribute Ψₘ.
+    √½𝒽⅀ 𝒫 (√n↥𝛿↑+√ŉ↧𝛿↓)
+    √½𝒽⅀ 𝑝*𝑝ₘ(√n↥𝛿↑+√ŉ↧𝛿↓)       # 𝑝*𝑝ₘ = 𝒫 .
+    √½𝒽⅀ 𝑝*(√n↥𝑝ₘ𝛿↑+√ŉ↧𝑝ₘ𝛿↓)     # Distribute 𝑝ₘ.
+    √½𝒽⅀ 𝑝*(√n↥𝑝ₘ↑𝛿+√ŉ↧𝑝ₘ↓𝛿)
+    √½𝒽∑ 𝑝*(√n↥𝑝↑+√ŉ↧𝑝↓)
+    √½𝒽∑ 𝑝*(√[n+1]𝑝↑+√n𝑝↓)       # Evaluate "factorals".
+    √½𝒽∑ 𝑝ₙ*(√[n+1]𝑝ₙ₊₁+√n𝑝ₙ₋₁)  # Explicit n.
 
 > TODO: Need to explain how 𝛿↑ and 𝛿↓ work.
 
@@ -2155,10 +2158,10 @@ It's just a constant.
     ⧼ξ⧽
     ⧼x/√𝒽⧽   # x=√𝒽ξ
     1/√𝒽⧼x⧽
-    1/√𝒽 √𝒽∑ 𝑝ₙ*(√[n+1]𝑝ₙ₊₁+√n𝑝ₙ₋₁)
-    ∑ 𝑝ₙ*(√[n+1]𝑝ₙ₊₁+√n𝑝ₙ₋₁)
+    1/√𝒽 √½𝒽∑ 𝑝ₙ*(√[n+1]𝑝ₙ₊₁+√n𝑝ₙ₋₁)
+    √½∑ 𝑝ₙ*(√[n+1]𝑝ₙ₊₁+√n𝑝ₙ₋₁)
 
->  Looks like equation [7.15](Y.md) is wrong by a factor of 1/√2.
+>  This is equation [7.15](Y.md).
 
 ###<a name="I9g"></a> ⧼𝐱⧽ₜ
 

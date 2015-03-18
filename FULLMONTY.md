@@ -11,8 +11,8 @@
 The [Optimization problem](http://en.wikipedia.org/wiki/Optimization_problem)
 to be solved:
 
-    Minimize:   ΔxΔp
-    Subject to: ⧼Ψₒ|𝐇|Ψₒ⧽ = Eₒ
+    :Minimize:   ΔxΔp
+    :Subject_to: ⧼Ψₒ|𝐇|Ψₒ⧽ = Eₒ
 
 This will be for the quantum mechanical simple harmonic oscillator
 with energy [Eₒ](SCRATCH.md#k5Y),
@@ -31,8 +31,8 @@ due to the commutator relationship between 𝐱 and 𝐩, [&#91;𝐱,𝐩&#93;](
 Noting that [Eₙ](SCRATCH.md#2Xh) goes as the quantum number n, and
 using the definitions of Δx and Δp, I then have:
 
-    Minimize:   √ (⧼x²⧽-⧼x⧽²)(⧼p²⧽-⧼p⧽²)
-    Subject to: ⧼n⧽ = ñ
+    :Minimize:   √ (⧼x²⧽-⧼x⧽²)(⧼p²⧽-⧼p⧽²)
+    :Subject_to: ⧼n⧽ = ñ
 
 where [ñ](SCRATCH.md#Ojo) is the average quantum number.
 
@@ -40,14 +40,14 @@ It would not be to hard to argue (TODO: demonstrate this) that
 by symmetry (⧼x²⧽-⧼x⧽²)=(⧼p²⧽-⧼p⧽²) and also that I can set ⧼x⧽=0.
 Then the problem is:
 
-    Minimize:   ⧼x²⧽
-    Subject to: ⧼n⧽=ñ, ⧼x⧽=0, ⧼x²⧽=⧼p²⧽-⧼p⧽²
+    :Minimize:   ⧼x²⧽
+    :Subject_to: ⧼n⧽=ñ, ⧼x⧽=0, ⧼x²⧽=⧼p²⧽-⧼p⧽²
 
 I suspect the extra conditions might be satisfied "for free".
 Let's see how that goes:
 
-    Min: ⧼x²⧽
-    Sub: ⧼n⧽ = ñ   # Ignoring the rest of the constraints for now.
+    :Min: ⧼x²⧽
+    :Sub: ⧼n⧽ = ñ   # Ignoring the rest of the constraints for now.
 
 ##<a name="ij2"></a> ℒ
 [Lagrange multiplier](http://en.wikipedia.org/wiki/Lagrange_multiplier):

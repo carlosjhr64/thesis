@@ -19,28 +19,28 @@ it's a good warmup and demonstrates my notation.
 ### Sections
 <font size="+1">
 
- • [Expressions](#G0p) • [DRY](#tFf) • [{u,v,w}](#F7W) • [Precedence rules](#MIM)
- • [⋯](#pxF) • [ℕ](#9ET) • [ℤ and ℚ](#5dX) • [uᵥ](#frL) • [{uᵥ}](#Zk2)
- • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL) • [Σuₙ](#kJ6) • [Σₙuₙ](#MlN) • [∞](#9XA)
- • [𝜖≡N/∞](#VAR) • [Σrⁿ](#5qT) • [∑](#zQw) • [∑ₗ](#tky) • [n×u](#vkP)
- • [⋅](#Jt7) • [Π](#J5V) • [uᵛ](#y3Z) • [√u](#8wf) • [|u|](#fxq)
- • [↓,↑](#3r3) • [↧,↥](#1U2) • [Σu↑](#U10) • [∑u↑](#Uf9) • [∑u↓](#blg)
- • [𝐿](#vGe) • [uₒ≡Σuₙ](#CuZ) • [ℝ](#yfS) • [⅀](#s2N) • [⨋](#AXS)
- • [ℂ](#Ama) • [𝑖](#FU8) • [*](#eEb) • [𝒟](#8P4) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
- • [∫](#iPk) • [n!](#zaX) • [½!](#SB2) • [(ⁿₘ)](#qsc) • [nₘ](#t99)
- • [0ₘ](#KLm) • [1ₘ](#ngq) • [2ₘ](#eUd) • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj)
- • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO) • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK)
- • [n↥,n₀,n↧](#I4Q) • [nᵥn!](#jL9) • [ŉ](#44r) • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1)
- • [𝔩](#wNn) • [Sine](#ZE8) • [Cosine](#CgT) • [ℯ](#NLb) • [S²+C²=1](#IwS)
- • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿](#VuP) • [⧼v⧽](#nXb) • [Δ²](#2ef) • [𝑃](#Uz0)
- • [𝑝](#2on) • [𝒫](#IRG) • [κ,μ,x,t](#rOX) • [ħ](#usp) • [π](#vmD)
- • [ω](#Jji) • [f](#0h7) • [Eₙ](#2Xh) • [𝐱](#0bH) • [𝐩](#w6M)
- • [Δ²p](#k94) • [Δ²x](#oY8) • [&#91;𝐱,𝐩&#93;](#bST) • [𝐇](#bdY)
- • [⌽ᵗₙ](#WEu) • [𝕌{⌽}](#fzU) • [⌽→φ](#h8y) • [sₙ,cₙ](#zlN) • [ñ](#Ojo)
- • [Eₒ](#k5Y) • [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7) • [p→𝑃](#mI6) • [ξ](#Pvg)
- • [𝐴ₙ](#yYZ) • [𝒢,ℊ](#lQl) • [ℋₙ](#LaF) • [Ψₙ](#rrF) • [𝒟 Ψ](#W3A)
- • [𝑝𝒟 Ψ](#e2c) • [Ψₒ](#lHR) • [ñ²=Σ{n²ΨₙΨₙ}](#quL) • [ξΨ](#4V4)
- • [⧼ξ₀⧽](#1Wx) • [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#jiD) • [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz)
+ • [Expressions](#G0p) • [DRY](#tFf) • [Bootstrapping](#6NE) • [{u,v,w}](#F7W)
+ • [Precedence rules](#MIM) • [⋯](#pxF) • [ℕ](#9ET) • [ℤ and ℚ](#5dX)
+ • [uᵥ](#frL) • [{uᵥ}](#Zk2) • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL) • [Σuₙ](#kJ6)
+ • [Σₙuₙ](#MlN) • [∞](#9XA) • [𝜖≡N/∞](#VAR) • [Σrⁿ](#5qT) • [∑](#zQw)
+ • [∑ₗ](#tky) • [n×u](#vkP) • [⋅](#Jt7) • [Π](#J5V) • [uᵛ](#y3Z)
+ • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3) • [↧,↥](#1U2) • [Σu↑](#U10)
+ • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [uₒ≡Σuₙ](#CuZ) • [ℝ](#yfS)
+ • [⅀](#s2N) • [⨋](#AXS) • [ℂ](#Ama) • [𝑖](#FU8) • [*](#eEb) • [𝒟](#8P4)
+ • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql) • [∫](#iPk) • [n!](#zaX) • [½!](#SB2)
+ • [(ⁿₘ)](#qsc) • [nₘ](#t99) • [0ₘ](#KLm) • [1ₘ](#ngq) • [2ₘ](#eUd)
+ • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj) • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO)
+ • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK) • [n↥,n₀,n↧](#I4Q) • [nᵥn!](#jL9) • [ŉ](#44r)
+ • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1) • [𝔩](#wNn) • [Sine](#ZE8) • [Cosine](#CgT)
+ • [ℯ](#NLb) • [S²+C²=1](#IwS) • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿](#VuP)
+ • [⧼v⧽](#nXb) • [Δ²](#2ef) • [𝑃](#Uz0) • [𝑝](#2on) • [𝒫](#IRG)
+ • [κ,μ,x,t](#rOX) • [ħ](#usp) • [π](#vmD) • [ω](#Jji) • [f](#0h7)
+ • [Eₙ](#2Xh) • [𝐱](#0bH) • [𝐩](#w6M) • [Δ²p](#k94) • [Δ²x](#oY8)
+ • [&#91;𝐱,𝐩&#93;](#bST) • [𝐇](#bdY) • [⌽ᵗₙ](#WEu) • [𝕌{⌽}](#fzU)
+ • [⌽→φ](#h8y) • [sₙ,cₙ](#zlN) • [ñ](#Ojo) • [Eₒ](#k5Y) • [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7)
+ • [p→𝑃](#mI6) • [ξ](#Pvg) • [𝐴ₙ](#yYZ) • [𝒢,ℊ](#lQl) • [ℋₙ](#LaF)
+ • [Ψₙ](#rrF) • [𝒟 Ψ](#W3A) • [𝑝𝒟 Ψ](#e2c) • [Ψₒ](#lHR) • [ñ²=Σ{n²ΨₙΨₙ}](#quL)
+ • [ξΨ](#4V4) • [⧼ξ₀⧽](#1Wx) • [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#jiD) • [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz)
  • [𝑝↑𝑝=√&#91;ñ/n↑&#93;𝑃](#V1C) • [𝑝↓𝑝=𝑃/√&#91;n↓ñ&#93;](#AyD)
  • [⧼ξₜ⧽](#geS) • [⧼ξ²⧽](#WaV) • [Δ²ξ](#8NW) • [Optimization problem](#1Pu)
  • [ℒ](#ij2) • [𝒟 ⧼n⧽=0](#Jbc) • [𝒟ₓ⧼x²⧽](#658) • [⧼u⧽ₜ](#3nH)
@@ -76,6 +76,19 @@ Everything else is commentary.
 I'm going to try to follow
 [code refactoring](http://en.wikipedia.org/wiki/Code_refactoring) and
 [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principles.
+
+###<a name="6NE"></a> Bootstrapping
+I don't think I can avoid an initial [bootstraping](http://en.wikipedia.org/wiki/Bootstrapping),
+where the following symbols, or [reserved words](http://en.wikipedia.org/wiki/Reserved_word),
+are undestood:
+
+    {[(,→≡)]}
+
+I will use `{}` to enclose a set,
+`[]` to enclose values for an operator, and
+`()` to group.
+`→` means implication.
+`≡` means definition.
 
 ###<a name="F7W"></a> {u,v,w}
 Arbitrary symbols:
@@ -266,7 +279,7 @@ One can absorb any Real multiple into ∞:
        Σ∞
        ∞Σ1
        ΣΣ1
-       (1+1+...)+(1+1+...)+...
+       (1+1+⋯)+(1+1+⋯)+⋯
        ∞  # or ∞² ?
 
 Regardless of the issues with ∞,
@@ -338,7 +351,7 @@ Consider this:
 
     {1,1,⋯}⋅{0,1,⋯}
     0+1+1+⋯
-    1+1+...
+    1+1+⋯
     1+1+⋯
     Σ1
     ∞
@@ -402,12 +415,12 @@ Just a quick review of
 The reason I bring this up now is that as r approaches 1,
 the series approaches ∞ quite literally!
 
-    r=1-ϵ₁ →
-      𝐿 Σ(1-ϵ₁)ⁿ
-      1/(1-(1-ϵ₁))
-      1/(1-1+ϵ₁)
-      1/(0+ϵ₁)
-      1/ϵ₁
+    r=1-𝜖₁ →
+      𝐿 Σ(1-𝜖₁)ⁿ
+      1/(1-(1-𝜖₁))
+      1/(1-1+𝜖₁)
+      1/(0+𝜖₁)
+      1/𝜖₁
       ∞₁
       Σ1
 
@@ -872,7 +885,7 @@ Nonetheless, note that n(ₘ)=1/n₋ₘ
 
 ###<a name="6OO"></a> n₋ₙ=1/n!
 
-    n₋ₙ = 1/(n(n-1)...(n-n+1)) = 1/(n(n-1)...(1)) = 1/n!
+    n₋ₙ = 1/(n(n-1)⋯(n-n+1)) = 1/(n(n-1)⋯(1)) = 1/n!
     n₋ₙ₋₁ = 1/(n!(0))
     n₋ₙ₋₂ = 1/(n!(0)(-1))
     n₋ₙ₋₃ = 1/(n!(0)(-1)(-2))
@@ -1078,7 +1091,7 @@ Known properties of e:
 ###<a name="VuP"></a> 𝛿
 [Dirac delta function](http://en.wikipedia.org/wiki/Dirac_delta_function):
 
-    𝛿ₗₖ = (l=k)? 1 : 0
+    𝛿ₗₖ ≡ (l=k)? 1 : 0 # :all
 
 ###<a name="nXb"></a> ⧼v⧽
 For some N>0, which is less than infinity,
@@ -1224,7 +1237,7 @@ of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi).
 Since I do not computationally define division by ℝ,
 1/√2π may be problematic, but there is series for that:
 
-    1/√2π = 2/9801 Σ (4n)!(1103+26390k)/((k!)⁴(396⁴^k
+    1/√2π = 2/9801 Σ (4n)!(1103+26390k)/((k!)⁴(396⁴^k))
     1/√2π = 2/9801 Σ (4n)!(1103+26390k)/((k!)⁴(396⁴ᵏ))
 
 Anyways, I think I can trust [algebra](http://en.wikipedia.org/wiki/Algebra)
@@ -1473,7 +1486,7 @@ The Normalization Constant, 𝐴ₙ:
     𝐴₀ = √[½/½!]      # I'm pretty sure this means something.
 
     𝐴ₙ/𝐴ₙ₋₁ = 1/√[2n]
-    Proof:
+    # Proof:
       (1/√[2ⁿn!√π]) / (1/√[2ⁿ⁻¹(n-1)!√π])
       (1/√[2ⁿn!√π]) × (√[2ⁿ⁻¹(n-1)!√π])
       √[2ⁿ⁻¹(n-1)!√π] / √[2ⁿn!√π]
@@ -1821,8 +1834,8 @@ TODO: ⧼ξ²⧽:
 The [Optimization problem](http://en.wikipedia.org/wiki/Optimization_problem)
 to be solved:
 
-    Minimize:   ΔxΔp
-    Subject to: ⧼Ψₒ|𝐇|Ψₒ⧽ = Eₒ
+    :Minimize:   ΔxΔp
+    :Subject_to: ⧼Ψₒ|𝐇|Ψₒ⧽ = Eₒ
 
 This will be for the quantum mechanical simple harmonic oscillator
 with energy [Eₒ](SCRATCH.md#k5Y),
@@ -1841,8 +1854,8 @@ due to the commutator relationship between 𝐱 and 𝐩, [&#91;𝐱,𝐩&#93;](
 Noting that [Eₙ](SCRATCH.md#2Xh) goes as the quantum number n, and
 using the definitions of Δx and Δp, I then have:
 
-    Minimize:   √ (⧼x²⧽-⧼x⧽²)(⧼p²⧽-⧼p⧽²)
-    Subject to: ⧼n⧽ = ñ
+    :Minimize:   √ (⧼x²⧽-⧼x⧽²)(⧼p²⧽-⧼p⧽²)
+    :Subject_to: ⧼n⧽ = ñ
 
 where [ñ](SCRATCH.md#Ojo) is the average quantum number.
 
@@ -1850,14 +1863,14 @@ It would not be to hard to argue (TODO: demonstrate this) that
 by symmetry (⧼x²⧽-⧼x⧽²)=(⧼p²⧽-⧼p⧽²) and also that I can set ⧼x⧽=0.
 Then the problem is:
 
-    Minimize:   ⧼x²⧽
-    Subject to: ⧼n⧽=ñ, ⧼x⧽=0, ⧼x²⧽=⧼p²⧽-⧼p⧽²
+    :Minimize:   ⧼x²⧽
+    :Subject_to: ⧼n⧽=ñ, ⧼x⧽=0, ⧼x²⧽=⧼p²⧽-⧼p⧽²
 
 I suspect the extra conditions might be satisfied "for free".
 Let's see how that goes:
 
-    Min: ⧼x²⧽
-    Sub: ⧼n⧽ = ñ   # Ignoring the rest of the constraints for now.
+    :Min: ⧼x²⧽
+    :Sub: ⧼n⧽ = ñ   # Ignoring the rest of the constraints for now.
 
 ##<a name="ij2"></a> ℒ
 [Lagrange multiplier](http://en.wikipedia.org/wiki/Lagrange_multiplier):
@@ -2142,10 +2155,10 @@ At time 0, s=Sine is 0:
 
 This is close to:
 
-    √[2ñ𝒽]Cosine[ωt]
-    √[2ñħ/(μω)]Cosine[ωt]
-    √[2Eₒ/(μω²)]Cosine[ωt]
-    √[2Eₒ/κ]Cosine[ωt]
+    √[2ñ𝒽]:Cosine[ωt]
+    √[2ñħ/(μω)]:Cosine[ωt]
+    √[2Eₒ/(μω²)]:Cosine[ωt]
+    √[2Eₒ/κ]:Cosine[ωt]
 
 And that looks like equation 2.7 on the thesis.
 So I'm doing something right, but I'm not sure this section is completely correct.

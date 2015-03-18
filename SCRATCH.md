@@ -20,29 +20,29 @@ it's a good warmup and demonstrates my notation.
 <font size="+1">
 
  • [Expressions](#G0p) • [DRY](#tFf) • [Bootstrapping](#6NE) • [{u,v,w}](#F7W)
- • [Precedence rules](#MIM) • [⋯](#pxF) • [ℕ](#9ET) • [ℤ and ℚ](#5dX)
- • [uᵥ](#frL) • [{uᵥ}](#Zk2) • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL) • [Σuₙ](#kJ6)
- • [Σₙuₙ](#MlN) • [∞](#9XA) • [𝜖≡N/∞](#VAR) • [Σrⁿ](#5qT) • [∑](#zQw)
- • [∑ₗ](#tky) • [n×u](#vkP) • [⋅](#Jt7) • [Π](#J5V) • [uᵛ](#y3Z)
- • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3) • [↧,↥](#1U2) • [Σu↑](#U10)
- • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [uₒ≡Σuₙ](#CuZ) • [ℝ](#yfS)
- • [⅀](#s2N) • [⨋](#AXS) • [ℂ](#Ama) • [𝑖](#FU8) • [*](#eEb) • [𝒟](#8P4)
- • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql) • [∫](#iPk) • [n!](#zaX) • [½!](#SB2)
- • [(ⁿₘ)](#qsc) • [nₘ](#t99) • [0ₘ](#KLm) • [1ₘ](#ngq) • [2ₘ](#eUd)
- • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj) • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO)
- • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK) • [n↥,n₀,n↧](#I4Q) • [nᵥn!](#jL9) • [ŉ](#44r)
- • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1) • [𝔩](#wNn) • [Sine](#ZE8) • [Cosine](#CgT)
- • [ℯ](#NLb) • [S²+C²=1](#IwS) • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿](#VuP)
- • [⧼v⧽](#nXb) • [Δ²](#2ef) • [𝑃](#Uz0) • [𝑝](#2on) • [𝒫](#IRG)
- • [κ,μ,x,t](#rOX) • [ħ](#usp) • [π](#vmD) • [ω](#Jji) • [f](#0h7)
- • [Eₙ](#2Xh) • [𝐱](#0bH) • [𝐩](#w6M) • [Δ²p](#k94) • [Δ²x](#oY8)
- • [&#91;𝐱,𝐩&#93;](#bST) • [𝐇](#bdY) • [⌽ᵗₙ](#WEu) • [𝕌{⌽}](#fzU)
- • [⌽→φ](#h8y) • [sₙ,cₙ](#zlN) • [ñ](#Ojo) • [Eₒ](#k5Y) • [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7)
- • [p→𝑃](#mI6) • [ξ](#Pvg) • [𝐴ₙ](#yYZ) • [𝒢,ℊ](#lQl) • [ℋ](#m3i)
- • [𝒟ℋ](#mV6) • [ℋ↑](#oNs) • [ξℋ](#fqa) • [Ψₙ](#rrF) • [𝒟 Ψ](#W3A)
- • [𝑝𝒟 Ψ](#e2c) • [Ψₒ](#lHR) • [ñ²=Σ{n²ΨₙΨₙ}](#quL) • [ξΨ](#4V4)
- • [⧼ξ₀⧽](#1Wx) • [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#jiD) • [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz)
- • [𝑝↑𝑝=√&#91;ñ/n↑&#93;𝑃](#V1C) • [𝑝↓𝑝=𝑃/√&#91;n↓ñ&#93;](#AyD)
+ • [+](#YD5) • [,u,⋯](#XXo) • [ℕ](#9ET) • [+⋯](#v9b) • [Precedence rules](#MIM)
+ • [ℤ and ℚ](#5dX) • [uᵥ](#frL) • [{uᵥ}](#Zk2) • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL)
+ • [n×u](#vkP) • [×⋯](#uyg) • [Σuₙ](#kJ6) • [Σₙuₙ](#MlN) • [∞](#9XA)
+ • [𝜖≡N/∞](#VAR) • [Σrⁿ](#5qT) • [∑](#zQw) • [∑ₗ](#tky) • [⋅](#Jt7)
+ • [Π](#J5V) • [uᵛ](#y3Z) • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3)
+ • [↧,↥](#1U2) • [Σu↑](#U10) • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe)
+ • [uₒ≡Σuₙ](#CuZ) • [ℝ](#yfS) • [⅀](#s2N) • [⨋](#AXS) • [ℂ](#Ama)
+ • [𝑖](#FU8) • [*](#eEb) • [𝒟](#8P4) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
+ • [∫](#iPk) • [n!](#zaX) • [½!](#SB2) • [(ⁿₘ)](#qsc) • [nₘ](#t99)
+ • [0ₘ](#KLm) • [1ₘ](#ngq) • [2ₘ](#eUd) • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj)
+ • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO) • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK)
+ • [n↥,n₀,n↧](#I4Q) • [nᵥn!](#jL9) • [ŉ](#44r) • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1)
+ • [𝔩](#wNn) • [Sine](#ZE8) • [Cosine](#CgT) • [ℯ](#NLb) • [S²+C²=1](#IwS)
+ • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿](#VuP) • [⧼v⧽](#nXb) • [Δ²](#2ef) • [𝑃](#Uz0)
+ • [𝑝](#2on) • [𝒫](#IRG) • [κ,μ,x,t](#rOX) • [ħ](#usp) • [π](#vmD)
+ • [ω](#Jji) • [f](#0h7) • [Eₙ](#2Xh) • [𝐱](#0bH) • [𝐩](#w6M)
+ • [Δ²p](#k94) • [Δ²x](#oY8) • [&#91;𝐱,𝐩&#93;](#bST) • [𝐇](#bdY)
+ • [⌽ᵗₙ](#WEu) • [𝕌{⌽}](#fzU) • [⌽→φ](#h8y) • [sₙ,cₙ](#zlN) • [ñ](#Ojo)
+ • [Eₒ](#k5Y) • [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7) • [p→𝑃](#mI6) • [ξ](#Pvg)
+ • [𝐴ₙ](#yYZ) • [𝒢,ℊ](#lQl) • [ℋ](#m3i) • [𝒟ℋ](#mV6) • [ℋ↑](#oNs)
+ • [ξℋ](#fqa) • [Ψₙ](#rrF) • [𝒟 Ψ](#W3A) • [𝑝𝒟 Ψ](#e2c) • [Ψₒ](#lHR)
+ • [ñ²=Σ{n²ΨₙΨₙ}](#quL) • [ξΨ](#4V4) • [⧼ξ₀⧽](#1Wx) • [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#jiD)
+ • [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz) • [𝑝↑𝑝=√&#91;ñ/n↑&#93;𝑃](#V1C) • [𝑝↓𝑝=𝑃/√&#91;n↓ñ&#93;](#AyD)
  • [⧼ξₜ⧽](#geS) • [⧼ξ²⧽](#WaV) • [Δ²ξ](#8NW) • [Optimization problem](#1Pu)
  • [symmetries?](#i9c) • [ℒ](#ij2) • [𝒟 ⧼n⧽=0](#Jbc) • [𝒟ₓ⧼x²⧽](#658)
  • [⧼u⧽ₜ](#3nH) • [Ψₒₜ](#y2B) • [𝒽](#hIf) • [⌽↑](#p3u) • [⌽↓](#BNu)
@@ -100,6 +100,47 @@ Arbitrary symbols:
      u=u             # Then you accept things are themselves.
      w=v,v=u → w=u   # Transitive Property of Equality.
 
+###<a name="YD5"></a> +
+[Addition](http://en.wikipedia.org/wiki/Addition):
+
+    {0,1}
+    0+0 ≡ 0
+    0+1 ≡ 1
+    1+0 ≡ 1
+
+###<a name="XXo"></a> ,u,⋯
+[Ellipsis](http://en.wikipedia.org/wiki/Ellipsis#In_mathematical_notation):
+
+    ,u,⋯  ≡ ,u,u+1,⋯
+
+###<a name="9ET"></a> ℕ
+[Natural (Counting) numbers](http://en.wikipedia.org/wiki/Natural_number),
+the set or ordered type /^\d+$/:
+
+    ℕ ≡ {0,1,⋯}
+
+    2 ≡ 1+1
+    3 ≡ 2+1
+    4 ≡ 3+1
+    5 ≡ 4+1
+    6 ≡ 5+1
+    7 ≡ 6+1
+    8 ≡ 7+1
+    9 ≡ 8+1
+
+    ℕ{0,1,2,3,4,5,6,7,8,9} # The digits are Natural numbers.
+
+    ℕ{N,n,m}   # Conjure up N, M, n, and m as Natural numbers.
+    M≡N-1      # This just simplifies notation later on.
+
+###<a name="v9b"></a> +⋯
+
+    u+u+⋯ ≡ u + u+u+⋯
+    uₙ+uₙ₊₁+⋯ ≡ uₙ + uₙ₊₁+uₙ₊₂+⋯
+    uₙ,⋯ ≡ uₙ,uₙ₊₁,⋯
+    n,n+1,⋯ ≡ n,n+1,n+2,⋯
+    uₘ+⋯+uₙ ≡ (m<n)? uₘ+uₘ₊₁+⋯+uₙ : (m>n)? 0 : uₙ
+
 ###<a name="MIM"></a> Precedence rules
 The following precedence rules are in order:
 
@@ -125,23 +166,6 @@ The following precedence rules are in order:
 
 Some of these rules help compact the notation as it most commonly appears.
 For example, √2πx is √[2π]x, but √nπx is √[n]πx.
-
-###<a name="pxF"></a> ⋯
-[Ellipsis](http://en.wikipedia.org/wiki/Ellipsis#In_mathematical_notation):
-
-    u+u+⋯ ≡ u + u+u+⋯
-    uₙ+uₙ₊₁+⋯ ≡ uₙ + uₙ₊₁+uₙ₊₂+⋯
-    uₙ,⋯ ≡ uₙ,uₙ₊₁,⋯
-    n,n+1,⋯ ≡ n,n+1,n+2,⋯
-    uₘ+⋯+uₙ ≡ (m<n)? uₘ+uₘ₊₁+⋯+uₙ : (m>n)? 0 : uₙ
-    uₘ×⋯×uₙ ≡ (m<n)? uₘ×uₘ₊₁×⋯×uₙ : (m>n)? 1 : uₙ
-
-###<a name="9ET"></a> ℕ
-Natural (Counting) numbers:
-
-    ℕ ≡ {0,1,2,3,⋯}   # The set of Natural numbers.  Or the ordered type /^\d+$/.
-    ℕ{N,n,m}          # N, M, n, and m are Natural numbers.
-    M≡N-1             # This just simplifies notation later on.
 
 ###<a name="5dX"></a> ℤ and ℚ
 Integers and Rationals:
@@ -175,6 +199,17 @@ A set of labeled (indexed) items:
     # Examples:
     Σ[1,5]{m|m} = 1 + 2 + 3 + 4 + 5
     Σ[1,3]{m|m+m} = (1+1) + (2+2)+ (3+3)
+
+###<a name="vkP"></a> n×u
+Just regular [multiplication](http://en.wikipedia.org/wiki/Multiplication):
+
+    n×u ≡ Σ[1,n]{u}
+    nu ≡ n×u
+    n/m × u/v ≡ (n×u)/(m×v)
+
+###<a name="uyg"></a> ×⋯
+
+    uₘ×⋯×uₙ ≡ (m<n)? uₘ×uₘ₊₁×⋯×uₙ : (m>n)? 1 : uₙ
 
 ###<a name="kJ6"></a> Σuₙ
 Summation over Natural, ℕ, indeces:
@@ -441,13 +476,6 @@ Halting sum over Integer, ℤ, indeces:
 
     ∑ₗ1 = 2M+1 = 2N-1
 
-###<a name="vkP"></a> n×u
-Just regular [multiplication](http://en.wikipedia.org/wiki/Multiplication):
-
-    n×u ≡ Σ[1,n]{u}
-    nu ≡ n×u
-    n/m × u/v ≡ (n×u)/(m×v)
-
 ###<a name="Jt7"></a> ⋅
 The dot operator:
 
@@ -581,7 +609,7 @@ For the following examples, I use factorial N! and exponential function ℯ[N]:
     𝐿[u+(v^N)/N!] = u   # N depends on v, but for some N it's true.
     𝐿[u+ℯ[-N]] = u      # Obviously, I hope.
 
-    |u| ≤ 1/N, |v| ≤ 1/N  ⇒  |uv| ≤ 1/N², 𝐿[uv]=0
+    |u| ≤ 1/N, |v| ≤ 1/N  →  |uv| ≤ 1/N², 𝐿[uv]=0
 
 The Float::EPSILON for Ruby on my machine is about 2.22e-16.
 So 𝐿 puts a limit on N on my machine of about 6.71e+7 (2.22e-16 ~ 1/(6.71e+7)^2).

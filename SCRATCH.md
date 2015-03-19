@@ -23,11 +23,11 @@ it's a good warmup and demonstrates my notation.
  • [+](#YD5) • [,u,⋯](#XXo) • [ℕ](#9ET) • [+⋯](#v9b) • [Precedence rules](#MIM)
  • [ℤ and ℚ](#5dX) • [uᵥ](#frL) • [{uᵥ}](#Zk2) • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL)
  • [n×u](#vkP) • [×⋯](#uyg) • [Σuₙ](#kJ6) • [Σₙuₙ](#MlN) • [∞](#9XA)
- • [𝜖≡N/∞](#VAR) • [Σrⁿ](#5qT) • [∑](#zQw) • [∑ₗ](#tky) • [⋅](#Jt7)
- • [Π](#J5V) • [uᵛ](#y3Z) • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3)
- • [↧,↥](#1U2) • [Σu↑](#U10) • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe)
- • [uₒ≡Σuₙ](#CuZ) • [ℝ](#yfS) • [⅀](#s2N) • [⨋](#AXS) • [ℂ](#Ama)
- • [𝑖](#FU8) • [*](#eEb) • [𝒟](#8P4) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
+ • [∑](#zQw) • [∑ₗ](#tky) • [⋅](#Jt7) • [Π](#J5V) • [uᵛ](#y3Z)
+ • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3) • [↧,↥](#1U2) • [Σu↑](#U10)
+ • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [uₒ≡Σuₙ](#CuZ) • [ℝ](#yfS)
+ • [∞/∞](#iyp) • [𝜖≡N/∞](#VAR) • [Σrⁿ](#5qT) • [⅀](#s2N) • [⨋ₓ](#SuG)
+ • [ℂ](#Ama) • [𝑖](#FU8) • [*](#eEb) • [𝒟](#8P4) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
  • [∫](#iPk) • [n!](#zaX) • [½!](#SB2) • [(ⁿₘ)](#qsc) • [nₘ](#t99)
  • [0ₘ](#KLm) • [1ₘ](#ngq) • [2ₘ](#eUd) • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj)
  • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO) • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK)
@@ -332,14 +332,6 @@ the propety I need of ∞ in definitions is that it's greater than any N:
       N < ∞
 
 Then, ∞ becomes a device to create non halting processes.
-If √4={-2,2}, then can I say:
-
-    ∞/∞ = ℝ
-    # Proof:
-      ∞/∞
-      uₒ∞/∞  # Poops out any real number!
-      uₒ     # LOL!
-
 Some systems have 1/0=∞, but 0×∞=0×Σ1=Σ0×1=Σ0=0, and therefore also Σ0×Σ1=0.
 
     u/u=1 ↔ v/v=1 ↔ v=v×1 ↔ v/1=v
@@ -396,69 +388,6 @@ Yes, the sum is unbounded, but the one of the objects that created it has a hole
 And it really is a different object than the one without a hole.
 The regular infinity produced by `1+1+...` is both a sink and a source, but
 did I really loose the hole?
-
-###<a name="VAR"></a> 𝜖≡N/∞
-[Infinitesimal](http://en.wikipedia.org/wiki/Infinitesimal).
-
-    𝜖≡ℝ{r}/∞   # Any r/∞ gives 𝜖.
-    𝜖×∞=ℝ
-
-    𝜖₁≡1/∞₁
-    𝜖₁×∞₁=1
-
-    # In either version,
-    ℝ{r},0<𝜖<|r|<∞
-
-> TODO: Note that I did not construct ∞₁. How? :-??
-> I'm guessing ∞₁ is one of an orthogonal set in ∞.
-> It would really be a great convenience.  Conjecture:
-
-    𝜖₁×∞ = 𝜖×∞₁ = 1
-    # Proof:
-      # TODO: Needs a construction of ∞₁.
-
-> Maybe I'll just stick to the notion of big N.
-
-###<a name="5qT"></a> Σrⁿ
-Just a quick review of
-[Geometric series](http://en.wikipedia.org/wiki/Geometric_series):
-
-    ℚ{r:0<r<1}
-
-    Σₙrⁿ = (1-r^N)/(1-r)
-    # Proof:
-      u = Σₙrⁿ
-      u = Σ[0,M]{n|rⁿ}
-      u = r⁰+r¹+⋯+r^M
-      u = r⁰+r¹+⋯+r^(N-1)   # M=N-1
-      ru = r(r⁰+r¹+⋯+r^(N-1)) = r¹+r²+⋯+r^N
-      u-ru = r⁰+r¹+⋯+r^(N-1) - r¹+r²+⋯+r^N
-      u-ru = r⁰-r^N
-      u(1-r) = r⁰-r^N
-      u = (r⁰-r^N)/(1-r)
-
-    𝐿 Σrⁿ = 1/(1-r)
-    # Proof:
-      𝐿 Σrⁿ
-      # Notice that ⋯ expands out indefinitely giving a non-halting sum.
-      𝐿 r⁰+rⁱ+r²+⋯+r^∞
-      # Hey! It's simple algebra. Formula for the geometric series.
-      𝐿 (1-r^∞)/(1-r)
-      (1-𝐿[r^∞])/(1-r)
-      (1-0)/(1-r)
-      1/(1-r)
-
-The reason I bring this up now is that as r approaches 1,
-the series approaches ∞ quite literally!
-
-    r=1-𝜖₁ →
-      𝐿 Σ(1-𝜖₁)ⁿ
-      1/(1-(1-𝜖₁))
-      1/(1-1+𝜖₁)
-      1/(0+𝜖₁)
-      1/𝜖₁
-      ∞₁
-      Σ1
 
 ###<a name="zQw"></a> ∑
 Sum over Integer, ℤ, indeces:
@@ -602,12 +531,12 @@ Let's try a simple limit function:
 
 As N doubles, the sum Σₙ{1/N²} halves.
 So Σₙ{1/N²} does approach zero as N goes on to infinity.
-For the following examples, I use factorial N! and exponential function ℯ[N]:
+For the following examples, I use factorial N! and the exponential function:
 
     𝐿[u+1/N²] = u
-    𝐿[u+ℯ[N]/N!] = u    # Try N≥10.
-    𝐿[u+(v^N)/N!] = u   # N depends on v, but for some N it's true.
-    𝐿[u+ℯ[-N]] = u      # Obviously, I hope.
+    𝐿[u+:Exponential[N]/N!] = u   # Try N≥10.
+    𝐿[u+(v^N)/N!] = u             # N depends on v, but for some N it's true.
+    𝐿[u+:Exponential[-N]] = u     # Obviously, I hope.
 
     |u| ≤ 1/N, |v| ≤ 1/N  →  |uv| ≤ 1/N², 𝐿[uv]=0
 
@@ -669,11 +598,83 @@ In general I'll refer to a and b as Real number:
 
     ℝ{a,b}   # a and b are Real numbers.
 
+###<a name="iyp"></a> ∞/∞
+If √4={-2,2}, then can I say:
+
+    ∞/∞ = ℝ
+    # Proof:
+      ∞/∞
+      uₒ∞/∞  # Poops out any real number!
+      uₒ     # LOL!
+
+###<a name="VAR"></a> 𝜖≡N/∞
+[Infinitesimal](http://en.wikipedia.org/wiki/Infinitesimal).
+
+    𝜖≡ℝ{r}/∞   # Any r/∞ gives 𝜖.
+    𝜖×∞=ℝ
+
+    𝜖₁≡1/∞₁
+    𝜖₁×∞₁=1
+
+    # In either version,
+    ℝ{r},0<𝜖<|r|<∞
+
+> TODO: Note that I did not construct ∞₁. How? :-??
+> I'm guessing ∞₁ is one of an orthogonal set in ∞.
+> It would really be a great convenience.  Conjecture:
+
+    𝜖₁×∞ = 𝜖×∞₁ = 1
+    # Proof:
+      # TODO: Needs a construction of ∞₁.
+
+> Maybe I'll just stick to the notion of big N.
+
+###<a name="5qT"></a> Σrⁿ
+Just a quick review of
+[Geometric series](http://en.wikipedia.org/wiki/Geometric_series):
+
+    ℚ{r:0<r<1}
+
+    Σₙrⁿ = (1-r^N)/(1-r)
+    # Proof:
+      u = Σₙrⁿ
+      u = Σ[0,M]{n|rⁿ}
+      u = r⁰+r¹+⋯+r^M
+      u = r⁰+r¹+⋯+r^(N-1)   # M=N-1
+      ru = r(r⁰+r¹+⋯+r^(N-1)) = r¹+r²+⋯+r^N
+      u-ru = r⁰+r¹+⋯+r^(N-1) - r¹+r²+⋯+r^N
+      u-ru = r⁰-r^N
+      u(1-r) = r⁰-r^N
+      u = (r⁰-r^N)/(1-r)
+
+    𝐿 Σrⁿ = 1/(1-r)
+    # Proof:
+      𝐿 Σrⁿ
+      # Notice that ⋯ expands out indefinitely giving a non-halting sum.
+      𝐿 r⁰+r¹+r²+⋯+r^∞
+      # Hey! It's simple algebra. Formula for the geometric series.
+      𝐿 (1-r^∞)/(1-r)
+      (1-𝐿[r^∞])/(1-r)
+      (1-0)/(1-r)
+      1/(1-r)
+
+The reason I bring this up now is that as r approaches 1,
+the series approaches ∞ quite literally!
+
+    r=1-𝜖₁ →
+      𝐿 Σ(1-𝜖₁)ⁿ
+      1/(1-(1-𝜖₁))
+      1/(1-1+𝜖₁)
+      1/(0+𝜖₁)
+      1/𝜖₁
+      ∞₁
+      Σ1
+
 ###<a name="s2N"></a> ⅀
 
     ⅀uₙₘ ≡ ΣΣuₙₘ
 
-###<a name="AXS"></a> ⨋
+###<a name="SuG"></a> ⨋ₓ
 
     ⨋ₓuₗₖ ≡ ∫ₓ⅀uₗₖ[x] = ∫ₓ∑∑uₗₖ[x]
     ⨋uₗₖ ≡ ∫⅀uₗₖ[ξ] = ∫∑∑uₗₖ[ξ]

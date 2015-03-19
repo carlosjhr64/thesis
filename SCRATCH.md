@@ -26,29 +26,29 @@ it's a good warmup and demonstrates my notation.
  • [∑](#zQw) • [∑ₗ](#tky) • [⋅](#Jt7) • [Π](#J5V) • [uᵛ](#y3Z)
  • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3) • [↧,↥](#1U2) • [Σu↑](#U10)
  • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [uₒ≡Σuₙ](#CuZ) • [ℝ](#yfS)
- • [∞/∞](#iyp) • [𝜖≡N/∞](#VAR) • [Σrⁿ](#5qT) • [⅀](#s2N) • [⨋ₓ](#SuG)
- • [ℂ](#Ama) • [𝑖](#FU8) • [*](#eEb) • [𝒟](#8P4) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
- • [∫](#iPk) • [n!](#zaX) • [½!](#SB2) • [(ⁿₘ)](#qsc) • [nₘ](#t99)
- • [0ₘ](#KLm) • [1ₘ](#ngq) • [2ₘ](#eUd) • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj)
- • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO) • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK)
- • [n↥,n₀,n↧](#I4Q) • [nᵥn!](#jL9) • [ŉ](#44r) • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1)
- • [𝔩](#wNn) • [Sine](#ZE8) • [Cosine](#CgT) • [ℯ](#NLb) • [S²+C²=1](#IwS)
- • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿](#VuP) • [⧼v⧽](#nXb) • [Δ²](#2ef) • [𝑃](#Uz0)
- • [𝑝](#2on) • [𝒫](#IRG) • [κ,μ,x,t](#rOX) • [ℏ](#1Xb) • [π](#vmD)
- • [ω](#Jji) • [f](#0h7) • [Eₙ](#2Xh) • [𝐱](#0bH) • [𝐩](#w6M)
- • [Δ²p](#k94) • [Δ²x](#oY8) • [&#91;𝐱,𝐩&#93;](#bST) • [𝐇](#bdY)
- • [⌽ᵗₙ](#WEu) • [𝕌{⌽}](#fzU) • [⌽→φ](#h8y) • [sₙ,cₙ](#zlN) • [ñ](#Ojo)
- • [Eₒ](#k5Y) • [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7) • [p→𝑃](#mI6) • [ξ](#Pvg)
- • [𝐴ₙ](#yYZ) • [𝒢,ℊ](#lQl) • [ℋ](#m3i) • [𝒟ℋ](#mV6) • [ℋ↑](#oNs)
- • [ξℋ](#fqa) • [Ψₙ](#rrF) • [𝒟 Ψ](#W3A) • [𝑝𝒟 Ψ](#e2c) • [Ψₒ](#lHR)
- • [ñ²=Σ{n²ΨₙΨₙ}](#quL) • [ξΨ](#4V4) • [⧼ξ₀⧽](#1Wx) • [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#jiD)
- • [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz) • [𝑝↑𝑝=√&#91;ñ/n↑&#93;𝑃](#V1C) • [𝑝↓𝑝=𝑃/√&#91;n↓ñ&#93;](#AyD)
+ • [x,t](#pZX) • [∞/∞](#iyp) • [𝜖≡a/∞](#rNP) • [Σrⁿ](#5qT) • [⅀](#s2N)
+ • [⨋ₓ](#SuG) • [ℂ](#Ama) • [𝑖](#FU8) • [*](#eEb) • [𝒟ₓ](#FD0)
+ • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql) • [∫](#iPk) • [n!](#zaX) • [½!](#SB2)
+ • [(ⁿₘ)](#qsc) • [nₘ](#t99) • [0ₘ](#KLm) • [1ₘ](#ngq) • [2ₘ](#eUd)
+ • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj) • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO)
+ • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK) • [n↥,n₀,n↧](#I4Q) • [nᵥn!](#jL9) • [ŉ](#44r)
+ • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1) • [𝔩](#wNn) • [Sine](#ZE8) • [Cosine](#CgT)
+ • [ℯ](#NLb) • [S²+C²=1](#IwS) • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿](#VuP)
+ • [⧼v⧽](#nXb) • [Δ²](#2ef) • [𝑃](#Uz0) • [𝑝](#2on) • [𝒫](#IRG)
+ • [κ,μ](#y3s) • [ℏ](#1Xb) • [π](#vmD) • [ω](#Jji) • [f](#0h7)
+ • [Eₙ](#2Xh) • [𝐱](#0bH) • [𝐩](#w6M) • [Δ²p](#k94) • [Δ²x](#oY8)
+ • [&#91;𝐱,𝐩&#93;](#bST) • [𝐇](#bdY) • [⌽ᵗₙ](#WEu) • [𝕌{⌽}](#fzU)
+ • [⌽→φ](#h8y) • [sₙ,cₙ](#zlN) • [ñ](#Ojo) • [Eₒ](#k5Y) • [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7)
+ • [p→𝑃](#mI6) • [ξ](#Pvg) • [⨋](#AXS) • [𝒟](#8P4) • [𝐴ₙ](#yYZ)
+ • [𝒢,ℊ](#lQl) • [ℋ](#m3i) • [𝒟ℋ](#mV6) • [ℋ↑](#oNs) • [ξℋ](#fqa)
+ • [Ψₙ](#rrF) • [𝒟 Ψ](#W3A) • [𝑝𝒟 Ψ](#e2c) • [Ψₒ](#lHR) • [ñ²=Σ{n²ΨₙΨₙ}](#quL)
+ • [ξΨ](#4V4) • [⧼ξ₀⧽](#1Wx) • [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#jiD) • [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz)
+ • [𝑝↑𝑝=√&#91;ñ/n↑&#93;𝑃](#V1C) • [𝑝↓𝑝=𝑃/√&#91;n↓ñ&#93;](#AyD)
  • [⧼ξₜ⧽](#geS) • [⧼ξ²⧽](#WaV) • [Δ²ξ](#8NW) • [Optimization problem](#1Pu)
  • [symmetries?](#i9c) • [ℒ](#ij2) • [𝒟 ⧼n⧽=0](#Jbc) • [𝒟ₓ⧼x²⧽](#658)
  • [⧼u⧽ₜ](#3nH) • [Ψₒₜ](#y2B) • [𝒽](#hIf) • [⌽↑](#p3u) • [⌽↓](#BNu)
  • [⌽↑,⌽↓](#2q7) • [𝛿↓](#g9G) • [𝛿↑](#QlY) • [⧼𝐱⧽](#Nde) • [⧼ξ⧽](#GJG)
  • [⧼𝐱²⧽](#B0z) • [⧼𝐱⧽ₜ](#I9g) • [Resources](#2Nz) •
-
 
 </font>
 <!-- TOC END -->
@@ -172,7 +172,9 @@ Integers and Rationals:
 
     ℤ ≡ ℕ - ℕ          # u-v, like 1-2 or just "-1".
     ℚ ≡ ℤ / ℕ{n:n≠0}   # u/v, like ½ or just "0.5".
-    ℤ{j,k,l}           # j, k, and are Integers.
+
+    ℤ{j,k,l}   # j, k, and are Integers.
+    ℚ{r}       # r is rational.
 
 ###<a name="frL"></a> uᵥ
 Subscripts (or indeces) labels a specific form of a more general expression:
@@ -303,20 +305,6 @@ One can absorb any rational multiple into ∞:
       (n)(1/N)∞
       (n)∞
       ∞
-
-One can absorb any Real multiple into ∞:
-
-    uₒ∞=∞
-    # Proof:
-       uₒ∞
-       ∞uₒ
-       ∞Σuₙ
-       Σ∞uₙ
-       Σ∞
-       ∞Σ1
-       ΣΣ1
-       (1+1+⋯)+(1+1+⋯)+⋯
-       ∞  # or ∞² ?
 
 Regardless of the issues with ∞,
 the propety I need of ∞ in definitions is that it's greater than any N:
@@ -598,7 +586,36 @@ In general I'll refer to a and b as Real number:
 
     ℝ{a,b}   # a and b are Real numbers.
 
+###<a name="pZX"></a> x,t
+[Position](http://en.wikipedia.org/wiki/Position_(vector)) and
+[time](http://en.wikipedia.org/wiki/Time):
+
+    ℝ{x,t}
+
+In general, x would be a vector (ℝ,ℝ,ℝ), but
+I'll only be working with one dimension.
+
+Note that time is measure by observing a physical clock.
+I believe this will create a [paradox](http://en.wikipedia.org/wiki/Paradox)
+because I assume there's no error in its measurement.
+To resolve the paradox someone (no not me, I'm done!)
+will have to do the dual Energy-Time problem.
+
 ###<a name="iyp"></a> ∞/∞
+One can absorb any Real multiple into ∞:
+
+    uₒ∞=∞
+    # Proof:
+       uₒ∞
+       ∞uₒ
+       ∞Σuₙ
+       Σ∞uₙ
+       Σ∞
+       ∞Σ1
+       ΣΣ1
+       (1+1+⋯)+(1+1+⋯)+⋯
+       ∞  # or ∞² ?
+
 If √4={-2,2}, then can I say:
 
     ∞/∞ = ℝ
@@ -607,17 +624,17 @@ If √4={-2,2}, then can I say:
       uₒ∞/∞  # Poops out any real number!
       uₒ     # LOL!
 
-###<a name="VAR"></a> 𝜖≡N/∞
+###<a name="rNP"></a> 𝜖≡a/∞
 [Infinitesimal](http://en.wikipedia.org/wiki/Infinitesimal).
 
-    𝜖≡ℝ{r}/∞   # Any r/∞ gives 𝜖.
+    𝜖≡a/∞   # Any r/∞ gives 𝜖.
     𝜖×∞=ℝ
 
     𝜖₁≡1/∞₁
     𝜖₁×∞₁=1
 
     # In either version,
-    ℝ{r},0<𝜖<|r|<∞
+    a,0<𝜖<|a|<∞
 
 > TODO: Note that I did not construct ∞₁. How? :-??
 > I'm guessing ∞₁ is one of an orthogonal set in ∞.
@@ -677,7 +694,6 @@ the series approaches ∞ quite literally!
 ###<a name="SuG"></a> ⨋ₓ
 
     ⨋ₓuₗₖ ≡ ∫ₓ⅀uₗₖ[x] = ∫ₓ∑∑uₗₖ[x]
-    ⨋uₗₖ ≡ ∫⅀uₗₖ[ξ] = ∫∑∑uₗₖ[ξ]
 
 Note that for the harmonic oscillator, uₗₖ will take the form uₙvₘ.
 Nonetheless, it will still be a sum over the integers where uₙvₘ=0 if n or m < 0.
@@ -730,13 +746,12 @@ Complex conjugation:
 Maybe * should really be thought as a binary operator,
 a special type of multiplication.
 
-###<a name="8P4"></a> 𝒟
+###<a name="FD0"></a> 𝒟ₓ
 The [derivative](http://en.wikipedia.org/wiki/Derivative):
 
     :Derivative{x|Σ αₙxⁿ} ≡ Σ nαₙxⁿ⁻¹
 
     𝒟ₓu[x] ≡ :Derivative{x|u[x]}
-    𝒟 u[ξ] ≡ :Derivative{ξ|u[ξ]}
 
 ###<a name="9Ql"></a> 𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v
 Dot Product Rule for 𝒟:
@@ -1219,7 +1234,7 @@ Arrows on 𝒫 will act on m:
     𝒫ₙ₍ₙ₊₁₎ = 𝒫↑𝛿
     𝒫ₙ₍ₙ-₁₎ = 𝒫↓𝛿
 
-###<a name="rOX"></a> κ,μ,x,t
+###<a name="y3s"></a> κ,μ
 I think the point here is that these values are "measured" by "experiment" in "some way".
 
 [Mass](http://en.wikipedia.org/wiki/Mass) and
@@ -1227,20 +1242,6 @@ I think the point here is that these values are "measured" by "experiment" in "s
 
     ℝ{μ}   # Mass, μ b/c m is already used.
     ℝ{κ}   # Spring constant.
-
-[Position](http://en.wikipedia.org/wiki/Position_(vector)) and
-[time](http://en.wikipedia.org/wiki/Time):
-
-    ℝ{x,t}   # Position x and time t.
-
-In general, x would be a vector (ℝ,ℝ,ℝ), but
-I'll only be working with one dimension.
-
-Note that time is measure by observing a physical clock.
-I believe this will create a [paradox](http://en.wikipedia.org/wiki/Paradox)
-because I assume there's no error in its measurement.
-To resolve the paradox someone (no not me, I'm done!)
-will have to do the dual Energy-Time problem.
 
 ###<a name="1Xb"></a> ℏ
 [Reduced Planck constant](http://en.wikipedia.org/wiki/Planck_constant):
@@ -1507,6 +1508,14 @@ The non-dimensional displacement, ξ.
 
     ξ² ≡ μω/ℏ x²   # A.1b
     x² = ℏ/(μω) ξ²
+
+###<a name="AXS"></a> ⨋
+
+    ⨋uₗₖ ≡ ∫⅀uₗₖ[ξ] = ∫∑∑uₗₖ[ξ]
+
+###<a name="8P4"></a> 𝒟
+
+    𝒟 u[ξ] ≡ :Derivative{ξ|u[ξ]}
 
 ###<a name="yYZ"></a> 𝐴ₙ
 The Normalization Constant, 𝐴ₙ:
@@ -1959,7 +1968,7 @@ Let's see how that goes:
 ###<a name="ij2"></a> ℒ
 [Lagrange multiplier](http://en.wikipedia.org/wiki/Lagrange_multiplier):
 
-    ℒ = ⧼x²⧽ + λ(⧼n⧽-ñ)
+    ℒ := ⧼x²⧽ + ℝ{λ}(⧼n⧽-ñ)   # Let ℒ be... := is just a weaker form of ≡.
 
     𝒟ₓℒ = 𝒟ₓ⧼x²⧽ + λ𝒟ₓ⧼n⧽ - λ𝒟ₓñ
     𝒟ₓℒ = 𝒟ₓ⧼x²⧽ + λ𝒟ₓ⧼n⧽   # ñ is just a constant and goes away.

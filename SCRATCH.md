@@ -1312,7 +1312,6 @@ TODO: want to explain how it relates to ΔxΔp.
 TODO:
 
 ###<a name="WEu"></a> ⌽ᵗₙ
-7.17 TODO: why -𝑖Eₙt/ℏ and not +𝑖Eₙt/ℏ?
 Time evolution:
 
     # NOTE! The ½ part makes this object a bit of a screw ball.
@@ -1332,6 +1331,10 @@ Time evolution:
     ⌽¹ = ℯ[-𝑖ω(n+½)]
     # Just to show that the notation makes sense.
     ⌽ᵗ = (⌽¹)^t = ℯ[t × (-𝑖ω(n+½))] = ℯ[-𝑖ω(n+½)t]
+
+> Why is equation [7.17](TIME.md) `-𝑖Eₙt/ℏ` and not `+𝑖Eₙt/ℏ`?
+> It looks to me to be a convention and
+> in Liboff's book it stems from defining `Û ≡ ℯ[-𝑖tĤ/ℏ]`.
 
 ###<a name="fzU"></a> 𝕌{⌽}
 ⌽ is [Unitary](http://en.wikipedia.org/wiki/Unitary_matrix):

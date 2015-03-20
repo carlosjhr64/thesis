@@ -11,7 +11,7 @@
 The [Optimization problem](http://en.wikipedia.org/wiki/Optimization_problem)
 to be solved:
 
-    :Minimize:   ΔxΔp
+    :Minimize:   Δ𝐱Δ𝐩
     :Subject_to: ⧼Ψₒ|𝐇|Ψₒ⧽ = Eₒ
 
 This will be for the quantum mechanical simple harmonic oscillator
@@ -29,9 +29,9 @@ due to the commutator relationship between 𝐱 and 𝐩, [&#91;𝐱,𝐩&#93;](
 > TODO: section on quantum number n.
 
 Noting that [Eₙ](SCRATCH.md#2Xh) goes as the quantum number n, and
-using the definitions of Δx and Δp, I then have:
+using the definitions of Δ𝐱 and Δ𝐩, I then have:
 
-    :Minimize:   √ (⧼x²⧽-⧼x⧽²)(⧼p²⧽-⧼p⧽²)
+    :Minimize:   √ (⧼𝐱²⧽-⧼𝐱⧽²)(⧼𝐩²⧽-⧼𝐩⧽²)
     :Subject_to: ⧼n⧽ = ñ
 
 where [ñ](SCRATCH.md#Ojo) is the average quantum number.

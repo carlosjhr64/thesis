@@ -23,34 +23,33 @@ it's a good warmup and demonstrates my notation.
  • [+](#YD5) • [,u,⋯](#XXo) • [ℕ](#9ET) • [+⋯](#v9b) • [Precedence rules](#MIM)
  • [ℤ and ℚ](#5dX) • [uᵥ](#frL) • [{uᵥ}](#Zk2) • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL)
  • [n×u](#vkP) • [×⋯](#uyg) • [Σuₙ](#kJ6) • [Σₙuₙ](#MlN) • [∞](#9XA)
- • [∑](#zQw) • [∑ₗ](#tky) • [⋅](#Jt7) • [Π](#J5V) • [uᵛ](#y3Z)
- • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3) • [↧,↥](#1U2) • [Σu↑](#U10)
- • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [uₒ≡Σuₙ](#CuZ) • [ℝ](#yfS)
- • [x,t](#pZX) • [∞/∞](#iyp) • [𝜖≡a/∞](#rNP) • [Σrⁿ](#5qT) • [⅀](#s2N)
- • [⨋ₓ](#SuG) • [ℂ](#Ama) • [𝑖](#FU8) • [*](#eEb) • [𝒟ₓ](#FD0)
- • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql) • [∫](#iPk) • [n!](#zaX) • [½!](#SB2)
- • [(ⁿₘ)](#qsc) • [nₘ](#t99) • [0ₘ](#KLm) • [1ₘ](#ngq) • [2ₘ](#eUd)
- • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj) • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO)
- • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK) • [n↥,n₀,n↧](#I4Q) • [nᵥn!](#jL9) • [ŉ](#44r)
- • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1) • [𝔩](#wNn) • [Sine](#ZE8) • [Cosine](#CgT)
- • [ℯ](#NLb) • [S²+C²=1](#IwS) • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿](#VuP)
+ • [∑](#zQw) • [⋅](#Jt7) • [{⋯}⋅{⋯}](#IK3) • [∑ₗ](#tky) • [Π](#J5V)
+ • [uᵛ](#y3Z) • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3) • [↧,↥](#1U2)
+ • [Σu↑](#U10) • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [uₒ≡Σuₙ](#CuZ)
+ • [ℝ](#yfS) • [x,t](#pZX) • [∞/∞](#iyp) • [𝜖≡a/∞](#rNP) • [Σrⁿ](#5qT)
+ • [⅀](#s2N) • [⨋ₓ](#SuG) • [ℂ](#Ama) • [ℯ](#NLb) • [Sine](#ZE8)
+ • [Cosine](#CgT) • [𝑖](#FU8) • [*](#eEb) • [𝒟ₓ](#FD0) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
+ • [∫](#iPk) • [n!](#zaX) • [(ⁿₘ)](#qsc) • [nₘ](#t99) • [0ₘ](#KLm)
+ • [1ₘ](#ngq) • [2ₘ](#eUd) • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj)
+ • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO) • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK)
+ • [n↥,n₀,n↧](#I4Q) • [nᵥn!](#jL9) • [ŉ](#44r) • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1)
+ • [𝔩](#wNn) • [S²+C²=1](#IwS) • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿](#VuP)
  • [⧼v⧽](#nXb) • [Δ²](#2ef) • [𝑃](#Uz0) • [𝑝](#2on) • [𝒫](#IRG)
- • [κ,μ](#y3s) • [ℏ](#1Xb) • [π](#vmD) • [ω](#Jji) • [f](#0h7)
- • [Eₙ](#2Xh) • [𝐱](#0bH) • [𝐩](#w6M) • [Δ²p](#k94) • [Δ²x](#oY8)
- • [&#91;𝐱,𝐩&#93;](#bST) • [𝐇](#bdY) • [⌽ᵗₙ](#WEu) • [𝕌{⌽}](#fzU)
- • [⌽→φ](#h8y) • [sₙ,cₙ](#zlN) • [ñ](#Ojo) • [Eₒ](#k5Y) • [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7)
- • [p→𝑃](#mI6) • [ξ](#Pvg) • [⨋](#AXS) • [𝒟](#8P4) • [𝒟ₓξ](#QcB)
- • [𝒟 x](#o8p) • [𝐴ₙ](#yYZ) • [𝒢,ℊ](#lQl) • [ℋ](#m3i) • [𝒟ℋ](#mV6)
- • [ℋ↑](#oNs) • [ξℋ](#fqa) • [Ψₙ](#rrF) • [𝒟 Ψ](#W3A) • [𝑝𝒟 Ψ](#e2c)
- • [Ψₒ](#lHR) • [ñ²=Σ{n²ΨₙΨₙ}](#quL) • [ξΨ](#4V4) • [⧼ξ₀⧽](#1Wx)
- • [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#jiD) • [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz) • [𝑝↑𝑝=√&#91;ñ/n↑&#93;𝑃](#V1C)
- • [𝑝↓𝑝=𝑃/√&#91;n↓ñ&#93;](#AyD) • [⧼ξₜ⧽](#geS) • [⧼ξ²⧽](#WaV)
- • [Δ²ξ](#8NW) • [Optimization problem](#1Pu) • [symmetries?](#i9c)
- • [ℒ](#ij2) • [𝒟 ⧼n⧽=0](#Jbc) • [𝒟ₓ⧼x²⧽](#658) • [⧼u⧽ₜ](#3nH)
- • [Ψₒₜ](#y2B) • [𝛽](#FnP) • [𝒽](#hIf) • [⌽↑](#p3u) • [⌽↓](#BNu)
- • [⌽↑,⌽↓](#2q7) • [𝛿↓](#g9G) • [𝛿↑](#QlY) • [⧼𝐱⧽](#Nde) • [⧼ξ⧽](#GJG)
- • [⧼𝐱²⧽](#B0z) • [⧼𝐱⧽ₜ](#I9g) • [⧼𝐩⧽](#eVh) • [Resources](#2Nz)
- •
+ • [κ,μ](#y3s) • [π](#vmD) • [½!](#SB2) • [ℏ](#1Xb) • [ω](#Jji)
+ • [f](#0h7) • [Eₙ](#2Xh) • [𝐱](#0bH) • [𝐩](#w6M) • [Δ²𝐩](#mo3)
+ • [Δ²𝐱](#8SV) • [&#91;𝐱,𝐩&#93;](#bST) • [𝐇](#bdY) • [⌽ᵗₙ](#WEu)
+ • [𝕌{⌽}](#fzU) • [⌽→φ](#h8y) • [sₙ,cₙ](#zlN) • [ñ](#Ojo) • [Eₒ](#k5Y)
+ • [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7) • [p→𝑃](#mI6) • [ξ](#Pvg) • [⨋](#AXS)
+ • [𝒟](#8P4) • [𝛽](#FnP) • [𝒽](#hIf) • [𝒟ₓξ](#QcB) • [𝒟 x](#o8p)
+ • [𝐴ₙ](#yYZ) • [𝒢,ℊ](#lQl) • [ℋ](#m3i) • [𝒟ℋ](#mV6) • [ℋ↑](#oNs)
+ • [ξℋ](#fqa) • [Ψₙ](#rrF) • [𝒟 Ψ](#W3A) • [𝑝𝒟 Ψ](#e2c) • [Ψₒ](#lHR)
+ • [ñ²=Σ{n²ΨₙΨₙ}](#quL) • [ξΨ](#4V4) • [⧼ξ₀⧽](#1Wx) • [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#jiD)
+ • [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz) • [𝑝↑𝑝=√&#91;ñ/n↑&#93;𝑃](#V1C) • [𝑝↓𝑝=𝑃/√&#91;n↓ñ&#93;](#AyD)
+ • [⧼ξₜ⧽](#geS) • [⧼ξ²⧽](#WaV) • [Δ²ξ](#8NW) • [Optimization problem](#1Pu)
+ • [symmetries?](#i9c) • [ℒ](#ij2) • [𝒟 ⧼n⧽=0](#Jbc) • [𝒟ₓ⧼x²⧽](#658)
+ • [⧼u⧽ₜ](#3nH) • [Ψₒₜ](#y2B) • [⌽↑](#p3u) • [⌽↓](#BNu) • [⌽↑,⌽↓](#2q7)
+ • [𝛿↓](#g9G) • [𝛿↑](#QlY) • [⧼𝐱⧽](#Nde) • [⧼ξ⧽](#GJG) • [⧼𝐱²⧽](#B0z)
+ • [⧼𝐱⧽ₜ](#I9g) • [⧼𝐩⧽](#eVh) • [Resources](#2Nz) •
 
 
 </font>
@@ -365,6 +364,21 @@ Some systems have 1/0=∞, but 0×∞=0×Σ1=Σ0×1=Σ0=0, and therefore also Σ
     u/0=r ↔ 0/0=r ↔ 0=0×r ↔ 0/r=0 # gsub('v', '0')
     u/0=r ↔ 1/0=r ↔ 1=0×r ↔ 1/r=0 # gsub('v', '1')
 
+###<a name="zQw"></a> ∑
+Sum over Integer, ℤ, indeces:
+
+    ∑uₗ ≡ Σ[-∞,∞]{l|uₗ}     # ⋯+u₋₁+u₀+u₁+⋯
+    ∑uₗ = Σuₙ + Σu-ₙ - u₀   # Take out the extra u₀
+
+Notice that the symbol ∑ is sligtly taller than the symbol Σ.
+Basically I'm creating shorthand notations for sums over ℤ vs. sums over ℕ.
+
+###<a name="Jt7"></a> ⋅
+The dot operator:
+
+    {uₗ}⋅{vₗ} ≡ ∑ uₗvₗ
+
+###<a name="IK3"></a> {⋯}⋅{⋯}
 OK, so I'm a bit suspicious of ∞.
 Consider this:
 
@@ -380,26 +394,12 @@ And it really is a different object than the one without a hole.
 The regular infinity produced by `1+1+...` is both a sink and a source, but
 did I really loose the hole?
 
-###<a name="zQw"></a> ∑
-Sum over Integer, ℤ, indeces:
-
-    ∑uₗ ≡ Σ[-∞,∞]{l|uₗ}     # ⋯+u₋₁+u₀+u₁+⋯
-    ∑uₗ = Σuₙ + Σu-ₙ - u₀   # Take out the extra u₀
-
-Notice that the symbol ∑ is sligtly taller than the symbol Σ.
-Basically I'm creating shorthand notations for sums over ℤ vs. sums over ℕ.
-
 ###<a name="tky"></a> ∑ₗ
 Halting sum over Integer, ℤ, indeces:
 
     ∑ₗuₗ ≡ Σ[-M,M]{l|uₗ}   # Halting version of ∑
 
     ∑ₗ1 = 2M+1 = 2N-1
-
-###<a name="Jt7"></a> ⋅
-The dot operator:
-
-    {uₗ}⋅{vₗ} ≡ ∑ uₗvₗ
 
 ###<a name="J5V"></a> Π
 Products of sequences,
@@ -715,6 +715,40 @@ In general I'll refer to α and β as Complex numbers:
 
     ℂ{α,β}   # α and β are Complex numbers.
 
+###<a name="NLb"></a> ℯ
+[Exponential](http://en.wikipedia.org/wiki/Exponential_function#Formal_definition)
+series definition:
+
+    :Exponential[u] ≡ Σ uⁿ / n!
+    ℯ[u] ≡ :Exponential[u]
+    ℯᵘ ≡ ℯ^(u) ≡ ℯ[u]   # Alternate forms.
+
+###<a name="ZE8"></a> Sine
+[Sine](http://en.wikipedia.org/wiki/Sine#Series_definition)
+series definition:
+
+    :Sine[u] ≡ Σ (-1)ⁿ u^(2n+1) / (2n+1)!
+    S[u] ≡ :Sine[u]
+
+    Sᵤ = Σ 𝔩ⁿu^n↥₂/n↥₂!   # Isn't this fun!
+    # Proof:
+      :Sine[u] = Σ (-1)ⁿ u^(2n+1) / (2n+1)!
+      S[u] = Σ (-1)ⁿ u^(2n+1) / (2n+1)!
+      Sᵤ = Σ (-1)ⁿ u^(2n+1) / (2n+1)!   # Sᵤ=S[u,...]
+      Sᵤ = Σ 𝔩ⁿ u^(2n+1) / (2n+1)!      # 𝔩=-1
+      Sᵤ = Σ 𝔩ⁿu^n↥₂/n↥₂!               # n↥₂=2n↥=2(n+1)
+
+###<a name="CgT"></a> Cosine
+[Cosine](http://en.wikipedia.org/wiki/Trigonometric_functions#Series_definitions)
+series definition:
+
+    :Cosine[u] ≡ Σ (-1)ⁿ u^(2n) / (2n)!
+    C[u] ≡ :Cosine[u]
+
+    Cᵤ = Σ 𝔩ⁿu^(2n)/(2n)!
+
+So n↥₂ may not be the appropriate thing to use describe S after all.
+
 ###<a name="FU8"></a> 𝑖
 The Imaginary number 𝑖:
 
@@ -826,14 +860,6 @@ Factorial:
       -1u[-1]
       -1×0
       0   # In general 1/u! = 0 ← ℤ{u<0}
-
-###<a name="SB2"></a> ½!
-From the [Gamma and Pi functions](http://en.wikipedia.org/wiki/Factorial#The_Gamma_and_Pi_functions):
-
-    ½! = ½√π
-
-> Because I don't believe in coincidence of this type.
-> I think I've seen ½√π somewhere in the problem.
 
 ###<a name="qsc"></a> (ⁿₘ)
 [Binomial coefficient](http://en.wikipedia.org/wiki/Binomial_coefficient),
@@ -1066,40 +1092,6 @@ Subscripts are not always available, so here's an alternate notation:
 
     𝔩ⁿ = (n%2=0)? 1 : -1   # Used to add when even, subtract when odd.
 
-###<a name="ZE8"></a> Sine
-[Sine](http://en.wikipedia.org/wiki/Sine#Series_definition)
-series definition:
-
-    :Sine[u] ≡ Σ (-1)ⁿ u^(2n+1) / (2n+1)!
-    S[u] ≡ :Sine[u]
-
-    Sᵤ = Σ 𝔩ⁿu^n↥₂/n↥₂!   # Isn't this fun!
-    # Proof:
-      :Sine[u] = Σ (-1)ⁿ u^(2n+1) / (2n+1)!
-      S[u] = Σ (-1)ⁿ u^(2n+1) / (2n+1)!
-      Sᵤ = Σ (-1)ⁿ u^(2n+1) / (2n+1)!   # Sᵤ=S[u,...]
-      Sᵤ = Σ 𝔩ⁿ u^(2n+1) / (2n+1)!      # 𝔩=-1
-      Sᵤ = Σ 𝔩ⁿu^n↥₂/n↥₂!               # n↥₂=2n↥=2(n+1)
-
-###<a name="CgT"></a> Cosine
-[Cosine](http://en.wikipedia.org/wiki/Trigonometric_functions#Series_definitions)
-series definition:
-
-    :Cosine[u] ≡ Σ (-1)ⁿ u^(2n) / (2n)!
-    C[u] ≡ :Cosine[u]
-
-    Cᵤ = Σ 𝔩ⁿu^(2n)/(2n)!
-
-So n↥₂ may not be the appropriate thing to use describe S after all.
-
-###<a name="NLb"></a> ℯ
-[Exponential](http://en.wikipedia.org/wiki/Exponential_function#Formal_definition)
-series definition:
-
-    :Exponential[u] ≡ Σ uⁿ / n!
-    ℯ[u] ≡ :Exponential[u]
-    ℯᵘ ≡ ℯ^(u) ≡ ℯ[u]   # Alternate forms.
-
 ###<a name="IwS"></a> S²+C²=1
 [Trigonometric Identities](http://en.wikipedia.org/wiki/List_of_trigonometric_identities):
 
@@ -1246,12 +1238,6 @@ I think the point here is that these values are "measured" by "experiment" in "s
     ℝ{μ}   # Mass, μ b/c m is already used.
     ℝ{κ}   # Spring constant.
 
-###<a name="1Xb"></a> ℏ
-[Reduced Planck constant](http://en.wikipedia.org/wiki/Planck_constant):
-
-    ℝ{ℎ}
-    ℏ ≡ ℎ/2π
-
 ###<a name="vmD"></a> π
 You can check that there exist several series 
 of rational terms that produce [π](http://en.wikipedia.org/wiki/Pi).
@@ -1279,6 +1265,20 @@ Anyways, I think I can trust [algebra](http://en.wikipedia.org/wiki/Algebra)
 to say π/π=1, and if the final result of the algebra is Rational(ℚ),
 I won't worry about it.  OK!
 
+###<a name="SB2"></a> ½!
+From the [Gamma and Pi functions](http://en.wikipedia.org/wiki/Factorial#The_Gamma_and_Pi_functions):
+
+    ½! = ½√π
+
+> Because I don't believe in coincidence of this type.
+> I think I've seen ½√π somewhere in the problem.
+
+###<a name="1Xb"></a> ℏ
+[Reduced Planck constant](http://en.wikipedia.org/wiki/Planck_constant):
+
+    ℝ{ℎ}
+    ℏ ≡ ℎ/2π
+
 ###<a name="Jji"></a> ω
 
     ω² ≡ κ/μ   # Angular frequency
@@ -1290,7 +1290,7 @@ I won't worry about it.  OK!
 
 ###<a name="2Xh"></a> Eₙ
 
-    Eₙ = ωℏ(n+½)   # 3.2: Energy eigen-value
+    Eₙ ≡ ωℏ(n+½)   # 3.2: Energy eigen-value
 
 ###<a name="0bH"></a> 𝐱
 
@@ -1300,17 +1300,17 @@ I won't worry about it.  OK!
 
     𝐩 ≡ -𝑖ℏ𝒟ₓ
 
-###<a name="k94"></a> Δ²p
+###<a name="mo3"></a> Δ²𝐩
 
 TODO:
 
-###<a name="oY8"></a> Δ²x
+###<a name="8SV"></a> Δ²𝐱
 
 TODO:
 
 ###<a name="bST"></a> [𝐱,𝐩]
 
-TODO: want to explain how it relates to ΔxΔp.
+TODO: want to explain how it relates to Δ𝐱Δ𝐩.
 
 ###<a name="bdY"></a> 𝐇
 
@@ -1519,6 +1519,28 @@ The non-dimensional displacement, ξ.
 ###<a name="8P4"></a> 𝒟
 
     𝒟 u[ξ] ≡ :Derivative{ξ|u[ξ]}
+
+###<a name="FnP"></a> 𝛽
+
+    𝛽² ≡ μω/ℏ
+
+###<a name="hIf"></a> 𝒽
+
+    𝒽 ≡ ℏ/(μω)
+
+    𝒽 = 1/𝛽²
+    𝛽 = 1/√𝒽
+
+    ξ² = x²/𝒽 = ʼ𝒽x²
+    # Proof:
+      ξ² = μω/ℏ x²        # By definition.
+      ξ² = ʼ(ℏ/(μω)) x²   # ʼu=1/u.
+      ξ² = ʼ(𝒽) x²        # 𝒽≡ℏ/(μω)
+      ξ² = ʼ𝒽 x²
+      ξ² = x²/𝒽
+
+    x² = 𝒽 ξ²
+    x = √𝒽 ξ   = 𝛽ξ
 
 ###<a name="QcB"></a> 𝒟ₓξ
 
@@ -1950,7 +1972,7 @@ TODO: ⧼ξ²⧽:
 The [Optimization problem](http://en.wikipedia.org/wiki/Optimization_problem)
 to be solved:
 
-    :Minimize:   ΔxΔp
+    :Minimize:   Δ𝐱Δ𝐩
     :Subject_to: ⧼Ψₒ|𝐇|Ψₒ⧽ = Eₒ
 
 This will be for the quantum mechanical simple harmonic oscillator
@@ -1968,9 +1990,9 @@ due to the commutator relationship between 𝐱 and 𝐩, [&#91;𝐱,𝐩&#93;](
 > TODO: section on quantum number n.
 
 Noting that [Eₙ](SCRATCH.md#2Xh) goes as the quantum number n, and
-using the definitions of Δx and Δp, I then have:
+using the definitions of Δ𝐱 and Δ𝐩, I then have:
 
-    :Minimize:   √ (⧼x²⧽-⧼x⧽²)(⧼p²⧽-⧼p⧽²)
+    :Minimize:   √ (⧼𝐱²⧽-⧼𝐱⧽²)(⧼𝐩²⧽-⧼𝐩⧽²)
     :Subject_to: ⧼n⧽ = ñ
 
 where [ñ](SCRATCH.md#Ojo) is the average quantum number.
@@ -1980,22 +2002,24 @@ It would not be to hard to argue (TODO: demonstrate this) that
 by symmetry (⧼x²⧽-⧼x⧽²)=(⧼p²⧽-⧼p⧽²) and also that I can set ⧼x⧽=0.
 Then the problem is:
 
-    :Minimize:   ⧼x²⧽
-    :Subject_to: ⧼n⧽=ñ, ⧼x⧽=0, ⧼x²⧽=⧼p²⧽-⧼p⧽²
+    :Minimize:   ⧼𝐱²⧽
+    :Subject_to: ⧼n⧽=ñ, ⧼x⧽=0, ⧼𝐱²⧽=⧼𝐩²⧽-⧼𝐩⧽²
+
+> So here I actually mean the non-dimensional versions, right?
 
 I suspect the extra conditions might be satisfied "for free".
 Let's see how that goes:
 
-    :Min: ⧼x²⧽
+    :Min: ⧼𝐱²⧽
     :Sub: ⧼n⧽ = ñ   # Ignoring the rest of the constraints for now.
 
 ###<a name="ij2"></a> ℒ
 [Lagrange multiplier](http://en.wikipedia.org/wiki/Lagrange_multiplier):
 
-    ℒ := ⧼x²⧽ + ℝ{λ}(⧼n⧽-ñ)   # Let ℒ be... := is just a weaker form of ≡.
+    ℒ := ⧼𝐱²⧽ + ℝ{λ}(⧼n⧽-ñ)   # Let ℒ be... := is just a weaker form of ≡.
 
-    𝒟ₓℒ = 𝒟ₓ⧼x²⧽ + λ𝒟ₓ⧼n⧽ - λ𝒟ₓñ
-    𝒟ₓℒ = 𝒟ₓ⧼x²⧽ + λ𝒟ₓ⧼n⧽   # ñ is just a constant and goes away.
+    𝒟ₓℒ = 𝒟ₓ⧼𝐱²⧽ + λ𝒟ₓ⧼n⧽ - λ𝒟ₓñ
+    𝒟ₓℒ = 𝒟ₓ⧼𝐱²⧽ + λ𝒟ₓ⧼n⧽   # ñ is just a constant and goes away.
 
 𝒟ₓ is the derivative with respect to x.
 I will also use [𝒟](SCRATCH.md#8P4)
@@ -2130,28 +2154,6 @@ See the derivation of [ξΨ](SCRATCH.md#4V4). Then proceed:
 
 ###<a name="y2B"></a> Ψₒₜ
 TODO
-
-###<a name="FnP"></a> 𝛽
-
-    𝛽² ≡ μω/ℏ
-
-###<a name="hIf"></a> 𝒽
-
-    𝒽 ≡ ℏ/(μω)
-
-    𝒽 = 1/𝛽²
-    𝛽 = 1/√𝒽
-
-    ξ² = x²/𝒽 = ʼ𝒽x²
-    # Proof:
-      ξ² = μω/ℏ x²        # By definition.
-      ξ² = ʼ(ℏ/(μω)) x²   # ʼu=1/u.
-      ξ² = ʼ(𝒽) x²        # 𝒽≡ℏ/(μω)
-      ξ² = ʼ𝒽 x²
-      ξ² = x²/𝒽
-
-    x² = 𝒽 ξ²
-    x = √𝒽 ξ   = 𝛽ξ
 
 ###<a name="p3u"></a> ⌽↑
 

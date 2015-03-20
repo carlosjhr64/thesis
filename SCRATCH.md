@@ -46,7 +46,7 @@ it's a good warmup and demonstrates my notation.
  • [ñ²=Σ{n²ΨₙΨₙ}](#quL) • [ξΨ](#4V4) • [⧼ξ₀⧽](#1Wx) • [⌽𝐴ℋ↓/½n↓=⌽↥/√½n↓⌽↓Ψ↓](#jiD)
  • [⌽𝐴ℋ↑=⌽↧√2n↑⌽↑Ψ↑](#5Mz) • [𝑝↑𝑝=√&#91;ñ/n↑&#93;𝑃](#V1C) • [𝑝↓𝑝=𝑃/√&#91;n↓ñ&#93;](#AyD)
  • [⧼ξₜ⧽](#geS) • [⧼ξ²⧽](#WaV) • [Δ²ξ](#8NW) • [Optimization problem](#1Pu)
- • [symmetries?](#i9c) • [ℒ](#ij2) • [𝒟 ⧼n⧽=0](#Jbc) • [𝒟ₓ⧼x²⧽](#658)
+ • [symmetries?](#i9c) • [ℒ](#ij2) • [𝒟 ⧼n⧽=0](#Jbc) • [𝒟ₓ⧼𝐱²⧽](#iFR)
  • [⧼u⧽ₜ](#3nH) • [Ψₒₜ](#y2B) • [⌽↑](#p3u) • [⌽↓](#BNu) • [⌽↑,⌽↓](#2q7)
  • [𝛿↓](#g9G) • [𝛿↑](#QlY) • [⧼𝐱⧽](#Nde) • [⧼ξ⧽](#GJG) • [⧼𝐱²⧽](#B0z)
  • [⧼𝐱⧽ₜ](#I9g) • [⧼𝐩⧽](#eVh) • [Resources](#2Nz) •
@@ -1999,11 +1999,11 @@ where [ñ](SCRATCH.md#Ojo) is the average quantum number.
 
 ###<a name="i9c"></a> symmetries?
 It would not be to hard to argue (TODO: demonstrate this) that
-by symmetry (⧼x²⧽-⧼x⧽²)=(⧼p²⧽-⧼p⧽²) and also that I can set ⧼x⧽=0.
+by symmetry (⧼𝐱²⧽-⧼𝐱⧽²)=(⧼𝐩²⧽-⧼𝐩⧽²) and also that I can set ⧼𝐱⧽=0.
 Then the problem is:
 
     :Minimize:   ⧼𝐱²⧽
-    :Subject_to: ⧼n⧽=ñ, ⧼x⧽=0, ⧼𝐱²⧽=⧼𝐩²⧽-⧼𝐩⧽²
+    :Subject_to: ⧼n⧽=ñ, ⧼𝐱⧽=0, ⧼𝐱²⧽=⧼𝐩²⧽-⧼𝐩⧽²
 
 > So here I actually mean the non-dimensional versions, right?
 
@@ -2087,8 +2087,8 @@ But there are no negative quantum numbers for the harmonic oscillator.
 That is, for quantum numbers less than 0, the states are zero!
 So there are no dangling terms with [∑u↑](SCRATCH.md#Uf9) or [∑u↓](SCRATCH.md#blg).
 
-###<a name="658"></a> 𝒟ₓ⧼x²⧽
-Consider ⧼x²⧽.
+###<a name="iFR"></a> 𝒟ₓ⧼𝐱²⧽
+Consider ⧼𝐱²⧽.
 This should give the properties of an optimun distribution:
 
     𝒟ₓ⧼𝐱²⧽

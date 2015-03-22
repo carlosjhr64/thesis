@@ -28,7 +28,7 @@ it's a good warmup and demonstrates my notation.
  • [Σu↑](#U10) • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [uₒ≡Σuₙ](#CuZ)
  • [ℝ](#yfS) • [x,t](#pZX) • [∞/∞](#iyp) • [𝜖≡a/∞](#rNP) • [Σrⁿ](#5qT)
  • [⅀](#s2N) • [⨋ₓ](#SuG) • [ℂ](#Ama) • [ℯ](#NLb) • [Sine](#ZE8)
- • [Cosine](#CgT) • [𝑖](#FU8) • [*](#eEb) • [𝒟ₓ](#FD0) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
+ • [Cosine](#CgT) • [𝑖](#FU8) • [&#42;](#XXd) • [𝒟ₓ](#FD0) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
  • [∫](#iPk) • [n!](#zaX) • [(ⁿₘ)](#qsc) • [nₘ](#t99) • [0ₘ](#KLm)
  • [1ₘ](#ngq) • [2ₘ](#eUd) • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj)
  • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO) • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK)
@@ -764,7 +764,7 @@ The Imaginary number 𝑖:
     (u,v) = u+𝑖v
     𝑖² = -1
 
-###<a name="eEb"></a> *
+###<a name="XXd"></a> &#42;
 Complex conjugation:
 
     (u,v)* ≡ (u,-v)
@@ -783,7 +783,7 @@ Complex conjugation:
       (uᵣ,uᵢ)*(vᵣ,vᵢ) = (uᵣvᵣ+uᵢvᵢ, uᵣvᵢ-uᵢvᵣ)
       (uᵣ,uᵢ)*(uᵣ,uᵢ) = (u²ᵣ+u²ᵢ, 0)
 
-Maybe * should really be thought as a binary operator,
+Maybe `*` should really be thought as a binary operator,
 a special type of multiplication.
 
 ###<a name="FD0"></a> 𝒟ₓ

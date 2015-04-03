@@ -1,19 +1,20 @@
 [CONTENTS](CONTENTS.md)
 
 # The (Over The Top (Extreme)) Full Monty
-Here I write explicitly all my work, as if writting computer code.
+Here I write explicitly all my work, as if writing computer code.
 Consider all symbols to have global scope.
 Each symbol should only be defined once,
-except u and v which will be used as temporary general variables.
-In books you'll see sin²(x) to mean sin(x)×sin(x).
+except `u` and `v` which will be used as temporary general variables.
+In books you'll see `sin²(x)` to mean `sin(x)×sin(x)`.
 I'll use that convention in general.
-u²[v] will mean u[v]×u[v] and not u[u[v]].
+`u²[v]` will mean `u[v]×u[v]` and not `u[u[v]]`.
 The initial part of this section goes over elementary material, but
-it's a good warmup and demonstrates my notation.
+it's a good warm-up and demonstrates my notation.
 
 > This section was not in the original thesis.
-> Eventually I hope to have the entire work in one stream of "mathematical code".
-> Please use github to contact me to let me know of any errors (of any type).
+> Eventually I hope to have the entire work in one stream of mathematical code.
+> Please use GitHub's [issues](https://github.com/carlosjhr64/thesis/issues)
+> to let me know of any errors (of any type).
 
 <!-- TOC START -->
 ### Sections
@@ -59,6 +60,7 @@ it's a good warmup and demonstrates my notation.
 <!-- TOC END -->
 
 ###<a name="G0p"></a> Expressions
+
 This file is written in [Markdown](http://en.wikipedia.org/wiki/Markdown) format.
 Proper mathematical
 [expressions](http://en.wikipedia.org/wiki/Expression_%28mathematics%29)
@@ -72,23 +74,24 @@ Everything else is commentary.
 
 > TODO:
 > Convention on alphabet/letter use?
-> π is a constant ℝ < ℂ.
-> 𝑖 is a constant 𝕀 < ℂ?
-> n is variable ℕ < ℤ < ℚ < ℝ < ℂ.
-> N is a constant ℕ.
+> `π` is a constant `ℝ < ℂ`.
+> `𝑖` is a constant `𝕀 < ℂ`?
+> `n` is variable `ℕ < ℤ < ℚ < ℝ < ℂ`.
+> `N` is a constant `ℕ`.
 > :-??
 
 ###<a name="tFf"></a> DRY
+
 I'm going to try to follow
 [code refactoring](http://en.wikipedia.org/wiki/Code_refactoring) and
 [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principles.
 
 ###<a name="6NE"></a> Bootstrapping
-I don't think I can avoid an initial [bootstraping](http://en.wikipedia.org/wiki/Bootstrapping),
+I don't think I can avoid an initial [bootstrapping](http://en.wikipedia.org/wiki/Bootstrapping),
 where the following symbols, or [reserved words](http://en.wikipedia.org/wiki/Reserved_word),
-are undestood:
+are understood:
 
-    {[(,→≡)]}
+    {[(≡,→)]}
 
 I will use `{}` to enclose a set,
 `[]` to enclose values for an operator, and
@@ -99,11 +102,11 @@ I will use `{}` to enclose a set,
 ###<a name="F7W"></a> {u,v,w}
 Arbitrary symbols:
 
-     {u,v}           # I conjure up u and v of any type.
-     w≡v → w=v       # If I define w as v, then w is v, capiche?
-     u≡u             # So I tell you things are themselves.
-     u=u             # Then you accept things are themselves.
-     w=v,v=u → w=u   # Transitive Property of Equality.
+    {u,v}           # I conjure up u and v of any type.
+    w≡v → w=v       # If I define w as v, then w is v, capiche?
+    u≡u             # So I tell you things are themselves.
+    u=u             # Then you accept things are themselves.
+    w=v,v=u → w=u   # Transitive Property of Equality.
 
 ###<a name="YD5"></a> +
 [Addition](http://en.wikipedia.org/wiki/Addition):
@@ -2531,6 +2534,9 @@ I'd like to add (or reiterate) the following resources:
 * mathdude2012's [Uncertainty Principle with Time and Energy](https://www.youtube.com/watch?v=Eb3V8GrR7jk)
 * professofleonard57's [Series, Geometric Series, Harmonic Series, and Divergence Test](http://youtu.be/DGcWMdW-72M)
 * MindYourDecisions' [What is the factorial of 1/2? The surprising answer: (1/2)!=(√π)/2](http://youtu.be/QhDDpSju3uY)
+* yourteachermathhelp's [Geometry Proofs - Algebra Proofs - MathHelp.com](http://youtu.be/WXzpisUh0AU)
+* sidlmorris' [Topology Without Tears - Video 4a - Writting Proofs in Mathematics](http://youtu.be/T1snRQEQuEk)
+* DMAshura's [Introduction to Higher Mathematics](https://www.youtube.com/user/DMAshura/playlists)
 
 So the way it works is that any mistakes herein are all my fault.
 If I say anything good, it's because of these other people:

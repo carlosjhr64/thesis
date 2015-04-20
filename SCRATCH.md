@@ -87,26 +87,24 @@ I'm going to try to follow
 [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principles.
 
 ###<a name="6NE"></a> Bootstrapping
-I don't think I can avoid an initial [bootstrapping](http://en.wikipedia.org/wiki/Bootstrapping),
-where the following symbols, or [reserved words](http://en.wikipedia.org/wiki/Reserved_word),
-are understood:
-
-    {[(≡,→)]}
-
-I will use `{}` to enclose a set,
+I don't think I can avoid an initial [bootstrapping](http://en.wikipedia.org/wiki/Bootstrapping).
+The symbols `:{[(,≡)]}` are [reserved words](http://en.wikipedia.org/wiki/Reserved_word).
+I mainly use `:` to mark the beggining of a multiletter word.
+`≡` means definition.
+I use `{}` to enclose a set,
 `[]` to enclose values for an operator, and
 `()` to group.
-`→` means implication.
-`≡` means definition.
+`,` means "and".
+Spaces can modify the meaning of a statement by changing prececedence.
 
 ###<a name="F7W"></a> {u,v,w}
 Arbitrary symbols:
 
-    {u,v}           # I conjure up u and v of any type.
-    w≡v → w=v       # If I define w as v, then w is v, capiche?
+    {u,v,w}         # I conjure up u, v, and w of any type.
+    w≡v             # If I define w as v,...
+    w=v             # ...then w is v, capiche?
     u≡u             # So I tell you things are themselves.
     u=u             # Then you accept things are themselves.
-    w=v,v=u → w=u   # Transitive Property of Equality.
 
 ###<a name="YD5"></a> +
 [Addition](http://en.wikipedia.org/wiki/Addition):
@@ -119,6 +117,7 @@ Arbitrary symbols:
 ###<a name="XXo"></a> ,u,⋯
 [Ellipsis](http://en.wikipedia.org/wiki/Ellipsis#In_mathematical_notation):
 
+    {⋯}
     ,u,⋯  ≡ ,u,u+1,⋯
 
 ###<a name="9ET"></a> ℕ

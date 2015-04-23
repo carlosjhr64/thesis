@@ -100,25 +100,21 @@ Spaces can modify the meaning of a statement by changing prececedence.
 ###<a name="F7W"></a> {u,v,w}
 Arbitrary symbols:
 
-    {u,v,w}         # I conjure up u, v, and w of any type.
-    w≡v             # If I define w as v,...
-    w=v             # ...then w is v, capiche?
-    u≡u             # So I tell you things are themselves.
-    u=u             # Then you accept things are themselves.
+    𝒰{𝓊,𝓋,𝓌}   # I conjure up u, v, and w of any type.
+    𝓊 = 𝓊      # Things are themselves.
 
 ###<a name="YD5"></a> +
 [Addition](http://en.wikipedia.org/wiki/Addition):
 
-    {0,1}
-    0+0 ≡ 0
+    ℕ{0,1,2,3,4,5,6,7,8,9}  # I can conjure a new type and symbols of that type.
+    0+0 ≡ 0                 # And define new combinations of symbols as something else.
     0+1 ≡ 1
     1+0 ≡ 1
 
 ###<a name="XXo"></a> ,u,⋯
 [Ellipsis](http://en.wikipedia.org/wiki/Ellipsis#In_mathematical_notation):
 
-    {⋯}
-    ,u,⋯  ≡ ,u,u+1,⋯
+    ,𝓊,⋯ ⇔ ,𝓊,𝓊+1,⋯
 
 ###<a name="9ET"></a> ℕ
 [Natural (Counting) numbers](http://en.wikipedia.org/wiki/Natural_number),
@@ -135,26 +131,45 @@ the set or ordered type /^\d+$/:
     8 ≡ 7+1
     9 ≡ 8+1
 
-    ℕ{0,1,2,3,4,5,6,7,8,9} # The digits are Natural numbers.
+    ℕ{N,M,n,m} # Conjure up N, M, n, and m as Natural numbers.
+    M ≡ N-1    # This just simplifies notation later on.
 
-    ℕ{N,n,m}   # Conjure up N, M, n, and m as Natural numbers.
-    M≡N-1      # This just simplifies notation later on.
+    ℕ = ℕ
+    ℕ = {0,1,⋯}
+    ℕ = {0,1,1+1,⋯}
+    ℕ = {0,1,2,⋯}
+    ℕ = {0,1,2,2+1,⋯}
+    ℕ = {0,1,2,3,⋯}
+    ℕ = {0,1,2,3,3+1,⋯}
+    ℕ = {0,1,2,3,4,⋯}
+    ℕ = {0,1,2,3,4,4+1,⋯}
+    ℕ = {0,1,2,3,4,5,⋯}
+    ℕ = {0,1,2,3,4,5,5+1,⋯}
+    ℕ = {0,1,2,3,4,5,6,⋯}
+    ℕ = {0,1,2,3,4,5,6,6+1,⋯}
+    ℕ = {0,1,2,3,4,5,6,7,⋯}
+    ℕ = {0,1,2,3,4,5,6,7,7+1,⋯}
+    ℕ = {0,1,2,3,4,5,6,7,8,⋯}
+    ℕ = {0,1,2,3,4,5,6,7,8,8+1,⋯}
+    ℕ = {0,1,2,3,4,5,6,7,8,9,⋯}
+    ℕ = {0,1,2,3,4,5,6,7,8,9,9+1,⋯}
 
 ###<a name="v9b"></a> +⋯
 
-    u+u+⋯ ≡ u + u+u+⋯
-    uₙ+uₙ₊₁+⋯ ≡ uₙ + uₙ₊₁+uₙ₊₂+⋯
-    uₙ,⋯ ≡ uₙ,uₙ₊₁,⋯
+    𝕟{ₙ,ₘ}
+    𝓊+𝓊+⋯ ⇔ 𝓊 + 𝓊+𝓊+⋯
+    𝓊ₙ+𝓊ₙ₊₁+⋯ ⇔ 𝓊ₙ + 𝓊ₙ₊₁+𝓊ₙ₊₂+⋯
+    𝓊ₙ,⋯ ⇔ 𝓊ₙ,𝓊ₙ₊₁,⋯
     n,n+1,⋯ ≡ n,n+1,n+2,⋯
-    uₘ+⋯+uₙ ≡ (m<n)? uₘ+uₘ₊₁+⋯+uₙ : (m>n)? 0 : uₙ
+    𝓊ₘ+⋯+𝓊ₙ ⇔ (m<n)? 𝓊ₘ+𝓊ₘ₊₁+⋯+𝓊ₙ : (m>n)? 0 : 𝓊ₙ
 
 ###<a name="MIM"></a> Precedence rules
 The following precedence rules are in order:
 
-    u⇤u ≡ (u⇤)u       # Left binding operator.
-    u⇥v ≡ u(⇥v)       # Right binding operator.
-    u v w ≡ (u(vw))   # "Σ uv" means "Σ{uv}", not "Σ{u}v".
-    uvw ≡ ((uv)w)     # Default way to read expressions.
+    𝓊⇤𝓊 ⇔ (𝓊⇤)𝓊       # Left binding operator.
+    𝓊⇥𝓋 ⇔ 𝓊(⇥𝓋)       # Right binding operator.
+    𝓊 𝓋 𝓌 ⇔ (𝓊(𝓋𝓌))   # "Σ 𝓊𝓋" means "Σ{𝓊𝓋}", not "Σ{𝓊}𝓋".
+    𝓊𝓋𝓌 ⇔ ((𝓊𝓋)𝓌)     # Default way to read expressions.
 
     (⇤){(ᵛ),(ᵥ)}   # Superscripts and subscripts are left binding operators.
     (⇤){(!)}       # Factorial is a left binding operator.

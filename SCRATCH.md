@@ -97,94 +97,139 @@ I use `{}` to enclose a set,
 `,` means "and".
 Spaces can modify the meaning of a statement by changing prececedence.
 
-###<a name="F7W"></a> {u,v,w}
-Arbitrary symbols:
+###<a name="F7W"></a> 𝓊,𝓋,𝓌
+Variables:
 
-    𝒰{𝓊,𝓋,𝓌}   # I conjure up u, v, and w of any type.
-    𝓊 = 𝓊      # Things are themselves.
+    𝒲 /([^\P{L}\p{InSuperscripts_and_Subscripts}]|\p{N}|\([^()]+\))/ !⊢
+    𝒲 { 𝓊, 𝓋, 𝓌 } !⊢
 
-###<a name="YD5"></a> +
-[Addition](http://en.wikipedia.org/wiki/Addition):
+    𝒫 /([^=\s][^=]*[^=\s]|[^=\s])/ !⊢#
+    𝒫 { 𝓅, 𝓆 } !⊢#
 
-    ℕ{0,1,2,3,4,5,6,7,8,9}  # I can conjure a new type and symbols of that type.
-    0+0 ≡ 0                 # And define new combinations of symbols as something else.
-    0+1 ≡ 1
-    1+0 ≡ 1
-
-###<a name="XXo"></a> ,u,⋯
+###<a name="XXo"></a> ⋯
 [Ellipsis](http://en.wikipedia.org/wiki/Ellipsis#In_mathematical_notation):
 
-    ,𝓊,⋯ ⇔ ,𝓊,𝓊+1,⋯
+    ,𝓊,⋯ ⇒ ,𝓊,𝓊++,⋯  ⊢
 
 ###<a name="9ET"></a> ℕ
-[Natural (Counting) numbers](http://en.wikipedia.org/wiki/Natural_number),
-the set or ordered type /^\d+$/:
+[Natural (Counting) numbers](http://en.wikipedia.org/wiki/Natural_number):
 
-    ℕ ≡ {0,1,⋯}
+    ℕ = {0,1,⋯}  ⊢
+    2 = 1++  ⊢
+    3 = 2++  ⊢
+    4 = 3++  ⊢
+    5 = 4++  ⊢
+    6 = 5++  ⊢
+    7 = 6++  ⊢
+    8 = 7++  ⊢
+    9 = 8++  ⊢
 
-    2 ≡ 1+1
-    3 ≡ 2+1
-    4 ≡ 3+1
-    5 ≡ 4+1
-    6 ≡ 5+1
-    7 ≡ 6+1
-    8 ≡ 7+1
-    9 ≡ 8+1
+### =
 
-    ℕ{N,M,n,m} # Conjure up N, M, n, and m as Natural numbers.
-    M ≡ N-1    # This just simplifies notation later on.
+    𝓅 = 𝓅  ⊢# Self equality.
+    0 = 0
+    1 = 1
 
-    ℕ = ℕ
-    ℕ = {0,1,⋯}
-    ℕ = {0,1,1+1,⋯}
+### +
+[Addition](http://en.wikipedia.org/wiki/Addition):
+
+    𝓊+0 = 𝓊    ⊢# Additive identity.
+    0+0 = 0
+    1+0 = 1
+
+    𝓊+𝓋 = 𝓋+𝓊  ⊢# Cummutative property.
+    0+1 = 1+0
+
+    0+1 = 1+0, 1+0 = 1   # True statement and true statement is true.
+    ⸨0+1⸩ = ⸨1+0⸩, ⸨1+0⸩ = 1   # Grouping in true statement.
+
+    𝓊 = 𝓋, 𝓋 = 𝓌 ⇒ 𝓊 = 𝓌    ⊢# Transitive property.
+    (0+1) = 1
+
+    (𝓅) = 𝓆 ⇒ 𝓅 = 𝓆  ⊢#
+    0+1 = 1
+
+    𝓅 = 𝓆 ⇒ 𝓅 ⇒ 𝓆  ⊢#
+    𝓅 = 𝓆 ⇒ 𝓆 ⇒ 𝓅  ⊢#
+
+    ℕ = {0,1,1++,⋯}
+    1++ ⇒ 2
     ℕ = {0,1,2,⋯}
-    ℕ = {0,1,2,2+1,⋯}
-    ℕ = {0,1,2,3,⋯}
-    ℕ = {0,1,2,3,3+1,⋯}
-    ℕ = {0,1,2,3,4,⋯}
-    ℕ = {0,1,2,3,4,4+1,⋯}
-    ℕ = {0,1,2,3,4,5,⋯}
-    ℕ = {0,1,2,3,4,5,5+1,⋯}
-    ℕ = {0,1,2,3,4,5,6,⋯}
-    ℕ = {0,1,2,3,4,5,6,6+1,⋯}
-    ℕ = {0,1,2,3,4,5,6,7,⋯}
-    ℕ = {0,1,2,3,4,5,6,7,7+1,⋯}
-    ℕ = {0,1,2,3,4,5,6,7,8,⋯}
-    ℕ = {0,1,2,3,4,5,6,7,8,8+1,⋯}
-    ℕ = {0,1,2,3,4,5,6,7,8,9,⋯}
-    ℕ = {0,1,2,3,4,5,6,7,8,9,9+1,⋯}
+    ℕ = {0,1,2,2++,⋯}
+    # ⋯
+
+    𝒩 /([\p{N}NMnm])/ !⊢
+    𝒩 { 𝓃, 𝓂 } !⊢
+    𝓃++ ⇒ 𝓃+1 ⊢#
+
+    ℕ{N,M,n,m} ⊢# Conjure up N, M, n, and m as Natural numbers.
+    M = N-1    ⊢# This just simplifies notation later on.
 
 ###<a name="v9b"></a> +⋯
 
-    𝕟{ₙ,ₘ}
-    𝓊+𝓊+⋯ ⇔ 𝓊 + 𝓊+𝓊+⋯
-    𝓊ₙ+𝓊ₙ₊₁+⋯ ⇔ 𝓊ₙ + 𝓊ₙ₊₁+𝓊ₙ₊₂+⋯
-    𝓊ₙ,⋯ ⇔ 𝓊ₙ,𝓊ₙ₊₁,⋯
-    n,n+1,⋯ ≡ n,n+1,n+2,⋯
-    𝓊ₘ+⋯+𝓊ₙ ⇔ (m<n)? 𝓊ₘ+𝓊ₘ₊₁+⋯+𝓊ₙ : (m>n)? 0 : 𝓊ₙ
+    𝒮 /([ⁿₙₘ¹₁²₂³₃⁴₄⁵₅⁶₆⁷₇⁸₈⁹₉⁰₀])/ !⊢#
+    𝒮 { ᵛ, ᵥ, ᵘ, ᵤ }  !⊢#
+    𝕟 {ⁿ,¹,²,³,⁴,⁵,⁶,⁷,⁸,⁹,⁰}   ⊢# Natural numbers superscript.
+    𝕞 {ₙ,ₘ,₁,₂,₃,₄,₅,₆,₇,₈,₉,₀} ⊢# Natural numbers subscripts.
+
+    +𝓊+⋯ ⇒ +𝓊+𝓊+⋯ ⊢
+    +𝓊ₙ+⋯ ⇒ +𝓊ₙ+𝓊ₙ₊₁+⋯ ⊢
+    ,𝓊ₙ,⋯ ⇒ ,𝓊ₙ,𝓊ₙ₊₁,⋯ ⊢
+    +𝓊ₘ+⋯+𝓊ₙ ⇒ (m<n)? +𝓊ₘ+𝓊ₘ₊₁+⋯+𝓊ₙ : (m>n)? +0 : +𝓊ₙ ⊢
+
+    ,n,⋯  ⊢# Just testing.
+    ,n,n++,⋯
+    ,n,n+1,⋯
+    ,n,⸨n+1⸩,⋯
+    ,n,(n+1),(n+1)++,⋯
 
 ###<a name="MIM"></a> Precedence rules
 The following precedence rules are in order:
 
-    𝓊⇤𝓊 ⇔ (𝓊⇤)𝓊       # Left binding operator.
-    𝓊⇥𝓋 ⇔ 𝓊(⇥𝓋)       # Right binding operator.
-    𝓊 𝓋 𝓌 ⇔ (𝓊(𝓋𝓌))   # "Σ 𝓊𝓋" means "Σ{𝓊𝓋}", not "Σ{𝓊}𝓋".
-    𝓊𝓋𝓌 ⇔ ((𝓊𝓋)𝓌)     # Default way to read expressions.
 
-    (⇤){(ᵛ),(ᵥ)}   # Superscripts and subscripts are left binding operators.
-    (⇤){(!)}       # Factorial is a left binding operator.
+    𝓊𝓋ᵥ ⇒ 𝓊(𝓋ᵥ)    ⊢# Left binding.
+    𝓅 𝓊 𝓋 ⇒ 𝓅 𝓊𝓋   ⊢#
+    𝓊 𝓋𝓌 ⇒ 𝓊 (𝓋𝓌)  ⊢# "Σ 𝓊𝓋" means "Σ{𝓊𝓋}", not "Σ{𝓊}𝓋".
+    𝓊𝓋𝓌 ⇒ (𝓊𝓋)𝓌    ⊢# Default way to read expressions.
+    𝓅 𝓆 ⇒ (𝓅)𝓆     ⊢#
+    𝓊! ⇒ (𝓊!)      ⊢# Factorial is a left binding operator.
 
-    wᵘᵥ ≡ (wᵥ)ᵘ   # This weirdness is due to the sin²(x)=sin(x)*sin(x) convention.
+    𝓌ᵘᵥ ⇒ (𝓌ᵥ)ᵘ  ⊢# This weirdness is due to the sin²(x)=sin(x)*sin(x) convention.
 
-    (⇥){(2),(½)}   # 2 and ½ bind right.  I don't think I use any other literal values.
+> TODO: The following yields inconsitencies because 𝓊 matches numbers too:
+
+    # 2 and ½ bind right.  I don't think I use any other literal values.
+    2𝓊 ⇒ (2𝓊)  ⊢
+    ½𝓊 ⇒ (½𝓊)  ⊢
 
     # Examples:
-    u2vw = (u(2v))w
-    u½vw = (u(½v))w
-    u ½ v w = u(½(vw))
-    u½ v w = (u½)(vw)   # But this would be weird, I would not write it this way.
-    u!vw = ((u!)v)w
-    2³₄ = (2₄)³         # This is not 8₄.  I would just write (2₄)³ to avoid confusion.
+    #
+    𝓊2𝓋𝓌 = 𝓊2𝓋𝓌
+    𝓊(2𝓋)𝓌 = 𝓊2𝓋𝓌
+    (𝓊(2𝓋))𝓌 = 𝓊2𝓋𝓌
+    #
+    𝓊½𝓋𝓌 = 𝓊½𝓋𝓌
+    𝓊(½𝓋)𝓌 = 𝓊½𝓋𝓌
+    (𝓊(½𝓋))𝓌 = 𝓊½𝓋𝓌
+    #
+    𝓊 ½ 𝓋𝓌 = 𝓊 ½ 𝓋𝓌
+    𝓊 ½ (𝓋𝓌) = 𝓊 ½ 𝓋𝓌
+    𝓊 ½(𝓋𝓌) = 𝓊 ½ 𝓋𝓌
+    𝓊 (½(𝓋𝓌)) = 𝓊 ½ 𝓋𝓌
+    #
+    𝓊½ 𝓋 𝓌 = 𝓊½ 𝓋 𝓌
+    𝓊½ 𝓋𝓌 = 𝓊½ 𝓋 𝓌
+    𝓊½ (𝓋𝓌) = 𝓊½ 𝓋 𝓌
+    (𝓊½)(𝓋𝓌) = 𝓊½ 𝓋 𝓌
+    #
+    𝓊!𝓋𝓌 = 𝓊!𝓋𝓌
+    (𝓊!)𝓋𝓌 = 𝓊!𝓋𝓌
+    ((𝓊!)𝓋)𝓌 = 𝓊!𝓋𝓌
+    #
+    2³₄ = 2³₄
+    (2₄)³ = 2³₄   # This is not 8₄.  I would just write (2₄)³ to avoid confusion.
+    𝓅 = 𝓆 ⇒ 𝓆 = 𝓅 ⊢
+    2³₄ = (2₄)³
 
 Some of these rules help compact the notation as it most commonly appears.
 For example, √2πx is √[2π]x, but √nπx is √[n]πx.

@@ -103,7 +103,7 @@ Variables:
     𝒲 /\([^()]+\)|:?[\p{L}\p{N}]+?/  !⊢# Word, not greedy.
     𝒲 { 𝓊, 𝓋, 𝓌 }                    !⊢
 
-    𝒩 /(\p{N}+)/                     !⊢# Number
+    𝒩 /\p{N}+/                       !⊢# Number
     𝒩 { 𝓃, 𝓂 }                       !⊢
 
     𝒮 /[ⁿᵐ¹²³⁴⁵⁶⁷⁸⁹⁰⁺⁻]+/            !⊢# Superscript
@@ -221,62 +221,78 @@ Successor operator and
     𝓊 = {ℊ} ⇒ 𝓊{ℊ}    ⊢
     𝓊 = {ℊ𝓋𝒽} ⇒ 𝓊{𝓋}  ⊢
     𝓊 = {ℊ𝓋𝒽} ⇒ 𝓋∈𝓊   ⊢
+    𝓋∈𝓊 ⇒ 𝓊{𝓋}        ⊢
     𝓊{ℊ𝓋𝒽} ⇒ 𝓊{𝓋}
     𝓊{ℊ𝓋𝒽} ⇒ 𝓋∈𝓊
-
-    𝔸 = {1,2,3} ⊢#
-    𝔸{1,2,3}
-    𝔸{1}
-    1∈𝔸
+    𝓊{𝓋} ⇒ 𝓋∈𝓊
 
 ### N,M,n,m
 
-    ℕ{N,M,n,m} ⊢# Conjure up N, M, n, and m as Natural numbers.
-    M = N-1    ⊢# This just simplifies notation later on.
+    𝐍 /[NMnm]/ !⊢
+    𝐍 { 𝐧 } !⊢
 
+> Although notation for sets are similar to the notation for patterns,
+> please don't confuse them.
+
+    ℕ{N,M,n,m}  ⊢# Conjure up N, M, n, and m as Natural numbers.
     ℕ{N}
     N∈ℕ
+    M = N-1     ⊢# This just simplifies notation later on.
 
-###<a name="v9b"></a> ⁿ,ᵐ
-
-    𝕟{ⁿ,ᵐ,¹,²,³,⁴,⁵,⁶,⁷,⁸,⁹,⁰}  ⊢# Natural numbers superscript.
-    ⁿ∈𝕟
-
-### ₙ,ₘ
-
-    𝕞{ₙ,ₘ,₁,₂,₃,₄,₅,₆,₇,₈,₉,₀}  ⊢# Natural numbers subscripts.
-    ₘ∈𝕞
-
-    HERE
-    +𝓊+⋯ ⇒ +𝓊+𝓊+⋯ ⊢
-    +𝓊ₙ+⋯ ⇒ +𝓊ₙ+𝓊ₙ₊₁+⋯ ⊢
-    ,𝓊ₙ,⋯ ⇒ ,𝓊ₙ,𝓊ₙ₊₁,⋯ ⊢
-    +𝓊ₘ+⋯+𝓊ₙ ⇒ (m<n)? +𝓊ₘ+𝓊ₘ₊₁+⋯+𝓊ₙ : (m>n)? +0 : +𝓊ₙ ⊢
-
+    𝐧++ ⇒ 𝐧+1  ⊢
     ,n,⋯  ⊢# Just testing.
     ,n,n++,⋯
     ,n,n+1,⋯
     ,n,⸨n+1⸩,⋯
     ,n,(n+1),(n+1)++,⋯
 
+### ℤ
+
+    𝐙 /[ij]/   !⊢
+    𝐙 { 𝐳 } !⊢
+
+> I have not defined subtraction, but anyways...
+
+    ℤ = ∀{n,m|n-m}  ⊢# Integers.
+    ℤ{i,j}          ⊢# Conjure up i and j as integers.
+
+### ℚ
+
+    𝐐 /[rs]/ !⊢
+    𝐐 { 𝐪 }  !⊢
+
+> I have not defined division, but anyways...
+
+    ℚ = ∀{i,j|i/j} ⊢# ...and never mind division of zero for now.
+    ℚ{½,r,s}       ⊢# Conjure up r and s as Rationals.
+
+###<a name="v9b"></a> ⁿ,ᵐ
+
+    𝕟{ⁿ,ᵐ,¹,²,³,⁴,⁵,⁶,⁷,⁸,⁹,⁰}  ⊢# Superscript.
+    ⁿ∈𝕟
+
+### ₙ,ₘ
+
+    𝕞{ₙ,ₘ,₁,₂,₃,₄,₅,₆,₇,₈,₉,₀}  ⊢# Subscripts.
+    ₘ∈𝕞
+
+    +𝓊+⋯ ⇒ +𝓊+𝓊+⋯ ⊢
+    +𝓊ₙ+⋯ ⇒ +𝓊ₙ+𝓊ₙ₊₁+⋯ ⊢
+    ,𝓊ₙ,⋯ ⇒ ,𝓊ₙ,𝓊ₙ₊₁,⋯ ⊢
+    +𝓊ₘ+⋯+𝓊ₙ ⇒ +((m+1<n)? 𝓊ₘ+𝓊ₘ₊₁+⋯+𝓊ₙ : (m+1=n)? 𝓊ₘ+𝓊ₙ : 𝓊ₙ)  ⊢# TODO: Not sure if this works.
+
 ###<a name="MIM"></a> Precedence rules
 The following precedence rules are in order:
 
-
-    𝓊𝓋ᵥ ⇒ 𝓊(𝓋ᵥ)    ⊢# Left binding.
-    𝓅 𝓊 𝓋 ⇒ 𝓅 𝓊𝓋   ⊢#
-    𝓊 𝓋𝓌 ⇒ 𝓊 (𝓋𝓌)  ⊢# "Σ 𝓊𝓋" means "Σ{𝓊𝓋}", not "Σ{𝓊}𝓋".
-    𝓊𝓋𝓌 ⇒ (𝓊𝓋)𝓌    ⊢# Default way to read expressions.
-    𝓅 𝓆 ⇒ (𝓅)𝓆     ⊢#
-    𝓊! ⇒ (𝓊!)      ⊢# Factorial is a left binding operator.
-
-    𝓌ᵘᵥ ⇒ (𝓌ᵥ)ᵘ  ⊢# This weirdness is due to the sin²(x)=sin(x)*sin(x) convention.
-
-> TODO: The following yields inconsitencies because 𝓊 matches numbers too:
-
-    # 2 and ½ bind right.  I don't think I use any other literal values.
-    2𝓊 ⇒ (2𝓊)  ⊢
-    ½𝓊 ⇒ (½𝓊)  ⊢
+    𝓊𝓋𝓌 ⇒ (𝓊𝓋)𝓌     ⊢# Default way to read expressions.
+    𝓅 𝓊 𝓆 ⇒ 𝓅 𝓊(𝓆)  ⊢#
+    𝓅 𝓋𝓌 ⇒ 𝓅 (𝓋𝓌)   ⊢# "Σ 𝓊𝓋" means "Σ{𝓊𝓋}", not "Σ{𝓊}𝓋".
+    𝓅 𝓆 ⇒ (𝓅)𝓆      ⊢#
+    𝓃𝓊 ⇒ (𝓃𝓊)       ⊢# 2 and ½ bind right.  I don't think I use any other literal values.
+    𝓋𝓌ᵘ ⇒ 𝓋(𝓌ᵘ)     ⊢# Left binding superscript.
+    𝓋𝓌ᵤ ⇒ 𝓋(𝓌ᵤ)     ⊢# Left binding subsdript.
+    𝓌ᵘᵥ ⇒ (𝓌ᵥ)ᵘ     ⊢# This weirdness is due to the sin²(x)=sin(x)*sin(x) convention.
+    𝓊! ⇒ (𝓊!)       ⊢# Factorial is a left binding operator.
 
     # Examples:
     #
@@ -294,9 +310,9 @@ The following precedence rules are in order:
     𝓊 (½(𝓋𝓌)) = 𝓊 ½ 𝓋𝓌
     #
     𝓊½ 𝓋 𝓌 = 𝓊½ 𝓋 𝓌
-    𝓊½ 𝓋𝓌 = 𝓊½ 𝓋 𝓌
-    𝓊½ (𝓋𝓌) = 𝓊½ 𝓋 𝓌
-    (𝓊½)(𝓋𝓌) = 𝓊½ 𝓋 𝓌
+    𝓊½ 𝓋(𝓌) = 𝓊½ 𝓋 𝓌
+    𝓊½ (𝓋(𝓌)) = 𝓊½ 𝓋 𝓌
+    (𝓊½)(𝓋(𝓌)) = 𝓊½ 𝓋 𝓌
     #
     𝓊!𝓋𝓌 = 𝓊!𝓋𝓌
     (𝓊!)𝓋𝓌 = 𝓊!𝓋𝓌
@@ -304,26 +320,17 @@ The following precedence rules are in order:
     #
     2³₄ = 2³₄
     (2₄)³ = 2³₄   # This is not 8₄.  I would just write (2₄)³ to avoid confusion.
-    𝓅 = 𝓆 ⇒ 𝓆 = 𝓅 ⊢
     2³₄ = (2₄)³
 
 Some of these rules help compact the notation as it most commonly appears.
 For example, √2πx is √[2π]x, but √nπx is √[n]πx.
-
-###<a name="5dX"></a> ℤ and ℚ
-Integers and Rationals:
-
-    ℤ ≡ ℕ - ℕ          # u-v, like 1-2 or just "-1".
-    ℚ ≡ ℤ / ℕ{n:n≠0}   # u/v, like ½ or just "0.5".
-
-    ℤ{j,k,l}   # j, k, and are Integers.
-    ℚ{r}       # r is rational.
 
 ###<a name="frL"></a> uᵥ
 Subscripts (or indeces) labels a specific form of a more general expression:
 
     uᵥ[w,⋯] ≡ u[v,w,⋯]   # Note that uᵥ may ignore w,... so as to be u[v].
     uₙₘ[w,⋯] ≡ u[n,m,w,⋯]
+    HERE
 
 Sequences can be thought of the set {uₙ}, but in this "paper",
 uₙ is always a well defined expression.

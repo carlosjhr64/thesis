@@ -1,17 +1,15 @@
 [CONTENTS](CONTENTS.md)
 
 # The (Over The Top (Extreme)) Full Monty
-Here I write explicitly all my work, as if writing computer code.
-Consider all symbols to have global scope.
-Each symbol should only be defined once,
-except `u` and `v` which will be used as temporary general variables.
+Here I write explicitly all my work.
 In books you'll see `sin²(x)` to mean `sin(x)×sin(x)`.
 I'll use that convention in general.
-`u²[v]` will mean `u[v]×u[v]` and not `u[u[v]]`.
+`𝓊²[𝓋]` will mean `𝓊[𝓋]×𝓊[𝓋]` and not `𝓊[𝓊[𝓋]]`.
 The initial part of this section goes over elementary material, but
 it's a good warm-up and demonstrates my notation.
 
 > This section was not in the original thesis.
+> I'm using a proof checker using ruby-vim, which I'll publish(TODO).
 > Eventually I hope to have the entire work in one stream of mathematical code.
 > Please use GitHub's [issues](https://github.com/carlosjhr64/thesis/issues)
 > to let me know of any errors (of any type).
@@ -20,9 +18,10 @@ it's a good warm-up and demonstrates my notation.
 ### Sections
 <font size="+1">
 
- • [Expressions](#G0p) • [DRY](#tFf) • [Bootstrapping](#6NE) • [{u,v,w}](#F7W)
- • [+](#YD5) • [,u,⋯](#XXo) • [ℕ](#9ET) • [+⋯](#v9b) • [Precedence rules](#MIM)
- • [ℤ and ℚ](#5dX) • [uᵥ](#frL) • [{uᵥ}](#Zk2) • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL)
+ • [Expressions](#G0p) • [DRY](#tFf) • [Bootstrapping](#6NE) • [𝓊,𝓋,𝓌](#tsT)
+ • [++,⋯](#wJ6) • [=](#T2q) • [ℕ](#9ET) • [+](#YD5) • [∈](#xSV)
+ • [N,M,n,m](#vZe) • [ℤ](#r5l) • [ℚ](#mgl) • [ⁿ,ᵐ](#ubG) • [ₙ,ₘ](#SB5)
+ • [Precedence rules](#MIM) • [uᵥ](#frL) • [{uᵥ}](#Zk2) • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL)
  • [n×u](#vkP) • [×⋯](#uyg) • [Σuₙ](#kJ6) • [Σₙuₙ](#MlN) • [∞](#9XA)
  • [∑](#zQw) • [⋅](#Jt7) • [{⋯}⋅{⋯}](#IK3) • [∑ₗ](#tky) • [Π](#J5V)
  • [uᵛ](#y3Z) • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3) • [↧,↥](#1U2)
@@ -67,6 +66,9 @@ Proper mathematical
 will start with four spaces and end with either a newline or a pound sign, #.
 Everything else is commentary.
 
+### Conventions
+
+
 > TODO:
 > Rules for expression than end with = and → which then
 > continue on the next line are emerging, but
@@ -80,6 +82,10 @@ Everything else is commentary.
 > `N` is a constant `ℕ`.
 > :-??
 
+* 𝒜 Normal calligraphy letters are general patterns.
+* 𝔄 Normal fraktur letters are specific patterns.
+* 𝔸 Double struck letters are sets.
+
 ###<a name="tFf"></a> DRY
 
 I'm going to try to follow
@@ -88,16 +94,16 @@ I'm going to try to follow
 
 ###<a name="6NE"></a> Bootstrapping
 I don't think I can avoid an initial [bootstrapping](http://en.wikipedia.org/wiki/Bootstrapping).
-The symbols `:{[(,≡)]}` are [reserved words](http://en.wikipedia.org/wiki/Reserved_word).
+The symbols `:(){}[]⸨⸩=⇒,` are [reserved words](http://en.wikipedia.org/wiki/Reserved_word).
 I mainly use `:` to mark the beggining of a multiletter word.
-`≡` means definition.
+`=` means equals, or definition.
 I use `{}` to enclose a set,
 `[]` to enclose values for an operator, and
 `()` to group.
 `,` means "and".
 Spaces can modify the meaning of a statement by changing prececedence.
 
-###<a name="F7W"></a> 𝓊,𝓋,𝓌
+###<a name="tsT"></a> 𝓊,𝓋,𝓌
 Variables:
 
     𝒲 /\([^()]+\)|:?[\p{L}\p{N}]+?/  !⊢# Word, not greedy.
@@ -118,13 +124,13 @@ Variables:
     𝒢 /[^({\[\]})]*/                 !⊢# Group
     𝒢 { ℊ, 𝒽 }                       !⊢#
 
-###<a name="XXo"></a> ++,⋯
+###<a name="wJ6"></a> ++,⋯
 Successor operator and
 [Ellipsis](http://en.wikipedia.org/wiki/Ellipsis#In_mathematical_notation):
 
     ,𝓊,⋯ ⇒ ,𝓊,𝓊++,⋯  ⊢
 
-### =
+###<a name="T2q"></a> =
 [Equality](http://en.wikipedia.org/wiki/Equality_&#40;mathematics&#41;):
 
     𝓅 = 𝓅          ⊢
@@ -156,7 +162,7 @@ Successor operator and
     ℕ = {0,1,2,3,⋯}
     # ⋯
 
-### +
+###<a name="YD5"></a> +
 [Addition](http://en.wikipedia.org/wiki/Addition):
 
     𝓊+0 = 𝓊  ⊢# Additive identity.
@@ -179,7 +185,7 @@ Successor operator and
     # 0
     0++ = 0++
     0+1 = 0++
-    0+1 = 1   !⊢#
+    0+1 = 1   !⊢# Restating true statement.
     # 1
     1++ = 1++
     1+1 = 1++
@@ -215,7 +221,7 @@ Successor operator and
     2+2 = 4
     #
 
-### ∈
+###<a name="xSV"></a> ∈
 [Element](http://en.wikipedia.org/wiki/Element_&#40;mathematics&#41;) operator:
 
     𝓊 = {ℊ} ⇒ 𝓊{ℊ}    ⊢
@@ -226,10 +232,10 @@ Successor operator and
     𝓊{ℊ𝓋𝒽} ⇒ 𝓋∈𝓊
     𝓊{𝓋} ⇒ 𝓋∈𝓊
 
-### N,M,n,m
+###<a name="vZe"></a> N,M,n,m
 
-    𝐍 /[NMnm]/ !⊢
-    𝐍 { 𝐧 } !⊢
+    𝔑 /[NMnm]/ !⊢
+    𝔑 { 𝔫, 𝔪 } !⊢
 
 > Although notation for sets are similar to the notation for patterns,
 > please don't confuse them.
@@ -239,47 +245,53 @@ Successor operator and
     N∈ℕ
     M = N-1     ⊢# This just simplifies notation later on.
 
-    𝐧++ ⇒ 𝐧+1  ⊢
+    𝔫++ ⇒ 𝔫+1  ⊢
     ,n,⋯  ⊢# Just testing.
     ,n,n++,⋯
     ,n,n+1,⋯
     ,n,⸨n+1⸩,⋯
     ,n,(n+1),(n+1)++,⋯
 
-### ℤ
+###<a name="r5l"></a> ℤ
 
-    𝐙 /[ij]/   !⊢
-    𝐙 { 𝐳 } !⊢
+    ℨ /[ijk]/   !⊢
+    ℨ { 𝔷 } !⊢
 
 > I have not defined subtraction, but anyways...
 
-    ℤ = ∀{n,m|n-m}  ⊢# Integers.
-    ℤ{i,j}          ⊢# Conjure up i and j as integers.
+    ℤ = ℕ{n,m|n-m}  ⊢# Integers.
+    ℤ{i,j,k}        ⊢# Conjure up i and j as integers.
 
-### ℚ
+###<a name="mgl"></a> ℚ
 
-    𝐐 /[rs]/ !⊢
-    𝐐 { 𝐪 }  !⊢
+    𝔔 /[rs]/ !⊢
+    𝔔 { 𝔮 }  !⊢
 
 > I have not defined division, but anyways...
 
-    ℚ = ∀{i,j|i/j} ⊢# ...and never mind division of zero for now.
+    ℚ = ℤ{i,j|i/j} ⊢# ...and never mind division of zero for now.
     ℚ{½,r,s}       ⊢# Conjure up r and s as Rationals.
 
-###<a name="v9b"></a> ⁿ,ᵐ
+###<a name="ubG"></a> ⁿ,ᵐ
 
-    𝕟{ⁿ,ᵐ,¹,²,³,⁴,⁵,⁶,⁷,⁸,⁹,⁰}  ⊢# Superscript.
-    ⁿ∈𝕟
+    𝔖 /[ⁿᵐ]/   !⊢
+    𝔖 { 𝔲, 𝔳 } !⊢
 
-### ₙ,ₘ
+    𝕊{ⁿ,ᵐ,¹,²,³,⁴,⁵,⁶,⁷,⁸,⁹,⁰}  ⊢# Superscript.
+    ⁿ∈𝕊
 
-    𝕞{ₙ,ₘ,₁,₂,₃,₄,₅,₆,₇,₈,₉,₀}  ⊢# Subscripts.
-    ₘ∈𝕞
+###<a name="SB5"></a> ₙ,ₘ
+
+    𝔰 /[ₙₘ]/   !⊢#
+    𝔰 { 𝔞, 𝔟 } !⊢#
+
+    𝕤{ₙ,ₘ,₁,₂,₃,₄,₅,₆,₇,₈,₉,₀}  ⊢# Subscripts.
+    ₘ∈𝕤
 
     +𝓊+⋯ ⇒ +𝓊+𝓊+⋯ ⊢
-    +𝓊ₙ+⋯ ⇒ +𝓊ₙ+𝓊ₙ₊₁+⋯ ⊢
-    ,𝓊ₙ,⋯ ⇒ ,𝓊ₙ,𝓊ₙ₊₁,⋯ ⊢
-    +𝓊ₘ+⋯+𝓊ₙ ⇒ +((m+1<n)? 𝓊ₘ+𝓊ₘ₊₁+⋯+𝓊ₙ : (m+1=n)? 𝓊ₘ+𝓊ₙ : 𝓊ₙ)  ⊢# TODO: Not sure if this works.
+    ∀+𝓊𝔞+⋯ ⇒ +𝓊𝔞+𝓊𝔞₊₁+⋯ ⊢
+    ,𝓊𝔞,⋯ ⇒ ,𝓊𝔞,𝓊𝔞₊₁,⋯ ⊢
+    +𝓊𝔟+⋯+𝓊𝔞 ⇒ +(₍𝔟₊₁<𝔞₎? 𝓊𝔟+𝓊𝔟₊₁+⋯+𝓊𝔞 : (𝔟₊₁=𝔞)? 𝓊𝔟+𝓊𝔞 : 𝓊𝔞)  ⊢# TODO: Not sure if this works.
 
 ###<a name="MIM"></a> Precedence rules
 The following precedence rules are in order:
@@ -328,20 +340,19 @@ For example, √2πx is √[2π]x, but √nπx is √[n]πx.
 ###<a name="frL"></a> uᵥ
 Subscripts (or indeces) labels a specific form of a more general expression:
 
-    uᵥ[w,⋯] ≡ u[v,w,⋯]   # Note that uᵥ may ignore w,... so as to be u[v].
-    uₙₘ[w,⋯] ≡ u[n,m,w,⋯]
-    HERE
+    𝓊ᵥ[𝓌₀,⋯] = 𝓊[ᵥ,𝓌₀,⋯]     ⊢# Note that 𝓊ᵥ may ignore 𝓌,⋯ so as to be 𝓊[𝓋].
+    𝓊ₙₘ[𝓌₀,⋯] = 𝓊[ₙ,ₘ,𝓌₀,⋯]  ⊢
 
-Sequences can be thought of the set {uₙ}, but in this "paper",
-uₙ is always a well defined expression.
+Sequences can be thought of the set {𝓊ₙ}, but in this "paper",
+𝓊ₙ is always a well defined expression.
 
-###<a name="Zk2"></a> {uᵥ}
+###<a name="Zk2"></a> 𝓊{𝓋ₙ}
 A set of labeled (indexed) items:
 
-    (u){v|wᵥ} ↔ (u){v},{w[v]}
-    ℕ{n|uₙ} = {u₀,u₁,⋯}
-
-    [l,k]{j|uⱼ} ≡ {uₗ,⋯,uₖ}
+    ℕ{n|𝓊ₙ} = {𝓊₀,𝓊₁,⋯}       ⊢
+    ℕ[m,n] = {m,⋯,n}          ⊢
+    ℕ[m,n]{i|𝓊ᵢ} = {𝓊ₘ,⋯,𝓊ₙ}  ⊢
+    # GOT TO HERE ON REVIEW.
 
 ###<a name="zJL"></a> Σ[l,k]{j|uⱼ}
 [Series](http://en.wikipedia.org/wiki/Series_%28mathematics%29):

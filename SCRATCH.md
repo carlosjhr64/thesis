@@ -186,9 +186,9 @@ Successor operator and
 The following are my assumptions for a meaningful language, and
 I don't know an authoritive reference to justify them:
 
-    𝓅 = 𝓆 ⇒ 𝓅𝓸 = 𝓆𝓸    ⊢#A7 Left Composition.
-    𝓅 = 𝓆 ⇒ 𝓇𝓅 = 𝓇𝓆    ⊢#A8 Right Composition.
-    𝓅 = 𝓆 ⇒ 𝓇𝓅𝓸 = 𝓇𝓆𝓸  ⊢#A9 Context Composition.
+    𝓅 = 𝓆 ⇒ 𝓅𝓸 = 𝓆𝓸    ⊢#A7 Left Synonym.
+    𝓅 = 𝓆 ⇒ 𝓇𝓅 = 𝓇𝓆    ⊢#A8 Right Synonym.
+    𝓅 = 𝓆 ⇒ 𝓇𝓅𝓸 = 𝓇𝓆𝓸  ⊢#A9 Context Synonym.
 
 ###<a name="9ET"></a> ℕ
 [Natural (Counting) numbers](http://en.wikipedia.org/wiki/Natural_number):
@@ -216,20 +216,20 @@ I don't know an authoritive reference to justify them:
 
     # Prove ℕ = {0,1,2,⋯}
     ,1,⋯ = ,1,1++,⋯                          #B28 by A2 ∵ Successor Ellipsis.
-    {0,1,⋯} = {0,1,1++,⋯}                    #C29 by B28 ∵ Context Composition.
+    {0,1,⋯} = {0,1,1++,⋯}                    #C29 by B28 ∵ Context Synonym.
     ℕ = {0,1,⋯}; {0,1,⋯} = {0,1,1++,⋯}       #D30
     ℕ = {0,1,1++,⋯}                          #E31 by D30 ∵ Transitive.
-    {0,1,1++,⋯} = {0,1,2,⋯}                  #C32 by B21 ∵ Context Composition.
+    {0,1,1++,⋯} = {0,1,2,⋯}                  #C32 by B21 ∵ Context Synonym.
     ℕ = {0,1,1++,⋯}; {0,1,1++,⋯} = {0,1,2,⋯} #F33
     ℕ = {0,1,2,⋯}                            #G34 by F33 ∵ Transitive.
     #
 
     # Prove ℕ = {0,1,2,3,⋯}
     ,2,⋯ = ,2,2++,⋯                                #B35 by A2 ∵ Successor Ellipsis.
-    {0,1,2,⋯} = {0,1,2,2++,⋯}                      #C36 by B35 ∵ Context Composition.
+    {0,1,2,⋯} = {0,1,2,2++,⋯}                      #C36 by B35 ∵ Context Synonym.
     ℕ = {0,1,2,⋯}; {0,1,2,⋯} = {0,1,2,2++,⋯}       #H37
     ℕ = {0,1,2,2++,⋯}                              #I38 by H37 ∵ Transitive.
-    {0,1,2,2++,⋯} = {0,1,2,3,⋯}                    #C39 by B22 ∵ Context Composition.
+    {0,1,2,2++,⋯} = {0,1,2,3,⋯}                    #C39 by B22 ∵ Context Synonym.
     ℕ = {0,1,2,2++,⋯}; {0,1,2,2++,⋯} = {0,1,2,3,⋯} #J40
     ℕ = {0,1,2,3,⋯}                                #K41 by J40 ∵ Transitive.
     #

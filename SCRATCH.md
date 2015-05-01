@@ -18,17 +18,20 @@ it's a good warm-up and demonstrates my notation.
 ### Sections
 <font size="+1">
 
- • [Expressions](#G0p) • [DRY](#tFf) • [Bootstrapping](#6NE) • [𝓊,𝓋,𝓌](#tsT)
- • [++,⋯](#wJ6) • [=](#T2q) • [ℕ](#9ET) • [+](#YD5) • [∈](#xSV)
- • [N,M,n,m](#vZe) • [ℤ](#r5l) • [ℚ](#mgl) • [ⁿ,ᵐ](#ubG) • [ₙ,ₘ](#SB5)
- • [Precedence rules](#MIM) • [uᵥ](#frL) • [{uᵥ}](#Zk2) • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL)
- • [n×u](#vkP) • [×⋯](#uyg) • [Σuₙ](#kJ6) • [Σₙuₙ](#MlN) • [∞](#9XA)
- • [∑](#zQw) • [⋅](#Jt7) • [{⋯}⋅{⋯}](#IK3) • [∑ₗ](#tky) • [Π](#J5V)
- • [uᵛ](#y3Z) • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3) • [↧,↥](#1U2)
- • [Σu↑](#U10) • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [uₒ≡Σuₙ](#CuZ)
- • [ℝ](#yfS) • [x,t](#pZX) • [∞/∞](#iyp) • [𝜖≡a/∞](#rNP) • [Σrⁿ](#5qT)
- • [⅀](#s2N) • [⨋ₓ](#SuG) • [ℂ](#Ama) • [ℯ](#NLb) • [Sine](#ZE8)
- • [Cosine](#CgT) • [𝑖](#FU8) • [&#42;](#XXd) • [𝒟ₓ](#FD0) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
+ • [Expressions](#G0p) • [Conventions](#YEr) • [Bootstrapping](#6NE)
+ • [𝓀,𝓁](#YWr) • [𝓊,𝓋,𝓌](#tsT) • [𝓃,𝓂](#6xr) • [ᵛ,ᵘ](#73Y) • [ᵥ,ᵤ](#mKM)
+ • [𝓅,𝓆,𝓇,𝓈](#WXp) • [ℊ,𝒽](#YIu) • [𝓈,𝓉](#YBH) • [ℴ](#W9o) • [𝒶,𝒷,𝒸,𝒹](#0NJ)
+ • [𝒶; 𝒶 ⇒ 𝒷 ⇒ 𝒷](#gAu) • [++,⋯](#wJ6) • [=](#T2q) • [ℕ](#9ET)
+ • [+](#YD5) • [∈](#xSV) • [N,M,n,m](#vZe) • [ℤ](#r5l) • [ℚ](#mgl)
+ • [ⁿ,ᵐ](#ubG) • [ₙ,ₘ](#SB5) • [Precedence rules](#MIM) • [uᵥ](#frL)
+ • [𝓊{𝓋ₙ}](#4bK) • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL) • [n×u](#vkP)
+ • [×⋯](#uyg) • [Σuₙ](#kJ6) • [Σₙuₙ](#MlN) • [∞](#9XA) • [∑](#zQw)
+ • [⋅](#Jt7) • [{⋯}⋅{⋯}](#IK3) • [∑ₗ](#tky) • [Π](#J5V) • [uᵛ](#y3Z)
+ • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3) • [↧,↥](#1U2) • [Σu↑](#U10)
+ • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [uₒ≡Σuₙ](#CuZ) • [ℝ](#yfS)
+ • [x,t](#pZX) • [∞/∞](#iyp) • [𝜖≡a/∞](#rNP) • [Σrⁿ](#5qT) • [⅀](#s2N)
+ • [⨋ₓ](#SuG) • [ℂ](#Ama) • [ℯ](#NLb) • [Sine](#ZE8) • [Cosine](#CgT)
+ • [𝑖](#FU8) • [&#42;](#XXd) • [𝒟ₓ](#FD0) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
  • [∫](#iPk) • [n!](#zaX) • [(ⁿₘ)](#qsc) • [nₘ](#t99) • [0ₘ](#KLm)
  • [1ₘ](#ngq) • [2ₘ](#eUd) • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj)
  • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO) • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK)
@@ -59,15 +62,13 @@ it's a good warm-up and demonstrates my notation.
 <!-- TOC END -->
 
 ###<a name="G0p"></a> Expressions
-
 This file is written in [Markdown](http://en.wikipedia.org/wiki/Markdown) format.
 Proper mathematical
 [expressions](http://en.wikipedia.org/wiki/Expression_%28mathematics%29)
 will start with four spaces and end with either a newline or a pound sign, #.
 Everything else is commentary.
 
-### Conventions
-
+###<a name="YEr"></a> Conventions
 
 > TODO:
 > Rules for expression than end with = and → which then
@@ -86,112 +87,153 @@ Everything else is commentary.
 * 𝔄 Normal fraktur letters are specific patterns.
 * 𝔸 Double struck letters are sets.
 
-###<a name="tFf"></a> DRY
-
-I'm going to try to follow
-[code refactoring](http://en.wikipedia.org/wiki/Code_refactoring) and
-[DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principles.
-
 ###<a name="6NE"></a> Bootstrapping
-I don't think I can avoid an initial [bootstrapping](http://en.wikipedia.org/wiki/Bootstrapping).
-The symbols `:(){}[]⸨⸩=⇒,` are [reserved words](http://en.wikipedia.org/wiki/Reserved_word).
-I mainly use `:` to mark the beggining of a multiletter word.
-`=` means equals, or definition.
-I use `{}` to enclose a set,
-`[]` to enclose values for an operator, and
-`()` to group.
-`,` means "and".
-Spaces can modify the meaning of a statement by changing prececedence.
+When writting my proofchecker,
+I tried to assume as little as possible about the notation, but
+the symbols `;⇒=(){}[]⸨⸩<:!⊢#` have predefined meaning in my proofchecker
+which may depend on context.
+
+In a statement `;⇒#` are to be considered reserved words.
+`; ` separates statements in a compound statement.
+` ⇒ ` separates statements of a map creating an "if-then" statement.
+`#` marks the end of a statement, and the start of a comment.
+
+The `<:!⊢` have meaning in context.
+Statements ending in ` ⊢` are accepted as true.
+Statements ending in ` !⊢` are declarations, instructions to the proofchecker.
+Statements ending in ` :⊢` are redefinitions (telling the proofcheck not to complain about it).
+Statements ending in ` <⊢` are statements previously stated.
+
+The proofchecker does assume `(){}[]⸨⸩` need to be balanced in the conventional way, and
+will check for that.
+
+The proofchecker also assumes `=` means equals or definition, and
+will check for axioms that appear to redefine a statement.
+
+> OK, here we go!
+
+###<a name="YWr"></a> 𝓀,𝓁
+
+    ℒ /\p{L}/ !⊢# Letter.
+    ℒ { 𝓀,𝓁 } !⊢
 
 ###<a name="tsT"></a> 𝓊,𝓋,𝓌
-Variables:
 
     𝒲 /\([^()]+\)|:?[\p{L}\p{N}]+?/ !⊢# Word, not greedy.
-    𝒲 { 𝓊,𝓋,𝓌 }                     !⊢
+    𝒲 { 𝓊,𝓋,𝓌 } !⊢
 
-    𝒩 /\p{N}+/ !⊢# Number
+###<a name="6xr"></a> 𝓃,𝓂
+
+    𝒩 /\p{N}+/ !⊢# Number.
     𝒩 { 𝓃,𝓂 } !⊢
 
-    ℛ /[ⁿᵐ¹²³⁴⁵⁶⁷⁸⁹⁰⁺⁻]+/ !⊢# Superscript
-    ℛ { ᵛ,ᵘ }             !⊢
+###<a name="73Y"></a> ᵛ,ᵘ
 
-    𝒮 /[ₙₘ₁₂₃₄₅₆₇₈₉₀₊₋]+/ !⊢# Subscript
-    𝒮 { ᵥ,ᵤ }             !⊢
+    ℛ /[ⁿᵐ¹²³⁴⁵⁶⁷⁸⁹⁰⁺⁻]+/ !⊢# Superscript.
+    ℛ { ᵛ,ᵘ } !⊢
 
-    𝒫 /[^⇒=;\s][^⇒=;]*[^⇒=;\s]|[^⇒=;\s]/ !⊢# Phrase
-    𝒫 { 𝓅,𝓆,𝓇,𝓈 }                        !⊢#
+###<a name="mKM"></a> ᵥ,ᵤ
 
-    𝒢 /[^({\[\]})]*/ !⊢# Group
-    𝒢 { ℊ,𝒽 }        !⊢#
+    ℬ /[ₙₘ₁₂₃₄₅₆₇₈₉₀₊₋]+/ !⊢# Subscript.
+    ℬ { ᵥ,ᵤ } !⊢
 
-    𝒜 /[^\s⇒;][^⇒;]*[^\s⇒;]|[^\s⇒;]/    !⊢# Almost anything
-    𝒜 { 𝒶,𝒷,𝒸,𝒹 } !⊢#
+###<a name="WXp"></a> 𝓅,𝓆,𝓇,𝓈
 
-### 𝒶; 𝒶 ⇒ 𝒷 ⇒ 𝒷
+    𝒫 /[^⇒=;\s][^⇒=;]*[^⇒=;\s]|[^⇒=;\s]/ !⊢# Phrase.
+    # Exception: note that below, I'm using bold script o.
+    𝒫 { 𝓸,𝓅,𝓆,𝓇 } !⊢
+
+###<a name="YIu"></a> ℊ,𝒽
+
+    𝒢 /[^({\[\]})]*/ !⊢# Group.
+    𝒢 { ℊ,𝒽 } !⊢
+
+###<a name="YBH"></a> 𝓈,𝓉
+
+    𝒮 /[^{}]*/ !⊢# Set group.
+    𝒮 { 𝓈,𝓉 } !⊢
+
+###<a name="W9o"></a> ℴ
+
+    𝒪 /[^\[\]]*/ !⊢# Operator group.
+    𝒪 { ℴ } !⊢
+
+###<a name="0NJ"></a> 𝒶,𝒷,𝒸,𝒹
+
+    𝒜 /[^\s⇒;][^⇒;]*[^\s⇒;]|[^\s⇒;]/ !⊢# Almost anything
+    𝒜 { 𝒶,𝒷,𝒸,𝒹 } !⊢
+
+###<a name="gAu"></a> 𝒶; 𝒶 ⇒ 𝒷 ⇒ 𝒷
 [Modus Ponem](http://en.wikipedia.org/wiki/Modus+Ponen):
 
-    𝒶; 𝒶 ⇒ 𝒷 ⇒ 𝒷 ⊢# Modus Ponem
+    𝒶; 𝒶 ⇒ 𝒷 ⇒ 𝒷 ⊢#A1 Modus Ponem.
 
 ###<a name="wJ6"></a> ++,⋯
 Successor operator and
 [Ellipsis](http://en.wikipedia.org/wiki/Ellipsis#In_mathematical_notation):
 
-    ,𝓊,⋯ = ,𝓊,𝓊++,⋯  ⊢
+    ,𝓊,⋯ = ,𝓊,𝓊++,⋯  ⊢#A2 Successor Ellipsis.
 
 ###<a name="T2q"></a> =
 [Equality](http://en.wikipedia.org/wiki/Equality_&#40;mathematics&#41;):
 
-    𝓅 = 𝓅                ⊢
-    𝓅 = 𝓆 ⇒ 𝓆 = 𝓅        ⊢
-    𝓅 = 𝓆 ⇒ 𝓅𝓈 = 𝓆𝓈      ⊢
-    𝓅 = 𝓆 ⇒ 𝓇𝓅 = 𝓇𝓆      ⊢
-    𝓅 = 𝓆 ⇒ 𝓇𝓅𝓈 = 𝓇𝓆𝓈    ⊢
-    𝓅 = 𝓆; 𝓆 = 𝓇 ⇒ 𝓅 = 𝓇 ⊢
-    𝓅 = 𝓆 ⇒ 𝓆 ⇒ 𝓅        ⊢
+    𝓅 = 𝓆 ⇒ 𝓆 ⇒ 𝓅 ⊢#A3 Equivalent Statement.
+
+    𝓅 = 𝓅                ⊢#A4 Reflexive.
+    𝓅 = 𝓆 ⇒ 𝓆 = 𝓅        ⊢#A5 Symmetric.
+    𝓅 = 𝓆; 𝓆 = 𝓇 ⇒ 𝓅 = 𝓇 ⊢#A6 Transitive.
+
+The following are my assumptions for a meaningful language, and
+I don't know an authoritive reference to justify them:
+
+    𝓅 = 𝓆 ⇒ 𝓅𝓸 = 𝓆𝓸    ⊢#A7 Left Composition.
+    𝓅 = 𝓆 ⇒ 𝓇𝓅 = 𝓇𝓆    ⊢#A8 Right Composition.
+    𝓅 = 𝓆 ⇒ 𝓇𝓅𝓸 = 𝓇𝓆𝓸  ⊢#A9 Context Composition.
 
 ###<a name="9ET"></a> ℕ
 [Natural (Counting) numbers](http://en.wikipedia.org/wiki/Natural_number):
 
-    ℕ = {0,1,⋯}  ⊢
-    0 = 0
-    1 = 1
+    ℕ = {0,1,⋯} ⊢#A10 Natural Numbers.
+    0 = 0        #B11 ∵ Reflexive.
+    1 = 1        #B12 ∵ Reflexive.
 
-    2 = 1++  ⊢
-    3 = 2++  ⊢
-    4 = 3++  ⊢
-    5 = 4++  ⊢
-    6 = 5++  ⊢
-    7 = 6++  ⊢
-    8 = 7++  ⊢
-    9 = 8++  ⊢
+    2 = 1++  ⊢#A13
+    3 = 2++  ⊢#A14
+    4 = 3++  ⊢#A15
+    5 = 4++  ⊢#A16
+    6 = 5++  ⊢#A17
+    7 = 6++  ⊢#A18
+    8 = 7++  ⊢#A19
+    9 = 8++  ⊢#A20
 
-    1++ = 2
-    2++ = 3
-    3++ = 4
-    4++ = 5
-    6++ = 7
-    7++ = 8
-    8++ = 9
+    1++ = 2 #B21 by A13 ∵ Symmetric.
+    2++ = 3 #B22 by A14 ∵ Symmetric.
+    3++ = 4 #B23 by A15 ∵ Symmetric.
+    4++ = 5 #B24 by A16 ∵ Symmetric.
+    6++ = 7 #B25 by A18 ∵ Symmetric.
+    7++ = 8 #B26 by A19 ∵ Symmetric.
+    8++ = 9 #B27 by A20 ∵ Symmetric.
 
     # Prove ℕ = {0,1,2,⋯}
-    ,1,⋯ = ,1,1++,⋯
-    {0,1,⋯} = {0,1,1++,⋯}
-    ℕ = {0,1,⋯}; {0,1,⋯} = {0,1,1++,⋯}
-    ℕ = {0,1,1++,⋯}
-    {0,1,1++,⋯} = {0,1,2,⋯}  
-    ℕ = {0,1,1++,⋯}; {0,1,1++,⋯} = {0,1,2,⋯}  
-    ℕ = {0,1,2,⋯}
+    ,1,⋯ = ,1,1++,⋯                          #B28 by A2 ∵ Successor Ellipsis.
+    {0,1,⋯} = {0,1,1++,⋯}                    #C29 by B28 ∵ Context Composition.
+    ℕ = {0,1,⋯}; {0,1,⋯} = {0,1,1++,⋯}       #D30
+    ℕ = {0,1,1++,⋯}                          #E31 by D30 ∵ Transitive.
+    {0,1,1++,⋯} = {0,1,2,⋯}                  #C32 by B21 ∵ Context Composition.
+    ℕ = {0,1,1++,⋯}; {0,1,1++,⋯} = {0,1,2,⋯} #F33
+    ℕ = {0,1,2,⋯}                            #G34 by F33 ∵ Transitive.
     #
 
     # Prove ℕ = {0,1,2,3,⋯}
-    ,2,⋯ = ,2,2++,⋯
-    {0,1,2,⋯} = {0,1,2,2++,⋯}
-    ℕ = {0,1,2,⋯}; {0,1,2,⋯} = {0,1,2,2++,⋯}
-    ℕ = {0,1,2,2++,⋯}
-    {0,1,2,2++,⋯} = {0,1,2,3,⋯}  
-    ℕ = {0,1,2,2++,⋯}; {0,1,2,2++,⋯} = {0,1,2,3,⋯}  
-    ℕ = {0,1,2,3,⋯}
+    ,2,⋯ = ,2,2++,⋯                                #B35 by A2 ∵ Successor Ellipsis.
+    {0,1,2,⋯} = {0,1,2,2++,⋯}                      #C36 by B35 ∵ Context Composition.
+    ℕ = {0,1,2,⋯}; {0,1,2,⋯} = {0,1,2,2++,⋯}       #H37
+    ℕ = {0,1,2,2++,⋯}                              #I38 by H37 ∵ Transitive.
+    {0,1,2,2++,⋯} = {0,1,2,3,⋯}                    #C39 by B22 ∵ Context Composition.
+    ℕ = {0,1,2,2++,⋯}; {0,1,2,2++,⋯} = {0,1,2,3,⋯} #J40
+    ℕ = {0,1,2,3,⋯}                                #K41 by J40 ∵ Transitive.
     #
+    GOT TO HERE ON REVIEW.
 
     # And so on, I could show...
     ℕ = {0,1,2,3,4,5,6,7,8,9,⋯} ⊢# ...but wont.
@@ -214,7 +256,7 @@ Successor operator and
     𝓃+1 = 𝓃++  ⊢#
     #
     0+1 = 0++
-    0+1 = 1  :⊢# Restating true statement.
+    0+1 = 1  <⊢# Restating true statement.
     #
     1+1 = 1++
     1+1 = 1++; 1++ = 2
@@ -253,9 +295,9 @@ Successor operator and
     𝓊{ℊ𝓋𝒽} ⇒ 𝓊{𝓋}   ⊢
     𝓋∈𝓊 = 𝓊{𝓋}      ⊢
 
-    𝓋∈𝓊 = 𝓊{𝓋} ⇒ 𝓊{𝓋} ⇒ 𝓋∈𝓊 
-    𝓋∈𝓊 = 𝓊{𝓋}; 𝓋∈𝓊 = 𝓊{𝓋} ⇒ 𝓊{𝓋} ⇒ 𝓋∈𝓊 
-    𝓊{𝓋} ⇒ 𝓋∈𝓊 
+    𝓋∈𝓊 = 𝓊{𝓋} ⇒ 𝓊{𝓋} ⇒ 𝓋∈𝓊 #L76
+    𝓋∈𝓊 = 𝓊{𝓋}; 𝓋∈𝓊 = 𝓊{𝓋} ⇒ 𝓊{𝓋} ⇒ 𝓋∈𝓊 #T77
+    𝓊{𝓋} ⇒ 𝓋∈𝓊    #T78 Element.
 
 ###<a name="vZe"></a> N,M,n,m
 
@@ -267,11 +309,11 @@ Successor operator and
 
     ℕ{N,M,n,m}  ⊢# Conjure up N, M, n, and m as Natural numbers.
     ℕ{N}
-    N∈ℕ
+    N∈ℕ #C81 by T78. ∵ Element.
 
     M = N-1     ⊢# This just simplifies notation later on.
 
-    𝔫++ ⇒ 𝔫+1  ⊢
+    𝔫++ ⇒ 𝔫+1  ⊢ #A83
     ,n,⋯  ⊢# Just testing.
     ,n,n++,⋯
     ,n,n+1,⋯
@@ -372,13 +414,12 @@ Subscripts (or indeces) labels a specific form of a more general expression:
 Sequences can be thought of the set {𝓊ₙ}, but in this "paper",
 𝓊ₙ is always a well defined expression.
 
-###<a name="Zk2"></a> 𝓊{𝓋ₙ}
+###<a name="4bK"></a> 𝓊{𝓋ₙ}
 A set of labeled (indexed) items:
 
     ℕ{n|𝓊ₙ} = {𝓊₀,𝓊₁,⋯}       ⊢
     ℕ[m,n] = {m,⋯,n}          ⊢
     ℕ[m,n]{i|𝓊ᵢ} = {𝓊ₘ,⋯,𝓊ₙ}  ⊢
-    # GOT TO HERE ON REVIEW.
 
 ###<a name="zJL"></a> Σ[l,k]{j|uⱼ}
 [Series](http://en.wikipedia.org/wiki/Series_%28mathematics%29):

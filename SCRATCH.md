@@ -20,11 +20,11 @@ it's a good warm-up and demonstrates my notation.
 
  • [Expressions](#G0p) • [Conventions](#YEr) • [Bootstrapping](#6NE)
  • [𝓀,𝓁](#YWr) • [𝓊,𝓋,𝓌](#tsT) • [𝓃,𝓂](#6xr) • [ᵛ,ᵘ](#73Y) • [ᵥ,ᵤ](#mKM)
- • [𝓅,𝓆,𝓇,𝓈](#WXp) • [ℊ,𝒽](#YIu) • [𝓈,𝓉](#YBH) • [ℴ](#W9o) • [𝒶,𝒷,𝒸,𝒹](#0NJ)
- • [𝒶; 𝒶 ⇒ 𝒷 ⇒ 𝒷](#gAu) • [++,⋯](#wJ6) • [=](#T2q) • [ℕ](#9ET)
- • [+](#YD5) • [∈](#xSV) • [N,M,n,m](#vZe) • [ℤ](#r5l) • [ℚ](#mgl)
- • [ⁿ,ᵐ](#ubG) • [ₙ,ₘ](#SB5) • [Precedence rules](#MIM) • [uᵥ](#frL)
- • [𝓊{𝓋ₙ}](#4bK) • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL) • [n×u](#vkP)
+ • [𝓅,𝓆,𝓇,𝓈](#WXp) • [ℊ,𝒽](#YIu) • [𝓈,𝓉](#YBH) • [ℴ](#W9o) • [𝒾](#oe8)
+ • [𝒶,𝒷,𝒸,𝒹](#0NJ) • [𝒶; 𝒶 ⇒ 𝒷 ⇒ 𝒷](#gAu) • [++,⋯](#wJ6) • [=](#T2q)
+ • [ℕ](#9ET) • [+](#YD5) • [∈](#xSV) • [N,M,n,m](#vZe) • [ℤ](#r5l)
+ • [ℚ](#mgl) • [ⁿ,ᵐ](#ubG) • [ₙ,ₘ](#SB5) • [Precedence rules](#MIM)
+ • [uᵥ](#frL) • [𝓊{𝓋ₙ}](#4bK) • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL) • [n×u](#vkP)
  • [×⋯](#uyg) • [Σuₙ](#kJ6) • [Σₙuₙ](#MlN) • [∞](#9XA) • [∑](#zQw)
  • [⋅](#Jt7) • [{⋯}⋅{⋯}](#IK3) • [∑ₗ](#tky) • [Π](#J5V) • [uᵛ](#y3Z)
  • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3) • [↧,↥](#1U2) • [Σu↑](#U10)
@@ -98,7 +98,7 @@ In a statement `;⇒#` are to be considered reserved words.
 ` ⇒ ` separates statements of a map creating an "if-then" statement.
 `#` marks the end of a statement, and the start of a comment.
 
-The `<:!⊢` have meaning in context.
+The `<:!⊢` symbols have meaning in context.
 Statements ending in ` ⊢` are accepted as true.
 Statements ending in ` !⊢` are declarations, instructions to the proofchecker.
 Statements ending in ` :⊢` are redefinitions (telling the proofcheck not to complain about it).
@@ -158,6 +158,11 @@ will check for axioms that appear to redefine a statement.
     𝒪 /[^\[\]]*/ !⊢# Operator group.
     𝒪 { ℴ } !⊢
 
+###<a name="oe8"></a> 𝒾
+
+    ℐ /[^,]*/ !⊢# Item group.
+    ℐ { 𝒾 } !⊢
+
 ###<a name="0NJ"></a> 𝒶,𝒷,𝒸,𝒹
 
     𝒜 /[^\s⇒;][^⇒;]*[^\s⇒;]|[^\s⇒;]/ !⊢# Almost anything
@@ -194,110 +199,99 @@ I don't know an authoritive reference to justify them:
 [Natural (Counting) numbers](http://en.wikipedia.org/wiki/Natural_number):
 
     ℕ = {0,1,⋯} ⊢#A10 Natural Numbers.
-    0 = 0        #B11 ∵ Reflexive.
-    1 = 1        #B12 ∵ Reflexive.
+    0 = 0        #P11 ∵ A4 Reflexive.
+    1 = 1        #P12 ∵ A4 Reflexive.
 
-    2 = 1++  ⊢#A13
-    3 = 2++  ⊢#A14
-    4 = 3++  ⊢#A15
-    5 = 4++  ⊢#A16
-    6 = 5++  ⊢#A17
-    7 = 6++  ⊢#A18
-    8 = 7++  ⊢#A19
-    9 = 8++  ⊢#A20
+    2 = 1++  ⊢#A13.
+    3 = 2++  ⊢#A14.
+    4 = 3++  ⊢#A15.
+    5 = 4++  ⊢#A16.
+    6 = 5++  ⊢#A17.
+    7 = 6++  ⊢#A18.
+    8 = 7++  ⊢#A19.
+    9 = 8++  ⊢#A20.
 
-    1++ = 2 #B21 by A13 ∵ Symmetric.
-    2++ = 3 #B22 by A14 ∵ Symmetric.
-    3++ = 4 #B23 by A15 ∵ Symmetric.
-    4++ = 5 #B24 by A16 ∵ Symmetric.
-    6++ = 7 #B25 by A18 ∵ Symmetric.
-    7++ = 8 #B26 by A19 ∵ Symmetric.
-    8++ = 9 #B27 by A20 ∵ Symmetric.
+    1++ = 2 #M21 ∵ A5,A13 Symmetric.
+    2++ = 3 #M22 ∵ A5,A14 Symmetric.
+    3++ = 4 #M23 ∵ A5,A15 Symmetric.
+    4++ = 5 #M24 ∵ A5,A16 Symmetric.
+    6++ = 7 #M25 ∵ A5,A18 Symmetric.
+    7++ = 8 #M26 ∵ A5,A19 Symmetric.
+    8++ = 9 #M27 ∵ A5,A20 Symmetric.
 
     # Prove ℕ = {0,1,2,⋯}
-    ,1,⋯ = ,1,1++,⋯                          #B28 by A2 ∵ Successor Ellipsis.
-    {0,1,⋯} = {0,1,1++,⋯}                    #C29 by B28 ∵ Context Synonym.
-    ℕ = {0,1,⋯}; {0,1,⋯} = {0,1,1++,⋯}       #D30
-    ℕ = {0,1,1++,⋯}                          #E31 by D30 ∵ Transitive.
-    {0,1,1++,⋯} = {0,1,2,⋯}                  #C32 by B21 ∵ Context Synonym.
-    ℕ = {0,1,1++,⋯}; {0,1,1++,⋯} = {0,1,2,⋯} #F33
-    ℕ = {0,1,2,⋯}                            #G34 by F33 ∵ Transitive.
+    ,1,⋯ = ,1,1++,⋯                          #P28 ∵ A2 Successor Ellipsis.
+    {0,1,⋯} = {0,1,1++,⋯}                    #M29 ∵ A9,P28 Context Synonym.
+    ℕ = {0,1,⋯}; {0,1,⋯} = {0,1,1++,⋯}       #C30 ∵ A10,M29 Natural Numbers.
+    ℕ = {0,1,1++,⋯}                          #M31 ∵ A6,C30 Transitive.
+    {0,1,1++,⋯} = {0,1,2,⋯}                  #M32 ∵ A9,M21 Context Synonym.
+    ℕ = {0,1,1++,⋯}; {0,1,1++,⋯} = {0,1,2,⋯} #C33 ∵ M31,M32.
+    ℕ = {0,1,2,⋯}                            #M34 ∵ A6,C33 Transitive.
     #
 
     # Prove ℕ = {0,1,2,3,⋯}
-    ,2,⋯ = ,2,2++,⋯                                #B35 by A2 ∵ Successor Ellipsis.
-    {0,1,2,⋯} = {0,1,2,2++,⋯}                      #C36 by B35 ∵ Context Synonym.
-    ℕ = {0,1,2,⋯}; {0,1,2,⋯} = {0,1,2,2++,⋯}       #H37
-    ℕ = {0,1,2,2++,⋯}                              #I38 by H37 ∵ Transitive.
-    {0,1,2,2++,⋯} = {0,1,2,3,⋯}                    #C39 by B22 ∵ Context Synonym.
-    ℕ = {0,1,2,2++,⋯}; {0,1,2,2++,⋯} = {0,1,2,3,⋯} #J40
-    ℕ = {0,1,2,3,⋯}                                #K41 by J40 ∵ Transitive.
+    ,2,⋯ = ,2,2++,⋯                                #P35 ∵ A2 Successor Ellipsis.
+    {0,1,2,⋯} = {0,1,2,2++,⋯}                      #M36 ∵ A9,P35 Context Synonym.
+    ℕ = {0,1,2,⋯}; {0,1,2,⋯} = {0,1,2,2++,⋯}       #C37 ∵ M34,M36.
+    ℕ = {0,1,2,2++,⋯}                              #M38 ∵ A6,C37 Transitive.
+    {0,1,2,2++,⋯} = {0,1,2,3,⋯}                    #M39 ∵ A9,M22 Context Synonym.
+    ℕ = {0,1,2,2++,⋯}; {0,1,2,2++,⋯} = {0,1,2,3,⋯} #C40 ∵ M38,M39.
+    ℕ = {0,1,2,3,⋯}                                #M41 ∵ A6,C40 Transitive.
     #
-    GOT TO HERE ON REVIEW.
 
-    # And so on, I could show...
-    ℕ = {0,1,2,3,4,5,6,7,8,9,⋯} ⊢# ...but wont.
-
-> TODO: Proof checker should complain about the above, redefinition.
+    # And so on, I can show...
+    ℕ = {0,1,2,3,4,5,6,7,8,9,⋯} :⊢#T42 Digits.
 
 ###<a name="YD5"></a> +
 [Addition](http://en.wikipedia.org/wiki/Addition):
 
-    𝓊+0 = 𝓊  ⊢# Additive identity.
-    0+0 = 0
-    1+0 = 1
+    𝓊+0 = 𝓊  ⊢#A43 Additive Identity.
+    0+0 = 0   #P44 ∵ A43 Additive Identity.
+    1+0 = 1   #P45 ∵ A43 Additive Identity.
 
-    𝓊+𝓋 = 𝓋+𝓊  ⊢# Cummutative property.
-    0+1 = 1+0
+    𝓊+𝓋 = 𝓋+𝓊  ⊢#A46 Cummutative.
+    0+1 = 1+0   #P47 ∵ A46 Cummutative.
 
-    0+1 = 1+0; 1+0 = 1
-    0+1 = 1
+    0+1 = 1+0; 1+0 = 1   #C48 ∵ P47,P45.
+    0+1 = 1              #M49 ∵ A6,C48 Transitive.
 
-    𝓃+1 = 𝓃++  ⊢#
+    𝓃+1 = 𝓃++  ⊢#A50 Number Successor.
     #
-    0+1 = 0++
-    0+1 = 1  <⊢# Restating true statement.
+    0+1 = 0++   #P51 ∵ A50 Number Successor.
+    0+1 = 1   <⊢#M49 ∵ A6,C48 Transitive.
     #
-    1+1 = 1++
-    1+1 = 1++; 1++ = 2
-    1+1 = 2
+    1+1 = 1++            #P52 ∵ A50 Number Successor.
+    1+1 = 1++; 1++ = 2   #C53 ∵ P52,M21.
+    1+1 = 2              #M54 ∵ A6,C53 Transitive.
     #
-    2+1 = 2++
-    2+1 = 2++; 2++ = 3
-    2+1 = 3
+    2+1 = 2++            #P55 ∵ A50 Number Successor.
+    2+1 = 2++; 2++ = 3   #C56 ∵ P55,M22.
+    2+1 = 3              #M57 ∵ A6,C56 Transitive.
     # 3
-    3+1 = 3++
-    3+1 = 3++; 3++ = 4
-    3+1 = 4
+    3+1 = 3++            #P58 ∵ A50 Number Successor.
+    3+1 = 3++; 3++ = 4   #C59 ∵ P58,M23.
+    3+1 = 4              #M60 ∵ A6,C59 Transitive.
     # ⋯
 
 > The most magnificent proof ever follows:
 
     # Prove: 2+2 = 4
-    2+2 = 2+2
-    1+1 = 2 ⇒ 2+1+1 = 2+2
-    1+1 = 2; 1+1 = 2 ⇒ 2+1+1 = 2+2
-    2+1+1 = 2+2
-    2+2 = 2+1+1
-    2+1 = 3 ⇒ 2+1+1 = 3+1
-    2+1 = 3; 2+1 = 3 ⇒ 2+1+1 = 3+1
-    2+1+1 = 3+1
-    2+1+1 = 3+1; 3+1 = 4
-    2+1+1 = 4
-    2+2 = 2+1+1; 2+1+1 = 4
-    2+2 = 4
+    2+1+1 = 2+2                      #M61 ∵ A8,M54 Right Synonym.
+    2+2 = 2+1+1                      #M62 ∵ A5,M61 Symmetric.
+    2+1+1 = 3+1                      #M63 ∵ A7,M57 Left Synonym.
+    2+1+1 = 3+1; 3+1 = 4             #C64 ∵ M63,M60.
+    2+1+1 = 4                        #M65 ∵ A6,C64 Transitive.
+    2+2 = 2+1+1; 2+1+1 = 4           #C66 ∵ M62,M65.
+    2+2 = 4                          #M67 ∵ A6,C66 Transitive.
     #
 
 ###<a name="xSV"></a> ∈
 [Element](http://en.wikipedia.org/wiki/Element_&#40;mathematics&#41;) operator:
 
-    𝓊 = {ℊ} ⇒ 𝓊{ℊ}  ⊢
-    𝓊{ℊ𝓋𝒽} ⇒ 𝓊{𝓋}   ⊢
-    𝓋∈𝓊 = 𝓊{𝓋}      ⊢
-
-    𝓋∈𝓊 = 𝓊{𝓋} ⇒ 𝓊{𝓋} ⇒ 𝓋∈𝓊 #L76
-    𝓋∈𝓊 = 𝓊{𝓋}; 𝓋∈𝓊 = 𝓊{𝓋} ⇒ 𝓊{𝓋} ⇒ 𝓋∈𝓊 #T77
-    𝓊{𝓋} ⇒ 𝓋∈𝓊    #T78 Element.
+    𝓊 = {ℊ} ⇒ 𝓊{ℊ}  ⊢#A68 Set Contains Elements.
+    𝓊{ℊ𝓋𝒽} ⇒ 𝓊{𝓋}   ⊢#A69 Element Contained By Set.
+    𝓋∈𝓊 = 𝓊{𝓋}      ⊢#A70 Contained By Means Element Of.
+    𝓊{𝓋} ⇒ 𝓋∈𝓊       #M71 If Contained By, Element Of ∵ A3,A70 Equivalent Statement.
 
 ###<a name="vZe"></a> N,M,n,m
 
@@ -307,18 +301,36 @@ I don't know an authoritive reference to justify them:
 > Although notation for sets are similar to the notation for patterns,
 > please don't confuse them.
 
-    ℕ{N,M,n,m}  ⊢# Conjure up N, M, n, and m as Natural numbers.
-    ℕ{N}
-    N∈ℕ #C81 by T78. ∵ Element.
+    ℕ{N,M,n,m}  ⊢#A72 Number Variables.
+    ℕ{N}         #M73 ∵ A69,A72 Element Contained By Set.
+    N∈ℕ          #M74 ∵ M71,M73 If Contained By, Element Of.
 
-    M = N-1     ⊢# This just simplifies notation later on.
+    # This just simplifies notation later on.
+    M = N-1   ⊢#A75.
 
-    𝔫++ ⇒ 𝔫+1  ⊢ #A83
-    ,n,⋯  ⊢# Just testing.
-    ,n,n++,⋯
-    ,n,n+1,⋯
-    ,n,⸨n+1⸩,⋯
-    ,n,(n+1),(n+1)++,⋯
+    𝔫++ = 𝔫+1    ⊢ #A76 Number Variable Successor.
+    ,𝒾, = ,(𝒾),  ⊢#A77 Item Group.
+
+    # Prove: ,n,⋯ = ,n,n+1,(n+1)++,⋯
+    ,n,⋯ = ,n,n++,⋯                          #P78 ∵ A2 Successor Ellipsis.
+    n++ = n+1                                #P79 ∵ A76 Number Variable Successor.
+    ,n,n++,⋯ = ,n,n+1,⋯                      #M80 ∵ A9,P79 Context Synonym.
+    ,n,⋯ = ,n,n++,⋯; ,n,n++,⋯ = ,n,n+1,⋯     #C81 ∵ P78,M80.
+    ,n,⋯ = ,n,n+1,⋯                          #M82 ∵ A6,C81 Transitive.
+    ,n+1, = ,(n+1),                          #P83 ∵ A77 Item Group.
+    ,n,n+1,⋯ = ,n,(n+1),⋯                    #M84 ∵ A9,P83 Context Synonym.
+    ,n,⋯ = ,n,n+1,⋯; ,n,n+1,⋯ = ,n,(n+1),⋯   #C85 ∵ M82,M84.
+    ,n,⋯ = ,n,(n+1),⋯                        #M86 ∵ A6,C85 Transitive.
+    ,(n+1),⋯ = ,(n+1),(n+1)++,⋯              #P87 ∵ A2 Successor Ellipsis.
+    ,n,(n+1),⋯ = ,n,(n+1),(n+1)++,⋯          #M88 ∵ A8,P87 Right Synonym.
+    ,n,n+1,(n+1)++,⋯ = ,n,(n+1),(n+1)++,⋯    #M89 ∵ A9,P83 Context Synonym.
+    ,n,(n+1),(n+1)++,⋯ = ,n,n+1,(n+1)++,⋯    #M90 ∵ A5,M89 Symmetric.
+    ,n,(n+1),⋯ = ,n,(n+1),(n+1)++,⋯; ,n,(n+1),(n+1)++,⋯ = ,n,n+1,(n+1)++,⋯ #C91 ∵ M88,M90.
+    ,n,(n+1),⋯ = ,n,n+1,(n+1)++,⋯            #M92 ∵ A6,C91 Transitive.
+    ,n,⋯ = ,n,(n+1),⋯; ,n,(n+1),⋯ = ,n,n+1,(n+1)++,⋯ #C93 ∵ M86,M92.
+    ,n,⋯ = ,n,n+1,(n+1)++,⋯                  #M94 ∵ A6,C93 Transitive.
+    #
+    GOT TO HERE ON REVIEW.
 
 ###<a name="r5l"></a> ℤ
 

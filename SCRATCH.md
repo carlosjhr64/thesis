@@ -139,7 +139,7 @@ will check for axioms that appear to redefine a statement.
 
 ###<a name="WXp"></a> 𝓅,𝓆,𝓇,𝓈
 
-    𝒫 /[^⇒=;\s][^⇒=;]*[^⇒=;\s]|[^⇒=;\s]/ !⊢# Phrase.
+    𝒫 /[^⇒=;\s][^⇒=;]*?[^⇒=;\s]|[^⇒=;\s]/ !⊢# Phrase, not greedy.
     # Exception: note that below, I'm using bold script o.
     𝒫 { 𝓸,𝓅,𝓆,𝓇 } !⊢
 
@@ -203,9 +203,9 @@ I don't know an authoritive reference to justify them:
 Successor operator and
 [Ellipsis](http://en.wikipedia.org/wiki/Ellipsis#In_mathematical_notation):
 
-    ,𝓊,𝓋,⋯ ⇒ 𝓋 = 𝓊++   ⊢#A15 Successor.
-    {𝓊,𝓋,⋯} ⇒ 𝓋 = 𝓊++  ⊢#A16 Successor Seeding.
-    ,𝓊,⋯ = ,𝓊,𝓊++,⋯    ⊢#A17 Successor Ellipsis.
+    𝓅𝓊,𝓋,⋯𝓆 ⇒ 𝓋 = 𝓊++  ⊢#A15 Successor.
+    𝓅𝓊,⋯𝓆 = 𝓅𝓊,𝓊++,⋯𝓆    ⊢#A16 Successor Ellipsis.
+    𝓅𝓊,⋯,𝓊𝓆 = 𝓅𝓊𝓆        ⊢#A17 Terminal Ellipsis.
 
 ###<a name="9ET"></a> ℕ
 [Natural (Counting) numbers](http://en.wikipedia.org/wiki/Natural_number):
@@ -219,7 +219,7 @@ Successor operator and
 
 We're just giving each successor element a name:
 
-    1 = 0++   #M23 ∵ A16,M22 Successor Seeding.
+    1 = 0++   #M23 ∵ A15,M22 Successor.
     2 = 1++  ⊢#A24.
     3 = 2++  ⊢#A25.
     4 = 3++  ⊢#A26.
@@ -240,127 +240,149 @@ We're just giving each successor element a name:
     8++ = 9   #M40 ∵ A4,A31 Symmetric.
 
     # Prove ℕ = {0,1,2,⋯}
-    ,1,⋯ = ,1,1++,⋯                          #P41 ∵ A17 Successor Ellipsis.
-    {0,1,⋯} = {0,1,1++,⋯}                    #M42 ∵ A8,P41 Context Synonym.
-    ℕ = {0,1,⋯}; {0,1,⋯} = {0,1,1++,⋯}       #C43 ∵ A18,M42 Natural Numbers.
-    ℕ = {0,1,1++,⋯}                          #M44 ∵ A5,C43 Transitive.
-    {0,1,1++,⋯} = {0,1,2,⋯}                  #M45 ∵ A8,M33 Context Synonym.
-    ℕ = {0,1,1++,⋯}; {0,1,1++,⋯} = {0,1,2,⋯} #C46 ∵ M44,M45.
-    ℕ = {0,1,2,⋯}                            #M47 ∵ A5,C46 Transitive.
+    {0,1,⋯} = {0,1,1++,⋯}                    #P41 ∵ A16 Successor Ellipsis.
+    ℕ = {0,1,⋯}; {0,1,⋯} = {0,1,1++,⋯}       #C42 ∵ A18,P41 Natural Numbers.
+    ℕ = {0,1,1++,⋯}                          #M43 ∵ A5,C42 Transitive.
+    {0,1,1++,⋯} = {0,1,2,⋯}                  #M44 ∵ A8,M33 Context Synonym.
+    ℕ = {0,1,1++,⋯}; {0,1,1++,⋯} = {0,1,2,⋯} #C45 ∵ M43,M44.
+    ℕ = {0,1,2,⋯}                            #M46 ∵ A5,C45 Transitive.
     #
 
     # Prove ℕ = {0,1,2,3,⋯}
-    ,2,⋯ = ,2,2++,⋯                                #P48 ∵ A17 Successor Ellipsis.
-    {0,1,2,⋯} = {0,1,2,2++,⋯}                      #M49 ∵ A8,P48 Context Synonym.
-    ℕ = {0,1,2,⋯}; {0,1,2,⋯} = {0,1,2,2++,⋯}       #C50 ∵ M47,M49.
-    ℕ = {0,1,2,2++,⋯}                              #M51 ∵ A5,C50 Transitive.
-    {0,1,2,2++,⋯} = {0,1,2,3,⋯}                    #M52 ∵ A8,M34 Context Synonym.
-    ℕ = {0,1,2,2++,⋯}; {0,1,2,2++,⋯} = {0,1,2,3,⋯} #C53 ∵ M51,M52.
-    ℕ = {0,1,2,3,⋯}                                #M54 ∵ A5,C53 Transitive.
+    {0,1,2,⋯} = {0,1,2,2++,⋯}                      #P47 ∵ A16 Successor Ellipsis.
+    #2,⋯ = 2,2++,⋯                                #P48 ∵ A16 Successor Ellipsis.
+    ℕ = {0,1,2,⋯}; {0,1,2,⋯} = {0,1,2,2++,⋯}       #C48 ∵ M46,P47.
+    ℕ = {0,1,2,2++,⋯}                              #M49 ∵ A5,C48 Transitive.
+    {0,1,2,2++,⋯} = {0,1,2,3,⋯}                    #M50 ∵ A8,M34 Context Synonym.
+    ℕ = {0,1,2,2++,⋯}; {0,1,2,2++,⋯} = {0,1,2,3,⋯} #C51 ∵ M49,M50.
+    ℕ = {0,1,2,3,⋯}                                #M52 ∵ A5,C51 Transitive.
     #
 
     # And so on, I can show...
-    ℕ = {0,1,2,3,4,5,6,7,8,9,⋯} :⊢#T55 Digits.
+    ℕ = {0,1,2,3,4,5,6,7,8,9,⋯} :⊢#T53 Digits.
 
 ###<a name="vZe"></a> N,M,n,m
 
-    𝔑 /\d+|[NMnm]/ !⊢
+    𝔑 /\d+|[NMklnm]/ !⊢
     𝔑 { 𝔫,𝔪 } !⊢
 
-    ℕ{N,M,n,m}  ⊢#A56 Number Variables.
-    ℕ{N}         #M57 ∵ A10,A56 Element Contained By Set.
-    N∈ℕ          #M58 ∵ M13,M57 If Contained By, Element Of.
+    ℕ{N,M,n,m}  ⊢#A54 Number Variables.
+    ℕ{N}         #M55 ∵ A10,A54 Element Contained By Set.
+    N∈ℕ          #M56 ∵ M13,M55 If Contained By, Element Of.
 
     # This just simplifies notation later on.
-    M++ = N   ⊢#A59.
+    M++ = N   ⊢#A57.
 
 ###<a name="YD5"></a> +
 [Addition](http://en.wikipedia.org/wiki/Addition):
 
-    𝐀[𝓊,𝓋] = 𝓊+𝓋  ⊢#A60 Addition.
-    𝔫++ = 𝐀[𝔫,1]  ⊢#A61 Number Successor By Addition.
+    𝐀[𝓊,𝓋] = 𝓊+𝓋  ⊢#A58 Addition.
+    𝔫++ = 𝐀[𝔫,1]  ⊢#A59 Number Successor By Addition.
 
-    𝐀[𝔫,1] = 𝔫+1               #P62 ∵ A60 Addition.
-    𝔫++ = 𝐀[𝔫,1]; 𝐀[𝔫,1] = 𝔫+1 #C63 ∵ A61,P62 Number Successor By Addition.
-    𝔫++ = 𝔫+1                  #M64 Number Successor By Adding One ∵ A5,C63 Transitive.
-    𝔫+1 = 𝔫++                  #M65 Adding One by Number Successor ∵ A4,M64 Symmetric.
+    𝐀[𝔫,1] = 𝔫+1               #P60 ∵ A58 Addition.
+    𝔫++ = 𝐀[𝔫,1]; 𝐀[𝔫,1] = 𝔫+1 #C61 ∵ A59,P60 Number Successor By Addition.
+    𝔫++ = 𝔫+1                  #M62 Number Successor By Adding One ∵ A5,C61 Transitive.
+    𝔫+1 = 𝔫++                  #M63 Adding One by Number Successor ∵ A4,M62 Symmetric.
 
     # Prove: 0+1 = 1
-    0+1 = 0++          #P66 ∵ M65 Adding One by Number Successor.
-    0+1 = 0++; 0++ = 1 #C67 ∵ P66,M32.
-    0+1 = 1            #M68 ∵ A5,C67 Transitive.
+    0+1 = 0++          #P64 ∵ M63 Adding One by Number Successor.
+    0+1 = 0++; 0++ = 1 #C65 ∵ P64,M32.
+    0+1 = 1            #M66 ∵ A5,C65 Transitive.
     #
 
     # Prove: 1+1 = 2
-    1+1 = 1++            #P69 ∵ M65 Adding One by Number Successor.
-    1+1 = 1++; 1++ = 2   #C70 ∵ P69,M33.
-    1+1 = 2              #M71 ∵ A5,C70 Transitive.
+    1+1 = 1++            #P67 ∵ M63 Adding One by Number Successor.
+    1+1 = 1++; 1++ = 2   #C68 ∵ P67,M33.
+    1+1 = 2              #M69 ∵ A5,C68 Transitive.
     #
 
     # Prove: 2+1 = 3
-    2+1 = 2++            #P72 ∵ M65 Adding One by Number Successor.
-    2+1 = 2++; 2++ = 3   #C73 ∵ P72,M34.
-    2+1 = 3              #M74 ∵ A5,C73 Transitive.
+    2+1 = 2++            #P70 ∵ M63 Adding One by Number Successor.
+    2+1 = 2++; 2++ = 3   #C71 ∵ P70,M34.
+    2+1 = 3              #M72 ∵ A5,C71 Transitive.
     #
 
     # Prove: 3+1 = 4
-    3+1 = 3++            #P75 ∵ M65 Adding One by Number Successor.
-    3+1 = 3++; 3++ = 4   #C76 ∵ P75,M35.
-    3+1 = 4              #M77 ∵ A5,C76 Transitive.
+    3+1 = 3++            #P73 ∵ M63 Adding One by Number Successor.
+    3+1 = 3++; 3++ = 4   #C74 ∵ P73,M35.
+    3+1 = 4              #M75 ∵ A5,C74 Transitive.
     # ⋯
 
     # And so on, I can show:
-    4+1 = 5 :⊢#T78.
-    5+1 = 6 :⊢#T79.
-    6+1 = 7 :⊢#T80.
-    7+1 = 8 :⊢#T81.
-    8+1 = 9 :⊢#T82.
+    4+1 = 5 :⊢#T76.
+    5+1 = 6 :⊢#T77.
+    6+1 = 7 :⊢#T78.
+    7+1 = 8 :⊢#T79.
+    8+1 = 9 :⊢#T80.
 
     # Prove: 1+1+1 = 3
-    1+1+1 = 2+1          #M83 ∵ A6,M71 Left Synonym.
-    1+1+1 = 2+1; 2+1 = 3 #C84 ∵ M83,M74.
-    1+1+1 = 3            #M85 ∵ A5,C84 Transitive.
+    1+1+1 = 2+1          #M81 ∵ A6,M69 Left Synonym.
+    1+1+1 = 2+1; 2+1 = 3 #C82 ∵ M81,M72.
+    1+1+1 = 3            #M83 ∵ A5,C82 Transitive.
     #
 
     # Prove: 1+1+1+1 = 4
-    1+1+1+1 = 3+1          #M86 ∵ A6,M85 Left Synonym.
-    1+1+1+1 = 3+1; 3+1 = 4 #C87 ∵ M86,M77.
-    1+1+1+1 = 4            #M88 ∵ A5,C87 Transitive.
+    1+1+1+1 = 3+1          #M84 ∵ A6,M83 Left Synonym.
+    1+1+1+1 = 3+1; 3+1 = 4 #C85 ∵ M84,M75.
+    1+1+1+1 = 4            #M86 ∵ A5,C85 Transitive.
     #
 
     # And so on, I can show:
-    1+1+1+1+1 = 5         :⊢#T89.
-    1+1+1+1+1+1 = 6       :⊢#T90.
-    1+1+1+1+1+1+1 = 7     :⊢#T91.
-    1+1+1+1+1+1+1+1 = 8   :⊢#T92.
-    1+1+1+1+1+1+1+1+1 = 9 :⊢#T93.
+    1+1+1+1+1 = 5         :⊢#T87.
+    1+1+1+1+1+1 = 6       :⊢#T88.
+    1+1+1+1+1+1+1 = 7     :⊢#T89.
+    1+1+1+1+1+1+1+1 = 8   :⊢#T90.
+    1+1+1+1+1+1+1+1+1 = 9 :⊢#T91.
 
     # Prove: 2+3 = 5
-    1+1+1+1+1 = 2+1+1+1                #M94 ∵ A6,M71 Left Synonym.
-    2+1+1+1 = 2+3                      #M95 ∵ A7,M85 Right Synonym.
-    1+1+1+1+1 = 2+1+1+1; 2+1+1+1 = 2+3 #C96 ∵ M94,M95.
-    1+1+1+1+1 = 2+3                    #M97 ∵ A5,C96 Transitive.
-    2+3 = 1+1+1+1+1                    #M98 ∵ A4,M97 Symmetric.
-    2+3 = 1+1+1+1+1; 1+1+1+1+1 = 5     #C99 ∵ M98,T89.
-    2+3 = 5                            #M100 ∵ A5,C99 Transitive.
+    1+1+1+1+1 = 2+1+1+1                #M92 ∵ A6,M69 Left Synonym.
+    2+1+1+1 = 2+3                      #M93 ∵ A7,M83 Right Synonym.
+    1+1+1+1+1 = 2+1+1+1; 2+1+1+1 = 2+3 #C94 ∵ M92,M93.
+    1+1+1+1+1 = 2+3                    #M95 ∵ A5,C94 Transitive.
+    2+3 = 1+1+1+1+1                    #M96 ∵ A4,M95 Symmetric.
+    2+3 = 1+1+1+1+1; 1+1+1+1+1 = 5     #C97 ∵ M96,T87.
+    2+3 = 5                            #M98 ∵ A5,C97 Transitive.
     #
 
     # Prove: 3+2 = 5
-    1+1+1+1+1 = 3+1+1              #M101 ∵ A6,M85 Left Synonym.
-    3+1+1 = 3+2                    #M102 ∵ A7,M71 Right Synonym.
-    1+1+1+1+1 = 3+1+1; 3+1+1 = 3+2 #C103 ∵ M101,M102.
-    1+1+1+1+1 = 3+2                #M104 ∵ A5,C103 Transitive.
-    3+2 = 1+1+1+1+1                #M105 ∵ A4,M104 Symmetric.
-    3+2 = 1+1+1+1+1; 1+1+1+1+1 = 5 #C106 ∵ M105,T89.
-    3+2 = 5                        #M107 ∵ A5,C106 Transitive.
+    1+1+1+1+1 = 3+1+1              #M99 ∵ A6,M83 Left Synonym.
+    3+1+1 = 3+2                    #M100 ∵ A7,M69 Right Synonym.
+    1+1+1+1+1 = 3+1+1; 3+1+1 = 3+2 #C101 ∵ M99,M100.
+    1+1+1+1+1 = 3+2                #M102 ∵ A5,C101 Transitive.
+    3+2 = 1+1+1+1+1                #M103 ∵ A4,M102 Symmetric.
+    3+2 = 1+1+1+1+1; 1+1+1+1+1 = 5 #C104 ∵ M103,T87.
+    3+2 = 5                        #M105 ∵ A5,C104 Transitive.
     #
 
     # Prove: 3+2 = 2+3
-    5 = 2+3          #M108 ∵ A4,M100 Symmetric.
-    3+2 = 5; 5 = 2+3 #C109 ∵ M107,M108.
-    3+2 = 2+3        #M110 ∵ A5,C109 Transitive.
+    5 = 2+3          #M106 ∵ A4,M98 Symmetric.
+    3+2 = 5; 5 = 2+3 #C107 ∵ M105,M106.
+    3+2 = 2+3        #M108 ∵ A5,C107 Transitive.
     #
+
+### 𝔰{𝓈|𝓊[𝓈]}
+
+    𝔖 /[ℕℤℚℝ]/ !⊢
+    𝔖 { 𝔰,𝔱 } !⊢
+
+    𝔱 = 𝔰{𝓈|𝓊[𝓈]} ⇒ 𝔱{𝓊[𝓈]}; 𝔰{𝓈}  ⊢#A109 Iterator.
+
+### [m,n]
+
+    [𝔪,𝔫] = {𝔪,⋯,𝔫}  ⊢#A110 Interval.
+
+    # Prove: [0,3] = {1,2,3}
+    [0,3] = {0,⋯,3}                 #P111 ∵ A110 Interval.
+    {0,⋯,3} = {0,0++,⋯,3}           #P112 ∵ A16 Successor Ellipsis.
+    {0,0++,⋯,3} = {0,1,⋯,3}         #M113 ∵ A8,M32 Context Synonym.
+    {0,1,⋯,3} = {0,1,1++,⋯,3}       #P114 ∵ A16 Successor Ellipsis.
+    {0,1,1++,⋯,3} = {0,1,2,⋯,3}     #M115 ∵ A8,M33 Context Synonym.
+    {0,1,2,⋯,3} = {0,1,2,2++,⋯,3}   #P116 ∵ A16 Successor Ellipsis.
+    {0,1,2,2++,⋯,3} = {0,1,2,3,⋯,3} #M117 ∵ A8,M34 Context Synonym.
+    {0,1,2,3,⋯,3} = {0,1,2,3}       #P118 ∵ A17 Terminal Ellipsis.
+    [0,3] = {0,1,2,3}             :⊢#T119.
     GOT UP TO HERE ON REVIEW
+    TODO: Make proofcheck recognize the train of equality.
 
     𝓊+0 = 𝓊   #A52 Additive Identity.
     𝓊+𝓋 = 𝓋+𝓊  ⊢#A46 Cummutative.
@@ -388,14 +410,6 @@ We're just giving each successor element a name:
     ,n,⋯ = ,n,n+1,(n+1)++,⋯                 #M78 ∵ A5,C77 Transitive.
     #
 
-### ∀
-
-### 𝔰{𝓈|𝓊[𝓈]}
-
-    𝔖 /[ℕℤℚℝ]/ !⊢
-    𝔖 { 𝔰,𝔱 } !⊢
-
-    𝔱 = 𝔰{𝓈|𝓊[𝓈]} ⇒ 𝔱{𝓊[𝓈]}; 𝔰{𝓈}  ⊢#A95 Iterator.
 
 ###<a name="r5l"></a> ℤ
 

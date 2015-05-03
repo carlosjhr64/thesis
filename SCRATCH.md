@@ -344,6 +344,22 @@ We're just giving each successor element a name:
     2+3 = 1+1+1+1+1; 1+1+1+1+1 = 5     #C99 ∵ M98,T89.
     2+3 = 5                            #M100 ∵ A5,C99 Transitive.
     #
+
+    # Prove: 3+2 = 5
+    1+1+1+1+1 = 3+1+1              #M101 ∵ A6,M85 Left Synonym.
+    3+1+1 = 3+2                    #M102 ∵ A7,M71 Right Synonym.
+    1+1+1+1+1 = 3+1+1; 3+1+1 = 3+2 #C103 ∵ M101,M102.
+    1+1+1+1+1 = 3+2                #M104 ∵ A5,C103 Transitive.
+    3+2 = 1+1+1+1+1                #M105 ∵ A4,M104 Symmetric.
+    3+2 = 1+1+1+1+1; 1+1+1+1+1 = 5 #C106 ∵ M105,T89.
+    3+2 = 5                        #M107 ∵ A5,C106 Transitive.
+    #
+
+    # Prove: 3+2 = 2+3
+    5 = 2+3          #M108 ∵ A4,M100 Symmetric.
+    3+2 = 5; 5 = 2+3 #C109 ∵ M107,M108.
+    3+2 = 2+3        #M110 ∵ A5,C109 Transitive.
+    #
     GOT UP TO HERE ON REVIEW
 
     𝓊+0 = 𝓊   #A52 Additive Identity.

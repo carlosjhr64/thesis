@@ -150,7 +150,7 @@ altough not a normal calligraphy letter:
     ₛ /[ₙₘ₁₂₃₄₅₆₇₈₉₀₊₋₍₎]+/ !⊢# Subscript.
     ₛ { ᵥ,ᵤ }               !⊢
 
-###<a name="WXp"></a> 𝒫  𝓸,𝓅,𝓆,𝓇
+###<a name="WXp"></a> 𝒫 𝓸,𝓅,𝓆,𝓇
 Exception, note that below, I'm using bold script o:
 
     𝒫 /[^⇒=;\s][^⇒=;]*?[^⇒=;\s]|[^⇒=;\s]/ !⊢# Phrase.

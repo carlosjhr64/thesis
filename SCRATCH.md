@@ -1,4 +1,4 @@
-[ CONTENTS](CONTENTS.md)
+[CONTENTS](CONTENTS.md)
 
 # The (Over The Top (Extreme)) Full Monty
 Here I write explicitly all my work.
@@ -223,15 +223,17 @@ Successor operator and
     𝓅𝓊,⋯𝓆 = 𝓅𝓊,𝓊++,⋯𝓆  ⊢#A19 Successor Ellipsis.
     𝓅𝓊,⋯,𝓊𝓆 = 𝓅𝓊𝓆      ⊢#A20 Terminal Ellipsis.
 
+    𝓅𝓊(𝓈),⋯𝓆 = 𝓅𝓊(𝓈),𝓊(𝓈++),⋯𝓆  ⊢#A21 Sequence Successor Ellipsis.
+
 ###<a name="9ET"></a> ℕ
 [Natural (Counting) numbers](http://en.wikipedia.org/wiki/Natural_number):
 
-    ℕ = {0,1,⋯}  ⊢#A21 Natural Numbers.
-    ℕ            ⊢#A22 Numbers Exist.
+    ℕ = {0,1,⋯}  ⊢#A22 Natural Numbers.
+    ℕ            ⊢#A23 Numbers Exist.
 
-    ℕ ⇒ {0,1,⋯}      #M23 ∵ A2,A21 Equivalent Statement.
-    ℕ; ℕ ⇒ {0,1,⋯}   #C24 ∵ A22,M23 Numbers Exist.
-    {0,1,⋯}          #M25 ∵ A1,C24 Modus Ponem.
+    ℕ ⇒ {0,1,⋯}      #M24 ∵ A2,A22 Equivalent Statement.
+    ℕ; ℕ ⇒ {0,1,⋯}   #C25 ∵ A23,M24 Numbers Exist.
+    {0,1,⋯}          #M26 ∵ A1,C25 Modus Ponem.
 
 I need to say that `{0,1,⋯}` is true in order to say that `1` is the successor of `0`.
 Simply that `ℕ = {0,1,⋯}` does not say either is true.
@@ -239,53 +241,53 @@ I might have avoided the issue had Elipsis beed defined within `𝒜` instead of
 I think sematically as it is works just fine.
 There after, we're just giving each successor element a name:
 
-    1 = 0++   #M26 ∵ A18,M25 Successor.
-    2 = 1++  ⊢#A27.
-    3 = 2++  ⊢#A28.
-    4 = 3++  ⊢#A29.
-    5 = 4++  ⊢#A30.
-    6 = 5++  ⊢#A31.
-    7 = 6++  ⊢#A32.
-    8 = 7++  ⊢#A33.
-    9 = 8++  ⊢#A34.
+    1 = 0++   #M27 ∵ A18,M26 Successor.
+    2 = 1++  ⊢#A28.
+    3 = 2++  ⊢#A29.
+    4 = 3++  ⊢#A30.
+    5 = 4++  ⊢#A31.
+    6 = 5++  ⊢#A32.
+    7 = 6++  ⊢#A33.
+    8 = 7++  ⊢#A34.
+    9 = 8++  ⊢#A35.
 
-    0++ = 1   #M35 ∵ A4,M26 Symmetric.
-    1++ = 2   #M36 ∵ A4,A27 Symmetric.
-    2++ = 3   #M37 ∵ A4,A28 Symmetric.
-    3++ = 4   #M38 ∵ A4,A29 Symmetric.
-    4++ = 5   #M39 ∵ A4,A30 Symmetric.
-    5++ = 6   #M40 ∵ A4,A31 Symmetric.
-    6++ = 7   #M41 ∵ A4,A32 Symmetric.
-    7++ = 8   #M42 ∵ A4,A33 Symmetric.
-    8++ = 9   #M43 ∵ A4,A34 Symmetric.
+    0++ = 1   #M36 ∵ A4,M27 Symmetric.
+    1++ = 2   #M37 ∵ A4,A28 Symmetric.
+    2++ = 3   #M38 ∵ A4,A29 Symmetric.
+    3++ = 4   #M39 ∵ A4,A30 Symmetric.
+    4++ = 5   #M40 ∵ A4,A31 Symmetric.
+    5++ = 6   #M41 ∵ A4,A32 Symmetric.
+    6++ = 7   #M42 ∵ A4,A33 Symmetric.
+    7++ = 8   #M43 ∵ A4,A34 Symmetric.
+    8++ = 9   #M44 ∵ A4,A35 Symmetric.
 
     # Prove ℕ = {0,1,2,⋯}.
-    {0,1,⋯} = {0,1,1++,⋯}                    #P44 ∵ A19 Successor Ellipsis.
-    ℕ = {0,1,⋯}; {0,1,⋯} = {0,1,1++,⋯}       #C45 ∵ A21,P44 Natural Numbers.
-    ℕ = {0,1,1++,⋯}                          #M46 ∵ A5,C45 Transitive.
-    {0,1,1++,⋯} = {0,1,2,⋯}                  #M47 ∵ P11,M36 Bounded Context Synonym.
-    ℕ = {0,1,1++,⋯}; {0,1,1++,⋯} = {0,1,2,⋯} #C48 ∵ M46,M47.
-    ℕ = {0,1,2,⋯}                            #M49 ∵ A5,C48 Transitive.
+    {0,1,⋯} = {0,1,1++,⋯}                    #P45 ∵ A19 Successor Ellipsis.
+    ℕ = {0,1,⋯}; {0,1,⋯} = {0,1,1++,⋯}       #C46 ∵ A22,P45 Natural Numbers.
+    ℕ = {0,1,1++,⋯}                          #M47 ∵ A5,C46 Transitive.
+    {0,1,1++,⋯} = {0,1,2,⋯}                  #M48 ∵ P11,M37 Bounded Context Synonym.
+    ℕ = {0,1,1++,⋯}; {0,1,1++,⋯} = {0,1,2,⋯} #C49 ∵ M47,M48.
+    ℕ = {0,1,2,⋯}                            #M50 ∵ A5,C49 Transitive.
     #
 
     # Prove ℕ = {0,1,2,3,⋯}.
-    {0,1,2,⋯} = {0,1,2,2++,⋯}                      #P50 ∵ A19 Successor Ellipsis.
+    {0,1,2,⋯} = {0,1,2,2++,⋯}                      #P51 ∵ A19 Successor Ellipsis.
     #2,⋯ = 2,2++,⋯                                 #P48 ∵ A16 Successor Ellipsis.
-    ℕ = {0,1,2,⋯}; {0,1,2,⋯} = {0,1,2,2++,⋯}       #C51 ∵ M49,P50.
-    ℕ = {0,1,2,2++,⋯}                              #M52 ∵ A5,C51 Transitive.
-    {0,1,2,2++,⋯} = {0,1,2,3,⋯}                    #M53 ∵ P11,M37 Bounded Context Synonym.
-    ℕ = {0,1,2,2++,⋯}; {0,1,2,2++,⋯} = {0,1,2,3,⋯} #C54 ∵ M52,M53.
-    ℕ = {0,1,2,3,⋯}                                #M55 ∵ A5,C54 Transitive.
+    ℕ = {0,1,2,⋯}; {0,1,2,⋯} = {0,1,2,2++,⋯}       #C52 ∵ M50,P51.
+    ℕ = {0,1,2,2++,⋯}                              #M53 ∵ A5,C52 Transitive.
+    {0,1,2,2++,⋯} = {0,1,2,3,⋯}                    #M54 ∵ P11,M38 Bounded Context Synonym.
+    ℕ = {0,1,2,2++,⋯}; {0,1,2,2++,⋯} = {0,1,2,3,⋯} #C55 ∵ M53,M54.
+    ℕ = {0,1,2,3,⋯}                                #M56 ∵ A5,C55 Transitive.
     #
 
     # Prove ℕ = {0,1,2,3,4,⋯} using a=b=c=⋯ shortcut.
-    {0,1,2,3,⋯} = {0,1,2,3,3++,⋯}   #P56 ∵ A19 Successor Ellipsis.
-    {0,1,2,3,3++,⋯} = {0,1,2,3,4,⋯} #M57 ∵ P11,M38 Bounded Context Synonym.
-    ℕ = {0,1,2,3,4,⋯}               #D58 ∵ A21 Natural Numbers.
+    {0,1,2,3,⋯} = {0,1,2,3,3++,⋯}   #P57 ∵ A19 Successor Ellipsis.
+    {0,1,2,3,3++,⋯} = {0,1,2,3,4,⋯} #M58 ∵ P11,M39 Bounded Context Synonym.
+    ℕ = {0,1,2,3,4,⋯}               #D59 ∵ A22 Natural Numbers.
     #
 
     # And so on, I can show...
-    ℕ = {0,1,2,3,4,5,6,7,8,9,⋯} :⊢#T59 Digits.
+    ℕ = {0,1,2,3,4,5,6,7,8,9,⋯} :⊢#T60 Digits.
     #
 
 ###<a name="vZe"></a> N,M,n,m
@@ -293,117 +295,123 @@ There after, we're just giving each successor element a name:
     𝔑 /\d+|[NMklnm]/ !⊢
     𝔑 { 𝔫,𝔪 }        !⊢
 
-    ℕ{m,n,M,N}  ⊢#A60 Number Variables.
-    ℕ{N}         #M61 ∵ A13,A60 Element Contained By Set.
-    N∈ℕ          #M62 ∵ M16,M61 If Contained By, Element Of.
+    ℕ{m,n,M,N}  ⊢#A61 Number Variables.
+    ℕ{N}         #M62 ∵ A13,A61 Element Contained By Set.
+    N∈ℕ          #M63 ∵ M16,M62 If Contained By, Element Of.
 
     # This just simplifies notation later on.
-    M++ = N   ⊢#A63.
+    M++ = N   ⊢#A64.
+
+### [m,n]
+
+    [𝔪,𝔫] = {𝔪,⋯,𝔫}  ⊢#A65 Interval.
+
+    # Prove: [0,3] = {1,2,3}
+    [0,3] = {0,⋯,3}                 #P66 ∵ A65 Interval.
+    {0,⋯,3} = {0,0++,⋯,3}           #P67 ∵ A19 Successor Ellipsis.
+    {0,0++,⋯,3} = {0,1,⋯,3}         #M68 ∵ P11,M36 Bounded Context Synonym.
+    {0,1,⋯,3} = {0,1,1++,⋯,3}       #P69 ∵ A19 Successor Ellipsis.
+    {0,1,1++,⋯,3} = {0,1,2,⋯,3}     #M70 ∵ P11,M37 Bounded Context Synonym.
+    {0,1,2,⋯,3} = {0,1,2,2++,⋯,3}   #P71 ∵ A19 Successor Ellipsis.
+    {0,1,2,2++,⋯,3} = {0,1,2,3,⋯,3} #M72 ∵ P11,M38 Bounded Context Synonym.
+    {0,1,2,3,⋯,3} = {0,1,2,3}       #P73 ∵ A20 Terminal Ellipsis.
+    [0,3] = {0,1,2,3}               #D74 ∵ P66.
+
+### 𝔰{𝓈|𝓊(𝓈)}
+
+    𝔖 /[𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫]/ !⊢
+    𝔖 { 𝔰,𝔱 } !⊢
+
+    𝔱 = 𝔰{𝓈|𝓊(𝓈)} ⇒ 𝔱{𝓊(𝓈)}  ⊢#A75 Iterators are sets.
+    𝔱 = 𝔰{𝓈|𝓊(𝓈)} ⇒ 𝔰{𝓈}     ⊢#A76 Iterators map sets.
+
+    ℕ{n|𝓊(n)} = (𝓊(0),𝓊(1),⋯)           ⊢#A77 Sequence.
+    (𝓊(0),𝓊(1),⋯) = (𝓊(0),𝓊(1),𝓊(1++),⋯) #P78 ∵ A21 Sequence Successor Ellipsis.
 
 ###<a name="YD5"></a> +
 [Addition](http://en.wikipedia.org/wiki/Addition):
 
-    𝐀[𝓊,𝓋] = 𝓊+𝓋  ⊢#A64 Addition.
-    𝔫++ = 𝐀[𝔫,1]  ⊢#A65 Number Successor By Addition.
+    𝐀(𝓊,𝓋) = 𝓊+𝓋  ⊢#A79 Addition.
+    𝔫++ = 𝐀(𝔫,1)  ⊢#A80 Number Successor By Addition.
 
-    𝐀[𝔫,1] = 𝔫+1               #P66 ∵ A64 Addition.
-    𝔫++ = 𝐀[𝔫,1]; 𝐀[𝔫,1] = 𝔫+1 #C67 ∵ A65,P66 Number Successor By Addition.
-    𝔫++ = 𝔫+1                  #M68 Number Successor By Adding One ∵ A5,C67 Transitive.
-    𝔫+1 = 𝔫++                  #M69 Adding One by Number Successor ∵ A4,M68 Symmetric.
+    𝐀(𝔫,1) = 𝔫+1               #P81 ∵ A79 Addition.
+    𝔫++ = 𝐀(𝔫,1); 𝐀(𝔫,1) = 𝔫+1 #C82 ∵ A80,P81 Number Successor By Addition.
+    𝔫++ = 𝔫+1                  #M83 Number Successor By Adding One ∵ A5,C82 Transitive.
+    𝔫+1 = 𝔫++                  #M84 Adding One by Number Successor ∵ A4,M83 Symmetric.
 
     # Prove: 0+1 = 1.
-    0+1 = 0++          #P70 ∵ M69 Adding One by Number Successor.
-    0+1 = 0++; 0++ = 1 #C71 ∵ P70,M35.
-    0+1 = 1            #M72 ∵ A5,C71 Transitive.
+    0+1 = 0++          #P85 ∵ M84 Adding One by Number Successor.
+    0+1 = 0++; 0++ = 1 #C86 ∵ P85,M36.
+    0+1 = 1            #M87 ∵ A5,C86 Transitive.
     #
 
     # Prove: 1+1 = 2.
-    1+1 = 1++            #P73 ∵ M69 Adding One by Number Successor.
-    1+1 = 1++; 1++ = 2   #C74 ∵ P73,M36.
-    1+1 = 2              #M75 ∵ A5,C74 Transitive.
+    1+1 = 1++          #P88 ∵ M84 Adding One by Number Successor.
+    1+1 = 1++; 1++ = 2 #C89 ∵ P88,M37.
+    1+1 = 2            #M90 ∵ A5,C89 Transitive.
     #
 
     # Prove: 2+1 = 3.
-    2+1 = 2++            #P76 ∵ M69 Adding One by Number Successor.
-    2+1 = 2++; 2++ = 3   #C77 ∵ P76,M37.
-    2+1 = 3              #M78 ∵ A5,C77 Transitive.
+    2+1 = 2++          #P91 ∵ M84 Adding One by Number Successor.
+    2+1 = 2++; 2++ = 3 #C92 ∵ P91,M38.
+    2+1 = 3            #M93 ∵ A5,C92 Transitive.
     #
 
     # Prove: 3+1 = 4, using shortcut.
-    3+1 = 3++            #P79 ∵ M69 Adding One by Number Successor.
-    3+1 = 4              #D80 ∵ A29.
+    3+1 = 3++ #P94 ∵ M84 Adding One by Number Successor.
+    3+1 = 4   #D95 ∵ A30.
     #
 
     # And so on, I can show:
-    4+1 = 5 :⊢#T81.
-    5+1 = 6 :⊢#T82.
-    6+1 = 7 :⊢#T83.
-    7+1 = 8 :⊢#T84.
-    8+1 = 9 :⊢#T85.
+    4+1 = 5 :⊢#T96.
+    5+1 = 6 :⊢#T97.
+    6+1 = 7 :⊢#T98.
+    7+1 = 8 :⊢#T99.
+    8+1 = 9 :⊢#T100.
 
     # Prove: 1+1+1 = 3.
-    1+1+1 = 2+1          #M86 ∵ P9,M75 Left Bounded Synonym.
-    1+1+1 = 2+1; 2+1 = 3 #C87 ∵ M86,M78.
-    1+1+1 = 3            #M88 ∵ A5,C87 Transitive.
+    1+1+1 = 2+1          #M101 ∵ P9,M90 Left Bounded Synonym.
+    1+1+1 = 2+1; 2+1 = 3 #C102 ∵ M101,M93.
+    1+1+1 = 3            #M103 ∵ A5,C102 Transitive.
     #
 
     # Prove: 1+1+1+1 = 4, using shortcut.
-    1+1+1+1 = 3+1          #M89 ∵ P9,M88 Left Bounded Synonym.
-    1+1+1+1 = 4            #D90 ∵ A29.
+    1+1+1+1 = 3+1 #M104 ∵ P9,M103 Left Bounded Synonym.
+    1+1+1+1 = 4   #D105 ∵ A30.
     #
 
     # And so on, I can show:
-    1+1+1+1+1 = 5         :⊢#T91.
-    1+1+1+1+1+1 = 6       :⊢#T92.
-    1+1+1+1+1+1+1 = 7     :⊢#T93.
-    1+1+1+1+1+1+1+1 = 8   :⊢#T94.
-    1+1+1+1+1+1+1+1+1 = 9 :⊢#T95.
+    1+1+1+1+1 = 5         :⊢#T106.
+    1+1+1+1+1+1 = 6       :⊢#T107.
+    1+1+1+1+1+1+1 = 7     :⊢#T108.
+    1+1+1+1+1+1+1+1 = 8   :⊢#T109.
+    1+1+1+1+1+1+1+1+1 = 9 :⊢#T110.
 
     # Prove: 2+3 = 5.
-    1+1+1+1+1 = 2+1+1+1                #M96 ∵ P9,M75 Left Bounded Synonym.
-    2+1+1+1 = 2+3                      #M97 ∵ P10,M88 Right Bounded Synonym.
-    1+1+1+1+1 = 2+1+1+1; 2+1+1+1 = 2+3 #C98 ∵ M96,M97.
-    1+1+1+1+1 = 2+3                    #M99 ∵ A5,C98 Transitive.
-    2+3 = 1+1+1+1+1                    #M100 ∵ A4,M99 Symmetric.
-    2+3 = 1+1+1+1+1; 1+1+1+1+1 = 5     #C101 ∵ M100,T91.
-    2+3 = 5                            #M102 ∵ A5,C101 Transitive.
+    1+1+1+1+1 = 2+1+1+1                #M111 ∵ P9,M90 Left Bounded Synonym.
+    2+1+1+1 = 2+3                      #M112 ∵ P10,M103 Right Bounded Synonym.
+    1+1+1+1+1 = 2+1+1+1; 2+1+1+1 = 2+3 #C113 ∵ M111,M112.
+    1+1+1+1+1 = 2+3                    #M114 ∵ A5,C113 Transitive.
+    2+3 = 1+1+1+1+1                    #M115 ∵ A4,M114 Symmetric.
+    2+3 = 1+1+1+1+1; 1+1+1+1+1 = 5     #C116 ∵ M115,T106.
+    2+3 = 5                            #M117 ∵ A5,C116 Transitive.
     #
 
     # Prove: 3+2 = 5, using shortcut.
-    1+1+1+1+1 = 3+1+1              #M103 ∵ P9,M88 Left Bounded Synonym.
-    3+1+1 = 3+2                    #M104 ∵ P10,M75 Right Bounded Synonym.
-    3+2 = 5                        #D105 ∵ A30.
+    1+1+1+1+1 = 3+1+1 #M118 ∵ P9,M103 Left Bounded Synonym.
+    3+1+1 = 3+2       #M119 ∵ P10,M90 Right Bounded Synonym.
+    3+2 = 5           #D120 ∵ A31.
     # Notice that we knew 1+1+1+1+1 = 5.
     #
 
     # Prove: 3+2 = 2+3.
-    5 = 2+3          #M106 ∵ A4,M102 Symmetric.
-    3+2 = 5; 5 = 2+3 #C107 ∵ D105,M106.
-    3+2 = 2+3        #M108 ∵ A5,C107 Transitive.
+    5 = 2+3          #M121 ∵ A4,M117 Symmetric.
+    3+2 = 5; 5 = 2+3 #C122 ∵ D120,M121.
+    3+2 = 2+3        #M123 ∵ A5,C122 Transitive.
     #
 
-### [m,n]
-
-    [𝔪,𝔫] = {𝔪,⋯,𝔫}  ⊢#A109 Interval.
-
-    # Prove: [0,3] = {1,2,3}
-    [0,3] = {0,⋯,3}                 #P110 ∵ A109 Interval.
-    {0,⋯,3} = {0,0++,⋯,3}           #P111 ∵ A19 Successor Ellipsis.
-    {0,0++,⋯,3} = {0,1,⋯,3}         #M112 ∵ P11,M35 Bounded Context Synonym.
-    {0,1,⋯,3} = {0,1,1++,⋯,3}       #P113 ∵ A19 Successor Ellipsis.
-    {0,1,1++,⋯,3} = {0,1,2,⋯,3}     #M114 ∵ P11,M36 Bounded Context Synonym.
-    {0,1,2,⋯,3} = {0,1,2,2++,⋯,3}   #P115 ∵ A19 Successor Ellipsis.
-    {0,1,2,2++,⋯,3} = {0,1,2,3,⋯,3} #M116 ∵ P11,M37 Bounded Context Synonym.
-    {0,1,2,3,⋯,3} = {0,1,2,3}       #P117 ∵ A20 Terminal Ellipsis.
-    [0,3] = {0,1,2,3}               #D118 ∵ P110.
+### TODO
     GOT UP TO HERE ON REVIEW
-
-### 𝔰{𝓈|𝓊[𝓈]}
-
-    𝔖 /[ℕℤℚℝ]/ !⊢
-    𝔖 { 𝔰,𝔱 } !⊢
-
-    𝔱 = 𝔰{𝓈|𝓊[𝓈]} ⇒ 𝔱{𝓊[𝓈]}; 𝔰{𝓈}  ⊢#A109 Iterator.
 
     𝓊+0 = 𝓊   #A52 Additive Identity.
     𝓊+𝓋 = 𝓋+𝓊  ⊢#A46 Cummutative.

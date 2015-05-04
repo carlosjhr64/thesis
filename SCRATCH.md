@@ -112,70 +112,110 @@ will check for axioms that appear to redefine a statement.
 
 > OK, here we go!
 
-###<a name="YWr"></a> 𝒿,𝓀,𝓁
+###<a name="YWr"></a> ℒ 𝒿,𝓀,𝓁
+Any single letter character:
 
     ℒ /\p{L}/   !⊢# Letter.
     ℒ { 𝒿,𝓀,𝓁 } !⊢
 
-###<a name="6xr"></a> 𝓃,𝓂
+###<a name="6xr"></a> 𝒩 𝓃,𝓂
+Any single number character:
 
     𝒩 /\p{N}/ !⊢# Number.
     𝒩 { 𝓂,𝓃 } !⊢
 
-###<a name="tsT"></a> 𝓊,𝓋,𝓌
+###<a name="tsT"></a> 𝒲 𝓊,𝓋,𝓌
+A word:
 
-    𝒲 /\([^()]+\)|:?[\p{L}\p{N}]+?/ !⊢# Word.
-    𝒲 { 𝓊,𝓋,𝓌,𝓍,𝓎,𝓏 }               !⊢
+    𝒲 /\([^()]+\)|:?[\p{L}\p{N}]+/ !⊢# Word.
+    𝒲 { 𝓊,𝓋,𝓌,𝓍,𝓎,𝓏 }              !⊢
 
-### ℯ,𝒻
+### ℬ ℯ,𝒻
+A character that semantically isolates a word:
 
     ℬ /[+,(){}\[\]]/ !⊢# Semantic Bounder.
-    ℬ { ℯ,𝒻 }       !⊢#
+    ℬ { ℯ,𝒻 }        !⊢#
 
-###<a name="73Y"></a> ᵛ,ᵘ
-Exception: Using ˢ for supercript pattern,
-altough not a normal calligraphy letter.
+###<a name="73Y"></a> ˢ ᵛ,ᵘ
+Exception, using ˢ for supercript pattern,
+although not a normal calligraphy letter:
 
-    ˢ /[ⁿᵐ¹²³⁴⁵⁶⁷⁸⁹⁰⁺⁻]+/ !⊢# Superscript.
-    ˢ { ᵛ,ᵘ }             !⊢
+    ˢ /[ⁿᵐ¹²³⁴⁵⁶⁷⁸⁹⁰⁺⁻⁽⁾]+/ !⊢# Superscript.
+    ˢ { ᵛ,ᵘ }               !⊢
 
-###<a name="mKM"></a> ᵥ,ᵤ
-Exception: Using ₛ for the subscript pattern,
-altough not a normal calligraphy letter.
+###<a name="mKM"></a> ₛ ᵥ,ᵤ
+Exception, using ₛ for the subscript pattern,
+altough not a normal calligraphy letter:
 
-    ₛ /[ₙₘ₁₂₃₄₅₆₇₈₉₀₊₋]+/ !⊢# Subscript.
-    ₛ { ᵥ,ᵤ }             !⊢
+    ₛ /[ₙₘ₁₂₃₄₅₆₇₈₉₀₊₋₍₎]+/ !⊢# Subscript.
+    ₛ { ᵥ,ᵤ }               !⊢
 
-###<a name="WXp"></a> 𝓸,𝓅,𝓆,𝓇
+###<a name="WXp"></a> 𝒫  𝓸,𝓅,𝓆,𝓇
+Exception, note that below, I'm using bold script o:
 
     𝒫 /[^⇒=;\s][^⇒=;]*?[^⇒=;\s]|[^⇒=;\s]/ !⊢# Phrase.
-    # Exception: note that below, I'm using bold script o.
-    𝒫 { 𝓸,𝓅,𝓆,𝓇 } !⊢
+    𝒫 { 𝓸,𝓅,𝓆,𝓇 }                         !⊢
 
-###<a name="YIu"></a> ℊ,𝒽
+###<a name="YIu"></a> 𝒢 ℊ,𝒽
 
     𝒢 /[^({\[\]})|]*/ !⊢# Group.
     𝒢 { ℊ,𝒽 }         !⊢
 
-###<a name="YBH"></a> 𝓈,𝓉
+###<a name="YBH"></a> 𝒮 𝓈,𝓉
 
     𝒮 /[^{}|]*/ !⊢# Set group.
     𝒮 { 𝓈,𝓉 }   !⊢
 
-###<a name="W9o"></a> ℴ
+###<a name="W9o"></a> ℐ 𝒾
 
-    𝒪 /[^\[\]|]*/ !⊢# Operator group.
-    𝒪 { ℴ }       !⊢
+    ℐ /[^\[\]|]*/ !⊢# Interval group.
+    ℐ { 𝒾 }       !⊢
 
-###<a name="oe8"></a> 𝒾
+###<a name="oe8"></a> 𝒪 ℴ
 
-    ℐ /[^,|]*/ !⊢# Item group.
-    ℐ { 𝒾 }    !⊢
+    𝒪 /[^,|]*/ !⊢# Item object.
+    𝒪 { ℴ }    !⊢
 
-###<a name="0NJ"></a> 𝒶,𝒷,𝒸,𝒹
+###<a name="0NJ"></a> 𝒜 𝒶,𝒷,𝒸,𝒹
 
-    𝒜 /[^\s⇒;][^⇒;]*[^\s⇒;]|[^\s⇒;]/ !⊢# Almost anything
+    𝒜 /[^\s⇒;][^⇒;]*[^\s⇒;]|[^\s⇒;]/ !⊢# Clause.
     𝒜 { 𝒶,𝒷,𝒸,𝒹 }                    !⊢
+
+### 𝔑 𝔫,𝔪
+Specifically to match an Number variables m,n:
+
+    𝔑 /\d+|[NMklmn]/ !⊢
+    𝔑 { 𝔫,𝔪 }        !⊢
+
+### 𝔖 𝔰,𝔱
+Specifically to match a set object:
+
+    𝔖 /[𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫]/ !⊢
+    𝔖 { 𝔰,𝔱 } !⊢
+
+### 𝔄 𝔲,𝔳
+Specifically to math superscripts ⁿᵐ:
+
+    𝔄 /[ⁿᵐ]/   !⊢
+    𝔄 { 𝔲,𝔳 } !⊢
+
+### 𝔅 𝔞,𝔟
+Specifically to math subscripts ₙₘ:
+
+    𝔅 /[ₙₘ]/   !⊢#
+    𝔅 { 𝔞,𝔟 } !⊢#
+
+### 𝔔 𝔮
+Specifically to match Rational varaibles r,s:
+
+    𝔔 /[rs]/ !⊢
+    𝔔 { 𝔮 }  !⊢
+
+### ℨ 𝔷
+Specifically to match Integer varaibles i,j,k:
+
+    ℨ /[ijk]/ !⊢
+    ℨ { 𝔷 } !⊢
 
 ###<a name="gAu"></a> 𝒶; 𝒶 ⇒ 𝒷 ⇒ 𝒷
 [Modus Ponem](http://en.wikipedia.org/wiki/Modus+Ponen):
@@ -292,9 +332,6 @@ There after, we're just giving each successor element a name:
 
 ###<a name="vZe"></a> N,M,n,m
 
-    𝔑 /\d+|[NMklnm]/ !⊢
-    𝔑 { 𝔫,𝔪 }        !⊢
-
     ℕ{m,n,M,N}  ⊢#A61 Number Variables.
     ℕ{N}         #M62 ∵ A13,A61 Element Contained By Set.
     N∈ℕ          #M63 ∵ M16,M62 If Contained By, Element Of.
@@ -318,9 +355,6 @@ There after, we're just giving each successor element a name:
     [0,3] = {0,1,2,3}               #D74 ∵ P66.
 
 ### 𝔰{𝓈|𝓊(𝓈)}
-
-    𝔖 /[𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫]/ !⊢
-    𝔖 { 𝔰,𝔱 } !⊢
 
     𝔱 = 𝔰{𝓈|𝓊(𝓈)} ⇒ 𝔱{𝓊(𝓈)}  ⊢#A75 Iterators are sets.
     𝔱 = 𝔰{𝓈|𝓊(𝓈)} ⇒ 𝔰{𝓈}     ⊢#A76 Iterators map sets.
@@ -417,7 +451,7 @@ There after, we're just giving each successor element a name:
     𝓊+𝓋 = 𝓋+𝓊  ⊢#A46 Cummutative.
 
     𝔫++ = 𝔫+1    ⊢#A60 Number Variable Successor.
-    ,𝒾, = ,(𝒾),  ⊢#A61 Item Group.
+    ,ℴ, = ,(ℴ),  ⊢#A61 Item Group.
 
     # Prove: ,n,⋯ = ,n,n+1,(n+1)++,⋯
     ,n,⋯ = ,n,n++,⋯                         #P62 ∵ A17 Successor Ellipsis.
@@ -441,18 +475,12 @@ There after, we're just giving each successor element a name:
 
 ###<a name="r5l"></a> ℤ
 
-    ℨ /[ijk]/ !⊢
-    ℨ { 𝔷 } !⊢
-
 > I have not defined subtraction, but anyways...
 
     ℤ = ℕ{n,m|n-m}  ⊢#A95 Integers.
     ℤ{i,j,k}        ⊢#A96 Integer Variables.
 
 ###<a name="mgl"></a> ℚ
-
-    𝔔 /[rs]/ !⊢
-    𝔔 { 𝔮 }  !⊢
 
 > I have not defined division, but anyways...
 
@@ -463,16 +491,10 @@ There after, we're just giving each successor element a name:
 
 ###<a name="ubG"></a> ⁿ,ᵐ
 
-    𝔖 /[ⁿᵐ]/   !⊢
-    𝔖 { 𝔲, 𝔳 } !⊢
-
     𝕊{ⁿ,ᵐ,¹,²,³,⁴,⁵,⁶,⁷,⁸,⁹,⁰}  ⊢# Superscript.
     ⁿ∈𝕊
 
 ###<a name="SB5"></a> ₙ,ₘ
-
-    𝔰 /[ₙₘ]/   !⊢#
-    𝔰 { 𝔞, 𝔟 } !⊢#
 
     𝕤{ₙ,ₘ,₁,₂,₃,₄,₅,₆,₇,₈,₉,₀}  ⊢# Subscripts.
     ₘ∈𝕤

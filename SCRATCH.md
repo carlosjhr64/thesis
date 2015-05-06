@@ -299,9 +299,9 @@ There after, we're just giving each successor element a name:
     ℕ{𝔡}     ⊢#A68.
 
 ###<a name="sOi"></a> Induction
-Step by step, I can always reach step M:
+Step by step, I can always reach step 𝔫:
 
-    𝓊(𝔡) = 𝓊(𝔡++); 𝓊(𝔪) = 𝓊(𝔪++) ⇒ 𝓊(𝔡) = 𝓊(M)  ⊢#A69 Induction.
+    𝓊(0) = 𝓊(1); 𝓊(𝔪) = 𝓊(𝔪+1) ⇒ 𝓊(0) = 𝓊(𝔫)  ⊢#A69 Induction.
 
 ###<a name="EeZ"></a> [m,n]
 
@@ -451,77 +451,73 @@ Step by step, I can always reach step M:
 
     𝐮(𝒾) = 𝒾+𝐔((𝒾)++)+⋯+𝐔(N) ⊢#A154.
 
-    # Prove: 𝐮(1) = 𝐮(2)
-    1+𝐔(1++)+⋯+𝐔(N) = 1+𝐔((1)++)+⋯+𝐔(N)      #P155 ∵ A13 Bounded Grouping.
-    𝐮(1) = 1+𝐔((1)++)+⋯+𝐔(N)                 #P156 ∵ A154.
-    1+𝐔((1)++)+⋯+𝐔(N) = 1+𝐔(1++)+⋯+𝐔(N)      #P157 ∵ T14 Bounded Ungrouping.
-    1+𝐔(1++)+⋯+𝐔(N) = 1+𝐔(2)+⋯+𝐔(N)          #M158 ∵ P12,M43 Bounded Context Synonym.
-    1+𝐔(2)+⋯+𝐔(N) = 1+𝐔(2)+𝐔(2++)+⋯+𝐔(N)     #P159 ∵ A26 Series Successor Ellipsis.
-    1+𝐔(2)+𝐔(2++)+⋯+𝐔(N) = 1+1+𝐔(2++)+⋯+𝐔(N) #M160 ∵ P12,P146 Bounded Context Synonym.
-    1+1+𝐔(2++)+⋯+𝐔(N) = 2+𝐔(2++)+⋯+𝐔(N)      #M161 ∵ P10,D105 Left Bounded Synonym.
-    2+𝐔(2++)+⋯+𝐔(N) = 2+𝐔((2)++)+⋯+𝐔(N)      #P162 ∵ A13 Bounded Grouping.
-    𝐮(1) = 2+𝐔(2++)+⋯+𝐔(N)                   #D163 ∵ P150.
-    𝐮(2) = 2+𝐔((2)++)+⋯+𝐔(N)                 #P164 ∵ A154.
-    𝐮(1) = 𝐮(2)                              #D165 ∵ P150.
+    # Prove: 𝐮(0) = 𝐮(1)
+    𝐮(0) = 0+𝐔((0)++)+⋯+𝐔(N)                 #P155 ∵ A154.
+    0+𝐔((0)++)+⋯+𝐔(N) = 0+𝐔(0++)+⋯+𝐔(N)      #P156 ∵ T14 Bounded Ungrouping.
+    0+𝐔(0++)+⋯+𝐔(N) = 0+𝐔(1)+⋯+𝐔(N)          #M157 ∵ P12,M42 Bounded Context Synonym.
+    0+𝐔(1)+⋯+𝐔(N) = 0+𝐔(1)+𝐔(1++)+⋯+𝐔(N)     #P158 ∵ A26 Series Successor Ellipsis.
+    0+𝐔(1)+𝐔(1++)+⋯+𝐔(N) = 0+1+𝐔(1++)+⋯+𝐔(N) #M159 ∵ P11,M152 Right Bounded Synonym.
+    0+1+𝐔(1++)+⋯+𝐔(N) = 1+𝐔(1++)+⋯+𝐔(N)      #M160 ∵ P10,M103 Left Bounded Synonym.
+    1+𝐔(1++)+⋯+𝐔(N) = 1+𝐔((1)++)+⋯+𝐔(N)      #P161 ∵ A13 Bounded Grouping.
+    𝐮(0) = 1+𝐔((1)++)+⋯+𝐔(N)                 #D162 ∵ P155.
+    𝐮(1) = 1+𝐔((1)++)+⋯+𝐔(N)                 #P163 ∵ A154.
+    𝐮(0) = 𝐮(1)                              #D164 ∵ P155.
     #
     
     # Prove: 𝐮(n) = 𝐮(n+1)
-    𝐮(n) = n+𝐔((n)++)+⋯+𝐔(N)                         #P166 ∵ A154.
-    n+𝐔((n)++)+⋯+𝐔(N) = n+𝐔(n++)+⋯+𝐔(N)              #P167 ∵ T14 Bounded Ungrouping.
-    n+𝐔(n++)+⋯+𝐔(N) = n+𝐔(n+1)+⋯+𝐔(N)                #M168 ∵ P12,P99 Bounded Context Synonym.
-    n+𝐔(n+1)+⋯+𝐔(N) = n+𝐔((n+1))+⋯+𝐔(N)              #P169 ∵ A13 Bounded Grouping.
-    n+𝐔((n+1))+⋯+𝐔(N) = n+𝐔((n+1))+𝐔((n+1)++)+⋯+𝐔(N) #P170 ∵ A26 Series Successor Ellipsis.
-    n+𝐔((n+1))+𝐔((n+1)++)+⋯+𝐔(N) = n+𝐔(n+1)+𝐔((n+1)++)+⋯+𝐔(N) #P171 ∵ T14 Bounded Ungrouping.
-    n+𝐔(n+1)+𝐔((n+1)++)+⋯+𝐔(N) = n+1+𝐔((n+1)++)+⋯+𝐔(N) #M172 ∵ P12,P148 Bounded Context Synonym.
-    𝐮(n) = n+1+𝐔((n+1)++)+⋯+𝐔(N)                       #D173 ∵ P166.
-    𝐮(n+1) = n+1+𝐔((n+1)++)+⋯+𝐔(N)                     #P174 ∵ A154.
-    𝐮(n) = 𝐮(n+1)                                      #D175 ∵ P166.
+    𝐮(n) = n+𝐔((n)++)+⋯+𝐔(N)                         #P165 ∵ A154.
+    n+𝐔((n)++)+⋯+𝐔(N) = n+𝐔(n++)+⋯+𝐔(N)              #P166 ∵ T14 Bounded Ungrouping.
+    n+𝐔(n++)+⋯+𝐔(N) = n+𝐔(n+1)+⋯+𝐔(N)                #M167 ∵ P12,P99 Bounded Context Synonym.
+    n+𝐔(n+1)+⋯+𝐔(N) = n+𝐔((n+1))+⋯+𝐔(N)              #P168 ∵ A13 Bounded Grouping.
+    n+𝐔((n+1))+⋯+𝐔(N) = n+𝐔((n+1))+𝐔((n+1)++)+⋯+𝐔(N) #P169 ∵ A26 Series Successor Ellipsis.
+    n+𝐔((n+1))+𝐔((n+1)++)+⋯+𝐔(N) = n+𝐔(n+1)+𝐔((n+1)++)+⋯+𝐔(N) #P170 ∵ T14 Bounded Ungrouping.
+    n+𝐔(n+1)+𝐔((n+1)++)+⋯+𝐔(N) = n+1+𝐔((n+1)++)+⋯+𝐔(N) #M171 ∵ P12,P148 Bounded Context Synonym.
+    𝐮(n) = n+1+𝐔((n+1)++)+⋯+𝐔(N)                       #D172 ∵ P165.
+    𝐮(n+1) = n+1+𝐔((n+1)++)+⋯+𝐔(N)                     #P173 ∵ A154.
+    𝐮(n) = 𝐮(n+1)                                      #D174 ∵ P165.
     #
 
-    # Prove: 𝐮(1) = 𝐮(M)
-    𝐮(1++) = 𝐮(2)   #M176 ∵ P12,M43 Bounded Context Synonym.
-    𝐮(1) = 𝐮(1++)   #D177 ∵ P150.
-    𝐮(n+1) = 𝐮(n++) #M178 ∵ P12,P100 Bounded Context Synonym.
-    𝐮(n) = 𝐮(n++)   #D179 ∵ P166.
-    𝐮(1) = 𝐮(1++); 𝐮(n) = 𝐮(n++)#C180 ∵ D177,D179.
-    𝐮(1) = 𝐮(M)     #M181 ∵ A69,C180 Induction.
+    # Prove: 𝐮(0) = N
+    𝐮(0) = 𝐮(1); 𝐮(n) = 𝐮(n+1)          #C175 ∵ D164,D174.
+    𝐮(0) = 𝐮(M)                         #M176 ∵ A69,C175 Induction.
+    𝐮(M) = M+𝐔((M)++)+⋯+𝐔(N)            #P177 ∵ A154.
+    M+𝐔((M)++)+⋯+𝐔(N) = M+𝐔(M++)+⋯+𝐔(N) #P178 ∵ T14 Bounded Ungrouping.
+    M+𝐔(M++)+⋯+𝐔(N) = M+𝐔(N)+⋯+𝐔(N)     #M179 ∵ P12,A64 Bounded Context Synonym.
+    M+𝐔(N)+⋯+𝐔(N) = M+𝐔(N)              #P180 ∵ A27 Terminal Series Ellipsis.
+    M+𝐔(N) = M+1                        #M181 ∵ P11,P149 Right Bounded Synonym.
+    M+1 = N                           <⊢#D97 ∵ A64 N Succeeds M.
+    𝐮(0) = N                            #D182 ∵ P155.
     #
 
     # Prove: Σ[1,N]{n|𝐔(n)} = N
-    Σ[1,N]{n|𝐔(n)} = 𝐮(M)               #D182 ∵ P150.
-    𝐮(M) = M+𝐔((M)++)+⋯+𝐔(N)            #P183 ∵ A154.
-    M+𝐔((M)++)+⋯+𝐔(N) = M+𝐔(M++)+⋯+𝐔(N) #P184 ∵ T14 Bounded Ungrouping.
-    M+𝐔(M++)+⋯+𝐔(N) = M+𝐔(N)+⋯+𝐔(N)     #M185 ∵ P12,A64 Bounded Context Synonym.
-    M+𝐔(N)+⋯+𝐔(N) = M+𝐔(N)              #P186 ∵ A27 Terminal Series Ellipsis.
-    Σ[1,N]{n|𝐔(n)} = M+𝐔(N)             #D187 ∵ P150.
-    M+𝐔(N) = M+1                        #M188 ∵ P11,P149 Right Bounded Synonym.
-    Σ[1,N]{n|𝐔(n)} = M+𝐔(N); M+𝐔(N) = M+1 #C189 ∵ D187,M188.
-    Σ[1,N]{n|𝐔(n)} = M+1                #M190 ∵ A5,C189 F-Transitive.
-    Σ[1,N]{n|𝐔(n)} = M+1; M+1 = N       #C191 ∵ M190,D97.
-    Σ[1,N]{n|𝐔(n)} = N                  #M192 ∵ A5,C191 F-Transitive.
-    #
+    Σ[1,N]{n|𝐔(n)} = 1+𝐔(1++)+⋯+𝐔(N)    <⊢#D153 ∵ P150.
+    1+𝐔(1++)+⋯+𝐔(N) = 1+𝐔((1)++)+⋯+𝐔(N) <⊢#P161 ∵ A13 Bounded Grouping.
+    1+𝐔((1)++)+⋯+𝐔(N) = 𝐮(1)              #M183 ∵ A4,P163 Symmetric.
+    𝐮(1) = 𝐮(0)                           #M184 ∵ A4,D164 Symmetric.
+    𝐮(0) = N                            <⊢#D182 ∵ P155.
+    Σ[1,N]{n|𝐔(n)} = N                    #D185 ∵ P150.
 
     # Prove: Σ[1,N]{n|1} = N
-    𝐔(n) = 1                     #P193 ∵ T143.
-    Σ[1,N]{n|𝐔(n)} = Σ[1,N]{n|1} #M194 ∵ P12,P193 Bounded Context Synonym.
-    Σ[1,N]{n|1} = Σ[1,N]{n|𝐔(n)} #M195 ∵ A4,M194 Symmetric.
-    Σ[1,N]{n|1} = Σ[1,N]{n|𝐔(n)}; Σ[1,N]{n|𝐔(n)} = N #C196 ∵ M195,M192.
-    Σ[1,N]{n|1} = N              #M197 ∵ A5,C196 F-Transitive.
+    𝐔(n) = 1                      #P186 ∵ T143.
+    Σ[1,N]{n|𝐔(n)} = Σ[1,N]{n|1}  #M187 ∵ P12,P186 Bounded Context Synonym.
+    Σ[1,N]{n|1} = Σ[1,N]{n|𝐔(n)}  #M188 ∵ A4,M187 Symmetric.
+    Σ[1,N]{n|𝐔(n)} = N          <⊢#D185 ∵ P150.
+    Σ[1,N]{n|1} = N               #D189 ∵ P150.
     #
 
     GOT UP TO HERE ON REVIEW
 
 ###<a name="U7Q"></a> Σₙ,𝓊ₙ
 
-    𝓊(n) = 𝓊ₙ  ⊢#A137 Index n.
-    𝓊(m) = 𝓊ₘ  ⊢#A138 Index m.
+    𝓊(n) = 𝓊ₙ  ⊢#A190 Index n.
+    𝓊(m) = 𝓊ₘ  ⊢#A191 Index m.
 
-    Σ{n|𝓈} = Σₙ{𝓈}  ⊢#A139 Summation over n.
-    Σ{m|𝓈} = Σₘ{𝓈}  ⊢#A140 Summation over m.
+    Σ{n|𝓈} = Σₙ{𝓈}  ⊢#A192 Summation over n.
+    Σ{m|𝓈} = Σₘ{𝓈}  ⊢#A193 Summation over m.
 
-    Σ{n|𝓊(n)} = Σₙ{𝓊(n)}  #P141 ∵ A139 Summation over n.
-    Σₙ{𝓊(n)} = Σₙ{𝓊ₙ}     #M142 ∵ P11,A137 Bounded Context Synonym.
-    Σ{n|𝓊(n)} = Σₙ{𝓊ₙ}    #D143 ∵ P141.
+    Σ{n|𝓊(n)} = Σₙ{𝓊(n)}  #P194 ∵ A192 Summation over n.
+    Σₙ{𝓊(n)} = Σₙ{𝓊ₙ}     #M195 ∵ P12,A190 Bounded Context Synonym.
+    Σ{n|𝓊(n)} = Σₙ{𝓊ₙ}    #D196 ∵ P194.
 
     Σ{m|𝓊(m)} = Σₙ{𝓊(m)}  #P138 ∵ A136 Summation over n.
     STOP

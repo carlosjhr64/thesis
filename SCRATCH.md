@@ -293,7 +293,7 @@ There after, we're just giving each successor element a name:
     #
 
     # And so on, I can show...
-    ℕ = {0,1,2,3,4,5,6,7,8,9,⋯} :⊢#D70 Digits.
+    ℕ = {0,1,2,3,4,5,6,7,8,9,⋯} ⊢⊢#T70 Digits.
     #
 
 ###<a name="ObZ"></a> l,m,n,M,N
@@ -493,8 +493,8 @@ and regroup to show the equivalent commuted expression.
 
 I will only use the `+` operator when it commutes.
 
-    𝓊+𝓋 = 𝓋+𝓊 :⊢#D164 Commutative.
-    m+n = n+m   #P165 ∵ D164 Commutative.
+    𝓊+𝓋 = 𝓋+𝓊 ⊢⊢#T164 Commutative.
+    m+n = n+m   #P165 ∵ T164 Commutative.
 
 ###<a name="gMO"></a> 𝓊|𝔩+𝓋|𝔫 = 𝓊+𝓋
 Labeled Sum:

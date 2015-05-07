@@ -101,7 +101,9 @@ In a statement `;⇒#=` are to be considered reserved words.
 `; ` separates statements in a compound statement.
 ` ⇒ ` separates statements of a map creating an "if-then" statement.
 `#` marks the end of a statement, and the start of a comment.
-`=` makes the terms on both sides synonyms.
+
+The proochecker assumes `=` is used in the usual way, and
+as some support for its use.
 
 The proofchecker assumes `(){}[]⸨⸩` need to be balanced in the conventional way, and
 will check for that.

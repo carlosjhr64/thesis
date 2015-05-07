@@ -251,7 +251,7 @@ There after, we're just giving each successor element a name:
     7++ = 8   #M49 ∵ A4,A40 Symmetric.
     8++ = 9   #M50 ∵ A4,A41 Symmetric.
 
-    # Prove ℕ = {0,1,2,⋯}.
+    # Prove: ℕ = {0,1,2,⋯}.
     {0,1,⋯} = {0,1,1++,⋯}                    #P51 ∵ A22 Successor Ellipsis.
     ℕ = {0,1,⋯}; {0,1,⋯} = {0,1,1++,⋯}       #C52 ∵ A28,P51 Natural Numbers.
     ℕ = {0,1,1++,⋯}                          #M53 ∵ A5,C52 F-Transitive.
@@ -260,7 +260,7 @@ There after, we're just giving each successor element a name:
     ℕ = {0,1,2,⋯}                            #M56 ∵ A5,C55 F-Transitive.
     #
 
-    # Prove ℕ = {0,1,2,3,⋯}.
+    # Prove: ℕ = {0,1,2,3,⋯}.
     {0,1,2,⋯} = {0,1,2,2++,⋯}   #P57 ∵ A22 Successor Ellipsis.
     {0,1,2,2++,⋯} = {0,1,2,3,⋯} #M58 ∵ P12,M44 Bounded Context Synonym.
     ℕ = {0,1,2,3,⋯}             #D59 ∵ A28 Natural Numbers.
@@ -307,7 +307,7 @@ Step by step, I can always reach step 𝔫:
 
     [𝓊,𝓋] = {𝓊,⋯,𝓋}  ⊢#A70 Interval.
 
-    # Prove: [0,3] = {1,2,3}
+    # Prove: [0,3] = {1,2,3}.
     [0,3] = {0,⋯,3}    #P71 ∵ A70 Interval.
     = {0,0++,⋯,3}      #P72 ∵ A22 Successor Ellipsis.
     = {0,1,⋯,3}        #M73 ∵ P12,M42 Bounded Context Synonym.
@@ -325,7 +325,7 @@ Step by step, I can always reach step 𝔫:
     𝓊 = 𝓋{𝓈|𝓍(𝓈)} ⇒ 𝓋{𝓈}     ⊢#A81 Iterators map sets.
     ℕ{n|𝓍(n)} = (𝓍(0),⋯)     ⊢#A82 Sequence.
 
-    # Prove: ℕ{n|𝓍(n)} = (𝓍(0),𝓍(1),⋯)
+    # Prove: ℕ{n|𝓍(n)} = (𝓍(0),𝓍(1),⋯).
     (𝓍(0),⋯) = (𝓍(0),𝓍(0++),⋯)  #P83 ∵ A24 Sequence Successor Ellipsis.
     = (𝓍(0),𝓍(1),⋯)             #M84 ∵ P12,M42 Bounded Context Synonym.
     ℕ{n|𝓍(n)} = (𝓍(0),𝓍(1),⋯)   #D85 ∵ A82 Sequence.
@@ -421,14 +421,14 @@ Step by step, I can always reach step 𝔫:
     Σ[𝓍]{𝓎|𝓊(𝓎)} = 𝓊(0)+⋯+𝓊(𝓍)    ⊢#A133 Series Starting At Zero.
     Σ{𝓍|𝓊(𝓍)} = 𝓊(0)+⋯            ⊢#A134 Infinite Series.
 
-    # Prove: Σ{𝓍|𝓊(𝓍)} = 𝓊(0)+𝓊(1)+⋯
+    # Prove: Σ{𝓍|𝓊(𝓍)} = 𝓊(0)+𝓊(1)+⋯.
     Σ{𝓍|𝓊(𝓍)} = 𝓊(0)+⋯    <⊢#A134 Infinite Series.
     = 𝓊(0)+𝓊(0++)+⋯         #P135 Infinite Series ∵ A26 Series Successor Ellipsis.
     = 𝓊(0)+𝓊(1)+⋯           #M136 ∵ P12,M42 Bounded Context Synonym.
     Σ{𝓍|𝓊(𝓍)} = 𝓊(0)+𝓊(1)+⋯ #D137 ∵ A134 Infinite Series.
     #
 
-    # Prove: Σ[0,0]{n|𝓊(n)} = 𝓊(0)
+    # Prove: Σ[0,0]{n|𝓊(n)} = 𝓊(0).
     Σ[0,0]{n|𝓊(n)} = 𝓊(0)+⋯+𝓊(0) #P138 ∵ A132 Series.
     = 𝓊(0)                       #P139 ∵ A27 Terminal Series Ellipsis.
     Σ[0,0]{n|𝓊(n)} = 𝓊(0)        #D140 ∵ P138.
@@ -443,7 +443,7 @@ Step by step, I can always reach step 𝔫:
     𝐔(n+1) = 1 #P146 ∵ T141.
     𝐔(N) = 1   #P147 ∵ T141.
 
-    # Prove: Σ[1,N]{n|𝐔(n)} = 1+𝐔(1++)+⋯+𝐔(N)
+    # Prove: Σ[1,N]{n|𝐔(n)} = 1+𝐔(1++)+⋯+𝐔(N).
     Σ[1,N]{n|𝐔(n)} = 𝐔(1)+⋯+𝐔(N)     #P148 ∵ A132 Series.
     = 𝐔(1)+𝐔(1++)+⋯+𝐔(N)             #P149 ∵ A26 Series Successor Ellipsis.
     = 1+𝐔(1++)+⋯+𝐔(N)                #M150 ∵ P10,P143 Left Bounded Synonym.
@@ -452,7 +452,7 @@ Step by step, I can always reach step 𝔫:
 
     𝐮(𝒾) = 𝒾+𝐔((𝒾)++)+⋯+𝐔(N) ⊢#A152.
 
-    # Prove: 𝐮(0) = 𝐮(1)
+    # Prove: 𝐮(0) = 𝐮(1).
     𝐮(0) = 0+𝐔((0)++)+⋯+𝐔(N) #P153 ∵ A152.
     = 0+𝐔(0++)+⋯+𝐔(N)        #P154 ∵ T14 Bounded Ungrouping.
     = 0+𝐔(1)+⋯+𝐔(N)          #M155 ∵ P12,M42 Bounded Context Synonym.
@@ -465,7 +465,7 @@ Step by step, I can always reach step 𝔫:
     𝐮(0) = 𝐮(1)              #D162 ∵ P153.
     #
     
-    # Prove: 𝐮(n) = 𝐮(n+1)
+    # Prove: 𝐮(n) = 𝐮(n+1).
     𝐮(n) = n+𝐔((n)++)+⋯+𝐔(N)       #P163 ∵ A152.
     = n+𝐔(n++)+⋯+𝐔(N)              #P164 ∵ T14 Bounded Ungrouping.
     = n+𝐔(n+1)+⋯+𝐔(N)              #M165 ∵ P12,P99 Bounded Context Synonym.
@@ -478,7 +478,7 @@ Step by step, I can always reach step 𝔫:
     𝐮(n) = 𝐮(n+1)                  #D172 ∵ P163.
     #
 
-    # Prove: 𝐮(0) = N
+    # Prove: 𝐮(0) = N.
     𝐮(0) = 𝐮(1); 𝐮(n) = 𝐮(n+1) #C173 ∵ D162,D172.
     𝐮(0) = 𝐮(M)                #M174 ∵ A69,C173 Induction.
     𝐮(M) = M+𝐔((M)++)+⋯+𝐔(N)   #P175 ∵ A152.
@@ -490,7 +490,7 @@ Step by step, I can always reach step 𝔫:
     𝐮(0) = N                   #D180 ∵ P153.
     #
 
-    # Prove: Σ[1,N]{n|𝐔(n)} = N
+    # Prove: Σ[1,N]{n|𝐔(n)} = N.
     Σ[1,N]{n|𝐔(n)} = 1+𝐔(1++)+⋯+𝐔(N) <⊢#D151 ∵ P148.
     = 1+𝐔((1)++)+⋯+𝐔(N)              <⊢#P159 ∵ A13 Bounded Grouping.
     = 𝐮(1)                             #M181 ∵ A4,P161 Symmetric.
@@ -499,7 +499,7 @@ Step by step, I can always reach step 𝔫:
     Σ[1,N]{n|𝐔(n)} = N                 #D183 ∵ P148.
     #
 
-    # Prove: Σ[1,N]{n|1} = N
+    # Prove: Σ[1,N]{n|1} = N.
     𝐔(n) = 1           #P184 ∵ T141.
     N = Σ[1,N]{n|𝐔(n)} #M185 ∵ A4,D183 Symmetric.
     = Σ[1,N]{n|1}      #M186 ∵ P12,P184 Bounded Context Synonym.
@@ -527,14 +527,14 @@ Step by step, I can always reach step 𝔫:
     Σₙ{𝓊ₙ} = 𝓊ₙ+𝓊ₙ+++⋯
     STOP
 
-    # Prove: Σ{n|𝐩(n)} = 𝐩(0)+𝐩(1)+⋯
+    # Prove: Σ{n|𝐩(n)} = 𝐩(0)+𝐩(1)+⋯.
     𝔽{𝐩}                       ⊢#A131 Some Function p.
     Σ{n|𝐩(n)} = 𝐩(0)+⋯          #P132 ∵ A129 Infinite Series.
     𝐩(0)+⋯ = 𝐩(0)+𝐩(0++)+⋯      #P133 ∵ A23 Series Successor Ellipsis.
     𝐩(0)+𝐩(0++)+⋯ = 𝐩(0)+𝐩(1)+⋯ #M134 ∵ P11,M39 Bounded Context Synonym.
     Σ{n|𝐩(n)} = 𝐩(0)+𝐩(1)+⋯     #D135 ∵ P132.
 
-    # Prove: Σ[1,3]{n|𝐩(n)} = 𝐩(1)+𝐩(2)+𝐩(3)
+    # Prove: Σ[1,3]{n|𝐩(n)} = 𝐩(1)+𝐩(2)+𝐩(3).
     Σ[1,3]{n|𝐩(n)} = 𝐩(1)+⋯+𝐩(3)                    #P136 ∵ A127 Series.
     𝐩(1)+⋯+𝐩(3) = 𝐩(1)+𝐩(1++)+⋯+𝐩(3)                #P137 ∵ A23 Series Successor Ellipsis.
     𝐩(1)+𝐩(1++)+⋯+𝐩(3) = 𝐩(1)+𝐩(2)+⋯+𝐩(3)           #M138 ∵ P11,M40 Bounded Context Synonym.
@@ -552,7 +552,7 @@ Step by step, I can always reach step 𝔫:
     𝔫++ = 𝔫+1    ⊢#A60 Number Variable Successor.
     ,ℴ, = ,(ℴ),  ⊢#A61 Item Group.
 
-    # Prove: ,n,⋯ = ,n,n+1,(n+1)++,⋯
+    # Prove: ,n,⋯ = ,n,n+1,(n+1)++,⋯.
     ,n,⋯ = ,n,n++,⋯                         #P62 ∵ A17 Successor Ellipsis.
     n++ = n+1                               #P63 ∵ A60 Number Variable Successor.
     ,n,n++,⋯ = ,n,n+1,⋯                     #M64 ∵ A8,P63 Context Synonym.

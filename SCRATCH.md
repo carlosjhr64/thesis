@@ -145,21 +145,21 @@ Word Boundary:
     ℬ { ℊ,𝒽 }               !⊢
 
 ###<a name="2gK"></a> 𝒮 𝓈,𝓉
-Set Group(may be zero length):
+Set Group(not greedy, may be zero length):
 
-    𝒮 /[^{}|]*/ !⊢
+    𝒮 /[^{}|]*?/ !⊢
     𝒮 { 𝓈,𝓉 }   !⊢
 
 ###<a name="3RW"></a> ℐ 𝓀,𝓁
-Interval Group(may be zero length):
+Interval Group(not greedy, may be zero length):
 
-    ℐ /[^\[\]|]*/ !⊢
+    ℐ /[^\[\]|]*?/ !⊢
     ℐ { 𝓀,𝓁 }     !⊢
 
 ###<a name="pIs"></a> 𝒬 𝒾,𝒿
-Sequence Group(may be zero length):
+Sequence Group(not greedy, may be zero length):
 
-    𝒬 /[^()]*/ !⊢
+    𝒬 /[^()]*?/ !⊢
     𝒬 { 𝒾,𝒿 }  !⊢
 
 ###<a name="SS5"></a> ₛ ₙ,ₘ,₀,₁,₂,₃,₍,₎,₊,₋

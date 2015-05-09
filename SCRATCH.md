@@ -141,26 +141,26 @@ Word:
 ###<a name="Lr4"></a> ℬ ℊ,𝒽
 Word Boundary:
 
-    ℬ /\b|[,(+){-}|\[\]]/ !⊢
-    ℬ { ℊ,𝒽 }             !⊢
+    ℬ /\b|[, |(+){-}|\[\]]/ !⊢
+    ℬ { ℊ,𝒽 }               !⊢
 
 ###<a name="2gK"></a> 𝒮 𝓈,𝓉
 Set Group(not greedy, may be zero length):
 
     𝒮 /[^{}|]*?/ !⊢
-    𝒮 { 𝓈,𝓉 }   !⊢
+    𝒮 { 𝓈,𝓉 }    !⊢
 
 ###<a name="3RW"></a> ℐ 𝓀,𝓁
 Interval Group(not greedy, may be zero length):
 
     ℐ /[^\[\]|]*?/ !⊢
-    ℐ { 𝓀,𝓁 }     !⊢
+    ℐ { 𝓀,𝓁 }      !⊢
 
 ###<a name="pIs"></a> 𝒬 𝒾,𝒿
 Sequence Group(not greedy, may be zero length):
 
     𝒬 /[^()]*?/ !⊢
-    𝒬 { 𝒾,𝒿 }  !⊢
+    𝒬 { 𝒾,𝒿 }   !⊢
 
 ###<a name="SS5"></a> ₛ ₙ,ₘ,₀,₁,₂,₃,₍,₎,₊,₋
 Subscripts:

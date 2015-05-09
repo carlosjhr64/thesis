@@ -26,8 +26,8 @@ it's a good warm-up and demonstrates my notation.
  • [𝔐 𝔪](#zpB) • [𝔇 𝔡](#6KL) • [Induction](#sOi) • [&#91;m,n&#93;](#EeZ)
  • [𝓊{𝓈|𝓍(𝓈)}](#H6V) • [Σ,+](#Pbn) • [𝓊+0](#Xi7) • [(𝔫+𝔩)++ = 𝔫+(𝔩)++](#uXU)
  • [𝓊+𝓋 = 𝓋+𝓊](#P9m) • [𝓊|𝓍+𝓌|𝓎 = 𝓊+𝓌](#nvp) • [Σ&#91;l,m&#93;{l|𝓊(n)}](#Ifk)
- • [Σₙ,𝓊ₙ](#U7Q) • [×](#zcN) • [-](#fAs) • [ℤ](#r5l) • [ℨ 𝔦,𝔧,𝔨](#22g)
- • [ℚ](#mgl) • [ⁿ,ᵐ](#ubG) • [ₙ,ₘ](#SB5) • [Precedence rules](#MIM)
+ • [Σₙ,𝓊ₙ](#U7Q) • [×](#zcN) • [-](#fAs) • [/](#XIb) • [ℤ](#r5l)
+ • [ℨ 𝔦,𝔧,𝔨](#22g) • [ℚ](#mgl) • [ⁿ,ᵐ](#ubG) • [ₙ,ₘ](#SB5) • [Precedence rules](#MIM)
  • [uᵥ](#frL) • [𝓊{𝓋ₙ}](#4bK) • [Σ&#91;l,k&#93;{j|uⱼ}](#zJL) • [n×u](#vkP)
  • [×⋯](#uyg) • [Σuₙ](#kJ6) • [Σₙuₙ](#MlN) • [∞](#9XA) • [∑](#zQw)
  • [⋅](#Jt7) • [{⋯}⋅{⋯}](#IK3) • [∑ₗ](#tky) • [Π](#J5V) • [uᵛ](#y3Z)
@@ -465,9 +465,9 @@ Step by step, I can always reach step 𝔫:
 Zero will always be an identity object to addition:
 
     𝓊+0 = 𝓊  ⊢#A153 Additive Identity.
-    0+𝓋 = 𝓋  ⊢#A154.
-    𝓊 = 𝓊+0   #M155 ∵ A4,A153 Symmetric.
-    𝓋 = 0+𝓋   #M156 ∵ A4,A154 Symmetric.
+    0+𝓋 = 𝓋  ⊢#A154 Additive Identity.
+    𝓊 = 𝓊+0   #M155 Additive Identity ∵ A4,A153 Symmetric.
+    𝓋 = 0+𝓋   #M156 Additive Identity ∵ A4,A154 Symmetric.
 
 ###<a name="uXU"></a> (𝔫+𝔩)++ = 𝔫+(𝔩)++
 Note that our notion of grouping is equivalent
@@ -651,41 +651,80 @@ Labeled Sum:
 ###<a name="zcN"></a> ×
 
     𝓊×𝓋 = Σ[𝓊]{|𝓋} ⊢#A258 Multiplication.
+    𝓊×1 = 𝓊       ⊢⊢#T259 Multiplicative Identity.
 
-    3×4 = Σ[3]{|4}          #P259 ∵ A258 Multiplication.
-    = 4|1+⋯+4|3             #P260 ∵ E178.
-    = 4|1+4|(1++)+⋯+4|3     #P261 ∵ A37 Series Successor Ellipsis.
-    = 4|1+4|(2)+⋯+4|3       #M262 ∵ P12,M54 Bounded Context Synonym.
-    = 4|1+4|2+⋯+4|3         #P263 ∵ M18 Context Ungrouping.
-    = 4|1+4|2+4|(2++)+⋯+4|3 #P264 ∵ A37 Series Successor Ellipsis.
-    = 4|1+4|2+4|(3)+⋯+4|3   #M265 ∵ P12,M55 Bounded Context Synonym.
-    = 4|1+4|2+4|3+⋯+4|3     #P266 ∵ M18 Context Ungrouping.
-    = 4|1+4|2+4|3           #P267 ∵ A38 Terminal Series Ellipsis.
-    Σ[3]{|4} = 4|1+4|2+4|3  #E268 ∵ P259.
+    3×4 = Σ[3]{|4}          #P260 ∵ A258 Multiplication.
+    = 4|1+⋯+4|3             #P261 ∵ E178.
+    = 4|1+4|(1++)+⋯+4|3     #P262 ∵ A37 Series Successor Ellipsis.
+    = 4|1+4|(2)+⋯+4|3       #M263 ∵ P12,M54 Bounded Context Synonym.
+    = 4|1+4|2+⋯+4|3         #P264 ∵ M18 Context Ungrouping.
+    = 4|1+4|2+4|(2++)+⋯+4|3 #P265 ∵ A37 Series Successor Ellipsis.
+    = 4|1+4|2+4|(3)+⋯+4|3   #M266 ∵ P12,M55 Bounded Context Synonym.
+    = 4|1+4|2+4|3+⋯+4|3     #P267 ∵ M18 Context Ungrouping.
+    = 4|1+4|2+4|3           #P268 ∵ A38 Terminal Series Ellipsis.
+    Σ[3]{|4} = 4|1+4|2+4|3  #E269 ∵ P260.
 
-    4|2+4|3 = 4+4 #P269 ∵ A170 Labeled Sum.
-    4|1+4 = 4+4   #P270 ∵ A171 Labeled Sum.
+    4|2+4|3 = 4+4 #P270 ∵ A170 Labeled Sum.
+    4|1+4 = 4+4   #P271 ∵ A171 Labeled Sum.
 
-    4|1+4|2+4|3 = 4|1+4+4 #M271 ∵ P11,P269 Right Bounded Synonym.
-    = 4+4+4               #M272 ∵ P10,P270 Left Bounded Synonym.
+    4|1+4|2+4|3 = 4|1+4+4 #M272 ∵ P11,P270 Right Bounded Synonym.
+    = 4+4+4               #M273 ∵ P10,P271 Left Bounded Synonym.
 
-    3×4 = 4+4+4   #E273 ∵ P259.
+    3×4 = 4+4+4   #E274 ∵ P260.
 
 Just as with `+`, `-`,
 whenever I use `×`,
 it'll have the properties has in `ℕ`:
 
-    𝓊×𝓋 = 𝓋×𝓊 ⊢⊢#T274 Commutative.
-
-    GOT UP TO HERE ON REVIEW
+    𝓊×𝓋 = 𝓋×𝓊 ⊢⊢#T275 Commutative.
 
 ###<a name="fAs"></a> -
-Just very quickly:
+Subtraction:
 
-    𝓊+𝓋 = 𝓍+𝓎 ⇒ 𝓊-𝓎 = 𝓍-𝓋 ⊢#A246 Subtraction.
-    𝓊-𝓋 = 𝓋-𝓊             ⊢#A247 Subtraction Commutes.
+    𝓊+𝓋 = 𝓍+𝓎 ⇒ 𝓊-𝓎 = 𝓍-𝓋 ⊢#A276 Subtraction.
+    𝓊-𝓎 = 𝓍-𝓋 ⇒ 𝓊+𝓋 = 𝓍+𝓎 ⊢#A277 Subtraction.
+    0-𝓋 = -𝓋              ⊢#A278 Negative Number.
+    -𝓋 = 0-𝓋               #M279 Negative Number ∵ A4,A278 Symmetric.
 
-As with `+`, I'll only use `-` if it behaves as in ℕ.
+    # Prove: 𝓋-𝓎 = -𝓎+𝓋
+    0+𝓋 = 𝓋+0   #P280 ∵ T168 Commutative.
+    0-𝓎 = -𝓎    #P281 ∵ A278 Negative Number.
+    𝓋-𝓎 = 0+𝓋-𝓎 #M282 ∵ P10,M156 Left Bounded Synonym.
+    = 𝓋+0-𝓎     #M283 ∵ P10,P280 Left Bounded Synonym.
+    = 𝓋+(0-𝓎)   #P284 ∵ A15 Right Grouping.
+    = (0-𝓎)+𝓋   #P285 ∵ T168 Commutative.
+    = 0-𝓎+𝓋     #P286 ∵ M14 Left Ungrouping.
+    = -𝓎+𝓋      #M287 ∵ P10,P281 Left Bounded Synonym.
+    𝓋-𝓎 = -𝓎+𝓋  #E288 ∵ M282.
+    #
+
+###<a name="XIb"></a> /
+Division:
+
+    𝓊×𝓋 = 𝓍×𝓎 ⇒ 𝓊/𝓎 = 𝓍/𝓋  ⊢#A289 Division.
+    𝓊/𝓎 = 𝓍/𝓋 ⇒ 𝓊×𝓋 = 𝓍×𝓎  ⊢#A290 Division.
+    𝓊/1 = 𝓊               :⊢#D291 Whole Number.
+
+    # Prove: 4/2 = 2
+    2×2 = Σ[2]{|2}      #P292 ∵ A258 Multiplication.
+    = 2|1+⋯+2|2         #P293 ∵ E178.
+    = 2|1+2|(1++)+⋯+2|2 #P294 ∵ A37 Series Successor Ellipsis.
+    = 2|1+2|(2)+⋯+2|2   #M295 ∵ P12,M54 Bounded Context Synonym.
+    = 2|1+2|2+⋯+2|2     #P296 ∵ M18 Context Ungrouping.
+    = 2|1+2|2           #P297 ∵ A38 Terminal Series Ellipsis.
+    = 2+2               #P298 ∵ A170 Labeled Sum.
+    = 2+1++             #M299 ∵ P11,A45 Right Bounded Synonym.
+    = 2+1+1             #M300 ∵ P11,P163 Right Bounded Synonym.
+    = 3+1               #M301 ∵ P10,E128 Left Bounded Synonym.
+    = 4               <⊢#D129.
+    2×2 = 4             #E302 ∵ P292.
+    4×1 = 4             #P303 ∵ T259 Multiplicative Identity.
+    4×1 = 2×2           #E304 ∵ P292.
+    4/2 = 2/1           #M305 ∵ A289,E304 Division.
+    = 2                 #P306 ∵ D291 Whole Number.
+    4/2 = 2             #E307 ∵ M305.
+    #
+    GOT UP TO HERE
 
 ###<a name="r5l"></a> ℤ
 

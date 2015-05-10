@@ -1,4 +1,4 @@
-[CONTENTS](CONTENTS.md)
+CONTENTS](CONTENTS.md)
 
 # The (Over The Top (Extreme)) Full Monty
 Here I write explicitly all my work.
@@ -141,8 +141,7 @@ Word:
 ###<a name="Lr4"></a> ℬ ℊ,𝒽
 Word Boundary:
 
-    #ℬ /\b|[, |(+){-}|\[\]]/ !⊢
-    ℬ /\b|[,(){}+|]/ !⊢
+    ℬ /\b|[,(){}+|\[\] ]/ !⊢
     ℬ { ℊ,𝒽 }        !⊢
 
 ###<a name="2gK"></a> 𝒮 𝓈,𝓉
@@ -698,58 +697,66 @@ Subtraction:
     𝓋-𝓎 = -𝓎+𝓋  #E288 ∵ M282.
     #
 
-###<a name="XIb"></a> /
-Division:
-
-    𝓊×𝓋 = 𝓍×𝓎 ⇒ 𝓊/𝓎 = 𝓍/𝓋  ⊢#A289 Division.
-    𝓊/𝓎 = 𝓍/𝓋 ⇒ 𝓊×𝓋 = 𝓍×𝓎  ⊢#A290 Division.
-    𝓊/1 = 𝓊               :⊢#D291 Whole Number.
-
-    # Prove: 4/2 = 2
-    2×2 = Σ[2]{|2}      #P292 ∵ A258 Multiplication.
-    = 2|1+⋯+2|2         #P293 ∵ E178.
-    = 2|1+2|(1++)+⋯+2|2 #P294 ∵ A37 Series Successor Ellipsis.
-    = 2|1+2|(2)+⋯+2|2   #M295 ∵ P12,M54 Bounded Context Synonym.
-    = 2|1+2|2+⋯+2|2     #P296 ∵ M18 Context Ungrouping.
-    = 2|1+2|2           #P297 ∵ A38 Terminal Series Ellipsis.
-    = 2+2               #P298 ∵ A170 Labeled Sum.
-    = 2+1++             #M299 ∵ P11,A45 Right Bounded Synonym.
-    = 2+1+1             #M300 ∵ P11,P163 Right Bounded Synonym.
-    = 3+1               #M301 ∵ P10,E128 Left Bounded Synonym.
-    = 4               <⊢#D129.
-    2×2 = 4             #E302 ∵ P292.
-    4×1 = 4             #P303 ∵ T259 Multiplicative Identity.
-    4×1 = 2×2           #E304 ∵ P292.
-    4/2 = 2/1           #M305 ∵ A289,E304 Division.
-    = 2                 #P306 ∵ D291 Whole Number.
-    4/2 = 2             #E307 ∵ M305.
-    #
-    GOT UP TO HERE
-
 ###<a name="r5l"></a> ℤ
 
-    ℤ = ℕ{𝔩,𝔫|𝔩-𝔫} ⊢#A248 Integers.
-    ℤ{𝔩-𝔫}          #M249 Number Subtractions Are Integers ∵ A94,A248 Iterators are sets.
+    ℤ = ℕ{𝔩,𝔫|𝔩-𝔫} ⊢#A289 Integers.
+    ℤ{𝔩-𝔫}          #M290 Number Subtractions Are Integers ∵ A97,A289 Iterators are sets.
 
-    ℤ{i,j,k}        ⊢#A250 Integer Variables.
+    ℤ{i,j,k}        ⊢#A291 Integer Variables.
 
-    ℤ{n-m} #P251 ∵ M249 Number Subtractions Are Integers.
+    ℤ{n-m} #P292 ∵ M290 Number Subtractions Are Integers.
 
 ###<a name="22g"></a> ℨ 𝔦,𝔧,𝔨
 
-    ℨ /[ijk]/   !⊢
+    ℨ /\-?\d+|[ijk]/   !⊢
     ℨ { 𝔦,𝔧,𝔨 } !⊢
-    ℤ{𝔦-𝔧}       ⊢#A252 Integer Subtraction Is Closed.
+    ℤ{𝔦-𝔧}       ⊢#A293 Integer Subtraction Is Closed.
 
-    ℤ{j-k} #P253 Integer Subtraction Is Closed ∵ A252 Integer Subtraction Is Closed.
+    ℤ{j-k}   #P294 Integer Subtraction Is Closed ∵ A293 Integer Subtraction Is Closed.
+
+###<a name="XIb"></a> /
+Division:
+
+    𝓊×𝓋 = 𝓍×𝓎 ⇒ 𝓊/𝓎 = 𝓍/𝓋  ⊢#A295 Division.
+    𝓊/𝓎 = 𝓍/𝓋 ⇒ 𝓊×𝓋 = 𝓍×𝓎  ⊢#A296 Division.
+    𝓊/1 = 𝓊               :⊢#D297 Whole Number.
+
+    # Prove: 4/2 = 2
+    2×2 = Σ[2]{|2}      #P298 ∵ A258 Multiplication.
+    = 2|1+⋯+2|2         #P299 ∵ E178.
+    = 2|1+2|(1++)+⋯+2|2 #P300 ∵ A37 Series Successor Ellipsis.
+    = 2|1+2|(2)+⋯+2|2   #M301 ∵ P12,M54 Bounded Context Synonym.
+    = 2|1+2|2+⋯+2|2     #P302 ∵ M18 Context Ungrouping.
+    = 2|1+2|2           #P303 ∵ A38 Terminal Series Ellipsis.
+    = 2+2               #P304 ∵ A170 Labeled Sum.
+    = 2+1++             #M305 ∵ P11,A45 Right Bounded Synonym.
+    = 2+1+1             #M306 ∵ P11,P163 Right Bounded Synonym.
+    = 3+1               #M307 ∵ P10,E128 Left Bounded Synonym.
+    = 4               <⊢#D129.
+    2×2 = 4             #E308 ∵ P298.
+    4×1 = 4             #P309 ∵ T259 Multiplicative Identity.
+    4×1 = 2×2           #E310 ∵ P298.
+    4/2 = 2/1           #M311 ∵ A295,E310 Division.
+    = 2                 #P312 ∵ D297 Whole Number.
+    4/2 = 2             #E313 ∵ M311.
+    #
 
 ###<a name="mgl"></a> ℚ
 
+    ℚ = ℤ{𝔦,𝔧|𝔦/𝔧} ⊢#A314 Rationals.
+    ℚ{𝔦/𝔧}          #M315 Rational Number ∵ A97,A314 Iterators are sets.
+    ℚ{r,s}         ⊢#A316 Rational Variables.
 
-    ℚ = ℤ{i,j|i/j} ⊢#A97 Rationals.
-    ℚ{r,s}         ⊢#A98 Rational Variables.
-    ½ = 1/2  ⊢#A99 One Half.
-    ℚ{½}
+    ℚ{1/2}   #P317 ∵ M315 Rational Number.
+    ½ = 1/2 ⊢#A318 One Half.
+
+    # Prove: ℚ{½}.
+    ℚ{½} = ℚ{1/2}         #M319 ∵ P12,A318 Bounded Context Synonym.
+    ℚ{1/2} = ℚ{½}         #M320 ∵ A4,M319 Symmetric.
+    ℚ{1/2} ⇒ ℚ{½}         #M321 ∵ A2,M320 Equivalent Statement.
+    ℚ{1/2}; ℚ{1/2} ⇒ ℚ{½} #C322 ∵ P317,M321.
+    ℚ{½}                  #M323 ∵ A1,C322 Modus Ponem.
+    GOT UP TO HERE
 
 ###<a name="ubG"></a> ⁿ,ᵐ
 

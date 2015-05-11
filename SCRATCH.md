@@ -784,61 +784,77 @@ Division:
 
     𝕞 = {₀,₁,₂,₃,₄,₅,₆,₇,₈,₉,⋯} ⊢#A324 Subscripts.
 
+    𝕞                             ⊢#A325.
+    𝕞 ⇒ {₀,₁,₂,₃,₄,₅,₆,₇,₈,₉,⋯}    #M326 ∵ A2,A324 Equivalent Statement.
+    𝕞; 𝕞 ⇒ {₀,₁,₂,₃,₄,₅,₆,₇,₈,₉,⋯} #C327 ∵ A325,M326.
+    {₀,₁,₂,₃,₄,₅,₆,₇,₈,₉,⋯}        #M328 ∵ A1,C327 Modus Ponem.
+
+    ₁ = ₀++ #M329 ∵ A25,M328 Successor.
+    ₂ = ₁++ #M330 ∵ A25,M328 Successor.
+    ₃ = ₂++ #M331 ∵ A25,M328 Successor.
+
+    ₀++ = ₁ #M332 ∵ A4,M329 Symmetric.
+    ₁++ = ₂ #M333 ∵ A4,M330 Symmetric.
+    ₂++ = ₃ #M334 ∵ A4,M331 Symmetric.
+
 ### 𝕟 ⁰,¹,⋯
 
-    𝕟 = {⁰,¹,²,³,⁴,⁵,⁶,⁷,⁸,⁹,⋯} ⊢#A325 Superscripts.
+    𝕟 = {⁰,¹,²,³,⁴,⁵,⁶,⁷,⁸,⁹,⋯} ⊢#A335 Superscripts.
 
 ###<a name="MIM"></a> Precedence rules
 
-    𝒸(ℴᵘ)ᵥ𝒹 = 𝒸(ℴᵘᵥ)𝒹 ⊢#A326 Subscripts Bind To Left Operator.
-    𝒸ℴᵘᵥ𝒹 = 𝒸(ℴᵥ)ᵘ𝒹   ⊢#A327 Subscripts Bind To Left Operator.
-    𝒸ℴᵥ𝒹 = 𝒸(ℴᵥ)𝒹     ⊢#A328 Subscripts Bind Left.
-    𝒸ℴᵘ𝒹 = 𝒸(ℴᵘ)𝒹     ⊢#A329 Superscripts Bind Left.
-    𝒸𝓊!𝒹 = 𝒸(𝓊!)𝒹     ⊢#A330 Factorials Bind Left.
-    𝒸𝓃𝓊𝒹 = 𝒸(𝓃𝓊)𝒹     ⊢#A331 Numbers Bind Right.
-    𝒸 𝓃 𝒹 = 𝒸 𝓃𝒹      ⊢#A332 Numbers Bind Right.
-    𝒸 𝓊 = 𝒸(𝓊)        ⊢#A333 Look Ahead.
-    𝒸ℊ𝓊𝒽𝒹 = 𝒸ℊ(𝓊)𝒽𝒹   ⊢#A334 Word.
-    𝒸ℊ𝓊 𝒹 = 𝒸ℊ(𝓊)𝒹    ⊢#A335 Word.
-    𝓊𝓋𝒹 = (𝓊𝓋)𝒹       ⊢#A336 Default Grouping.
+    𝒸(ℴᵘ)ᵥ𝒹 = 𝒸(ℴᵘᵥ)𝒹 ⊢#A336 Subscripts Bind To Left Operator.
+    𝒸ℴᵘᵥ𝒹 = 𝒸(ℴᵥ)ᵘ𝒹   ⊢#A337 Subscripts Bind To Left Operator.
+    𝒸ℴᵥ𝒹 = 𝒸(ℴᵥ)𝒹     ⊢#A338 Subscripts Bind Left.
+    𝒸ℴᵘ𝒹 = 𝒸(ℴᵘ)𝒹     ⊢#A339 Superscripts Bind Left.
+    𝒸𝓊!𝒹 = 𝒸(𝓊!)𝒹     ⊢#A340 Factorials Bind Left.
+    𝒸𝓃𝓊𝒹 = 𝒸(𝓃𝓊)𝒹     ⊢#A341 Numbers Bind Right.
+    𝒸 𝓃 𝒹 = 𝒸 𝓃𝒹      ⊢#A342 Numbers Bind Right.
+    𝒸 𝓊 = 𝒸(𝓊)        ⊢#A343 Look Ahead.
+    𝒸ℊ𝓊𝒽𝒹 = 𝒸ℊ(𝓊)𝒽𝒹   ⊢#A344 Word.
+    𝒸ℊ𝓊 𝒹 = 𝒸ℊ(𝓊)𝒹    ⊢#A345 Word.
+    𝓊𝓋𝒹 = (𝓊𝓋)𝒹       ⊢#A346 Default Grouping.
 
     # Examples:
     #
-    𝓊2𝓋𝓌 = 𝓊2𝓋𝓌  #P337 ∵ A3 Reflexive.
-    = 𝓊(2𝓋)𝓌     #P338 ∵ A331 Numbers Bind Right.
-    = (𝓊(2𝓋))𝓌   #P339 ∵ A13 Left Grouping.
+    𝓊2𝓋𝓌 = 𝓊2𝓋𝓌  #P347 ∵ A3 Reflexive.
+    = 𝓊(2𝓋)𝓌     #P348 ∵ A341 Numbers Bind Right.
+    = (𝓊(2𝓋))𝓌   #P349 ∵ A13 Left Grouping.
     #
-    𝓊½𝓋𝓌 = 𝓊½𝓋𝓌 #P340 ∵ A3 Reflexive.
-    = 𝓊(½𝓋)𝓌    #P341 ∵ A331 Numbers Bind Right.
-    = (𝓊(½𝓋))𝓌  #P342 ∵ A13 Left Grouping.
+    𝓊½𝓋𝓌 = 𝓊½𝓋𝓌 #P350 ∵ A3 Reflexive.
+    = 𝓊(½𝓋)𝓌    #P351 ∵ A341 Numbers Bind Right.
+    = (𝓊(½𝓋))𝓌  #P352 ∵ A13 Left Grouping.
     #
-    𝓊 ½ 𝓋𝓌 = 𝓊 ½ 𝓋𝓌 #P343 ∵ A3 Reflexive.
-    = 𝓊 ½ (𝓋𝓌)      #P344 ∵ A15 Right Grouping.
-    = 𝓊 ½(𝓋𝓌)       #P345 ∵ A332 Numbers Bind Right.
-    = 𝓊 (½(𝓋𝓌))     #P346 ∵ A15 Right Grouping.
+    𝓊 ½ 𝓋𝓌 = 𝓊 ½ 𝓋𝓌 #P353 ∵ A3 Reflexive.
+    = 𝓊 ½ (𝓋𝓌)      #P354 ∵ A15 Right Grouping.
+    = 𝓊 ½(𝓋𝓌)       #P355 ∵ A342 Numbers Bind Right.
+    = 𝓊 (½(𝓋𝓌))     #P356 ∵ A15 Right Grouping.
     #
-    𝓊½ 𝓋 𝓌 = 𝓊½ 𝓋 𝓌  #P347 ∵ A3 Reflexive.
-    = 𝓊½ 𝓋(𝓌)        #P348 ∵ A333 Look Ahead.
-    = 𝓊½ (𝓋(𝓌))      #P349 ∵ A15 Right Grouping.
-    = (𝓊½)(𝓋(𝓌))     #P350 ∵ A335 Word.
+    𝓊½ 𝓋 𝓌 = 𝓊½ 𝓋 𝓌  #P357 ∵ A3 Reflexive.
+    = 𝓊½ 𝓋(𝓌)        #P358 ∵ A343 Look Ahead.
+    = 𝓊½ (𝓋(𝓌))      #P359 ∵ A15 Right Grouping.
+    = (𝓊½)(𝓋(𝓌))     #P360 ∵ A345 Word.
     #
-    𝓊!𝓋𝓌 = 𝓊!𝓋𝓌  #P351 ∵ A3 Reflexive.
-    = (𝓊!)𝓋𝓌     #P352 ∵ A13 Left Grouping.
-    = ((𝓊!)𝓋)𝓌   #P353 ∵ A336 Default Grouping.
+    𝓊!𝓋𝓌 = 𝓊!𝓋𝓌  #P361 ∵ A3 Reflexive.
+    = (𝓊!)𝓋𝓌     #P362 ∵ A13 Left Grouping.
+    = ((𝓊!)𝓋)𝓌   #P363 ∵ A346 Default Grouping.
     #
-    2³₄ = 2³₄ #P354 ∵ A3 Reflexive.
-    = (2₄)³   #P355 ∵ A327 Subscripts Bind To Left Operator.
+    2³₄ = 2³₄ #P364 ∵ A3 Reflexive.
+    = (2₄)³   #P365 ∵ A337 Subscripts Bind To Left Operator.
 
 Some of these rules help compact the notation as it most commonly appears.
 For example, √2πx is √(2π)x, but √nπx is √(n)πx.
 
-    GOT UP TO HERE
-
 ###<a name="frL"></a> uᵥ
 Subscripts (or indeces) labels a specific form of a more general expression:
 
-    𝓊ᵥ[𝓌₀,⋯] = 𝓊[ᵥ,𝓌₀,⋯]     ⊢# Note that 𝓊ᵥ may ignore 𝓌,⋯ so as to be 𝓊[𝓋].
-    𝓊ₙₘ[𝓌₀,⋯] = 𝓊[ₙ,ₘ,𝓌₀,⋯]  ⊢
+    𝒸𝓊ₙ(𝒾)𝒹 = 𝒸𝓊(n,𝒾)𝒹    ⊢#A366.
+    𝒸𝓊ₘ(𝒾)𝒹 = 𝒸𝓊(m,𝒾)𝒹    ⊢#A367.
+    𝒸𝓊ₙₘ(𝒾)𝒹 = 𝒸𝓊(n,m,𝒾)𝒹 ⊢#A368.
+
+    𝒸𝓊ₙ𝒹 = 𝒸𝓊(n)𝒹    ⊢#A369.
+    𝒸𝓊ₘ𝒹 = 𝒸𝓊(m)𝒹    ⊢#A370.
+    𝒸𝓊ₙₘ𝒹 = 𝒸𝓊(n,m)𝒹 ⊢#A371.
 
 Sequences can be thought of the set {𝓊ₙ}, but in this "paper",
 𝓊ₙ is always a well defined expression.
@@ -846,9 +862,16 @@ Sequences can be thought of the set {𝓊ₙ}, but in this "paper",
 ###<a name="4bK"></a> 𝓊{𝓋ₙ}
 A set of labeled (indexed) items:
 
-    ℕ{n|𝓊ₙ} = {𝓊₀,𝓊₁,⋯}       ⊢
-    ℕ[m,n] = {m,⋯,n}          ⊢
-    ℕ[m,n]{i|𝓊ᵢ} = {𝓊ₘ,⋯,𝓊ₙ}  ⊢
+    ℕ{n|𝓊ₙ} = (𝓊₀,⋯)        ⊢#A372.
+    [m,n]{i|𝓊ᵢ} = {𝓊ₘ,⋯,𝓊ₙ} ⊢#A373.
+
+
+    (𝓊₀,⋯) = (𝓊₀,𝓊₀++,⋯)   #P374 ∵ A27 Successor Ellipsis.
+    = (𝓊₀,𝓊₁,⋯)            #M375 ∵ P12,M332 Bounded Context Synonym.
+    = (𝓊₀,𝓊₁,𝓊₁++,⋯)       #P376 ∵ A27 Successor Ellipsis.
+    = (𝓊₀,𝓊₁,𝓊₂,⋯)         #M377 ∵ P12,M333 Bounded Context Synonym.
+    ℕ{n|𝓊ₙ} = (𝓊₀,𝓊₁,𝓊₂,⋯) #E378 ∵ A372.
+    GOT UP TO HERE
 
 ###<a name="zJL"></a> Σ[l,k]{j|uⱼ}
 [Series](http://en.wikipedia.org/wiki/Series_%28mathematics%29):

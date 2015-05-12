@@ -138,13 +138,8 @@ Word:
     𝒲 /\([^()]+\)|:?[\p{L}\p{N}]+/ !⊢
     𝒲 { 𝓊,𝓋,𝓌,𝓍,𝓎,𝓏 }              !⊢
 
-### 𝒩 𝓂,𝓃
-Number:
-
-    𝒩 /\p{N}+/ !⊢
-    𝒩 { 𝓂,𝓃 }  !⊢
-
 ### 𝒪 ℴ
+Letter or number:
 
     𝒪 /\p{N}+|\p{L}/ !⊢
     𝒪 { ℴ }          !⊢
@@ -155,11 +150,17 @@ Letter:
     ℒ /\p{L}/   !⊢
     ℒ { 𝓅,𝓆 } !⊢
 
+### 𝒩 𝓂,𝓃
+Number:
+
+    𝒩 /\p{N}+/ !⊢
+    𝒩 { 𝓂,𝓃 }  !⊢
+
 ###<a name="Lr4"></a> ℬ ℊ,𝒽
 Word Boundary:
 
     ℬ /\b|[,(){}+|\[\] ]/ !⊢
-    ℬ { ℊ,𝒽 }        !⊢
+    ℬ { ℊ,𝒽 }             !⊢
 
 ###<a name="2gK"></a> 𝒮 𝓈,𝓉
 Set Group(not greedy, may be zero length):
@@ -339,7 +340,7 @@ There after, we're just giving each successor element a name:
     𝔑 { 𝔩,𝔫 }       !⊢
 
     ℕ{𝔩,𝔫} ⊢#A77.
-    ℕ{𝔩}    #M78 ∵ A20,A77 Element Contained By Set.
+    ℕ{𝔩}    #M78 Digit Or Number Variable ∵ A20,A77 Element Contained By Set.
     ℕ{𝔫}    #M79 ∵ A20,A77 Element Contained By Set.
 
 ###<a name="zpB"></a> 𝔐 𝔪
@@ -865,182 +866,55 @@ A set of labeled (indexed) items:
     ℕ{n|𝓊ₙ} = (𝓊₀,⋯)        ⊢#A372.
     [m,n]{i|𝓊ᵢ} = {𝓊ₘ,⋯,𝓊ₙ} ⊢#A373.
 
-
     (𝓊₀,⋯) = (𝓊₀,𝓊₀++,⋯)   #P374 ∵ A27 Successor Ellipsis.
     = (𝓊₀,𝓊₁,⋯)            #M375 ∵ P12,M332 Bounded Context Synonym.
     = (𝓊₀,𝓊₁,𝓊₁++,⋯)       #P376 ∵ A27 Successor Ellipsis.
     = (𝓊₀,𝓊₁,𝓊₂,⋯)         #M377 ∵ P12,M333 Bounded Context Synonym.
     ℕ{n|𝓊ₙ} = (𝓊₀,𝓊₁,𝓊₂,⋯) #E378 ∵ A372.
-    GOT UP TO HERE
 
-###<a name="zJL"></a> Σ[l,k]{j|uⱼ}
-[Series](http://en.wikipedia.org/wiki/Series_%28mathematics%29):
+### 𝔹
+Boolean:
 
-    Σ[l,k]{j|uⱼ} ≡ uₗ+⋯+uₖ
+    𝔹 = {F,T} ⊢#A379 Boolean Set.
+    T = T++   ⊢#A380.
+    F = F--   ⊢#A381.
 
-    # Examples:
-    Σ[1,5]{m|m} = 1 + 2 + 3 + 4 + 5
-    Σ[1,3]{m|m+m} = (1+1) + (2+2)+ (3+3)
+    F∨F = F :⊢#D382 OR.
+    T∨F = T :⊢#D383 OR.
+    F∨T = T :⊢#D384 OR.
+    T∨T = T :⊢#D385 OR.
 
-###<a name="vkP"></a> n×u
-Just regular [multiplication](http://en.wikipedia.org/wiki/Multiplication):
+    F∧F = F :⊢#D386 AND.
+    T∧F = F :⊢#D387 AND.
+    F∧T = F :⊢#D388 AND.
+    T∧T = T :⊢#D389 AND.
 
-    n×u ≡ Σ[1,n]{u}
-    nu ≡ n×u
-    n/m × u/v ≡ (n×u)/(m×v)
+### ∀
+For all:
 
-###<a name="uyg"></a> ×⋯
+    ∀(𝓊,𝓋) = 𝓊∧𝓋                 ⊢#A390 For All.
+    ∀(𝓊(0),𝓊(1),⋯) = 𝓊(0)∧𝓊(1)∧⋯ ⊢#A391 For All.
+    ∀(𝒾,𝓊,𝒿) ⇒ 𝓊                ⊢⊢#T392 True For All True For One.
+    ∀𝓊{𝓋|𝓈𝓋𝓉} ⇒ 𝓊{𝓍} ⇒ 𝓈𝓍𝓉      ⊢⊢#T393 True When In Set.
 
-    uₘ×⋯×uₙ ≡ (m<n)? uₘ×uₘ₊₁×⋯×uₙ : (m>n)? 1 : uₙ
+### ∃
+There exist:
 
-###<a name="kJ6"></a> Σuₙ
-Summation over Natural, ℕ, indeces:
-
-    # Non-halting series.
-    Σuₙ ≡ u₀+u₁+⋯ 
-    ΣΣuₙₘ ≡ Σuₙ₀+Σuₙ₁+⋯ 
-
-Note that by default a series will start with index 0.
-
-###<a name="MlN"></a> Σₙuₙ
-Halting series:
-
-    Σₙuₙ ≡ Σ[0,M]{n|u[n]}
-    ΣₙΣₘuₙₘ ≡ Σ[0,M]{n| Σ[0,M]{m| u[n,m]}}
-
-    N = Σₙ 1 = Σ[0,M]{1} = Σ[1,M+1]{1} = Σ[1,N]{1}
-
-TODO: [Telescoping Series](http://en.wikipedia.org/wiki/Telescoping_series)
+    ∃(𝓊,𝓋) = 𝓊∨𝓋                 ⊢#A394 There Exist.
+    ∃(𝓊(0),𝓊(1),⋯) = 𝓊(0)∨𝓊(1)∨⋯ ⊢#A395 There Exist.
 
 ###<a name="9XA"></a> ∞
 Infinity:
 
-    ∞ ≡ Σ1   # Does this work?
+    ∀ℕ{𝔪|𝔪<∞}             ⊢#A396 Infinity.
+    ∀ℕ{𝔪|𝔪<∞} ⇒ ℕ{𝔫} ⇒ 𝔫<∞ #P397 ∵ T393 True When In Set.
+    ℕ{𝔫} ⇒ 𝔫<∞             #M398 Finite Number ∵ T393,A396 True When In Set.
 
-    ∞-1 = ∞
-    # Proof
-      ∞-1
-      Σ1 - 1 
-      (1+1+⋯) - 1       # Definition of Σuₙ
-      (1 + 1+1+⋯) - 1   # Definition of 1+1+⋯
-      (1+1+⋯) + 1 - 1
-      (1+1+⋯) + 0
-      (1+1+⋯)
-      Σ1
-      ∞
-
-    ∞+1 = ∞
-    # Proof:
-      ∞-1 = ∞
-      ∞-1+1 = ∞+1
-      ∞+1-1 = ∞+1
-      ∞+0 = ∞+1
-      ∞ = ∞+1
-      ∞+1 = ∞
-
-Basically, one can add or subtract a finite number to ∞, it's still ∞.
-
-    Σuₙ = Σ[0,∞]{n|uₙ}
-    # Proof:
-      Σuₙ = Σ[0,M]{n|uₙ}   # Assume...
-      N = Σ1
-      M = N-1 = Σ1 - 1 = ∞-1 = ∞
-      Σuₙ = Σ[0,∞]{n|uₙ}   # I see!
-
-One can absorb any integral multiple into ∞:
-
-    N∞=∞
-    # Proof:
-      ∞
-      Σ1
-      1+1+⋯
-      1 + 1+1+⋯
-      (N-1) + 1+1+⋯
-      (N-1)+(N-1)+⋯ + 1+1+⋯
-      Σ(N-1) + Σ1
-      ΣN
-      NΣ1
-      N∞  # It's equivalent to a proof by grouping.
-
-One can absorb any 1/N multiple into ∞:
-
-    ∞/N=∞
-    # Proof:
-      ∞/N
-      Σ1/N
-      1/N+1/N+⋯
-      1/N + 1/N+1/N+⋯
-      (N-1)/N + 1/N+1/N+⋯   # N-1 times and you almost get your first 1.
-      (N-1)/N + 1/N+1/N+⋯
-      ((N-1)/N+⋯) + (1/N+⋯)
-      Σ[(N-1)/N] + Σ[1/N]
-      Σ1
-      ∞
-
-One can absorb any rational multiple into ∞:
-
-    (n/N)∞=∞
-    # Proof:
-      (n/N)∞
-      (n)(1/N)∞
-      (n)∞
-      ∞
-
-Regardless of the issues with ∞,
-the propety I need of ∞ in definitions is that it's greater than any N:
-
-    N < ∞
-    # Proof:
-      ∞
-      Σ1
-      ΣN          # I've shown this is also ∞
-      N+N+⋯
-      N+N+⋯ > N
-      N < N+N+⋯
-      N < ∞
-
-Then, ∞ becomes a device to create non halting processes.
-Some systems have 1/0=∞, but 0×∞=0×Σ1=Σ0×1=Σ0=0, and therefore also Σ0×Σ1=0.
-
-    u/u=1 ↔ v/v=1 ↔ v=v×1 ↔ v/1=v
-    u/u=1 ↔ 1/1=1 ↔ 1=1×1 ↔ 1/1=1 # gsub('v', '1')
-    u/u=1 ↔ 0/0=1 ↔ 0=0×1 ↔ 0/1=0 # gsub('v', '0')
-    u/u=1 ↔ ∞/∞=1 ↔ ∞=∞×1 ↔ ∞/1=∞ # gsub('v', '∞')
-
-    1×u=u ↔ 1×v=v ↔ 1=v/v
-    1×u=u ↔ 1×1=1 ↔ 1=1/1 # gsub('v', '1')
-    1×u=u ↔ 1×0=0 ↔ 1=0/0 # gsub('v', '0')
-    1×u=u ↔ 1×∞=∞ ↔ 1=∞/∞ # gsub('v', '∞')
-
-    0×u=0 ↔ 0×v=0 ↔ 0=0/v ↔ v=0/0
-    0×u=0 ↔ 0×∞=0 ↔ 0=0/∞ ↔ ∞=0/0 # gsub('v', '∞')
-    0×u=0 ↔ 0×0=0 ↔ 0=0/0 ↔ 0=0/0 # gsub('v', '0')
-    0×u=0 ↔ 0×1=0 ↔ 0=0/1 ↔ 1=0/0 # gsub('v', '1')
-
-    u×(1/u)=1 ↔ v(1/v)=1
-    u×(1/u)=1 ↔ 1(1/1)=1 # gsub('v', '1')
-    u×(1/u)=1 ↔ 0(1/0)=1 # gsub('v', '0')
-    u×(1/u)=1 ↔ ∞(1/∞)=1 # gsub('v', '∞')
-
-    u>0,1/u>0 ↔ v>0,1/v>0
-    u>0,1/u>0 ↔ ∞>0,1/∞>0 # gsub('v', '∞')
-    u>0,1/u>0 ↔ 0>0,1/0>0 # gsub('v', '0')
-    u>0,1/u>0 ↔ 1>0,1/1>0 # gsub('v', '1')
-
-    # If we believe all of the above, then
-    0/0 = {∞, 1, 0, v}
-
-    # When does any of this make sense?
-    0×u=r ↔ 0×v=r ↔ v=r/0 ↔ 0 = r/v
-    0×u=r ↔ 0×1=r ↔ 1=r/0 ↔ 0 = r/1 # gsub('v', '1')
-    0×u=r ↔ 0×0=r ↔ 0=r/0 ↔ 0 = r/0 # gsub('v', '0')
-    0×u=r ↔ 0×∞=r ↔ ∞=r/0 ↔ 0 = r/∞ # gsub('v', '∞')
-
-    # When does any of this make sense?
-    u/0=r ↔ v/0=r ↔ v=0×r ↔ v/r=0
-    u/0=r ↔ ∞/0=r ↔ ∞=0×r ↔ ∞/r=0 # gsub('v', '∞')
-    u/0=r ↔ 0/0=r ↔ 0=0×r ↔ 0/r=0 # gsub('v', '0')
-    u/0=r ↔ 1/0=r ↔ 1=0×r ↔ 1/r=0 # gsub('v', '1')
+    # Prove: n<∞
+    ℕ{n}  #P399 ∵ M78 Digit Or Number Variable.
+    n<∞   #M400 ∵ M398,P399 Finite Number.
+    #
+    GOT UP TO HERE
 
 ###<a name="zQw"></a> ∑
 Sum over Integer, ℤ, indeces:

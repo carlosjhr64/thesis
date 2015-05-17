@@ -209,8 +209,8 @@ Superscripts:
 
     𝒸 = 𝒸                  ⊢#A3 Reflexive.
     𝒸 = 𝒹 ⇒ 𝒹 = 𝒸          ⊢#A4 Symmetric.
-    𝒸 = 𝒹; 𝒹 = ℯ ⇒ 𝒸 = ℯ   ⊢#A5 F-Transitive.
-    𝒸 = 𝒹 ⇒ ℯ = 𝒸 ⇒ ℯ = 𝒹  ⊢#A6 B-Transitive.
+    𝒸 = 𝒹; 𝒹 = ℯ ⇒ 𝒸 = ℯ   ⊢#A5 Transitive.
+    𝒸 ⇒ 𝒹; 𝒹 = ℯ ⇒ 𝒸 ⇒ ℯ   ⊢#A6 Transitive.
 
 ###<a name="DCx"></a> Synonym
 The following are my assumptions of the language, and
@@ -312,10 +312,10 @@ There after, we're just giving each successor element a name:
     # Prove: ℕ = {0,1,2,⋯}.
     {0,1,⋯} = {0,1,1++,⋯}                    #P62 ∵ A27 Successor Ellipsis.
     ℕ = {0,1,⋯}; {0,1,⋯} = {0,1,1++,⋯}       #C63 ∵ A39,P62 Natural Numbers.
-    ℕ = {0,1,1++,⋯}                          #M64 ∵ A5,C63 F-Transitive.
+    ℕ = {0,1,1++,⋯}                          #M64 ∵ A5,C63 Transitive.
     {0,1,1++,⋯} = {0,1,2,⋯}                  #M65 ∵ P12,M54 Bounded Context Synonym.
     ℕ = {0,1,1++,⋯}; {0,1,1++,⋯} = {0,1,2,⋯} #C66 ∵ M64,M65.
-    ℕ = {0,1,2,⋯}                            #M67 ∵ A5,C66 F-Transitive.
+    ℕ = {0,1,2,⋯}                            #M67 ∵ A5,C66 Transitive.
     #
 
     # Prove: ℕ = {0,1,2,3,⋯}.
@@ -459,7 +459,7 @@ Step by step, I can always reach step 𝔫:
     # Prove: 0+1 = 1.
     0+1 = 0++          #P140 ∵ M131.
     0+1 = 0++; 0++ = 1 #C141 ∵ P140,M53.
-    0+1 = 1            #M142 ∵ A5,C141 F-Transitive.
+    0+1 = 1            #M142 ∵ A5,C141 Transitive.
     #
 
     # Prove: 1+1 = 2.
@@ -802,53 +802,66 @@ Subtraction:
 
     ℨ /\-?\d+|[ijk]/ !⊢
     ℨ { 𝔦,𝔧,𝔨 }      !⊢
-    ℤ{𝔦-𝔧}            ⊢#A333 Integer Closed Under Subtraction.
+    ℤ{𝔦,𝔧}            ⊢#A333 Integer Variables.
+    ℤ{𝔦-𝔧}           ⊢⊢#T334 Integer Closed Under Subtraction.
 
-    ℤ{j-k}   #P334 Integer Closed Under Subtraction ∵ A333 Integer Closed Under Subtraction.
-    GOT UP TO HERE
+    ℤ{j-k}   #P335 Integer Closed Under Subtraction ∵ T334 Integer Closed Under Subtraction.
 
 ###<a name="XIb"></a> /
 Division:
 
-    𝓊×𝓋 = 𝓍×𝓎 ⇒ 𝓊/𝓎 = 𝓍/𝓋  ⊢#A296 Division.
-    𝓊/𝓎 = 𝓍/𝓋 ⇒ 𝓊×𝓋 = 𝓍×𝓎  ⊢#A297 Division.
-    𝓊/1 = 𝓊               :⊢#D298 Whole Number.
+    𝓊×𝓋 = 𝓍×𝓎 ⇒ 𝓊/𝓎 = 𝓍/𝓋  ⊢#A336 Division.
+    𝓊/𝓎 = 𝓍/𝓋 ⇒ 𝓊×𝓋 = 𝓍×𝓎  ⊢#A337 Division.
+    𝓊/1 = 𝓊               :⊢#D338 Whole Number.
 
     # Prove: 4/2 = 2
-    2×2 = Σ[2]{|2}      #P299 ∵ A259 Multiplication.
-    = 2|1+⋯+2|2         #P300 ∵ E179.
-    = 2|1+2|(1++)+⋯+2|2 #P301 ∵ A37 Series Successor Ellipsis.
-    = 2|1+2|(2)+⋯+2|2   #M302 ∵ P12,M54 Bounded Context Synonym.
-    = 2|1+2|2+⋯+2|2     #P303 ∵ M18 Context Ungrouping.
-    = 2|1+2|2           #P304 ∵ A38 Terminal Series Ellipsis.
-    = 2+2               #P305 ∵ A170 Labeled Sum.
-    = 2+1++             #M306 ∵ P11,A45 Right Bounded Synonym.
-    = 2+1+1             #M307 ∵ P11,P163 Right Bounded Synonym.
-    = 3+1               #M308 ∵ P10,E128 Left Bounded Synonym.
-    = 4               <⊢#D129.
-    2×2 = 4             #E309 ∵ P299.
-    4×1 = 4             #P310 ∵ T260 Multiplicative Identity.
-    4×1 = 2×2           #E311 ∵ P299.
-    4/2 = 2/1           #M312 ∵ A296,E311 Division.
-    = 2                 #P313 ∵ D298 Whole Number.
-    4/2 = 2             #E314 ∵ M312.
+    2×2 = Σ[2]{|2}      #P339 ∵ A288 Multiplication.
+    = 2|1+⋯+2|2         #P340 ∵ E208.
+    = 2|1+2|(1++)+⋯+2|2 #P341 ∵ A37 Series Successor Ellipsis.
+    = 2|1+2|(2)+⋯+2|2   #M342 ∵ P12,M54 Bounded Context Synonym.
+    = 2|1+2|2+⋯+2|2     #P343 ∵ M18 Context Ungrouping.
+    = 2|1+2|2           #P344 ∵ A38 Terminal Series Ellipsis.
+    = 2+2               #P345 ∵ A188 Labeled Sum.
+    = 2+1++             #M346 ∵ P11,A45 Right Bounded Synonym.
+    = 2+1+1             #M347 ∵ P11,P181 Right Bounded Synonym.
+    = 3+1               #M348 ∵ P10,E146 Left Bounded Synonym.
+    = 4               <⊢#D147.
+    2×2 = 4             #E349 ∵ P339.
+    4×1 = 4             #P350 ∵ T289 Multiplicative Identity.
+    4×1 = 2×2           #E351 ∵ P339.
+    4/2 = 2/1           #M352 ∵ A336,E351 Division.
+    = 2                 #P353 ∵ D338 Whole Number.
+    4/2 = 2             #E354 ∵ M352.
     #
+
 
 ###<a name="mgl"></a> ℚ
 
-    ℚ = ℤ{𝔦,𝔧|𝔦/𝔧} ⊢#A315 Rationals.
-    ℚ{𝔦/𝔧}          #M316 Rational Number ∵ A97,A315 Iterators are sets.
-    ℚ{r,s}         ⊢#A317 Rational Variables.
+    Ω(𝓊,𝓋) = 𝓊/𝓋      ⊢#A355.
+    ℚ = ℤ{𝓊,𝓋|Ω(𝓊,𝓋)} ⊢#A356 Rationals.
+    ℚ{r,s}            ⊢#A357 Rational Variables.
 
-    ℚ{1/2}   #P318 ∵ M316 Rational Number.
-    ½ = 1/2 ⊢#A319 One Half.
+    ℤ{𝓊,𝓋|Ω(𝓊,𝓋)} = ℤ{𝓊,𝓋|𝓊/𝓋} #M358 ∵ P12,A355 Bounded Context Synonym.
+    ℚ = ℤ{𝓊,𝓋|𝓊/𝓋}             #E359 ∵ A356 Rationals.
+
+    # Prove: ℤ{𝓊,𝓋} ⇒ ℚ{𝓊/𝓋}
+    ℚ{Ω(𝓊,𝓋)} = ℚ{𝓊/𝓋}                     #M360 ∵ P12,A355 Bounded Context Synonym.
+    ℤ{𝓊,𝓋} ⇒ ℚ{Ω(𝓊,𝓋)}                     #M361 ∵ P105,A356 Iterators Are Sets.
+    ℤ{𝓊,𝓋} ⇒ ℚ{Ω(𝓊,𝓋)}; ℚ{Ω(𝓊,𝓋)} = ℚ{𝓊/𝓋} #C362 ∵ M361,M360.
+    ℤ{𝓊,𝓋} ⇒ ℚ{𝓊/𝓋}                        #M363 Definition Of Rational ∵ A6,C362 Transitive.
+    #
+
+    ℚ{𝔦/𝔧}   #M364 Ratio Of Integers ∵ M363,A333 Definition Of Rational.
+    ℚ{1/2}   #P365 ∵ M364 Ratio Of Integers.
+    ½ = 1/2 ⊢#A366 One Half.
 
     # Prove: ℚ{½}.
-    ℚ{½} = ℚ{1/2}         #M320 ∵ P12,A319 Bounded Context Synonym.
-    ℚ{1/2} = ℚ{½}         #M321 ∵ A4,M320 Symmetric.
-    ℚ{1/2} ⇒ ℚ{½}         #M322 ∵ A2,M321 Equivalent Statement.
-    ℚ{1/2}; ℚ{1/2} ⇒ ℚ{½} #C323 ∵ P318,M322.
-    ℚ{½}                  #M324 ∵ A1,C323 Modus Ponem.
+    ℚ{½} = ℚ{1/2}         #M367 ∵ P12,A366 Bounded Context Synonym.
+    ℚ{1/2} = ℚ{½}         #M368 ∵ A4,M367 Symmetric.
+    ℚ{1/2} ⇒ ℚ{½}         #M369 ∵ A2,M368 Equivalent Statement.
+    ℚ{1/2}; ℚ{1/2} ⇒ ℚ{½} #C370 ∵ P365,M369.
+    ℚ{½}                  #M371 ∵ A1,C370 Modus Ponem.
+    GOT UP TO HERE
 
 ### 𝕞  ₀,₁,⋯
 

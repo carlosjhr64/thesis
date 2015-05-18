@@ -188,13 +188,13 @@ Sequence Group(not greedy, may be zero length):
 ###<a name="SS5"></a> ₛ ₙ,ₘ,₀,₁,₂,₃,₍,₎,₊,₋
 Subscripts:
 
-    ₛ /[ₘₙ₀₁₂₃₄₅₆₇₈₉₍₎₊₋]+/ !⊢
+    ₛ /[ₘₙᵢⱼₖ₀₁₂₃₄₅₆₇₈₉₍₎₊₋]+/ !⊢
     ₛ { ᵤ,ᵥ }               !⊢
 
 ### ˢ ᵗ,ᵘ
 Superscripts:
 
-    ˢ /[ᵐⁿ⁰¹²³⁴⁵⁶⁷⁸⁹⁽⁾⁺⁻]+/ !⊢
+    ˢ /[ᵐⁿⁱ⁰¹²³⁴⁵⁶⁷⁸⁹⁽⁾⁺⁻]+/ !⊢
     ˢ { ᵗ,ᵘ }               !⊢
 
 ###<a name="gAu"></a> 𝒶; 𝒶 ⇒ 𝒷 ⇒ 𝒷
@@ -1013,46 +1013,31 @@ Infinity:
 ###<a name="zQw"></a> ∑
 Sum over Integer, ℤ, indeces:
 
-    ∑{𝓊(𝓋)} = Σℤ{𝓋|𝓊(𝓋)} ⊢#A458 Sum Over The Integers.
+    ∑ᵥ{𝓊ᵥ} = Σℤ{𝓋|𝓊(𝓋)} ⊢#A458 Sum Over The Integers.
+    ∑𝓊 = ∑ᵢ{𝓊ᵢ}         ⊢#A459 Implied index.
 
-    𝓊(i) = 𝓊ᵢ  ⊢#A459.
-    𝓊(j) = 𝓊ⱼ  ⊢#A460.
-    𝓊(k) = 𝓊ₖ  ⊢#A461.
+    𝓊(i) = 𝓊ᵢ  ⊢#A460.
+    𝓊(j) = 𝓊ⱼ  ⊢#A461.
+    𝓊(k) = 𝓊ₖ  ⊢#A462.
 
-    ∑{𝓊(i)} = ∑{𝓊ᵢ} #M462 ∵ P12,A459 Bounded Context Synonym.
+    ∑ᵢ{𝓊ᵢ} = Σℤ{i|𝓊(i)} #P463 ∵ A458 Sum Over The Integers.
+    ∑𝓊 = Σℤ{i|𝓊(i)}     #E464 ∵ A459 Implied index.
 
-    ∑{𝓊} = ∑𝓊   ⊢#A463.
-    ∑{𝓈} = ∑ 𝓈  ⊢#A464.
-
-    GOT UP TO HERE
+    ∑{𝓊} = ∑𝓊 :⊢#D465.
+    ∑{𝓈} = ∑ 𝓈 ⊢#A466.
 
 ###<a name="Jt7"></a> ⋅
 The dot operator:
 
-    {uᵢ}⋅{vᵢ} ≡ ∑{uᵢvᵢ}
+    (𝓊ₘ,⋯,𝓊ₙ)⋅(𝓋ₘ,⋯,𝓋ₙ) = Σ[m,n]{l|𝓊ₗ×𝓋ₗ} ⊢#A467 Finite Dot Product.
+    (𝓊₀,⋯)⋅(𝓋₀,⋯) = Σₙ{𝓊ₙ×𝓋ₙ}             ⊢#A468 Infinite Dot Product.
 
-###<a name="IK3"></a> {⋯}⋅{⋯}
-OK, so I'm a bit suspicious of ∞.
-Consider this:
+    (𝓊)⋅(𝓋) = 𝓊×𝓋                 ⊢⊢#T469 One Dot Product.
+    (𝓊,𝓋)⋅(𝓍,𝓎) = 𝓊×𝓍+𝓋×𝓎         ⊢⊢#T470 Two Dot Product.
+    (𝓊,𝓋,𝓌)⋅(𝓍,𝓎,𝓏) = 𝓊×𝓍+𝓋×𝓎+𝓌×𝓏 ⊢⊢#T471 Three Dot Product.
 
-    {1,1,⋯}⋅{0,1,⋯}
-    0+1+1+⋯
-    1+1+⋯
-    1+1+⋯
-    Σ1
-    ∞
-
-Yes, the sum is unbounded, but the one of the objects that created it has a hole.
-And it really is a different object than the one without a hole.
-The regular infinity produced by `1+1+...` is both a sink and a source, but
-did I really loose the hole?
-
-###<a name="tky"></a> ∑ₗ
-Halting sum over Integer, ℤ, indeces:
-
-    ∑ₗuₗ ≡ Σ[-M,M]{l|uₗ}   # Halting version of ∑
-
-    ∑ₗ1 = 2M+1 = 2N-1
+    (1,2,3)⋅(4,5,6) = 1×4+2×5+3×6 #P472 ∵ T471 Three Dot Product.
+    GOT UP TO HERE
 
 ###<a name="J5V"></a> Π
 Products of sequences,

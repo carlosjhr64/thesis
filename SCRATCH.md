@@ -415,7 +415,6 @@ Step by step, I can always reach step 𝔫:
     𝔣(𝓊,𝓋) = 𝓊⊛𝓋 ⇒ 𝔣{𝓍|𝓌(𝓍)} = 𝓌(0)⊛⋯     ⊢#A108 Infinite Progression.
     𝔣(𝓊,𝓋) = 𝓊⊛𝓋 ⇒ 𝔣[𝓍] = 𝔣[1,𝓍]          ⊢#A109 Interval Starting At One.
     𝔣(𝓊,𝓋) = 𝓊⊛𝓋 ⇒ 𝔣[𝓍,𝓎]{|𝓌} = 𝓌|𝓍⊛⋯⊛𝓌|𝓎 ⊢#A110 Progression Of Labeled Variable.
-    GOT UP TO HERE
 
 ###<a name="Pbn"></a> Σ,+
 [Addition](http://en.wikipedia.org/wiki/Addition):
@@ -469,12 +468,12 @@ Step by step, I can always reach step 𝔫:
     #
 
     # And so on, I can show:
-    3+1 = 4 :⊢#D141.
-    4+1 = 5 :⊢#D142.
-    5+1 = 6 :⊢#D143.
-    6+1 = 7 :⊢#D144.
-    7+1 = 8 :⊢#D145.
-    8+1 = 9 :⊢#D146.
+    3+1 = 4 ⊢⊢#T141.
+    4+1 = 5 ⊢⊢#T142.
+    5+1 = 6 ⊢⊢#T143.
+    6+1 = 7 ⊢⊢#T144.
+    7+1 = 8 ⊢⊢#T145.
+    8+1 = 9 ⊢⊢#T146.
 
     # Prove: 1+1+1 = 3.
     1+1+1 = 2+1 #M147 ∵ P10,E138 Left Bounded Synonym.
@@ -487,21 +486,21 @@ Step by step, I can always reach step 𝔫:
     #
 
     # And so on, I can show:
-    1+1+1+1+1 = 5         :⊢#D151.
-    1+1+1+1+1+1 = 6       :⊢#D152.
-    1+1+1+1+1+1+1 = 7     :⊢#D153.
-    1+1+1+1+1+1+1+1 = 8   :⊢#D154.
-    1+1+1+1+1+1+1+1+1 = 9 :⊢#D155.
+    1+1+1+1+1 = 5         ⊢⊢#T151.
+    1+1+1+1+1+1 = 6       ⊢⊢#T152.
+    1+1+1+1+1+1+1 = 7     ⊢⊢#T153.
+    1+1+1+1+1+1+1+1 = 8   ⊢⊢#T154.
+    1+1+1+1+1+1+1+1+1 = 9 ⊢⊢#T155.
 
     # Prove: 2+3 = 5.
-    5 = 1+1+1+1+1 #M156 ∵ A4,D151 Symmetric.
+    5 = 1+1+1+1+1 #M156 ∵ A4,T151 Symmetric.
     = 2+1+1+1     #M157 ∵ P10,E138 Left Bounded Synonym.
     = 2+3         #M158 ∵ P11,E148 Right Bounded Synonym.
     2+3 = 5       #E159 ∵ A44.
     #
 
     # Prove: 3+2 = 5.
-    5 = 1+1+1+1+1 <⊢#M156 ∵ A4,D151 Symmetric.
+    5 = 1+1+1+1+1 <⊢#M156 ∵ A4,T151 Symmetric.
     = 3+1+1         #M160 ∵ P10,E148 Left Bounded Synonym.
     = 3+2           #M161 ∵ P11,E138 Right Bounded Synonym.
     3+2 = 5         #E162 ∵ A44.
@@ -826,7 +825,7 @@ Division:
     = 2+1++             #M344 ∵ P11,A41 Right Bounded Synonym.
     = 2+1+1             #M345 ∵ P11,P175 Right Bounded Synonym.
     = 3+1               #M346 ∵ P10,E140 Left Bounded Synonym.
-    = 4               <⊢#D141.
+    = 4               <⊢#T141.
     2×2 = 4             #E347 ∵ P337.
     4×1 = 4             #P348 ∵ T287 Multiplicative Identity.
     4×1 = 2×2           #E349 ∵ P337.

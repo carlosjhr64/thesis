@@ -22,9 +22,9 @@ it's a good warm-up and demonstrates my notation.
  • [𝒞 𝒶,𝒷](#0um) • [𝒫 𝒸,𝒹,ℯ,𝒻](#Cej) • [𝒲 𝓊,𝓋,𝓌,𝓍,𝓎,𝓏](#SNo) • [ℬ ℊ,𝒽](#Lr4)
  • [𝒮 𝓈,𝓉](#2gK) • [ℐ 𝓀,𝓁](#3RW) • [𝒬 𝒾,𝒿](#pIs) • [ₛ ₙ,ₘ,₀,₁,₂,₃,₍,₎,₊,₋](#SS5)
  • [𝒶; 𝒶 ⇒ 𝒷 ⇒ 𝒷](#gAu) • [=](#T2q) • [Synonym](#DCx) • [Groupings](#9PI)
- • [∈](#xSV) • [++,⋯](#wJ6) • [ℕ](#9ET) • [l,m,n,M,N](#ObZ) • [𝔑 𝔫](#fNd)
+ • [∈](#xSV) • [⇧,⋯](#wJ6) • [ℕ](#9ET) • [l,m,n,M,N](#ObZ) • [𝔑 𝔫](#fNd)
  • [𝔐 𝔪](#zpB) • [𝔇 𝔡](#6KL) • [Induction](#sOi) • [&#91;m,n&#93;](#EeZ)
- • [𝓊{𝓈|𝓍(𝓈)}](#H6V) • [Σ,+](#Pbn) • [𝓊+0](#Xi7) • [(𝔫+𝔩)++ = 𝔫+(𝔩)++](#uXU)
+ • [𝓊{𝓈|𝓍(𝓈)}](#H6V) • [Σ,+](#Pbn) • [𝓊+0](#Xi7) • [(𝔫+𝔩)⇧ = 𝔫+(𝔩)⇧](#uXU)
  • [𝓊+𝓋 = 𝓋+𝓊](#P9m) • [𝓊|𝓍+𝓌|𝓎 = 𝓊+𝓌](#nvp) • [Σ&#91;l,m&#93;{l|𝓊(n)}](#Ifk)
  • [Σₙ,𝓊ₙ](#U7Q) • [×](#zcN) • [-](#fAs) • [/](#XIb) • [ℤ](#r5l)
  • [ℨ 𝔦,𝔧,𝔨](#22g) • [ℚ](#mgl) • [ⁿ,ᵐ](#ubG) • [ₙ,ₘ](#SB5) • [Precedence rules](#MIM)
@@ -164,7 +164,7 @@ Number:
 ###<a name="Lr4"></a> ℬ ℊ,𝒽
 Word Boundary:
 
-    ℬ /\b|[,(){}+|\[\] Σ∧∨×↑↓]/ !⊢
+    ℬ /\b|[,(){}+⇧⇩|\[\] Σ∧∨×↑↓]/ !⊢
     ℬ { ℊ,𝒽 }                 !⊢
 
 ###<a name="2gK"></a> 𝒮 𝓈,𝓉
@@ -249,24 +249,24 @@ With phrases, the synonyms need to be semantically bounded.
     𝓊{𝓋} ⇒ 𝓋∈𝓊   #M23 If Contained By, Element Of ∵ A2,M22 Equivalent Statement.
     𝓋∈𝓊 ⇒ 𝓊{𝓋}   #M24 If Element Of, Contained By ∵ A2,A21 Equivalent Statement.
 
-###<a name="wJ6"></a> ++,⋯
+###<a name="wJ6"></a> ⇧,⋯
 Successor operator and
 [Ellipsis](http://en.wikipedia.org/wiki/Ellipsis#In_mathematical_notation):
 
-    {𝓈𝓊,𝓋𝓉} ⇒ 𝓋 = 𝓊++ ⊢#A25 Successor.
-    {𝓈𝓊,𝓋𝓉} ⇒ 𝓊 = 𝓋-- ⊢#A26 Preccessor.
+    {𝓈𝓊,𝓋𝓉} ⇒ 𝓋 = 𝓊⇧ ⊢#A25 Successor.
+    {𝓈𝓊,𝓋𝓉} ⇒ 𝓊 = 𝓋⇩ ⊢#A26 Preccessor.
 
     #
-    𝒸ℊ𝓊⊛⋯𝒹 = 𝒸ℊ𝓊⊛𝓊++⊛⋯𝒹          ⊢#A27 Successor Ellipsis.
+    𝒸ℊ𝓊⊛⋯𝒹 = 𝒸ℊ𝓊⊛𝓊⇧⊛⋯𝒹          ⊢#A27 Successor Ellipsis.
     𝒸ℊ𝓊⊛⋯⊛𝓊𝒹 = 𝒸ℊ𝓊𝒹              ⊢#A28 Terminal Ellipsis.
     #
-    𝒸ℊ𝓊(𝓋)⊛⋯𝒹 = 𝒸ℊ𝓊(𝓋)⊛𝓊(𝓋++)⊛⋯𝒹 ⊢#A29 Indexed Successor Ellipsis.
+    𝒸ℊ𝓊(𝓋)⊛⋯𝒹 = 𝒸ℊ𝓊(𝓋)⊛𝓊(𝓋⇧)⊛⋯𝒹 ⊢#A29 Indexed Successor Ellipsis.
     𝒸ℊ𝓊(𝓋)⊛⋯⊛𝓊(𝓋)𝒹 = 𝒸ℊ𝓊(𝓋)𝒹     ⊢#A30 Indexed Terminal Ellipsis.
     #
     𝒸ℊ𝓊ᵥ⊛⋯𝒹 = 𝒸ℊ𝓊ᵥ⊛𝓊ᵥ₊₁⊛⋯𝒹       ⊢#A31 Subscripted Successor Ellipsis.
     𝒸ℊ𝓊ᵥ⊛⋯⊛𝓊ᵥ𝒹 = 𝒸ℊ𝓊ᵥ𝒹           ⊢#A32 Subscripted Terminal Ellipsis.
     #
-    𝒸ℊ𝓊|𝓋⊛⋯𝒹 = 𝒸ℊ𝓊|𝓋⊛𝓊|(𝓋++)⊛⋯𝒹  ⊢#A33 Labeled Successor Ellipsis.
+    𝒸ℊ𝓊|𝓋⊛⋯𝒹 = 𝒸ℊ𝓊|𝓋⊛𝓊|(𝓋⇧)⊛⋯𝒹  ⊢#A33 Labeled Successor Ellipsis.
     𝒸ℊ𝓊|𝓋⊛⋯⊛𝓌|𝓋𝒹 = 𝒸ℊ𝓌|𝓋𝒹        ⊢#A34 Labeled Terminal Ellipsis.
 
 ###<a name="9ET"></a> ℕ
@@ -285,38 +285,38 @@ I might have avoided the issue had Elipsis beed defined within `𝒞` instead of
 I think sematically as it is works just fine.
 There after, we're just giving each successor element a name:
 
-    1 = 0++   #M40 ∵ A25,M39 Successor.
-    2 = 1++  ⊢#A41.
-    3 = 2++  ⊢#A42.
-    4 = 3++  ⊢#A43.
-    5 = 4++  ⊢#A44.
-    6 = 5++  ⊢#A45.
-    7 = 6++  ⊢#A46.
-    8 = 7++  ⊢#A47.
-    9 = 8++  ⊢#A48.
+    1 = 0⇧   #M40 ∵ A25,M39 Successor.
+    2 = 1⇧  ⊢#A41.
+    3 = 2⇧  ⊢#A42.
+    4 = 3⇧  ⊢#A43.
+    5 = 4⇧  ⊢#A44.
+    6 = 5⇧  ⊢#A45.
+    7 = 6⇧  ⊢#A46.
+    8 = 7⇧  ⊢#A47.
+    9 = 8⇧  ⊢#A48.
 
-    0++ = 1   #M49 ∵ A4,M40 Symmetric.
-    1++ = 2   #M50 ∵ A4,A41 Symmetric.
-    2++ = 3   #M51 ∵ A4,A42 Symmetric.
-    3++ = 4   #M52 ∵ A4,A43 Symmetric.
-    4++ = 5   #M53 ∵ A4,A44 Symmetric.
-    5++ = 6   #M54 ∵ A4,A45 Symmetric.
-    6++ = 7   #M55 ∵ A4,A46 Symmetric.
-    7++ = 8   #M56 ∵ A4,A47 Symmetric.
-    8++ = 9   #M57 ∵ A4,A48 Symmetric.
+    0⇧ = 1   #M49 ∵ A4,M40 Symmetric.
+    1⇧ = 2   #M50 ∵ A4,A41 Symmetric.
+    2⇧ = 3   #M51 ∵ A4,A42 Symmetric.
+    3⇧ = 4   #M52 ∵ A4,A43 Symmetric.
+    4⇧ = 5   #M53 ∵ A4,A44 Symmetric.
+    5⇧ = 6   #M54 ∵ A4,A45 Symmetric.
+    6⇧ = 7   #M55 ∵ A4,A46 Symmetric.
+    7⇧ = 8   #M56 ∵ A4,A47 Symmetric.
+    8⇧ = 9   #M57 ∵ A4,A48 Symmetric.
 
     # Prove: ℕ = {0,1,2,⋯}.
-    {0,1,⋯} = {0,1,1++,⋯}                    #P58 ∵ A27 Successor Ellipsis.
-    ℕ = {0,1,⋯}; {0,1,⋯} = {0,1,1++,⋯}       #C59 ∵ A35,P58 Natural Numbers.
-    ℕ = {0,1,1++,⋯}                          #M60 ∵ A5,C59 Transitive.
-    {0,1,1++,⋯} = {0,1,2,⋯}                  #M61 ∵ P12,M50 Bounded Context Synonym.
-    ℕ = {0,1,1++,⋯}; {0,1,1++,⋯} = {0,1,2,⋯} #C62 ∵ M60,M61.
+    {0,1,⋯} = {0,1,1⇧,⋯}                    #P58 ∵ A27 Successor Ellipsis.
+    ℕ = {0,1,⋯}; {0,1,⋯} = {0,1,1⇧,⋯}       #C59 ∵ A35,P58 Natural Numbers.
+    ℕ = {0,1,1⇧,⋯}                          #M60 ∵ A5,C59 Transitive.
+    {0,1,1⇧,⋯} = {0,1,2,⋯}                  #M61 ∵ P12,M50 Bounded Context Synonym.
+    ℕ = {0,1,1⇧,⋯}; {0,1,1⇧,⋯} = {0,1,2,⋯} #C62 ∵ M60,M61.
     ℕ = {0,1,2,⋯}                            #M63 ∵ A5,C62 Transitive.
     #
 
     # Prove: ℕ = {0,1,2,3,⋯}.
-    {0,1,2,⋯} = {0,1,2,2++,⋯}   #P64 ∵ A27 Successor Ellipsis.
-    {0,1,2,2++,⋯} = {0,1,2,3,⋯} #M65 ∵ P12,M51 Bounded Context Synonym.
+    {0,1,2,⋯} = {0,1,2,2⇧,⋯}   #P64 ∵ A27 Successor Ellipsis.
+    {0,1,2,2⇧,⋯} = {0,1,2,3,⋯} #M65 ∵ P12,M51 Bounded Context Synonym.
     ℕ = {0,1,2,3,⋯}             #E66 ∵ A35 Natural Numbers.
     #
 
@@ -325,7 +325,7 @@ There after, we're just giving each successor element a name:
     #
 
     # Prove: ℕ = {0,⋯}
-    {0,⋯} = {0,0++,⋯} #P68 ∵ A27 Successor Ellipsis.
+    {0,⋯} = {0,0⇧,⋯} #P68 ∵ A27 Successor Ellipsis.
     = {0,1,⋯}         #M69 ∵ P12,M49 Bounded Context Synonym.
     = ℕ               #M70 ∵ A4,A35 Symmetric.
     {0,⋯} = ℕ         #E71 ∵ P68.
@@ -335,9 +335,9 @@ There after, we're just giving each successor element a name:
 
     ℕ{l,m,n,o,M,N} ⊢#A73 Number Variables.
     # This just simplifies notation later on.
-    M++ = N        ⊢#A74 N Succeeds M.
+    M⇧ = N        ⊢#A74 N Succeeds M.
 
-    N = M++ #M75 N Succeeds M ∵ A4,A74 Symmetric.
+    N = M⇧ #M75 N Succeeds M ∵ A4,A74 Symmetric.
     ℕ{N}    #M76 ∵ A20,A73 Element Contained By Set.
     N∈ℕ     #M77 ∵ M23,M76 If Contained By, Element Of.
 
@@ -371,11 +371,11 @@ Step by step, I can always reach step 𝔫:
 
     # Prove: [0,3] = {1,2,3}.
     [0,3] = {0,⋯,3}    #P83 ∵ A82 Interval.
-    = {0,0++,⋯,3}      #P84 ∵ A27 Successor Ellipsis.
+    = {0,0⇧,⋯,3}      #P84 ∵ A27 Successor Ellipsis.
     = {0,1,⋯,3}        #M85 ∵ P12,M49 Bounded Context Synonym.
-    = {0,1,1++,⋯,3}    #P86 ∵ A27 Successor Ellipsis.
+    = {0,1,1⇧,⋯,3}    #P86 ∵ A27 Successor Ellipsis.
     = {0,1,2,⋯,3}      #M87 ∵ P12,M50 Bounded Context Synonym.
-    = {0,1,2,2++,⋯,3}  #P88 ∵ A27 Successor Ellipsis.
+    = {0,1,2,2⇧,⋯,3}  #P88 ∵ A27 Successor Ellipsis.
     = {0,1,2,3,⋯,3}    #M89 ∵ P12,M51 Bounded Context Synonym.
     = {0,1,2,3}        #P90 ∵ A28 Terminal Ellipsis.
     [0,3] = {0,1,2,3}  #E91 ∵ P83.
@@ -393,7 +393,7 @@ Step by step, I can always reach step 𝔫:
     ℕ{𝔪|𝓊(𝔪)} = {0,⋯}{𝔪|𝓊(𝔪)}  #M96 ∵ P10,M72 Left Bounded Synonym.
     = (𝓊(0),⋯)                 #P97 ∵ A94 Sequence From Ordered Infinite Set.
     ℕ{𝔪|𝓊(𝔪)} = (𝓊(0),⋯)       #E98 Sequence ∵ M96.
-    = (𝓊(0),𝓊(0++),⋯)          #P99 ∵ A29 Indexed Successor Ellipsis.
+    = (𝓊(0),𝓊(0⇧),⋯)          #P99 ∵ A29 Indexed Successor Ellipsis.
     = (𝓊(0),𝓊(1),⋯)            #M100 ∵ P12,M49 Bounded Context Synonym.
     ℕ{𝔪|𝓊(𝔪)} = (𝓊(0),𝓊(1),⋯)  #E101 ∵ M96.
     ℕ{n|𝓍(n)} = (𝓍(0),𝓍(1),⋯)  #P102 ∵ E101.
@@ -429,41 +429,41 @@ Step by step, I can always reach step 𝔫:
     Σ(𝓊𝓍,⋯,𝓊𝓎) = 𝓊𝓍+⋯+𝓊𝓎 #P116 Addition ∵ M114 Addition.
     Σ(𝓊𝓍,⋯) = 𝓊𝓍+⋯       #P117 Addition ∵ M115 Addition.
 
-    ℕ{𝓊} ⇒ 𝓊++ = Σ(𝓊,1) ⊢#A118 Number Successor By Addition.
+    ℕ{𝓊} ⇒ 𝓊⇧ = Σ(𝓊,1) ⊢#A118 Number Successor By Addition.
     Σ(𝓊,1) = 𝓊+1         #P119 ∵ A111 Addition.
 
-    ℕ{𝔫} ⇒ 𝔫++ = Σ(𝔫,1)       #P120 ∵ A118 Number Successor By Addition.
-    ℕ{𝔫}; ℕ{𝔫} ⇒ 𝔫++ = Σ(𝔫,1) #C121 ∵ M80,P120.
-    𝔫++ = Σ(𝔫,1)              #M122 ∵ A1,C121 Modus Ponem.
+    ℕ{𝔫} ⇒ 𝔫⇧ = Σ(𝔫,1)       #P120 ∵ A118 Number Successor By Addition.
+    ℕ{𝔫}; ℕ{𝔫} ⇒ 𝔫⇧ = Σ(𝔫,1) #C121 ∵ M80,P120.
+    𝔫⇧ = Σ(𝔫,1)              #M122 ∵ A1,C121 Modus Ponem.
     Σ(𝔫,1) = 𝔫+1              #P123 ∵ A111 Addition.
-    𝔫++ = 𝔫+1                 #E124 ∵ M122.
-    𝔫+1 = 𝔫++                 #M125 ∵ A4,E124 Symmetric.
+    𝔫⇧ = 𝔫+1                 #E124 ∵ M122.
+    𝔫+1 = 𝔫⇧                 #M125 ∵ A4,E124 Symmetric.
 
-    M++ = M+1   #P126 ∵ E124.
-    M+1 = M++   #P127 ∵ M125.
+    M⇧ = M+1   #P126 ∵ E124.
+    M+1 = M⇧   #P127 ∵ M125.
 
     M+1 = N   #E128 ∵ A74 N Succeeds M.
     N = M+1   #M129 ∵ A4,E128 Symmetric.
 
-    n++ = n+1   #P130 ∵ E124.
-    n+1 = n++   #P131 ∵ M125.
+    n⇧ = n+1   #P130 ∵ E124.
+    n+1 = n⇧   #P131 ∵ M125.
 
-    m++ = m+1   #P132 ∵ E124.
-    m+1 = m++   #P133 ∵ M125.
+    m⇧ = m+1   #P132 ∵ E124.
+    m+1 = m⇧   #P133 ∵ M125.
 
     # Prove: 0+1 = 1.
-    0+1 = 0++          #P134 ∵ M125.
-    0+1 = 0++; 0++ = 1 #C135 ∵ P134,M49.
+    0+1 = 0⇧          #P134 ∵ M125.
+    0+1 = 0⇧; 0⇧ = 1 #C135 ∵ P134,M49.
     0+1 = 1            #M136 ∵ A5,C135 Transitive.
     #
 
     # Prove: 1+1 = 2.
-    1+1 = 1++ #P137 ∵ M125.
+    1+1 = 1⇧ #P137 ∵ M125.
     1+1 = 2   #E138 ∵ A41.
     #
 
     # Prove: 2+1 = 3.
-    2+1 = 2++ #P139 ∵ M125.
+    2+1 = 2⇧ #P139 ∵ M125.
     2+1 = 3   #E140 ∵ A42.
     #
 
@@ -520,26 +520,26 @@ Zero will always be an identity object to addition:
     𝓌 = 𝓌+0   #M167 Additive Identity ∵ A4,A165 Symmetric.
     𝓋 = 0+𝓋   #M168 Additive Identity ∵ A4,A166 Symmetric.
 
-###<a name="uXU"></a> (𝔫+𝔩)++ = 𝔫+(𝔩)++
+###<a name="uXU"></a> (𝔫+𝔩)⇧ = 𝔫+(𝔩)⇧
 Note that our notion of grouping is equivalent
 to the succesor's axiom of grouping, so that here
 the succesor's axiom of grouping is reflected in the notation.
 
-    𝔫+𝔩++ = (𝔫+𝔩)++   #P169 ∵ A13 Left Grouping.
-    𝔫+𝔩++ = 𝔫+(𝔩)++   #P170 ∵ A17 Context Grouping.
-    (𝔫+𝔩)++ = 𝔫+(𝔩)++ #E171 Succesor Grouping ∵ P169.
+    𝔫+𝔩⇧ = (𝔫+𝔩)⇧   #P169 ∵ A13 Left Grouping.
+    𝔫+𝔩⇧ = 𝔫+(𝔩)⇧   #P170 ∵ A17 Context Grouping.
+    (𝔫+𝔩)⇧ = 𝔫+(𝔩)⇧ #E171 Succesor Grouping ∵ P169.
 
 So the above three line restated as numbers
 expresed as the sum of ones:
 
-    1+⋯+1+1+⋯+1++ = (1+⋯+1+1+⋯+1)++   #P172 ∵ A13 Left Grouping.
-    1+⋯+1+1+⋯+1++ = 1+⋯+1+(1+⋯+1)++   #P173 ∵ A17 Context Grouping.
-    (1+⋯+1+1+⋯+1)++ = 1+⋯+1+(1+⋯+1)++ #E174 ∵ P172.
+    1+⋯+1+1+⋯+1⇧ = (1+⋯+1+1+⋯+1)⇧   #P172 ∵ A13 Left Grouping.
+    1+⋯+1+1+⋯+1⇧ = 1+⋯+1+(1+⋯+1)⇧   #P173 ∵ A17 Context Grouping.
+    (1+⋯+1+1+⋯+1)⇧ = 1+⋯+1+(1+⋯+1)⇧ #E174 ∵ P172.
 
 And reinterpreting the successor and addition by one:
 
-    1++ = 1+1                     #P175 ∵ E124.
-    1+⋯+1+1+⋯+1++ = 1+⋯+1+1+⋯+1+1 #M176 ∵ P11,P175 Right Bounded Synonym.
+    1⇧ = 1+1                     #P175 ∵ E124.
+    1+⋯+1+1+⋯+1⇧ = 1+⋯+1+1+⋯+1+1 #M176 ∵ P11,P175 Right Bounded Synonym.
 
     1+⋯+1+1+⋯+1+1 = (1+⋯+1+1+⋯+1)+1   #P177 ∵ A13 Left Grouping.
     1+⋯+1+1+⋯+1+1 = 1+⋯+1+(1+⋯+1)+1   #P178 ∵ A17 Context Grouping.
@@ -593,7 +593,7 @@ Labeled Operation:
 
     # Prove: Σ{𝓍|𝓊(𝓍)} = 𝓊(0)+𝓊(1)+⋯.
     Σ{𝓍|𝓊(𝓍)} = 𝓊(0)+⋯    <⊢#M197 Infinite Series ∵ A108,A111 Infinite Progression.
-    = 𝓊(0)+𝓊(0++)+⋯         #P203 Infinite Series ∵ A29 Indexed Successor Ellipsis.
+    = 𝓊(0)+𝓊(0⇧)+⋯         #P203 Infinite Series ∵ A29 Indexed Successor Ellipsis.
     = 𝓊(0)+𝓊(1)+⋯           #M204 ∵ P12,M49 Bounded Context Synonym.
     Σ{𝓍|𝓊(𝓍)} = 𝓊(0)+𝓊(1)+⋯ #E205 ∵ M194.
     #
@@ -613,46 +613,46 @@ Labeled Operation:
     𝐔(n+1) = 1 #P214 ∵ D209.
     𝐔(N) = 1   #P215 ∵ D209.
 
-    # Prove: Σ[1,N]{n|𝐔(n)} = 1+𝐔(1++)+⋯+𝐔(N).
+    # Prove: Σ[1,N]{n|𝐔(n)} = 1+𝐔(1⇧)+⋯+𝐔(N).
     Σ[1,N]{n|𝐔(n)} = 𝐔(1)+⋯+𝐔(N)     #P216 ∵ E190.
-    = 𝐔(1)+𝐔(1++)+⋯+𝐔(N)             #P217 ∵ A29 Indexed Successor Ellipsis.
-    = 1+𝐔(1++)+⋯+𝐔(N)                #M218 ∵ P10,P211 Left Bounded Synonym.
-    Σ[1,N]{n|𝐔(n)} = 1+𝐔(1++)+⋯+𝐔(N) #E219 ∵ P216.
+    = 𝐔(1)+𝐔(1⇧)+⋯+𝐔(N)             #P217 ∵ A29 Indexed Successor Ellipsis.
+    = 1+𝐔(1⇧)+⋯+𝐔(N)                #M218 ∵ P10,P211 Left Bounded Synonym.
+    Σ[1,N]{n|𝐔(n)} = 1+𝐔(1⇧)+⋯+𝐔(N) #E219 ∵ P216.
     #
 
-    𝐮(𝒾) = 𝒾+𝐔((𝒾)++)+⋯+𝐔(N) ⊢#A220.
+    𝐮(𝒾) = 𝒾+𝐔((𝒾)⇧)+⋯+𝐔(N) ⊢#A220.
 
     # Prove: 𝐮(0) = 𝐮(1).
-    𝐮(0) = 0+𝐔((0)++)+⋯+𝐔(N) #P221 ∵ A220.
-    = 0+𝐔(0++)+⋯+𝐔(N)        #P222 ∵ M18 Context Ungrouping.
+    𝐮(0) = 0+𝐔((0)⇧)+⋯+𝐔(N) #P221 ∵ A220.
+    = 0+𝐔(0⇧)+⋯+𝐔(N)        #P222 ∵ M18 Context Ungrouping.
     = 0+𝐔(1)+⋯+𝐔(N)          #M223 ∵ P12,M49 Bounded Context Synonym.
-    = 0+𝐔(1)+𝐔(1++)+⋯+𝐔(N)   #P224 ∵ A29 Indexed Successor Ellipsis.
-    = 0+1+𝐔(1++)+⋯+𝐔(N)      #M225 ∵ P11,M218 Right Bounded Synonym.
-    = 1+𝐔(1++)+⋯+𝐔(N)        #M226 ∵ P10,M136 Left Bounded Synonym.
-    = 1+𝐔((1)++)+⋯+𝐔(N)      #P227 ∵ A17 Context Grouping.
-    𝐮(0) = 1+𝐔((1)++)+⋯+𝐔(N) #E228 ∵ P221.
-    𝐮(1) = 1+𝐔((1)++)+⋯+𝐔(N) #P229 ∵ A220.
+    = 0+𝐔(1)+𝐔(1⇧)+⋯+𝐔(N)   #P224 ∵ A29 Indexed Successor Ellipsis.
+    = 0+1+𝐔(1⇧)+⋯+𝐔(N)      #M225 ∵ P11,M218 Right Bounded Synonym.
+    = 1+𝐔(1⇧)+⋯+𝐔(N)        #M226 ∵ P10,M136 Left Bounded Synonym.
+    = 1+𝐔((1)⇧)+⋯+𝐔(N)      #P227 ∵ A17 Context Grouping.
+    𝐮(0) = 1+𝐔((1)⇧)+⋯+𝐔(N) #E228 ∵ P221.
+    𝐮(1) = 1+𝐔((1)⇧)+⋯+𝐔(N) #P229 ∵ A220.
     𝐮(0) = 𝐮(1)              #E230 ∵ P221.
     #
     
     # Prove: 𝐮(n) = 𝐮(n+1).
-    𝐮(n) = n+𝐔((n)++)+⋯+𝐔(N)       #P231 ∵ A220.
-    = n+𝐔(n++)+⋯+𝐔(N)              #P232 ∵ M18 Context Ungrouping.
+    𝐮(n) = n+𝐔((n)⇧)+⋯+𝐔(N)       #P231 ∵ A220.
+    = n+𝐔(n⇧)+⋯+𝐔(N)              #P232 ∵ M18 Context Ungrouping.
     = n+𝐔(n+1)+⋯+𝐔(N)              #M233 ∵ P12,P130 Bounded Context Synonym.
     = n+𝐔((n+1))+⋯+𝐔(N)            #P234 ∵ A17 Context Grouping.
-    = n+𝐔((n+1))+𝐔((n+1)++)+⋯+𝐔(N) #P235 ∵ A29 Indexed Successor Ellipsis.
-    = n+𝐔(n+1)+𝐔((n+1)++)+⋯+𝐔(N)   #P236 ∵ M18 Context Ungrouping.
-    = n+1+𝐔((n+1)++)+⋯+𝐔(N)        #M237 ∵ P12,P214 Bounded Context Synonym.
-    𝐮(n) = n+1+𝐔((n+1)++)+⋯+𝐔(N)   #E238 ∵ P231.
-    𝐮(n+1) = n+1+𝐔((n+1)++)+⋯+𝐔(N) #P239 ∵ A220.
+    = n+𝐔((n+1))+𝐔((n+1)⇧)+⋯+𝐔(N) #P235 ∵ A29 Indexed Successor Ellipsis.
+    = n+𝐔(n+1)+𝐔((n+1)⇧)+⋯+𝐔(N)   #P236 ∵ M18 Context Ungrouping.
+    = n+1+𝐔((n+1)⇧)+⋯+𝐔(N)        #M237 ∵ P12,P214 Bounded Context Synonym.
+    𝐮(n) = n+1+𝐔((n+1)⇧)+⋯+𝐔(N)   #E238 ∵ P231.
+    𝐮(n+1) = n+1+𝐔((n+1)⇧)+⋯+𝐔(N) #P239 ∵ A220.
     𝐮(n) = 𝐮(n+1)                  #E240 ∵ P231.
     #
 
     # Prove: 𝐮(0) = N.
     𝐮(0) = 𝐮(1); 𝐮(n) = 𝐮(n+1) #C241 ∵ E230,E240.
     𝐮(0) = 𝐮(M)                #M242 ∵ A81,C241 Induction.
-    𝐮(M) = M+𝐔((M)++)+⋯+𝐔(N)   #P243 ∵ A220.
-    = M+𝐔(M++)+⋯+𝐔(N)          #P244 ∵ M18 Context Ungrouping.
+    𝐮(M) = M+𝐔((M)⇧)+⋯+𝐔(N)   #P243 ∵ A220.
+    = M+𝐔(M⇧)+⋯+𝐔(N)          #P244 ∵ M18 Context Ungrouping.
     = M+𝐔(N)+⋯+𝐔(N)            #M245 ∵ P12,A74 Bounded Context Synonym.
     = M+𝐔(N)                   #P246 ∵ A30 Indexed Terminal Ellipsis.
     = M+1                      #M247 ∵ P11,P215 Right Bounded Synonym.
@@ -661,8 +661,8 @@ Labeled Operation:
     #
 
     # Prove: Σ[1,N]{n|𝐔(n)} = N.
-    Σ[1,N]{n|𝐔(n)} = 1+𝐔(1++)+⋯+𝐔(N) <⊢#E219 ∵ P216.
-    = 1+𝐔((1)++)+⋯+𝐔(N)              <⊢#P227 ∵ A17 Context Grouping.
+    Σ[1,N]{n|𝐔(n)} = 1+𝐔(1⇧)+⋯+𝐔(N) <⊢#E219 ∵ P216.
+    = 1+𝐔((1)⇧)+⋯+𝐔(N)              <⊢#P227 ∵ A17 Context Grouping.
     = 𝐮(1)                             #M249 ∵ A4,P229 Symmetric.
     = 𝐮(0)                             #M250 ∵ A4,E230 Symmetric.
     = N                              <⊢#E248 ∵ P221.
@@ -706,15 +706,15 @@ Labeled Operation:
     # Prove: Σ{n|𝐟(n)} = 𝐟(0)+𝐟(1)+⋯.
     𝔽{𝐟}                   ⊢#A274 Some Function p.
     Σ{n|𝐟(n)} = 𝐟(0)+⋯      #P275 ∵ M197 Infinite Series.
-    = 𝐟(0)+𝐟(0++)+⋯         #P276 ∵ A29 Indexed Successor Ellipsis.
+    = 𝐟(0)+𝐟(0⇧)+⋯         #P276 ∵ A29 Indexed Successor Ellipsis.
     = 𝐟(0)+𝐟(1)+⋯           #M277 ∵ P12,M49 Bounded Context Synonym.
     Σ{n|𝐟(n)} = 𝐟(0)+𝐟(1)+⋯ #P278 ∵ E205.
 
     # Prove: Σ[1,3]{n|𝐟(n)} = 𝐟(1)+𝐟(2)+𝐟(3).
     Σ[1,3]{n|𝐟(n)} = 𝐟(1)+⋯+𝐟(3)    #P279 ∵ E190.
-    = 𝐟(1)+𝐟(1++)+⋯+𝐟(3)            #P280 ∵ A29 Indexed Successor Ellipsis.
+    = 𝐟(1)+𝐟(1⇧)+⋯+𝐟(3)            #P280 ∵ A29 Indexed Successor Ellipsis.
     = 𝐟(1)+𝐟(2)+⋯+𝐟(3)              #M281 ∵ P12,M50 Bounded Context Synonym.
-    = 𝐟(1)+𝐟(2)+𝐟(2++)+⋯+𝐟(3)       #P282 ∵ A29 Indexed Successor Ellipsis.
+    = 𝐟(1)+𝐟(2)+𝐟(2⇧)+⋯+𝐟(3)       #P282 ∵ A29 Indexed Successor Ellipsis.
     = 𝐟(1)+𝐟(2)+𝐟(3)+⋯+𝐟(3)         #M283 ∵ P12,M51 Bounded Context Synonym.
     = 𝐟(1)+𝐟(2)+𝐟(3)                #P284 ∵ A30 Indexed Terminal Ellipsis.
     Σ[1,3]{n|𝐟(n)} = 𝐟(1)+𝐟(2)+𝐟(3) #E285 ∵ P279.
@@ -727,10 +727,10 @@ Labeled Operation:
 
     3×4 = Σ[3]{|4}          #P288 ∵ A286 Multiplication.
     = 4|1+⋯+4|3             #P289 ∵ E202.
-    = 4|1+4|(1++)+⋯+4|3     #P290 ∵ A33 Labeled Successor Ellipsis.
+    = 4|1+4|(1⇧)+⋯+4|3     #P290 ∵ A33 Labeled Successor Ellipsis.
     = 4|1+4|(2)+⋯+4|3       #M291 ∵ P12,M50 Bounded Context Synonym.
     = 4|1+4|2+⋯+4|3         #P292 ∵ M18 Context Ungrouping.
-    = 4|1+4|2+4|(2++)+⋯+4|3 #P293 ∵ A33 Labeled Successor Ellipsis.
+    = 4|1+4|2+4|(2⇧)+⋯+4|3 #P293 ∵ A33 Labeled Successor Ellipsis.
     = 4|1+4|2+4|(3)+⋯+4|3   #M294 ∵ P12,M51 Bounded Context Synonym.
     = 4|1+4|2+4|3+⋯+4|3     #P295 ∵ M18 Context Ungrouping.
     = 4|1+4|2+4|3           #P296 ∵ A34 Labeled Terminal Ellipsis.
@@ -817,12 +817,12 @@ Division:
     # Prove: 4/2 = 2
     2×2 = Σ[2]{|2}      #P337 ∵ A286 Multiplication.
     = 2|1+⋯+2|2         #P338 ∵ E202.
-    = 2|1+2|(1++)+⋯+2|2 #P339 ∵ A33 Labeled Successor Ellipsis.
+    = 2|1+2|(1⇧)+⋯+2|2 #P339 ∵ A33 Labeled Successor Ellipsis.
     = 2|1+2|(2)+⋯+2|2   #M340 ∵ P12,M50 Bounded Context Synonym.
     = 2|1+2|2+⋯+2|2     #P341 ∵ M18 Context Ungrouping.
     = 2|1+2|2           #P342 ∵ A34 Labeled Terminal Ellipsis.
     = 2+2               #P343 ∵ A182 Labeled Operation.
-    = 2+1++             #M344 ∵ P11,A41 Right Bounded Synonym.
+    = 2+1⇧             #M344 ∵ P11,A41 Right Bounded Synonym.
     = 2+1+1             #M345 ∵ P11,P175 Right Bounded Synonym.
     = 3+1               #M346 ∵ P10,E140 Left Bounded Synonym.
     = 4               <⊢#T141.
@@ -871,13 +871,13 @@ Division:
     𝕞; 𝕞 ⇒ {₀,₁,₂,₃,₄,₅,₆,₇,₈,₉,⋯} #C373 ∵ A371,M372.
     {₀,₁,₂,₃,₄,₅,₆,₇,₈,₉,⋯}        #M374 ∵ A1,C373 Modus Ponem.
 
-    ₁ = ₀++ #M375 ∵ A25,M374 Successor.
-    ₂ = ₁++ #M376 ∵ A25,M374 Successor.
-    ₃ = ₂++ #M377 ∵ A25,M374 Successor.
+    ₁ = ₀⇧ #M375 ∵ A25,M374 Successor.
+    ₂ = ₁⇧ #M376 ∵ A25,M374 Successor.
+    ₃ = ₂⇧ #M377 ∵ A25,M374 Successor.
 
-    ₀++ = ₁ #M378 ∵ A4,M375 Symmetric.
-    ₁++ = ₂ #M379 ∵ A4,M376 Symmetric.
-    ₂++ = ₃ #M380 ∵ A4,M377 Symmetric.
+    ₀⇧ = ₁ #M378 ∵ A4,M375 Symmetric.
+    ₁⇧ = ₂ #M379 ∵ A4,M376 Symmetric.
+    ₂⇧ = ₃ #M380 ∵ A4,M377 Symmetric.
 
 ### 𝕟 ⁰,¹,⋯
 
@@ -960,9 +960,9 @@ A set of labeled (indexed) items:
     ℕ{n|𝓊ₙ} = (𝓊₀,⋯)        ⊢#A428.
     [m,n]{i|𝓊ᵢ} = {𝓊ₘ,⋯,𝓊ₙ} ⊢#A429.
 
-    (𝓊₀,⋯) = (𝓊₀,𝓊₀++,⋯)   #P430 ∵ A27 Successor Ellipsis.
+    (𝓊₀,⋯) = (𝓊₀,𝓊₀⇧,⋯)   #P430 ∵ A27 Successor Ellipsis.
     = (𝓊₀,𝓊₁,⋯)            #M431 ∵ P12,M378 Bounded Context Synonym.
-    = (𝓊₀,𝓊₁,𝓊₁++,⋯)       #P432 ∵ A27 Successor Ellipsis.
+    = (𝓊₀,𝓊₁,𝓊₁⇧,⋯)       #P432 ∵ A27 Successor Ellipsis.
     = (𝓊₀,𝓊₁,𝓊₂,⋯)         #M433 ∵ P12,M379 Bounded Context Synonym.
     ℕ{n|𝓊ₙ} = (𝓊₀,𝓊₁,𝓊₂,⋯) #E434 ∵ A428.
 
@@ -970,7 +970,7 @@ A set of labeled (indexed) items:
 Boolean:
 
     𝔹 = {F,T} ⊢#A435 Boolean Set.
-    T = T++   ⊢#A436.
+    T = T⇧   ⊢#A436.
     F = F--   ⊢#A437.
 
     F∨F = F :⊢#D438 OR.
@@ -993,9 +993,9 @@ For all:
 
     # Prove: ∀(𝓊₀,⋯) = 𝓊₀∧𝓊₁∧⋯
     ∀(𝓊₀,⋯) = 𝓊₀∧⋯      #P450 For All ∵ M449.
-    = 𝓊₀∧𝓊₀++∧⋯         #P451 ∵ A27 Successor Ellipsis.
-    𝓊₀++ = 𝓊₁           #M452 ∵ P11,M378 Right Bounded Synonym.
-    𝓊₀∧𝓊₀++∧⋯ = 𝓊₀∧𝓊₁∧⋯ #M453 ∵ P12,M378 Bounded Context Synonym.
+    = 𝓊₀∧𝓊₀⇧∧⋯         #P451 ∵ A27 Successor Ellipsis.
+    𝓊₀⇧ = 𝓊₁           #M452 ∵ P11,M378 Right Bounded Synonym.
+    𝓊₀∧𝓊₀⇧∧⋯ = 𝓊₀∧𝓊₁∧⋯ #M453 ∵ P12,M378 Bounded Context Synonym.
     ∀(𝓊₀,⋯) = 𝓊₀∧𝓊₁∧⋯   #E454 ∵ P450 For All.
     #
 
@@ -1011,7 +1011,7 @@ For all:
 
     # Prove: ∃(𝓊₀,⋯) = 𝓊₀∨𝓊₁∨⋯
     ∃(𝓊₀,⋯) = 𝓊₀∨⋯ #P461 There Exist ∵ M460 There Exist.
-    = 𝓊₀∨𝓊₀++∨⋯    #P462 ∵ A27 Successor Ellipsis.
+    = 𝓊₀∨𝓊₀⇧∨⋯    #P462 ∵ A27 Successor Ellipsis.
     = 𝓊₀∨𝓊₁∨⋯      #M463 ∵ P12,M378 Bounded Context Synonym.
     ∃(𝓊₀,⋯) = 𝓊₀∨𝓊₁∨⋯#E464 ∵ P461 There Exist.
     #
@@ -1093,7 +1093,7 @@ Products of sequences,
     [1,2] = {1,⋯,2}       #P506 ∵ A82 Interval.
     Π[2]{|𝓊} = Π[1,2]{|𝓊} #M507 ∵ P10,P505 Left Bounded Synonym.
     = 𝓊|1×⋯×𝓊|2           #M508 ∵ A110,D485 Progression Of Labeled Variable.
-    = 𝓊|1×𝓊|(1++)×⋯×𝓊|2   #P509 ∵ A33 Labeled Successor Ellipsis.
+    = 𝓊|1×𝓊|(1⇧)×⋯×𝓊|2   #P509 ∵ A33 Labeled Successor Ellipsis.
     = 𝓊|1×𝓊|(2)×⋯×𝓊|2     #M510 ∵ P12,M50 Bounded Context Synonym.
     = 𝓊|1×𝓊|2×⋯×𝓊|2       #P511 ∵ M18 Context Ungrouping.
     = 𝓊|1×𝓊|2             #P512 ∵ A34 Labeled Terminal Ellipsis.
@@ -1121,9 +1121,9 @@ Products of sequences,
     = I(1)×⋯×I(3)                   #M528 ∵ P107,D485 Sequence Interval.
     = 1×⋯×I(3)                      #M529 ∵ P10,P519 Left Bounded Synonym.
     = 1×⋯×3                         #M530 ∵ P11,P521 Right Bounded Synonym.
-    = 1×1++×⋯×3                     #P531 ∵ A27 Successor Ellipsis.
+    = 1×1⇧×⋯×3                     #P531 ∵ A27 Successor Ellipsis.
     = 1×2×⋯×3                       #M532 ∵ P12,M50 Bounded Context Synonym.
-    = 1×2×2++×⋯×3                   #P533 ∵ A27 Successor Ellipsis.
+    = 1×2×2⇧×⋯×3                   #P533 ∵ A27 Successor Ellipsis.
     = 1×2×3×⋯×3                     #M534 ∵ P12,M51 Bounded Context Synonym.
     = 1×2×3                         #P535 ∵ A28 Terminal Ellipsis.
     Π[3]{n|I(n)} = 1×2×3            #E536 ∵ M525.

@@ -164,7 +164,7 @@ Number:
 ###<a name="Lr4"></a> ℬ ℊ,𝒽
 Word Boundary:
 
-    ℬ /\b|[,(){}+|\[\] Σ∧∨×]/ !⊢
+    ℬ /\b|[,(){}+|\[\] Σ∧∨×↑↓]/ !⊢
     ℬ { ℊ,𝒽 }                 !⊢
 
 ###<a name="2gK"></a> 𝒮 𝓈,𝓉
@@ -883,49 +883,59 @@ Division:
 
     𝕟 = {⁰,¹,²,³,⁴,⁵,⁶,⁷,⁸,⁹,⋯} ⊢#A381 Superscripts.
 
+    ⁰⁺¹ = ¹ ⊢⊢#T382.
+    ¹⁺¹ = ² ⊢⊢#T383.
+    ²⁺¹ = ³ ⊢⊢#T384.
+    ³⁺¹ = ⁴ ⊢⊢#T385.
+
+    ¹ = ⁰⁺¹   #M386 ∵ A4,T382 Symmetric.
+    ² = ¹⁺¹   #M387 ∵ A4,T383 Symmetric.
+    ³ = ²⁺¹   #M388 ∵ A4,T384 Symmetric.
+    ⁴ = ³⁺¹   #M389 ∵ A4,T385 Symmetric.
+
 ###<a name="MIM"></a> Precedence rules
 
-    𝒸(𝓇ᵘ)ᵥ𝒹 = 𝒸(𝓇ᵘᵥ)𝒹 ⊢#A382 Subscripts Bind To Left Operator.
-    𝒸𝓇ᵘᵥ𝒹 = 𝒸(𝓇ᵥ)ᵘ𝒹   ⊢#A383 Subscripts Bind To Left Operator.
-    𝒸𝓇ᵥ𝒹 = 𝒸(𝓇ᵥ)𝒹     ⊢#A384 Subscripts Bind Left.
-    𝒸𝓇ᵘ𝒹 = 𝒸(𝓇ᵘ)𝒹     ⊢#A385 Superscripts Bind Left.
-    𝒸𝓊!𝒹 = 𝒸(𝓊!)𝒹     ⊢#A386 Factorials Bind Left.
-    𝒸𝓃𝓊𝒹 = 𝒸(𝓃𝓊)𝒹     ⊢#A387 Numbers Bind Right.
-    𝒸 𝓃 𝒹 = 𝒸 𝓃𝒹      ⊢#A388 Numbers Bind Right.
-    𝒸 𝓊 = 𝒸(𝓊)        ⊢#A389 Look Ahead.
-    𝒸ℊ𝓊𝒽𝒹 = 𝒸ℊ(𝓊)𝒽𝒹   ⊢#A390 Word.
-    𝒸ℊ𝓊 𝒹 = 𝒸ℊ(𝓊)𝒹    ⊢#A391 Word.
-    𝓊𝓋𝒹 = (𝓊𝓋)𝒹       ⊢#A392 Default Grouping.
+    𝒸(𝓇ᵘ)ᵥ𝒹 = 𝒸(𝓇ᵘᵥ)𝒹 ⊢#A390 Subscripts Bind To Left Operator.
+    𝒸𝓇ᵘᵥ𝒹 = 𝒸(𝓇ᵥ)ᵘ𝒹   ⊢#A391 Subscripts Bind To Left Operator.
+    𝒸𝓇ᵥ𝒹 = 𝒸(𝓇ᵥ)𝒹     ⊢#A392 Subscripts Bind Left.
+    𝒸𝓇ᵘ𝒹 = 𝒸(𝓇ᵘ)𝒹     ⊢#A393 Superscripts Bind Left.
+    𝒸𝓊!𝒹 = 𝒸(𝓊!)𝒹     ⊢#A394 Factorials Bind Left.
+    𝒸𝓃𝓊𝒹 = 𝒸(𝓃𝓊)𝒹     ⊢#A395 Numbers Bind Right.
+    𝒸 𝓃 𝒹 = 𝒸 𝓃𝒹      ⊢#A396 Numbers Bind Right.
+    𝒸 𝓊 = 𝒸(𝓊)        ⊢#A397 Look Ahead.
+    𝒸ℊ𝓊𝒽𝒹 = 𝒸ℊ(𝓊)𝒽𝒹   ⊢#A398 Word.
+    𝒸ℊ𝓊 𝒹 = 𝒸ℊ(𝓊)𝒹    ⊢#A399 Word.
+    𝓊𝓋𝒹 = (𝓊𝓋)𝒹       ⊢#A400 Default Grouping.
 
-    𝔣ᵘ(𝓋) = (𝔣(𝓋))ᵘ   ⊢#A393 Power of Operator.
-    𝔣²(𝓋) = 𝔣(𝓋)×𝔣(𝓋) ⊢#A394 Operator Squared.
+    𝔣ᵘ(𝓋) = (𝔣(𝓋))ᵘ   ⊢#A401 Power of Operator.
+    𝔣²(𝓋) = 𝔣(𝓋)×𝔣(𝓋) ⊢#A402 Operator Squared.
 
     # Examples:
     #
-    𝓊2𝓋𝓌 = 𝓊2𝓋𝓌  #P395 ∵ A3 Reflexive.
-    = 𝓊(2𝓋)𝓌     #P396 ∵ A387 Numbers Bind Right.
-    = (𝓊(2𝓋))𝓌   #P397 ∵ A13 Left Grouping.
+    𝓊2𝓋𝓌 = 𝓊2𝓋𝓌  #P403 ∵ A3 Reflexive.
+    = 𝓊(2𝓋)𝓌     #P404 ∵ A395 Numbers Bind Right.
+    = (𝓊(2𝓋))𝓌   #P405 ∵ A13 Left Grouping.
     #
-    𝓊½𝓋𝓌 = 𝓊½𝓋𝓌 #P398 ∵ A3 Reflexive.
-    = 𝓊(½𝓋)𝓌    #P399 ∵ A387 Numbers Bind Right.
-    = (𝓊(½𝓋))𝓌  #P400 ∵ A13 Left Grouping.
+    𝓊½𝓋𝓌 = 𝓊½𝓋𝓌 #P406 ∵ A3 Reflexive.
+    = 𝓊(½𝓋)𝓌    #P407 ∵ A395 Numbers Bind Right.
+    = (𝓊(½𝓋))𝓌  #P408 ∵ A13 Left Grouping.
     #
-    𝓊 ½ 𝓋𝓌 = 𝓊 ½ 𝓋𝓌 #P401 ∵ A3 Reflexive.
-    = 𝓊 ½ (𝓋𝓌)      #P402 ∵ A15 Right Grouping.
-    = 𝓊 ½(𝓋𝓌)       #P403 ∵ A388 Numbers Bind Right.
-    = 𝓊 (½(𝓋𝓌))     #P404 ∵ A15 Right Grouping.
+    𝓊 ½ 𝓋𝓌 = 𝓊 ½ 𝓋𝓌 #P409 ∵ A3 Reflexive.
+    = 𝓊 ½ (𝓋𝓌)      #P410 ∵ A15 Right Grouping.
+    = 𝓊 ½(𝓋𝓌)       #P411 ∵ A396 Numbers Bind Right.
+    = 𝓊 (½(𝓋𝓌))     #P412 ∵ A15 Right Grouping.
     #
-    𝓊½ 𝓋 𝓌 = 𝓊½ 𝓋 𝓌  #P405 ∵ A3 Reflexive.
-    = 𝓊½ 𝓋(𝓌)        #P406 ∵ A389 Look Ahead.
-    = 𝓊½ (𝓋(𝓌))      #P407 ∵ A15 Right Grouping.
-    = (𝓊½)(𝓋(𝓌))     #P408 ∵ A391 Word.
+    𝓊½ 𝓋 𝓌 = 𝓊½ 𝓋 𝓌  #P413 ∵ A3 Reflexive.
+    = 𝓊½ 𝓋(𝓌)        #P414 ∵ A397 Look Ahead.
+    = 𝓊½ (𝓋(𝓌))      #P415 ∵ A15 Right Grouping.
+    = (𝓊½)(𝓋(𝓌))     #P416 ∵ A399 Word.
     #
-    𝓊!𝓋𝓌 = 𝓊!𝓋𝓌  #P409 ∵ A3 Reflexive.
-    = (𝓊!)𝓋𝓌     #P410 ∵ A13 Left Grouping.
-    = ((𝓊!)𝓋)𝓌   #P411 ∵ A392 Default Grouping.
+    𝓊!𝓋𝓌 = 𝓊!𝓋𝓌  #P417 ∵ A3 Reflexive.
+    = (𝓊!)𝓋𝓌     #P418 ∵ A13 Left Grouping.
+    = ((𝓊!)𝓋)𝓌   #P419 ∵ A400 Default Grouping.
     #
-    2³₄ = 2³₄ #P412 ∵ A3 Reflexive.
-    = (2₄)³   #P413 ∵ A383 Subscripts Bind To Left Operator.
+    2³₄ = 2³₄ #P420 ∵ A3 Reflexive.
+    = (2₄)³   #P421 ∵ A391 Subscripts Bind To Left Operator.
 
 Some of these rules help compact the notation as it most commonly appears.
 For example, √2πx is √(2π)x, but √nπx is √(n)πx.
@@ -933,13 +943,13 @@ For example, √2πx is √(2π)x, but √nπx is √(n)πx.
 ###<a name="frL"></a> uᵥ
 Subscripts (or indeces) labels a specific form of a more general expression:
 
-    𝒸𝓊ₙ(𝒾)𝒹 = 𝒸𝓊(n,𝒾)𝒹    ⊢#A414.
-    𝒸𝓊ₘ(𝒾)𝒹 = 𝒸𝓊(m,𝒾)𝒹    ⊢#A415.
-    𝒸𝓊ₙₘ(𝒾)𝒹 = 𝒸𝓊(n,m,𝒾)𝒹 ⊢#A416.
+    𝒸𝓊ₙ(𝒾)𝒹 = 𝒸𝓊(n,𝒾)𝒹    ⊢#A422.
+    𝒸𝓊ₘ(𝒾)𝒹 = 𝒸𝓊(m,𝒾)𝒹    ⊢#A423.
+    𝒸𝓊ₙₘ(𝒾)𝒹 = 𝒸𝓊(n,m,𝒾)𝒹 ⊢#A424.
 
-    𝒸𝓊ₙ𝒹 = 𝒸𝓊(n)𝒹    ⊢#A417.
-    𝒸𝓊ₘ𝒹 = 𝒸𝓊(m)𝒹    ⊢#A418.
-    𝒸𝓊ₙₘ𝒹 = 𝒸𝓊(n,m)𝒹 ⊢#A419.
+    𝒸𝓊ₙ𝒹 = 𝒸𝓊(n)𝒹    ⊢#A425.
+    𝒸𝓊ₘ𝒹 = 𝒸𝓊(m)𝒹    ⊢#A426.
+    𝒸𝓊ₙₘ𝒹 = 𝒸𝓊(n,m)𝒹 ⊢#A427.
 
 Sequences can be thought of the set {𝓊ₙ}, but in this "paper",
 𝓊ₙ is always a well defined expression.
@@ -947,231 +957,240 @@ Sequences can be thought of the set {𝓊ₙ}, but in this "paper",
 ###<a name="4bK"></a> 𝓊{𝓋ₙ}
 A set of labeled (indexed) items:
 
-    ℕ{n|𝓊ₙ} = (𝓊₀,⋯)        ⊢#A420.
-    [m,n]{i|𝓊ᵢ} = {𝓊ₘ,⋯,𝓊ₙ} ⊢#A421.
+    ℕ{n|𝓊ₙ} = (𝓊₀,⋯)        ⊢#A428.
+    [m,n]{i|𝓊ᵢ} = {𝓊ₘ,⋯,𝓊ₙ} ⊢#A429.
 
-    (𝓊₀,⋯) = (𝓊₀,𝓊₀++,⋯)   #P422 ∵ A27 Successor Ellipsis.
-    = (𝓊₀,𝓊₁,⋯)            #M423 ∵ P12,M378 Bounded Context Synonym.
-    = (𝓊₀,𝓊₁,𝓊₁++,⋯)       #P424 ∵ A27 Successor Ellipsis.
-    = (𝓊₀,𝓊₁,𝓊₂,⋯)         #M425 ∵ P12,M379 Bounded Context Synonym.
-    ℕ{n|𝓊ₙ} = (𝓊₀,𝓊₁,𝓊₂,⋯) #E426 ∵ A420.
+    (𝓊₀,⋯) = (𝓊₀,𝓊₀++,⋯)   #P430 ∵ A27 Successor Ellipsis.
+    = (𝓊₀,𝓊₁,⋯)            #M431 ∵ P12,M378 Bounded Context Synonym.
+    = (𝓊₀,𝓊₁,𝓊₁++,⋯)       #P432 ∵ A27 Successor Ellipsis.
+    = (𝓊₀,𝓊₁,𝓊₂,⋯)         #M433 ∵ P12,M379 Bounded Context Synonym.
+    ℕ{n|𝓊ₙ} = (𝓊₀,𝓊₁,𝓊₂,⋯) #E434 ∵ A428.
 
 ### 𝔹
 Boolean:
 
-    𝔹 = {F,T} ⊢#A427 Boolean Set.
-    T = T++   ⊢#A428.
-    F = F--   ⊢#A429.
+    𝔹 = {F,T} ⊢#A435 Boolean Set.
+    T = T++   ⊢#A436.
+    F = F--   ⊢#A437.
 
-    F∨F = F :⊢#D430 OR.
-    T∨F = T :⊢#D431 OR.
-    F∨T = T :⊢#D432 OR.
-    T∨T = T :⊢#D433 OR.
+    F∨F = F :⊢#D438 OR.
+    T∨F = T :⊢#D439 OR.
+    F∨T = T :⊢#D440 OR.
+    T∨T = T :⊢#D441 OR.
 
-    F∧F = F :⊢#D434 AND.
-    T∧F = F :⊢#D435 AND.
-    F∧T = F :⊢#D436 AND.
-    T∧T = T :⊢#D437 AND.
+    F∧F = F :⊢#D442 AND.
+    T∧F = F :⊢#D443 AND.
+    F∧T = F :⊢#D444 AND.
+    T∧T = T :⊢#D445 AND.
 
 ### ∀
 For all:
 
-    ∀(𝓊,𝓋) = 𝓊∧𝓋     ⊢#A438 For All.
-    ∀(𝓊,𝓋,𝓌) = 𝓊∧𝓋∧𝓌  #M439 ∵ A103,A438 Sequence Triplet.
-    ∀(𝓊,⋯,𝓌) = 𝓊∧⋯∧𝓌  #M440 ∵ A104,A438 Sequence Interval.
-    ∀(𝓊,⋯) = 𝓊∧⋯      #M441 ∵ A105,A438 Sequence Progression.
+    ∀(𝓊,𝓋) = 𝓊∧𝓋     ⊢#A446 For All.
+    ∀(𝓊,𝓋,𝓌) = 𝓊∧𝓋∧𝓌  #M447 ∵ A103,A446 Sequence Triplet.
+    ∀(𝓊,⋯,𝓌) = 𝓊∧⋯∧𝓌  #M448 ∵ A104,A446 Sequence Interval.
+    ∀(𝓊,⋯) = 𝓊∧⋯      #M449 ∵ A105,A446 Sequence Progression.
 
     # Prove: ∀(𝓊₀,⋯) = 𝓊₀∧𝓊₁∧⋯
-    ∀(𝓊₀,⋯) = 𝓊₀∧⋯      #P442 For All ∵ M441.
-    = 𝓊₀∧𝓊₀++∧⋯         #P443 ∵ A27 Successor Ellipsis.
-    𝓊₀++ = 𝓊₁           #M444 ∵ P11,M378 Right Bounded Synonym.
-    𝓊₀∧𝓊₀++∧⋯ = 𝓊₀∧𝓊₁∧⋯ #M445 ∵ P12,M378 Bounded Context Synonym.
-    ∀(𝓊₀,⋯) = 𝓊₀∧𝓊₁∧⋯   #E446 ∵ P442 For All.
+    ∀(𝓊₀,⋯) = 𝓊₀∧⋯      #P450 For All ∵ M449.
+    = 𝓊₀∧𝓊₀++∧⋯         #P451 ∵ A27 Successor Ellipsis.
+    𝓊₀++ = 𝓊₁           #M452 ∵ P11,M378 Right Bounded Synonym.
+    𝓊₀∧𝓊₀++∧⋯ = 𝓊₀∧𝓊₁∧⋯ #M453 ∵ P12,M378 Bounded Context Synonym.
+    ∀(𝓊₀,⋯) = 𝓊₀∧𝓊₁∧⋯   #E454 ∵ P450 For All.
     #
 
-    ∀(𝒾,𝓊,𝒿) ⇒ 𝓊           ⊢⊢#T447 True For All True For One.
-    ∀𝓊{𝓋|𝓈𝓋𝓉} ⇒ 𝓊{𝓍} ⇒ 𝓈𝓍𝓉 ⊢⊢#T448 True When In Set.
+    ∀(𝒾,𝓊,𝒿) ⇒ 𝓊           ⊢⊢#T455 True For All True For One.
+    ∀𝓊{𝓋|𝓈𝓋𝓉} ⇒ 𝓊{𝓍} ⇒ 𝓈𝓍𝓉 ⊢⊢#T456 True When In Set.
 
 ### ∃
 
-    ∃(𝓊,𝓋) = 𝓊∨𝓋     ⊢#A449 There Exist.
-    ∃(𝓊,𝓋,𝓌) = 𝓊∨𝓋∨𝓌  #M450 There Exist ∵ A103,A449 Sequence Triplet.
-    ∃(𝓊,⋯,𝓌) = 𝓊∨⋯∨𝓌  #M451 There Exist ∵ A104,A449 Sequence Interval.
-    ∃(𝓊,⋯) = 𝓊∨⋯      #M452 There Exist ∵ A105,A449 Sequence Progression.
+    ∃(𝓊,𝓋) = 𝓊∨𝓋     ⊢#A457 There Exist.
+    ∃(𝓊,𝓋,𝓌) = 𝓊∨𝓋∨𝓌  #M458 There Exist ∵ A103,A457 Sequence Triplet.
+    ∃(𝓊,⋯,𝓌) = 𝓊∨⋯∨𝓌  #M459 There Exist ∵ A104,A457 Sequence Interval.
+    ∃(𝓊,⋯) = 𝓊∨⋯      #M460 There Exist ∵ A105,A457 Sequence Progression.
 
     # Prove: ∃(𝓊₀,⋯) = 𝓊₀∨𝓊₁∨⋯
-    ∃(𝓊₀,⋯) = 𝓊₀∨⋯ #P453 There Exist ∵ M452 There Exist.
-    = 𝓊₀∨𝓊₀++∨⋯    #P454 ∵ A27 Successor Ellipsis.
-    = 𝓊₀∨𝓊₁∨⋯      #M455 ∵ P12,M378 Bounded Context Synonym.
-    ∃(𝓊₀,⋯) = 𝓊₀∨𝓊₁∨⋯#E456 ∵ P453 There Exist.
+    ∃(𝓊₀,⋯) = 𝓊₀∨⋯ #P461 There Exist ∵ M460 There Exist.
+    = 𝓊₀∨𝓊₀++∨⋯    #P462 ∵ A27 Successor Ellipsis.
+    = 𝓊₀∨𝓊₁∨⋯      #M463 ∵ P12,M378 Bounded Context Synonym.
+    ∃(𝓊₀,⋯) = 𝓊₀∨𝓊₁∨⋯#E464 ∵ P461 There Exist.
     #
 
 ###<a name="9XA"></a> ∞
 Infinity:
 
-    ∀ℕ{𝓊|𝓊<∞}             ⊢#A457 Infinity.
-    ∀ℕ{𝓊|𝓊<∞} ⇒ ℕ{𝓊} ⇒ 𝓊<∞ #P458 ∵ T448 True When In Set.
-    ℕ{𝓊} ⇒ 𝓊<∞             #M459 Finite Number ∵ T448,A457 True When In Set.
+    ∀ℕ{𝓊|𝓊<∞}             ⊢#A465 Infinity.
+    ∀ℕ{𝓊|𝓊<∞} ⇒ ℕ{𝓊} ⇒ 𝓊<∞ #P466 ∵ T456 True When In Set.
+    ℕ{𝓊} ⇒ 𝓊<∞             #M467 Finite Number ∵ T456,A465 True When In Set.
 
     # Prove: n<∞
-    ℕ{n}  #P460 ∵ M79 Digit Or Number Variable.
-    n<∞   #M461 ∵ M459,P460 Finite Number.
+    ℕ{n}  #P468 ∵ M79 Digit Or Number Variable.
+    n<∞   #M469 ∵ M467,P468 Finite Number.
     #
 
 ###<a name="zQw"></a> ∑
 Sum over Integer, ℤ, indeces:
 
-    ∑ᵥ{𝓊ᵥ} = Σℤ{𝓋|𝓊(𝓋)} ⊢#A462 Sum Over The Integers.
-    ∑𝓊 = ∑ᵢ{𝓊ᵢ}         ⊢#A463 Implied index.
+    ∑ᵥ{𝓊ᵥ} = Σℤ{𝓋|𝓊(𝓋)} ⊢#A470 Sum Over The Integers.
+    ∑𝓊 = ∑ᵢ{𝓊ᵢ}         ⊢#A471 Implied index.
 
-    𝓊(i) = 𝓊ᵢ  ⊢#A464.
-    𝓊(j) = 𝓊ⱼ  ⊢#A465.
-    𝓊(k) = 𝓊ₖ  ⊢#A466.
+    𝓊(i) = 𝓊ᵢ  ⊢#A472.
+    𝓊(j) = 𝓊ⱼ  ⊢#A473.
+    𝓊(k) = 𝓊ₖ  ⊢#A474.
 
-    ∑ᵢ{𝓊ᵢ} = Σℤ{i|𝓊(i)} #P467 ∵ A462 Sum Over The Integers.
-    ∑𝓊 = Σℤ{i|𝓊(i)}     #E468 ∵ A463 Implied index.
+    ∑ᵢ{𝓊ᵢ} = Σℤ{i|𝓊(i)} #P475 ∵ A470 Sum Over The Integers.
+    ∑𝓊 = Σℤ{i|𝓊(i)}     #E476 ∵ A471 Implied index.
 
-    ∑{𝓊} = ∑𝓊 :⊢#D469.
-    ∑{𝓈} = ∑ 𝓈 ⊢#A470.
+    ∑{𝓊} = ∑𝓊 :⊢#D477.
+    ∑{𝓈} = ∑ 𝓈 ⊢#A478.
 
 ###<a name="Jt7"></a> ⋅
 The dot operator:
 
-    (𝓊ₘ,⋯,𝓊ₙ)⋅(𝓋ₘ,⋯,𝓋ₙ) = Σ[m,n]{l|𝓊ₗ×𝓋ₗ} ⊢#A471 Finite Dot Product.
-    (𝓊₀,⋯)⋅(𝓋₀,⋯) = Σₙ{𝓊ₙ×𝓋ₙ}             ⊢#A472 Infinite Dot Product.
+    (𝓊ₘ,⋯,𝓊ₙ)⋅(𝓋ₘ,⋯,𝓋ₙ) = Σ[m,n]{l|𝓊ₗ×𝓋ₗ} ⊢#A479 Finite Dot Product.
+    (𝓊₀,⋯)⋅(𝓋₀,⋯) = Σₙ{𝓊ₙ×𝓋ₙ}             ⊢#A480 Infinite Dot Product.
 
-    (𝓊)⋅(𝓋) = 𝓊×𝓋                 ⊢⊢#T473 One Dot Product.
-    (𝓊,𝓋)⋅(𝓍,𝓎) = 𝓊×𝓍+𝓋×𝓎         ⊢⊢#T474 Two Dot Product.
-    (𝓊,𝓋,𝓌)⋅(𝓍,𝓎,𝓏) = 𝓊×𝓍+𝓋×𝓎+𝓌×𝓏 ⊢⊢#T475 Three Dot Product.
+    (𝓊)⋅(𝓋) = 𝓊×𝓋                 ⊢⊢#T481 One Dot Product.
+    (𝓊,𝓋)⋅(𝓍,𝓎) = 𝓊×𝓍+𝓋×𝓎         ⊢⊢#T482 Two Dot Product.
+    (𝓊,𝓋,𝓌)⋅(𝓍,𝓎,𝓏) = 𝓊×𝓍+𝓋×𝓎+𝓌×𝓏 ⊢⊢#T483 Three Dot Product.
 
-    (1,2,3)⋅(4,5,6) = 1×4+2×5+3×6 #P476 ∵ T475 Three Dot Product.
+    (1,2,3)⋅(4,5,6) = 1×4+2×5+3×6 #P484 ∵ T483 Three Dot Product.
 
 ###<a name="J5V"></a> Π
 Products of sequences,
 [Π](http://en.wikipedia.org/wiki/Multiplication#Capital_Pi_notation):
 
-    Π(𝓊,𝓋) = 𝓊×𝓋 :⊢#D477 Product Series.
+    Π(𝓊,𝓋) = 𝓊×𝓋 :⊢#D485 Product Series.
 
-    Π(𝓊,𝓋,𝓌) = 𝓊×𝓋×𝓌  #M478 ∵ A103,D477 Sequence Triplet.
-    Π(𝓊,⋯,𝓌) = 𝓊×⋯×𝓌  #M479 ∵ A104,D477 Sequence Interval.
-    Π(𝓊,⋯) = 𝓊×⋯      #M480 ∵ A105,D477 Sequence Progression.
+    Π(𝓊,𝓋,𝓌) = 𝓊×𝓋×𝓌  #M486 ∵ A103,D485 Sequence Triplet.
+    Π(𝓊,⋯,𝓌) = 𝓊×⋯×𝓌  #M487 ∵ A104,D485 Sequence Interval.
+    Π(𝓊,⋯) = 𝓊×⋯      #M488 ∵ A105,D485 Sequence Progression.
 
     # Prove: Π[n,m]{l|𝓊ₗ} = 𝓊ₙ×⋯×𝓊ₘ
-    [n,m] = {n,⋯,m}                 #P481 ∵ A82 Interval.
-    {n,⋯,m}{l|𝓊(l)} = (𝓊(n),⋯,𝓊(m)) #P482 ∵ A93 Sequence From Ordered Finite Set.
-    Π[n,m]{l|𝓊ₗ} = Π[n,m]{l|𝓊(l)}   #M483 ∵ P12,M261 Bounded Context Synonym.
-    = Π{n,⋯,m}{l|𝓊(l)}              #M484 ∵ P12,P481 Bounded Context Synonym.
-    = Π(𝓊(n),⋯,𝓊(m))                #M485 ∵ P11,P482 Right Bounded Synonym.
-    = Π(𝓊ₙ,⋯,𝓊(m))                  #M486 ∵ P12,A256 Bounded Context Synonym.
-    = Π(𝓊ₙ,⋯,𝓊ₘ)                    #M487 ∵ P12,A257 Bounded Context Synonym.
-    = 𝓊ₙ×⋯×𝓊ₘ                       #P488 ∵ M479.
-    Π[n,m]{l|𝓊ₗ} = 𝓊ₙ×⋯×𝓊ₘ          #E489 ∵ M483.
+    [n,m] = {n,⋯,m}                 #P489 ∵ A82 Interval.
+    {n,⋯,m}{l|𝓊(l)} = (𝓊(n),⋯,𝓊(m)) #P490 ∵ A93 Sequence From Ordered Finite Set.
+    Π[n,m]{l|𝓊ₗ} = Π[n,m]{l|𝓊(l)}   #M491 ∵ P12,M261 Bounded Context Synonym.
+    = Π{n,⋯,m}{l|𝓊(l)}              #M492 ∵ P12,P489 Bounded Context Synonym.
+    = Π(𝓊(n),⋯,𝓊(m))                #M493 ∵ P11,P490 Right Bounded Synonym.
+    = Π(𝓊ₙ,⋯,𝓊(m))                  #M494 ∵ P12,A256 Bounded Context Synonym.
+    = Π(𝓊ₙ,⋯,𝓊ₘ)                    #M495 ∵ P12,A257 Bounded Context Synonym.
+    = 𝓊ₙ×⋯×𝓊ₘ                       #P496 ∵ M487.
+    Π[n,m]{l|𝓊ₗ} = 𝓊ₙ×⋯×𝓊ₘ          #E497 ∵ M491.
 
-    Π[𝓊] = Π[1,𝓊]   #M490 ∵ A109,D477 Interval Starting At One.
-    Π[0]{𝓈|𝓉} = 1 :⊢#D491.
+    Π[𝓊] = Π[1,𝓊]   #M498 ∵ A109,D485 Interval Starting At One.
+    Π[0]{𝓈|𝓉} = 1 :⊢#D499.
 
     # Prove: Π[1,0]{n|𝓊ₙ} = 1
-    Π[1,𝓊] = Π[𝓊]             #M492 ∵ A4,M490 Symmetric.
-    Π[1,0] = Π[0]             #P493 ∵ M492.
-    Π[1,0]{n|𝓊ₙ} = Π[0]{n|𝓊ₙ} #M494 ∵ P10,P493 Left Bounded Synonym.
-    = 1                       #P495 ∵ D491.
-    Π[1,0]{n|𝓊ₙ} = 1          #E496 ∵ M494.
+    Π[1,𝓊] = Π[𝓊]             #M500 ∵ A4,M498 Symmetric.
+    Π[1,0] = Π[0]             #P501 ∵ M500.
+    Π[1,0]{n|𝓊ₙ} = Π[0]{n|𝓊ₙ} #M502 ∵ P10,P501 Left Bounded Synonym.
+    = 1                       #P503 ∵ D499.
+    Π[1,0]{n|𝓊ₙ} = 1          #E504 ∵ M502.
     #
 
     # Prove: Π[2]{|𝓊} = 𝓊×𝓊
-    Π[2] = Π[1,2]         #P497 ∵ M490.
-    [1,2] = {1,⋯,2}       #P498 ∵ A82 Interval.
-    Π[2]{|𝓊} = Π[1,2]{|𝓊} #M499 ∵ P10,P497 Left Bounded Synonym.
-    = 𝓊|1×⋯×𝓊|2           #M500 ∵ A110,D477 Progression Of Labeled Variable.
-    = 𝓊|1×𝓊|(1++)×⋯×𝓊|2   #P501 ∵ A33 Labeled Successor Ellipsis.
-    = 𝓊|1×𝓊|(2)×⋯×𝓊|2     #M502 ∵ P12,M50 Bounded Context Synonym.
-    = 𝓊|1×𝓊|2×⋯×𝓊|2       #P503 ∵ M18 Context Ungrouping.
-    = 𝓊|1×𝓊|2             #P504 ∵ A34 Labeled Terminal Ellipsis.
-    = 𝓊×𝓊                 #P505 ∵ A182 Labeled Operation.
-    Π[2]{|𝓊} = 𝓊×𝓊        #E506 ∵ M499.
+    Π[2] = Π[1,2]         #P505 ∵ M498.
+    [1,2] = {1,⋯,2}       #P506 ∵ A82 Interval.
+    Π[2]{|𝓊} = Π[1,2]{|𝓊} #M507 ∵ P10,P505 Left Bounded Synonym.
+    = 𝓊|1×⋯×𝓊|2           #M508 ∵ A110,D485 Progression Of Labeled Variable.
+    = 𝓊|1×𝓊|(1++)×⋯×𝓊|2   #P509 ∵ A33 Labeled Successor Ellipsis.
+    = 𝓊|1×𝓊|(2)×⋯×𝓊|2     #M510 ∵ P12,M50 Bounded Context Synonym.
+    = 𝓊|1×𝓊|2×⋯×𝓊|2       #P511 ∵ M18 Context Ungrouping.
+    = 𝓊|1×𝓊|2             #P512 ∵ A34 Labeled Terminal Ellipsis.
+    = 𝓊×𝓊                 #P513 ∵ A182 Labeled Operation.
+    Π[2]{|𝓊} = 𝓊×𝓊        #E514 ∵ M507.
     #
 
     # And so on I can show:
-    Π[3]{|𝓊} = 𝓊×𝓊×𝓊   ⊢⊢#T507.
-    Π[4]{|𝓊} = 𝓊×𝓊×𝓊×𝓊 ⊢⊢#T508.
+    Π[3]{|𝓊} = 𝓊×𝓊×𝓊   ⊢⊢#T515.
+    Π[4]{|𝓊} = 𝓊×𝓊×𝓊×𝓊 ⊢⊢#T516.
 
-    I(𝓊) = 𝓊 :⊢#D509 Identity.
-    I(n) = n   #P510 ∵ D509 Identity.
-    I(1) = 1   #P511 ∵ D509 Identity.
-    I(2) = 2   #P512 ∵ D509 Identity.
-    I(3) = 3   #P513 ∵ D509 Identity.
+    I(𝓊) = 𝓊 :⊢#D517 Identity.
+    I(n) = n   #P518 ∵ D517 Identity.
+    I(1) = 1   #P519 ∵ D517 Identity.
+    I(2) = 2   #P520 ∵ D517 Identity.
+    I(3) = 3   #P521 ∵ D517 Identity.
 
     # Prove: Π[3]{n|n} = 1×2×3
-    Π[3] = Π[1,3]                   #P514 ∵ M490.
-    [1,3] = {1,⋯,3}                 #P515 ∵ A82 Interval.
-    {1,⋯,3}{n|I(n)} = (I(1),⋯,I(3)) #P516 ∵ A93 Sequence From Ordered Finite Set.
-    Π[3]{n|I(n)} = Π[1,3]{n|I(n)}   #M517 ∵ P10,P514 Left Bounded Synonym.
-    = Π{1,⋯,3}{n|I(n)}              #M518 ∵ P12,P515 Bounded Context Synonym.
-    = Π(I(1),⋯,I(3))                #M519 ∵ P11,P516 Right Bounded Synonym.
-    = I(1)×⋯×I(3)                   #M520 ∵ P107,D477 Sequence Interval.
-    = 1×⋯×I(3)                      #M521 ∵ P10,P511 Left Bounded Synonym.
-    = 1×⋯×3                         #M522 ∵ P11,P513 Right Bounded Synonym.
-    = 1×1++×⋯×3                     #P523 ∵ A27 Successor Ellipsis.
-    = 1×2×⋯×3                       #M524 ∵ P12,M50 Bounded Context Synonym.
-    = 1×2×2++×⋯×3                   #P525 ∵ A27 Successor Ellipsis.
-    = 1×2×3×⋯×3                     #M526 ∵ P12,M51 Bounded Context Synonym.
-    = 1×2×3                         #P527 ∵ A28 Terminal Ellipsis.
-    Π[3]{n|I(n)} = 1×2×3            #E528 ∵ M517.
-    Π[3]{n|I(n)} = Π[3]{n|n}        #M529 ∵ P12,P510 Bounded Context Synonym.
-    Π[3]{n|n} = 1×2×3               #E530 ∵ M517.
+    Π[3] = Π[1,3]                   #P522 ∵ M498.
+    [1,3] = {1,⋯,3}                 #P523 ∵ A82 Interval.
+    {1,⋯,3}{n|I(n)} = (I(1),⋯,I(3)) #P524 ∵ A93 Sequence From Ordered Finite Set.
+    Π[3]{n|I(n)} = Π[1,3]{n|I(n)}   #M525 ∵ P10,P522 Left Bounded Synonym.
+    = Π{1,⋯,3}{n|I(n)}              #M526 ∵ P12,P523 Bounded Context Synonym.
+    = Π(I(1),⋯,I(3))                #M527 ∵ P11,P524 Right Bounded Synonym.
+    = I(1)×⋯×I(3)                   #M528 ∵ P107,D485 Sequence Interval.
+    = 1×⋯×I(3)                      #M529 ∵ P10,P519 Left Bounded Synonym.
+    = 1×⋯×3                         #M530 ∵ P11,P521 Right Bounded Synonym.
+    = 1×1++×⋯×3                     #P531 ∵ A27 Successor Ellipsis.
+    = 1×2×⋯×3                       #M532 ∵ P12,M50 Bounded Context Synonym.
+    = 1×2×2++×⋯×3                   #P533 ∵ A27 Successor Ellipsis.
+    = 1×2×3×⋯×3                     #M534 ∵ P12,M51 Bounded Context Synonym.
+    = 1×2×3                         #P535 ∵ A28 Terminal Ellipsis.
+    Π[3]{n|I(n)} = 1×2×3            #E536 ∵ M525.
+    Π[3]{n|I(n)} = Π[3]{n|n}        #M537 ∵ P12,P518 Bounded Context Synonym.
+    Π[3]{n|n} = 1×2×3               #E538 ∵ M525.
     #
 
 ###<a name="y3Z"></a> uᵛ
 Superscripts normally are ℕ denoting repetition:
 
-    𝓇ⁿ = Π[n]{|𝓇} ⊢#A531 The nth Exponent.
-    𝓇ᵐ = Π[m]{|𝓇} ⊢#A532 The mth Exponent.
-    𝓇⁰ = 1       ⊢⊢#T533.
-    𝓇¹ = 𝓇       ⊢⊢#T534.
-    𝓇² = 𝓇×𝓇     ⊢⊢#T535 Squared.
-    𝓇³ = 𝓇×𝓇×𝓇   ⊢⊢#T536 Cubed.
+    𝓇ⁿ = Π[n]{|𝓇} ⊢#A539 The nth Exponent.
+    𝓇ᵐ = Π[m]{|𝓇} ⊢#A540 The mth Exponent.
+    𝓇⁰ = 1       ⊢⊢#T541.
+    𝓇¹ = 𝓇       ⊢⊢#T542.
+    𝓇² = 𝓇×𝓇     ⊢⊢#T543 Squared.
+    𝓇³ = 𝓇×𝓇×𝓇   ⊢⊢#T544 Cubed.
 
-    𝓇ᵐₙ = (𝓇ₙ)ᵐ #P537 ∵ A383 Subscripts Bind To Left Operator.
+    𝓇ᵐₙ = (𝓇ₙ)ᵐ #P545 ∵ A391 Subscripts Bind To Left Operator.
 
 Superscripts also denotes power or raising operations:
 
-    𝓇ⁿ = 𝓇^n :⊢#D538 Raising nth Operator.
-    𝓇ᵐ = 𝓇^m :⊢#D539 Raising mth Operator.
+    𝓇ⁿ = 𝓇^n :⊢#D546 Raising nth Operator.
+    𝓇ᵐ = 𝓇^m :⊢#D547 Raising mth Operator.
 
 ###<a name="8wf"></a> √u
 [Squareroot](http://en.wikipedia.org/wiki/Square_root):
 
-    √(𝓇²) = 𝓇 :⊢#D540.
-    √𝓇² = 𝓇   :⊢#D541.
+    √(𝓇²) = 𝓇 :⊢#D548.
+    √𝓇² = 𝓇   :⊢#D549.
 
     # Prove: √(𝓇×𝓇) = 𝓇
-    𝓇×𝓇 = 𝓇²       #M542 ∵ A4,T535 Symmetric.
-    √(𝓇×𝓇) = √(𝓇²) #M543 ∵ P12,M542 Bounded Context Synonym.
-    √(𝓇×𝓇) = 𝓇     #E544 ∵ T534.
+    𝓇×𝓇 = 𝓇²       #M550 ∵ A4,T543 Symmetric.
+    √(𝓇×𝓇) = √(𝓇²) #M551 ∵ P12,M550 Bounded Context Synonym.
+    √(𝓇×𝓇) = 𝓇     #E552 ∵ T542.
     #
 
 ###<a name="fxq"></a> |u|
 [Absolute value](http://en.wikipedia.org/wiki/Absolute_value):
 
-    ℚ{u} ⇒ |u| = (u>0)? u: -u ⊢#A545 Absolute Value.
-    GOT UP TO HERE
+    ℚ{u} ⇒ |u| = (u>0)? u: -u ⊢#A553 Absolute Value.
 
 ###<a name="3r3"></a> ↓,↑
 Arrow Operators on subscripts:
 
-    uₗ↑ ≡ uₗ₊₁
-    uₗ↓ ≡ uₗ₋₁
+    𝓊ᵥ↑ = 𝓊ᵥ₊₁     ⊢#A554 Step Up.
+    𝓊ᵥ↓ = 𝓊ᵥ₋₁     ⊢#A555 Step Down.
+    𝓊ᵥ↑ᵗ⁺¹ = 𝓊ᵥ↑↑ᵗ ⊢#A556.
+    ↑¹ = ↑         ⊢#A557.
 
-    uₗ↑² ≡ uₗ↑↑
-    uₗ↑² = uₗ₊₂
+    𝓊ᵥ₊₁ = 𝓊ᵥ↑     #M558 ∵ A4,A554 Symmetric.
+    𝓊ᵥ₋₁ = 𝓊ᵥ↓     #M559 ∵ A4,A555 Symmetric.
+    𝓊ᵥ↑↑ᵗ = 𝓊ᵥ↑ᵗ⁺¹ #M560 ∵ A4,A556 Symmetric.
+    ↑ = ↑¹         #M561 ∵ A4,A557 Symmetric.
 
-    uₗ↓² ≡ uₗ↓↓
-    uₗ↓² = uₗ₋₂
+    # Prove: 𝓊ₙ↑² = 𝓊ₙ↑↑
+    𝓊ₙ↑² = 𝓊ₙ↑¹⁺¹ #M562 ∵ P11,M387 Right Bounded Synonym.
+    = 𝓊ₙ↑↑¹       #P563 ∵ A556.
+    = 𝓊ₙ↑↑        #M564 ∵ P11,A557 Right Bounded Synonym.
+    𝓊ₙ↑² = 𝓊ₙ↑↑   #E565 ∵ M562.
 
-    uₗ↑ⁿ ≡ uₗ₊ₙ
-    uₗ↓ⁿ ≡ uₗ₋ₙ
+    # And I can also show:
+    𝓊ᵥ↓² = 𝓊ᵥ↓↓ ⊢⊢#T566.
+    𝓊ᵥ↑ⁿ = 𝓊ᵥ₊ₙ ⊢⊢#T567.
+    𝓊ᵥ↓ⁿ = 𝓊ᵥ₋ₙ ⊢⊢#T568.
 
-    Σₙu↑ ≡ Σₙuₙ₊₁   # Where context allows, subscript not needed.
+    # Σ𝓊↑ = Σₙ𝓊ₙ₊₁   # Where context allows, subscript not needed.
+    GOT UP TO HERE
 
 ###<a name="1U2"></a> ↧,↥
 

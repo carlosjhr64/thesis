@@ -135,19 +135,14 @@ Phrase(not greedy, may be zero length):
 ###<a name="SNo"></a> 𝒲 𝓊,𝓋,𝓌,𝓍,𝓎,𝓏
 Word:
 
-    𝒲 /\([^()]+\)|:?[\p{L}\p{N}]+/ !⊢
-    𝒲 { 𝓊,𝓋,𝓌,𝓍,𝓎,𝓏 }              !⊢
+    𝒲 /:?[\p{L}\p{N}⦅⦆]+|\([^()]+\)/ !⊢
+    𝒲 { 𝓊,𝓋,𝓌,𝓍,𝓎,𝓏 }                !⊢
 
 ### ℛ 𝓇 
 Letter or number:
 
     ℛ /\p{N}+|\p{L}/ !⊢
-    ℛ { 𝓇 }          !⊢
-
-### 𝒪 ⊛
-
-    𝒪 /[^\p{L}\p{N}]?/ !⊢
-    𝒪 { ⊛ }             !⊢
+    ℛ { ℴ,𝓇 }        !⊢
 
 ### ℒ 𝓅,𝓆
 Letter:
@@ -161,17 +156,23 @@ Number:
     𝒩 /\p{N}+/ !⊢
     𝒩 { 𝓂,𝓃 }  !⊢
 
-###<a name="Lr4"></a> ℬ ℊ,𝒽
+### 𝒪 ⊙,⊛
+Operator:
+
+    𝒪 /[^\p{L}\p{N}]?/ !⊢
+    𝒪 { ⊙,⊛ }          !⊢
+
+###<a name="Lr4"></a> ℬ ⦅,⦆
 Word Boundary:
 
     ℬ /\b|[,(){}+⇧⇩|\[\] Σ∧∨×↑↓]/ !⊢
-    ℬ { ℊ,𝒽 }                     !⊢
+    ℬ { ⦅,⦆ }                     !⊢
 
 ###<a name="2gK"></a> 𝒮 𝓈,𝓉
 Set Group(not greedy, may be zero length):
 
     𝒮 /[^{}|]*?/ !⊢
-    𝒮 { 𝓈,𝓉,𝓼,𝓽 }    !⊢
+    𝒮 { 𝓈,𝓉,ℊ,𝒽 }    !⊢
 
 ###<a name="3RW"></a> ℐ 𝓀,𝓁
 Interval Group(not greedy, may be zero length):
@@ -223,25 +224,25 @@ It does need to be words though, not phrases.
 
 With phrases, the synonyms need to be semantically bounded.
 
-    𝒸 = 𝒹 ⇒ 𝒸𝒽𝒻 = 𝒹𝒽𝒻       #P10 Left Bounded Synonym ∵ A7 Left Synonym.
-    𝒸 = 𝒹 ⇒ ℯℊ𝒸 = ℯℊ𝒹       #P11 Right Bounded Synonym ∵ A8 Right Synonym.
-    𝒸 = 𝒹 ⇒ ℯℊ𝒸𝒽𝒻 = ℯℊ𝒹𝒽𝒻   #P12 Bounded Context Synonym ∵ A9 Context Synonym.
+    𝒸 = 𝒹 ⇒ 𝒸⦆𝒻 = 𝒹⦆𝒻       #P10 Left Bounded Synonym ∵ A7 Left Synonym.
+    𝒸 = 𝒹 ⇒ ℯ⦅𝒸 = ℯ⦅𝒹       #P11 Right Bounded Synonym ∵ A8 Right Synonym.
+    𝒸 = 𝒹 ⇒ ℯ⦅𝒸⦆𝒻 = ℯ⦅𝒹⦆𝒻   #P12 Bounded Context Synonym ∵ A9 Context Synonym.
 
 ###<a name="9PI"></a> Groupings
 
-    𝒸𝒽𝒹 = (𝒸)𝒽𝒹  ⊢#A13 Left Grouping.
-    (𝒸)𝒽𝒹 = 𝒸𝒽𝒹   #M14 Left Ungrouping ∵ A4,A13 Symmetric.
+    𝒸⦆𝒹 = (𝒸)⦆𝒹  ⊢#A13 Left Grouping.
+    (𝒸)⦆𝒹 = 𝒸⦆𝒹   #M14 Left Ungrouping ∵ A4,A13 Symmetric.
 
-    𝒸ℊ𝒹 = 𝒸ℊ(𝒹)  ⊢#A15 Right Grouping.
-    𝒸ℊ(𝒹) = 𝒸ℊ𝒹   #M16 Right Ungrouping ∵ A4,A15 Symmetric.
+    𝒸⦅𝒹 = 𝒸⦅(𝒹)  ⊢#A15 Right Grouping.
+    𝒸⦅(𝒹) = 𝒸⦅𝒹   #M16 Right Ungrouping ∵ A4,A15 Symmetric.
 
-    𝒸ℊℯ𝒽𝒹 = 𝒸ℊ(ℯ)𝒽𝒹  ⊢#A17 Context Grouping.
-    𝒸ℊ(ℯ)𝒽𝒹 = 𝒸ℊℯ𝒽𝒹   #M18 Context Ungrouping ∵ A4,A17 Symmetric.
+    𝒸⦅ℯ⦆𝒹 = 𝒸⦅(ℯ)⦆𝒹  ⊢#A17 Context Grouping.
+    𝒸⦅(ℯ)⦆𝒹 = 𝒸⦅ℯ⦆𝒹   #M18 Context Ungrouping ∵ A4,A17 Symmetric.
 
 ###<a name="MIM"></a> Precedence rules
 
     𝒸𝓇ᵘᵥ𝒹 = 𝒸(𝓇ᵥ)ᵘ𝒹  ⊢#A19 Subscripts Bind To Left Operator.
-    ℊ{𝓊⊛} = ℊ𝓊⊛      ⊢#A20.
+    ⦅{𝓊⊙} = ⦅𝓊⊙      ⊢#A20.
 
    # Commented out until needed:
    #𝒸(𝓇ᵘ)ᵥ𝒹 = 𝒸(𝓇ᵘᵥ)𝒹 ⊢#A341 Subscripts Bind To Left Operator.
@@ -251,8 +252,8 @@ With phrases, the synonyms need to be semantically bounded.
    #𝒸𝓃𝓊𝒹 = 𝒸(𝓃𝓊)𝒹     ⊢#A346 Numbers Bind Right.
    #𝒸 𝓃 𝒹 = 𝒸 𝓃𝒹      ⊢#A347 Numbers Bind Right.
    #𝒸 𝓊 = 𝒸(𝓊)        ⊢#A348 Look Ahead.
-   #𝒸ℊ𝓊𝒽𝒹 = 𝒸ℊ(𝓊)𝒽𝒹   ⊢#A349 Word.
-   #𝒸ℊ𝓊 𝒹 = 𝒸ℊ(𝓊)𝒹    ⊢#A350 Word.
+   #𝒸⦅𝓊⦆𝒹 = 𝒸⦅(𝓊)⦆𝒹   ⊢#A349 Word.
+   #𝒸⦅𝓊 𝒹 = 𝒸⦅(𝓊)𝒹    ⊢#A350 Word.
    #𝓊𝓋𝒹 = (𝓊𝓋)𝒹       ⊢#A351 Default Grouping.
    #
    #𝔣ᵘ(𝓋) = (𝔣(𝓋))ᵘ   ⊢#A352 Power of Operator.
@@ -308,14 +309,14 @@ Successor operator and
     {𝓈𝓊,𝓋𝓉} ⇒ 𝓊 = 𝓋⇩ ⊢#A28 Preccessor.
 
     #
-    𝒸ℊ𝓊⊛⋯𝒹 = 𝒸ℊ𝓊⊛𝓊⇧⊛⋯𝒹           ⊢#A29 Successor Ellipsis.
-    𝒸ℊ𝓊⊛⋯⊛𝓊𝒹 = 𝒸ℊ𝓊𝒹              ⊢#A30 Terminal Ellipsis.
+    𝒸⦅𝓊⊙⋯𝒹 = 𝒸⦅𝓊⊙𝓊⇧⊙⋯𝒹           ⊢#A29 Successor Ellipsis.
+    𝒸⦅𝓊⊙⋯⊙𝓊𝒹 = 𝒸⦅𝓊𝒹              ⊢#A30 Terminal Ellipsis.
     #
-    𝒸ℊ𝓊(𝓋)⊛⋯𝒹 = 𝒸ℊ𝓊(𝓋)⊛𝓊(𝓋⇧)⊛⋯𝒹  ⊢#A31 Indexed Successor Ellipsis.
-    𝒸ℊ𝓊(𝓋)⊛⋯⊛𝓊(𝓋)𝒹 = 𝒸ℊ𝓊(𝓋)𝒹     ⊢#A32 Indexed Terminal Ellipsis.
+    𝒸⦅𝓊(𝓋)⊙⋯𝒹 = 𝒸⦅𝓊(𝓋)⊙𝓊(𝓋⇧)⊙⋯𝒹  ⊢#A31 Indexed Successor Ellipsis.
+    𝒸⦅𝓊(𝓋)⊙⋯⊙𝓊(𝓋)𝒹 = 𝒸⦅𝓊(𝓋)𝒹     ⊢#A32 Indexed Terminal Ellipsis.
     #
-    𝒸ℊ𝓊|𝓋⊛⋯𝒹 = 𝒸ℊ𝓊|𝓋⊛𝓊|𝓋⇧⊛⋯𝒹     ⊢#A33 Labeled Successor Ellipsis.
-    𝒸ℊ𝓊|𝓋⊛⋯⊛𝓌|𝓋𝒹 = 𝒸ℊ𝓌|𝓋𝒹        ⊢#A34 Labeled Terminal Ellipsis.
+    𝒸⦅𝓊|𝓋⊙⋯𝒹 = 𝒸⦅𝓊|𝓋⊙𝓊|𝓋⇧⊙⋯𝒹     ⊢#A33 Labeled Successor Ellipsis.
+    𝒸⦅𝓊|𝓋⊙⋯⊙𝓌|𝓋𝒹 = 𝒸⦅𝓌|𝓋𝒹        ⊢#A34 Labeled Terminal Ellipsis.
 
 ###<a name="9ET"></a> ℕ
 [Natural (Counting) numbers](http://en.wikipedia.org/wiki/Natural_number):
@@ -410,9 +411,9 @@ Step by step, I can always reach step 𝔫:
     [0,2] = {0,1,2}   #E74 ∵ P68.
     #
 
-###<a name="H6V"></a> 𝓊 = 𝓋{𝓼|𝓈𝓼𝓉}
+###<a name="H6V"></a> 𝓊 = 𝓋{ℊ|𝓈ℊ𝓉}
 
-    𝓊 = 𝓋{𝓼|𝓈𝓼𝓉} ⇒ 𝓋{𝓽} ⇒ 𝓊{𝓈𝓽𝓉} ⊢#A75 Iterators Are Sets.
+    𝓊 = 𝓋{ℊ|𝓈ℊ𝓉} ⇒ 𝓋{𝒽} ⇒ 𝓊{𝓈𝒽𝓉} ⊢#A75 Iterators Are Sets.
     {𝓊,⋯,𝓋}{𝓍|𝓈𝓍𝓉} = (𝓈𝓊𝓉,⋯,𝓈𝓋𝓉) ⊢#A76 Sequence From Ordered Finite Set.
     {𝓊,⋯}{𝓍|𝓈𝓍𝓉} = (𝓈𝓊𝓉,⋯)       ⊢#A77 Sequence From Ordered Infinite Set.
 
@@ -433,17 +434,17 @@ Step by step, I can always reach step 𝔫:
     𝔒 /[Σ∀∃Π𝔤]/ !⊢#
     𝔒 { 𝔣,𝔤 }   !⊢#
 
-    𝔣(𝓊,𝓋) = 𝓊⊛𝓋 ⇒ 𝔣(𝓍,𝓎,𝓏) = 𝓍⊛𝓎⊛𝓏 ⊢#A86 Sequence Triplet.
-    𝔣(𝓊,𝓋) = 𝓊⊛𝓋 ⇒ 𝔣(𝓍,⋯,𝓏) = 𝓍⊛⋯⊛𝓏 ⊢#A87 Sequence Interval.
-    𝔣(𝓊,𝓋) = 𝓊⊛𝓋 ⇒ 𝔣(𝓍,⋯) = 𝓍⊛⋯     ⊢#A88 Sequence Progression.
-    𝔣(𝓊,𝓋) = 𝓊⊛𝓋 ⇒ 𝔣(𝓍) = 𝓍         ⊢#A89 Sequence Single.
+    𝔣(𝓊,𝓋) = 𝓊⊙𝓋 ⇒ 𝔣(𝓍,𝓎,𝓏) = 𝓍⊙𝓎⊙𝓏 ⊢#A86 Sequence Triplet.
+    𝔣(𝓊,𝓋) = 𝓊⊙𝓋 ⇒ 𝔣(𝓍,⋯,𝓏) = 𝓍⊙⋯⊙𝓏 ⊢#A87 Sequence Interval.
+    𝔣(𝓊,𝓋) = 𝓊⊙𝓋 ⇒ 𝔣(𝓍,⋯) = 𝓍⊙⋯     ⊢#A88 Sequence Progression.
+    𝔣(𝓊,𝓋) = 𝓊⊙𝓋 ⇒ 𝔣(𝓍) = 𝓍         ⊢#A89 Sequence Single.
 
-    𝔤(𝓊,𝓋) = 𝓊⊛𝓋 ⇒ 𝔤(𝓌𝓍,⋯,𝓌𝓏) = 𝓌𝓍⊛⋯⊛𝓌𝓏   #P90 Sequence Interval ∵ A87 Sequence Interval.
+    𝔤(𝓊,𝓋) = 𝓊⊙𝓋 ⇒ 𝔤(𝓌𝓍,⋯,𝓌𝓏) = 𝓌𝓍⊙⋯⊙𝓌𝓏   #P90 Sequence Interval ∵ A87 Sequence Interval.
 
     # Comprehension forms:
-    𝔣(𝓊,𝓋) = 𝓊⊛𝓋 ⇒ 𝔣{𝓍|𝓌(𝓍)} = 𝓌(0)⊛⋯     ⊢#A91 Infinite Progression.
-    𝔣(𝓊,𝓋) = 𝓊⊛𝓋 ⇒ 𝔣[𝓍] = 𝔣[1,𝓍]          ⊢#A92 Interval Starting At One.
-    𝔣(𝓊,𝓋) = 𝓊⊛𝓋 ⇒ 𝔣[𝓍,𝓎]{|𝓌} = 𝓌|𝓍⊛⋯⊛𝓌|𝓎 ⊢#A93 Progression Of Labeled Variable.
+    𝔣(𝓊,𝓋) = 𝓊⊙𝓋 ⇒ 𝔣{𝓍|𝓌(𝓍)} = 𝓌(0)⊙⋯     ⊢#A91 Infinite Progression.
+    𝔣(𝓊,𝓋) = 𝓊⊙𝓋 ⇒ 𝔣[𝓍] = 𝔣[1,𝓍]          ⊢#A92 Interval Starting At One.
+    𝔣(𝓊,𝓋) = 𝓊⊙𝓋 ⇒ 𝔣[𝓍,𝓎]{|𝓌} = 𝓌|𝓍⊙⋯⊙𝓌|𝓎 ⊢#A93 Progression Of Labeled Variable.
 
 ###<a name="Pbn"></a> Σ,+
 [Addition](http://en.wikipedia.org/wiki/Addition):
@@ -566,8 +567,8 @@ I will only use the `+` operator when it commutes.
 ###<a name="nvp"></a> 𝓊|𝓍+𝓌|𝓎 = 𝓊+𝓌
 Labeled Operation:
 
-    𝓊|𝓍⊛𝓌|𝓎 = 𝓊⊛𝓌  ⊢#A137 Labeled Operation.
-    𝓋|𝓍⊛𝓌 = 𝓋⊛𝓌    ⊢#A138 Labeled Operation.
+    𝓊|𝓍⊙𝓌|𝓎 = 𝓊⊙𝓌  ⊢#A137 Labeled Operation.
+    𝓋|𝓍⊙𝓌 = 𝓋⊙𝓌    ⊢#A138 Labeled Operation.
 
 ###<a name="Ifk"></a> Σ[l,m]{l|𝓊(n)}
 
@@ -743,10 +744,10 @@ Labeled Operation:
     = Σₘ{𝓊ₘ}             #M247 ∵ P12,A234 Bounded Context Synonym.
     Σ{m|𝓊(m)} = Σₘ{𝓊ₘ}   #E248 ∵ P246.
 
-    Σₙ{𝓊ₙ} = 𝓊ₙ+⋯    :⊢#D249 Infinite Series Indexed By n.
-    = 𝓊ₙ+𝓊ₙ⇧+⋯         #P250 ∵ A29 Successor Ellipsis.
-    = 𝓊ₙ+𝓊ₙ₊₁+⋯        #M251 ∵ P12,M229 Bounded Context Synonym.
-    Σₙ{𝓊ₙ} = 𝓊ₙ+𝓊ₙ₊₁+⋯ #E252 ∵ P243.
+    Σₙ{𝓊ₙ} = 𝓊₀+⋯  :⊢#D249 Infinite Series Indexed By n.
+    = 𝓊₀+𝓊₀⇧+⋯       #P250 ∵ A29 Successor Ellipsis.
+    = 𝓊₀+𝓊₁+⋯        #M251 ∵ P12,M217 Bounded Context Synonym.
+    Σₙ{𝓊ₙ} = 𝓊₀+𝓊₁+⋯ #E252 ∵ P243.
 
     # Prove: Σ{n|𝐟(n)} = 𝐟(0)+𝐟(1)+⋯.
     𝔽{𝐟}                   ⊢#A253 Some Function p.
@@ -818,7 +819,6 @@ Subtraction:
 
     # Prove: ℤ = ℕ{𝔩,𝔫|𝔩-𝔫}
     Δ(𝔩,𝔫) = 𝔩-𝔫               #P294 ∵ A292 Delta.
-    # 𝒸 = 𝒹 ⇒ ℯℊ𝒸𝒽𝒻 = ℯℊ𝒹𝒽𝒻    #P12 Bounded Context Synonym ∵ A9 Context Synonym.
     ℕ{𝔩,𝔫|Δ(𝔩,𝔫)} = ℕ{𝔩,𝔫|𝔩-𝔫} #M295 ∵ P12,P294 Bounded Context Synonym.
     ℤ = ℕ{𝔩,𝔫|𝔩-𝔫}             #E296 ∵ A293 Integers.
     #
@@ -1160,6 +1160,14 @@ Arrow Operators on subscripts:
     𝓊↧ⁿ = 𝓊₋ₙ ⊢⊢#T490 Steps Down From Ground.
 
 ###<a name="U10"></a> Σu↑
+
+    Σₙ{𝓊ₙ} = Σ{𝓊} #P491 ∵ A241 Implied Summation Over n.
+    = Σ𝓊          #P492 ∵ A20.
+    Σₙ{𝓊ₙ} = Σ𝓊   #E493 ∵ P243.
+    Σ𝓊 = 𝓊₀+⋯     #E494 ∵ P243.
+    Σ𝓊↑ = Σ{𝓊↑}   #M495 ∵ A4,P483 Symmetric.
+    = Σₙ{𝓊ₙ↑}     #P496 ∵ M242 Implied Summation Over n.
+    GOT UP TO HERE
 
     Σₙuₙ = +u₀ + Σₙuₙ₊₁ - u[N]
     Σₙuₙ = +u₀ + Σₙu↑ - u[N]

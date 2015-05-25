@@ -124,14 +124,14 @@ Statements ending in ` <⊢` are statements previously stated.
 ###<a name="0um"></a> 𝒞 𝒶,𝒷
 Clause:
 
-    𝒞 /[^\s⇒;][^⇒;]*[^\s⇒;]|[^\s⇒;]/ !⊢
-    𝒞 { 𝒶,𝒷 }                        !⊢
+    𝒞 /[^⇒;]*/ !⊢
+    𝒞 { 𝒶,𝒷 }  !⊢
 
 ###<a name="Cej"></a> 𝒫 𝒸,𝒹,ℯ,𝒻
 Phrase(not greedy, may be zero length):
 
-    𝒫 /[^⇒=;\s][^⇒=;]*?[^⇒=;\s]|[^⇒=;\s]?/ !⊢
-    𝒫 { 𝒸,𝒹,ℯ,𝒻 }                          !⊢
+    𝒫 /[^⇒=;]*?/  !⊢
+    𝒫 { 𝒸,𝒹,ℯ,𝒻 } !⊢
 
 ###<a name="SNo"></a> 𝒲 𝓊,𝓋,𝓌,𝓍,𝓎,𝓏
 Word:
@@ -160,14 +160,14 @@ Number:
 ###<a name="Czr"></a> 𝒪 ⊙,⊛
 Operator:
 
-    𝒪 /[^\p{L}\p{N}]?/ !⊢
-    𝒪 { ⊙,⊛ }          !⊢
+    𝒪 /[^\p{L}\p{N}]/ !⊢
+    𝒪 { ⊙,⊛ }         !⊢
 
 ###<a name="VVz"></a> ℬ ⦅,⦆
 Boundary:
 
-    ℬ /\b|(?=[,(){}Σ+∧∨×|↑])|(?<=[,(){}Σ+∧∨×|↑])/ !⊢
-    ℬ { ⦅,⦆ }                                     !⊢
+    ℬ /\b|(?=[,+∧∨×↑⇧(){}\[\]])|(?<=[Σ])/ !⊢
+    ℬ { ⦅,⦆ }                             !⊢
 
 ###<a name="3mz"></a> 𝒮 𝓈,𝓉,ℊ,𝒽
 Set Group(not greedy, may be zero length):
@@ -184,7 +184,7 @@ Interval Group(not greedy, may be zero length):
 ###<a name="pIs"></a> 𝒬 𝒾,𝒿
 Sequence Group(not greedy, may be zero length):
 
-    𝒬 /[^()]*?/ !⊢
+    𝒬 /[^()|]*?/ !⊢
     𝒬 { 𝒾,𝒿 }   !⊢
 
 ###<a name="qSu"></a> ₛ ₘₙᵢⱼₖ₀₁₂₃₄₅₆₇₈₉₍₎₊₋
@@ -247,8 +247,8 @@ With phrases, the synonyms need to be semantically bounded.
 
 ###<a name="MIM"></a> Precedence rules
 
-    𝒸𝓇ᵘᵥ𝒹 = 𝒸(𝓇ᵥ)ᵘ𝒹  ⊢#A19 Subscripts Bind To Left Operator.
-    𝔣{𝓊⊙} = 𝔣𝓊⊙      ⊢#A20.
+    𝒸𝓇ᵘᵥ𝒹 = 𝒸(𝓇ᵥ)ᵘ𝒹 ⊢#A19 Subscripts Bind To Left Operator.
+    𝔣{𝓋} = 𝔣𝓋       ⊢#A20 Implied Iterator.
 
    # Commented out until needed:
    #𝒸(𝓇ᵘ)ᵥ𝒹 = 𝒸(𝓇ᵘᵥ)𝒹 ⊢#A341 Subscripts Bind To Left Operator.
@@ -1004,7 +1004,7 @@ Sum over Integer, ℤ, indeces:
     ∑ᵢ{𝓊ᵢ} = Σℤ{i|𝓊(i)} #P395 ∵ A390 Sum Over The Integers.
     ∑𝓊 = Σℤ{i|𝓊(i)}     #E396 ∵ A391 Implied index.
 
-    ∑{𝓊} = ∑𝓊   #P397 ∵ A20.
+    ∑{𝓊} = ∑𝓊   #P397 ∵ A20 Implied Iterator.
     ∑{𝓈} = ∑ 𝓈 ⊢#A398.
 
 ###<a name="Jt7"></a> ⋅
@@ -1149,27 +1149,29 @@ Arrow Operators on subscripts:
     𝓊ₙ₊₁ = 𝓊ₙ↑         #P480 ∵ M469.
     Σₙ{𝓊ₙ₊₁} = Σₙ{𝓊ₙ↑} #M481 ∵ P12,P480 Bounded Context Synonym.
     = Σ{𝓊↑}            #P482 ∵ A241 Implied Summation Over n.
-    = Σ𝓊↑              #P483 ∵ A20.
-    Σₙ{𝓊ₙ₊₁} = Σ𝓊↑     #E484 ∵ M481.
+    = Σ{(𝓊↑)}          #P483 ∵ A17 Context Grouping.
+    = Σ(𝓊↑)            #P484 ∵ A20 Implied Iterator.
+    = Σ𝓊↑              #P485 ∵ M16 Right Ungrouping.
+    Σₙ{𝓊ₙ₊₁} = Σ𝓊↑     #E486 ∵ M481.
     #
 
 ###<a name="1U2"></a> ↧,↥
 
-    𝓊↥ = 𝓊₀↑   ⊢#A485 Step Up From Ground.
-    𝓊↥ = 𝓊₁   ⊢⊢#T486 Step Up From Ground.
-    𝓊↧ = 𝓊₀↓   ⊢#A487 Step Down From Ground.
-    𝓊↧ = 𝓊₋₁  ⊢⊢#T488 Step Down From Ground.
-    𝓊↥ⁿ = 𝓊ₙ  ⊢⊢#T489 Steps Up From Ground.
-    𝓊↧ⁿ = 𝓊₋ₙ ⊢⊢#T490 Steps Down From Ground.
+    𝓊↥ = 𝓊₀↑   ⊢#A487 Step Up From Ground.
+    𝓊↥ = 𝓊₁   ⊢⊢#T488 Step Up From Ground.
+    𝓊↧ = 𝓊₀↓   ⊢#A489 Step Down From Ground.
+    𝓊↧ = 𝓊₋₁  ⊢⊢#T490 Step Down From Ground.
+    𝓊↥ⁿ = 𝓊ₙ  ⊢⊢#T491 Steps Up From Ground.
+    𝓊↧ⁿ = 𝓊₋ₙ ⊢⊢#T492 Steps Down From Ground.
 
 ###<a name="U10"></a> Σu↑
 
-    Σₙ{𝓊ₙ} = Σ{𝓊} #P491 ∵ A241 Implied Summation Over n.
-    = Σ𝓊          #P492 ∵ A20.
-    Σₙ{𝓊ₙ} = Σ𝓊   #E493 ∵ P243.
-    Σ𝓊 = 𝓊₀+⋯     #E494 ∵ P243.
-    Σ𝓊↑ = Σ{𝓊↑}   #M495 ∵ A4,P483 Symmetric.
-    = Σₙ{𝓊ₙ↑}     #P496 ∵ M242 Implied Summation Over n.
+    Σₙ{𝓊ₙ} = Σ{𝓊} #P493 ∵ A241 Implied Summation Over n.
+    = Σ𝓊          #P494 ∵ A20 Implied Iterator.
+    Σₙ{𝓊ₙ} = Σ𝓊   #E495 ∵ P243.
+    Σ𝓊 = 𝓊₀+⋯     #E496 ∵ P243.
+    Σ𝓊↑ = Σ{𝓊↑}   #E497 ∵ M481.
+    = Σₙ{𝓊ₙ↑}     #P498 ∵ M242 Implied Summation Over n.
     GOT UP TO HERE
 
     Σₙuₙ = +u₀ + Σₙuₙ₊₁ - u[N]

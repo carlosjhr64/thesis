@@ -251,48 +251,47 @@ With phrases, the synonyms need to be semantically bounded.
     𝔣{𝓋} = 𝔣𝓋       ⊢#A20 Implied Iterator.
     (𝒾ᵥ) = (𝒾)ᵥ     ⊢#A21 Subscript Bind Left.
 
-   # Commented out until needed:
-   #𝒸(𝓇ᵘ)ᵥ𝒹 = 𝒸(𝓇ᵘᵥ)𝒹 ⊢#A341 Subscripts Bind To Left Operator.
-   #𝒸𝓇ᵥ𝒹 = 𝒸(𝓇ᵥ)𝒹     ⊢#A343 Subscripts Bind Left.
-   #𝒸𝓇ᵘ𝒹 = 𝒸(𝓇ᵘ)𝒹     ⊢#A344 Superscripts Bind Left.
-   #𝒸𝓊!𝒹 = 𝒸(𝓊!)𝒹     ⊢#A345 Factorials Bind Left.
-   #𝒸𝓃𝓊𝒹 = 𝒸(𝓃𝓊)𝒹     ⊢#A346 Numbers Bind Right.
-   #𝒸 𝓃 𝒹 = 𝒸 𝓃𝒹      ⊢#A347 Numbers Bind Right.
-   #𝒸 𝓊 = 𝒸(𝓊)        ⊢#A348 Look Ahead.
-   #𝒸⦅𝓊⦆𝒹 = 𝒸⦅(𝓊)⦆𝒹   ⊢#A349 Word.
-   #𝒸⦅𝓊 𝒹 = 𝒸⦅(𝓊)𝒹    ⊢#A350 Word.
-   #𝓊𝓋𝒹 = (𝓊𝓋)𝒹       ⊢#A351 Default Grouping.
-   #
-   #𝔣ᵘ(𝓋) = (𝔣(𝓋))ᵘ   ⊢#A352 Power of Operator.
-   #𝔣²(𝓋) = 𝔣(𝓋)×𝔣(𝓋) ⊢#A353 Operator Squared.
-   #
-   ## Examples:
-   ##
-   #𝓊2𝓋𝓌 = 𝓊2𝓋𝓌  #P354 ∵ A3 Reflexive.
-   #= 𝓊(2𝓋)𝓌     #P355 ∵ A346 Numbers Bind Right.
-   #= (𝓊(2𝓋))𝓌   #P356 ∵ A13 Left Grouping.
-   ##
-   #𝓊½𝓋𝓌 = 𝓊½𝓋𝓌 #P357 ∵ A3 Reflexive.
-   #= 𝓊(½𝓋)𝓌    #P358 ∵ A346 Numbers Bind Right.
-   #= (𝓊(½𝓋))𝓌  #P359 ∵ A13 Left Grouping.
-   ##
-   #𝓊 ½ 𝓋𝓌 = 𝓊 ½ 𝓋𝓌 #P360 ∵ A3 Reflexive.
-   #= 𝓊 ½ (𝓋𝓌)      #P361 ∵ A15 Right Grouping.
-   #= 𝓊 ½(𝓋𝓌)       #P362 ∵ A347 Numbers Bind Right.
-   #= 𝓊 (½(𝓋𝓌))     #P363 ∵ A15 Right Grouping.
-   ##
-   #𝓊½ 𝓋 𝓌 = 𝓊½ 𝓋 𝓌  #P364 ∵ A3 Reflexive.
-   #= 𝓊½ 𝓋(𝓌)        #P365 ∵ A348 Look Ahead.
-   #= 𝓊½ (𝓋(𝓌))      #P366 ∵ A15 Right Grouping.
-   #= (𝓊½)(𝓋(𝓌))     #P367 ∵ A350 Word.
-   ##
-   #𝓊!𝓋𝓌 = 𝓊!𝓋𝓌  #P368 ∵ A3 Reflexive.
-   #= (𝓊!)𝓋𝓌     #P369 ∵ A13 Left Grouping.
-   #= ((𝓊!)𝓋)𝓌   #P370 ∵ A351 Default Grouping.
-   ##
-   #2³₄ = 2³₄ #P371 ∵ A3 Reflexive.
-   #= (2₄)³   #P372 ∵ A342 Subscripts Bind To Left Operator.
-   # HERE
+    # Commented out until needed:
+    #𝒸(𝓇ᵘ)ᵥ𝒹 = 𝒸(𝓇ᵘᵥ)𝒹 ⊢#A341 Subscripts Bind To Left Operator.
+    #𝒸𝓇ᵥ𝒹 = 𝒸(𝓇ᵥ)𝒹     ⊢#A343 Subscripts Bind Left.
+    #𝒸𝓇ᵘ𝒹 = 𝒸(𝓇ᵘ)𝒹     ⊢#A344 Superscripts Bind Left.
+    #𝒸𝓊!𝒹 = 𝒸(𝓊!)𝒹     ⊢#A345 Factorials Bind Left.
+    #𝒸𝓃𝓊𝒹 = 𝒸(𝓃𝓊)𝒹     ⊢#A346 Numbers Bind Right.
+    #𝒸 𝓃 𝒹 = 𝒸 𝓃𝒹      ⊢#A347 Numbers Bind Right.
+    #𝒸 𝓊 = 𝒸(𝓊)        ⊢#A348 Look Ahead.
+    #𝒸⦅𝓊⦆𝒹 = 𝒸⦅(𝓊)⦆𝒹   ⊢#A349 Word.
+    #𝒸⦅𝓊 𝒹 = 𝒸⦅(𝓊)𝒹    ⊢#A350 Word.
+    #𝓊𝓋𝒹 = (𝓊𝓋)𝒹       ⊢#A351 Default Grouping.
+    #
+    #𝔣ᵘ(𝓋) = (𝔣(𝓋))ᵘ   ⊢#A352 Power of Operator.
+    #𝔣²(𝓋) = 𝔣(𝓋)×𝔣(𝓋) ⊢#A353 Operator Squared.
+    #
+    ## Examples:
+    ##
+    #𝓊2𝓋𝓌 = 𝓊2𝓋𝓌  #P354 ∵ A3 Reflexive.
+    #= 𝓊(2𝓋)𝓌     #P355 ∵ A346 Numbers Bind Right.
+    #= (𝓊(2𝓋))𝓌   #P356 ∵ A13 Left Grouping.
+    ##
+    #𝓊½𝓋𝓌 = 𝓊½𝓋𝓌 #P357 ∵ A3 Reflexive.
+    #= 𝓊(½𝓋)𝓌    #P358 ∵ A346 Numbers Bind Right.
+    #= (𝓊(½𝓋))𝓌  #P359 ∵ A13 Left Grouping.
+    ##
+    #𝓊 ½ 𝓋𝓌 = 𝓊 ½ 𝓋𝓌 #P360 ∵ A3 Reflexive.
+    #= 𝓊 ½ (𝓋𝓌)      #P361 ∵ A15 Right Grouping.
+    #= 𝓊 ½(𝓋𝓌)       #P362 ∵ A347 Numbers Bind Right.
+    #= 𝓊 (½(𝓋𝓌))     #P363 ∵ A15 Right Grouping.
+    ##
+    #𝓊½ 𝓋 𝓌 = 𝓊½ 𝓋 𝓌  #P364 ∵ A3 Reflexive.
+    #= 𝓊½ 𝓋(𝓌)        #P365 ∵ A348 Look Ahead.
+    #= 𝓊½ (𝓋(𝓌))      #P366 ∵ A15 Right Grouping.
+    #= (𝓊½)(𝓋(𝓌))     #P367 ∵ A350 Word.
+    ##
+    #𝓊!𝓋𝓌 = 𝓊!𝓋𝓌  #P368 ∵ A3 Reflexive.
+    #= (𝓊!)𝓋𝓌     #P369 ∵ A13 Left Grouping.
+    #= ((𝓊!)𝓋)𝓌   #P370 ∵ A351 Default Grouping.
+    ##
+    #2³₄ = 2³₄ #P371 ∵ A3 Reflexive.
+    #= (2₄)³   #P372 ∵ A342 Subscripts Bind To Left Operator.
 
 Some of these rules help compact the notation as it most commonly appears.
 For example, √2πx is √(2π)x, but √nπx is √(n)πx.

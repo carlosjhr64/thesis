@@ -33,7 +33,7 @@ it's a good warm-up and demonstrates my notation.
  • [/](#XIb) • [ℚ](#mgl) • [uᵥ](#frL) • [𝓊{𝓋ₙ}](#4bK) • [𝔹](#drq)
  • [∀](#KGM) • [∃](#npF) • [∞](#9XA) • [∑](#zQw) • [⋅](#Jt7) • [Π](#J5V)
  • [uᵛ](#y3Z) • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3) • [↧,↥](#1U2)
- • [Σu↑](#U10) • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [uₒ≡Σuₙ](#CuZ)
+ • [Σu↑](#U10) • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [uₒ](#ZBo)
  • [ℝ](#yfS) • [x,t](#pZX) • [∞/∞](#iyp) • [𝜖≡a/∞](#rNP) • [Σrⁿ](#5qT)
  • [⅀](#s2N) • [⨋ₓ](#SuG) • [ℂ](#Ama) • [ℯ](#NLb) • [Sine](#ZE8)
  • [Cosine](#CgT) • [𝑖](#FU8) • [&#42;](#XXd) • [𝒟ₓ](#FD0) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
@@ -1242,49 +1242,35 @@ Arrow Operators on subscripts:
 
     # And I could show...
     ∑𝓊↓ = ∑𝓊 ⊢⊢#T544.
-    GOT UP TO HERE
 
 ###<a name="vGe"></a> 𝐿
 The limit fuction, 𝐿.
 N is very, very, big!
 Let's try a simple limit function:
 
-    𝐿 Σuₙ ≡ 𝐿 Σₙuₙ               # 𝐿 truncates the series to down to N elements.
-    𝐿[u+v] ≡ 𝐿[u] + 𝐿[v]
-    𝐿[u] ≡ (|u| ≥ 1/N²)? u : 0   # 𝐿 ignores very small numbers.
+    𝐿(𝓊) = (|𝓊| ≤ 1/N²)? 0 : 𝓊 ⊢#A545.
 
-    𝐿 Σₙ{1/N} = Σₙ 𝐿[1/N]
-      = Σₙ{1/N}
-      = 1   # Notice that this would have been 0 had I set the threshold to ≥ 1/N.
+    |𝓊| ≤ 1/N² ⇒ 𝐿(𝓊) = 0                           ⊢⊢#T546.
+    |𝓊| > 1/N² ⇒ 𝐿(𝓊) = 𝓊                           ⊢⊢#T547.
+    𝐿(𝓊+𝓋) = 𝐿(𝓊)+𝐿(𝓋)                              ⊢⊢#T548.
+    n ≥ N ⇒ |𝓊(n)| ≤ 1/N² ⇒ 𝐿Σ𝓊 = ∑[0,N]{n|𝓊(n)}    ⊢⊢#T549.
+    |i| ≥ N ⇒ |𝓊(i)| ≤ 1/N² ⇒ 𝐿∑𝓊 = ∑[-N,N]{i|𝓊(i)} ⊢⊢#T550.
+    |𝓊| ≤ 1/N; |𝓋| ≤ 1/N ⇒ 𝐿(𝓊×𝓋) = 0               ⊢⊢#T551.
 
-    𝐿 Σₙ{1/N²} = Σₙ 𝐿[1/N²]
-      = Σₙ 0
-      = 0   # Is this acceptable?
+    # Σ[N]{1/N²} = 0.5 ← N=2        # n=2; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    # Σ[N]{1/N²} = 0.25 ← N=4       # n=4; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    # Σ[N]{1/N²} = 0.125 ← N=8      # n=8; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    # Σ[N]{1/N²} = 0.0625 ← N=16    # n=16; n.times.inject(0){|s,i|s+1.0/(n*n)}
+    # Σ[N]{1/N²} = 0.03125 ← N=32   # n=32; n.times.inject(0){|s,i|s+1.0/(n*n)}
 
-    Σₙ{1/N²} = 0.5 ← N=2        # n=2; n.times.inject(0){|s,i|s+1.0/(n*n)}
-    Σₙ{1/N²} = 0.25 ← N=4       # n=4; n.times.inject(0){|s,i|s+1.0/(n*n)}
-    Σₙ{1/N²} = 0.125 ← N=8      # n=8; n.times.inject(0){|s,i|s+1.0/(n*n)}
-    Σₙ{1/N²} = 0.0625 ← N=16    # n=16; n.times.inject(0){|s,i|s+1.0/(n*n)}
-    Σₙ{1/N²} = 0.03125 ← N=32   # n=32; n.times.inject(0){|s,i|s+1.0/(n*n)}
+As N doubles, the sum Σ[N]{1/N²} halves.
+So Σ[N]{1/N²} does approach zero as N goes on to infinity.
 
-As N doubles, the sum Σₙ{1/N²} halves.
-So Σₙ{1/N²} does approach zero as N goes on to infinity.
-For the following examples, I use factorial N! and the exponential function:
-
-    𝐿[u+1/N²] = u
-    𝐿[u+:Exponential[N]/N!] = u   # Try N≥10.
-    𝐿[u+(v^N)/N!] = u             # N depends on v, but for some N it's true.
-    𝐿[u+:Exponential[-N]] = u     # Obviously, I hope.
-
-    |u| ≤ 1/N, |v| ≤ 1/N  →  |uv| ≤ 1/N², 𝐿[uv]=0
-
-The Float::EPSILON for Ruby on my machine is about 2.22e-16.
-So 𝐿 puts a limit on N on my machine of about 6.71e+7 (2.22e-16 ~ 1/(6.71e+7)^2).
-
-###<a name="CuZ"></a> uₒ≡Σuₙ
+###<a name="ZBo"></a> uₒ
 I'll use subcript o, ₒ, to refer to the object that represents an infinite sum.
 
-    uₒ≡Σuₙ
+    uₒ = ∑u ⊢#A552.
+    GOT UP TO HERE
 
 ###<a name="yfS"></a> ℝ
 For the purpose of this "paper", Real, ℝ, just needs to include the series I'm working with.

@@ -33,7 +33,7 @@ it's a good warm-up and demonstrates my notation.
  • [/](#XIb) • [ℚ](#mgl) • [uᵥ](#frL) • [𝓊{𝓋ₙ}](#4bK) • [𝔹](#drq)
  • [∀](#KGM) • [∃](#npF) • [∞](#9XA) • [∑](#zQw) • [⋅](#Jt7) • [Π](#J5V)
  • [uᵛ](#y3Z) • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3) • [↧,↥](#1U2)
- • [Σu↑](#U10) • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [uₒ](#ZBo)
+ • [Σu↑](#U10) • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [𝓊ₒ](#2Kt)
  • [ℝ](#yfS) • [x,t](#pZX) • [∞/∞](#iyp) • [𝜖≡a/∞](#rNP) • [Σrⁿ](#5qT)
  • [⅀](#s2N) • [⨋ₓ](#SuG) • [ℂ](#Ama) • [ℯ](#NLb) • [Sine](#ZE8)
  • [Cosine](#CgT) • [𝑖](#FU8) • [&#42;](#XXd) • [𝒟ₓ](#FD0) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
@@ -1125,7 +1125,7 @@ Superscripts also denotes power or raising operations:
 ###<a name="fxq"></a> |u|
 [Absolute value](http://en.wikipedia.org/wiki/Absolute_value):
 
-    ℚ{u} ⇒ |u| = (u>0)? u: -u ⊢#A469 Absolute Value.
+    ℚ{𝓊} ⇒ |𝓊| = (𝓊>0)? 𝓊: -𝓊 ⊢#A469 Absolute Value.
 
 ###<a name="3r3"></a> ↓,↑
 Arrow Operators on subscripts:
@@ -1266,61 +1266,65 @@ Let's try a simple limit function:
 As N doubles, the sum Σ[N]{1/N²} halves.
 So Σ[N]{1/N²} does approach zero as N goes on to infinity.
 
-###<a name="ZBo"></a> uₒ
+###<a name="2Kt"></a> 𝓊ₒ
 I'll use subcript o, ₒ, to refer to the object that represents an infinite sum.
 
-    uₒ = ∑u ⊢#A552.
-    GOT UP TO HERE
+    𝓊ₒ = ∑𝓊 :⊢#D552.
 
 ###<a name="yfS"></a> ℝ
 For the purpose of this "paper", Real, ℝ, just needs to include the series I'm working with.
-That is ℝ augments ℚ with Σuₙ as follows:
+That is ℝ augments ℚ with 𝓊ₒ as follows:
 
-    ℚ{uₙ: |uₙ|≤1/n² ← n≥N}, v=Σuₙ ↔ ℝ{v}, ℚ{𝐿[Σₙuₙ]}
+    ℚ{𝓊ᵢ}; |i| ≥ N ⇒ |𝓊ᵢ| ≤ 1/N² ⇒ ℝ{𝓊ₒ} ⊢#A553 Real Number.
+    ℝ{𝓊ₒ} ⇒ ℚ{𝓊ᵢ}; |i| ≥ N ⇒ |𝓊ᵢ| ≤ 1/N² ⊢#A554 Real Number.
 
 So I just need ℝ to work with 𝐿[Σuₙ].
 ℝ has well defined + and ×:
 
-    uₒ=Σuₙ,vₒ=Σvₙ → uₒ+vₒ ≡ Σ uₙ+vₙ, uₒvₒ ≡ ΣΣ uₙvₘ
+    ∑∑ = ∑ⱼ∑ᵢ ⊢#A555.
+    𝓊ₒ = ∑𝓊ᵢ; 𝓋ₒ = ∑𝓋ᵢ ⇒ 𝓊ₒ+𝓋ₒ = ∑{𝓊ᵢ+𝓋ᵢ}  ⊢#A556.
+    𝓊ₒ = ∑𝓊ᵢ; 𝓋ₒ = ∑𝓋ᵢ ⇒ 𝓊ₒ×𝓋ₒ = ∑∑{𝓊ᵢ×𝓋ⱼ} ⊢#A557.
 
 ℝ can be scaled by a rational:
 
-    ℚ{v,uₙ}, ℝ{uₒ:uₒ=Σuₙ} → vuₒ = vΣuₙ = Σvuₙ, ℝ{vuₒ}
+    ℚ{𝓋}; ℝ{𝓊ₒ} ⇒ 𝓋𝓊ₒ = Σ𝓋𝓊ₙ ⊢#A558.
+    𝓋Σ𝓊ₙ = Σ𝓋𝓊ₙ              ⊢#A559.
 
 Quick plausibility check:
 
-    u=[1,2,3],v=[4,5,6] →
-      uₒ = Σuₙ = 1 + 2 + 3 = 6
-      vₒ = Σvₙ = 4 + 5 + 6 = 15
-      # Addition
-      uₒ+vₒ = Σ uₙ+vₙ = (1+4) + (2+5) + (3+6) = 5 + 7 + 9 = 21
-      Σuₙ + Σvₙ = 6 + 15 = 21
-      uₒ+vₒ = Σuₙ+Σvₙ = Σ uₙ+vₙ = 21   # All self consistent
-      # Multiplication
-      uₒvₒ = ΣΣ uₙvₘ = ((1×4)+(1×5)+(1×6)) + ((2×4)+(2×5)+(2×6)) + ((3×4)+(3×5)+(3×6))
-        = (4+5+6) + (8+10+12) + (12+15+18)
-        = 15 + 30 + 45
-        = 90
-      uₒvₒ = Σuₙ Σvₙ = 6×15 = 90
-      uₒvₒ = Σuₙ Σvₙ = ΣΣ uₙvₘ = 90   # Again, consistent.
-      # Division we don't have in the same form.
-      uₒ/vₒ = Σuₙ/Σvₙ
+    #u=[1,2,3],v=[4,5,6] →
+    #  uₒ = Σuₙ = 1 + 2 + 3 = 6
+    #  vₒ = Σvₙ = 4 + 5 + 6 = 15
+    #  # Addition
+    #  uₒ+vₒ = Σ uₙ+vₙ = (1+4) + (2+5) + (3+6) = 5 + 7 + 9 = 21
+    #  Σuₙ + Σvₙ = 6 + 15 = 21
+    #  uₒ+vₒ = Σuₙ+Σvₙ = Σ uₙ+vₙ = 21   # All self consistent
+    #  # Multiplication
+    #  uₒvₒ = ΣΣ uₙvₘ = ((1×4)+(1×5)+(1×6)) + ((2×4)+(2×5)+(2×6)) + ((3×4)+(3×5)+(3×6))
+    #    = (4+5+6) + (8+10+12) + (12+15+18)
+    #    = 15 + 30 + 45
+    #    = 90
+    #  uₒvₒ = Σuₙ Σvₙ = 6×15 = 90
+    #  uₒvₒ = Σuₙ Σvₙ = ΣΣ uₙvₘ = 90   # Again, consistent.
+    #  # Division we don't have in the same form.
+    #  uₒ/vₒ = Σuₙ/Σvₙ
 
-    Σuₙ Σvₘ = ΣΣ uₙvₘ
-    # The rigorous proof:
-      Σuₙ Σvₘ
-      (Σuₙ)×(Σvₘ)   # Just explicitly showing what I mean.
-      Σ{uₙ×(Σvₘ)}   # Treat the v series like a number and take it into the u series.
-      Σ{Σ{uₙvₘ}}    # uₙ is just a constant rational and can go into the v series.
-      ΣΣ{uₙvₘ}      # Well... maybe it was obvious to begin with.
+    #Σuₙ Σvₘ = ΣΣ uₙvₘ
+    ## The rigorous proof:
+    #  Σuₙ Σvₘ
+    #  (Σuₙ)×(Σvₘ)   # Just explicitly showing what I mean.
+    #  Σ{uₙ×(Σvₘ)}   # Treat the v series like a number and take it into the u series.
+    #  Σ{Σ{uₙvₘ}}    # uₙ is just a constant rational and can go into the v series.
+    #  ΣΣ{uₙvₘ}      # Well... maybe it was obvious to begin with.
 
-    # Same for ∑∑
-    ∑∑ uₗvₖ = ∑uₗ × ∑vₗ
+    ## Same for ∑∑
+    #∑∑ uₗvₖ = ∑uₗ × ∑vₗ
 
 I'll be using ΣΣ{uₙvₘ}=Σ{uₙ}Σ{vₙ} later.
 In general I'll refer to a and b as Real number:
 
-    ℝ{A,B,a,b}   # a and b are Real numbers.
+    ℝ{A,B,a,b}  ⊢#A560 Real Variables.
+    GOT UP TO HERE... just want to get back to the original problem.
 
 ###<a name="pZX"></a> x,t
 [Position](http://en.wikipedia.org/wiki/Position_(vector)) and

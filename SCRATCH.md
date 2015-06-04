@@ -34,18 +34,18 @@ it's a good warm-up and demonstrates my notation.
  • [∀](#KGM) • [∃](#npF) • [∞](#9XA) • [∑](#zQw) • [⋅](#Jt7) • [Π](#J5V)
  • [uᵛ](#y3Z) • [√u](#8wf) • [|u|](#fxq) • [↓,↑](#3r3) • [↧,↥](#1U2)
  • [Σu↑](#U10) • [∑u↑](#Uf9) • [∑u↓](#blg) • [𝐿](#vGe) • [𝓊ₒ](#2Kt)
- • [ℝ](#yfS) • [x,t](#pZX) • [∞/∞](#iyp) • [𝜖≡a/∞](#rNP) • [Σrⁿ](#5qT)
- • [⅀](#s2N) • [⨋ₓ](#SuG) • [ℂ](#Ama) • [ℯ](#NLb) • [Sine](#ZE8)
- • [Cosine](#CgT) • [𝑖](#FU8) • [&#42;](#XXd) • [𝒟ₓ](#FD0) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql)
- • [∫](#iPk) • [n!](#zaX) • [(ⁿₘ)](#qsc) • [nₘ](#t99) • [0ₘ](#KLm)
- • [1ₘ](#ngq) • [2ₘ](#eUd) • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj)
- • [n₋ₘ=(n-m)!/n!](#w4y) • [n₋ₙ=1/n!](#6OO) • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK)
- • [n↥,n₀,n↧](#I4Q) • [nᵥn!](#jL9) • [ŉ](#44r) • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1)
- • [𝔩](#wNn) • [S²+C²=1](#IwS) • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿](#VuP)
- • [⧼v⧽](#nXb) • [Δ²](#2ef) • [𝑃](#Uz0) • [𝑝](#2on) • [𝒫](#IRG)
- • [𝒫↑↓≠𝒫↓↑](#ZMc) • [𝛿𝒫↑↓=𝛿𝒫↓↑&#42;](#DZ0) • [κ,μ](#y3s) • [π](#vmD)
- • [½!](#SB2) • [ℏ](#1Xb) • [ω](#Jji) • [f](#0h7) • [Eₙ](#2Xh)
- • [𝐱](#0bH) • [𝐩](#w6M) • [Δ²𝐩](#mo3) • [Δ²𝐱](#8SV) • [&#91;𝐱,𝐩&#93;](#bST)
+ • [ℝ](#yfS) • [x,t](#pZX) • [Σrⁿ](#5qT) • [⅀](#s2N) • [⨋ₓ](#SuG)
+ • [ℂ](#Ama) • [ℯ](#NLb) • [Sine](#ZE8) • [Cosine](#CgT) • [𝑖](#FU8)
+ • [&#42;](#XXd) • [𝒟ₓ](#FD0) • [𝒟(u⋅v)=𝒟u⋅v+u⋅𝒟v](#9Ql) • [∫](#iPk)
+ • [n!](#zaX) • [(ⁿₘ)](#qsc) • [nₘ](#t99) • [0ₘ](#KLm) • [1ₘ](#ngq)
+ • [2ₘ](#eUd) • [3ₘ](#pOG) • [nₘ=(n+m)!/n!](#vOj) • [n₋ₘ=(n-m)!/n!](#w4y)
+ • [n₋ₙ=1/n!](#6OO) • [(ⁿₘ)=m-ₘ/n-ₘ](#SoK) • [n↥,n₀,n↧](#I4Q)
+ • [nᵥn!](#jL9) • [ŉ](#44r) • [ʼu](#Yv1) • [u↑ˡᵥ](#4H1) • [𝔩](#wNn)
+ • [S²+C²=1](#IwS) • [ℯⁱᵘ=Cᵤ+𝑖Sᵤ](#VkX) • [𝛿](#VuP) • [⧼v⧽](#nXb)
+ • [Δ²](#2ef) • [𝑃](#Uz0) • [𝑝](#2on) • [𝒫](#IRG) • [𝒫↑↓≠𝒫↓↑](#ZMc)
+ • [𝛿𝒫↑↓=𝛿𝒫↓↑&#42;](#DZ0) • [κ,μ](#y3s) • [π](#vmD) • [½!](#SB2)
+ • [ℏ](#1Xb) • [ω](#Jji) • [f](#0h7) • [Eₙ](#2Xh) • [𝐱](#0bH)
+ • [𝐩](#w6M) • [Δ²𝐩](#mo3) • [Δ²𝐱](#8SV) • [&#91;𝐱,𝐩&#93;](#bST)
  • [𝐇](#bdY) • [⌽ᵗₙ](#WEu) • [𝕌{⌽}](#fzU) • [⌽→φ](#h8y) • [sₙ,cₙ](#zlN)
  • [ñ](#Ojo) • [Eₒ](#k5Y) • [ñ²=𝐿Σ{n(n-1)𝑃ₙ}](#LJ7) • [p→𝑃](#mI6)
  • [ξ](#Pvg) • [⨋](#AXS) • [𝒟](#8P4) • [𝛽](#FnP) • [𝒽](#hIf) • [𝒟ₓξ](#QcB)
@@ -1324,13 +1324,13 @@ I'll be using ΣΣ{uₙvₘ}=Σ{uₙ}Σ{vₙ} later.
 In general I'll refer to a and b as Real number:
 
     ℝ{A,B,a,b}  ⊢#A560 Real Variables.
-    GOT UP TO HERE... just want to get back to the original problem.
 
 ###<a name="pZX"></a> x,t
 [Position](http://en.wikipedia.org/wiki/Position_(vector)) and
 [time](http://en.wikipedia.org/wiki/Time):
 
-    ℝ{x,t}
+    ℝ{x,t} ⊢#A561 Real Variables.
+    GOT UP TO HERE
 
 In general, x would be a vector (ℝ,ℝ,ℝ), but
 I'll only be working with one dimension.
@@ -1340,51 +1340,6 @@ I believe this will create a [paradox](http://en.wikipedia.org/wiki/Paradox)
 because I assume there's no error in its measurement.
 To resolve the paradox someone (no not me, I'm done!)
 will have to do the dual Energy-Time problem.
-
-###<a name="iyp"></a> ∞/∞
-One can absorb any Real multiple into ∞:
-
-    uₒ∞=∞
-    # Proof:
-       uₒ∞
-       ∞uₒ
-       ∞Σuₙ
-       Σ∞uₙ
-       Σ∞
-       ∞Σ1
-       ΣΣ1
-       (1+1+⋯)+(1+1+⋯)+⋯
-       ∞  # or ∞² ?
-
-If √4={-2,2}, then can I say:
-
-    ∞/∞ = ℝ
-    # Proof:
-      ∞/∞
-      uₒ∞/∞  # Poops out any real number!
-      uₒ     # LOL!
-
-###<a name="rNP"></a> 𝜖≡a/∞
-[Infinitesimal](http://en.wikipedia.org/wiki/Infinitesimal).
-
-    𝜖≡a/∞   # Any r/∞ gives 𝜖.
-    𝜖×∞=ℝ
-
-    𝜖₁≡1/∞₁
-    𝜖₁×∞₁=1
-
-    # In either version,
-    a,0<𝜖<|a|<∞
-
-> TODO: Note that I did not construct ∞₁. How? :-??
-> I'm guessing ∞₁ is one of an orthogonal set in ∞.
-> It would really be a great convenience.  Conjecture:
-
-    𝜖₁×∞ = 𝜖×∞₁ = 1
-    # Proof:
-      # TODO: Needs a construction of ∞₁.
-
-> Maybe I'll just stick to the notion of big N.
 
 ###<a name="5qT"></a> Σrⁿ
 Just a quick review of
